@@ -1,9 +1,11 @@
 OBO=http://purl.obolibrary.org/obo
 USECAT= --catalog-xml catalog-v001.xml
 SRC=ecto-edit.obo
-ONTDIR=ontology
+ONTDIR=.
+MODDIR=modules
 
-MODS = radiation
+MODS = exposure_to_radiation exposure_to_material
+MODS_CSV = $(patsubst %,%.csv,$(MODS))
 
 all: ecto.owl ecto.obo all_subsets
 all_subsets: subsets/ecto-basic.obo
@@ -12,7 +14,7 @@ release: all copy-release
 
 TARGETS = $(ONTDIR)/ecto.obo $(ONTDIR)/ecto.owl imports subsets
 
-ALL_MODS_OWL = $(patsubst %, modules/%.owl, $(MODS))
+ALL_MODS_OWL = $(patsubst %, $(MODDIR)/%.owl, $(MODS))
 
 copy-release:
 	cp -pr $(TARGETS) ../.. && cd ../.. && git add imports/*
@@ -23,8 +25,10 @@ ecto-core.owl: ecto-edit.obo $(ALL_MODS_OWL)
 ecto-core.obo: ecto-core.owl
 	owltools $(USECAT) $< -o -f obo --no-check $@.tmp && grep -v ^owl-axioms $@.tmp > $@
 
-ecto-core-inferred.owl: ecto-core.owl modules/existential-graph.owl all_imports
-	owltools $(USECAT) $< modules/existential-graph.owl --merge-support-ontologies --assert-inferred-subclass-axioms --allowEquivalencies --always-assert-super-classes --markIsInferred --reasoner mexr --remove-redundant-inferred-svfs  -o $@
+ecto-core-inferred.owl: ecto-core.owl  all_imports
+##	owltools $(USECAT) $<  --merge-support-ontologies --assert-inferred-subclass-axioms --allowEquivalencies --always-assert-super-classes --markIsInferred --reasoner mexr --remove-redundant-inferred-svfs  -o $@
+	robot reason --input $< --reasoner elk -o $@
+
 subsets/ecto-basic.owl: ecto-core-inferred.owl
 	owltools $(USECAT) $< --remove-imports-declarations --make-subset-by-properties -f BFO:0000050 --remove-dangling --remove-axioms -t EquivalentClasses --set-ontology-id $(OBO)/ecto/$@ -o $@
 subsets/ecto-basic.obo: subsets/ecto-basic.owl
@@ -33,7 +37,7 @@ subsets/ecto-basic.obo: subsets/ecto-basic.owl
 ecto.owl: ecto-core-inferred.owl
 	owltools $(USECAT) $< --set-ontology-id $(OBO)/$@ -o $@
 
-#ecto.owl: ecto-core-inferred.owl modules/vt.obo
+#ecto.owl: ecto-core-inferred.owl $(ONTDIR)/vt.obo
 #	owltools $(USECAT) $^ --merge-support-ontologies -o $@
 ecto.obo: ecto.owl
 	owltools $(USECAT) $< -o -f obo --no-check $@.tmp && grep -v ^owl-axioms $@.tmp > $@
@@ -60,7 +64,7 @@ oort: ecto-core.owl
 
 # Ontology dependencies
 # We don't include clo, as this is currently not working
-IMPORTS = pato uberon chebi po go cl so pr
+IMPORTS = pato envo npo exo ro
 
 # Make this target to regenerate ALL
 all_imports_owl: $(patsubst %, imports/%_import.owl,$(IMPORTS))
@@ -114,20 +118,42 @@ mirror/pco.owl: imports/pco_basic.obo
 # ----------------------------------------
 
 
-all_modules: all_modules_owl all_modules_obo modules/has_part.owl
-all_modules_owl: $(patsubst %, modules/%.owl, $(MODS))
-all_modules_obo: $(patsubst %, modules/%.obo, $(MODS))
+all_modules: all_modules_owl all_modules_obo
+all_modules_owl: $(patsubst %, $(MODDIR)/%.owl, $(MODS))
+all_modules_obo: $(patsubst %, $(MODDIR)/%.obo, $(MODS))
 
-modules/%-main.owl: modules/%.tsv patterns/%.yaml
-	apply-pattern.py -P curie_map.yaml -b http://purl.obolibrary.org/obo/ -i $< -p patterns/$*.yaml -G modules/$*-gci.owl > $@.tmp && mv $@.tmp $@
-modules/%.owl: modules/%-main.owl modules/%-gci.owl
+$(MODDIR)/%-main.owl: $(MODDIR)/%.csv ../patterns/%.yaml
+	apply-pattern.py -P curie_map.yaml -b http://purl.obolibrary.org/obo/ -i $< -p ../patterns/$*.yaml -G $(MODDIR)/$*-gci.owl > $@.tmp && mv $@.tmp $@
+
+#$(MODDIR)/%-gci.owl: $(MODDIR)/%-main.owl
+
+$(MODDIR)/%.owl: $(MODDIR)/%-main.owl 
 	owltools $^ --merge-support-ontologies --set-ontology-id $(OBO)/ecto/$@ -o -f ofn $@
 
-modules/%.obo: modules/%.owl
+$(MODDIR)/%.obo: $(MODDIR)/%.owl
 	owltools $< -o -f obo $@.tmp && grep -v ^owl-axioms $@.tmp > $@
 
 
-modules/existential-graph.owl: ecto-core.owl
+# NOT CURRENTLY USED
+$(MODDIR)/existential-graph.owl: ecto-core.owl
 	owltools $(USECAT) $< --merge-support-ontologies --reasoner elk --silence-elk --materialize-gcis --reasoner mexr --remove-redundant-inferred-svfs --reasoner elk --remove-redundant-svfs  --set-ontology-id $(OBO)/ecto/$@ -o $@
-#modules/existential-graph.obo: ecto-combined.owl
+#$(MODDIR)/existential-graph.obo: ecto-combined.owl
 #	owltools $(USECAT) $< --merge-support-ontologies --reasoner elk --silence-elk --materialize-gcis --set-ontology-id $(OBO)/ecto/$@ -o -f obo $@
+
+
+## HACKS
+
+# for reporting
+ecto-edit.tsv: ecto-edit.obo
+	owltools $(USECAT) $< --merge-support-ontologies --export-table $@.tmp && cut -f1 $@.tmp > $@
+
+fill: ecto-edit.csv
+	fill-col1-ids.pl $(MODS_CSV) $<
+
+radiation-npo.tsv:
+	blip-findall  -i mirror/npo.obo "subclassRT(X,'NPO:1731')"  -label -select "x('',X)" -no_pred -use_tabs > $@
+material-envo.tsv:
+	blip-findall  -r envo "subclassRT(X,'ENVO:00010483')"  -label -select "x('',X)" -no_pred -use_tabs > $@
+
+%.csv: %.tsv
+	tsv2csv.py $< $@

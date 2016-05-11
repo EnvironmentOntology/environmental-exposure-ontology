@@ -1,4 +1,4 @@
-all: all_exposure probs.tsv m.tsv unmapped.tsv rpt.html merged-exposure.obo axioms-r.obo 
+all: all_exposure probs.tsv m.tsv unmapped.tsv rpt.html merged-exposure.obo axioms-r.obo  merged-exposure.png merged-exposure.hier
 
 MOD = eo xco zeco snomed ncit go exo
 
@@ -24,6 +24,7 @@ exposure-go.obo:
 
 exposure-exo.obo:
 	blip ontol-query -r exo -query "class(ID)" -to obo  > $@
+
 
 
 

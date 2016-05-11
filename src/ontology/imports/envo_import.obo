@@ -1,0 +1,471 @@
+format-version: 1.2
+ontology: ecto/imports/envo_import
+
+[Term]
+id: BFO:0000002
+name: continuant
+
+[Term]
+id: BFO:0000004
+name: independent continuant
+is_a: BFO:0000002 ! continuant
+
+[Term]
+id: BFO:0000040
+name: material entity
+is_a: BFO:0000004 ! independent continuant
+
+[Term]
+id: ENVO:00000000
+name: geographic feature
+is_a: ENVO:00002297 ! environmental feature
+
+[Term]
+id: ENVO:00000003
+name: mine tailing
+is_a: ENVO:0010001 ! anthropogenic environmental material
+
+[Term]
+id: ENVO:00000134
+name: permafrost
+is_a: ENVO:00001998 ! soil
+
+[Term]
+id: ENVO:00001998
+name: soil
+is_a: ENVO:00010483 ! environmental material
+relationship: BFO:0000051 ENVO:00002982 ! has part clay
+relationship: BFO:0000051 ENVO:01000016 ! has part silt
+relationship: BFO:0000051 ENVO:01000017 ! has part sand
+relationship: BFO:0000051 ENVO:01000155 ! has part organic material
+relationship: BFO:0000051 ENVO:01000256 ! has part mineral material
+
+[Term]
+id: ENVO:00002001
+name: waste water
+is_a: ENVO:00002186 ! contaminated water
+is_a: ENVO:00002264 ! waste material
+
+[Term]
+id: ENVO:00002002
+name: food product
+is_a: ENVO:0010001 ! anthropogenic environmental material
+
+[Term]
+id: ENVO:00002003
+name: feces
+is_a: ENVO:02000022 ! excreta
+
+[Term]
+id: ENVO:00002006
+name: water
+is_a: ENVO:00010483 ! environmental material
+
+[Term]
+id: ENVO:00002007
+name: sediment
+is_a: ENVO:00010483 ! environmental material
+
+[Term]
+id: ENVO:00002008
+name: dust
+is_a: ENVO:00010483 ! environmental material
+
+[Term]
+id: ENVO:00002018
+name: sewage
+is_a: ENVO:00002001 ! waste water
+
+[Term]
+id: ENVO:00002044
+name: sludge
+is_a: ENVO:0010001 ! anthropogenic environmental material
+
+[Term]
+id: ENVO:00002057
+name: raw primary sludge
+is_a: ENVO:00002044 ! sludge
+
+[Term]
+id: ENVO:00002058
+name: secondary sludge
+is_a: ENVO:00002044 ! sludge
+
+[Term]
+id: ENVO:00002059
+name: biosolids
+is_a: ENVO:00002044 ! sludge
+
+[Term]
+id: ENVO:00002060
+name: oil sludge
+is_a: ENVO:00002176 ! contaminated sludge
+
+[Term]
+id: ENVO:00002114
+name: contaminated sediment
+is_a: ENVO:00002007 ! sediment
+
+[Term]
+id: ENVO:00002115
+name: petroleum contaminated sediment
+is_a: ENVO:00002180 ! naphthalene contaminated sediment
+
+[Term]
+id: ENVO:00002116
+name: contaminated soil
+is_a: ENVO:00003082 ! enriched soil
+
+[Term]
+id: ENVO:00002117
+name: creosote contaminated soil
+is_a: ENVO:00002116 ! contaminated soil
+
+[Term]
+id: ENVO:00002122
+name: arsenic-rich mud
+is_a: ENVO:01000001 ! mud
+
+[Term]
+id: ENVO:00002141
+name: leachate
+is_a: ENVO:00002006 ! water
+
+[Term]
+id: ENVO:00002142
+name: borax leachate
+is_a: ENVO:00002141 ! leachate
+
+[Term]
+id: ENVO:00002145
+name: chromate contaminated soil
+is_a: ENVO:00003081 ! metal contaminated soil
+
+[Term]
+id: ENVO:00002146
+name: xylene contaminated soil
+is_a: ENVO:00002116 ! contaminated soil
+
+[Term]
+id: ENVO:00002165
+name: meat food product
+is_a: ENVO:0010000 ! animal food product
+
+[Term]
+id: ENVO:00002166
+name: sausage
+is_a: ENVO:00002175 ! processed meat product
+
+[Term]
+id: ENVO:00002174
+name: hot dog
+is_a: ENVO:0010136 ! cooked sausage
+
+[Term]
+id: ENVO:00002175
+name: processed meat product
+is_a: ENVO:00002165 ! meat food product
+is_a: ENVO:0010092 ! processed food product
+
+[Term]
+id: ENVO:00002176
+name: contaminated sludge
+is_a: ENVO:00002044 ! sludge
+
+[Term]
+id: ENVO:00002180
+name: naphthalene contaminated sediment
+is_a: ENVO:00002202 ! organically contaminated sediment
+
+[Term]
+id: ENVO:00002186
+name: contaminated water
+is_a: ENVO:00002006 ! water
+
+[Term]
+id: ENVO:00002202
+name: organically contaminated sediment
+is_a: ENVO:00002114 ! contaminated sediment
+
+[Term]
+id: ENVO:00002259
+name: agricultural soil
+is_a: ENVO:00001998 ! soil
+
+[Term]
+id: ENVO:00002264
+name: waste material
+is_a: ENVO:0010001 ! anthropogenic environmental material
+
+[Term]
+id: ENVO:00002266
+name: chicken breeding waste material
+is_a: ENVO:01000371 ! agricultural waste material
+
+[Term]
+id: ENVO:00002267
+name: industrial waste material
+is_a: ENVO:00002264 ! waste material
+
+[Term]
+id: ENVO:00002273
+name: fluvisol
+is_a: ENVO:00001998 ! soil
+
+[Term]
+id: ENVO:00002274
+name: stagnosol
+is_a: ENVO:00001998 ! soil
+
+[Term]
+id: ENVO:00002275
+name: technosol
+is_a: ENVO:00001998 ! soil
+
+[Term]
+id: ENVO:00002276
+name: animal waste material
+is_a: ENVO:00002873 ! organic waste material
+
+[Term]
+id: ENVO:00002297
+name: environmental feature
+is_a: BFO:0000040 ! material entity
+
+[Term]
+id: ENVO:00002869
+name: hay
+is_a: ENVO:0010003 ! agricultural environmental material
+
+[Term]
+id: ENVO:00002870
+name: adobe
+is_a: ENVO:0010001 ! anthropogenic environmental material
+relationship: BFO:0000051 ENVO:00002982 ! has part clay
+relationship: BFO:0000051 ENVO:01000017 ! has part sand
+
+[Term]
+id: ENVO:00002872
+name: bagasse
+is_a: ENVO:01000371 ! agricultural waste material
+
+[Term]
+id: ENVO:00002873
+name: organic waste material
+is_a: ENVO:00002264 ! waste material
+
+[Term]
+id: ENVO:00002875
+name: oil contaminated soil
+is_a: ENVO:00002116 ! contaminated soil
+
+[Term]
+id: ENVO:00002982
+name: clay
+is_a: ENVO:00010483 ! environmental material
+disjoint_from: ENVO:01000016 ! silt
+
+[Term]
+id: ENVO:00002983
+name: fuel oil
+is_a: ENVO:00002985 ! oil
+
+[Term]
+id: ENVO:00002984
+name: petroleum
+is_a: ENVO:00002985 ! oil
+
+[Term]
+id: ENVO:00002985
+name: oil
+is_a: ENVO:00010483 ! environmental material
+
+[Term]
+id: ENVO:00003030
+name: silage
+is_a: ENVO:0010003 ! agricultural environmental material
+
+[Term]
+id: ENVO:00003031
+name: animal manure
+is_a: ENVO:01000371 ! agricultural waste material
+
+[Term]
+id: ENVO:00003032
+name: fresh animal manure
+is_a: ENVO:00003031 ! animal manure
+
+[Term]
+id: ENVO:00003062
+name: pork
+is_a: ENVO:0010044 ! porcine meat product
+
+[Term]
+id: ENVO:00003079
+name: pork chop
+is_a: ENVO:00003062 ! pork
+
+[Term]
+id: ENVO:00003081
+name: metal contaminated soil
+is_a: ENVO:00002116 ! contaminated soil
+
+[Term]
+id: ENVO:00003082
+name: enriched soil
+is_a: ENVO:00001998 ! soil
+
+[Term]
+id: ENVO:00003881
+name: bacon
+is_a: ENVO:0010154 ! processed pork
+
+[Term]
+id: ENVO:00010483
+name: environmental material
+is_a: BFO:0000040 ! material entity
+
+[Term]
+id: ENVO:0010000
+name: animal food product
+is_a: ENVO:00002002 ! food product
+
+[Term]
+id: ENVO:0010001
+name: anthropogenic environmental material
+is_a: ENVO:00010483 ! environmental material
+
+[Term]
+id: ENVO:0010003
+name: agricultural environmental material
+is_a: ENVO:0010001 ! anthropogenic environmental material
+
+[Term]
+id: ENVO:0010044
+name: porcine meat product
+is_a: ENVO:00002165 ! meat food product
+
+[Term]
+id: ENVO:0010092
+name: processed food product
+is_a: ENVO:00002002 ! food product
+
+[Term]
+id: ENVO:0010136
+name: cooked sausage
+is_a: ENVO:00002166 ! sausage
+
+[Term]
+id: ENVO:0010154
+name: processed pork
+is_a: ENVO:00002175 ! processed meat product
+is_a: ENVO:00003062 ! pork
+
+[Term]
+id: ENVO:01000001
+name: mud
+is_a: ENVO:00010483 ! environmental material
+
+[Term]
+id: ENVO:01000016
+name: silt
+is_a: ENVO:00010483 ! environmental material
+disjoint_from: ENVO:01000017 ! sand
+
+[Term]
+id: ENVO:01000017
+name: sand
+is_a: ENVO:00010483 ! environmental material
+
+[Term]
+id: ENVO:01000060
+name: particulate matter
+is_a: ENVO:00010483 ! environmental material
+
+[Term]
+id: ENVO:01000155
+name: organic material
+is_a: ENVO:00010483 ! environmental material
+
+[Term]
+id: ENVO:01000231
+name: lava
+is_a: ENVO:00010483 ! environmental material
+
+[Term]
+id: ENVO:01000256
+name: mineral material
+is_a: ENVO:00010483 ! environmental material
+
+[Term]
+id: ENVO:01000267
+name: atmosphere
+is_a: ENVO:01000281 ! layer
+
+[Term]
+id: ENVO:01000281
+name: layer
+is_a: ENVO:00000000 ! geographic feature
+
+[Term]
+id: ENVO:01000371
+name: agricultural waste material
+is_a: ENVO:00002264 ! waste material
+
+[Term]
+id: ENVO:01000406
+name: snow
+is_a: ENVO:00010483 ! environmental material
+
+[Term]
+id: ENVO:01000451
+name: atmospheric carbon dioxide
+is_a: ENVO:00010483 ! environmental material
+relationship: BFO:0000050 ENVO:01000267 ! part of atmosphere
+
+[Term]
+id: ENVO:01000648
+name: magma
+is_a: ENVO:00010483 ! environmental material
+
+[Term]
+id: ENVO:01000701
+name: volcanic ash
+is_a: ENVO:00010483 ! environmental material
+
+[Term]
+id: ENVO:02000019
+name: bodily fluid
+is_a: ENVO:01000155 ! organic material
+
+[Term]
+id: ENVO:02000020
+name: blood
+is_a: ENVO:02000019 ! bodily fluid
+
+[Term]
+id: ENVO:02000021
+name: amniotic fluid
+is_a: ENVO:02000019 ! bodily fluid
+
+[Term]
+id: ENVO:02000022
+name: excreta
+is_a: ENVO:02000019 ! bodily fluid
+
+[Term]
+id: ENVO:02000023
+name: bile
+is_a: ENVO:02000019 ! bodily fluid
+
+[Typedef]
+id: BFO:0000050
+name: part of
+is_transitive: true
+inverse_of: BFO:0000051 ! has part
+
+[Typedef]
+id: BFO:0000051
+name: has part
+is_transitive: true
+

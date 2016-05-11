@@ -1,14 +1,15 @@
-pattern_name: exo/patterns/exposure_event
+pattern_name: exo/patterns/exposure_to_material
 classes:
   exposure event: ExO:0000002
-  environmental material: ENVO:00010483
+  environmental materal: ENVO:00010483
 
 relations:
+  stressor: BFO_0000050
   part of: BFO_0000050
-  causally downstream of: RO:0002404
+  has input: RO:0002233
     
 vars: 
-  stressor: "'Thing'"
+  stressor: "'environmental material'"
 
 name:
   text: "exposure to %s"
@@ -26,11 +27,11 @@ annotations:
       - stressor
 
 def: 
-  text: "An exposure event involving the interaction of an exposure receptor with %s as an exposure stressor."
+  text: "A exposure event involving the interaction of an exposure receptor to %s. Exposure may be through a variety of means, including through the air or through ingestion."
   vars:
     - stressor
     
 equivalentTo: 
-  text: "'exposure event' and 'causally downstream of' some %s"
+  text: "'exposure event' and 'has input' some %s"
   vars:
     - stressor

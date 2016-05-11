@@ -1,0 +1,908 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://purl.obolibrary.org/obo/ecto/imports/envo_import.owl#"
+     xml:base="http://purl.obolibrary.org/obo/ecto/imports/envo_import.owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/ecto/imports/envo_import.owl"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000050 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000050">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">part of</rdfs:label>
+        <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000051 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000051">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has part</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000002 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000002">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">continuant</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000004 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000004">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">independent continuant</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000040 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000040">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">material entity</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000004"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_00000000 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00000000">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">geographic feature</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00002297"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_00000003 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00000003">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mine tailing</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_0010001"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_00000134 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00000134">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">permafrost</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00001998"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_00001998 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00001998">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">soil</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00010483"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000256"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000016"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000155"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000017"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_00002982"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_00002001 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00002001">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">waste water</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00002186"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00002264"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_00002002 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00002002">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">food product</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_0010001"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_00002003 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00002003">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">feces</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_02000022"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_00002006 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00002006">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">water</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00010483"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_00002007 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00002007">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sediment</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00010483"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_00002008 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00002008">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dust</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00010483"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_00002018 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00002018">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sewage</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00002001"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_00002044 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00002044">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sludge</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_0010001"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_00002057 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00002057">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">raw primary sludge</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00002044"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_00002058 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00002058">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">secondary sludge</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00002044"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_00002059 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00002059">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">biosolids</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00002044"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_00002060 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00002060">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">oil sludge</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00002176"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_00002114 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00002114">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">contaminated sediment</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00002007"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_00002115 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00002115">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">petroleum contaminated sediment</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00002180"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_00002116 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00002116">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">contaminated soil</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00003082"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_00002117 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00002117">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">creosote contaminated soil</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00002116"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_00002122 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00002122">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">arsenic-rich mud</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000001"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_00002141 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00002141">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">leachate</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00002006"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_00002142 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00002142">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">borax leachate</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00002141"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_00002145 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00002145">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chromate contaminated soil</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00003081"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_00002146 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00002146">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">xylene contaminated soil</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00002116"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_00002165 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00002165">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">meat food product</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_0010000"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_00002166 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00002166">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sausage</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00002175"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_00002174 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00002174">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hot dog</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_0010136"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_00002175 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00002175">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">processed meat product</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00002165"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_0010092"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_00002176 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00002176">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">contaminated sludge</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00002044"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_00002180 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00002180">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">naphthalene contaminated sediment</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00002202"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_00002186 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00002186">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">contaminated water</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00002006"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_00002202 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00002202">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">organically contaminated sediment</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00002114"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_00002259 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00002259">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">agricultural soil</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00001998"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_00002264 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00002264">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">waste material</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_0010001"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_00002266 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00002266">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chicken breeding waste material</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000371"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_00002267 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00002267">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">industrial waste material</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00002264"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_00002273 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00002273">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fluvisol</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00001998"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_00002274 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00002274">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stagnosol</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00001998"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_00002275 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00002275">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">technosol</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00001998"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_00002276 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00002276">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">animal waste material</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00002873"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_00002297 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00002297">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">environmental feature</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_00002869 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00002869">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hay</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_0010003"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_00002870 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00002870">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">adobe</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_0010001"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000017"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_00002982"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_00002872 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00002872">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bagasse</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000371"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_00002873 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00002873">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">organic waste material</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00002264"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_00002875 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00002875">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">oil contaminated soil</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00002116"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_00002982 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00002982">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">clay</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00010483"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000016"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_00002983 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00002983">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fuel oil</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00002985"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_00002984 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00002984">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">petroleum</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00002985"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_00002985 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00002985">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">oil</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00010483"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_00003030 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00003030">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">silage</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_0010003"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_00003031 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00003031">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">animal manure</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000371"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_00003032 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00003032">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fresh animal manure</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00003031"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_00003062 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00003062">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pork</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_0010044"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_00003079 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00003079">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pork chop</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00003062"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_00003081 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00003081">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">metal contaminated soil</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00002116"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_00003082 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00003082">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">enriched soil</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00001998"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_00003881 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00003881">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bacon</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_0010154"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_00010483 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00010483">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">environmental material</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_0010000 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_0010000">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">animal food product</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00002002"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_0010001 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_0010001">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">anthropogenic environmental material</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00010483"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_0010003 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_0010003">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">agricultural environmental material</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_0010001"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_0010044 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_0010044">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">porcine meat product</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00002165"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_0010092 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_0010092">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">processed food product</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00002002"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_0010136 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_0010136">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cooked sausage</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00002166"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_0010154 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_0010154">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">processed pork</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00002175"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00003062"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01000001 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000001">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mud</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00010483"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01000016 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000016">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">silt</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00010483"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000017"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01000017 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000017">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sand</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00010483"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01000060 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000060">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">particulate matter</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00010483"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01000155 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000155">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">organic material</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00010483"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01000231 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000231">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lava</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00010483"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01000256 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000256">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mineral material</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00010483"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01000267 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000267">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">atmosphere</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000281"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01000281 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000281">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">layer</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000000"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01000371 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000371">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">agricultural waste material</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00002264"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01000406 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000406">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">snow</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00010483"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01000451 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000451">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">atmospheric carbon dioxide</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00010483"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000267"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01000648 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000648">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">magma</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00010483"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01000701 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000701">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">volcanic ash</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00010483"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_02000019 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_02000019">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bodily fluid</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000155"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_02000020 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_02000020">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">blood</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_02000019"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_02000021 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_02000021">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">amniotic fluid</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_02000019"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_02000022 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_02000022">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">excreta</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_02000019"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_02000023 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_02000023">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bile</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_02000019"/>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 0.0.1-SNAPSHOT) http://owlapi.sourceforge.net -->
+
