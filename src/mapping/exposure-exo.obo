@@ -1,0 +1,651 @@
+format-version: 1.2
+ontology: exo
+
+[Term]
+id: ExO:0000000
+name: exposure stressor
+namespace: exposure_stressor
+def: "An agent, stimulus, activity, or event that causes stress or tension on an organism and interacts with an exposure receptor during an exposure event." [XX:new_dbxref]
+relationship: interacts_with ExO:0000001 ! exposure receptor
+relationship: interacts_with_an_exposure_receptor_via ExO:0000002 ! exposure event
+
+[Term]
+id: ExO:0000001
+name: exposure receptor
+namespace: exposure_receptor
+def: "An entity (e.g., a human, human population, or a human organ) that interacts with an exposure stressor during an exposure event." [XX:new_dbxref]
+relationship: interacts_with ExO:0000000 ! exposure stressor
+relationship: interacts_with_an_exposure_stressor_via ExO:0000002 ! exposure event
+
+[Term]
+id: ExO:0000002
+name: exposure event
+namespace: exposure_event
+def: "An interaction between an exposure stressor and an exposure receptor." [XX:new_dbxref]
+relationship: has_part ExO:0000000 ! exposure stressor
+relationship: has_part ExO:0000001 ! exposure receptor
+relationship: interacts_with_an_exposure_receptor_via ExO:0000000 ! exposure stressor
+relationship: interacts_with_an_exposure_stressor_via ExO:0000001 ! exposure receptor
+
+[Term]
+id: ExO:0000003
+name: exposure outcome
+namespace: exposure_outcome
+def: "Entity that results from the interaction between and exposure receptor and an exposure stressor during an exposure event." [XX:new_dbxref]
+synonym: "interaction outcome" RELATED []
+relationship: is_associated_with ExO:0000002 ! exposure event
+
+[Term]
+id: ExO:0000004
+name: exposure transport path
+namespace: exposure_stressor
+def: "A exposure transport path is the course an agent takes from the source to the target." [XX:new_dbxref]
+relationship: OBO_REL:part_of ExO:0000000 ! exposure stressor
+
+[Term]
+id: ExO:0000005
+name: biological agent
+namespace: exposure_stressor
+def: "An agent of biological origin." [XX:new_dbxref]
+is_a: ExO:0000000  ! exposure stressor
+
+[Term]
+id: ExO:0000006
+name: chemical agent
+namespace: exposure_stressor
+def: "An agent of chemical origin." [google:google]
+is_a: ExO:0000000  ! exposure stressor
+
+[Term]
+id: ExO:0000007
+name: ecological perturbation
+namespace: exposure_stressor
+def: "An exposure stressor that is a change in the distributions, abundance and relations of organisms and their interactions with the environment." [google:google]
+is_a: ExO:0000000  ! exposure stressor
+
+[Term]
+id: ExO:0000008
+name: physical agent
+namespace: exposure_stressor
+def: "An agent as a source of energy that may cause injury or disease (e.g., noise, vibration, radiation, temperature extremes)." [google:google]
+is_a: ExO:0000000  ! exposure stressor
+
+[Term]
+id: ExO:0000009
+name: psychosocial agent
+namespace: exposure_stressor
+def: "An agent that interferes with one's psychological development in and interaction with a social environment." [google:google]
+is_a: ExO:0000000  ! exposure stressor
+
+[Term]
+id: ExO:0000010
+name: air transport path
+namespace: exposure_transport_path
+def: "A transport path that allows a stressor to interact with a receptor via air." [XX:new_dbxref]
+is_a: ExO:0000004  ! exposure transport path
+
+[Term]
+id: ExO:0000011
+name: biomechanical agent
+namespace: exposure_stressor
+def: "A mechanical agent applied to biological systems, such as humans, animals, plants, organs, and cells" [XX:new_dbxref]
+is_a: ExO:0000000  ! exposure stressor
+
+[Term]
+id: ExO:0000012
+name: habitat degradation
+namespace: exposure_stressor
+def: "An ecological perturbation that results from the deterioration of  an ecological or environmental area that is inhabited by a particular species of animal, plant or other type of organism." [GOC:hjd]
+is_a: ExO:0000007  ! ecological perturbation
+
+[Term]
+id: ExO:0000013
+name: acid rain
+namespace: exposure_stressor
+def: "An ecological perturbation that is acidic water, usually pH 2.5 to 4.5, which poisons the ecosystem and adversely affects plants, fishes, and mammals. It is caused by industrial pollutants, mainly sulfur oxides and nitrogen oxides, emitted into the atmosphere and returning to earth in the form of acidic rain water." [MSH:D015258, Umls_Cui:C0001111]
+is_a: ExO:0000007  ! ecological perturbation
+
+[Term]
+id: ExO:0000014
+name: climate change
+namespace: exposure_stressor
+def: "An ecological pertubation that is any significant change in measures of climate (such as temperature, precipitation, or wind) lasting for an extended period (decades or longer). It may result from natural factors such as changes in the sun's intensity, natural processes within the climate system such as changes in ocean circulation, or human activities." [MSH:D057231, Umls_Cui:C2718051]
+is_a: ExO:0000007  ! ecological perturbation
+
+[Term]
+id: ExO:0000015
+name: poverty
+namespace: exposure_stressor
+def: "A psychosocial agent that is a situation in which the level of living of an individual, family, or group is below the standard of the community. It is often related to a specific income level." [MSH:D011203]
+synonym: "cultural depravation " RELATED []
+synonym: "indigency" RELATED []
+is_a: ExO:0000009  ! psychosocial agent
+
+[Term]
+id: ExO:0000016
+name: source
+namespace: exposure_stressor
+def: "Where something is available or from where it originates." [Umls_Cui:C0449416]
+xref: XX:new_dbxref
+relationship: OBO_REL:part_of ExO:0000000 ! exposure stressor
+
+[Term]
+id: ExO:0000017
+name: location
+namespace: spatial_quality
+def: "A spatial quality inhering in a bearer by virtue of the bearer's spatial location relative to other objects in the vicinity." [PATO:0000140]
+synonym: "Placement" RELATED []
+is_a: ExO:0000088  ! spatial quality
+
+[Term]
+id: ExO:0000018
+name: exogenous
+namespace: spatial_quality
+def: "Substances or processes that originate outside of an organism or a system." [XX:new_dbxref]
+synonym: "External " RELATED []
+is_a: ExO:0000017  ! location
+
+[Term]
+id: ExO:0000019
+name: indoor
+namespace: spatial_quality
+def: "A location that is happening or arising or located inside some limits, or especially, some surface." [XX:new_dbxref]
+is_a: ExO:0000017  ! location
+
+[Term]
+id: ExO:0000020
+name: outdoor
+namespace: spatial_quality
+def: "An exogenous location that is happening or arising or located outside" [XX:new_dbxref]
+is_a: ExO:0000017  ! location
+
+[Term]
+id: ExO:0000021
+name: endogenous
+namespace: spatial_quality
+def: "Substances or processes that originate within an organism or a system." [XX:new_dbxref]
+is_a: ExO:0000017  ! location
+
+[Term]
+id: ExO:0000023
+name: process
+namespace: source
+def: "The act of taking something through an established and usually routine set of procedures to convert it from one form to another." [XX:new_dbxref]
+is_a: ExO:0000016  ! source
+
+[Term]
+id: ExO:0000024
+name: biological process
+namespace: source
+def: "A process occurring in living organisms." [XX:new_dbxref]
+is_a: ExO:0000023  ! process
+
+[Term]
+id: ExO:0000025
+name: industrial process
+namespace: source
+def: "A systematic series of mechanical or chemical operations that produce or manufacture something." [XX:new_dbxref]
+is_a: ExO:0000023  ! process
+
+[Term]
+id: ExO:0000026
+name: agricultural process
+namespace: source
+def: "The exposure process of producing food, feed, fiber and other desired products by cultivation of certain plants or raising domesticated animals (livestock)." [XX:new_dbxref]
+is_a: ExO:0000023  ! process
+
+[Term]
+id: ExO:0000028
+name: water transport path
+namespace: exposure_transport_path
+def: "An exposure transport path involving the interaction of an exposure receptor with an exposure stressor via water." [XX:new_dbxref]
+is_a: ExO:0000004  ! exposure transport path
+
+[Term]
+id: ExO:0000029
+name: soil transport path
+namespace: exposure_transport_path
+def: "An exposure transport path involving the interaction of an exposure receptor with an exposure stressor via soil." [XX:new_dbxref]
+is_a: ExO:0000004  ! exposure transport path
+
+[Term]
+id: ExO:0000030
+name: ecosphere
+namespace: exposure_receptor
+def: "The earth, all of the organisms living on it, and all of the environmental factors, which act on the organisms. The volume of area where biological matter can exist, slightly above, on or below ground level." [XXX:new_dbxref]
+is_a: ExO:0000001  ! exposure receptor
+
+[Term]
+id: ExO:0000031
+name: biosphere
+namespace: exposure_receptor
+alt_id: ExO:0000032
+def: "MERGED DEFINITION:nTARGET DEFINITION: An exposure receptor that is the global ecological system integrating all living beings and their relationships, including their interaction with the elements of the lithosphere, hydrosphere and atmosphere.n--------------------nSOURCE DEFINITION: An exposure receptor that is the part of the environment that is made or modified by humans for use in human activities and human habitats." [GOC:hjd]
+synonym: "anthrosphere" EXACT []
+relationship: OBO_REL:part_of ExO:0000030 ! ecosphere
+
+[Term]
+id: ExO:0000033
+name: human population
+namespace: exposure_receptor
+def: "An exposure receptor that is a group of Homo sapiens inhabiting a given area." [XX:new_dbxref]
+relationship: OBO_REL:part_of ExO:0000031 ! biosphere
+
+[Term]
+id: ExO:0000034
+name: occupation
+namespace: human_attribute
+def: "An individual attribute that is the usual or principal work or business of an individual." [XX:new_dbxref]
+is_a: ExO:0000089  ! human attribute
+
+[Term]
+id: ExO:0000035
+name: genetic background
+namespace: human_attribute
+def: "The individual attribute that is the genes and their composition that are characteristic of an individual or population." [XX:new_dbxref]
+is_a: ExO:0000089  ! human attribute
+
+[Term]
+id: ExO:0000037
+name: lifestage
+namespace: human_attribute
+def: "A individual attribute that is a particular period in the life of an organism." [XX:new_dbxref]
+is_a: ExO:0000089  ! human attribute
+
+[Term]
+id: ExO:0000038
+name: health status
+namespace: human_attribute
+def: "The condition of an organism in all aspects (e.g., functional or metabolic efficiency)." [XX:new_dbxref]
+is_a: ExO:0000089  ! human attribute
+
+[Term]
+id: ExO:0000039
+name: social characteristic
+namespace: human_attribute
+def: "An individual attribute human society and its modes of organization." [XX:new_dbxref]
+is_a: ExO:0000089  ! human attribute
+
+[Term]
+id: ExO:0000040
+name: cultural background
+namespace: human_attribute
+def: "A social characteristic about or relating to the arts and manners favored or practiced by a group." [XX:new_dbxref]
+is_a: ExO:0000039  ! social characteristic
+
+[Term]
+id: ExO:0000041
+name: education
+namespace: human_attribute
+def: "The act or process of imparting or acquiring knowledge." [XX:new_dbxref]
+is_a: ExO:0000039  ! social characteristic
+
+[Term]
+id: ExO:0000042
+name: human individual
+namespace: exposure_receptor
+def: "Being or characteristic of a single thing or person." [XX:new_dbxref]
+relationship: OBO_REL:part_of ExO:0000033 ! human population
+
+[Term]
+id: ExO:0000043
+name: anatomy
+namespace: human_attribute
+def: "The individual attribute describing the structure of a living organism." [XX:new_dbxref]
+is_a: ExO:0000089  ! human attribute
+
+[Term]
+id: ExO:0000044
+name: organ
+namespace: anatomy
+def: "Anatomical structure, which consists of the maximal set of organ parts so connected to one another that together they constitute a unit of macroscopic anatomy, structurally distinct from other such units. Examples: femur, biceps, liver, heart, skin, tracheobronchial tree, ovary." [FMA:67498]
+relationship: OBO_REL:part_of ExO:0000043 ! anatomy
+
+[Term]
+id: ExO:0000045
+name: tissue
+namespace: anatomy
+def: "Anatomical structure, which consists of similarly specialized cells and intercellular matrix, aggregated according to genetically determined spatial relationships. Examples: epithelium, muscle tissue, connective tissue, neural tissue, lymphoid tissue." [FMA:9637]
+relationship: OBO_REL:part_of ExO:0000043 ! anatomy
+
+[Term]
+id: ExO:0000046
+name: cell
+namespace: anatomy
+def: "Anatomical structure that consists of a cell compartment surrounded by a plasma membrane; together with other cells and intercellular matrix, it constitutes tissues. Examples: lymphocyte, fibroblast, erythrocyte, neuron." [FMA:68646]
+relationship: OBO_REL:part_of ExO:0000043 ! anatomy
+
+[Term]
+id: ExO:0000047
+name: biological molecules
+namespace: anatomy
+def: "Substances made up of atoms, such as proteins, nucleic acids, lipids and carbohydrates that are produced only by living organisms. Biological molecules are often referred to as macromolecules or biopolymers." [XX:new_dbxref]
+relationship: OBO_REL:part_of ExO:0000043 ! anatomy
+
+[Term]
+id: ExO:0000048
+name: built environment
+namespace: exposure_receptor
+def: "Human-made surroundings that provide the setting for human activity, ranging in scale from personal shelter and buildings to neighborhoods and cite, and can often include their supporting infrastructure, such as water supply or energy networks." [XX:new_dbxref]
+relationship: OBO_REL:part_of ExO:0000031 ! biosphere
+
+[Term]
+id: ExO:0000050
+name: temporal quality
+namespace: temporal_quality
+def: "A quality of a single process inhering in a bearer by virtue of the bearer's occurrence." [PATO:0000057]
+synonym: "Incidence" RELATED []
+synonym: "occurrence quality" RELATED []
+relationship: OBO_REL:part_of ExO:0000002 ! exposure event
+relationship: OBO_REL:part_of ExO:0000016 ! source
+relationship: OBO_REL:part_of ExO:0000064 ! assay
+
+[Term]
+id: ExO:0000051
+name: frequency
+namespace: temporal_quality
+def: "A physical quality, which inheres in a bearer by virtue of the number of the bearer's repetitive actions in a particular time." [PATO:0000044]
+is_a: ExO:0000050  ! temporal quality
+
+[Term]
+id: ExO:0000052
+name: intermittent
+namespace: temporal_quality
+def: "A quality of a single process inhering in a bearer by virtue of the bearer's being marked by breaks or interruptions." [PATO:0000690]
+synonym: "discontinuous" RELATED []
+synonym: "interrupted" RELATED []
+is_a: ExO:0000051  ! frequency
+
+[Term]
+id: ExO:0000053
+name: continuous
+namespace: temporal_quality
+def: "A quality of a single process inhering in a bearer by virtue of the bearer's being uninterrupted in time, sequence, substance, or extent." [PATO:0000689]
+synonym: "uninterrupted" RELATED []
+is_a: ExO:0000051  ! frequency
+
+[Term]
+id: ExO:0000054
+name: duration
+namespace: temporal_quality
+def: "Amount of time during which an event persists." [SBO:0000347]
+is_a: ExO:0000050  ! temporal quality
+
+[Term]
+id: ExO:0000055
+name: route
+namespace: exposure_event
+def: "The way people or other living organisms come into contact with a stressor." [XX:new_dbxref]
+relationship: OBO_REL:part_of ExO:0000002 ! exposure event
+
+[Term]
+id: ExO:0000056
+name: ingestion
+namespace: route
+def: "The process of taking a material (e.g., stressor) into the mouth or body." [XX:new_dbxref]
+is_a: ExO:0000055  ! route
+
+[Term]
+id: ExO:0000057
+name: inhalation
+namespace: route
+def: "The process of drawing in by breathing." [XX:new_dbxref]
+is_a: ExO:0000055  ! route
+
+[Term]
+id: ExO:0000058
+name: absorption
+namespace: route
+def: "The process of one material (absorbent) being retained by another (absorbate)." [REX:0000188]
+is_a: ExO:0000055  ! route
+
+[Term]
+id: ExO:0000059
+name: leaching
+namespace: route
+def: "The extraction of certain materials from a carrier into a liquid (usually, but not always a solvent)." [GOC:hjd]
+is_a: ExO:0000055  ! route
+
+[Term]
+id: ExO:0000060
+name: injection
+namespace: route
+def: "A method of putting liquid into the body with a syringe and a hollow needle that punctures the skin." [GOC:hjd]
+is_a: ExO:0000055  ! route
+
+[Term]
+id: ExO:0000061
+name: subcutaneous tissue
+namespace: anatomy
+def: "Superficial fascia." [FMA:9630]
+synonym: "Superficial fascia" RELATED []
+relationship: OBO_REL:part_of ExO:0000043 ! anatomy
+relationship: targeted_to ExO:0000060 ! injection
+
+[Term]
+id: ExO:0000062
+name: muscle
+namespace: anatomy
+def: "The contractile tissue of animals and is derived from the mesodermal layer of embryonic germ cells." [FMA:30316]
+relationship: OBO_REL:part_of ExO:0000043 ! anatomy
+relationship: targeted_to ExO:0000060 ! injection
+
+[Term]
+id: ExO:0000063
+name: blood
+namespace: anatomy
+def: "Body substance which consists of plasma and blood cells." [FMA:9670]
+relationship: OBO_REL:part_of ExO:0000043 ! anatomy
+relationship: targeted_to ExO:0000060 ! injection
+
+[Term]
+id: ExO:0000064
+name: assay
+namespace: assay
+def: "A planned process with the objective to produce information about some evaluant." [OBI:0000070]
+relationship: characterizes ExO:0000002 ! exposure event
+
+[Term]
+id: ExO:0000065
+name: intensity
+namespace: exposure_event
+def: "A quality inhering in a bearer by virtue of the bearer possessing or displaying a distinctive feature in type or degree or effect or force." [PATO:0000049]
+relationship: OBO_REL:part_of ExO:0000002 ! exposure event
+relationship: OBO_REL:part_of ExO:0000016 ! source
+relationship: OBO_REL:part_of ExO:0000064 ! assay
+
+[Term]
+id: ExO:0000066
+name: unit
+namespace: unit
+def: "A unit of measurement is a standardized quantity of a physical quality." [UO:0000000]
+relationship: OBO_REL:has_part ExO:0000065 ! intensity
+relationship: OBO_REL:part_of ExO:0000050 ! temporal quality
+relationship: OBO_REL:part_of ExO:0000067 ! measurement
+
+[Term]
+id: ExO:0000067
+name: measurement
+namespace: assay
+def: "A measurement is an information entity that is a recording of the output of a measurement such as produced by an instrument." [EFO:0001444]
+is_a: ExO:0000064  ! assay
+
+[Term]
+id: ExO:0000070
+name: time
+namespace: temporal_quality
+def: "An exposure quality in which events occur in sequence." [PATO:0000165]
+is_a: ExO:0000050  ! temporal quality
+
+[Term]
+id: ExO:0000071
+name: biological marker
+namespace: assay
+def: "A substance used as an indicator of a biological state." [CHEBI:59163]
+is_a: ExO:0000064  ! assay
+
+[Term]
+id: ExO:0000072
+name: model
+namespace: assay
+def: "A representation." [XX:new_dbxref]
+is_a: ExO:0000064  ! assay
+
+[Term]
+id: ExO:0000073
+name: conceptual
+namespace: assay
+def: "A representation of a particular system or subject matter that may only be drawn on paper, described in words, or imagined in the mind." [XX:new_dbxref]
+is_a: ExO:0000072  ! model
+
+[Term]
+id: ExO:0000074
+name: mathematical
+namespace: assay
+def: "A representation of a particular system or subject matter that can be computed." [XX:new_dbxref]
+is_a: ExO:0000072  ! model
+
+[Term]
+id: ExO:0000075
+name: computational
+namespace: assay
+def: "A representation of a particular system or subject matter that is computer-derived." [XX:<new_dbxref>]
+xref: NULL
+is_a: ExO:0000072  ! model
+
+[Term]
+id: ExO:0000076
+name: dose
+namespace: exposure_event
+def: "The total quantity or strength of a substance administered at one time." [EFO:0000428]
+is_a: ExO:0000003  ! exposure outcome
+is_a: ExO:0000065  ! intensity
+
+[Term]
+id: ExO:0000077
+name: biological response
+namespace: exposure_outcome
+is_a: ExO:0000003  ! exposure outcome
+
+[Term]
+id: ExO:0000078
+name: molecular response
+namespace: exposure_outcome
+is_a: ExO:0000077  ! biological response
+
+[Term]
+id: ExO:0000079
+name: disease
+namespace: exposure_outcome
+def: "A disease is a pattern of abnormal functioning, or abnormal localization of normal functioning, and/or abnormal localization of constituents when compared to other members of that species." [DOExO:4, MSH2010_2010_02_22:D004194, UMLS_CUI:C0012634]
+is_a: ExO:0000077  ! biological response
+
+[Term]
+id: ExO:0000080
+name: symptom
+namespace: exposure_outcome
+def: "A symptom is a perceived change in function, sensation, loss, disturbance or appearance reported by a patient indicative of a disease." [SYOExO:14974]
+is_a: ExO:0000077  ! biological response
+
+[Term]
+id: ExO:0000082
+name: public policy
+namespace: exposure_outcome
+is_a: ExO:0000003  ! exposure outcome
+
+[Term]
+id: ExO:0000083
+name: exposure medium
+namespace: assay
+def: "An exposure medium is a substance through which something else is transmitted or carried during an exposure." [sep:00037]
+relationship: OBO_REL:part_of ExO:0000002 ! exposure event
+
+[Term]
+id: ExO:0000085
+name: commercial product
+namespace: source
+def: "The end result of a manufacturing process; anything that is produced." [NCIThesaurus:C1514468]
+is_a: ExO:0000016  ! source
+
+[Term]
+id: ExO:0000087
+name: exposure intervention
+namespace: exposure_outcome
+def: "The act or fact of interfering so as to modify." [XX:new_dbxref]
+is_a: ExO:0000003  ! exposure outcome
+
+[Term]
+id: ExO:0000088
+name: spatial quality
+namespace: spatial_quality
+def: "Of or relating to space or components within space." [XX:new_dbxref]
+relationship: OBO_REL:part_of ExO:0000002 ! exposure event
+relationship: OBO_REL:part_of ExO:0000016 ! source
+relationship: OBO_REL:part_of ExO:0000064 ! assay
+
+[Term]
+id: ExO:0000089
+name: human attribute
+namespace: human_attribute
+def: "An attribute describing some aspect of an individual or human population." [XX:new_dbxref]
+relationship: OBO_REL:part_of ExO:0000042 ! human individual
+
+[Term]
+id: ExO:0000090
+name: method
+namespace: assay
+def: "The protocol for an assay." [XX:<new_dbxref>]
+relationship: OBO_REL:part_of ExO:0000064 ! assay
+
+[Typedef]
+id: OBO_REL:has_part
+name: has_part
+namespace: default_namespace
+alt_id: OBO_REL:0000003
+is_transitive: true
+is_reflexive: true
+is_anti_symmetric: true
+inverse_of_on_instance_level: OBO_REL:part_of  ! part_of
+
+[Typedef]
+id: OBO_REL:part_of
+name: part_of
+namespace: default_namespace
+alt_id: OBO_REL:0000002
+def: "For continuants: C part_of C' if and only if: given any c that instantiates C at a time t, there is some c' such that c' instantiates C' at time t, and c *part_of* c' at t. For processes: P part_of P' if and only if: given any p that instantiates P at a time t, there is some p' such that p' instantiates P' at time t, and p *part_of* p' at t. (Here *part_of* is the instance-level part-relation.)" [PMID:15892874]
+is_transitive: true
+is_reflexive: true
+is_anti_symmetric: true
+inverse_of_on_instance_level: OBO_REL:has_part  ! has_part
+comment: Parthood as a relation between instances: The primitive instance-level relation p part_of p1 is illustrated in assertions such as: this instance of rhodopsin mediated phototransduction part_of this instance of visual perception.    This relation satisfies at least the following standard axioms of mereology: reflexivity (for all p, p part_of p); anti-symmetry (for all p, p1, if p part_of p1 and p1 part_of p then p and p1 are identical); and transitivity (for all p, p1, p2, if p part_of p1 and p1 part_of p2, then p part_of p2). Analogous axioms hold also for parthood as a relation between spatial regions.    For parthood as a relation between continuants, these axioms need to be modified to take account of the incorporation of a temporal argument. Thus for example the axiom of transitivity for continuants will assert that if c part_of c1 at t and c1 part_of c2 at t, then also c part_of c2 at t.    Parthood as a relation between classes: To define part_of as a relation between classes we again need to distinguish the two cases of continuants and processes, even though the explicit reference to instants of time now falls away. For continuants, we have C part_of C1 if and only if any instance of C at any time is an instance-level part of some instance of C1 at that time, as for example in: cell nucleus part_ of cell.
+
+[Typedef]
+id: characterizes
+name: characterizes
+namespace: default_namespace
+
+[Typedef]
+id: interacts_with
+name: interacts_with
+namespace: default_namespace
+
+[Typedef]
+id: interacts_with_an_exposure_receptor_via
+name: interacts_with_an_exposure_receptor_via
+namespace: default_namespace
+
+[Typedef]
+id: interacts_with_an_exposure_stressor_via
+name: interacts_with_an_exposure stressor_via
+namespace: default_namespace
+
+[Typedef]
+id: is_associated_with
+name: is_associated_with
+namespace: default_namespace
+
+[Typedef]
+id: targeted_to
+name: targeted_to
+namespace: default_namespace
+
