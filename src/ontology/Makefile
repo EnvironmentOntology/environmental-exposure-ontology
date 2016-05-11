@@ -74,8 +74,8 @@ all_imports: all_imports_owl all_imports_obo
 KEEPRELS = BFO:0000050 BFO:0000051 RO:0002202 immediate_transformation_of
 
 # File used to seed module extraction
-imports/seed.tsv: ecto-core.owl
-	owltools $(USECAT) $< --merge-support-ontologies --export-table $@.tmp && cut -f1 $@.tmp > $@
+imports/seed.tsv: ecto-core.owl imports/seed_curated.tsv
+	owltools $(USECAT) $< --merge-support-ontologies --export-table $@.tmp && cut -f1 $@.tmp imports/seed_curated.tsv | sort -u > $@
 
 imports/%_import.owl: $(SRC) mirror/%.owl imports/seed.tsv
 	robot extract -i mirror/$*.owl -T imports/seed.tsv -m BOT -O $(OBO)/ecto/$@ -o $@
