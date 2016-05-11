@@ -1,0 +1,1252 @@
+format-version: 1.2
+remark: Includes Ontology(OntologyID(OntologyIRI(<http://purl.obolibrary.org/obo/ecto/modules/exposure_to_material.owl>))) [Axioms: 392 Logical Axioms: 55]
+remark: Includes Ontology(OntologyID(OntologyIRI(<http://purl.obolibrary.org/obo/ecto/modules/exposure_to_radiation.owl>))) [Axioms: 105 Logical Axioms: 14]
+import: http://purl.obolibrary.org/obo/ecto/imports/envo_import.owl
+import: http://purl.obolibrary.org/obo/ecto/imports/exo_import.owl
+import: http://purl.obolibrary.org/obo/ecto/imports/npo_import.owl
+import: http://purl.obolibrary.org/obo/ecto/imports/ro_import.owl
+ontology: ecto
+
+[Term]
+id: BFO:0000004
+is_a: BFO:0000002
+
+[Term]
+id: BFO:0000040
+is_a: BFO:0000004
+
+[Term]
+id: Continuant
+is_a: Entity
+
+[Term]
+id: DependentContinuant
+is_a: Continuant
+
+[Term]
+id: ECTO:0000000
+name: test
+
+[Term]
+id: ECTO:0000001
+name: exposure to radiation
+def: "A radiation exposure event involving the interaction of an exposure receptor to radiation." []
+synonym: "radiation exposure" EXACT []
+synonym: "radiation exposure event" EXACT []
+is_a: BFO:0000003
+is_a: ExO:0000002
+intersection_of: ExO:0000002
+intersection_of: RO:0002233 NPO:1731
+
+[Term]
+id: ECTO:0000002
+name: exposure to electromagnetic radiation
+def: "A radiation exposure event involving the interaction of an exposure receptor to electromagnetic radiation." []
+synonym: "electromagnetic radiation exposure" EXACT []
+synonym: "electromagnetic radiation exposure event" EXACT []
+is_a: ECTO:0000001 ! exposure to radiation
+intersection_of: ExO:0000002
+intersection_of: RO:0002233 NPO:1732
+
+[Term]
+id: ECTO:0000003
+name: exposure to sound radiation
+def: "A radiation exposure event involving the interaction of an exposure receptor to sound radiation." []
+synonym: "sound radiation exposure" EXACT []
+synonym: "sound radiation exposure event" EXACT []
+is_a: ECTO:0000001 ! exposure to radiation
+intersection_of: ExO:0000002
+intersection_of: RO:0002233 NPO:1743
+
+[Term]
+id: ECTO:0000004
+name: exposure to gamma radiation
+def: "A radiation exposure event involving the interaction of an exposure receptor to gamma radiation." []
+synonym: "gamma radiation exposure" EXACT []
+synonym: "gamma radiation exposure event" EXACT []
+is_a: ECTO:0000002 ! exposure to electromagnetic radiation
+intersection_of: ExO:0000002
+intersection_of: RO:0002233 NPO:1733
+
+[Term]
+id: ECTO:0000005
+name: exposure to x-ray radiation
+def: "A radiation exposure event involving the interaction of an exposure receptor to x-ray radiation." []
+synonym: "x-ray radiation exposure" EXACT []
+synonym: "x-ray radiation exposure event" EXACT []
+is_a: ECTO:0000002 ! exposure to electromagnetic radiation
+intersection_of: ExO:0000002
+intersection_of: RO:0002233 NPO:1734
+
+[Term]
+id: ECTO:0000006
+name: exposure to ultraviolet radiation
+def: "A radiation exposure event involving the interaction of an exposure receptor to ultraviolet radiation." []
+synonym: "ultraviolet radiation exposure" EXACT []
+synonym: "ultraviolet radiation exposure event" EXACT []
+is_a: ECTO:0000002 ! exposure to electromagnetic radiation
+intersection_of: ExO:0000002
+intersection_of: RO:0002233 NPO:1735
+
+[Term]
+id: ECTO:0000007
+name: exposure to visible light radiation
+def: "A radiation exposure event involving the interaction of an exposure receptor to visible light radiation." []
+synonym: "visible light radiation exposure" EXACT []
+synonym: "visible light radiation exposure event" EXACT []
+is_a: ECTO:0000002 ! exposure to electromagnetic radiation
+intersection_of: ExO:0000002
+intersection_of: RO:0002233 NPO:1736
+
+[Term]
+id: ECTO:0000008
+name: exposure to infrared radiation
+def: "A radiation exposure event involving the interaction of an exposure receptor to infrared radiation." []
+synonym: "infrared radiation exposure" EXACT []
+synonym: "infrared radiation exposure event" EXACT []
+is_a: ECTO:0000002 ! exposure to electromagnetic radiation
+intersection_of: ExO:0000002
+intersection_of: RO:0002233 NPO:1737
+
+[Term]
+id: ECTO:0000009
+name: exposure to far-infrared radiation
+def: "A radiation exposure event involving the interaction of an exposure receptor to far-infrared radiation." []
+synonym: "far-infrared radiation exposure" EXACT []
+synonym: "far-infrared radiation exposure event" EXACT []
+is_a: ECTO:0000008 ! exposure to infrared radiation
+intersection_of: ExO:0000002
+intersection_of: RO:0002233 NPO:1738
+
+[Term]
+id: ECTO:0000010
+name: exposure to mid-infrared radiation
+def: "A radiation exposure event involving the interaction of an exposure receptor to mid-infrared radiation." []
+synonym: "mid-infrared radiation exposure" EXACT []
+synonym: "mid-infrared radiation exposure event" EXACT []
+is_a: ECTO:0000008 ! exposure to infrared radiation
+intersection_of: ExO:0000002
+intersection_of: RO:0002233 NPO:1739
+
+[Term]
+id: ECTO:0000011
+name: exposure to near-infrared radiation
+def: "A radiation exposure event involving the interaction of an exposure receptor to near-infrared radiation." []
+synonym: "near-infrared radiation exposure" EXACT []
+synonym: "near-infrared radiation exposure event" EXACT []
+is_a: ECTO:0000008 ! exposure to infrared radiation
+intersection_of: ExO:0000002
+intersection_of: RO:0002233 NPO:1740
+
+[Term]
+id: ECTO:0000012
+name: exposure to microwave radiation
+def: "A radiation exposure event involving the interaction of an exposure receptor to microwave radiation." []
+synonym: "microwave radiation exposure" EXACT []
+synonym: "microwave radiation exposure event" EXACT []
+is_a: ECTO:0000002 ! exposure to electromagnetic radiation
+intersection_of: ExO:0000002
+intersection_of: RO:0002233 NPO:1741
+
+[Term]
+id: ECTO:0000013
+name: exposure to radiowave radiation
+def: "A radiation exposure event involving the interaction of an exposure receptor to radiowave radiation." []
+synonym: "radiowave radiation exposure" EXACT []
+synonym: "radiowave radiation exposure event" EXACT []
+is_a: ECTO:0000002 ! exposure to electromagnetic radiation
+intersection_of: ExO:0000002
+intersection_of: RO:0002233 NPO:1742
+
+[Term]
+id: ECTO:0000014
+name: exposure to ultrasound radiation
+def: "A radiation exposure event involving the interaction of an exposure receptor to ultrasound radiation." []
+synonym: "ultrasound radiation exposure" EXACT []
+synonym: "ultrasound radiation exposure event" EXACT []
+is_a: ECTO:0000003 ! exposure to sound radiation
+intersection_of: ExO:0000002
+intersection_of: RO:0002233 NPO:1744
+
+[Term]
+id: ECTO:0000015
+name: exposure to environmental material
+def: "A exposure event involving the interaction of an exposure receptor to environmental material. Exposure may be through a variety of means, including through the air or through ingestion." []
+synonym: "environmental material exposure" EXACT []
+synonym: "environmental material exposure event" EXACT []
+is_a: BFO:0000003
+is_a: ExO:0000002
+intersection_of: ExO:0000002
+intersection_of: RO:0002233 ENVO:00010483
+
+[Term]
+id: ECTO:0000016
+name: exposure to dust
+def: "A exposure event involving the interaction of an exposure receptor to dust. Exposure may be through a variety of means, including through the air or through ingestion." []
+synonym: "dust exposure" EXACT []
+synonym: "dust exposure event" EXACT []
+is_a: ECTO:0000015 ! exposure to environmental material
+intersection_of: ExO:0000002
+intersection_of: RO:0002233 ENVO:00002008
+
+[Term]
+id: ECTO:0000017
+name: exposure to clay
+def: "A exposure event involving the interaction of an exposure receptor to clay. Exposure may be through a variety of means, including through the air or through ingestion." []
+synonym: "clay exposure" EXACT []
+synonym: "clay exposure event" EXACT []
+is_a: ECTO:0000015 ! exposure to environmental material
+intersection_of: ExO:0000002
+intersection_of: RO:0002233 ENVO:00002982
+
+[Term]
+id: ECTO:0000018
+name: exposure to oil
+def: "A exposure event involving the interaction of an exposure receptor to oil. Exposure may be through a variety of means, including through the air or through ingestion." []
+synonym: "oil exposure" EXACT []
+synonym: "oil exposure event" EXACT []
+is_a: ECTO:0000015 ! exposure to environmental material
+intersection_of: ExO:0000002
+intersection_of: RO:0002233 ENVO:00002985
+
+[Term]
+id: ECTO:0000019
+name: exposure to particulate matter
+def: "A exposure event involving the interaction of an exposure receptor to particulate matter. Exposure may be through a variety of means, including through the air or through ingestion." []
+synonym: "particulate matter exposure" EXACT []
+synonym: "particulate matter exposure event" EXACT []
+is_a: ECTO:0000015 ! exposure to environmental material
+intersection_of: ExO:0000002
+intersection_of: RO:0002233 ENVO:01000060
+
+[Term]
+id: ECTO:0000020
+name: exposure to organic material
+def: "A exposure event involving the interaction of an exposure receptor to organic material. Exposure may be through a variety of means, including through the air or through ingestion." []
+synonym: "organic material exposure" EXACT []
+synonym: "organic material exposure event" EXACT []
+is_a: ECTO:0000015 ! exposure to environmental material
+intersection_of: ExO:0000002
+intersection_of: RO:0002233 ENVO:01000155
+
+[Term]
+id: ECTO:0000021
+name: exposure to lava
+def: "A exposure event involving the interaction of an exposure receptor to lava. Exposure may be through a variety of means, including through the air or through ingestion." []
+synonym: "lava exposure" EXACT []
+synonym: "lava exposure event" EXACT []
+is_a: ECTO:0000015 ! exposure to environmental material
+intersection_of: ExO:0000002
+intersection_of: RO:0002233 ENVO:01000231
+
+[Term]
+id: ECTO:0000022
+name: exposure to snow
+def: "A exposure event involving the interaction of an exposure receptor to snow. Exposure may be through a variety of means, including through the air or through ingestion." []
+synonym: "snow exposure" EXACT []
+synonym: "snow exposure event" EXACT []
+is_a: ECTO:0000015 ! exposure to environmental material
+intersection_of: ExO:0000002
+intersection_of: RO:0002233 ENVO:01000406
+
+[Term]
+id: ECTO:0000023
+name: exposure to atmospheric carbon dioxide
+def: "A exposure event involving the interaction of an exposure receptor to atmospheric carbon dioxide. Exposure may be through a variety of means, including through the air or through ingestion." []
+synonym: "atmospheric carbon dioxide exposure" EXACT []
+synonym: "atmospheric carbon dioxide exposure event" EXACT []
+is_a: ECTO:0000015 ! exposure to environmental material
+intersection_of: ExO:0000002
+intersection_of: RO:0002233 ENVO:01000451
+
+[Term]
+id: ECTO:0000024
+name: exposure to magma
+def: "A exposure event involving the interaction of an exposure receptor to magma. Exposure may be through a variety of means, including through the air or through ingestion." []
+synonym: "magma exposure" EXACT []
+synonym: "magma exposure event" EXACT []
+is_a: ECTO:0000015 ! exposure to environmental material
+intersection_of: ExO:0000002
+intersection_of: RO:0002233 ENVO:01000648
+
+[Term]
+id: ECTO:0000025
+name: exposure to volcanic ash
+def: "A exposure event involving the interaction of an exposure receptor to volcanic ash. Exposure may be through a variety of means, including through the air or through ingestion." []
+synonym: "volcanic ash exposure" EXACT []
+synonym: "volcanic ash exposure event" EXACT []
+is_a: ECTO:0000015 ! exposure to environmental material
+intersection_of: ExO:0000002
+intersection_of: RO:0002233 ENVO:01000701
+
+[Term]
+id: ECTO:0000026
+name: exposure to mineral material
+def: "A exposure event involving the interaction of an exposure receptor to mineral material. Exposure may be through a variety of means, including through the air or through ingestion." []
+synonym: "mineral material exposure" EXACT []
+synonym: "mineral material exposure event" EXACT []
+is_a: ECTO:0000015 ! exposure to environmental material
+intersection_of: ExO:0000002
+intersection_of: RO:0002233 ENVO:01000256
+
+[Term]
+id: ECTO:0000027
+name: exposure to mine tailing
+def: "A exposure event involving the interaction of an exposure receptor to mine tailing. Exposure may be through a variety of means, including through the air or through ingestion." []
+synonym: "mine tailing exposure" EXACT []
+synonym: "mine tailing exposure event" EXACT []
+is_a: ECTO:0000015 ! exposure to environmental material
+intersection_of: ExO:0000002
+intersection_of: RO:0002233 ENVO:00000003
+
+[Term]
+id: ECTO:0000028
+name: exposure to permafrost
+def: "A exposure event involving the interaction of an exposure receptor to permafrost. Exposure may be through a variety of means, including through the air or through ingestion." []
+synonym: "permafrost exposure" EXACT []
+synonym: "permafrost exposure event" EXACT []
+is_a: ECTO:0000015 ! exposure to environmental material
+intersection_of: ExO:0000002
+intersection_of: RO:0002233 ENVO:00000134
+
+[Term]
+id: ECTO:0000029
+name: exposure to waste water
+def: "A exposure event involving the interaction of an exposure receptor to waste water. Exposure may be through a variety of means, including through the air or through ingestion." []
+synonym: "waste water exposure" EXACT []
+synonym: "waste water exposure event" EXACT []
+is_a: ECTO:0000046 ! exposure to waste material
+intersection_of: ExO:0000002
+intersection_of: RO:0002233 ENVO:00002001
+
+[Term]
+id: ECTO:0000030
+name: exposure to feces
+def: "A exposure event involving the interaction of an exposure receptor to feces. Exposure may be through a variety of means, including through the air or through ingestion." []
+synonym: "feces exposure" EXACT []
+synonym: "feces exposure event" EXACT []
+is_a: ECTO:0000068 ! exposure to excreta
+intersection_of: ExO:0000002
+intersection_of: RO:0002233 ENVO:00002003
+
+[Term]
+id: ECTO:0000031
+name: exposure to sewage
+def: "A exposure event involving the interaction of an exposure receptor to sewage. Exposure may be through a variety of means, including through the air or through ingestion." []
+synonym: "sewage exposure" EXACT []
+synonym: "sewage exposure event" EXACT []
+is_a: ECTO:0000029 ! exposure to waste water
+intersection_of: ExO:0000002
+intersection_of: RO:0002233 ENVO:00002018
+
+[Term]
+id: ECTO:0000032
+name: exposure to raw primary sludge
+def: "A exposure event involving the interaction of an exposure receptor to raw primary sludge. Exposure may be through a variety of means, including through the air or through ingestion." []
+synonym: "raw primary sludge exposure" EXACT []
+synonym: "raw primary sludge exposure event" EXACT []
+is_a: ECTO:0000015 ! exposure to environmental material
+intersection_of: ExO:0000002
+intersection_of: RO:0002233 ENVO:00002057
+
+[Term]
+id: ECTO:0000033
+name: exposure to secondary sludge
+def: "A exposure event involving the interaction of an exposure receptor to secondary sludge. Exposure may be through a variety of means, including through the air or through ingestion." []
+synonym: "secondary sludge exposure" EXACT []
+synonym: "secondary sludge exposure event" EXACT []
+is_a: ECTO:0000015 ! exposure to environmental material
+intersection_of: ExO:0000002
+intersection_of: RO:0002233 ENVO:00002058
+
+[Term]
+id: ECTO:0000034
+name: exposure to biosolids
+def: "A exposure event involving the interaction of an exposure receptor to biosolids. Exposure may be through a variety of means, including through the air or through ingestion." []
+synonym: "biosolids exposure" EXACT []
+synonym: "biosolids exposure event" EXACT []
+is_a: ECTO:0000015 ! exposure to environmental material
+intersection_of: ExO:0000002
+intersection_of: RO:0002233 ENVO:00002059
+
+[Term]
+id: ECTO:0000035
+name: exposure to oil sludge
+def: "A exposure event involving the interaction of an exposure receptor to oil sludge. Exposure may be through a variety of means, including through the air or through ingestion." []
+synonym: "oil sludge exposure" EXACT []
+synonym: "oil sludge exposure event" EXACT []
+is_a: ECTO:0000015 ! exposure to environmental material
+intersection_of: ExO:0000002
+intersection_of: RO:0002233 ENVO:00002060
+
+[Term]
+id: ECTO:0000036
+name: exposure to contaminated sediment
+def: "A exposure event involving the interaction of an exposure receptor to contaminated sediment. Exposure may be through a variety of means, including through the air or through ingestion." []
+synonym: "contaminated sediment exposure" EXACT []
+synonym: "contaminated sediment exposure event" EXACT []
+is_a: ECTO:0000015 ! exposure to environmental material
+intersection_of: ExO:0000002
+intersection_of: RO:0002233 ENVO:00002114
+
+[Term]
+id: ECTO:0000037
+name: exposure to petroleum contaminated sediment
+def: "A exposure event involving the interaction of an exposure receptor to petroleum contaminated sediment. Exposure may be through a variety of means, including through the air or through ingestion." []
+synonym: "petroleum contaminated sediment exposure" EXACT []
+synonym: "petroleum contaminated sediment exposure event" EXACT []
+is_a: ECTO:0000036 ! exposure to contaminated sediment
+intersection_of: ExO:0000002
+intersection_of: RO:0002233 ENVO:00002115
+
+[Term]
+id: ECTO:0000038
+name: exposure to contaminated soil
+def: "A exposure event involving the interaction of an exposure receptor to contaminated soil. Exposure may be through a variety of means, including through the air or through ingestion." []
+synonym: "contaminated soil exposure" EXACT []
+synonym: "contaminated soil exposure event" EXACT []
+is_a: ECTO:0000015 ! exposure to environmental material
+intersection_of: ExO:0000002
+intersection_of: RO:0002233 ENVO:00002116
+
+[Term]
+id: ECTO:0000039
+name: exposure to creosote contaminated soil
+def: "A exposure event involving the interaction of an exposure receptor to creosote contaminated soil. Exposure may be through a variety of means, including through the air or through ingestion." []
+synonym: "creosote contaminated soil exposure" EXACT []
+synonym: "creosote contaminated soil exposure event" EXACT []
+is_a: ECTO:0000038 ! exposure to contaminated soil
+intersection_of: ExO:0000002
+intersection_of: RO:0002233 ENVO:00002117
+
+[Term]
+id: ECTO:0000040
+name: exposure to arsenic-rich mud
+def: "A exposure event involving the interaction of an exposure receptor to arsenic-rich mud. Exposure may be through a variety of means, including through the air or through ingestion." []
+synonym: "arsenic-rich mud exposure" EXACT []
+synonym: "arsenic-rich mud exposure event" EXACT []
+is_a: ECTO:0000015 ! exposure to environmental material
+intersection_of: ExO:0000002
+intersection_of: RO:0002233 ENVO:00002122
+
+[Term]
+id: ECTO:0000041
+name: exposure to borax leachate
+def: "A exposure event involving the interaction of an exposure receptor to borax leachate. Exposure may be through a variety of means, including through the air or through ingestion." []
+synonym: "borax leachate exposure" EXACT []
+synonym: "borax leachate exposure event" EXACT []
+is_a: ECTO:0000015 ! exposure to environmental material
+intersection_of: ExO:0000002
+intersection_of: RO:0002233 ENVO:00002142
+
+[Term]
+id: ECTO:0000042
+name: exposure to chromate contaminated soil
+def: "A exposure event involving the interaction of an exposure receptor to chromate contaminated soil. Exposure may be through a variety of means, including through the air or through ingestion." []
+synonym: "chromate contaminated soil exposure" EXACT []
+synonym: "chromate contaminated soil exposure event" EXACT []
+is_a: ECTO:0000038 ! exposure to contaminated soil
+intersection_of: ExO:0000002
+intersection_of: RO:0002233 ENVO:00002145
+
+[Term]
+id: ECTO:0000043
+name: exposure to xylene contaminated soil
+def: "A exposure event involving the interaction of an exposure receptor to xylene contaminated soil. Exposure may be through a variety of means, including through the air or through ingestion." []
+synonym: "xylene contaminated soil exposure" EXACT []
+synonym: "xylene contaminated soil exposure event" EXACT []
+is_a: ECTO:0000038 ! exposure to contaminated soil
+intersection_of: ExO:0000002
+intersection_of: RO:0002233 ENVO:00002146
+
+[Term]
+id: ECTO:0000044
+name: exposure to hot dog
+def: "A exposure event involving the interaction of an exposure receptor to hot dog. Exposure may be through a variety of means, including through the air or through ingestion." []
+synonym: "hot dog exposure" EXACT []
+synonym: "hot dog exposure event" EXACT []
+is_a: ECTO:0000015 ! exposure to environmental material
+intersection_of: ExO:0000002
+intersection_of: RO:0002233 ENVO:00002174
+
+[Term]
+id: ECTO:0000045
+name: exposure to agricultural soil
+def: "A exposure event involving the interaction of an exposure receptor to agricultural soil. Exposure may be through a variety of means, including through the air or through ingestion." []
+synonym: "agricultural soil exposure" EXACT []
+synonym: "agricultural soil exposure event" EXACT []
+is_a: ECTO:0000015 ! exposure to environmental material
+intersection_of: ExO:0000002
+intersection_of: RO:0002233 ENVO:00002259
+
+[Term]
+id: ECTO:0000046
+name: exposure to waste material
+def: "A exposure event involving the interaction of an exposure receptor to waste material. Exposure may be through a variety of means, including through the air or through ingestion." []
+synonym: "waste material exposure" EXACT []
+synonym: "waste material exposure event" EXACT []
+is_a: ECTO:0000015 ! exposure to environmental material
+intersection_of: ExO:0000002
+intersection_of: RO:0002233 ENVO:00002264
+
+[Term]
+id: ECTO:0000047
+name: exposure to chicken breeding waste material
+def: "A exposure event involving the interaction of an exposure receptor to chicken breeding waste material. Exposure may be through a variety of means, including through the air or through ingestion." []
+synonym: "chicken breeding waste material exposure" EXACT []
+synonym: "chicken breeding waste material exposure event" EXACT []
+is_a: ECTO:0000046 ! exposure to waste material
+intersection_of: ExO:0000002
+intersection_of: RO:0002233 ENVO:00002266
+
+[Term]
+id: ECTO:0000048
+name: exposure to industrial waste material
+def: "A exposure event involving the interaction of an exposure receptor to industrial waste material. Exposure may be through a variety of means, including through the air or through ingestion." []
+synonym: "industrial waste material exposure" EXACT []
+synonym: "industrial waste material exposure event" EXACT []
+is_a: ECTO:0000046 ! exposure to waste material
+intersection_of: ExO:0000002
+intersection_of: RO:0002233 ENVO:00002267
+
+[Term]
+id: ECTO:0000049
+name: exposure to fluvisol
+def: "A exposure event involving the interaction of an exposure receptor to fluvisol. Exposure may be through a variety of means, including through the air or through ingestion." []
+synonym: "fluvisol exposure" EXACT []
+synonym: "fluvisol exposure event" EXACT []
+is_a: ECTO:0000015 ! exposure to environmental material
+intersection_of: ExO:0000002
+intersection_of: RO:0002233 ENVO:00002273
+
+[Term]
+id: ECTO:0000050
+name: exposure to stagnosol
+def: "A exposure event involving the interaction of an exposure receptor to stagnosol. Exposure may be through a variety of means, including through the air or through ingestion." []
+synonym: "stagnosol exposure" EXACT []
+synonym: "stagnosol exposure event" EXACT []
+is_a: ECTO:0000015 ! exposure to environmental material
+intersection_of: ExO:0000002
+intersection_of: RO:0002233 ENVO:00002274
+
+[Term]
+id: ECTO:0000051
+name: exposure to technosol
+def: "A exposure event involving the interaction of an exposure receptor to technosol. Exposure may be through a variety of means, including through the air or through ingestion." []
+synonym: "technosol exposure" EXACT []
+synonym: "technosol exposure event" EXACT []
+is_a: ECTO:0000015 ! exposure to environmental material
+intersection_of: ExO:0000002
+intersection_of: RO:0002233 ENVO:00002275
+
+[Term]
+id: ECTO:0000052
+name: exposure to animal waste material
+def: "A exposure event involving the interaction of an exposure receptor to animal waste material. Exposure may be through a variety of means, including through the air or through ingestion." []
+synonym: "animal waste material exposure" EXACT []
+synonym: "animal waste material exposure event" EXACT []
+is_a: ECTO:0000056 ! exposure to organic waste material
+intersection_of: ExO:0000002
+intersection_of: RO:0002233 ENVO:00002276
+
+[Term]
+id: ECTO:0000053
+name: exposure to hay
+def: "A exposure event involving the interaction of an exposure receptor to hay. Exposure may be through a variety of means, including through the air or through ingestion." []
+synonym: "hay exposure" EXACT []
+synonym: "hay exposure event" EXACT []
+is_a: ECTO:0000015 ! exposure to environmental material
+intersection_of: ExO:0000002
+intersection_of: RO:0002233 ENVO:00002869
+
+[Term]
+id: ECTO:0000054
+name: exposure to adobe
+def: "A exposure event involving the interaction of an exposure receptor to adobe. Exposure may be through a variety of means, including through the air or through ingestion." []
+synonym: "adobe exposure" EXACT []
+synonym: "adobe exposure event" EXACT []
+is_a: ECTO:0000015 ! exposure to environmental material
+intersection_of: ExO:0000002
+intersection_of: RO:0002233 ENVO:00002870
+
+[Term]
+id: ECTO:0000055
+name: exposure to bagasse
+def: "A exposure event involving the interaction of an exposure receptor to bagasse. Exposure may be through a variety of means, including through the air or through ingestion." []
+synonym: "bagasse exposure" EXACT []
+synonym: "bagasse exposure event" EXACT []
+is_a: ECTO:0000046 ! exposure to waste material
+intersection_of: ExO:0000002
+intersection_of: RO:0002233 ENVO:00002872
+
+[Term]
+id: ECTO:0000056
+name: exposure to organic waste material
+def: "A exposure event involving the interaction of an exposure receptor to organic waste material. Exposure may be through a variety of means, including through the air or through ingestion." []
+synonym: "organic waste material exposure" EXACT []
+synonym: "organic waste material exposure event" EXACT []
+is_a: ECTO:0000046 ! exposure to waste material
+intersection_of: ExO:0000002
+intersection_of: RO:0002233 ENVO:00002873
+
+[Term]
+id: ECTO:0000057
+name: exposure to oil contaminated soil
+def: "A exposure event involving the interaction of an exposure receptor to oil contaminated soil. Exposure may be through a variety of means, including through the air or through ingestion." []
+synonym: "oil contaminated soil exposure" EXACT []
+synonym: "oil contaminated soil exposure event" EXACT []
+is_a: ECTO:0000038 ! exposure to contaminated soil
+intersection_of: ExO:0000002
+intersection_of: RO:0002233 ENVO:00002875
+
+[Term]
+id: ECTO:0000058
+name: exposure to fuel oil
+def: "A exposure event involving the interaction of an exposure receptor to fuel oil. Exposure may be through a variety of means, including through the air or through ingestion." []
+synonym: "fuel oil exposure" EXACT []
+synonym: "fuel oil exposure event" EXACT []
+is_a: ECTO:0000018 ! exposure to oil
+intersection_of: ExO:0000002
+intersection_of: RO:0002233 ENVO:00002983
+
+[Term]
+id: ECTO:0000059
+name: exposure to petroleum
+def: "A exposure event involving the interaction of an exposure receptor to petroleum. Exposure may be through a variety of means, including through the air or through ingestion." []
+synonym: "petroleum exposure" EXACT []
+synonym: "petroleum exposure event" EXACT []
+is_a: ECTO:0000018 ! exposure to oil
+intersection_of: ExO:0000002
+intersection_of: RO:0002233 ENVO:00002984
+
+[Term]
+id: ECTO:0000060
+name: exposure to silage
+def: "A exposure event involving the interaction of an exposure receptor to silage. Exposure may be through a variety of means, including through the air or through ingestion." []
+synonym: "silage exposure" EXACT []
+synonym: "silage exposure event" EXACT []
+is_a: ECTO:0000015 ! exposure to environmental material
+intersection_of: ExO:0000002
+intersection_of: RO:0002233 ENVO:00003030
+
+[Term]
+id: ECTO:0000061
+name: exposure to animal manure
+def: "A exposure event involving the interaction of an exposure receptor to animal manure. Exposure may be through a variety of means, including through the air or through ingestion." []
+synonym: "animal manure exposure" EXACT []
+synonym: "animal manure exposure event" EXACT []
+is_a: ECTO:0000046 ! exposure to waste material
+intersection_of: ExO:0000002
+intersection_of: RO:0002233 ENVO:00003031
+
+[Term]
+id: ECTO:0000062
+name: exposure to fresh animal manure
+def: "A exposure event involving the interaction of an exposure receptor to fresh animal manure. Exposure may be through a variety of means, including through the air or through ingestion." []
+synonym: "fresh animal manure exposure" EXACT []
+synonym: "fresh animal manure exposure event" EXACT []
+is_a: ECTO:0000061 ! exposure to animal manure
+intersection_of: ExO:0000002
+intersection_of: RO:0002233 ENVO:00003032
+
+[Term]
+id: ECTO:0000063
+name: exposure to pork chop
+def: "A exposure event involving the interaction of an exposure receptor to pork chop. Exposure may be through a variety of means, including through the air or through ingestion." []
+synonym: "pork chop exposure" EXACT []
+synonym: "pork chop exposure event" EXACT []
+is_a: ECTO:0000015 ! exposure to environmental material
+intersection_of: ExO:0000002
+intersection_of: RO:0002233 ENVO:00003079
+
+[Term]
+id: ECTO:0000064
+name: exposure to bacon
+def: "A exposure event involving the interaction of an exposure receptor to bacon. Exposure may be through a variety of means, including through the air or through ingestion." []
+synonym: "bacon exposure" EXACT []
+synonym: "bacon exposure event" EXACT []
+is_a: ECTO:0000015 ! exposure to environmental material
+intersection_of: ExO:0000002
+intersection_of: RO:0002233 ENVO:00003881
+
+[Term]
+id: ECTO:0000065
+name: exposure to bodily fluid
+def: "A exposure event involving the interaction of an exposure receptor to bodily fluid. Exposure may be through a variety of means, including through the air or through ingestion." []
+synonym: "bodily fluid exposure" EXACT []
+synonym: "bodily fluid exposure event" EXACT []
+is_a: ECTO:0000020 ! exposure to organic material
+intersection_of: ExO:0000002
+intersection_of: RO:0002233 ENVO:02000019
+
+[Term]
+id: ECTO:0000066
+name: exposure to blood
+def: "A exposure event involving the interaction of an exposure receptor to blood. Exposure may be through a variety of means, including through the air or through ingestion." []
+synonym: "blood exposure" EXACT []
+synonym: "blood exposure event" EXACT []
+is_a: ECTO:0000065 ! exposure to bodily fluid
+intersection_of: ExO:0000002
+intersection_of: RO:0002233 ENVO:02000020
+
+[Term]
+id: ECTO:0000067
+name: exposure to amniotic fluid
+def: "A exposure event involving the interaction of an exposure receptor to amniotic fluid. Exposure may be through a variety of means, including through the air or through ingestion." []
+synonym: "amniotic fluid exposure" EXACT []
+synonym: "amniotic fluid exposure event" EXACT []
+is_a: ECTO:0000065 ! exposure to bodily fluid
+intersection_of: ExO:0000002
+intersection_of: RO:0002233 ENVO:02000021
+
+[Term]
+id: ECTO:0000068
+name: exposure to excreta
+def: "A exposure event involving the interaction of an exposure receptor to excreta. Exposure may be through a variety of means, including through the air or through ingestion." []
+synonym: "excreta exposure" EXACT []
+synonym: "excreta exposure event" EXACT []
+is_a: ECTO:0000065 ! exposure to bodily fluid
+intersection_of: ExO:0000002
+intersection_of: RO:0002233 ENVO:02000022
+
+[Term]
+id: ECTO:0000069
+name: exposure to bile
+def: "A exposure event involving the interaction of an exposure receptor to bile. Exposure may be through a variety of means, including through the air or through ingestion." []
+synonym: "bile exposure" EXACT []
+synonym: "bile exposure event" EXACT []
+is_a: ECTO:0000065 ! exposure to bodily fluid
+intersection_of: ExO:0000002
+intersection_of: RO:0002233 ENVO:02000023
+
+[Term]
+id: ENVO:00000000
+is_a: ENVO:00002297
+
+[Term]
+id: ENVO:00000003
+is_a: ENVO:0010001
+
+[Term]
+id: ENVO:00000134
+is_a: ENVO:00001998
+
+[Term]
+id: ENVO:00001998
+is_a: ENVO:00010483
+
+[Term]
+id: ENVO:00002001
+is_a: ENVO:00002186
+is_a: ENVO:00002264
+
+[Term]
+id: ENVO:00002002
+is_a: ENVO:0010001
+
+[Term]
+id: ENVO:00002003
+is_a: ENVO:02000022
+
+[Term]
+id: ENVO:00002006
+is_a: ENVO:00010483
+
+[Term]
+id: ENVO:00002007
+is_a: ENVO:00010483
+
+[Term]
+id: ENVO:00002008
+is_a: ENVO:00010483
+
+[Term]
+id: ENVO:00002018
+is_a: ENVO:00002001
+
+[Term]
+id: ENVO:00002044
+is_a: ENVO:0010001
+
+[Term]
+id: ENVO:00002057
+is_a: ENVO:00002044
+
+[Term]
+id: ENVO:00002058
+is_a: ENVO:00002044
+
+[Term]
+id: ENVO:00002059
+is_a: ENVO:00002044
+
+[Term]
+id: ENVO:00002060
+is_a: ENVO:00002176
+
+[Term]
+id: ENVO:00002114
+is_a: ENVO:00002007
+
+[Term]
+id: ENVO:00002115
+is_a: ENVO:00002180
+
+[Term]
+id: ENVO:00002116
+is_a: ENVO:00003082
+
+[Term]
+id: ENVO:00002117
+is_a: ENVO:00002116
+
+[Term]
+id: ENVO:00002122
+is_a: ENVO:01000001
+
+[Term]
+id: ENVO:00002141
+is_a: ENVO:00002006
+
+[Term]
+id: ENVO:00002142
+is_a: ENVO:00002141
+
+[Term]
+id: ENVO:00002145
+is_a: ENVO:00003081
+
+[Term]
+id: ENVO:00002146
+is_a: ENVO:00002116
+
+[Term]
+id: ENVO:00002165
+is_a: ENVO:0010000
+
+[Term]
+id: ENVO:00002166
+is_a: ENVO:00002175
+
+[Term]
+id: ENVO:00002174
+is_a: ENVO:0010136
+
+[Term]
+id: ENVO:00002175
+is_a: ENVO:00002165
+is_a: ENVO:0010092
+
+[Term]
+id: ENVO:00002176
+is_a: ENVO:00002044
+
+[Term]
+id: ENVO:00002180
+is_a: ENVO:00002202
+
+[Term]
+id: ENVO:00002186
+is_a: ENVO:00002006
+
+[Term]
+id: ENVO:00002202
+is_a: ENVO:00002114
+
+[Term]
+id: ENVO:00002259
+is_a: ENVO:00001998
+
+[Term]
+id: ENVO:00002264
+is_a: ENVO:0010001
+
+[Term]
+id: ENVO:00002266
+is_a: ENVO:01000371
+
+[Term]
+id: ENVO:00002267
+is_a: ENVO:00002264
+
+[Term]
+id: ENVO:00002273
+is_a: ENVO:00001998
+
+[Term]
+id: ENVO:00002274
+is_a: ENVO:00001998
+
+[Term]
+id: ENVO:00002275
+is_a: ENVO:00001998
+
+[Term]
+id: ENVO:00002276
+is_a: ENVO:00002873
+
+[Term]
+id: ENVO:00002297
+is_a: BFO:0000040
+
+[Term]
+id: ENVO:00002869
+is_a: ENVO:0010003
+
+[Term]
+id: ENVO:00002870
+is_a: ENVO:0010001
+
+[Term]
+id: ENVO:00002872
+is_a: ENVO:01000371
+
+[Term]
+id: ENVO:00002873
+is_a: ENVO:00002264
+
+[Term]
+id: ENVO:00002875
+is_a: ENVO:00002116
+
+[Term]
+id: ENVO:00002982
+is_a: ENVO:00010483
+
+[Term]
+id: ENVO:00002983
+is_a: ENVO:00002985
+
+[Term]
+id: ENVO:00002984
+is_a: ENVO:00002985
+
+[Term]
+id: ENVO:00002985
+is_a: ENVO:00010483
+
+[Term]
+id: ENVO:00003030
+is_a: ENVO:0010003
+
+[Term]
+id: ENVO:00003031
+is_a: ENVO:01000371
+
+[Term]
+id: ENVO:00003032
+is_a: ENVO:00003031
+
+[Term]
+id: ENVO:00003062
+is_a: ENVO:0010044
+
+[Term]
+id: ENVO:00003079
+is_a: ENVO:00003062
+
+[Term]
+id: ENVO:00003081
+is_a: ENVO:00002116
+
+[Term]
+id: ENVO:00003082
+is_a: ENVO:00001998
+
+[Term]
+id: ENVO:00003881
+is_a: ENVO:0010154
+
+[Term]
+id: ENVO:00010483
+is_a: BFO:0000040
+
+[Term]
+id: ENVO:0010000
+is_a: ENVO:00002002
+
+[Term]
+id: ENVO:0010001
+is_a: ENVO:00010483
+
+[Term]
+id: ENVO:0010003
+is_a: ENVO:0010001
+
+[Term]
+id: ENVO:0010044
+is_a: ENVO:00002165
+
+[Term]
+id: ENVO:0010092
+is_a: ENVO:00002002
+
+[Term]
+id: ENVO:0010136
+is_a: ENVO:00002166
+
+[Term]
+id: ENVO:0010154
+is_a: ENVO:00002175
+is_a: ENVO:00003062
+
+[Term]
+id: ENVO:01000001
+is_a: ENVO:00010483
+
+[Term]
+id: ENVO:01000016
+is_a: ENVO:00010483
+
+[Term]
+id: ENVO:01000017
+is_a: ENVO:00010483
+
+[Term]
+id: ENVO:01000060
+is_a: ENVO:00010483
+
+[Term]
+id: ENVO:01000155
+is_a: ENVO:00010483
+
+[Term]
+id: ENVO:01000231
+is_a: ENVO:00010483
+
+[Term]
+id: ENVO:01000256
+is_a: ENVO:00010483
+
+[Term]
+id: ENVO:01000267
+is_a: ENVO:01000281
+
+[Term]
+id: ENVO:01000281
+is_a: ENVO:00000000
+
+[Term]
+id: ENVO:01000371
+is_a: ENVO:00002264
+
+[Term]
+id: ENVO:01000406
+is_a: ENVO:00010483
+
+[Term]
+id: ENVO:01000451
+is_a: ENVO:00010483
+
+[Term]
+id: ENVO:01000648
+is_a: ENVO:00010483
+
+[Term]
+id: ENVO:01000701
+is_a: ENVO:00010483
+
+[Term]
+id: ENVO:02000019
+is_a: ENVO:01000155
+
+[Term]
+id: ENVO:02000020
+is_a: ENVO:02000019
+
+[Term]
+id: ENVO:02000021
+is_a: ENVO:02000019
+
+[Term]
+id: ENVO:02000022
+is_a: ENVO:02000019
+
+[Term]
+id: ENVO:02000023
+is_a: ENVO:02000019
+
+[Term]
+id: NPO:1713
+is_a: Process
+
+[Term]
+id: NPO:1714
+is_a: NPO:1713
+
+[Term]
+id: NPO:1715
+is_a: NPO:1713
+
+[Term]
+id: NPO:1716
+is_a: NPO:1714
+
+[Term]
+id: NPO:1717
+is_a: NPO:1714
+
+[Term]
+id: NPO:1718
+is_a: NPO:1714
+
+[Term]
+id: NPO:1719
+is_a: NPO:1714
+
+[Term]
+id: NPO:1720
+is_a: NPO:1714
+
+[Term]
+id: NPO:1721
+is_a: NPO:1720
+
+[Term]
+id: NPO:1722
+is_a: NPO:1720
+
+[Term]
+id: NPO:1723
+is_a: NPO:1720
+
+[Term]
+id: NPO:1724
+is_a: NPO:1714
+
+[Term]
+id: NPO:1725
+is_a: NPO:1714
+
+[Term]
+id: NPO:1727
+is_a: NPO:1715
+
+[Term]
+id: NPO:1728
+is_a: NPO:1727
+
+[Term]
+id: NPO:1730
+is_a: NPO:1728
+
+[Term]
+id: NPO:1731
+is_a: Process
+
+[Term]
+id: NPO:1732
+is_a: NPO:1731
+
+[Term]
+id: NPO:1733
+is_a: NPO:1732
+
+[Term]
+id: NPO:1734
+is_a: NPO:1732
+
+[Term]
+id: NPO:1735
+is_a: NPO:1732
+
+[Term]
+id: NPO:1736
+is_a: NPO:1732
+
+[Term]
+id: NPO:1737
+is_a: NPO:1732
+
+[Term]
+id: NPO:1738
+is_a: NPO:1737
+
+[Term]
+id: NPO:1739
+is_a: NPO:1737
+
+[Term]
+id: NPO:1740
+is_a: NPO:1737
+
+[Term]
+id: NPO:1741
+is_a: NPO:1732
+
+[Term]
+id: NPO:1742
+is_a: NPO:1732
+
+[Term]
+id: NPO:1743
+is_a: NPO:1731
+
+[Term]
+id: NPO:1744
+is_a: NPO:1743
+
+[Term]
+id: NPO:1745
+is_a: RealizableEntity
+
+[Term]
+id: NPO:1746
+is_a: NPO:1745
+
+[Term]
+id: NPO:1750
+is_a: NPO:1746
+
+[Term]
+id: NPO:1751
+is_a: NPO:1750
+
+[Term]
+id: NPO:1752
+is_a: NPO:1751
+
+[Term]
+id: NPO:1753
+is_a: NPO:1751
+
+[Term]
+id: NPO:1754
+is_a: NPO:1751
+
+[Term]
+id: NPO:1755
+is_a: NPO:1750
+
+[Term]
+id: NPO:1756
+is_a: NPO:1750
+
+[Term]
+id: NPO:1757
+is_a: NPO:1746
+
+[Term]
+id: NPO:1759
+is_a: NPO:1757
+
+[Term]
+id: Occurrent
+is_a: Entity
+
+[Term]
+id: Process
+is_a: ProcessualEntity
+
+[Term]
+id: ProcessualEntity
+is_a: Occurrent
+
+[Term]
+id: RealizableEntity
+is_a: SpecificallyDependentContinuant
+
+[Term]
+id: SpecificallyDependentContinuant
+is_a: DependentContinuant
+
