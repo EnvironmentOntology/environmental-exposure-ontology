@@ -1,0 +1,586 @@
+format-version: 1.2
+ontology: ecto/imports/npo_import
+owl-axioms: Prefix(owl:=<http://www.w3.org/2002/07/owl#>)\nPrefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)\nPrefix(xml:=<http://www.w3.org/XML/1998/namespace>)\nPrefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)\nPrefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)\n\n\nOntology(\nDataPropertyRange(<http://purl.org/dc/elements/1.1/creator> xsd:string)\nDataPropertyAssertion(<http://purl.org/dc/elements/1.1/creator> <http://purl.bioontology.org/ontology/npo> \"Dennis G. Thomas\"^^xsd:string)\n)
+
+[Term]
+id: Continuant
+name: continuant
+comment: Examples: a heart, a person, the color of a tomato, the mass of a cloud, a symphony orchestra, the disposition of blood to coagulate, the lawn and atmosphere in front of our building
+is_a: Entity ! entity
+disjoint_from: Occurrent ! occurrent
+property_value: code NPO:259 xsd:string
+property_value: dBXrefID snap:Continuant xsd:string
+property_value: definition "<ncicp:ComplexDefinition xmlns:ncicp=\"http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#\"><ncicp:def-definition>An entity [bfo:Entity] that exists in full at any time in which it exists at all, persists through time while maintaining its identity and has no temporal parts.</ncicp:def-definition><ncicp:Definition_Review_Date>100428</ncicp:Definition_Review_Date><ncicp:def-source>NPO</ncicp:def-source><ncicp:attr>BFO (v. 1.1)</ncicp:attr><ncicp:Definition_Reviewer_Name>Dennis Thomas</ncicp:Definition_Reviewer_Name></ncicp:ComplexDefinition>" xsd:string
+property_value: FULL_SYN <ncicp:ComplexTerm><ncicp:term-name>continuant</ncicp:term-name><ncicp:term-group>PT</ncicp:term-group><ncicp:term-source>NCI</ncicp:term-source></ncicp:ComplexTerm> http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral
+property_value: preferred_Name "continuant" xsd:string
+property_value: synonym "endurant" xsd:string
+
+[Term]
+id: DependentContinuant
+name: dependent_continuant
+comment: In order for a dependent continuant to exist, some other entity must exist.
+is_a: Continuant ! continuant
+property_value: code NPO:607 xsd:string
+property_value: dBXrefID snap:DependentContinuant xsd:string
+property_value: definition "<ncicp:ComplexDefinition xmlns:ncicp=\"http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#\"><ncicp:def-definition>A continuant [snap:Continuant] that is either dependent on one or other independent continuant [snap:IndependentContinuant] bearers or inheres in or is borne by other entities.</ncicp:def-definition><ncicp:Definition_Review_Date>100428</ncicp:Definition_Review_Date><ncicp:def-source>NPO</ncicp:def-source><ncicp:attr>BFO (v. 1.1)</ncicp:attr><ncicp:Definition_Reviewer_Name>Dennis Thomas</ncicp:Definition_Reviewer_Name></ncicp:ComplexDefinition>" xsd:string
+property_value: FULL_SYN "<ncicp:ComplexTerm><ncicp:term-name>dependent continuant</ncicp:term-name><ncicp:term-group>PT</ncicp:term-group><ncicp:term-source>NCI</ncicp:term-source></ncicp:ComplexTerm>" http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral
+property_value: preferred_Name "dependent continuant" xsd:string
+
+[Term]
+id: Entity
+name: entity
+property_value: code NPO:258 xsd:string
+property_value: definition "<ncicp:ComplexDefinition><ncicp:def-source>NPO</ncicp:def-source><ncicp:def-definition>An entity is a thing which exists in reality.</ncicp:def-definition></ncicp:ComplexDefinition>" http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral
+property_value: FULL_SYN <ncicp:ComplexTerm><ncicp:term-name>entity</ncicp:term-name><ncicp:term-group>PT</ncicp:term-group><ncicp:term-source>NCI</ncicp:term-source></ncicp:ComplexTerm> http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral
+property_value: preferred_Name "entity" xsd:string
+
+[Term]
+id: NPO:1713
+name: wave
+is_a: Process ! process
+property_value: code NPO:1713 xsd:string
+property_value: definition "<ncicp:ComplexDefinition xmlns:ncicp=\"http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#\"><ncicp:def-definition>A disturbance which carries energy radiated from a source and which propagates through space (vacuum or space occupied by a medium) and time.</ncicp:def-definition><ncicp:Definition_Review_Date>100603</ncicp:Definition_Review_Date><ncicp:def-source>NPO</ncicp:def-source><ncicp:attr>wikipedia (June 3, 2010)</ncicp:attr><ncicp:Definition_Reviewer_Name>Dennis Thomas</ncicp:Definition_Reviewer_Name></ncicp:ComplexDefinition>" xsd:string
+property_value: FULL_SYN "<ncicp:ComplexTerm xmlns:ncicp=\"http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#\"><ncicp:term-name>wave</ncicp:term-name><ncicp:term-group>PT</ncicp:term-group><ncicp:term-source>NCI</ncicp:term-source></ncicp:ComplexTerm>" xsd:string
+property_value: preferred_Name "wave" xsd:string
+
+[Term]
+id: NPO:1714
+name: electromagnetic wave
+is_a: NPO:1713 ! wave
+relationship: part_of NPO:1732 ! electromagnetic radiation
+relationship: realizes NPO:1750 ! light energy
+property_value: code NPO:1714 xsd:string
+property_value: definition "<ncicp:ComplexDefinition xmlns:ncicp=\"http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#\"><ncicp:def-definition>A wave which does not require a medium to travel, and hence can travel through vacuum. The wave consists of vibrating electric and magnetic fields that move at right angles to each other and to the direction of wave motion.  The electric and magnetic fields are produced by the acceleration of charged particles.</ncicp:def-definition><ncicp:Definition_Review_Date>100603</ncicp:Definition_Review_Date><ncicp:def-source>NPO</ncicp:def-source><ncicp:attr>http://library.thinkquest.org/10796/ch8/ch8.htm (June 3, 2010), http://www.physicsclassroom.com/Class/waves/u10l1c.cfm (June 3, 2010)</ncicp:attr><ncicp:Definition_Reviewer_Name>Dennis Thomas</ncicp:Definition_Reviewer_Name></ncicp:ComplexDefinition>" xsd:string
+property_value: FULL_SYN "<ncicp:ComplexTerm xmlns:ncicp=\"http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#\"><ncicp:term-name>electromagnetic wave</ncicp:term-name><ncicp:term-group>PT</ncicp:term-group><ncicp:term-source>NCI</ncicp:term-source></ncicp:ComplexTerm>" xsd:string
+property_value: http://purl.org/dc/elements/1.1/description "Electromagnetic waves are characterized by any of the three physical properties: frequency, wavelength or quantum (photon) energy.  Frequency of a wave is defined as the ratio of the speed of light (in vacuum) to wavelength of the wave.  The quantum energy is defined as the product of the Planck's constant and the wave frequency.  The range of all possible frequencies or wavelengths or energies of an electromagnetic wave is called the electromagnetic spectrum.  (reference: wikipedia)" xsd:string
+property_value: preferred_Name "electromagnetic wave" xsd:string
+property_value: synonym "E-M wave" xsd:string
+property_value: synonym "EM wave" xsd:string
+
+[Term]
+id: NPO:1715
+name: mechanical wave
+is_a: NPO:1713 ! wave
+property_value: code NPO:1715 xsd:string
+property_value: definition "<ncicp:ComplexDefinition xmlns:ncicp=\"http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#\"><ncicp:def-definition>A wave which requires a medium (e.g., air, water, solid) to travel for transmitting energy from one location to another, with no net displacement of the particles in the medium.</ncicp:def-definition><ncicp:Definition_Review_Date>100608</ncicp:Definition_Review_Date><ncicp:def-source>NPO</ncicp:def-source><ncicp:attr>http://library.thinkquest.org/10796/ch8/ch8.htm (June 3, 2010); http://www.visionlearning.com (June 8, 2010)</ncicp:attr><ncicp:Definition_Reviewer_Name>Dennis Thomas</ncicp:Definition_Reviewer_Name></ncicp:ComplexDefinition>" xsd:string
+property_value: FULL_SYN "<ncicp:ComplexTerm xmlns:ncicp=\"http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#\"><ncicp:term-name>mechanical wave</ncicp:term-name><ncicp:term-group>PT</ncicp:term-group><ncicp:term-source>NCI</ncicp:term-source></ncicp:ComplexTerm>" xsd:string
+property_value: preferred_Name "mechanical wave" xsd:string
+
+[Term]
+id: NPO:1716
+name: gamma-ray wave
+is_a: NPO:1714 ! electromagnetic wave
+relationship: part_of NPO:1733 ! gamma radiation
+property_value: code NPO:1716 xsd:string
+property_value: definition "<ncicp:ComplexDefinition xmlns:ncicp=\"http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#\"><ncicp:def-definition>An electromagnetic wave which has wavelengths shorter than 0.001 nm, frequencies greater than 100 EHz (1 EHz = 10^18 Hz), and energies greater than 1.24 MeV.</ncicp:def-definition><ncicp:Definition_Review_Date>100603</ncicp:Definition_Review_Date><ncicp:def-source>NPO</ncicp:def-source><ncicp:attr>http://hyperphysics.phy-astr.gsu.edu/hbase/ems3.html#c5 (June 3, 2010)</ncicp:attr><ncicp:Definition_Reviewer_Name>Dennis Thomas</ncicp:Definition_Reviewer_Name></ncicp:ComplexDefinition>" xsd:string
+property_value: FULL_SYN "<ncicp:ComplexTerm xmlns:ncicp=\"http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#\"><ncicp:term-name>gamma-ray wave</ncicp:term-name><ncicp:term-group>PT</ncicp:term-group><ncicp:term-source>NCI</ncicp:term-source></ncicp:ComplexTerm>" xsd:string
+property_value: preferred_Name "gamma-ray wave" xsd:string
+
+[Term]
+id: NPO:1717
+name: x-ray wave
+is_a: NPO:1714 ! electromagnetic wave
+relationship: part_of NPO:1734 ! x-ray radiation
+property_value: code NPO:1717 xsd:string
+property_value: definition "<ncicp:ComplexDefinition xmlns:ncicp=\"http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#\"><ncicp:def-definition>An electromagnetic wave which has wavelengths between 10 nm and 0.001 nm, frequencies between 30 PHz and 100 EHz (1 PHz - 10^15 Hz, 1 EHz = 10^18 Hz), and energies between 124 eV and 1.24 MeV. An X-ray wave has wavelength shorter than that of an ultraviolet wave and longer than that of a gamma-ray wave</ncicp:def-definition><ncicp:Definition_Review_Date>100603</ncicp:Definition_Review_Date><ncicp:def-source>NPO</ncicp:def-source><ncicp:attr>http://hyperphysics.phy-astr.gsu.edu/hbase/ems3.html#c4 (June 3, 2010)</ncicp:attr><ncicp:Definition_Reviewer_Name>Dennis Thomas</ncicp:Definition_Reviewer_Name></ncicp:ComplexDefinition>" xsd:string
+property_value: FULL_SYN "<ncicp:ComplexTerm xmlns:ncicp=\"http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#\"><ncicp:term-name>x-ray wave</ncicp:term-name><ncicp:term-group>PT</ncicp:term-group><ncicp:term-source>NCI</ncicp:term-source></ncicp:ComplexTerm>" xsd:string
+property_value: preferred_Name "x-ray wave" xsd:string
+
+[Term]
+id: NPO:1718
+name: ultraviolet wave
+is_a: NPO:1714 ! electromagnetic wave
+relationship: part_of NPO:1735 ! ultraviolet radiation
+relationship: realizes NPO:1755 ! ultraviolet light energy
+property_value: code NPO:1718 xsd:string
+property_value: definition "<ncicp:ComplexDefinition xmlns:ncicp=\"http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#\"><ncicp:def-definition>An electromagnetic wave which has wavelengths between 400 nm and 10 nm, frequencies between 300 THz and 750 THz (1 THz = 10^12 Hz), and energies between 3.1 eV and 124 eV.  An ultraviolet wave has a wavelength shorter than that of a visible light wave, but longer than that of an x-ray wave.</ncicp:def-definition><ncicp:Definition_Review_Date>100603</ncicp:Definition_Review_Date><ncicp:def-source>NPO</ncicp:def-source><ncicp:attr>http://hyperphysics.phy-astr.gsu.edu/hbase/ems3.html#c4 (June 3, 2010)</ncicp:attr><ncicp:Definition_Reviewer_Name>Dennis Thomas</ncicp:Definition_Reviewer_Name></ncicp:ComplexDefinition>" xsd:string
+property_value: FULL_SYN "<ncicp:ComplexTerm xmlns:ncicp=\"http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#\"><ncicp:term-name>ultraviolet wave</ncicp:term-name><ncicp:term-group>PT</ncicp:term-group><ncicp:term-source>NCI</ncicp:term-source></ncicp:ComplexTerm>" xsd:string
+property_value: preferred_Name "ultraviolet wave" xsd:string
+property_value: synonym "UV wave" xsd:string
+
+[Term]
+id: NPO:1719
+name: visible light wave
+is_a: NPO:1714 ! electromagnetic wave
+relationship: part_of NPO:1736 ! visible light radiation
+relationship: realizes NPO:1756 ! visible light energy
+property_value: code NPO:1719 xsd:string
+property_value: definition "<ncicp:ComplexDefinition xmlns:ncicp=\"http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#\"><ncicp:def-definition>An electromagnetic wave which has wavelengths between 750 nm and 400 nm, frequencies between 400 THz and 750 THz (1 THz = 10^12 Hz), and energies between 1.65 eV and 3.1 eV.  A visible light wave has a wavelength longer than that of an ultraviolet wave, and shorter than that of an infrared wave.</ncicp:def-definition><ncicp:Definition_Review_Date>100603</ncicp:Definition_Review_Date><ncicp:def-source>NPO</ncicp:def-source><ncicp:attr>http://hyperphysics.phy-astr.gsu.edu/hbase/ems3.html#c2 (June 3, 2010)</ncicp:attr><ncicp:Definition_Reviewer_Name>Dennis Thomas</ncicp:Definition_Reviewer_Name></ncicp:ComplexDefinition>" xsd:string
+property_value: FULL_SYN "<ncicp:ComplexTerm xmlns:ncicp=\"http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#\"><ncicp:term-name>visible light wave</ncicp:term-name><ncicp:term-group>PT</ncicp:term-group><ncicp:term-source>NCI</ncicp:term-source></ncicp:ComplexTerm>" xsd:string
+property_value: preferred_Name "visible light wave" xsd:string
+
+[Term]
+id: NPO:1720
+name: infrared wave
+is_a: NPO:1714 ! electromagnetic wave
+relationship: part_of NPO:1737 ! infrared radiation
+relationship: realizes NPO:1751 ! infrared light energy
+property_value: code NPO:1720 xsd:string
+property_value: definition "<ncicp:ComplexDefinition xmlns:ncicp=\"http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#\"><ncicp:def-definition>An electromagnetic wave which has wavelengths between 1 mm and 750 nm, frequencies between 300 GHz and 40 THz (1 GHz = 10^9 Hz, 1 THz = 10^12 Hz), and energies between 0.00124 eV and 1.65 eV.  An infrared wave has a wavelength longer than that of a visible light wave, and shorter than that of a microwave.</ncicp:def-definition><ncicp:Definition_Review_Date>100603</ncicp:Definition_Review_Date><ncicp:def-source>NPO</ncicp:def-source><ncicp:attr>http://hyperphysics.phy-astr.gsu.edu/hbase/ems3.html#c1 (June 3, 2010)</ncicp:attr><ncicp:Definition_Reviewer_Name>Dennis Thomas</ncicp:Definition_Reviewer_Name></ncicp:ComplexDefinition>" xsd:string
+property_value: FULL_SYN "<ncicp:ComplexTerm xmlns:ncicp=\"http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#\"><ncicp:term-name>infrared wave</ncicp:term-name><ncicp:term-group>PT</ncicp:term-group><ncicp:term-source>NCI</ncicp:term-source></ncicp:ComplexTerm>" xsd:string
+property_value: preferred_Name "infrared wave" xsd:string
+property_value: synonym "IR wave" xsd:string
+
+[Term]
+id: NPO:1721
+name: far-infrared wave
+is_a: NPO:1720 ! infrared wave
+relationship: part_of NPO:1738 ! far-infrared radiation
+relationship: realizes NPO:1752 ! far-infrared light energy
+property_value: code NPO:1721 xsd:string
+property_value: definition "<ncicp:ComplexDefinition xmlns:ncicp=\"http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#\"><ncicp:def-definition>An infrared wave which has wavelengths between 1 mm and 10 um, frequencies between 300 GHz and 30 THz (1 GHz = 10^9 Hz, 1 THz = 10^12 Hz), and energies between 0.00124 eV and 0.124 eV.</ncicp:def-definition><ncicp:Definition_Review_Date>100603</ncicp:Definition_Review_Date><ncicp:def-source>NPO</ncicp:def-source><ncicp:Definition_Reviewer_Name>Dennis Thomas</ncicp:Definition_Reviewer_Name></ncicp:ComplexDefinition>" xsd:string
+property_value: FULL_SYN "<ncicp:ComplexTerm xmlns:ncicp=\"http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#\"><ncicp:term-name>far-infrared wave</ncicp:term-name><ncicp:term-group>PT</ncicp:term-group><ncicp:term-source>NCI</ncicp:term-source></ncicp:ComplexTerm>" xsd:string
+property_value: preferred_Name "far-infrared wave" xsd:string
+property_value: synonym "FIR wave" xsd:string
+
+[Term]
+id: NPO:1722
+name: mid-infrared wave
+is_a: NPO:1720 ! infrared wave
+relationship: part_of NPO:1739 ! mid-infrared radiation
+relationship: realizes NPO:1753 ! mid-infrared light energy
+property_value: code NPO:1722 xsd:string
+property_value: definition "<ncicp:ComplexDefinition xmlns:ncicp=\"http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#\"><ncicp:def-definition>An infrared wave which has wavelengths between 10 um and 2.5 um, frequencies between 30 THz and 120 THz (1 THz = 10^12 Hz), and energies between 0.124 eV and 0.5 eV.</ncicp:def-definition><ncicp:Definition_Review_Date>100603</ncicp:Definition_Review_Date><ncicp:def-source>NPO</ncicp:def-source><ncicp:Definition_Reviewer_Name>Dennis Thomas</ncicp:Definition_Reviewer_Name></ncicp:ComplexDefinition>" xsd:string
+property_value: FULL_SYN "<ncicp:ComplexTerm xmlns:ncicp=\"http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#\"><ncicp:term-name>mid-infrared wave</ncicp:term-name><ncicp:term-group>PT</ncicp:term-group><ncicp:term-source>NCI</ncicp:term-source></ncicp:ComplexTerm>" xsd:string
+property_value: preferred_Name "mid-infrared wave" xsd:string
+property_value: synonym "MIR wave" xsd:string
+
+[Term]
+id: NPO:1723
+name: near-infrared wave
+is_a: NPO:1720 ! infrared wave
+relationship: part_of NPO:1740 ! near-infrared radiation
+relationship: realizes NPO:1754 ! near-infrared light energy
+property_value: code NPO:1723 xsd:string
+property_value: definition "<ncicp:ComplexDefinition xmlns:ncicp=\"http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#\"><ncicp:def-definition>An infrared wave which has wavelengths between 2.5 um and 750 nm, frequencies between 120 THz and 400 THz (1 THz = 10^12 Hz), and energies between 0.5 eV and 1.65 eV.</ncicp:def-definition><ncicp:Definition_Review_Date>100603</ncicp:Definition_Review_Date><ncicp:def-source>NPO</ncicp:def-source><ncicp:Definition_Reviewer_Name>Dennis Thomas</ncicp:Definition_Reviewer_Name></ncicp:ComplexDefinition>" xsd:string
+property_value: FULL_SYN "<ncicp:ComplexTerm xmlns:ncicp=\"http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#\"><ncicp:term-name>near-infrared wave</ncicp:term-name><ncicp:term-group>PT</ncicp:term-group><ncicp:term-source>NCI</ncicp:term-source></ncicp:ComplexTerm>" xsd:string
+property_value: preferred_Name "near-infrared wave" xsd:string
+property_value: synonym "NIR wave" xsd:string
+
+[Term]
+id: NPO:1724
+name: microwave
+is_a: NPO:1714 ! electromagnetic wave
+relationship: part_of NPO:1741 ! microwave radiation
+property_value: code NPO:1724 xsd:string
+property_value: definition "<ncicp:ComplexDefinition xmlns:ncicp=\"http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#\"><ncicp:def-definition>An electromagnetic wave which has wavelengths between 30 cm and 1 mm, frequencies between 1 GHz and 300 GHz (1 GHz = 10^9 Hz), and energies between 4.1 ueV and 1.24 meV. A microwave has a wavelength longer than that of an infrared wave, but shorter than that of a radiowave.</ncicp:def-definition><ncicp:Definition_Review_Date>100603</ncicp:Definition_Review_Date><ncicp:def-source>NPO</ncicp:def-source><ncicp:attr>http://physics.info/em-spectrum (June 3, 2010), wikipedia (June 3, 2010)</ncicp:attr><ncicp:Definition_Reviewer_Name>Dennis Thomas</ncicp:Definition_Reviewer_Name></ncicp:ComplexDefinition>" xsd:string
+property_value: FULL_SYN "<ncicp:ComplexTerm xmlns:ncicp=\"http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#\"><ncicp:term-name>microwave</ncicp:term-name><ncicp:term-group>PT</ncicp:term-group><ncicp:term-source>NCI</ncicp:term-source></ncicp:ComplexTerm>" xsd:string
+property_value: preferred_Name "microwave" xsd:string
+
+[Term]
+id: NPO:1725
+name: radiowave
+is_a: NPO:1714 ! electromagnetic wave
+relationship: part_of NPO:1742 ! radiowave radiation
+property_value: code NPO:1725 xsd:string
+property_value: definition "<ncicp:ComplexDefinition xmlns:ncicp=\"http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#\"><ncicp:def-definition>An electromagnetic wave which has wavelengths longer than 30 cm, frequencies less than 1 GHz (1 GHz = 10^9 Hz). and energies less than 4.1 ueV.</ncicp:def-definition><ncicp:Definition_Review_Date>100603</ncicp:Definition_Review_Date><ncicp:def-source>NPO</ncicp:def-source><ncicp:Definition_Reviewer_Name>Dennis Thomas</ncicp:Definition_Reviewer_Name></ncicp:ComplexDefinition>" xsd:string
+property_value: FULL_SYN "<ncicp:ComplexTerm xmlns:ncicp=\"http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#\"><ncicp:term-name>radiowave</ncicp:term-name><ncicp:term-group>PT</ncicp:term-group><ncicp:term-source>NCI</ncicp:term-source></ncicp:ComplexTerm>" xsd:string
+property_value: preferred_Name "radiowave" xsd:string
+
+[Term]
+id: NPO:1727
+name: longitudinal wave
+is_a: NPO:1715 ! mechanical wave
+property_value: code NPO:1727 xsd:string
+property_value: definition "<ncicp:ComplexDefinition xmlns:ncicp=\"http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#\"><ncicp:def-definition>A mechanical wave in which particles of the medium move back and forth in a direction parallel to the direction in which the wave moves and transports energy.</ncicp:def-definition><ncicp:Definition_Review_Date>100603</ncicp:Definition_Review_Date><ncicp:def-source>NPO</ncicp:def-source><ncicp:Definition_Reviewer_Name>Dennis Thomas</ncicp:Definition_Reviewer_Name></ncicp:ComplexDefinition>" xsd:string
+property_value: FULL_SYN "<ncicp:ComplexTerm xmlns:ncicp=\"http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#\"><ncicp:term-name>longitudinal wave</ncicp:term-name><ncicp:term-group>PT</ncicp:term-group><ncicp:term-source>NCI</ncicp:term-source></ncicp:ComplexTerm>" xsd:string
+property_value: preferred_Name "longitudinal wave" xsd:string
+
+[Term]
+id: NPO:1728
+name: sound wave
+is_a: NPO:1727 ! longitudinal wave
+relationship: part_of NPO:1743 ! sound radiation
+relationship: realizes NPO:1757 ! sound energy
+property_value: code NPO:1728 xsd:string
+property_value: definition "<ncicp:ComplexDefinition xmlns:ncicp=\"http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#\"><ncicp:def-definition>A longitudinal wave which transports energy (sound energy) produced by a vibrating object through a medium in which the back and forth motions of the particles result in regions of high (compression) and low pressure (rarefactions) in the medium.</ncicp:def-definition><ncicp:Definition_Review_Date>100603</ncicp:Definition_Review_Date><ncicp:def-source>NPO</ncicp:def-source><ncicp:Definition_Reviewer_Name>Dennis Thomas</ncicp:Definition_Reviewer_Name></ncicp:ComplexDefinition>" xsd:string
+property_value: FULL_SYN "<ncicp:ComplexTerm xmlns:ncicp=\"http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#\"><ncicp:term-name>sound wave</ncicp:term-name><ncicp:term-group>PT</ncicp:term-group><ncicp:term-source>NCI</ncicp:term-source></ncicp:ComplexTerm>" xsd:string
+property_value: preferred_Name "sound wave" xsd:string
+property_value: synonym "acoustic wave" xsd:string
+
+[Term]
+id: NPO:1730
+name: ultrasound wave
+is_a: NPO:1728 ! sound wave
+relationship: part_of NPO:1744 ! ultrasound radiation
+relationship: realizes NPO:1759 ! ultrasound energy
+property_value: code NPO:1730 xsd:string
+property_value: definition "<ncicp:ComplexDefinition xmlns:ncicp=\"http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#\"><ncicp:def-source>NCI</ncicp:def-source><ncicp:def-definition>A sound wave which has frequencies above 20 kHz (upper limit of the human audible frequency range).</ncicp:def-definition><ncicp:Definition_Review_Date>100603</ncicp:Definition_Review_Date><ncicp:Definition_Reviewer_Name>Dennis Thomas</ncicp:Definition_Reviewer_Name></ncicp:ComplexDefinition>" xsd:string
+property_value: FULL_SYN "<ncicp:ComplexTerm xmlns:ncicp=\"http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#\"><ncicp:term-name>ultrasound wave</ncicp:term-name><ncicp:term-group>PT</ncicp:term-group><ncicp:term-source>NCI</ncicp:term-source></ncicp:ComplexTerm>" xsd:string
+property_value: preferred_Name "ultrasound wave" xsd:string
+property_value: synonym "ultrasonic wave" xsd:string
+
+[Term]
+id: NPO:1731
+name: radiation
+is_a: Process ! process
+property_value: code NPO:1731 xsd:string
+property_value: definition "<ncicp:ComplexDefinition xmlns:ncicp=\"http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#\"><ncicp:def-definition>A process in which energy emitted by a material source travels in the form of waves, rays, or sub-atomic particles, through a material medium or through vacuum, to be ultimately absorbed by another material.</ncicp:def-definition><ncicp:Definition_Review_Date>100603</ncicp:Definition_Review_Date><ncicp:def-source>NPO</ncicp:def-source><ncicp:Definition_Reviewer_Name>Dennis Thomas</ncicp:Definition_Reviewer_Name></ncicp:ComplexDefinition>" xsd:string
+property_value: FULL_SYN "<ncicp:ComplexTerm xmlns:ncicp=\"http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#\"><ncicp:term-name>radiation</ncicp:term-name><ncicp:term-group>PT</ncicp:term-group><ncicp:term-source>NCI</ncicp:term-source></ncicp:ComplexTerm>" xsd:string
+property_value: preferred_Name "radiation" xsd:string
+
+[Term]
+id: NPO:1732
+name: electromagnetic radiation
+is_a: NPO:1731 ! radiation
+relationship: has_part NPO:1714 ! electromagnetic wave
+property_value: code NPO:1732 xsd:string
+property_value: definition "<ncicp:ComplexDefinition xmlns:ncicp=\"http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#\"><ncicp:def-definition>A radiation which consists of waves of energy associated with electric and magnetic fields produced by the acceleration of electric charges.</ncicp:def-definition><ncicp:Definition_Review_Date>100603</ncicp:Definition_Review_Date><ncicp:def-source>NPO</ncicp:def-source><ncicp:Definition_Reviewer_Name>Dennis Thomas</ncicp:Definition_Reviewer_Name></ncicp:ComplexDefinition>" xsd:string
+property_value: FULL_SYN "<ncicp:ComplexTerm xmlns:ncicp=\"http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#\"><ncicp:term-name>electromagnetic radiation</ncicp:term-name><ncicp:term-group>PT</ncicp:term-group><ncicp:term-source>NCI</ncicp:term-source></ncicp:ComplexTerm>" xsd:string
+property_value: preferred_Name "electromagnetic radiation" xsd:string
+property_value: synonym "E-M radiation" xsd:string
+property_value: synonym "EMR" xsd:string
+
+[Term]
+id: NPO:1733
+name: gamma radiation
+is_a: NPO:1732 ! electromagnetic radiation
+relationship: has_part NPO:1716 ! gamma-ray wave
+property_value: code NPO:1733 xsd:string
+property_value: definition "<ncicp:ComplexDefinition xmlns:ncicp=\"http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#\"><ncicp:def-definition>An electromagnetic radiation which consists of waves with frequencies greater than 100 EHz (1 EHz = 10^18 Hz), and with wavelengths shorter than 0.001 nm.</ncicp:def-definition><ncicp:Definition_Review_Date>100608</ncicp:Definition_Review_Date><ncicp:def-source>NPO</ncicp:def-source><ncicp:Definition_Reviewer_Name>Dennis Thomas</ncicp:Definition_Reviewer_Name></ncicp:ComplexDefinition>" xsd:string
+property_value: FULL_SYN "<ncicp:ComplexTerm xmlns:ncicp=\"http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#\"><ncicp:term-name>gamma radiation</ncicp:term-name><ncicp:term-group>PT</ncicp:term-group><ncicp:term-source>NCI</ncicp:term-source></ncicp:ComplexTerm>" xsd:string
+property_value: preferred_Name "gamma radiation" xsd:string
+property_value: synonym "gamma ray" xsd:string
+property_value: synonym "gamma ray radiation" xsd:string
+
+[Term]
+id: NPO:1734
+name: x-ray radiation
+is_a: NPO:1732 ! electromagnetic radiation
+relationship: has_part NPO:1717 ! x-ray wave
+property_value: code NPO:1734 xsd:string
+property_value: definition "<ncicp:ComplexDefinition xmlns:ncicp=\"http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#\"><ncicp:def-definition>An electromagnetic radiation which consists of waves with frequencies between 30 PHz and 100 EHz (1 PHz = 10^15 Hz, 1 EHz = 10^18 Hz), and with wavelengths between 10 nm and 0.001 nm.</ncicp:def-definition><ncicp:Definition_Review_Date>100608</ncicp:Definition_Review_Date><ncicp:def-source>NPO</ncicp:def-source><ncicp:Definition_Reviewer_Name>Dennis Thomas</ncicp:Definition_Reviewer_Name></ncicp:ComplexDefinition>" xsd:string
+property_value: FULL_SYN "<ncicp:ComplexTerm xmlns:ncicp=\"http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#\"><ncicp:term-name>x-ray radiation</ncicp:term-name><ncicp:term-group>PT</ncicp:term-group><ncicp:term-source>NCI</ncicp:term-source></ncicp:ComplexTerm>" xsd:string
+property_value: preferred_Name "x-ray radiation" xsd:string
+property_value: synonym "x-ray" xsd:string
+
+[Term]
+id: NPO:1735
+name: ultraviolet radiation
+is_a: NPO:1732 ! electromagnetic radiation
+relationship: has_part NPO:1718 ! ultraviolet wave
+property_value: code NPO:1735 xsd:string
+property_value: definition "<ncicp:ComplexDefinition xmlns:ncicp=\"http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#\"><ncicp:def-definition>An electromagnetic radiation which consists of waves with frequencies between 300 THz and 750 THz (1 THz = 10^12 Hz), and with wavelengths between 400 nm and 10 nm.</ncicp:def-definition><ncicp:Definition_Review_Date>100608</ncicp:Definition_Review_Date><ncicp:def-source>NPO</ncicp:def-source><ncicp:Definition_Reviewer_Name>Dennis Thomas</ncicp:Definition_Reviewer_Name></ncicp:ComplexDefinition>" xsd:string
+property_value: FULL_SYN "<ncicp:ComplexTerm xmlns:ncicp=\"http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#\"><ncicp:term-name>ultraviolet radiation</ncicp:term-name><ncicp:term-group>PT</ncicp:term-group><ncicp:term-source>NCI</ncicp:term-source></ncicp:ComplexTerm>" xsd:string
+property_value: preferred_Name "ultraviolet radiation" xsd:string
+property_value: synonym "UV radiation" xsd:string
+
+[Term]
+id: NPO:1736
+name: visible light radiation
+is_a: NPO:1732 ! electromagnetic radiation
+relationship: has_part NPO:1719 ! visible light wave
+property_value: code NPO:1736 xsd:string
+property_value: definition "<ncicp:ComplexDefinition xmlns:ncicp=\"http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#\"><ncicp:def-definition>An electromagnetic radiation which can be detected by the human eye, and it consists of waves with frequencies between 400 THz and 750 THz (1 THz = 10^12 Hz), and with wavelengths between 750 nm and 400 nm.</ncicp:def-definition><ncicp:Definition_Review_Date>100608</ncicp:Definition_Review_Date><ncicp:def-source>NPO</ncicp:def-source><ncicp:Definition_Reviewer_Name>Dennis Thomas</ncicp:Definition_Reviewer_Name></ncicp:ComplexDefinition>" xsd:string
+property_value: FULL_SYN "<ncicp:ComplexTerm xmlns:ncicp=\"http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#\"><ncicp:term-name>visible light radiation</ncicp:term-name><ncicp:term-group>PT</ncicp:term-group><ncicp:term-source>NCI</ncicp:term-source></ncicp:ComplexTerm>" xsd:string
+property_value: preferred_Name "visible light radiation" xsd:string
+
+[Term]
+id: NPO:1737
+name: infrared radiation
+is_a: NPO:1732 ! electromagnetic radiation
+relationship: has_part NPO:1720 ! infrared wave
+property_value: code NPO:1737 xsd:string
+property_value: definition "<ncicp:ComplexDefinition xmlns:ncicp=\"http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#\"><ncicp:def-definition>An electromagnetic radiation which consists of waves with frequencies between 300 GHz and 400 THz (1 GHz = 10^9 Hz, 1 THz = 10^12 Hz), and with wavelengths between 1 mm and 750 nm.</ncicp:def-definition><ncicp:Definition_Review_Date>100608</ncicp:Definition_Review_Date><ncicp:def-source>NPO</ncicp:def-source><ncicp:Definition_Reviewer_Name>Dennis Thomas</ncicp:Definition_Reviewer_Name></ncicp:ComplexDefinition>" xsd:string
+property_value: FULL_SYN "<ncicp:ComplexTerm xmlns:ncicp=\"http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#\"><ncicp:term-name>infrared radiation</ncicp:term-name><ncicp:term-group>PT</ncicp:term-group><ncicp:term-source>NCI</ncicp:term-source></ncicp:ComplexTerm>" xsd:string
+property_value: preferred_Name "infrared radiation" xsd:string
+
+[Term]
+id: NPO:1738
+name: far-infrared radiation
+is_a: NPO:1737 ! infrared radiation
+relationship: has_part NPO:1721 ! far-infrared wave
+property_value: code NPO:1738 xsd:string
+property_value: definition "<ncicp:ComplexDefinition xmlns:ncicp=\"http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#\"><ncicp:def-definition>An infrared radiation which consists of waves with frequencies between 300 GHz and 30 THz (1 GHz = 10^9 Hz, 1 THz = 10^12 Hz), and with wavelengths between 1 mm and 10 um.</ncicp:def-definition><ncicp:Definition_Review_Date>100608</ncicp:Definition_Review_Date><ncicp:def-source>NPO</ncicp:def-source><ncicp:Definition_Reviewer_Name>Dennis Thomas</ncicp:Definition_Reviewer_Name></ncicp:ComplexDefinition>" xsd:string
+property_value: FULL_SYN "<ncicp:ComplexTerm xmlns:ncicp=\"http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#\"><ncicp:term-name>far-infrared radiation</ncicp:term-name><ncicp:term-group>PT</ncicp:term-group><ncicp:term-source>NCI</ncicp:term-source></ncicp:ComplexTerm>" xsd:string
+property_value: preferred_Name "far-infrared radiation" xsd:string
+property_value: synonym "FIR radiation" xsd:string
+
+[Term]
+id: NPO:1739
+name: mid-infrared radiation
+is_a: NPO:1737 ! infrared radiation
+relationship: has_part NPO:1722 ! mid-infrared wave
+property_value: code NPO:1739 xsd:string
+property_value: definition "<ncicp:ComplexDefinition xmlns:ncicp=\"http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#\"><ncicp:def-definition>An infrared radiation which consists of waves with frequencies between 30 THz and 120 THz (1THz = 10^12 Hz ), and with wavelengths between 10 um and 2.5 um.</ncicp:def-definition><ncicp:Definition_Review_Date>100608</ncicp:Definition_Review_Date><ncicp:def-source>NPO</ncicp:def-source><ncicp:Definition_Reviewer_Name>Dennis Thomas</ncicp:Definition_Reviewer_Name></ncicp:ComplexDefinition>" xsd:string
+property_value: FULL_SYN "<ncicp:ComplexTerm xmlns:ncicp=\"http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#\"><ncicp:term-name>mid-infrared radiation</ncicp:term-name><ncicp:term-group>PT</ncicp:term-group><ncicp:term-source>NCI</ncicp:term-source></ncicp:ComplexTerm>" xsd:string
+property_value: preferred_Name "mid-infrared radiation" xsd:string
+property_value: synonym "MIR radiation" xsd:string
+
+[Term]
+id: NPO:1740
+name: near-infrared radiation
+is_a: NPO:1737 ! infrared radiation
+relationship: has_part NPO:1723 ! near-infrared wave
+property_value: code NPO:1740 xsd:string
+property_value: definition "<ncicp:ComplexDefinition xmlns:ncicp=\"http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#\"><ncicp:def-definition>An infrared radiation which consists of waves with frequencies between 120 THz and 400 THz (1 THz = 10^12 Hz), and with wavelengths between 2.5 um and 750 nm.</ncicp:def-definition><ncicp:Definition_Review_Date>100608</ncicp:Definition_Review_Date><ncicp:def-source>NPO</ncicp:def-source><ncicp:Definition_Reviewer_Name>Dennis Thomas</ncicp:Definition_Reviewer_Name></ncicp:ComplexDefinition>" xsd:string
+property_value: FULL_SYN "<ncicp:ComplexTerm xmlns:ncicp=\"http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#\"><ncicp:term-name>near-infrared radiation</ncicp:term-name><ncicp:term-group>PT</ncicp:term-group><ncicp:term-source>NCI</ncicp:term-source></ncicp:ComplexTerm>" xsd:string
+property_value: preferred_Name "near-infrared radiation" xsd:string
+property_value: synonym "NIR radiation" xsd:string
+
+[Term]
+id: NPO:1741
+name: microwave radiation
+is_a: NPO:1732 ! electromagnetic radiation
+relationship: has_part NPO:1724 ! microwave
+property_value: code NPO:1741 xsd:string
+property_value: definition "<ncicp:ComplexDefinition xmlns:ncicp=\"http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#\"><ncicp:def-definition>An electromagnetic radiation which consists of waves with frequencies between 1 GHz and 300 GHz (1 GHz = 10^9 Hz), and with wavelengths between 30 cm and 1 mm.</ncicp:def-definition><ncicp:Definition_Review_Date>100608</ncicp:Definition_Review_Date><ncicp:def-source>NPO</ncicp:def-source><ncicp:Definition_Reviewer_Name>Dennis Thomas</ncicp:Definition_Reviewer_Name></ncicp:ComplexDefinition>" xsd:string
+property_value: FULL_SYN "<ncicp:ComplexTerm xmlns:ncicp=\"http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#\"><ncicp:term-name>microwave radiation</ncicp:term-name><ncicp:term-group>PT</ncicp:term-group><ncicp:term-source>NCI</ncicp:term-source></ncicp:ComplexTerm>" xsd:string
+property_value: preferred_Name "microwave radiation" xsd:string
+
+[Term]
+id: NPO:1742
+name: radiowave radiation
+is_a: NPO:1732 ! electromagnetic radiation
+relationship: has_part NPO:1725 ! radiowave
+property_value: code NPO:1742 xsd:string
+property_value: definition "<ncicp:ComplexDefinition xmlns:ncicp=\"http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#\"><ncicp:def-definition>An electromagnetic radiation which consists of waves with frequencies less than 1 GHz (1 GHz = 10^9 Hz), and with wavelengths longer than 30 cm.</ncicp:def-definition><ncicp:Definition_Review_Date>100608</ncicp:Definition_Review_Date><ncicp:def-source>NPO</ncicp:def-source><ncicp:Definition_Reviewer_Name>Dennis Thomas</ncicp:Definition_Reviewer_Name></ncicp:ComplexDefinition>" xsd:string
+property_value: FULL_SYN "<ncicp:ComplexTerm xmlns:ncicp=\"http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#\"><ncicp:term-name>radiowave radiation</ncicp:term-name><ncicp:term-group>PT</ncicp:term-group><ncicp:term-source>NCI</ncicp:term-source></ncicp:ComplexTerm>" xsd:string
+property_value: preferred_Name "radiowave radiation" xsd:string
+
+[Term]
+id: NPO:1743
+name: sound radiation
+is_a: NPO:1731 ! radiation
+relationship: has_part NPO:1728 ! sound wave
+property_value: code NPO:1743 xsd:string
+property_value: definition "<ncicp:ComplexDefinition xmlns:ncicp=\"http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#\"><ncicp:def-source>NCI</ncicp:def-source><ncicp:def-definition>A radiation which consists of waves that transmit sound energy produced from a source, and the waves travel through a medium.</ncicp:def-definition><ncicp:Definition_Review_Date>100608</ncicp:Definition_Review_Date><ncicp:Definition_Reviewer_Name>Dennis Thomas</ncicp:Definition_Reviewer_Name></ncicp:ComplexDefinition>" xsd:string
+property_value: FULL_SYN "<ncicp:ComplexTerm xmlns:ncicp=\"http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#\"><ncicp:term-name>sound radiation</ncicp:term-name><ncicp:term-group>PT</ncicp:term-group><ncicp:term-source>NCI</ncicp:term-source></ncicp:ComplexTerm>" xsd:string
+property_value: preferred_Name "sound radiation" xsd:string
+
+[Term]
+id: NPO:1744
+name: ultrasound radiation
+is_a: NPO:1743 ! sound radiation
+relationship: has_part NPO:1730 ! ultrasound wave
+property_value: code NPO:1744 xsd:string
+property_value: definition "<ncicp:ComplexDefinition xmlns:ncicp=\"http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#\"><ncicp:def-definition>A sound radiation which consists of waves that transmit sound energy at frequencies above 20 kHz (upper limit of the human audible frequency range)</ncicp:def-definition><ncicp:Definition_Review_Date>100608</ncicp:Definition_Review_Date><ncicp:def-source>NPO</ncicp:def-source><ncicp:Definition_Reviewer_Name>Dennis Thomas</ncicp:Definition_Reviewer_Name></ncicp:ComplexDefinition>" xsd:string
+property_value: FULL_SYN "<ncicp:ComplexTerm xmlns:ncicp=\"http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#\"><ncicp:term-name>ultrasound radiation</ncicp:term-name><ncicp:term-group>PT</ncicp:term-group><ncicp:term-source>NCI</ncicp:term-source></ncicp:ComplexTerm>" xsd:string
+property_value: preferred_Name "ultrasound radiation" xsd:string
+
+[Term]
+id: NPO:1745
+name: energy
+is_a: RealizableEntity ! realizable_entity
+property_value: code NPO:1745 xsd:string
+property_value: definition "<ncicp:ComplexDefinition xmlns:ncicp=\"http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#\"><ncicp:def-definition>A realizable entity which is the capacity to do work or to exert force over a distance.</ncicp:def-definition><ncicp:Definition_Review_Date>100608</ncicp:Definition_Review_Date><ncicp:def-source>NPO</ncicp:def-source><ncicp:Definition_Reviewer_Name>Dennis Thomas</ncicp:Definition_Reviewer_Name></ncicp:ComplexDefinition>" xsd:string
+property_value: FULL_SYN "<ncicp:ComplexTerm xmlns:ncicp=\"http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#\"><ncicp:term-name>energy</ncicp:term-name><ncicp:term-group>PT</ncicp:term-group><ncicp:term-source>NCI</ncicp:term-source></ncicp:ComplexTerm>" xsd:string
+property_value: preferred_Name "energy" xsd:string
+
+[Term]
+id: NPO:1746
+name: kinetic energy
+is_a: NPO:1745 ! energy
+property_value: code NPO:1746 xsd:string
+property_value: definition "<ncicp:ComplexDefinition xmlns:ncicp=\"http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#\"><ncicp:def-definition>Energy associated with a moving object by virtue of its motion.</ncicp:def-definition><ncicp:Definition_Review_Date>100608</ncicp:Definition_Review_Date><ncicp:def-source>NPO</ncicp:def-source><ncicp:Definition_Reviewer_Name>Dennis Thomas</ncicp:Definition_Reviewer_Name></ncicp:ComplexDefinition>" xsd:string
+property_value: FULL_SYN "<ncicp:ComplexTerm xmlns:ncicp=\"http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#\"><ncicp:term-name>kinetic energy</ncicp:term-name><ncicp:term-group>PT</ncicp:term-group><ncicp:term-source>NCI</ncicp:term-source></ncicp:ComplexTerm>" xsd:string
+property_value: preferred_Name "kinetic energy" xsd:string
+
+[Term]
+id: NPO:1750
+name: light energy
+is_a: NPO:1746 ! kinetic energy
+relationship: is_realized_in NPO:1714 ! electromagnetic wave
+property_value: code NPO:1750 xsd:string
+property_value: definition "<ncicp:ComplexDefinition xmlns:ncicp=\"http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#\"><ncicp:def-definition>Kinetic energy which is associated with the motion of electromagnetic waves produced by the acceleration of electric charges.</ncicp:def-definition><ncicp:Definition_Review_Date>100608</ncicp:Definition_Review_Date><ncicp:def-source>NPO</ncicp:def-source><ncicp:Definition_Reviewer_Name>Dennis Thomas</ncicp:Definition_Reviewer_Name></ncicp:ComplexDefinition>" xsd:string
+property_value: FULL_SYN "<ncicp:ComplexTerm xmlns:ncicp=\"http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#\"><ncicp:term-name>light energy</ncicp:term-name><ncicp:term-group>PT</ncicp:term-group><ncicp:term-source>NCI</ncicp:term-source></ncicp:ComplexTerm>" xsd:string
+property_value: preferred_Name "light energy" xsd:string
+property_value: synonym "electromagnetic energy" xsd:string
+property_value: synonym "light" xsd:string
+
+[Term]
+id: NPO:1751
+name: infrared light energy
+is_a: NPO:1750 ! light energy
+relationship: is_realized_in NPO:1720 ! infrared wave
+property_value: code NPO:1751 xsd:string
+property_value: definition "<ncicp:ComplexDefinition xmlns:ncicp=\"http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#\"><ncicp:def-definition>Light energy which is associated with the motion of infrared waves.</ncicp:def-definition><ncicp:Definition_Review_Date>100608</ncicp:Definition_Review_Date><ncicp:def-source>NPO</ncicp:def-source><ncicp:Definition_Reviewer_Name>Dennis Thomas</ncicp:Definition_Reviewer_Name></ncicp:ComplexDefinition>" xsd:string
+property_value: FULL_SYN "<ncicp:ComplexTerm xmlns:ncicp=\"http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#\"><ncicp:term-name>infrared light energy</ncicp:term-name><ncicp:term-group>PT</ncicp:term-group><ncicp:term-source>NCI</ncicp:term-source></ncicp:ComplexTerm>" xsd:string
+property_value: preferred_Name "infrared light energy" xsd:string
+property_value: synonym "infrared light" xsd:string
+
+[Term]
+id: NPO:1752
+name: far-infrared light energy
+is_a: NPO:1751 ! infrared light energy
+relationship: is_realized_in NPO:1721 ! far-infrared wave
+property_value: code NPO:1752 xsd:string
+property_value: definition "<ncicp:ComplexDefinition xmlns:ncicp=\"http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#\"><ncicp:def-definition>Light energy which is associated with the motion of far-infrared waves.</ncicp:def-definition><ncicp:Definition_Review_Date>100608</ncicp:Definition_Review_Date><ncicp:def-source>NPO</ncicp:def-source><ncicp:Definition_Reviewer_Name>Dennis Thomas</ncicp:Definition_Reviewer_Name></ncicp:ComplexDefinition>" xsd:string
+property_value: FULL_SYN "<ncicp:ComplexTerm xmlns:ncicp=\"http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#\"><ncicp:term-name>far-infrared light energy</ncicp:term-name><ncicp:term-group>PT</ncicp:term-group><ncicp:term-source>NCI</ncicp:term-source></ncicp:ComplexTerm>" xsd:string
+property_value: preferred_Name "far-infrared light energy" xsd:string
+property_value: synonym "far-infrared light" xsd:string
+
+[Term]
+id: NPO:1753
+name: mid-infrared light energy
+is_a: NPO:1751 ! infrared light energy
+relationship: is_realized_in NPO:1722 ! mid-infrared wave
+property_value: code NPO:1753 xsd:string
+property_value: definition "<ncicp:ComplexDefinition xmlns:ncicp=\"http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#\"><ncicp:def-definition>Infrared light energy which is asscoated with the motion of mid-infrared waves.</ncicp:def-definition><ncicp:Definition_Review_Date>100608</ncicp:Definition_Review_Date><ncicp:def-source>NPO</ncicp:def-source><ncicp:Definition_Reviewer_Name>Dennis Thomas</ncicp:Definition_Reviewer_Name></ncicp:ComplexDefinition>" xsd:string
+property_value: FULL_SYN "<ncicp:ComplexTerm xmlns:ncicp=\"http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#\"><ncicp:term-name>mid-infrared light energy</ncicp:term-name><ncicp:term-group>PT</ncicp:term-group><ncicp:term-source>NCI</ncicp:term-source></ncicp:ComplexTerm>" xsd:string
+property_value: preferred_Name "mid-infrared light energy" xsd:string
+property_value: synonym "mid-infrared light" xsd:string
+
+[Term]
+id: NPO:1754
+name: near-infrared light energy
+is_a: NPO:1751 ! infrared light energy
+relationship: is_realized_in NPO:1723 ! near-infrared wave
+property_value: code NPO:1754 xsd:string
+property_value: definition "<ncicp:ComplexDefinition xmlns:ncicp=\"http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#\"><ncicp:def-definition>Infrared light energy which is associated with the motion of near-infrared light waves.</ncicp:def-definition><ncicp:Definition_Review_Date>100608</ncicp:Definition_Review_Date><ncicp:def-source>NPO</ncicp:def-source><ncicp:Definition_Reviewer_Name>Dennis Thomas</ncicp:Definition_Reviewer_Name></ncicp:ComplexDefinition>" xsd:string
+property_value: FULL_SYN "<ncicp:ComplexTerm xmlns:ncicp=\"http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#\"><ncicp:term-name>near-infrared light energy</ncicp:term-name><ncicp:term-group>PT</ncicp:term-group><ncicp:term-source>NCI</ncicp:term-source></ncicp:ComplexTerm>" xsd:string
+property_value: preferred_Name "near-infrared light energy" xsd:string
+property_value: synonym "near-infrared light" xsd:string
+
+[Term]
+id: NPO:1755
+name: ultraviolet light energy
+is_a: NPO:1750 ! light energy
+relationship: is_realized_in NPO:1718 ! ultraviolet wave
+property_value: code NPO:1755 xsd:string
+property_value: definition "<ncicp:ComplexDefinition xmlns:ncicp=\"http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#\"><ncicp:def-definition>Light energy which is associated with the motion of ultraviolet waves.</ncicp:def-definition><ncicp:Definition_Review_Date>100608</ncicp:Definition_Review_Date><ncicp:def-source>NPO</ncicp:def-source><ncicp:Definition_Reviewer_Name>Dennis Thomas</ncicp:Definition_Reviewer_Name></ncicp:ComplexDefinition>" xsd:string
+property_value: FULL_SYN "<ncicp:ComplexTerm xmlns:ncicp=\"http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#\"><ncicp:term-name>ultraviolet light energy</ncicp:term-name><ncicp:term-group>PT</ncicp:term-group><ncicp:term-source>NCI</ncicp:term-source></ncicp:ComplexTerm>" xsd:string
+property_value: preferred_Name "ultraviolet light energy" xsd:string
+property_value: synonym "ultraviolet light" xsd:string
+property_value: synonym "UV light" xsd:string
+
+[Term]
+id: NPO:1756
+name: visible light energy
+is_a: NPO:1750 ! light energy
+relationship: is_realized_in NPO:1719 ! visible light wave
+property_value: code NPO:1756 xsd:string
+property_value: definition "<ncicp:ComplexDefinition xmlns:ncicp=\"http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#\"><ncicp:def-definition>Light energy which is associated with the motion of visible light waves.</ncicp:def-definition><ncicp:Definition_Review_Date>100608</ncicp:Definition_Review_Date><ncicp:def-source>NPO</ncicp:def-source><ncicp:Definition_Reviewer_Name>Dennis Thomas</ncicp:Definition_Reviewer_Name></ncicp:ComplexDefinition>" xsd:string
+property_value: FULL_SYN "<ncicp:ComplexTerm xmlns:ncicp=\"http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#\"><ncicp:term-name>visible light energy</ncicp:term-name><ncicp:term-group>PT</ncicp:term-group><ncicp:term-source>NCI</ncicp:term-source></ncicp:ComplexTerm>" xsd:string
+property_value: preferred_Name "visible light energy" xsd:string
+property_value: synonym "visible light" xsd:string
+
+[Term]
+id: NPO:1757
+name: sound energy
+is_a: NPO:1746 ! kinetic energy
+relationship: is_realized_in NPO:1728 ! sound wave
+property_value: code NPO:1757 xsd:string
+property_value: definition "<ncicp:ComplexDefinition xmlns:ncicp=\"http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#\"><ncicp:def-definition>Kinetic energy which is produced by the vibrations of an object, and transported by disturbances (sound waves) traveling through a medium.</ncicp:def-definition><ncicp:Definition_Review_Date>100608</ncicp:Definition_Review_Date><ncicp:def-source>NPO</ncicp:def-source><ncicp:Definition_Reviewer_Name>Dennis Thomas</ncicp:Definition_Reviewer_Name></ncicp:ComplexDefinition>" xsd:string
+property_value: FULL_SYN "<ncicp:ComplexTerm xmlns:ncicp=\"http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#\"><ncicp:term-name>sound energy</ncicp:term-name><ncicp:term-group>PT</ncicp:term-group><ncicp:term-source>NCI</ncicp:term-source></ncicp:ComplexTerm>" xsd:string
+property_value: preferred_Name "sound energy" xsd:string
+property_value: synonym "sound" xsd:string
+
+[Term]
+id: NPO:1759
+name: ultrasound energy
+is_a: NPO:1757 ! sound energy
+relationship: is_realized_in NPO:1730 ! ultrasound wave
+property_value: code NPO:1759 xsd:string
+property_value: definition "<ncicp:ComplexDefinition xmlns:ncicp=\"http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#\"><ncicp:def-definition>Sound energy which is carried by waves (ultrasound waves) that travel at frequencies above the human audible range (above 20 kHz).</ncicp:def-definition><ncicp:Definition_Review_Date>100608</ncicp:Definition_Review_Date><ncicp:def-source>NPO</ncicp:def-source><ncicp:Definition_Reviewer_Name>Dennis Thomas</ncicp:Definition_Reviewer_Name></ncicp:ComplexDefinition>" xsd:string
+property_value: FULL_SYN "<ncicp:ComplexTerm xmlns:ncicp=\"http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#\"><ncicp:term-name>ultrasound energy</ncicp:term-name><ncicp:term-group>PT</ncicp:term-group><ncicp:term-source>NCI</ncicp:term-source></ncicp:ComplexTerm>" xsd:string
+property_value: preferred_Name "ultrasound energy" xsd:string
+property_value: synonym "ultrasonic sound" xsd:string
+property_value: synonym "ultrasound" xsd:string
+
+[Term]
+id: Occurrent
+name: occurrent
+comment: Examples: the life of an organism, a surgical operation as processual context for a nosocomical infection, the spatiotemporal context occupied by a process of cellular meiosis, the most interesting part of Van Gogh's life, the spatiotemporal region occupied by the development of a cancer tumor
+is_a: Entity ! entity
+property_value: code NPO:923 xsd:string
+property_value: dBXrefID span:Occurrent xsd:string
+property_value: definition "<ncicp:ComplexDefinition xmlns:ncicp=\"http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#\"><ncicp:def-definition>An entity [bfo:Entity] that has temporal parts and that happens, unfolds or develops through time. Sometimes also called perdurants.</ncicp:def-definition><ncicp:Definition_Review_Date>100428</ncicp:Definition_Review_Date><ncicp:def-source>NPO</ncicp:def-source><ncicp:attr>BFO (v. 1.1)</ncicp:attr><ncicp:Definition_Reviewer_Name>Dennis Thomas</ncicp:Definition_Reviewer_Name></ncicp:ComplexDefinition>" xsd:string
+property_value: FULL_SYN <ncicp:ComplexTerm><ncicp:term-name>occurrent</ncicp:term-name><ncicp:term-group>PT</ncicp:term-group><ncicp:term-source>NCI</ncicp:term-source></ncicp:ComplexTerm> http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral
+property_value: preferred_Name "occurrent" xsd:string
+property_value: synonym "perdurant" xsd:string
+
+[Term]
+id: Process
+name: process
+comment: [definition source]: BFO
+is_a: ProcessualEntity ! processual_entity
+property_value: code NPO:336 xsd:string
+property_value: dBXrefID span:Process xsd:string
+property_value: definition "<ncicp:ComplexDefinition xmlns:ncicp=\"http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#\"><ncicp:def-definition>A processual entity [span:ProcessualEntity] that is a maximally connected spatiotemporal whole and has bona fide beginnings and endings corresponding to real discontinuities.</ncicp:def-definition><ncicp:Definition_Review_Date>100405</ncicp:Definition_Review_Date><ncicp:def-source>NPO</ncicp:def-source><ncicp:attr>BFO</ncicp:attr><ncicp:Definition_Reviewer_Name>Dennis Thomas</ncicp:Definition_Reviewer_Name></ncicp:ComplexDefinition>" xsd:string
+property_value: FULL_SYN <ncicp:ComplexTerm><ncicp:term-name>process</ncicp:term-name><ncicp:term-group>PT</ncicp:term-group><ncicp:term-source>NCI</ncicp:term-source></ncicp:ComplexTerm> http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral
+property_value: preferred_Name "process" xsd:string
+
+[Term]
+id: ProcessualEntity
+name: processual_entity
+comment: [source]: BFO v. 1.1
+is_a: Occurrent ! occurrent
+property_value: code NPO:703 xsd:string
+property_value: dBXrefID span:ProcessualEntity xsd:string
+property_value: definition "<ncicp:ComplexDefinition xmlns:ncicp=\"http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#\"><ncicp:def-definition>An occurrent [span:Occurrent] that exists in time by occurring or happening, has temporal parts and always involves and depends on some entity.</ncicp:def-definition><ncicp:Definition_Review_Date>100428</ncicp:Definition_Review_Date><ncicp:def-source>NPO</ncicp:def-source><ncicp:attr>BFO (v. 1.1)</ncicp:attr><ncicp:Definition_Reviewer_Name>Dennis Thomas</ncicp:Definition_Reviewer_Name></ncicp:ComplexDefinition>" xsd:string
+property_value: FULL_SYN "<ncicp:ComplexTerm><ncicp:term-name>processual entity</ncicp:term-name><ncicp:term-group>PT</ncicp:term-group><ncicp:term-source>NCI</ncicp:term-source></ncicp:ComplexTerm>" http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral
+property_value: preferred_Name "processual entity" xsd:string
+
+[Term]
+id: RealizableEntity
+name: realizable_entity
+comment: realizable entities are defined by the fact that they can be realized (manifested, actualized, executed) in occurrents of corresponding sorts.
+comment: Source: (1) BFO.owl v. 1.1; (2) Robert Arp and Barry Smith "Function, Role and Disposition in Basic Formal Ontology" NATURE PROCEEDINGS, 2008.
+is_a: SpecificallyDependentContinuant ! specifically_dependent_continuant
+property_value: code NPO:237 xsd:string
+property_value: dBXrefID snap:RealizableEntity xsd:string
+property_value: definition "<ncicp:ComplexDefinition><ncicp:def-source>NPO</ncicp:def-source><ncicp:def-definition>A specifically dependent continuant [snap:SpecificallyDependentContinuant] that inheres in continuant [snap:Continuant] entities and are not exhibited in full at every time in which it inheres in an entity or group of entities. The exhibition or actualization of a realizable entity is a particular manifestation, functioning or process that occurs under certain circumstances.</ncicp:def-definition></ncicp:ComplexDefinition>" http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral
+property_value: FULL_SYN "<ncicp:ComplexTerm><ncicp:term-name>realizable entity</ncicp:term-name><ncicp:term-group>PT</ncicp:term-group><ncicp:term-source>NCI</ncicp:term-source></ncicp:ComplexTerm>" http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral
+property_value: preferred_Name "realizable entity" xsd:string
+
+[Term]
+id: SpecificallyDependentContinuant
+name: specifically_dependent_continuant
+comment: Synonyms: property, trope, mode; Examples: the mass of a cloud, the smell of mozzarella, the liquidity of blood, the color of a tomato, the disposition of fish to decay, the role of being a doctor, the function of the heart in the body: to pump blood, to receive de-oxygenated and oxygenated blood, etc.
+is_a: DependentContinuant ! dependent_continuant
+property_value: code NPO:1601 xsd:string
+property_value: dBXrefID snap:SpecificallyDependentContinuant xsd:string
+property_value: definition "<ncicp:ComplexDefinition xmlns:ncicp=\"http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#\"><ncicp:def-definition>A continuant [snap:Continuant] that inheres in or is borne by other entities. Every instance of A requires some specific instance of B which must always be the same.</ncicp:def-definition><ncicp:Definition_Review_Date>100428</ncicp:Definition_Review_Date><ncicp:def-source>NPO</ncicp:def-source><ncicp:attr>BFO</ncicp:attr><ncicp:Definition_Reviewer_Name>Dennis Thomas</ncicp:Definition_Reviewer_Name></ncicp:ComplexDefinition>" xsd:string
+property_value: FULL_SYN "<ncicp:ComplexTerm><ncicp:term-name>specifically dependent continuant</ncicp:term-name><ncicp:term-group>PT</ncicp:term-group><ncicp:term-source>NCI</ncicp:term-source></ncicp:ComplexTerm>" http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral
+property_value: preferred_Name "specifically dependent continuant" xsd:string
+
+[Typedef]
+id: has_part
+comment: (source): OBO Relation Ontology (release version 0.99, date 07:14:2006);  Barry Smith et al, Relations in biomedical ontologies, Genome Biology (2005)
+comment: If C and C1 are continuant classes, then C has_part C1 means that every instance of C at any time has part some instances of C1 at the same time.\n[formal definition]: C has_part C1 holds true if and only if every continuant c that instantiates C at some time t,  there is some continuant c1 that instantiates C1 at t such that c1 is part of c at t.\n\nExamples:\nfluorescein isothiocyanate has_part isothiocyanate group\ngold quantum dot has_part gold\ncore-shell nanoparticle has_part core\ncore-shell nanoparticle has_part shell
+comment: If P and P1 are occurrent classes, then P has_part P1 means  that every instance of P has part some instances of P1.\n[formal definition]:P has_part P1  if and only if every occurrent p that instantiates P  there is some occurrent p1 that instantiates P1 such that p1 is part of p.\n\nExamples:\ncovalent linkage has_part covalent interaction\nvisualization of cellular uptake of nanoparticles has_part imaging of nanoparticles
+property_value: definition "Transitive parthood relation in which one entity has itself, or another entity as a part, and the relation is valid for use only between continuants or between occurrents but not between a continuant and an occurrent." xsd:string
+property_value: preferred_Name "has part" xsd:string
+is_transitive: true
+is_a: has_relation_to
+
+[Typedef]
+id: has_relation_to
+property_value: definition "A relationship to indicate that a class is related to another class." xsd:string
+property_value: preferred_Name "has relation to" xsd:string
+
+[Typedef]
+id: is_realized_in
+comment: This relation is taken from the Ontology for Biomedical Investigations (OBI: Version 2009-11-06 Philly (aka version 1.0) Release Candidate)
+property_value: definition "A relationship between a realizable entity and an occurrent." xsd:string
+property_value: preferred_Name "is realized in" xsd:string
+property_value: synonym "executed during" xsd:string
+property_value: synonym "has realization" xsd:string
+property_value: synonym "is realized as" xsd:string
+property_value: synonym "is realized by" xsd:string
+domain: RealizableEntity ! realizable_entity
+range: Occurrent ! occurrent
+is_a: has_relation_to
+
+[Typedef]
+id: part_of
+comment: [source]: OBO Relation Ontology (release version 0.99, date 07:14:2006);  Barry Smith et al, Relations in biomedical ontologies, Genome Biology (2005)
+comment: If C and C1 are continuant classes, then C part_of C1 means that every instance  of C (c) at any time is part of some instances of C1 (c1) at the same time []. Note that whenever we read "some instances" it should be understood as reading "one or more instances".\n\n[formal definition]: C part_of C1 holds true if and only if every continuant c that instantiates C at some time t,  there is some continuant c1 that instantiates C1 at t such that c is part of c1 at t.\n\n\nExamples:\ncarboxyl group part_of carboxylic acid\ndendrimer generation layer part_of dendrimer\nhydrophobic core of lipid bilayer part_of lipid bilayer\nhollow core of nanocage part_of nanocage
+comment: If P and P1 are occurrent classes, then P part_of P1 means that every instance of P is part of some instances of P1.\n[formal definition]: P part_of P1 holds true  if and only if every occurrent p that instantiates P  there is some process p1 that instantiates P1 such that p is part of p1.\n\nExamples:\ndrug release from nanoparticle during systemic circulation part_of systemic circulation of drug-loaded nanoparticle
+property_value: definition "Transitive parthood relation in which one entity is part of another entity, and the relation is valid for use between continuants or between occurrents but not between a continuant and an occurrent." xsd:string
+property_value: preferred_Name "part of" xsd:string
+property_value: synonym "is part of" xsd:string
+is_transitive: true
+is_a: has_relation_to
+
+[Typedef]
+id: realizes
+property_value: definition "A relation between an occurrent to a realizable entity." xsd:string
+property_value: preferred_Name "realizes" xsd:string
+property_value: synonym "is realization of" xsd:string
+domain: Occurrent ! occurrent
+range: RealizableEntity ! realizable_entity
+is_a: has_relation_to
+inverse_of: is_realized_in
+

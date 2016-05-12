@@ -1,7 +1,7 @@
-pattern_name: exo/patterns/exposure_to_material
+pattern_name: exo/patterns/exposure_to_chemical
 classes:
   exposure event: ExO:0000002
-  environmental material: ENVO:00010483
+  chemical entity: CHEBI:24431
 
 relations:
   stressor: BFO_0000050
@@ -9,7 +9,7 @@ relations:
   has input: RO:0002233
     
 vars: 
-  stressor: "'environmental material'"
+  stressor: "'chemical entity'"
 
 name:
   text: "exposure to %s"
@@ -27,7 +27,7 @@ annotations:
       - stressor
 
 def: 
-  text: "A exposure event involving the interaction of an exposure receptor to %s. Exposure may be through a variety of means, including through the air or through ingestion."
+  text: "A exposure event involving the interaction of an exposure receptor to %s. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion."
   vars:
     - stressor
     

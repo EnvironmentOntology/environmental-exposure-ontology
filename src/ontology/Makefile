@@ -4,10 +4,10 @@ SRC=ecto-edit.obo
 ONTDIR=.
 MODDIR=modules
 
-MODS = exposure_to_radiation exposure_to_material
-MODS_CSV = $(patsubst %,%.csv,$(MODS))
+MODS = exposure_to_radiation exposure_to_material exposure_to_environmental_process exposure_to_chemical exposure_to_chemical_with_role exposure_to_levels_in_medium
+MODS_CSV = $(patsubst %,$(MODDIR)/%.csv,$(MODS))
 
-all: ecto.owl ecto.obo all_subsets
+all: all_imports ecto.owl ecto.obo all_subsets 
 all_subsets: subsets/ecto-basic.obo
 test: all
 release: all copy-release
@@ -64,7 +64,7 @@ oort: ecto-core.owl
 
 # Ontology dependencies
 # We don't include clo, as this is currently not working
-IMPORTS = pato envo npo exo ro
+IMPORTS = pato envo npo exo ro chebi
 
 # Make this target to regenerate ALL
 all_imports_owl: $(patsubst %, imports/%_import.owl,$(IMPORTS))
@@ -81,7 +81,7 @@ imports/%_import.owl: $(SRC) mirror/%.owl imports/seed.tsv
 	robot extract -i mirror/$*.owl -T imports/seed.tsv -m BOT -O $(OBO)/ecto/$@ -o $@
 
 imports/%_import.obo: imports/%_import.owl
-	owltools $(USECAT) $< -o -f obo $@
+	owltools $(USECAT) $< -o -f obo --no-check $@
 
 
 # clone remote ontology locally, perfoming some excision of relations and annotations
@@ -95,6 +95,11 @@ mirror/%.owl: mirror/%.obo
 mirror/ro.owl:
 	owltools $(OBO)/ro.owl --merge-imports-closure -o $@
 .PRECIOUS: mirror/%.owl
+
+mirror/chebi.owl:
+	owltools $(OBO)/go/extensions/chebi_import.obo --set-ontology-id $(OBO)/chebi.owl -o $@
+.PRECIOUS: mirror/chebi.owl
+
 mirror/uberon.owl:
 	owltools $(OBO)/uberon/basic.owl --remove-annotation-assertions -r -l -s -d --remove-axiom-annotations --remove-dangling-annotations --make-subset-by-properties -f $(KEEPRELS) --set-ontology-id $(OBO)/uberon.owl -o $@
 .PRECIOUS: mirror/%.owl
@@ -154,6 +159,8 @@ radiation-npo.tsv:
 	blip-findall  -i mirror/npo.obo "subclassRT(X,'NPO:1731')"  -label -select "x('',X)" -no_pred -use_tabs > $@
 material-envo.tsv:
 	blip-findall  -r envo "subclassRT(X,'ENVO:00010483')"  -label -select "x('',X)" -no_pred -use_tabs > $@
+material-envop.tsv:
+	blip-findall  -r envo "subclassRT(X,'ENVO:02500000')"  -label -select "x('',X)" -no_pred -use_tabs > $@
 
-%.csv: %.tsv
-	tsv2csv.py $< $@
+#%.csv: %.tsv
+#	tsv2csv.py $< $@

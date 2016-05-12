@@ -1,7 +1,7 @@
 pattern_name: exo/patterns/exposure_to_material
 classes:
   exposure event: ExO:0000002
-  environmental material: ENVO:00010483
+  environmental process: ENVO:02500000
 
 relations:
   stressor: BFO_0000050
@@ -9,7 +9,7 @@ relations:
   has input: RO:0002233
     
 vars: 
-  stressor: "'environmental material'"
+  stressor: "'environmental process'"
 
 name:
   text: "exposure to %s"
@@ -27,7 +27,7 @@ annotations:
       - stressor
 
 def: 
-  text: "A exposure event involving the interaction of an exposure receptor to %s. Exposure may be through a variety of means, including through the air or through ingestion."
+  text: "A exposure event involving the interaction of an exposure receptor to %s."
   vars:
     - stressor
     
