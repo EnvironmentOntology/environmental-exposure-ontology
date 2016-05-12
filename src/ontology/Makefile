@@ -96,6 +96,10 @@ mirror/ro.owl:
 	owltools $(OBO)/ro.owl --merge-imports-closure -o $@
 .PRECIOUS: mirror/%.owl
 
+mirror/exo.obo:
+	wget --no-check-certificate https://raw.githubusercontent.com/CTDbase/exposure-ontology-draft/master/src/ontology/exo.obo -O $@
+.PRECIOUS: mirror/%.owl
+
 mirror/chebi.owl:
 	owltools $(OBO)/go/extensions/chebi_import.obo --set-ontology-id $(OBO)/chebi.owl -o $@
 .PRECIOUS: mirror/chebi.owl
