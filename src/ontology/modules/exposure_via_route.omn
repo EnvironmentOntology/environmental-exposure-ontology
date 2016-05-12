@@ -1,0 +1,109 @@
+Prefix: : <http://purl.obolibrary.org/obo/>
+Prefix: IAO: <http://purl.obolibrary.org/obo/IAO_>
+Prefix: DOSDP: <http://geneontology.org/foo/>
+Prefix: oio: <http://www.geneontology.org/formats/oboInOwl#>
+Prefix: SO: <http://purl.obolibrary.org/obo/SO_>
+Prefix: ENVO: <http://purl.obolibrary.org/obo/ENVO_>
+Prefix: ECTO: <http://purl.obolibrary.org/obo/ECTO_>
+Prefix: CL: <http://purl.obolibrary.org/obo/CL_>
+Prefix: PATO: <http://purl.obolibrary.org/obo/PATO_>
+Prefix: UBERON: <http://purl.obolibrary.org/obo/UBERON_>
+Prefix: RO: <http://purl.obolibrary.org/obo/RO_>
+Prefix: PO: <http://purl.obolibrary.org/obo/PO_>
+Prefix: ExO: <http://purl.obolibrary.org/obo/ExO_>
+Prefix: BFO: <http://purl.obolibrary.org/obo/BFO_>
+Prefix: NBO: <http://purl.obolibrary.org/obo/NBO_>
+Prefix: GO: <http://purl.obolibrary.org/obo/GO_>
+Prefix: NPO: <http://purl.obolibrary.org/obo/NPO_>
+Prefix: OBA: <http://purl.obolibrary.org/obo/OBA_>
+Prefix: GOCHE: <http://purl.obolibrary.org/obo/GOCHE_>
+Prefix: PR: <http://purl.obolibrary.org/obo/PR_>
+Prefix: CHEBI: <http://purl.obolibrary.org/obo/CHEBI_>
+
+ ## Auto-generated
+
+Ontology: <http://purl.obolibrary.org/obo/auto>
+AnnotationProperty: IAO:0000115
+AnnotationProperty: exo/patterns/exposure_to_chemical/route
+AnnotationProperty: exo/patterns/exposure_to_chemical/stressor
+AnnotationProperty: DOSDP:applies-pattern
+AnnotationProperty: oio:hasExactSynonym
+Class: ExO:0000055 ## route
+Class: ExO:0000002 ## exposure event
+Class: CHEBI:24431 ## chemical entity
+ObjectProperty: BFO_0000050 ## part of
+ObjectProperty: BFO_0000050 ## stressor
+ObjectProperty: RO:0002233 ## has input
+## Auto-generated classes
+
+Class: ExO:0000056 ## ingestion
+Class: CHEBI:24431 ## chemical entity
+## {"route": "ExO:0000056", "stressor": "CHEBI:24431"}
+Class: ECTO:0000971
+ Annotations: rdfs:label "exposure to chemical entity via ingestion"
+ Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to chemical entity via ingestion."
+ Annotations: oio:hasExactSynonym "chemical entity exposure, via ingestion"
+ EquivalentTo: ExO:0000002 and RO:0002233 some CHEBI:24431 and BFO_0000050 some ExO:0000056 ## 'exposure event' and 'has input' some chemical entity and 'part of' some ingestion
+
+Class: ExO:0000056 ## ingestion
+Class: ENVO:00010483 ## environmental material
+## {"route": "ExO:0000056", "stressor": "ENVO:00010483"}
+Class: ECTO:0000972
+ Annotations: rdfs:label "exposure to environmental material via ingestion"
+ Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to environmental material via ingestion."
+ Annotations: oio:hasExactSynonym "environmental material exposure, via ingestion"
+ EquivalentTo: ExO:0000002 and RO:0002233 some ENVO:00010483 and BFO_0000050 some ExO:0000056 ## 'exposure event' and 'has input' some environmental material and 'part of' some ingestion
+
+Class: ExO:0000056 ## ingestion
+Class: CHEBI:63063 ## cadmium cation
+## {"route": "ExO:0000056", "stressor": "CHEBI:63063"}
+Class: ECTO:0000973
+ Annotations: rdfs:label "exposure to cadmium cation via ingestion"
+ Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to cadmium cation via ingestion."
+ Annotations: oio:hasExactSynonym "cadmium cation exposure, via ingestion"
+ EquivalentTo: ExO:0000002 and RO:0002233 some CHEBI:63063 and BFO_0000050 some ExO:0000056 ## 'exposure event' and 'has input' some cadmium cation and 'part of' some ingestion
+
+Class: ExO:0000056 ## ingestion
+Class: CHEBI:25197 ## mercury cation
+## {"route": "ExO:0000056", "stressor": "CHEBI:25197"}
+Class: ECTO:0000974
+ Annotations: rdfs:label "exposure to mercury cation via ingestion"
+ Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to mercury cation via ingestion."
+ Annotations: oio:hasExactSynonym "mercury cation exposure, via ingestion"
+ EquivalentTo: ExO:0000002 and RO:0002233 some CHEBI:25197 and BFO_0000050 some ExO:0000056 ## 'exposure event' and 'has input' some mercury cation and 'part of' some ingestion
+
+Class: ExO:0000057 ## inhalation
+Class: CHEBI:24431 ## chemical entity
+## {"route": "ExO:0000057", "stressor": "CHEBI:24431"}
+Class: ECTO:0000975
+ Annotations: rdfs:label "exposure to chemical entity via inhalation"
+ Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to chemical entity via inhalation."
+ Annotations: oio:hasExactSynonym "chemical entity exposure, via inhalation"
+ EquivalentTo: ExO:0000002 and RO:0002233 some CHEBI:24431 and BFO_0000050 some ExO:0000057 ## 'exposure event' and 'has input' some chemical entity and 'part of' some inhalation
+
+Class: ExO:0000057 ## inhalation
+Class: ENVO:00010483 ## environmental material
+## {"route": "ExO:0000057", "stressor": "ENVO:00010483"}
+Class: ECTO:0000976
+ Annotations: rdfs:label "exposure to environmental material via inhalation"
+ Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to environmental material via inhalation."
+ Annotations: oio:hasExactSynonym "environmental material exposure, via inhalation"
+ EquivalentTo: ExO:0000002 and RO:0002233 some ENVO:00010483 and BFO_0000050 some ExO:0000057 ## 'exposure event' and 'has input' some environmental material and 'part of' some inhalation
+
+Class: ExO:0000057 ## inhalation
+Class: ENVO:01000416 ## ultrafine respirable suspended particulate matter
+## {"route": "ExO:0000057", "stressor": "ENVO:01000416"}
+Class: ECTO:0000977
+ Annotations: rdfs:label "exposure to ultrafine respirable suspended particulate matter via inhalation"
+ Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to ultrafine respirable suspended particulate matter via inhalation."
+ Annotations: oio:hasExactSynonym "ultrafine respirable suspended particulate matter exposure, via inhalation"
+ EquivalentTo: ExO:0000002 and RO:0002233 some ENVO:01000416 and BFO_0000050 some ExO:0000057 ## 'exposure event' and 'has input' some ultrafine respirable suspended particulate matter and 'part of' some inhalation
+
+Class: ExO:0000057 ## inhalation
+Class: ENVO:00010505 ## aerosol
+## {"route": "ExO:0000057", "stressor": "ENVO:00010505"}
+Class: ECTO:0000978
+ Annotations: rdfs:label "exposure to aerosol via inhalation"
+ Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to aerosol via inhalation."
+ Annotations: oio:hasExactSynonym "aerosol exposure, via inhalation"
+ EquivalentTo: ExO:0000002 and RO:0002233 some ENVO:00010505 and BFO_0000050 some ExO:0000057 ## 'exposure event' and 'has input' some aerosol and 'part of' some inhalation

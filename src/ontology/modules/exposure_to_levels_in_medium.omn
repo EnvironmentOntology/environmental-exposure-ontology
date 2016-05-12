@@ -1,0 +1,91 @@
+Prefix: : <http://purl.obolibrary.org/obo/>
+Prefix: IAO: <http://purl.obolibrary.org/obo/IAO_>
+Prefix: DOSDP: <http://geneontology.org/foo/>
+Prefix: oio: <http://www.geneontology.org/formats/oboInOwl#>
+Prefix: OBA: <http://purl.obolibrary.org/obo/OBA_>
+Prefix: ECTO: <http://purl.obolibrary.org/obo/ECTO_>
+Prefix: GO: <http://purl.obolibrary.org/obo/GO_>
+Prefix: SO: <http://purl.obolibrary.org/obo/SO_>
+Prefix: ExO: <http://purl.obolibrary.org/obo/ExO_>
+Prefix: PR: <http://purl.obolibrary.org/obo/PR_>
+Prefix: NPO: <http://purl.obolibrary.org/obo/NPO_>
+Prefix: CHEBI: <http://purl.obolibrary.org/obo/CHEBI_>
+Prefix: PATO: <http://purl.obolibrary.org/obo/PATO_>
+Prefix: RO: <http://purl.obolibrary.org/obo/RO_>
+Prefix: CL: <http://purl.obolibrary.org/obo/CL_>
+Prefix: PO: <http://purl.obolibrary.org/obo/PO_>
+Prefix: ENVO: <http://purl.obolibrary.org/obo/ENVO_>
+Prefix: NBO: <http://purl.obolibrary.org/obo/NBO_>
+Prefix: UBERON: <http://purl.obolibrary.org/obo/UBERON_>
+Prefix: BFO: <http://purl.obolibrary.org/obo/BFO_>
+Prefix: GOCHE: <http://purl.obolibrary.org/obo/GOCHE_>
+
+ ## Auto-generated
+
+Ontology: <http://purl.obolibrary.org/obo/auto>
+AnnotationProperty: IAO:0000115
+AnnotationProperty: exo/patterns/exposure_to_levels_in_medium/stressor
+AnnotationProperty: exo/patterns/exposure_to_levels_in_medium/location
+AnnotationProperty: DOSDP:applies-pattern
+AnnotationProperty: oio:hasExactSynonym
+Class: ExO:0000002 ## exposure event
+Class: CHEBI:24431 ## chemical entity
+Class: ENVO:00010483 ## environmental material
+ObjectProperty: BFO_0000050 ## part of
+ObjectProperty: BFO_0000050 ## stressor
+ObjectProperty: RO:0002233 ## has input
+## Auto-generated classes
+
+Class: CHEBI:34905 ## paraquat
+Class: ENVO:00002005 ## air
+## {"stressor": "CHEBI:34905", "location": "ENVO:00002005"}
+Class: ECTO:0000965
+ Annotations: rdfs:label "exposure to paraquat in air"
+ Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to paraquat in air."
+ Annotations: oio:hasExactSynonym "paraquat exposure in air"
+ EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:34905 and BFO_0000050 some ENVO:00002005) ## 'exposure event' and 'has input' some (paraquat and 'part of' some air)
+
+Class: CHEBI:34905 ## paraquat
+Class: ENVO:00001998 ## soil
+## {"stressor": "CHEBI:34905", "location": "ENVO:00001998"}
+Class: ECTO:0000966
+ Annotations: rdfs:label "exposure to paraquat in soil"
+ Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to paraquat in soil."
+ Annotations: oio:hasExactSynonym "paraquat exposure in soil"
+ EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:34905 and BFO_0000050 some ENVO:00001998) ## 'exposure event' and 'has input' some (paraquat and 'part of' some soil)
+
+Class: CHEBI:34905 ## paraquat
+Class: ENVO:00002006 ## water
+## {"stressor": "CHEBI:34905", "location": "ENVO:00002006"}
+Class: ECTO:0000967
+ Annotations: rdfs:label "exposure to paraquat in water"
+ Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to paraquat in water."
+ Annotations: oio:hasExactSynonym "paraquat exposure in water"
+ EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:34905 and BFO_0000050 some ENVO:00002006) ## 'exposure event' and 'has input' some (paraquat and 'part of' some water)
+
+Class: CHEBI:16130 ## DDT
+Class: ENVO:00002005 ## air
+## {"stressor": "CHEBI:16130", "location": "ENVO:00002005"}
+Class: ECTO:0000968
+ Annotations: rdfs:label "exposure to DDT in air"
+ Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to DDT in air."
+ Annotations: oio:hasExactSynonym "DDT exposure in air"
+ EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:16130 and BFO_0000050 some ENVO:00002005) ## 'exposure event' and 'has input' some (DDT and 'part of' some air)
+
+Class: CHEBI:16130 ## DDT
+Class: ENVO:00001998 ## soil
+## {"stressor": "CHEBI:16130", "location": "ENVO:00001998"}
+Class: ECTO:0000969
+ Annotations: rdfs:label "exposure to DDT in soil"
+ Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to DDT in soil."
+ Annotations: oio:hasExactSynonym "DDT exposure in soil"
+ EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:16130 and BFO_0000050 some ENVO:00001998) ## 'exposure event' and 'has input' some (DDT and 'part of' some soil)
+
+Class: CHEBI:16130 ## DDT
+Class: ENVO:00002006 ## water
+## {"stressor": "CHEBI:16130", "location": "ENVO:00002006"}
+Class: ECTO:0000970
+ Annotations: rdfs:label "exposure to DDT in water"
+ Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to DDT in water."
+ Annotations: oio:hasExactSynonym "DDT exposure in water"
+ EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:16130 and BFO_0000050 some ENVO:00002006) ## 'exposure event' and 'has input' some (DDT and 'part of' some water)

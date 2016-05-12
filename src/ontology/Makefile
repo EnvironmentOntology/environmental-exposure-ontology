@@ -7,7 +7,7 @@ MODDIR=modules
 MODS = exposure_to_radiation exposure_to_material exposure_to_environmental_process exposure_to_chemical exposure_to_chemical_with_role exposure_to_levels_in_medium exposure_via_route
 MODS_CSV = $(patsubst %,$(MODDIR)/%.csv,$(MODS))
 
-all: all_imports ecto.owl ecto.obo all_subsets 
+all: all_imports all_modules ecto.owl ecto.obo all_subsets 
 all_subsets: subsets/ecto-basic.obo
 test: all
 release: all copy-release
@@ -123,16 +123,17 @@ mirror/pco.owl: imports/pco_basic.obo
 # ----------------------------------------
 
 
-all_modules: all_modules_owl all_modules_obo
+all_modules: all_modules_omn all_modules_owl all_modules_obo
 all_modules_owl: $(patsubst %, $(MODDIR)/%.owl, $(MODS))
+all_modules_omn: $(patsubst %, $(MODDIR)/%.omn, $(MODS))
 all_modules_obo: $(patsubst %, $(MODDIR)/%.obo, $(MODS))
 
-$(MODDIR)/%-main.owl: $(MODDIR)/%.csv ../patterns/%.yaml
+$(MODDIR)/%.omn: $(MODDIR)/%.csv ../patterns/%.yaml
 	apply-pattern.py -P curie_map.yaml -b http://purl.obolibrary.org/obo/ -i $< -p ../patterns/$*.yaml -G $(MODDIR)/$*-gci.owl > $@.tmp && mv $@.tmp $@
 
-#$(MODDIR)/%-gci.owl: $(MODDIR)/%-main.owl
+#$(MODDIR)/%-gci.owl: $(MODDIR)/%.omn
 
-$(MODDIR)/%.owl: $(MODDIR)/%-main.owl 
+$(MODDIR)/%.owl: $(MODDIR)/%.omn 
 	owltools $^ --merge-support-ontologies --set-ontology-id $(OBO)/ecto/$@ -o -f ofn $@
 
 $(MODDIR)/%.obo: $(MODDIR)/%.owl
