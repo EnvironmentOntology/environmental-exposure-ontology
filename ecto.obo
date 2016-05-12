@@ -5,6 +5,7 @@ remark: Includes Ontology(OntologyID(OntologyIRI(<http://purl.obolibrary.org/obo
 remark: Includes Ontology(OntologyID(OntologyIRI(<http://purl.obolibrary.org/obo/ecto/modules/exposure_to_levels_in_medium.owl>))) [Axioms: 45 Logical Axioms: 6]
 remark: Includes Ontology(OntologyID(OntologyIRI(<http://purl.obolibrary.org/obo/ecto/modules/exposure_to_material.owl>))) [Axioms: 433 Logical Axioms: 61]
 remark: Includes Ontology(OntologyID(OntologyIRI(<http://purl.obolibrary.org/obo/ecto/modules/exposure_to_radiation.owl>))) [Axioms: 105 Logical Axioms: 14]
+remark: Includes Ontology(OntologyID(OntologyIRI(<http://purl.obolibrary.org/obo/ecto/modules/exposure_via_route.owl>))) [Axioms: 57 Logical Axioms: 8]
 import: http://purl.obolibrary.org/obo/ecto/imports/chebi_import.owl
 import: http://purl.obolibrary.org/obo/ecto/imports/envo_import.owl
 import: http://purl.obolibrary.org/obo/ecto/imports/exo_import.owl
@@ -18879,6 +18880,90 @@ synonym: "DDT exposure in water" EXACT []
 is_a: ECTO:0000247 ! exposure to DDT
 
 [Term]
+id: ECTO:0000971
+name: exposure to chemical entity via ingestion
+def: "A exposure event involving the interaction of an exposure receptor to chemical entity via ingestion." []
+synonym: "chemical entity exposure, via ingestion" EXACT []
+is_a: ECTO:0000231 ! exposure to chemical entity
+intersection_of: ExO:0000002
+intersection_of: BFO:0000050 ExO:0000056
+intersection_of: RO:0002233 CHEBI:24431
+
+[Term]
+id: ECTO:0000972
+name: exposure to environmental material via ingestion
+def: "A exposure event involving the interaction of an exposure receptor to environmental material via ingestion." []
+synonym: "environmental material exposure, via ingestion" EXACT []
+is_a: ECTO:0000015 ! exposure to environmental material
+intersection_of: ExO:0000002
+intersection_of: BFO:0000050 ExO:0000056
+intersection_of: RO:0002233 ENVO:00010483
+
+[Term]
+id: ECTO:0000973
+name: exposure to cadmium cation via ingestion
+def: "A exposure event involving the interaction of an exposure receptor to cadmium cation via ingestion." []
+synonym: "cadmium cation exposure, via ingestion" EXACT []
+is_a: ECTO:0000252 ! exposure to cadmium cation
+is_a: ECTO:0000971 ! exposure to chemical entity via ingestion
+intersection_of: ExO:0000002
+intersection_of: BFO:0000050 ExO:0000056
+intersection_of: RO:0002233 CHEBI:63063
+
+[Term]
+id: ECTO:0000974
+name: exposure to mercury cation via ingestion
+def: "A exposure event involving the interaction of an exposure receptor to mercury cation via ingestion." []
+synonym: "mercury cation exposure, via ingestion" EXACT []
+is_a: ECTO:0000255 ! exposure to mercury cation
+is_a: ECTO:0000971 ! exposure to chemical entity via ingestion
+intersection_of: ExO:0000002
+intersection_of: BFO:0000050 ExO:0000056
+intersection_of: RO:0002233 CHEBI:25197
+
+[Term]
+id: ECTO:0000975
+name: exposure to chemical entity via inhalation
+def: "A exposure event involving the interaction of an exposure receptor to chemical entity via inhalation." []
+synonym: "chemical entity exposure, via inhalation" EXACT []
+is_a: ECTO:0000231 ! exposure to chemical entity
+intersection_of: ExO:0000002
+intersection_of: BFO:0000050 ExO:0000057
+intersection_of: RO:0002233 CHEBI:24431
+
+[Term]
+id: ECTO:0000976
+name: exposure to environmental material via inhalation
+def: "A exposure event involving the interaction of an exposure receptor to environmental material via inhalation." []
+synonym: "environmental material exposure, via inhalation" EXACT []
+is_a: ECTO:0000015 ! exposure to environmental material
+intersection_of: ExO:0000002
+intersection_of: BFO:0000050 ExO:0000057
+intersection_of: RO:0002233 ENVO:00010483
+
+[Term]
+id: ECTO:0000977
+name: exposure to ultrafine respirable suspended particulate matter via inhalation
+def: "A exposure event involving the interaction of an exposure receptor to ultrafine respirable suspended particulate matter via inhalation." []
+synonym: "ultrafine respirable suspended particulate matter exposure, via inhalation" EXACT []
+is_a: ECTO:0000114 ! exposure to ultrafine respirable suspended particulate matter
+is_a: ECTO:0000978 ! exposure to aerosol via inhalation
+intersection_of: ExO:0000002
+intersection_of: BFO:0000050 ExO:0000057
+intersection_of: RO:0002233 ENVO:01000416
+
+[Term]
+id: ECTO:0000978
+name: exposure to aerosol via inhalation
+def: "A exposure event involving the interaction of an exposure receptor to aerosol via inhalation." []
+synonym: "aerosol exposure, via inhalation" EXACT []
+is_a: ECTO:0000110 ! exposure to aerosol
+is_a: ECTO:0000976 ! exposure to environmental material via inhalation
+intersection_of: ExO:0000002
+intersection_of: BFO:0000050 ExO:0000057
+intersection_of: RO:0002233 ENVO:00010505
+
+[Term]
 id: ENVO:00000000
 is_a: ENVO:00002297
 
@@ -19420,6 +19505,14 @@ is_a: ENVO:02500036
 [Term]
 id: ENVO:1000745
 is_a: ENVO:01000703
+
+[Term]
+id: ExO:0000056
+is_a: ExO:0000055
+
+[Term]
+id: ExO:0000057
+is_a: ExO:0000055
 
 [Term]
 id: GO:0007268

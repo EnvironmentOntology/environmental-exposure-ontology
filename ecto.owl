@@ -20,6 +20,7 @@
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Includes Ontology(OntologyID(OntologyIRI(&lt;http://purl.obolibrary.org/obo/ecto/modules/exposure_to_levels_in_medium.owl&gt;))) [Axioms: 45 Logical Axioms: 6]</rdfs:comment>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Includes Ontology(OntologyID(OntologyIRI(&lt;http://purl.obolibrary.org/obo/ecto/modules/exposure_to_material.owl&gt;))) [Axioms: 433 Logical Axioms: 61]</rdfs:comment>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Includes Ontology(OntologyID(OntologyIRI(&lt;http://purl.obolibrary.org/obo/ecto/modules/exposure_to_radiation.owl&gt;))) [Axioms: 105 Logical Axioms: 14]</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Includes Ontology(OntologyID(OntologyIRI(&lt;http://purl.obolibrary.org/obo/ecto/modules/exposure_via_route.owl&gt;))) [Axioms: 57 Logical Axioms: 8]</rdfs:comment>
         <owl:imports rdf:resource="http://purl.obolibrary.org/obo/ecto/imports/chebi_import.owl"/>
         <owl:imports rdf:resource="http://purl.obolibrary.org/obo/ecto/imports/envo_import.owl"/>
         <owl:imports rdf:resource="http://purl.obolibrary.org/obo/ecto/imports/exo_import.owl"/>
@@ -50,6 +51,12 @@
     <!-- http://purl.obolibrary.org/obo/IAO_0000115 -->
 
     <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000115"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/exo/patterns/exposure_to_chemical/route -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/exo/patterns/exposure_to_chemical/route"/>
     
 
 
@@ -43040,6 +43047,218 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/ECTO_0000971 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECTO_0000971">
+        <rdfs:label>exposure to chemical entity via ingestion</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ExO_0000002"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ExO_0000056"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_24431"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECTO_0000231"/>
+        <oboInOwl:hasExactSynonym>chemical entity exposure, via ingestion</oboInOwl:hasExactSynonym>
+        <obo:IAO_0000115>A exposure event involving the interaction of an exposure receptor to chemical entity via ingestion.</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ECTO_0000972 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECTO_0000972">
+        <rdfs:label>exposure to environmental material via ingestion</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ExO_0000002"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ExO_0000056"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_00010483"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECTO_0000015"/>
+        <oboInOwl:hasExactSynonym>environmental material exposure, via ingestion</oboInOwl:hasExactSynonym>
+        <obo:IAO_0000115>A exposure event involving the interaction of an exposure receptor to environmental material via ingestion.</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ECTO_0000973 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECTO_0000973">
+        <rdfs:label>exposure to cadmium cation via ingestion</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ExO_0000002"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ExO_0000056"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_63063"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECTO_0000252"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECTO_0000971"/>
+        <obo:IAO_0000115>A exposure event involving the interaction of an exposure receptor to cadmium cation via ingestion.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym>cadmium cation exposure, via ingestion</oboInOwl:hasExactSynonym>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ECTO_0000974 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECTO_0000974">
+        <rdfs:label>exposure to mercury cation via ingestion</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ExO_0000002"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ExO_0000056"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_25197"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECTO_0000255"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECTO_0000971"/>
+        <oboInOwl:hasExactSynonym>mercury cation exposure, via ingestion</oboInOwl:hasExactSynonym>
+        <obo:IAO_0000115>A exposure event involving the interaction of an exposure receptor to mercury cation via ingestion.</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ECTO_0000975 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECTO_0000975">
+        <rdfs:label>exposure to chemical entity via inhalation</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ExO_0000002"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ExO_0000057"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_24431"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECTO_0000231"/>
+        <oboInOwl:hasExactSynonym>chemical entity exposure, via inhalation</oboInOwl:hasExactSynonym>
+        <obo:IAO_0000115>A exposure event involving the interaction of an exposure receptor to chemical entity via inhalation.</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ECTO_0000976 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECTO_0000976">
+        <rdfs:label>exposure to environmental material via inhalation</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ExO_0000002"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ExO_0000057"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_00010483"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECTO_0000015"/>
+        <oboInOwl:hasExactSynonym>environmental material exposure, via inhalation</oboInOwl:hasExactSynonym>
+        <obo:IAO_0000115>A exposure event involving the interaction of an exposure receptor to environmental material via inhalation.</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ECTO_0000977 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECTO_0000977">
+        <rdfs:label>exposure to ultrafine respirable suspended particulate matter via inhalation</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ExO_0000002"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ExO_0000057"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000416"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECTO_0000114"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECTO_0000978"/>
+        <obo:IAO_0000115>A exposure event involving the interaction of an exposure receptor to ultrafine respirable suspended particulate matter via inhalation.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym>ultrafine respirable suspended particulate matter exposure, via inhalation</oboInOwl:hasExactSynonym>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ECTO_0000978 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECTO_0000978">
+        <rdfs:label>exposure to aerosol via inhalation</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ExO_0000002"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ExO_0000057"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_00010505"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECTO_0000110"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ECTO_0000976"/>
+        <obo:IAO_0000115>A exposure event involving the interaction of an exposure receptor to aerosol via inhalation.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym>aerosol exposure, via inhalation</oboInOwl:hasExactSynonym>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/ENVO_00000000 -->
 
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_00000000">
@@ -44127,6 +44346,30 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ExO_0000002">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ExO_0000055 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ExO_0000055">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ExO_0000056 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ExO_0000056">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ExO_0000055"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ExO_0000057 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ExO_0000057">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ExO_0000055"/>
     </owl:Class>
     
 
