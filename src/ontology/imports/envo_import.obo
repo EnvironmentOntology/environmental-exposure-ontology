@@ -20,6 +20,11 @@ name: process
 is_a: BFO:0000003 ! occurrent
 
 [Term]
+id: BFO:0000020
+name: specifically dependent continuant
+is_a: BFO:0000002 ! continuant
+
+[Term]
 id: BFO:0000040
 name: material entity
 is_a: BFO:0000004 ! independent continuant
@@ -70,6 +75,13 @@ name: hydrogen sulfide
 is_a: CHEBI:33405 ! hydracid
 is_a: CHEBI:33535 ! sulfur hydride
 is_a: CHEBI:37176 ! mononuclear parent hydride
+
+[Term]
+id: CHEBI:16183
+name: methane
+is_a: CHEBI:18310 ! alkane
+is_a: CHEBI:37176 ! mononuclear parent hydride
+is_a: CHEBI:64708 ! one-carbon compound
 
 [Term]
 id: CHEBI:16236
@@ -2592,6 +2604,31 @@ is_a: ENVO:02500036 ! environmental pollution
 id: ENVO:1000745
 name: drought
 is_a: ENVO:01000703 ! hydrological precipitation process
+
+[Term]
+id: PATO:0000001
+name: quality
+is_a: BFO:0000020 ! specifically dependent continuant
+
+[Term]
+id: PATO:0000146
+name: temperature
+is_a: PATO:0001018 ! physical quality
+
+[Term]
+id: PATO:0001018
+name: physical quality
+is_a: PATO:0001241 ! physical object quality
+
+[Term]
+id: PATO:0001025
+name: pressure
+is_a: PATO:0001018 ! physical quality
+
+[Term]
+id: PATO:0001241
+name: physical object quality
+is_a: PATO:0000001 ! quality
 
 [Typedef]
 id: BFO:0000050

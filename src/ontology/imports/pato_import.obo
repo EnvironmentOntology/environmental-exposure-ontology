@@ -1,6 +1,72 @@
 format-version: 1.2
 ontology: ecto/imports/pato_import
 
+[Term]
+id: PATO:0000001
+name: quality
+
+[Term]
+id: PATO:0000068
+name: qualitative
+is_a: PATO:0000001 ! quality
+
+[Term]
+id: PATO:0000069
+name: deviation(from_normal)
+is_a: PATO:0000068 ! qualitative
+
+[Term]
+id: PATO:0000070
+name: amount
+is_a: PATO:0000068 ! qualitative
+
+[Term]
+id: PATO:0000146
+name: temperature
+is_a: PATO:0001018 ! physical quality
+
+[Term]
+id: PATO:0000467
+name: present
+is_a: PATO:0000070 ! amount
+
+[Term]
+id: PATO:0000470
+name: increased amount
+is_a: PATO:0000467 ! present
+is_a: PATO:0002300 ! increased quality
+
+[Term]
+id: PATO:0001018
+name: physical quality
+is_a: PATO:0001241 ! physical object quality
+
+[Term]
+id: PATO:0001025
+name: pressure
+is_a: PATO:0001018 ! physical quality
+
+[Term]
+id: PATO:0001241
+name: physical object quality
+is_a: PATO:0000001 ! quality
+
+[Term]
+id: PATO:0001997
+name: decreased amount
+is_a: PATO:0000467 ! present
+is_a: PATO:0002301 ! decreased quality
+
+[Term]
+id: PATO:0002300
+name: increased quality
+is_a: PATO:0000069 ! deviation(from_normal)
+
+[Term]
+id: PATO:0002301
+name: decreased quality
+is_a: PATO:0000069 ! deviation(from_normal)
+
 [Typedef]
 id: BFO:0000050
 name: part_of

@@ -45,6 +45,8 @@ ecto.obo: ecto.owl
 oort: ecto-core.owl
 	ontology-release-runner $(USECAT) --ignore-selected-equivalent-pairs 'CL:0000000'  --ignoreLock --skip-release-folder --skip-format owx --skip-format obo --no-subsets --outdir target --allow-overwrite --asserted --simple --reasoner elk $<
 
+top-report: ecto.obo
+	obo-grep.pl -r 'is_a: BFO' ecto.obo | obo-grep.pl -r 'id: ECTO' -
 
 
 # ----------------------------------------

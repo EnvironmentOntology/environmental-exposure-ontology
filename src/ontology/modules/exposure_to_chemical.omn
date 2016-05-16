@@ -2,23 +2,23 @@ Prefix: : <http://purl.obolibrary.org/obo/>
 Prefix: IAO: <http://purl.obolibrary.org/obo/IAO_>
 Prefix: DOSDP: <http://geneontology.org/foo/>
 Prefix: oio: <http://www.geneontology.org/formats/oboInOwl#>
-Prefix: ExO: <http://purl.obolibrary.org/obo/ExO_>
-Prefix: PO: <http://purl.obolibrary.org/obo/PO_>
-Prefix: CHEBI: <http://purl.obolibrary.org/obo/CHEBI_>
-Prefix: PATO: <http://purl.obolibrary.org/obo/PATO_>
-Prefix: ENVO: <http://purl.obolibrary.org/obo/ENVO_>
-Prefix: ECTO: <http://purl.obolibrary.org/obo/ECTO_>
-Prefix: NBO: <http://purl.obolibrary.org/obo/NBO_>
 Prefix: UBERON: <http://purl.obolibrary.org/obo/UBERON_>
-Prefix: OBA: <http://purl.obolibrary.org/obo/OBA_>
-Prefix: GO: <http://purl.obolibrary.org/obo/GO_>
-Prefix: BFO: <http://purl.obolibrary.org/obo/BFO_>
-Prefix: CL: <http://purl.obolibrary.org/obo/CL_>
-Prefix: GOCHE: <http://purl.obolibrary.org/obo/GOCHE_>
-Prefix: SO: <http://purl.obolibrary.org/obo/SO_>
-Prefix: PR: <http://purl.obolibrary.org/obo/PR_>
-Prefix: NPO: <http://purl.obolibrary.org/obo/NPO_>
 Prefix: RO: <http://purl.obolibrary.org/obo/RO_>
+Prefix: BFO: <http://purl.obolibrary.org/obo/BFO_>
+Prefix: GOCHE: <http://purl.obolibrary.org/obo/GOCHE_>
+Prefix: PR: <http://purl.obolibrary.org/obo/PR_>
+Prefix: SO: <http://purl.obolibrary.org/obo/SO_>
+Prefix: CHEBI: <http://purl.obolibrary.org/obo/CHEBI_>
+Prefix: ECTO: <http://purl.obolibrary.org/obo/ECTO_>
+Prefix: PO: <http://purl.obolibrary.org/obo/PO_>
+Prefix: ExO: <http://purl.obolibrary.org/obo/ExO_>
+Prefix: GO: <http://purl.obolibrary.org/obo/GO_>
+Prefix: CL: <http://purl.obolibrary.org/obo/CL_>
+Prefix: ENVO: <http://purl.obolibrary.org/obo/ENVO_>
+Prefix: OBA: <http://purl.obolibrary.org/obo/OBA_>
+Prefix: NBO: <http://purl.obolibrary.org/obo/NBO_>
+Prefix: PATO: <http://purl.obolibrary.org/obo/PATO_>
+Prefix: NPO: <http://purl.obolibrary.org/obo/NPO_>
 
  ## Auto-generated
 
@@ -30,9 +30,9 @@ AnnotationProperty: oio:hasExactSynonym
 AnnotationProperty: oio:hasExactSynonym
 Class: CHEBI:24431 ## chemical entity
 Class: ExO:0000002 ## exposure event
+ObjectProperty: BFO_0000050 ## stressor
 ObjectProperty: RO:0002233 ## has input
 ObjectProperty: BFO_0000050 ## part of
-ObjectProperty: BFO_0000050 ## stressor
 ## Auto-generated classes
 
 Class: CHEBI:26523 ## reactive oxygen species
@@ -1159,15 +1159,6 @@ Class: ECTO:0000239
  Annotations: oio:hasExactSynonym "corticotropin-releasing hormone exposure"
  Annotations: oio:hasExactSynonym "corticotropin-releasing hormone exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some CHEBI:65311 ## 'exposure event' and 'has input' some corticotropin-releasing hormone
-
-Class: CHEBI:50114 ## estrogen
-## {"stressor": "CHEBI:50114"}
-Class: ECTO:0000240
- Annotations: rdfs:label "exposure to estrogen"
- Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to estrogen. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion."
- Annotations: oio:hasExactSynonym "estrogen exposure"
- Annotations: oio:hasExactSynonym "estrogen exposure event"
- EquivalentTo: ExO:0000002 and RO:0002233 some CHEBI:50114 ## 'exposure event' and 'has input' some estrogen
 
 Class: CHEBI:28057 ## amylopectin
 ## {"stressor": "CHEBI:28057"}
