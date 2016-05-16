@@ -48,6 +48,8 @@ See below for the merger experiment with these ontologies.
 
 Note on ENVO: it may seem that ENVO is an overlapping/non-orthogonal ontology, but following our design patterns here this should be considered orthogonal; analogous to the relationship between an anatomical ontology and a variant/aberrant phenotype ontology.
 
+Another new ontology to note is the UNEP Sustainable Development Goals ontology -- https://github.com/SDG-InterfaceOntology/sdgio/ -- this is being built in a modular fashion using ENVO and is seeding the creation of many useful social classes we will need, e.g. poverty.
+
 ### Releases
 
 Release files are in top level
