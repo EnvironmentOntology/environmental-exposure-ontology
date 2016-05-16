@@ -25,24 +25,28 @@ Class: ECTO:0000977
 
 ### Relationships to other ontologies
 
-Ontologies used in composition:
+Ontologies used in composition (largely orthogonal):
 
  * ExO - used as the upper ontology, for based classes such as 'exposure', different routes such as 'ingestion'
  * CHEBI - use for both entities and roles
- * ENVO - environmental materials
+ * ENVO - environmental materials, processes
  * NPO - radiation
  * RO - relations
+ * PATO - qualities
+ * UBERON - tissue types (not used yet)
 
-Similar ontologies
+Similar ontologies (overlapping/non-orthogonal)
 
  * ZECO - zebrafish specific conditions
- * EO - plant specific conditions
+ * EO - plant-specific environmental conditions and treatments
  * GO - `response to X` subset shadows many classes here
  * SNOMED - has an exposure subset
  * NCIT - has an exposure subset?
  * XCO - experimental conditions (mammal-centric?)
 
 See below for the merger experiment with these ontologies.
+
+Note on ENVO: it may seem that ENVO is an overlapping/non-orthogonal ontology, but following our design patterns here this should be considered orthogonal; analogous to the relationship between an anatomical ontology and a variant/aberrant phenotype ontology.
 
 ### Releases
 
