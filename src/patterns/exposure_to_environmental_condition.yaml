@@ -1,0 +1,40 @@
+pattern_name: exo/patterns/exposure_to_environmental_condition
+classes:
+  exposure event: ExO:0000002
+  chemical entity: CHEBI:24431
+  environmental material: ENVO:00010483
+
+relations:
+  stressor: BFO_0000050
+  part of: BFO_0000050
+  has input: RO:0002233
+  inheres in: RO:0000052
+    
+vars: 
+  attribute: "'quality'"
+  entity: "'Thing'"
+
+name:
+  text: "exposure to %s of %s in surroundings"
+  vars:
+    - attribute
+    - entity
+
+annotations: 
+  - property: oio:hasExactSynonym
+    text: "%s %s exposure"
+    vars:
+      - entity
+      - attribute
+
+def: 
+  text: "A exposure event involving the interaction of an exposure receptor to the condition of %s in the surrounding %s."
+  vars:
+    - attribute
+    - entity
+    
+equivalentTo: 
+  text: "'exposure event' and 'has input' some (%s and 'inheres in' some %s)"
+  vars:
+    - attribute
+    - entity

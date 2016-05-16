@@ -1,0 +1,38 @@
+pattern_name: exo/patterns/surgical_procedure
+classes:
+  exposure event: ExO:0000002
+  surgical manipulation: ZECO:0000130
+
+relations:
+  part of: BFO_0000050
+  causally downstream of: RO:0002404
+  has input: RO:0002233
+    
+vars: 
+  manipulation: "'Thing'"
+  target: "'Thing'"
+
+name:
+  text: "% of %s"
+  vars:
+    - manipulation
+    - target
+
+annotations: 
+  - property: oio:hasExactSynonym
+    text: "%s %"
+    vars:
+    - target
+    - manipulation
+
+def: 
+  text: "An exposure event involving the %s of a %s, for either medical or experimental reasons"
+  vars:
+    - manipulation
+    - target
+    
+equivalentTo: 
+  text: "'exposure event' and 'has input' some (%s and 'has participant' some %s)"
+  vars:
+    - manipulation
+    - target
