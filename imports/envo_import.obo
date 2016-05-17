@@ -20,6 +20,11 @@ name: process
 is_a: BFO:0000003 ! occurrent
 
 [Term]
+id: BFO:0000020
+name: specifically dependent continuant
+is_a: BFO:0000002 ! continuant
+
+[Term]
 id: BFO:0000040
 name: material entity
 is_a: BFO:0000004 ! independent continuant
@@ -70,6 +75,13 @@ name: hydrogen sulfide
 is_a: CHEBI:33405 ! hydracid
 is_a: CHEBI:33535 ! sulfur hydride
 is_a: CHEBI:37176 ! mononuclear parent hydride
+
+[Term]
+id: CHEBI:16183
+name: methane
+is_a: CHEBI:18310 ! alkane
+is_a: CHEBI:37176 ! mononuclear parent hydride
+is_a: CHEBI:64708 ! one-carbon compound
 
 [Term]
 id: CHEBI:16236
@@ -2070,6 +2082,11 @@ name: contaminated water
 is_a: ENVO:00002006 ! water
 
 [Term]
+id: ENVO:00002193
+name: pulp-bleaching waste water
+is_a: ENVO:00002001 ! waste water
+
+[Term]
 id: ENVO:00002202
 name: organically contaminated sediment
 is_a: ENVO:00002114 ! contaminated sediment
@@ -2592,6 +2609,93 @@ is_a: ENVO:02500036 ! environmental pollution
 id: ENVO:1000745
 name: drought
 is_a: ENVO:01000703 ! hydrological precipitation process
+
+[Term]
+id: PATO:0000001
+name: quality
+is_a: BFO:0000020 ! specifically dependent continuant
+
+[Term]
+id: PATO:0000068
+name: qualitative
+is_a: PATO:0000001 ! quality
+
+[Term]
+id: PATO:0000070
+name: amount
+is_a: PATO:0000068 ! qualitative
+
+[Term]
+id: PATO:0000146
+name: temperature
+is_a: PATO:0001018 ! physical quality
+
+[Term]
+id: PATO:0001018
+name: physical quality
+is_a: PATO:0001241 ! physical object quality
+
+[Term]
+id: PATO:0001025
+name: pressure
+is_a: PATO:0001018 ! physical quality
+
+[Term]
+id: PATO:0001241
+name: physical object quality
+is_a: PATO:0000001 ! quality
+
+[Term]
+id: UBERON:0000061
+name: anatomical structure
+is_a: UBERON:0000465 ! material anatomical entity
+
+[Term]
+id: UBERON:0000064
+name: organ part
+is_a: UBERON:0010000 ! multicellular anatomical structure
+
+[Term]
+id: UBERON:0000344
+name: mucosa
+is_a: UBERON:0004923 ! organ component layer
+
+[Term]
+id: UBERON:0000465
+name: material anatomical entity
+is_a: BFO:0000040 ! material entity
+is_a: UBERON:0001062 ! anatomical entity
+
+[Term]
+id: UBERON:0001062
+name: anatomical entity
+is_a: BFO:0000004 ! independent continuant
+
+[Term]
+id: UBERON:0002199
+name: integument
+is_a: UBERON:0003102 ! surface structure
+is_a: UBERON:0011216 ! organ system subdivision
+
+[Term]
+id: UBERON:0003102
+name: surface structure
+is_a: UBERON:0000061 ! anatomical structure
+
+[Term]
+id: UBERON:0004923
+name: organ component layer
+is_a: UBERON:0000064 ! organ part
+
+[Term]
+id: UBERON:0010000
+name: multicellular anatomical structure
+is_a: UBERON:0000061 ! anatomical structure
+
+[Term]
+id: UBERON:0011216
+name: organ system subdivision
+is_a: UBERON:0010000 ! multicellular anatomical structure
 
 [Typedef]
 id: BFO:0000050

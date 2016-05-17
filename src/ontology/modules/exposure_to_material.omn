@@ -2,22 +2,22 @@ Prefix: : <http://purl.obolibrary.org/obo/>
 Prefix: IAO: <http://purl.obolibrary.org/obo/IAO_>
 Prefix: DOSDP: <http://geneontology.org/foo/>
 Prefix: oio: <http://www.geneontology.org/formats/oboInOwl#>
-Prefix: OBA: <http://purl.obolibrary.org/obo/OBA_>
-Prefix: UBERON: <http://purl.obolibrary.org/obo/UBERON_>
-Prefix: GO: <http://purl.obolibrary.org/obo/GO_>
-Prefix: PATO: <http://purl.obolibrary.org/obo/PATO_>
-Prefix: PO: <http://purl.obolibrary.org/obo/PO_>
-Prefix: CL: <http://purl.obolibrary.org/obo/CL_>
-Prefix: CHEBI: <http://purl.obolibrary.org/obo/CHEBI_>
-Prefix: PR: <http://purl.obolibrary.org/obo/PR_>
 Prefix: ExO: <http://purl.obolibrary.org/obo/ExO_>
-Prefix: NBO: <http://purl.obolibrary.org/obo/NBO_>
-Prefix: GOCHE: <http://purl.obolibrary.org/obo/GOCHE_>
-Prefix: ECTO: <http://purl.obolibrary.org/obo/ECTO_>
-Prefix: RO: <http://purl.obolibrary.org/obo/RO_>
-Prefix: NPO: <http://purl.obolibrary.org/obo/NPO_>
+Prefix: PATO: <http://purl.obolibrary.org/obo/PATO_>
 Prefix: ENVO: <http://purl.obolibrary.org/obo/ENVO_>
+Prefix: GO: <http://purl.obolibrary.org/obo/GO_>
+Prefix: NBO: <http://purl.obolibrary.org/obo/NBO_>
+Prefix: ECTO: <http://purl.obolibrary.org/obo/ECTO_>
+Prefix: NPO: <http://purl.obolibrary.org/obo/NPO_>
+Prefix: CL: <http://purl.obolibrary.org/obo/CL_>
+Prefix: PR: <http://purl.obolibrary.org/obo/PR_>
 Prefix: SO: <http://purl.obolibrary.org/obo/SO_>
+Prefix: GOCHE: <http://purl.obolibrary.org/obo/GOCHE_>
+Prefix: OBA: <http://purl.obolibrary.org/obo/OBA_>
+Prefix: PO: <http://purl.obolibrary.org/obo/PO_>
+Prefix: RO: <http://purl.obolibrary.org/obo/RO_>
+Prefix: CHEBI: <http://purl.obolibrary.org/obo/CHEBI_>
+Prefix: UBERON: <http://purl.obolibrary.org/obo/UBERON_>
 Prefix: BFO: <http://purl.obolibrary.org/obo/BFO_>
 
  ## Auto-generated
@@ -583,3 +583,21 @@ Class: ECTO:0000114
  Annotations: oio:hasExactSynonym "ultrafine respirable suspended particulate matter exposure"
  Annotations: oio:hasExactSynonym "ultrafine respirable suspended particulate matter exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some ENVO:01000416 ## 'exposure event' and 'has input' some ultrafine respirable suspended particulate matter
+
+Class: ENVO:00002186 ## contaminated water
+## {"stressor": "ENVO:00002186"}
+Class: ECTO:0001007
+ Annotations: rdfs:label "exposure to contaminated water"
+ Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to contaminated water. Exposure may be through a variety of means, including through the air or through ingestion."
+ Annotations: oio:hasExactSynonym "contaminated water exposure"
+ Annotations: oio:hasExactSynonym "contaminated water exposure event"
+ EquivalentTo: ExO:0000002 and RO:0002233 some ENVO:00002186 ## 'exposure event' and 'has input' some contaminated water
+
+Class: ENVO:00002193 ## pulp-bleaching waste water
+## {"stressor": "ENVO:00002193"}
+Class: ECTO:0001008
+ Annotations: rdfs:label "exposure to pulp-bleaching waste water"
+ Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to pulp-bleaching waste water. Exposure may be through a variety of means, including through the air or through ingestion."
+ Annotations: oio:hasExactSynonym "pulp-bleaching waste water exposure"
+ Annotations: oio:hasExactSynonym "pulp-bleaching waste water exposure event"
+ EquivalentTo: ExO:0000002 and RO:0002233 some ENVO:00002193 ## 'exposure event' and 'has input' some pulp-bleaching waste water

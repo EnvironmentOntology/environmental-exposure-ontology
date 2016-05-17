@@ -1,11 +1,13 @@
 format-version: 1.2
-remark: Includes Ontology(OntologyID(OntologyIRI(<http://purl.obolibrary.org/obo/ecto/modules/exposure_to_chemical.owl>))) [Axioms: 2597 Logical Axioms: 370]
+remark: Includes Ontology(OntologyID(OntologyIRI(<http://purl.obolibrary.org/obo/ecto/modules/exposure_to_change_in_levels.owl>))) [Axioms: 145 Logical Axioms: 24]
+remark: Includes Ontology(OntologyID(OntologyIRI(<http://purl.obolibrary.org/obo/ecto/modules/exposure_to_chemical.owl>))) [Axioms: 2590 Logical Axioms: 369]
 remark: Includes Ontology(OntologyID(OntologyIRI(<http://purl.obolibrary.org/obo/ecto/modules/exposure_to_chemical_with_role.owl>))) [Axioms: 3369 Logical Axioms: 480]
+remark: Includes Ontology(OntologyID(OntologyIRI(<http://purl.obolibrary.org/obo/ecto/modules/exposure_to_environmental_condition.owl>))) [Axioms: 35 Logical Axioms: 4]
 remark: Includes Ontology(OntologyID(OntologyIRI(<http://purl.obolibrary.org/obo/ecto/modules/exposure_to_environmental_process.owl>))) [Axioms: 276 Logical Axioms: 39]
 remark: Includes Ontology(OntologyID(OntologyIRI(<http://purl.obolibrary.org/obo/ecto/modules/exposure_to_levels_in_medium.owl>))) [Axioms: 45 Logical Axioms: 6]
-remark: Includes Ontology(OntologyID(OntologyIRI(<http://purl.obolibrary.org/obo/ecto/modules/exposure_to_material.owl>))) [Axioms: 433 Logical Axioms: 61]
+remark: Includes Ontology(OntologyID(OntologyIRI(<http://purl.obolibrary.org/obo/ecto/modules/exposure_to_material.owl>))) [Axioms: 447 Logical Axioms: 63]
 remark: Includes Ontology(OntologyID(OntologyIRI(<http://purl.obolibrary.org/obo/ecto/modules/exposure_to_radiation.owl>))) [Axioms: 105 Logical Axioms: 14]
-remark: Includes Ontology(OntologyID(OntologyIRI(<http://purl.obolibrary.org/obo/ecto/modules/exposure_via_route.owl>))) [Axioms: 57 Logical Axioms: 8]
+remark: Includes Ontology(OntologyID(OntologyIRI(<http://purl.obolibrary.org/obo/ecto/modules/exposure_via_route.owl>))) [Axioms: 69 Logical Axioms: 10]
 import: http://purl.obolibrary.org/obo/ecto/imports/chebi_import.owl
 import: http://purl.obolibrary.org/obo/ecto/imports/envo_import.owl
 import: http://purl.obolibrary.org/obo/ecto/imports/exo_import.owl
@@ -21,6 +23,10 @@ is_a: BFO:0000002
 [Term]
 id: BFO:0000015
 is_a: BFO:0000003
+
+[Term]
+id: BFO:0000020
+is_a: BFO:0000002
 
 [Term]
 id: BFO:0000040
@@ -185,6 +191,12 @@ id: CHEBI:16136
 is_a: CHEBI:33405
 is_a: CHEBI:33535
 is_a: CHEBI:37176
+
+[Term]
+id: CHEBI:16183
+is_a: CHEBI:18310
+is_a: CHEBI:37176
+is_a: CHEBI:64708
 
 [Term]
 id: CHEBI:16236
@@ -8890,16 +8902,11 @@ id: DependentContinuant
 is_a: Continuant
 
 [Term]
-id: ECTO:0000000
-name: test
-
-[Term]
 id: ECTO:0000001
 name: exposure to radiation
 def: "A radiation exposure event involving the interaction of an exposure receptor to radiation." []
 synonym: "radiation exposure" EXACT []
 synonym: "radiation exposure event" EXACT []
-is_a: BFO:0000003
 is_a: ExO:0000002
 intersection_of: ExO:0000002
 intersection_of: RO:0002233 NPO:1731
@@ -9040,7 +9047,6 @@ name: exposure to environmental material
 def: "A exposure event involving the interaction of an exposure receptor to environmental material. Exposure may be through a variety of means, including through the air or through ingestion." []
 synonym: "environmental material exposure" EXACT []
 synonym: "environmental material exposure event" EXACT []
-is_a: BFO:0000003
 is_a: ExO:0000002
 intersection_of: ExO:0000002
 intersection_of: RO:0002233 ENVO:00010483
@@ -9182,6 +9188,7 @@ def: "A exposure event involving the interaction of an exposure receptor to wast
 synonym: "waste water exposure" EXACT []
 synonym: "waste water exposure event" EXACT []
 is_a: ECTO:0000046 ! exposure to waste material
+is_a: ECTO:0001007 ! exposure to contaminated water
 intersection_of: ExO:0000002
 intersection_of: RO:0002233 ENVO:00002001
 
@@ -9591,7 +9598,6 @@ name: exposure to environmental system process
 def: "A exposure event involving the interaction of an exposure receptor to environmental system process." []
 synonym: "environmental system process exposure" EXACT []
 synonym: "environmental system process exposure event" EXACT []
-is_a: BFO:0000003
 is_a: ExO:0000002
 intersection_of: ExO:0000002
 intersection_of: RO:0002233 ENVO:02500000
@@ -10141,7 +10147,6 @@ name: exposure to photon
 def: "A exposure event involving the interaction of an exposure receptor to photon. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "photon exposure" EXACT []
 synonym: "photon exposure event" EXACT []
-is_a: BFO:0000003
 is_a: ExO:0000002
 intersection_of: ExO:0000002
 intersection_of: RO:0002233 CHEBI:30212
@@ -11555,7 +11560,6 @@ name: exposure to chemical entity
 def: "A exposure event involving the interaction of an exposure receptor to chemical entity. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "chemical entity exposure" EXACT []
 synonym: "chemical entity exposure event" EXACT []
-is_a: BFO:0000003
 is_a: ExO:0000002
 intersection_of: ExO:0000002
 intersection_of: RO:0002233 CHEBI:24431
@@ -11666,17 +11670,6 @@ is_a: ECTO:0000238 ! exposure to peptide hormone
 is_a: ECTO:0000526 ! exposure to neurotransmitter
 intersection_of: ExO:0000002
 intersection_of: RO:0002233 CHEBI:65311
-
-[Term]
-id: ECTO:0000240
-name: exposure to estrogen
-def: "A exposure event involving the interaction of an exposure receptor to estrogen. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
-synonym: "estrogen exposure" EXACT []
-synonym: "estrogen exposure event" EXACT []
-is_a: BFO:0000003
-is_a: ExO:0000002
-intersection_of: ExO:0000002
-intersection_of: RO:0002233 CHEBI:50114
 
 [Term]
 id: ECTO:0000241
@@ -14934,7 +14927,6 @@ name: exposure to biological role
 def: "A exposure event involving the interaction of an exposure receptor to a biological role. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "biological role exposure" EXACT []
 synonym: "biological role exposure event" EXACT []
-is_a: BFO:0000003
 is_a: ExO:0000002
 
 [Term]
@@ -14943,16 +14935,14 @@ name: exposure to application
 def: "A exposure event involving the interaction of an exposure receptor to a application. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "application exposure" EXACT []
 synonym: "application exposure event" EXACT []
-is_a: BFO:0000003
 is_a: ExO:0000002
 
 [Term]
 id: ECTO:0000487
-name: exposure to chemical role
+name: exposure to chemical with role
 def: "A exposure event involving the interaction of an exposure receptor to a chemical role. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "chemical role exposure" EXACT []
 synonym: "chemical role exposure event" EXACT []
-is_a: BFO:0000003
 is_a: ExO:0000002
 
 [Term]
@@ -14977,7 +14967,7 @@ name: exposure to electron donor
 def: "A exposure event involving the interaction of an exposure receptor to a electron donor. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "electron donor exposure" EXACT []
 synonym: "electron donor exposure event" EXACT []
-is_a: ECTO:0000487 ! exposure to chemical role
+is_a: ECTO:0000487 ! exposure to chemical with role
 
 [Term]
 id: ECTO:0000491
@@ -14985,7 +14975,7 @@ name: exposure to electron acceptor
 def: "A exposure event involving the interaction of an exposure receptor to a electron acceptor. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "electron acceptor exposure" EXACT []
 synonym: "electron acceptor exposure event" EXACT []
-is_a: ECTO:0000487 ! exposure to chemical role
+is_a: ECTO:0000487 ! exposure to chemical with role
 
 [Term]
 id: ECTO:0000492
@@ -15035,7 +15025,7 @@ name: exposure to antioxidant
 def: "A exposure event involving the interaction of an exposure receptor to a antioxidant. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "antioxidant exposure" EXACT []
 synonym: "antioxidant exposure event" EXACT []
-is_a: ECTO:0000487 ! exposure to chemical role
+is_a: ECTO:0000487 ! exposure to chemical with role
 
 [Term]
 id: ECTO:0000498
@@ -15083,7 +15073,7 @@ name: exposure to chromophore
 def: "A exposure event involving the interaction of an exposure receptor to a chromophore. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "chromophore exposure" EXACT []
 synonym: "chromophore exposure event" EXACT []
-is_a: ECTO:0000487 ! exposure to chemical role
+is_a: ECTO:0000487 ! exposure to chemical with role
 
 [Term]
 id: ECTO:0000504
@@ -15395,7 +15385,7 @@ def: "A exposure event involving the interaction of an exposure receptor to a de
 synonym: "detergent exposure" EXACT []
 synonym: "detergent exposure event" EXACT []
 is_a: ECTO:0000486 ! exposure to application
-is_a: ECTO:0000487 ! exposure to chemical role
+is_a: ECTO:0000487 ! exposure to chemical with role
 
 [Term]
 id: ECTO:0000542
@@ -15525,7 +15515,7 @@ def: "A exposure event involving the interaction of an exposure receptor to a in
 synonym: "inhibitor exposure" EXACT []
 synonym: "inhibitor exposure event" EXACT []
 is_a: ECTO:0000485 ! exposure to biological role
-is_a: ECTO:0000487 ! exposure to chemical role
+is_a: ECTO:0000487 ! exposure to chemical with role
 
 [Term]
 id: ECTO:0000558
@@ -15533,7 +15523,7 @@ name: exposure to catalyst
 def: "A exposure event involving the interaction of an exposure receptor to a catalyst. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "catalyst exposure" EXACT []
 synonym: "catalyst exposure event" EXACT []
-is_a: ECTO:0000487 ! exposure to chemical role
+is_a: ECTO:0000487 ! exposure to chemical with role
 
 [Term]
 id: ECTO:0000559
@@ -16286,7 +16276,7 @@ name: exposure to Bronsted acid
 def: "A exposure event involving the interaction of an exposure receptor to a Bronsted acid. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "Bronsted acid exposure" EXACT []
 synonym: "Bronsted acid exposure event" EXACT []
-is_a: ECTO:0000487 ! exposure to chemical role
+is_a: ECTO:0000487 ! exposure to chemical with role
 
 [Term]
 id: ECTO:0000651
@@ -16303,7 +16293,7 @@ def: "A exposure event involving the interaction of an exposure receptor to a so
 synonym: "solvent exposure" EXACT []
 synonym: "solvent exposure event" EXACT []
 is_a: ECTO:0000486 ! exposure to application
-is_a: ECTO:0000487 ! exposure to chemical role
+is_a: ECTO:0000487 ! exposure to chemical with role
 
 [Term]
 id: ECTO:0000653
@@ -16759,7 +16749,7 @@ name: exposure to nitric oxide donor
 def: "A exposure event involving the interaction of an exposure receptor to a nitric oxide donor. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "nitric oxide donor exposure" EXACT []
 synonym: "nitric oxide donor exposure event" EXACT []
-is_a: ECTO:0000487 ! exposure to chemical role
+is_a: ECTO:0000487 ! exposure to chemical with role
 
 [Term]
 id: ECTO:0000709
@@ -17004,7 +16994,7 @@ name: exposure to ligand
 def: "A exposure event involving the interaction of an exposure receptor to a ligand. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "ligand exposure" EXACT []
 synonym: "ligand exposure event" EXACT []
-is_a: ECTO:0000487 ! exposure to chemical role
+is_a: ECTO:0000487 ! exposure to chemical with role
 
 [Term]
 id: ECTO:0000739
@@ -17142,7 +17132,7 @@ name: exposure to electrophilic reagent
 def: "A exposure event involving the interaction of an exposure receptor to a electrophilic reagent. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "electrophilic reagent exposure" EXACT []
 synonym: "electrophilic reagent exposure event" EXACT []
-is_a: ECTO:0000487 ! exposure to chemical role
+is_a: ECTO:0000487 ! exposure to chemical with role
 is_a: ECTO:0000552 ! exposure to reagent
 
 [Term]
@@ -17151,7 +17141,7 @@ name: exposure to nucleophilic reagent
 def: "A exposure event involving the interaction of an exposure receptor to a nucleophilic reagent. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "nucleophilic reagent exposure" EXACT []
 synonym: "nucleophilic reagent exposure event" EXACT []
-is_a: ECTO:0000487 ! exposure to chemical role
+is_a: ECTO:0000487 ! exposure to chemical with role
 is_a: ECTO:0000552 ! exposure to reagent
 
 [Term]
@@ -17300,7 +17290,7 @@ name: exposure to acyl donor
 def: "A exposure event involving the interaction of an exposure receptor to a acyl donor. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "acyl donor exposure" EXACT []
 synonym: "acyl donor exposure event" EXACT []
-is_a: ECTO:0000487 ! exposure to chemical role
+is_a: ECTO:0000487 ! exposure to chemical with role
 
 [Term]
 id: ECTO:0000775
@@ -17324,7 +17314,7 @@ name: exposure to fuel additive
 def: "A exposure event involving the interaction of an exposure receptor to a fuel additive. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "fuel additive exposure" EXACT []
 synonym: "fuel additive exposure event" EXACT []
-is_a: ECTO:0000487 ! exposure to chemical role
+is_a: ECTO:0000487 ! exposure to chemical with role
 
 [Term]
 id: ECTO:0000778
@@ -17356,7 +17346,7 @@ name: exposure to food emulsifier
 def: "A exposure event involving the interaction of an exposure receptor to a food emulsifier. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "food emulsifier exposure" EXACT []
 synonym: "food emulsifier exposure event" EXACT []
-is_a: ECTO:0000487 ! exposure to chemical role
+is_a: ECTO:0000487 ! exposure to chemical with role
 is_a: ECTO:0000793 ! exposure to food additive
 
 [Term]
@@ -17389,7 +17379,7 @@ name: exposure to reducing agent
 def: "A exposure event involving the interaction of an exposure receptor to a reducing agent. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "reducing agent exposure" EXACT []
 synonym: "reducing agent exposure event" EXACT []
-is_a: ECTO:0000487 ! exposure to chemical role
+is_a: ECTO:0000487 ! exposure to chemical with role
 
 [Term]
 id: ECTO:0000786
@@ -17397,7 +17387,7 @@ name: exposure to oxidising agent
 def: "A exposure event involving the interaction of an exposure receptor to a oxidising agent. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "oxidising agent exposure" EXACT []
 synonym: "oxidising agent exposure event" EXACT []
-is_a: ECTO:0000487 ! exposure to chemical role
+is_a: ECTO:0000487 ! exposure to chemical with role
 
 [Term]
 id: ECTO:0000787
@@ -17413,7 +17403,7 @@ name: exposure to explosive
 def: "A exposure event involving the interaction of an exposure receptor to a explosive. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "explosive exposure" EXACT []
 synonym: "explosive exposure event" EXACT []
-is_a: ECTO:0000487 ! exposure to chemical role
+is_a: ECTO:0000487 ! exposure to chemical with role
 
 [Term]
 id: ECTO:0000789
@@ -18042,7 +18032,7 @@ name: exposure to ultraviolet filter
 def: "A exposure event involving the interaction of an exposure receptor to a ultraviolet filter. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "ultraviolet filter exposure" EXACT []
 synonym: "ultraviolet filter exposure event" EXACT []
-is_a: ECTO:0000487 ! exposure to chemical role
+is_a: ECTO:0000487 ! exposure to chemical with role
 
 [Term]
 id: ECTO:0000867
@@ -18187,7 +18177,7 @@ name: exposure to greenhouse gas
 def: "A exposure event involving the interaction of an exposure receptor to a greenhouse gas. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "greenhouse gas exposure" EXACT []
 synonym: "greenhouse gas exposure event" EXACT []
-is_a: ECTO:0000487 ! exposure to chemical role
+is_a: ECTO:0000487 ! exposure to chemical with role
 
 [Term]
 id: ECTO:0000885
@@ -18438,7 +18428,7 @@ name: exposure to Maillard reaction product
 def: "A exposure event involving the interaction of an exposure receptor to a Maillard reaction product. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "Maillard reaction product exposure" EXACT []
 synonym: "Maillard reaction product exposure event" EXACT []
-is_a: ECTO:0000487 ! exposure to chemical role
+is_a: ECTO:0000487 ! exposure to chemical with role
 
 [Term]
 id: ECTO:0000916
@@ -18567,7 +18557,7 @@ name: exposure to environmental contaminant
 def: "A exposure event involving the interaction of an exposure receptor to a environmental contaminant. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "environmental contaminant exposure" EXACT []
 synonym: "environmental contaminant exposure event" EXACT []
-is_a: ECTO:0000487 ! exposure to chemical role
+is_a: ECTO:0000487 ! exposure to chemical with role
 
 [Term]
 id: ECTO:0000932
@@ -18964,6 +18954,252 @@ intersection_of: BFO:0000050 ExO:0000057
 intersection_of: RO:0002233 ENVO:00010505
 
 [Term]
+id: ECTO:0000979
+name: exposure to temperature of environmental material in surroundings
+def: "A exposure event involving the interaction of an exposure receptor to the condition of temperature in the surrounding environmental material." []
+synonym: "environmental material temperature exposure" EXACT []
+is_a: ExO:0000002
+
+[Term]
+id: ECTO:0000980
+name: exposure to temperature of air in surroundings
+def: "A exposure event involving the interaction of an exposure receptor to the condition of temperature in the surrounding air." []
+synonym: "air temperature exposure" EXACT []
+is_a: ECTO:0000979 ! exposure to temperature of environmental material in surroundings
+
+[Term]
+id: ECTO:0000981
+name: exposure to temperature of water in surroundings
+def: "A exposure event involving the interaction of an exposure receptor to the condition of temperature in the surrounding water." []
+synonym: "water temperature exposure" EXACT []
+is_a: ECTO:0000979 ! exposure to temperature of environmental material in surroundings
+
+[Term]
+id: ECTO:0000982
+name: exposure to pressure of water in surroundings
+def: "A exposure event involving the interaction of an exposure receptor to the condition of pressure in the surrounding water." []
+synonym: "water pressure exposure" EXACT []
+is_a: ExO:0000002
+
+[Term]
+id: ECTO:0000983
+name: exposure to increased amount of salt in soil
+def: "A exposure event involving the interaction of an exposure receptor to increased amount of salt in soil." []
+synonym: "increased amount salt exposure in soil" EXACT []
+is_a: ECTO:0000989 ! exposure to increased amount of chemical entity in environmental material
+
+[Term]
+id: ECTO:0000984
+name: exposure to increased amount of salt in water
+def: "A exposure event involving the interaction of an exposure receptor to increased amount of salt in water." []
+synonym: "increased amount salt exposure in water" EXACT []
+is_a: ECTO:0000989 ! exposure to increased amount of chemical entity in environmental material
+
+[Term]
+id: ECTO:0000985
+name: exposure to increased amount of methane in air
+def: "A exposure event involving the interaction of an exposure receptor to increased amount of methane in air." []
+synonym: "increased amount methane exposure in air" EXACT []
+is_a: ECTO:0000989 ! exposure to increased amount of chemical entity in environmental material
+
+[Term]
+id: ECTO:0000986
+name: exposure to decreased amount of salt in soil
+def: "A exposure event involving the interaction of an exposure receptor to decreased amount of salt in soil." []
+synonym: "decreased amount salt exposure in soil" EXACT []
+is_a: ECTO:0000990 ! exposure to decreased amount of chemical entity in environmental material
+
+[Term]
+id: ECTO:0000987
+name: exposure to decreased amount of salt in water
+def: "A exposure event involving the interaction of an exposure receptor to decreased amount of salt in water." []
+synonym: "decreased amount salt exposure in water" EXACT []
+is_a: ECTO:0000990 ! exposure to decreased amount of chemical entity in environmental material
+
+[Term]
+id: ECTO:0000988
+name: exposure to decreased amount of methane in air
+def: "A exposure event involving the interaction of an exposure receptor to decreased amount of methane in air." []
+synonym: "decreased amount methane exposure in air" EXACT []
+is_a: ECTO:0000990 ! exposure to decreased amount of chemical entity in environmental material
+
+[Term]
+id: ECTO:0000989
+name: exposure to increased amount of chemical entity in environmental material
+def: "A exposure event involving the interaction of an exposure receptor to increased amount of chemical entity in environmental material." []
+synonym: "increased amount chemical entity exposure in environmental material" EXACT []
+is_a: ECTO:0000991 ! exposure to amount of chemical entity in environmental material
+
+[Term]
+id: ECTO:0000990
+name: exposure to decreased amount of chemical entity in environmental material
+def: "A exposure event involving the interaction of an exposure receptor to decreased amount of chemical entity in environmental material." []
+synonym: "decreased amount chemical entity exposure in environmental material" EXACT []
+is_a: ECTO:0000991 ! exposure to amount of chemical entity in environmental material
+
+[Term]
+id: ECTO:0000991
+name: exposure to amount of chemical entity in environmental material
+def: "A exposure event involving the interaction of an exposure receptor to amount of chemical entity in environmental material." []
+synonym: "amount chemical entity exposure in environmental material" EXACT []
+is_a: ExO:0000002
+
+[Term]
+id: ECTO:0000992
+name: exposure to amount of chemical entity in food product
+def: "A exposure event involving the interaction of an exposure receptor to amount of chemical entity in food product." []
+synonym: "amount chemical entity exposure in food product" EXACT []
+is_a: ECTO:0000991 ! exposure to amount of chemical entity in environmental material
+
+[Term]
+id: ECTO:0000993
+name: exposure to amount of glucose in food product
+def: "A exposure event involving the interaction of an exposure receptor to amount of glucose in food product." []
+synonym: "amount glucose exposure in food product" EXACT []
+is_a: ECTO:0000992 ! exposure to amount of chemical entity in food product
+
+[Term]
+id: ECTO:0000994
+name: exposure to amount of sucrose in food product
+def: "A exposure event involving the interaction of an exposure receptor to amount of sucrose in food product." []
+synonym: "amount sucrose exposure in food product" EXACT []
+is_a: ECTO:0000992 ! exposure to amount of chemical entity in food product
+
+[Term]
+id: ECTO:0000995
+name: exposure to amount of fructose in food product
+def: "A exposure event involving the interaction of an exposure receptor to amount of fructose in food product." []
+synonym: "amount fructose exposure in food product" EXACT []
+is_a: ECTO:0000992 ! exposure to amount of chemical entity in food product
+
+[Term]
+id: ECTO:0000996
+name: exposure to amount of protein in food product
+def: "A exposure event involving the interaction of an exposure receptor to amount of protein in food product." []
+synonym: "amount protein exposure in food product" EXACT []
+is_a: ECTO:0000992 ! exposure to amount of chemical entity in food product
+
+[Term]
+id: ECTO:0000997
+name: exposure to increased amount of chemical entity in food product
+def: "A exposure event involving the interaction of an exposure receptor to increased amount of chemical entity in food product." []
+synonym: "increased amount chemical entity exposure in food product" EXACT []
+is_a: ECTO:0000989 ! exposure to increased amount of chemical entity in environmental material
+is_a: ECTO:0000992 ! exposure to amount of chemical entity in food product
+
+[Term]
+id: ECTO:0000998
+name: exposure to increased amount of glucose in food product
+def: "A exposure event involving the interaction of an exposure receptor to increased amount of glucose in food product." []
+synonym: "increased amount glucose exposure in food product" EXACT []
+is_a: ECTO:0000993 ! exposure to amount of glucose in food product
+is_a: ECTO:0000997 ! exposure to increased amount of chemical entity in food product
+
+[Term]
+id: ECTO:0000999
+name: exposure to increased amount of sucrose in food product
+def: "A exposure event involving the interaction of an exposure receptor to increased amount of sucrose in food product." []
+synonym: "increased amount sucrose exposure in food product" EXACT []
+is_a: ECTO:0000994 ! exposure to amount of sucrose in food product
+is_a: ECTO:0000997 ! exposure to increased amount of chemical entity in food product
+
+[Term]
+id: ECTO:0001000
+name: exposure to increased amount of fructose in food product
+def: "A exposure event involving the interaction of an exposure receptor to increased amount of fructose in food product." []
+synonym: "increased amount fructose exposure in food product" EXACT []
+is_a: ECTO:0000995 ! exposure to amount of fructose in food product
+is_a: ECTO:0000997 ! exposure to increased amount of chemical entity in food product
+
+[Term]
+id: ECTO:0001001
+name: exposure to increased amount of protein in food product
+def: "A exposure event involving the interaction of an exposure receptor to increased amount of protein in food product." []
+synonym: "increased amount protein exposure in food product" EXACT []
+is_a: ECTO:0000996 ! exposure to amount of protein in food product
+is_a: ECTO:0000997 ! exposure to increased amount of chemical entity in food product
+
+[Term]
+id: ECTO:0001002
+name: exposure to decreased amount of chemical entity in food product
+def: "A exposure event involving the interaction of an exposure receptor to decreased amount of chemical entity in food product." []
+synonym: "decreased amount chemical entity exposure in food product" EXACT []
+is_a: ECTO:0000990 ! exposure to decreased amount of chemical entity in environmental material
+is_a: ECTO:0000992 ! exposure to amount of chemical entity in food product
+
+[Term]
+id: ECTO:0001003
+name: exposure to decreased amount of glucose in food product
+def: "A exposure event involving the interaction of an exposure receptor to decreased amount of glucose in food product." []
+synonym: "decreased amount glucose exposure in food product" EXACT []
+is_a: ECTO:0000993 ! exposure to amount of glucose in food product
+is_a: ECTO:0001002 ! exposure to decreased amount of chemical entity in food product
+
+[Term]
+id: ECTO:0001004
+name: exposure to decreased amount of sucrose in food product
+def: "A exposure event involving the interaction of an exposure receptor to decreased amount of sucrose in food product." []
+synonym: "decreased amount sucrose exposure in food product" EXACT []
+is_a: ECTO:0000994 ! exposure to amount of sucrose in food product
+is_a: ECTO:0001002 ! exposure to decreased amount of chemical entity in food product
+
+[Term]
+id: ECTO:0001005
+name: exposure to decreased amount of fructose in food product
+def: "A exposure event involving the interaction of an exposure receptor to decreased amount of fructose in food product." []
+synonym: "decreased amount fructose exposure in food product" EXACT []
+is_a: ECTO:0000995 ! exposure to amount of fructose in food product
+is_a: ECTO:0001002 ! exposure to decreased amount of chemical entity in food product
+
+[Term]
+id: ECTO:0001006
+name: exposure to decreased amount of protein in food product
+def: "A exposure event involving the interaction of an exposure receptor to decreased amount of protein in food product." []
+synonym: "decreased amount protein exposure in food product" EXACT []
+is_a: ECTO:0000996 ! exposure to amount of protein in food product
+is_a: ECTO:0001002 ! exposure to decreased amount of chemical entity in food product
+
+[Term]
+id: ECTO:0001007
+name: exposure to contaminated water
+def: "A exposure event involving the interaction of an exposure receptor to contaminated water. Exposure may be through a variety of means, including through the air or through ingestion." []
+synonym: "contaminated water exposure" EXACT []
+synonym: "contaminated water exposure event" EXACT []
+is_a: ECTO:0000015 ! exposure to environmental material
+intersection_of: ExO:0000002
+intersection_of: RO:0002233 ENVO:00002186
+
+[Term]
+id: ECTO:0001008
+name: exposure to pulp-bleaching waste water
+def: "A exposure event involving the interaction of an exposure receptor to pulp-bleaching waste water. Exposure may be through a variety of means, including through the air or through ingestion." []
+synonym: "pulp-bleaching waste water exposure" EXACT []
+synonym: "pulp-bleaching waste water exposure event" EXACT []
+is_a: ECTO:0000029 ! exposure to waste water
+intersection_of: ExO:0000002
+intersection_of: RO:0002233 ENVO:00002193
+
+[Term]
+id: ECTO:0001009
+name: exposure to chemical entity via mucosa
+def: "A exposure event involving the interaction of an exposure receptor to chemical entity via mucosa." []
+synonym: "chemical entity exposure, via mucosa" EXACT []
+is_a: ECTO:0000231 ! exposure to chemical entity
+intersection_of: ExO:0000002
+intersection_of: BFO:0000050 UBERON:0000344
+intersection_of: RO:0002233 CHEBI:24431
+
+[Term]
+id: ECTO:0001010
+name: exposure to chemical entity via integument
+def: "A exposure event involving the interaction of an exposure receptor to chemical entity via integument." []
+synonym: "chemical entity exposure, via integument" EXACT []
+is_a: ECTO:0000231 ! exposure to chemical entity
+intersection_of: ExO:0000002
+intersection_of: BFO:0000050 UBERON:0002199
+intersection_of: RO:0002233 CHEBI:24431
+
+[Term]
 id: ENVO:00000000
 is_a: ENVO:00002297
 
@@ -19096,6 +19332,10 @@ is_a: ENVO:00002202
 [Term]
 id: ENVO:00002186
 is_a: ENVO:00002006
+
+[Term]
+id: ENVO:00002193
+is_a: ENVO:00002001
 
 [Term]
 id: ENVO:00002202
@@ -19507,6 +19747,10 @@ id: ENVO:1000745
 is_a: ENVO:01000703
 
 [Term]
+id: ExO:0000002
+is_a: BFO:0000003
+
+[Term]
 id: ExO:0000056
 is_a: ExO:0000055
 
@@ -19892,6 +20136,60 @@ id: Occurrent
 is_a: Entity
 
 [Term]
+id: PATO:0000001
+is_a: BFO:0000020
+
+[Term]
+id: PATO:0000068
+is_a: PATO:0000001
+
+[Term]
+id: PATO:0000069
+is_a: PATO:0000068
+
+[Term]
+id: PATO:0000070
+is_a: PATO:0000068
+
+[Term]
+id: PATO:0000146
+is_a: PATO:0001018
+
+[Term]
+id: PATO:0000467
+is_a: PATO:0000070
+
+[Term]
+id: PATO:0000470
+is_a: PATO:0000467
+is_a: PATO:0002300
+
+[Term]
+id: PATO:0001018
+is_a: PATO:0001241
+
+[Term]
+id: PATO:0001025
+is_a: PATO:0001018
+
+[Term]
+id: PATO:0001241
+is_a: PATO:0000001
+
+[Term]
+id: PATO:0001997
+is_a: PATO:0000467
+is_a: PATO:0002301
+
+[Term]
+id: PATO:0002300
+is_a: PATO:0000069
+
+[Term]
+id: PATO:0002301
+is_a: PATO:0000069
+
+[Term]
 id: Process
 is_a: ProcessualEntity
 
@@ -19906,4 +20204,46 @@ is_a: SpecificallyDependentContinuant
 [Term]
 id: SpecificallyDependentContinuant
 is_a: DependentContinuant
+
+[Term]
+id: UBERON:0000061
+is_a: UBERON:0000465
+
+[Term]
+id: UBERON:0000064
+is_a: UBERON:0010000
+
+[Term]
+id: UBERON:0000344
+is_a: UBERON:0004923
+
+[Term]
+id: UBERON:0000465
+is_a: BFO:0000040
+is_a: UBERON:0001062
+
+[Term]
+id: UBERON:0001062
+is_a: BFO:0000004
+
+[Term]
+id: UBERON:0002199
+is_a: UBERON:0003102
+is_a: UBERON:0011216
+
+[Term]
+id: UBERON:0003102
+is_a: UBERON:0000061
+
+[Term]
+id: UBERON:0004923
+is_a: UBERON:0000064
+
+[Term]
+id: UBERON:0010000
+is_a: UBERON:0000061
+
+[Term]
+id: UBERON:0011216
+is_a: UBERON:0010000
 
