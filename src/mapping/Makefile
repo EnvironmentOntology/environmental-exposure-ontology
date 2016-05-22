@@ -4,6 +4,7 @@ MOD = eo xco zeco snomed ncit go exo
 
 all_exposure: $(patsubst %, exposure-%.obo,$(MOD))
 
+
 exposure-eo.obo:
 	blip ontol-query -r eo -query "class(ID)" -to obo > $@
 
@@ -75,3 +76,14 @@ merged-exposure.hier: merged-exposure.obo
 
 merged-exposure.png: merged-exposure.obo
 	blip ontol-subset -i $< -n $< -to png -u ontol_config_rad  -n % > $@
+
+
+ECTO=../ontology/ecto.obo
+combined2ecto.tsv: combined-exposure.obo ignore.pro
+	blip-findall  -i ignore.pro -debug index -goal nlp_index_all -i $< -i $(ECTO) -u metadata_nlp entity_pair_mprobs/6 -no_pred -label > $@
+
+unmatched_ecto.tsv: combined-exposure.obo ignore.pro
+	blip-findall  -i ignore.pro -debug index -goal nlp_index_all -i $< -i $(ECTO) -u metadata_nlp entity_nomatch/1 -no_pred -label > $@.tmp && grep ^ECTO $@.tmp > $@
+
+not_in_ecto.tsv: combined-exposure.obo ignore.pro
+	blip-findall  -i ignore.pro -debug index -goal nlp_index_all -i $< -i $(ECTO) -u metadata_nlp "entity_nomatch_to(X,'ECTO')"  -label -select X > $@.tmp && mv $@.tmp $@

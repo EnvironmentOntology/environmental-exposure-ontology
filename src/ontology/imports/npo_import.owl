@@ -3,200 +3,10 @@
      xml:base="http://purl.obolibrary.org/obo/ecto/imports/npo_import.owl"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
-     xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:npo="http://purl.obolibrary.org/obo/http://purl.bioontology.org/ontology/npo#"
-     xmlns:dc="http://purl.org/dc/elements/1.1/">
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/ecto/imports/npo_import.owl"/>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Annotation properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/http://purl.bioontology.org/ontology/npo#FULL_SYN -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/http://purl.bioontology.org/ontology/npo#FULL_SYN"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/http://purl.bioontology.org/ontology/npo#code -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/http://purl.bioontology.org/ontology/npo#code"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/http://purl.bioontology.org/ontology/npo#dBXrefID -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/http://purl.bioontology.org/ontology/npo#dBXrefID"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/http://purl.bioontology.org/ontology/npo#definition -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/http://purl.bioontology.org/ontology/npo#definition"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/http://purl.bioontology.org/ontology/npo#preferred_Name -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/http://purl.bioontology.org/ontology/npo#preferred_Name"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/http://purl.bioontology.org/ontology/npo#synonym -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/http://purl.bioontology.org/ontology/npo#synonym"/>
-    
-
-
-    <!-- http://purl.org/dc/elements/1.1/description -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
-    
-
-
-    <!-- http://www.geneontology.org/formats/oboInOwl#id -->
-
-    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#id"/>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Object Properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/http://purl.bioontology.org/ontology/npo#has_part -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/http://purl.bioontology.org/ontology/npo#has_part">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">(source): OBO Relation Ontology (release version 0.99, date 07:14:2006);  Barry Smith et al, Relations in biomedical ontologies, Genome Biology (2005)</rdfs:comment>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">If C and C1 are continuant classes, then C has_part C1 means that every instance of C at any time has part some instances of C1 at the same time.
-[formal definition]: C has_part C1 holds true if and only if every continuant c that instantiates C at some time t,  there is some continuant c1 that instantiates C1 at t such that c1 is part of c at t.
-
-Examples:
-fluorescein isothiocyanate has_part isothiocyanate group
-gold quantum dot has_part gold
-core-shell nanoparticle has_part core
-core-shell nanoparticle has_part shell</rdfs:comment>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">If P and P1 are occurrent classes, then P has_part P1 means  that every instance of P has part some instances of P1.
-[formal definition]:P has_part P1  if and only if every occurrent p that instantiates P  there is some occurrent p1 that instantiates P1 such that p1 is part of p.
-
-Examples:
-covalent linkage has_part covalent interaction
-visualization of cellular uptake of nanoparticles has_part imaging of nanoparticles</rdfs:comment>
-        <npo:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Transitive parthood relation in which one entity has itself, or another entity as a part, and the relation is valid for use only between continuants or between occurrents but not between a continuant and an occurrent.</npo:definition>
-        <npo:preferred_Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has part</npo:preferred_Name>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has_part</oboInOwl:id>
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/http://purl.bioontology.org/ontology/npo#has_relation_to"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/http://purl.bioontology.org/ontology/npo#has_relation_to -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/http://purl.bioontology.org/ontology/npo#has_relation_to">
-        <npo:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A relationship to indicate that a class is related to another class.</npo:definition>
-        <npo:preferred_Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has relation to</npo:preferred_Name>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has_relation_to</oboInOwl:id>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/http://purl.bioontology.org/ontology/npo#is_realized_in -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/http://purl.bioontology.org/ontology/npo#is_realized_in">
-        <npo:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A relationship between a realizable entity and an occurrent.</npo:definition>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This relation is taken from the Ontology for Biomedical Investigations (OBI: Version 2009-11-06 Philly (aka version 1.0) Release Candidate)</rdfs:comment>
-        <npo:synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">executed during</npo:synonym>
-        <npo:synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has realization</npo:synonym>
-        <npo:synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is realized as</npo:synonym>
-        <npo:synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is realized by</npo:synonym>
-        <npo:preferred_Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is realized in</npo:preferred_Name>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is_realized_in</oboInOwl:id>
-        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/http://purl.bioontology.org/ontology/npo#Occurrent"/>
-        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/http://purl.bioontology.org/ontology/npo#RealizableEntity"/>
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/http://purl.bioontology.org/ontology/npo#has_relation_to"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/http://purl.bioontology.org/ontology/npo#part_of -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/http://purl.bioontology.org/ontology/npo#part_of">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">If C and C1 are continuant classes, then C part_of C1 means that every instance  of C (c) at any time is part of some instances of C1 (c1) at the same time []. Note that whenever we read &quot;some instances&quot; it should be understood as reading &quot;one or more instances&quot;.
-
-[formal definition]: C part_of C1 holds true if and only if every continuant c that instantiates C at some time t,  there is some continuant c1 that instantiates C1 at t such that c is part of c1 at t.
-
-
-Examples:
-carboxyl group part_of carboxylic acid
-dendrimer generation layer part_of dendrimer
-hydrophobic core of lipid bilayer part_of lipid bilayer
-hollow core of nanocage part_of nanocage</rdfs:comment>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">If P and P1 are occurrent classes, then P part_of P1 means that every instance of P is part of some instances of P1.
-[formal definition]: P part_of P1 holds true  if and only if every occurrent p that instantiates P  there is some process p1 that instantiates P1 such that p is part of p1.
-
-Examples:
-drug release from nanoparticle during systemic circulation part_of systemic circulation of drug-loaded nanoparticle</rdfs:comment>
-        <npo:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Transitive parthood relation in which one entity is part of another entity, and the relation is valid for use between continuants or between occurrents but not between a continuant and an occurrent.</npo:definition>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[source]: OBO Relation Ontology (release version 0.99, date 07:14:2006);  Barry Smith et al, Relations in biomedical ontologies, Genome Biology (2005)</rdfs:comment>
-        <npo:synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is part of</npo:synonym>
-        <npo:preferred_Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">part of</npo:preferred_Name>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">part_of</oboInOwl:id>
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/http://purl.bioontology.org/ontology/npo#has_relation_to"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/http://purl.bioontology.org/ontology/npo#realizes -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/http://purl.bioontology.org/ontology/npo#realizes">
-        <npo:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A relation between an occurrent to a realizable entity.</npo:definition>
-        <npo:synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is realization of</npo:synonym>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">realizes</oboInOwl:id>
-        <npo:preferred_Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">realizes</npo:preferred_Name>
-        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/http://purl.bioontology.org/ontology/npo#Occurrent"/>
-        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/http://purl.bioontology.org/ontology/npo#RealizableEntity"/>
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/http://purl.bioontology.org/ontology/npo#has_relation_to"/>
-        <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/http://purl.bioontology.org/ontology/npo#is_realized_in"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Data properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://purl.org/dc/elements/1.1/creator -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.org/dc/elements/1.1/creator">
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
     
 
 
@@ -211,382 +21,10 @@ drug release from nanoparticle during systemic circulation part_of systemic circ
     
 
 
-    <!-- http://purl.obolibrary.org/obo/NPO_1713 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NPO_1713">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wave</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/http://purl.bioontology.org/ontology/npo#Process"/>
-        <npo:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;ncicp:ComplexDefinition xmlns:ncicp=&quot;http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#&quot;&gt;&lt;ncicp:def-definition&gt;A disturbance which carries energy radiated from a source and which propagates through space (vacuum or space occupied by a medium) and time.&lt;/ncicp:def-definition&gt;&lt;ncicp:Definition_Review_Date&gt;100603&lt;/ncicp:Definition_Review_Date&gt;&lt;ncicp:def-source&gt;NPO&lt;/ncicp:def-source&gt;&lt;ncicp:attr&gt;wikipedia (June 3, 2010)&lt;/ncicp:attr&gt;&lt;ncicp:Definition_Reviewer_Name&gt;Dennis Thomas&lt;/ncicp:Definition_Reviewer_Name&gt;&lt;/ncicp:ComplexDefinition&gt;</npo:definition>
-        <npo:FULL_SYN rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;ncicp:ComplexTerm xmlns:ncicp=&quot;http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#&quot;&gt;&lt;ncicp:term-name&gt;wave&lt;/ncicp:term-name&gt;&lt;ncicp:term-group&gt;PT&lt;/ncicp:term-group&gt;&lt;ncicp:term-source&gt;NCI&lt;/ncicp:term-source&gt;&lt;/ncicp:ComplexTerm&gt;</npo:FULL_SYN>
-        <npo:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NPO:1713</npo:code>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NPO:1713</oboInOwl:id>
-        <npo:preferred_Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wave</npo:preferred_Name>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/NPO_1714 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NPO_1714">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">electromagnetic wave</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NPO_1713"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/http://purl.bioontology.org/ontology/npo#part_of"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NPO_1732"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/http://purl.bioontology.org/ontology/npo#realizes"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NPO_1750"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <npo:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;ncicp:ComplexDefinition xmlns:ncicp=&quot;http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#&quot;&gt;&lt;ncicp:def-definition&gt;A wave which does not require a medium to travel, and hence can travel through vacuum. The wave consists of vibrating electric and magnetic fields that move at right angles to each other and to the direction of wave motion.  The electric and magnetic fields are produced by the acceleration of charged particles.&lt;/ncicp:def-definition&gt;&lt;ncicp:Definition_Review_Date&gt;100603&lt;/ncicp:Definition_Review_Date&gt;&lt;ncicp:def-source&gt;NPO&lt;/ncicp:def-source&gt;&lt;ncicp:attr&gt;http://library.thinkquest.org/10796/ch8/ch8.htm (June 3, 2010), http://www.physicsclassroom.com/Class/waves/u10l1c.cfm (June 3, 2010)&lt;/ncicp:attr&gt;&lt;ncicp:Definition_Reviewer_Name&gt;Dennis Thomas&lt;/ncicp:Definition_Reviewer_Name&gt;&lt;/ncicp:ComplexDefinition&gt;</npo:definition>
-        <npo:FULL_SYN rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;ncicp:ComplexTerm xmlns:ncicp=&quot;http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#&quot;&gt;&lt;ncicp:term-name&gt;electromagnetic wave&lt;/ncicp:term-name&gt;&lt;ncicp:term-group&gt;PT&lt;/ncicp:term-group&gt;&lt;ncicp:term-source&gt;NCI&lt;/ncicp:term-source&gt;&lt;/ncicp:ComplexTerm&gt;</npo:FULL_SYN>
-        <npo:synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">E-M wave</npo:synonym>
-        <npo:synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EM wave</npo:synonym>
-        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Electromagnetic waves are characterized by any of the three physical properties: frequency, wavelength or quantum (photon) energy.  Frequency of a wave is defined as the ratio of the speed of light (in vacuum) to wavelength of the wave.  The quantum energy is defined as the product of the Planck&apos;s constant and the wave frequency.  The range of all possible frequencies or wavelengths or energies of an electromagnetic wave is called the electromagnetic spectrum.  (reference: wikipedia)</dc:description>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NPO:1714</oboInOwl:id>
-        <npo:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NPO:1714</npo:code>
-        <npo:preferred_Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">electromagnetic wave</npo:preferred_Name>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/NPO_1715 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NPO_1715">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mechanical wave</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NPO_1713"/>
-        <npo:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;ncicp:ComplexDefinition xmlns:ncicp=&quot;http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#&quot;&gt;&lt;ncicp:def-definition&gt;A wave which requires a medium (e.g., air, water, solid) to travel for transmitting energy from one location to another, with no net displacement of the particles in the medium.&lt;/ncicp:def-definition&gt;&lt;ncicp:Definition_Review_Date&gt;100608&lt;/ncicp:Definition_Review_Date&gt;&lt;ncicp:def-source&gt;NPO&lt;/ncicp:def-source&gt;&lt;ncicp:attr&gt;http://library.thinkquest.org/10796/ch8/ch8.htm (June 3, 2010); http://www.visionlearning.com (June 8, 2010)&lt;/ncicp:attr&gt;&lt;ncicp:Definition_Reviewer_Name&gt;Dennis Thomas&lt;/ncicp:Definition_Reviewer_Name&gt;&lt;/ncicp:ComplexDefinition&gt;</npo:definition>
-        <npo:FULL_SYN rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;ncicp:ComplexTerm xmlns:ncicp=&quot;http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#&quot;&gt;&lt;ncicp:term-name&gt;mechanical wave&lt;/ncicp:term-name&gt;&lt;ncicp:term-group&gt;PT&lt;/ncicp:term-group&gt;&lt;ncicp:term-source&gt;NCI&lt;/ncicp:term-source&gt;&lt;/ncicp:ComplexTerm&gt;</npo:FULL_SYN>
-        <npo:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NPO:1715</npo:code>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NPO:1715</oboInOwl:id>
-        <npo:preferred_Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mechanical wave</npo:preferred_Name>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/NPO_1716 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NPO_1716">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">gamma-ray wave</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NPO_1714"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/http://purl.bioontology.org/ontology/npo#part_of"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NPO_1733"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <npo:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;ncicp:ComplexDefinition xmlns:ncicp=&quot;http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#&quot;&gt;&lt;ncicp:def-definition&gt;An electromagnetic wave which has wavelengths shorter than 0.001 nm, frequencies greater than 100 EHz (1 EHz = 10^18 Hz), and energies greater than 1.24 MeV.&lt;/ncicp:def-definition&gt;&lt;ncicp:Definition_Review_Date&gt;100603&lt;/ncicp:Definition_Review_Date&gt;&lt;ncicp:def-source&gt;NPO&lt;/ncicp:def-source&gt;&lt;ncicp:attr&gt;http://hyperphysics.phy-astr.gsu.edu/hbase/ems3.html#c5 (June 3, 2010)&lt;/ncicp:attr&gt;&lt;ncicp:Definition_Reviewer_Name&gt;Dennis Thomas&lt;/ncicp:Definition_Reviewer_Name&gt;&lt;/ncicp:ComplexDefinition&gt;</npo:definition>
-        <npo:FULL_SYN rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;ncicp:ComplexTerm xmlns:ncicp=&quot;http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#&quot;&gt;&lt;ncicp:term-name&gt;gamma-ray wave&lt;/ncicp:term-name&gt;&lt;ncicp:term-group&gt;PT&lt;/ncicp:term-group&gt;&lt;ncicp:term-source&gt;NCI&lt;/ncicp:term-source&gt;&lt;/ncicp:ComplexTerm&gt;</npo:FULL_SYN>
-        <npo:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NPO:1716</npo:code>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NPO:1716</oboInOwl:id>
-        <npo:preferred_Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">gamma-ray wave</npo:preferred_Name>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/NPO_1717 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NPO_1717">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">x-ray wave</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NPO_1714"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/http://purl.bioontology.org/ontology/npo#part_of"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NPO_1734"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <npo:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;ncicp:ComplexDefinition xmlns:ncicp=&quot;http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#&quot;&gt;&lt;ncicp:def-definition&gt;An electromagnetic wave which has wavelengths between 10 nm and 0.001 nm, frequencies between 30 PHz and 100 EHz (1 PHz - 10^15 Hz, 1 EHz = 10^18 Hz), and energies between 124 eV and 1.24 MeV. An X-ray wave has wavelength shorter than that of an ultraviolet wave and longer than that of a gamma-ray wave&lt;/ncicp:def-definition&gt;&lt;ncicp:Definition_Review_Date&gt;100603&lt;/ncicp:Definition_Review_Date&gt;&lt;ncicp:def-source&gt;NPO&lt;/ncicp:def-source&gt;&lt;ncicp:attr&gt;http://hyperphysics.phy-astr.gsu.edu/hbase/ems3.html#c4 (June 3, 2010)&lt;/ncicp:attr&gt;&lt;ncicp:Definition_Reviewer_Name&gt;Dennis Thomas&lt;/ncicp:Definition_Reviewer_Name&gt;&lt;/ncicp:ComplexDefinition&gt;</npo:definition>
-        <npo:FULL_SYN rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;ncicp:ComplexTerm xmlns:ncicp=&quot;http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#&quot;&gt;&lt;ncicp:term-name&gt;x-ray wave&lt;/ncicp:term-name&gt;&lt;ncicp:term-group&gt;PT&lt;/ncicp:term-group&gt;&lt;ncicp:term-source&gt;NCI&lt;/ncicp:term-source&gt;&lt;/ncicp:ComplexTerm&gt;</npo:FULL_SYN>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NPO:1717</oboInOwl:id>
-        <npo:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NPO:1717</npo:code>
-        <npo:preferred_Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">x-ray wave</npo:preferred_Name>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/NPO_1718 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NPO_1718">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ultraviolet wave</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NPO_1714"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/http://purl.bioontology.org/ontology/npo#part_of"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NPO_1735"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/http://purl.bioontology.org/ontology/npo#realizes"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NPO_1755"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <npo:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;ncicp:ComplexDefinition xmlns:ncicp=&quot;http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#&quot;&gt;&lt;ncicp:def-definition&gt;An electromagnetic wave which has wavelengths between 400 nm and 10 nm, frequencies between 300 THz and 750 THz (1 THz = 10^12 Hz), and energies between 3.1 eV and 124 eV.  An ultraviolet wave has a wavelength shorter than that of a visible light wave, but longer than that of an x-ray wave.&lt;/ncicp:def-definition&gt;&lt;ncicp:Definition_Review_Date&gt;100603&lt;/ncicp:Definition_Review_Date&gt;&lt;ncicp:def-source&gt;NPO&lt;/ncicp:def-source&gt;&lt;ncicp:attr&gt;http://hyperphysics.phy-astr.gsu.edu/hbase/ems3.html#c4 (June 3, 2010)&lt;/ncicp:attr&gt;&lt;ncicp:Definition_Reviewer_Name&gt;Dennis Thomas&lt;/ncicp:Definition_Reviewer_Name&gt;&lt;/ncicp:ComplexDefinition&gt;</npo:definition>
-        <npo:FULL_SYN rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;ncicp:ComplexTerm xmlns:ncicp=&quot;http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#&quot;&gt;&lt;ncicp:term-name&gt;ultraviolet wave&lt;/ncicp:term-name&gt;&lt;ncicp:term-group&gt;PT&lt;/ncicp:term-group&gt;&lt;ncicp:term-source&gt;NCI&lt;/ncicp:term-source&gt;&lt;/ncicp:ComplexTerm&gt;</npo:FULL_SYN>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NPO:1718</oboInOwl:id>
-        <npo:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NPO:1718</npo:code>
-        <npo:synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UV wave</npo:synonym>
-        <npo:preferred_Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ultraviolet wave</npo:preferred_Name>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/NPO_1719 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NPO_1719">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">visible light wave</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NPO_1714"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/http://purl.bioontology.org/ontology/npo#part_of"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NPO_1736"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/http://purl.bioontology.org/ontology/npo#realizes"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NPO_1756"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <npo:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;ncicp:ComplexDefinition xmlns:ncicp=&quot;http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#&quot;&gt;&lt;ncicp:def-definition&gt;An electromagnetic wave which has wavelengths between 750 nm and 400 nm, frequencies between 400 THz and 750 THz (1 THz = 10^12 Hz), and energies between 1.65 eV and 3.1 eV.  A visible light wave has a wavelength longer than that of an ultraviolet wave, and shorter than that of an infrared wave.&lt;/ncicp:def-definition&gt;&lt;ncicp:Definition_Review_Date&gt;100603&lt;/ncicp:Definition_Review_Date&gt;&lt;ncicp:def-source&gt;NPO&lt;/ncicp:def-source&gt;&lt;ncicp:attr&gt;http://hyperphysics.phy-astr.gsu.edu/hbase/ems3.html#c2 (June 3, 2010)&lt;/ncicp:attr&gt;&lt;ncicp:Definition_Reviewer_Name&gt;Dennis Thomas&lt;/ncicp:Definition_Reviewer_Name&gt;&lt;/ncicp:ComplexDefinition&gt;</npo:definition>
-        <npo:FULL_SYN rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;ncicp:ComplexTerm xmlns:ncicp=&quot;http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#&quot;&gt;&lt;ncicp:term-name&gt;visible light wave&lt;/ncicp:term-name&gt;&lt;ncicp:term-group&gt;PT&lt;/ncicp:term-group&gt;&lt;ncicp:term-source&gt;NCI&lt;/ncicp:term-source&gt;&lt;/ncicp:ComplexTerm&gt;</npo:FULL_SYN>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NPO:1719</oboInOwl:id>
-        <npo:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NPO:1719</npo:code>
-        <npo:preferred_Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">visible light wave</npo:preferred_Name>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/NPO_1720 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NPO_1720">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">infrared wave</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NPO_1714"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/http://purl.bioontology.org/ontology/npo#part_of"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NPO_1737"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/http://purl.bioontology.org/ontology/npo#realizes"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NPO_1751"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <npo:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;ncicp:ComplexDefinition xmlns:ncicp=&quot;http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#&quot;&gt;&lt;ncicp:def-definition&gt;An electromagnetic wave which has wavelengths between 1 mm and 750 nm, frequencies between 300 GHz and 40 THz (1 GHz = 10^9 Hz, 1 THz = 10^12 Hz), and energies between 0.00124 eV and 1.65 eV.  An infrared wave has a wavelength longer than that of a visible light wave, and shorter than that of a microwave.&lt;/ncicp:def-definition&gt;&lt;ncicp:Definition_Review_Date&gt;100603&lt;/ncicp:Definition_Review_Date&gt;&lt;ncicp:def-source&gt;NPO&lt;/ncicp:def-source&gt;&lt;ncicp:attr&gt;http://hyperphysics.phy-astr.gsu.edu/hbase/ems3.html#c1 (June 3, 2010)&lt;/ncicp:attr&gt;&lt;ncicp:Definition_Reviewer_Name&gt;Dennis Thomas&lt;/ncicp:Definition_Reviewer_Name&gt;&lt;/ncicp:ComplexDefinition&gt;</npo:definition>
-        <npo:FULL_SYN rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;ncicp:ComplexTerm xmlns:ncicp=&quot;http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#&quot;&gt;&lt;ncicp:term-name&gt;infrared wave&lt;/ncicp:term-name&gt;&lt;ncicp:term-group&gt;PT&lt;/ncicp:term-group&gt;&lt;ncicp:term-source&gt;NCI&lt;/ncicp:term-source&gt;&lt;/ncicp:ComplexTerm&gt;</npo:FULL_SYN>
-        <npo:synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IR wave</npo:synonym>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NPO:1720</oboInOwl:id>
-        <npo:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NPO:1720</npo:code>
-        <npo:preferred_Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">infrared wave</npo:preferred_Name>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/NPO_1721 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NPO_1721">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">far-infrared wave</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NPO_1720"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/http://purl.bioontology.org/ontology/npo#realizes"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NPO_1752"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/http://purl.bioontology.org/ontology/npo#part_of"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NPO_1738"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <npo:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;ncicp:ComplexDefinition xmlns:ncicp=&quot;http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#&quot;&gt;&lt;ncicp:def-definition&gt;An infrared wave which has wavelengths between 1 mm and 10 um, frequencies between 300 GHz and 30 THz (1 GHz = 10^9 Hz, 1 THz = 10^12 Hz), and energies between 0.00124 eV and 0.124 eV.&lt;/ncicp:def-definition&gt;&lt;ncicp:Definition_Review_Date&gt;100603&lt;/ncicp:Definition_Review_Date&gt;&lt;ncicp:def-source&gt;NPO&lt;/ncicp:def-source&gt;&lt;ncicp:Definition_Reviewer_Name&gt;Dennis Thomas&lt;/ncicp:Definition_Reviewer_Name&gt;&lt;/ncicp:ComplexDefinition&gt;</npo:definition>
-        <npo:FULL_SYN rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;ncicp:ComplexTerm xmlns:ncicp=&quot;http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#&quot;&gt;&lt;ncicp:term-name&gt;far-infrared wave&lt;/ncicp:term-name&gt;&lt;ncicp:term-group&gt;PT&lt;/ncicp:term-group&gt;&lt;ncicp:term-source&gt;NCI&lt;/ncicp:term-source&gt;&lt;/ncicp:ComplexTerm&gt;</npo:FULL_SYN>
-        <npo:synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FIR wave</npo:synonym>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NPO:1721</oboInOwl:id>
-        <npo:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NPO:1721</npo:code>
-        <npo:preferred_Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">far-infrared wave</npo:preferred_Name>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/NPO_1722 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NPO_1722">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mid-infrared wave</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NPO_1720"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/http://purl.bioontology.org/ontology/npo#realizes"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NPO_1753"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/http://purl.bioontology.org/ontology/npo#part_of"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NPO_1739"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <npo:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;ncicp:ComplexDefinition xmlns:ncicp=&quot;http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#&quot;&gt;&lt;ncicp:def-definition&gt;An infrared wave which has wavelengths between 10 um and 2.5 um, frequencies between 30 THz and 120 THz (1 THz = 10^12 Hz), and energies between 0.124 eV and 0.5 eV.&lt;/ncicp:def-definition&gt;&lt;ncicp:Definition_Review_Date&gt;100603&lt;/ncicp:Definition_Review_Date&gt;&lt;ncicp:def-source&gt;NPO&lt;/ncicp:def-source&gt;&lt;ncicp:Definition_Reviewer_Name&gt;Dennis Thomas&lt;/ncicp:Definition_Reviewer_Name&gt;&lt;/ncicp:ComplexDefinition&gt;</npo:definition>
-        <npo:FULL_SYN rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;ncicp:ComplexTerm xmlns:ncicp=&quot;http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#&quot;&gt;&lt;ncicp:term-name&gt;mid-infrared wave&lt;/ncicp:term-name&gt;&lt;ncicp:term-group&gt;PT&lt;/ncicp:term-group&gt;&lt;ncicp:term-source&gt;NCI&lt;/ncicp:term-source&gt;&lt;/ncicp:ComplexTerm&gt;</npo:FULL_SYN>
-        <npo:synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MIR wave</npo:synonym>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NPO:1722</oboInOwl:id>
-        <npo:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NPO:1722</npo:code>
-        <npo:preferred_Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mid-infrared wave</npo:preferred_Name>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/NPO_1723 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NPO_1723">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">near-infrared wave</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NPO_1720"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/http://purl.bioontology.org/ontology/npo#part_of"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NPO_1740"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/http://purl.bioontology.org/ontology/npo#realizes"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NPO_1754"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <npo:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;ncicp:ComplexDefinition xmlns:ncicp=&quot;http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#&quot;&gt;&lt;ncicp:def-definition&gt;An infrared wave which has wavelengths between 2.5 um and 750 nm, frequencies between 120 THz and 400 THz (1 THz = 10^12 Hz), and energies between 0.5 eV and 1.65 eV.&lt;/ncicp:def-definition&gt;&lt;ncicp:Definition_Review_Date&gt;100603&lt;/ncicp:Definition_Review_Date&gt;&lt;ncicp:def-source&gt;NPO&lt;/ncicp:def-source&gt;&lt;ncicp:Definition_Reviewer_Name&gt;Dennis Thomas&lt;/ncicp:Definition_Reviewer_Name&gt;&lt;/ncicp:ComplexDefinition&gt;</npo:definition>
-        <npo:FULL_SYN rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;ncicp:ComplexTerm xmlns:ncicp=&quot;http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#&quot;&gt;&lt;ncicp:term-name&gt;near-infrared wave&lt;/ncicp:term-name&gt;&lt;ncicp:term-group&gt;PT&lt;/ncicp:term-group&gt;&lt;ncicp:term-source&gt;NCI&lt;/ncicp:term-source&gt;&lt;/ncicp:ComplexTerm&gt;</npo:FULL_SYN>
-        <npo:synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NIR wave</npo:synonym>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NPO:1723</oboInOwl:id>
-        <npo:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NPO:1723</npo:code>
-        <npo:preferred_Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">near-infrared wave</npo:preferred_Name>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/NPO_1724 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NPO_1724">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">microwave</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NPO_1714"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/http://purl.bioontology.org/ontology/npo#part_of"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NPO_1741"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <npo:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;ncicp:ComplexDefinition xmlns:ncicp=&quot;http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#&quot;&gt;&lt;ncicp:def-definition&gt;An electromagnetic wave which has wavelengths between 30 cm and 1 mm, frequencies between 1 GHz and 300 GHz (1 GHz = 10^9 Hz), and energies between 4.1 ueV and 1.24 meV. A microwave has a wavelength longer than that of an infrared wave, but shorter than that of a radiowave.&lt;/ncicp:def-definition&gt;&lt;ncicp:Definition_Review_Date&gt;100603&lt;/ncicp:Definition_Review_Date&gt;&lt;ncicp:def-source&gt;NPO&lt;/ncicp:def-source&gt;&lt;ncicp:attr&gt;http://physics.info/em-spectrum (June 3, 2010), wikipedia (June 3, 2010)&lt;/ncicp:attr&gt;&lt;ncicp:Definition_Reviewer_Name&gt;Dennis Thomas&lt;/ncicp:Definition_Reviewer_Name&gt;&lt;/ncicp:ComplexDefinition&gt;</npo:definition>
-        <npo:FULL_SYN rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;ncicp:ComplexTerm xmlns:ncicp=&quot;http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#&quot;&gt;&lt;ncicp:term-name&gt;microwave&lt;/ncicp:term-name&gt;&lt;ncicp:term-group&gt;PT&lt;/ncicp:term-group&gt;&lt;ncicp:term-source&gt;NCI&lt;/ncicp:term-source&gt;&lt;/ncicp:ComplexTerm&gt;</npo:FULL_SYN>
-        <npo:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NPO:1724</npo:code>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NPO:1724</oboInOwl:id>
-        <npo:preferred_Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">microwave</npo:preferred_Name>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/NPO_1725 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NPO_1725">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">radiowave</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NPO_1714"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/http://purl.bioontology.org/ontology/npo#part_of"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NPO_1742"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <npo:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;ncicp:ComplexDefinition xmlns:ncicp=&quot;http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#&quot;&gt;&lt;ncicp:def-definition&gt;An electromagnetic wave which has wavelengths longer than 30 cm, frequencies less than 1 GHz (1 GHz = 10^9 Hz). and energies less than 4.1 ueV.&lt;/ncicp:def-definition&gt;&lt;ncicp:Definition_Review_Date&gt;100603&lt;/ncicp:Definition_Review_Date&gt;&lt;ncicp:def-source&gt;NPO&lt;/ncicp:def-source&gt;&lt;ncicp:Definition_Reviewer_Name&gt;Dennis Thomas&lt;/ncicp:Definition_Reviewer_Name&gt;&lt;/ncicp:ComplexDefinition&gt;</npo:definition>
-        <npo:FULL_SYN rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;ncicp:ComplexTerm xmlns:ncicp=&quot;http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#&quot;&gt;&lt;ncicp:term-name&gt;radiowave&lt;/ncicp:term-name&gt;&lt;ncicp:term-group&gt;PT&lt;/ncicp:term-group&gt;&lt;ncicp:term-source&gt;NCI&lt;/ncicp:term-source&gt;&lt;/ncicp:ComplexTerm&gt;</npo:FULL_SYN>
-        <npo:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NPO:1725</npo:code>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NPO:1725</oboInOwl:id>
-        <npo:preferred_Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">radiowave</npo:preferred_Name>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/NPO_1727 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NPO_1727">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">longitudinal wave</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NPO_1715"/>
-        <npo:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;ncicp:ComplexDefinition xmlns:ncicp=&quot;http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#&quot;&gt;&lt;ncicp:def-definition&gt;A mechanical wave in which particles of the medium move back and forth in a direction parallel to the direction in which the wave moves and transports energy.&lt;/ncicp:def-definition&gt;&lt;ncicp:Definition_Review_Date&gt;100603&lt;/ncicp:Definition_Review_Date&gt;&lt;ncicp:def-source&gt;NPO&lt;/ncicp:def-source&gt;&lt;ncicp:Definition_Reviewer_Name&gt;Dennis Thomas&lt;/ncicp:Definition_Reviewer_Name&gt;&lt;/ncicp:ComplexDefinition&gt;</npo:definition>
-        <npo:FULL_SYN rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;ncicp:ComplexTerm xmlns:ncicp=&quot;http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#&quot;&gt;&lt;ncicp:term-name&gt;longitudinal wave&lt;/ncicp:term-name&gt;&lt;ncicp:term-group&gt;PT&lt;/ncicp:term-group&gt;&lt;ncicp:term-source&gt;NCI&lt;/ncicp:term-source&gt;&lt;/ncicp:ComplexTerm&gt;</npo:FULL_SYN>
-        <npo:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NPO:1727</npo:code>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NPO:1727</oboInOwl:id>
-        <npo:preferred_Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">longitudinal wave</npo:preferred_Name>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/NPO_1728 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NPO_1728">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sound wave</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NPO_1727"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/http://purl.bioontology.org/ontology/npo#part_of"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NPO_1743"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/http://purl.bioontology.org/ontology/npo#realizes"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NPO_1757"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <npo:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;ncicp:ComplexDefinition xmlns:ncicp=&quot;http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#&quot;&gt;&lt;ncicp:def-definition&gt;A longitudinal wave which transports energy (sound energy) produced by a vibrating object through a medium in which the back and forth motions of the particles result in regions of high (compression) and low pressure (rarefactions) in the medium.&lt;/ncicp:def-definition&gt;&lt;ncicp:Definition_Review_Date&gt;100603&lt;/ncicp:Definition_Review_Date&gt;&lt;ncicp:def-source&gt;NPO&lt;/ncicp:def-source&gt;&lt;ncicp:Definition_Reviewer_Name&gt;Dennis Thomas&lt;/ncicp:Definition_Reviewer_Name&gt;&lt;/ncicp:ComplexDefinition&gt;</npo:definition>
-        <npo:FULL_SYN rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;ncicp:ComplexTerm xmlns:ncicp=&quot;http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#&quot;&gt;&lt;ncicp:term-name&gt;sound wave&lt;/ncicp:term-name&gt;&lt;ncicp:term-group&gt;PT&lt;/ncicp:term-group&gt;&lt;ncicp:term-source&gt;NCI&lt;/ncicp:term-source&gt;&lt;/ncicp:ComplexTerm&gt;</npo:FULL_SYN>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NPO:1728</oboInOwl:id>
-        <npo:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NPO:1728</npo:code>
-        <npo:synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">acoustic wave</npo:synonym>
-        <npo:preferred_Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sound wave</npo:preferred_Name>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/NPO_1730 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NPO_1730">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ultrasound wave</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NPO_1728"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/http://purl.bioontology.org/ontology/npo#realizes"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NPO_1759"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/http://purl.bioontology.org/ontology/npo#part_of"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NPO_1744"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <npo:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;ncicp:ComplexDefinition xmlns:ncicp=&quot;http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#&quot;&gt;&lt;ncicp:def-source&gt;NCI&lt;/ncicp:def-source&gt;&lt;ncicp:def-definition&gt;A sound wave which has frequencies above 20 kHz (upper limit of the human audible frequency range).&lt;/ncicp:def-definition&gt;&lt;ncicp:Definition_Review_Date&gt;100603&lt;/ncicp:Definition_Review_Date&gt;&lt;ncicp:Definition_Reviewer_Name&gt;Dennis Thomas&lt;/ncicp:Definition_Reviewer_Name&gt;&lt;/ncicp:ComplexDefinition&gt;</npo:definition>
-        <npo:FULL_SYN rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;ncicp:ComplexTerm xmlns:ncicp=&quot;http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#&quot;&gt;&lt;ncicp:term-name&gt;ultrasound wave&lt;/ncicp:term-name&gt;&lt;ncicp:term-group&gt;PT&lt;/ncicp:term-group&gt;&lt;ncicp:term-source&gt;NCI&lt;/ncicp:term-source&gt;&lt;/ncicp:ComplexTerm&gt;</npo:FULL_SYN>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NPO:1730</oboInOwl:id>
-        <npo:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NPO:1730</npo:code>
-        <npo:synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ultrasonic wave</npo:synonym>
-        <npo:preferred_Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ultrasound wave</npo:preferred_Name>
-    </owl:Class>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/NPO_1731 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/NPO_1731">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">radiation</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/http://purl.bioontology.org/ontology/npo#Process"/>
-        <npo:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;ncicp:ComplexDefinition xmlns:ncicp=&quot;http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#&quot;&gt;&lt;ncicp:def-definition&gt;A process in which energy emitted by a material source travels in the form of waves, rays, or sub-atomic particles, through a material medium or through vacuum, to be ultimately absorbed by another material.&lt;/ncicp:def-definition&gt;&lt;ncicp:Definition_Review_Date&gt;100603&lt;/ncicp:Definition_Review_Date&gt;&lt;ncicp:def-source&gt;NPO&lt;/ncicp:def-source&gt;&lt;ncicp:Definition_Reviewer_Name&gt;Dennis Thomas&lt;/ncicp:Definition_Reviewer_Name&gt;&lt;/ncicp:ComplexDefinition&gt;</npo:definition>
-        <npo:FULL_SYN rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;ncicp:ComplexTerm xmlns:ncicp=&quot;http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#&quot;&gt;&lt;ncicp:term-name&gt;radiation&lt;/ncicp:term-name&gt;&lt;ncicp:term-group&gt;PT&lt;/ncicp:term-group&gt;&lt;ncicp:term-source&gt;NCI&lt;/ncicp:term-source&gt;&lt;/ncicp:ComplexTerm&gt;</npo:FULL_SYN>
-        <npo:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NPO:1731</npo:code>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NPO:1731</oboInOwl:id>
-        <npo:preferred_Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">radiation</npo:preferred_Name>
     </owl:Class>
     
 
@@ -594,21 +32,8 @@ drug release from nanoparticle during systemic circulation part_of systemic circ
     <!-- http://purl.obolibrary.org/obo/NPO_1732 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/NPO_1732">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">electromagnetic radiation</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NPO_1731"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/http://purl.bioontology.org/ontology/npo#has_part"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NPO_1714"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <npo:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;ncicp:ComplexDefinition xmlns:ncicp=&quot;http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#&quot;&gt;&lt;ncicp:def-definition&gt;A radiation which consists of waves of energy associated with electric and magnetic fields produced by the acceleration of electric charges.&lt;/ncicp:def-definition&gt;&lt;ncicp:Definition_Review_Date&gt;100603&lt;/ncicp:Definition_Review_Date&gt;&lt;ncicp:def-source&gt;NPO&lt;/ncicp:def-source&gt;&lt;ncicp:Definition_Reviewer_Name&gt;Dennis Thomas&lt;/ncicp:Definition_Reviewer_Name&gt;&lt;/ncicp:ComplexDefinition&gt;</npo:definition>
-        <npo:FULL_SYN rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;ncicp:ComplexTerm xmlns:ncicp=&quot;http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#&quot;&gt;&lt;ncicp:term-name&gt;electromagnetic radiation&lt;/ncicp:term-name&gt;&lt;ncicp:term-group&gt;PT&lt;/ncicp:term-group&gt;&lt;ncicp:term-source&gt;NCI&lt;/ncicp:term-source&gt;&lt;/ncicp:ComplexTerm&gt;</npo:FULL_SYN>
-        <npo:synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">E-M radiation</npo:synonym>
-        <npo:synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EMR</npo:synonym>
-        <npo:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NPO:1732</npo:code>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NPO:1732</oboInOwl:id>
-        <npo:preferred_Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">electromagnetic radiation</npo:preferred_Name>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">electromagnetic radiation</rdfs:label>
     </owl:Class>
     
 
@@ -616,21 +41,8 @@ drug release from nanoparticle during systemic circulation part_of systemic circ
     <!-- http://purl.obolibrary.org/obo/NPO_1733 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/NPO_1733">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">gamma radiation</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NPO_1732"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/http://purl.bioontology.org/ontology/npo#has_part"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NPO_1716"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <npo:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;ncicp:ComplexDefinition xmlns:ncicp=&quot;http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#&quot;&gt;&lt;ncicp:def-definition&gt;An electromagnetic radiation which consists of waves with frequencies greater than 100 EHz (1 EHz = 10^18 Hz), and with wavelengths shorter than 0.001 nm.&lt;/ncicp:def-definition&gt;&lt;ncicp:Definition_Review_Date&gt;100608&lt;/ncicp:Definition_Review_Date&gt;&lt;ncicp:def-source&gt;NPO&lt;/ncicp:def-source&gt;&lt;ncicp:Definition_Reviewer_Name&gt;Dennis Thomas&lt;/ncicp:Definition_Reviewer_Name&gt;&lt;/ncicp:ComplexDefinition&gt;</npo:definition>
-        <npo:FULL_SYN rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;ncicp:ComplexTerm xmlns:ncicp=&quot;http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#&quot;&gt;&lt;ncicp:term-name&gt;gamma radiation&lt;/ncicp:term-name&gt;&lt;ncicp:term-group&gt;PT&lt;/ncicp:term-group&gt;&lt;ncicp:term-source&gt;NCI&lt;/ncicp:term-source&gt;&lt;/ncicp:ComplexTerm&gt;</npo:FULL_SYN>
-        <npo:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NPO:1733</npo:code>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NPO:1733</oboInOwl:id>
-        <npo:preferred_Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">gamma radiation</npo:preferred_Name>
-        <npo:synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">gamma ray</npo:synonym>
-        <npo:synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">gamma ray radiation</npo:synonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">gamma radiation</rdfs:label>
     </owl:Class>
     
 
@@ -638,20 +50,8 @@ drug release from nanoparticle during systemic circulation part_of systemic circ
     <!-- http://purl.obolibrary.org/obo/NPO_1734 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/NPO_1734">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">x-ray radiation</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NPO_1732"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/http://purl.bioontology.org/ontology/npo#has_part"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NPO_1717"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <npo:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;ncicp:ComplexDefinition xmlns:ncicp=&quot;http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#&quot;&gt;&lt;ncicp:def-definition&gt;An electromagnetic radiation which consists of waves with frequencies between 30 PHz and 100 EHz (1 PHz = 10^15 Hz, 1 EHz = 10^18 Hz), and with wavelengths between 10 nm and 0.001 nm.&lt;/ncicp:def-definition&gt;&lt;ncicp:Definition_Review_Date&gt;100608&lt;/ncicp:Definition_Review_Date&gt;&lt;ncicp:def-source&gt;NPO&lt;/ncicp:def-source&gt;&lt;ncicp:Definition_Reviewer_Name&gt;Dennis Thomas&lt;/ncicp:Definition_Reviewer_Name&gt;&lt;/ncicp:ComplexDefinition&gt;</npo:definition>
-        <npo:FULL_SYN rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;ncicp:ComplexTerm xmlns:ncicp=&quot;http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#&quot;&gt;&lt;ncicp:term-name&gt;x-ray radiation&lt;/ncicp:term-name&gt;&lt;ncicp:term-group&gt;PT&lt;/ncicp:term-group&gt;&lt;ncicp:term-source&gt;NCI&lt;/ncicp:term-source&gt;&lt;/ncicp:ComplexTerm&gt;</npo:FULL_SYN>
-        <npo:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NPO:1734</npo:code>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NPO:1734</oboInOwl:id>
-        <npo:synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">x-ray</npo:synonym>
-        <npo:preferred_Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">x-ray radiation</npo:preferred_Name>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">x-ray radiation</rdfs:label>
     </owl:Class>
     
 
@@ -659,20 +59,8 @@ drug release from nanoparticle during systemic circulation part_of systemic circ
     <!-- http://purl.obolibrary.org/obo/NPO_1735 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/NPO_1735">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ultraviolet radiation</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NPO_1732"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/http://purl.bioontology.org/ontology/npo#has_part"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NPO_1718"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <npo:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;ncicp:ComplexDefinition xmlns:ncicp=&quot;http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#&quot;&gt;&lt;ncicp:def-definition&gt;An electromagnetic radiation which consists of waves with frequencies between 300 THz and 750 THz (1 THz = 10^12 Hz), and with wavelengths between 400 nm and 10 nm.&lt;/ncicp:def-definition&gt;&lt;ncicp:Definition_Review_Date&gt;100608&lt;/ncicp:Definition_Review_Date&gt;&lt;ncicp:def-source&gt;NPO&lt;/ncicp:def-source&gt;&lt;ncicp:Definition_Reviewer_Name&gt;Dennis Thomas&lt;/ncicp:Definition_Reviewer_Name&gt;&lt;/ncicp:ComplexDefinition&gt;</npo:definition>
-        <npo:FULL_SYN rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;ncicp:ComplexTerm xmlns:ncicp=&quot;http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#&quot;&gt;&lt;ncicp:term-name&gt;ultraviolet radiation&lt;/ncicp:term-name&gt;&lt;ncicp:term-group&gt;PT&lt;/ncicp:term-group&gt;&lt;ncicp:term-source&gt;NCI&lt;/ncicp:term-source&gt;&lt;/ncicp:ComplexTerm&gt;</npo:FULL_SYN>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NPO:1735</oboInOwl:id>
-        <npo:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NPO:1735</npo:code>
-        <npo:synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UV radiation</npo:synonym>
-        <npo:preferred_Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ultraviolet radiation</npo:preferred_Name>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ultraviolet radiation</rdfs:label>
     </owl:Class>
     
 
@@ -680,19 +68,8 @@ drug release from nanoparticle during systemic circulation part_of systemic circ
     <!-- http://purl.obolibrary.org/obo/NPO_1736 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/NPO_1736">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">visible light radiation</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NPO_1732"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/http://purl.bioontology.org/ontology/npo#has_part"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NPO_1719"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <npo:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;ncicp:ComplexDefinition xmlns:ncicp=&quot;http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#&quot;&gt;&lt;ncicp:def-definition&gt;An electromagnetic radiation which can be detected by the human eye, and it consists of waves with frequencies between 400 THz and 750 THz (1 THz = 10^12 Hz), and with wavelengths between 750 nm and 400 nm.&lt;/ncicp:def-definition&gt;&lt;ncicp:Definition_Review_Date&gt;100608&lt;/ncicp:Definition_Review_Date&gt;&lt;ncicp:def-source&gt;NPO&lt;/ncicp:def-source&gt;&lt;ncicp:Definition_Reviewer_Name&gt;Dennis Thomas&lt;/ncicp:Definition_Reviewer_Name&gt;&lt;/ncicp:ComplexDefinition&gt;</npo:definition>
-        <npo:FULL_SYN rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;ncicp:ComplexTerm xmlns:ncicp=&quot;http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#&quot;&gt;&lt;ncicp:term-name&gt;visible light radiation&lt;/ncicp:term-name&gt;&lt;ncicp:term-group&gt;PT&lt;/ncicp:term-group&gt;&lt;ncicp:term-source&gt;NCI&lt;/ncicp:term-source&gt;&lt;/ncicp:ComplexTerm&gt;</npo:FULL_SYN>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NPO:1736</oboInOwl:id>
-        <npo:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NPO:1736</npo:code>
-        <npo:preferred_Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">visible light radiation</npo:preferred_Name>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">visible light radiation</rdfs:label>
     </owl:Class>
     
 
@@ -700,19 +77,8 @@ drug release from nanoparticle during systemic circulation part_of systemic circ
     <!-- http://purl.obolibrary.org/obo/NPO_1737 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/NPO_1737">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">infrared radiation</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NPO_1732"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/http://purl.bioontology.org/ontology/npo#has_part"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NPO_1720"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <npo:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;ncicp:ComplexDefinition xmlns:ncicp=&quot;http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#&quot;&gt;&lt;ncicp:def-definition&gt;An electromagnetic radiation which consists of waves with frequencies between 300 GHz and 400 THz (1 GHz = 10^9 Hz, 1 THz = 10^12 Hz), and with wavelengths between 1 mm and 750 nm.&lt;/ncicp:def-definition&gt;&lt;ncicp:Definition_Review_Date&gt;100608&lt;/ncicp:Definition_Review_Date&gt;&lt;ncicp:def-source&gt;NPO&lt;/ncicp:def-source&gt;&lt;ncicp:Definition_Reviewer_Name&gt;Dennis Thomas&lt;/ncicp:Definition_Reviewer_Name&gt;&lt;/ncicp:ComplexDefinition&gt;</npo:definition>
-        <npo:FULL_SYN rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;ncicp:ComplexTerm xmlns:ncicp=&quot;http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#&quot;&gt;&lt;ncicp:term-name&gt;infrared radiation&lt;/ncicp:term-name&gt;&lt;ncicp:term-group&gt;PT&lt;/ncicp:term-group&gt;&lt;ncicp:term-source&gt;NCI&lt;/ncicp:term-source&gt;&lt;/ncicp:ComplexTerm&gt;</npo:FULL_SYN>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NPO:1737</oboInOwl:id>
-        <npo:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NPO:1737</npo:code>
-        <npo:preferred_Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">infrared radiation</npo:preferred_Name>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">infrared radiation</rdfs:label>
     </owl:Class>
     
 
@@ -720,20 +86,8 @@ drug release from nanoparticle during systemic circulation part_of systemic circ
     <!-- http://purl.obolibrary.org/obo/NPO_1738 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/NPO_1738">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">far-infrared radiation</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NPO_1737"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/http://purl.bioontology.org/ontology/npo#has_part"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NPO_1721"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <npo:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;ncicp:ComplexDefinition xmlns:ncicp=&quot;http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#&quot;&gt;&lt;ncicp:def-definition&gt;An infrared radiation which consists of waves with frequencies between 300 GHz and 30 THz (1 GHz = 10^9 Hz, 1 THz = 10^12 Hz), and with wavelengths between 1 mm and 10 um.&lt;/ncicp:def-definition&gt;&lt;ncicp:Definition_Review_Date&gt;100608&lt;/ncicp:Definition_Review_Date&gt;&lt;ncicp:def-source&gt;NPO&lt;/ncicp:def-source&gt;&lt;ncicp:Definition_Reviewer_Name&gt;Dennis Thomas&lt;/ncicp:Definition_Reviewer_Name&gt;&lt;/ncicp:ComplexDefinition&gt;</npo:definition>
-        <npo:FULL_SYN rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;ncicp:ComplexTerm xmlns:ncicp=&quot;http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#&quot;&gt;&lt;ncicp:term-name&gt;far-infrared radiation&lt;/ncicp:term-name&gt;&lt;ncicp:term-group&gt;PT&lt;/ncicp:term-group&gt;&lt;ncicp:term-source&gt;NCI&lt;/ncicp:term-source&gt;&lt;/ncicp:ComplexTerm&gt;</npo:FULL_SYN>
-        <npo:synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FIR radiation</npo:synonym>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NPO:1738</oboInOwl:id>
-        <npo:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NPO:1738</npo:code>
-        <npo:preferred_Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">far-infrared radiation</npo:preferred_Name>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">far-infrared radiation</rdfs:label>
     </owl:Class>
     
 
@@ -741,20 +95,8 @@ drug release from nanoparticle during systemic circulation part_of systemic circ
     <!-- http://purl.obolibrary.org/obo/NPO_1739 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/NPO_1739">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mid-infrared radiation</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NPO_1737"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/http://purl.bioontology.org/ontology/npo#has_part"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NPO_1722"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <npo:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;ncicp:ComplexDefinition xmlns:ncicp=&quot;http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#&quot;&gt;&lt;ncicp:def-definition&gt;An infrared radiation which consists of waves with frequencies between 30 THz and 120 THz (1THz = 10^12 Hz ), and with wavelengths between 10 um and 2.5 um.&lt;/ncicp:def-definition&gt;&lt;ncicp:Definition_Review_Date&gt;100608&lt;/ncicp:Definition_Review_Date&gt;&lt;ncicp:def-source&gt;NPO&lt;/ncicp:def-source&gt;&lt;ncicp:Definition_Reviewer_Name&gt;Dennis Thomas&lt;/ncicp:Definition_Reviewer_Name&gt;&lt;/ncicp:ComplexDefinition&gt;</npo:definition>
-        <npo:FULL_SYN rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;ncicp:ComplexTerm xmlns:ncicp=&quot;http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#&quot;&gt;&lt;ncicp:term-name&gt;mid-infrared radiation&lt;/ncicp:term-name&gt;&lt;ncicp:term-group&gt;PT&lt;/ncicp:term-group&gt;&lt;ncicp:term-source&gt;NCI&lt;/ncicp:term-source&gt;&lt;/ncicp:ComplexTerm&gt;</npo:FULL_SYN>
-        <npo:synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MIR radiation</npo:synonym>
-        <npo:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NPO:1739</npo:code>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NPO:1739</oboInOwl:id>
-        <npo:preferred_Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mid-infrared radiation</npo:preferred_Name>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mid-infrared radiation</rdfs:label>
     </owl:Class>
     
 
@@ -762,20 +104,8 @@ drug release from nanoparticle during systemic circulation part_of systemic circ
     <!-- http://purl.obolibrary.org/obo/NPO_1740 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/NPO_1740">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">near-infrared radiation</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NPO_1737"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/http://purl.bioontology.org/ontology/npo#has_part"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NPO_1723"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <npo:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;ncicp:ComplexDefinition xmlns:ncicp=&quot;http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#&quot;&gt;&lt;ncicp:def-definition&gt;An infrared radiation which consists of waves with frequencies between 120 THz and 400 THz (1 THz = 10^12 Hz), and with wavelengths between 2.5 um and 750 nm.&lt;/ncicp:def-definition&gt;&lt;ncicp:Definition_Review_Date&gt;100608&lt;/ncicp:Definition_Review_Date&gt;&lt;ncicp:def-source&gt;NPO&lt;/ncicp:def-source&gt;&lt;ncicp:Definition_Reviewer_Name&gt;Dennis Thomas&lt;/ncicp:Definition_Reviewer_Name&gt;&lt;/ncicp:ComplexDefinition&gt;</npo:definition>
-        <npo:FULL_SYN rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;ncicp:ComplexTerm xmlns:ncicp=&quot;http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#&quot;&gt;&lt;ncicp:term-name&gt;near-infrared radiation&lt;/ncicp:term-name&gt;&lt;ncicp:term-group&gt;PT&lt;/ncicp:term-group&gt;&lt;ncicp:term-source&gt;NCI&lt;/ncicp:term-source&gt;&lt;/ncicp:ComplexTerm&gt;</npo:FULL_SYN>
-        <npo:synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NIR radiation</npo:synonym>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NPO:1740</oboInOwl:id>
-        <npo:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NPO:1740</npo:code>
-        <npo:preferred_Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">near-infrared radiation</npo:preferred_Name>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">near-infrared radiation</rdfs:label>
     </owl:Class>
     
 
@@ -783,19 +113,8 @@ drug release from nanoparticle during systemic circulation part_of systemic circ
     <!-- http://purl.obolibrary.org/obo/NPO_1741 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/NPO_1741">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">microwave radiation</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NPO_1732"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/http://purl.bioontology.org/ontology/npo#has_part"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NPO_1724"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <npo:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;ncicp:ComplexDefinition xmlns:ncicp=&quot;http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#&quot;&gt;&lt;ncicp:def-definition&gt;An electromagnetic radiation which consists of waves with frequencies between 1 GHz and 300 GHz (1 GHz = 10^9 Hz), and with wavelengths between 30 cm and 1 mm.&lt;/ncicp:def-definition&gt;&lt;ncicp:Definition_Review_Date&gt;100608&lt;/ncicp:Definition_Review_Date&gt;&lt;ncicp:def-source&gt;NPO&lt;/ncicp:def-source&gt;&lt;ncicp:Definition_Reviewer_Name&gt;Dennis Thomas&lt;/ncicp:Definition_Reviewer_Name&gt;&lt;/ncicp:ComplexDefinition&gt;</npo:definition>
-        <npo:FULL_SYN rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;ncicp:ComplexTerm xmlns:ncicp=&quot;http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#&quot;&gt;&lt;ncicp:term-name&gt;microwave radiation&lt;/ncicp:term-name&gt;&lt;ncicp:term-group&gt;PT&lt;/ncicp:term-group&gt;&lt;ncicp:term-source&gt;NCI&lt;/ncicp:term-source&gt;&lt;/ncicp:ComplexTerm&gt;</npo:FULL_SYN>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NPO:1741</oboInOwl:id>
-        <npo:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NPO:1741</npo:code>
-        <npo:preferred_Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">microwave radiation</npo:preferred_Name>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">microwave radiation</rdfs:label>
     </owl:Class>
     
 
@@ -803,19 +122,8 @@ drug release from nanoparticle during systemic circulation part_of systemic circ
     <!-- http://purl.obolibrary.org/obo/NPO_1742 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/NPO_1742">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">radiowave radiation</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NPO_1732"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/http://purl.bioontology.org/ontology/npo#has_part"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NPO_1725"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <npo:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;ncicp:ComplexDefinition xmlns:ncicp=&quot;http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#&quot;&gt;&lt;ncicp:def-definition&gt;An electromagnetic radiation which consists of waves with frequencies less than 1 GHz (1 GHz = 10^9 Hz), and with wavelengths longer than 30 cm.&lt;/ncicp:def-definition&gt;&lt;ncicp:Definition_Review_Date&gt;100608&lt;/ncicp:Definition_Review_Date&gt;&lt;ncicp:def-source&gt;NPO&lt;/ncicp:def-source&gt;&lt;ncicp:Definition_Reviewer_Name&gt;Dennis Thomas&lt;/ncicp:Definition_Reviewer_Name&gt;&lt;/ncicp:ComplexDefinition&gt;</npo:definition>
-        <npo:FULL_SYN rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;ncicp:ComplexTerm xmlns:ncicp=&quot;http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#&quot;&gt;&lt;ncicp:term-name&gt;radiowave radiation&lt;/ncicp:term-name&gt;&lt;ncicp:term-group&gt;PT&lt;/ncicp:term-group&gt;&lt;ncicp:term-source&gt;NCI&lt;/ncicp:term-source&gt;&lt;/ncicp:ComplexTerm&gt;</npo:FULL_SYN>
-        <npo:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NPO:1742</npo:code>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NPO:1742</oboInOwl:id>
-        <npo:preferred_Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">radiowave radiation</npo:preferred_Name>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">radiowave radiation</rdfs:label>
     </owl:Class>
     
 
@@ -823,19 +131,8 @@ drug release from nanoparticle during systemic circulation part_of systemic circ
     <!-- http://purl.obolibrary.org/obo/NPO_1743 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/NPO_1743">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sound radiation</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NPO_1731"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/http://purl.bioontology.org/ontology/npo#has_part"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NPO_1728"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <npo:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;ncicp:ComplexDefinition xmlns:ncicp=&quot;http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#&quot;&gt;&lt;ncicp:def-source&gt;NCI&lt;/ncicp:def-source&gt;&lt;ncicp:def-definition&gt;A radiation which consists of waves that transmit sound energy produced from a source, and the waves travel through a medium.&lt;/ncicp:def-definition&gt;&lt;ncicp:Definition_Review_Date&gt;100608&lt;/ncicp:Definition_Review_Date&gt;&lt;ncicp:Definition_Reviewer_Name&gt;Dennis Thomas&lt;/ncicp:Definition_Reviewer_Name&gt;&lt;/ncicp:ComplexDefinition&gt;</npo:definition>
-        <npo:FULL_SYN rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;ncicp:ComplexTerm xmlns:ncicp=&quot;http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#&quot;&gt;&lt;ncicp:term-name&gt;sound radiation&lt;/ncicp:term-name&gt;&lt;ncicp:term-group&gt;PT&lt;/ncicp:term-group&gt;&lt;ncicp:term-source&gt;NCI&lt;/ncicp:term-source&gt;&lt;/ncicp:ComplexTerm&gt;</npo:FULL_SYN>
-        <npo:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NPO:1743</npo:code>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NPO:1743</oboInOwl:id>
-        <npo:preferred_Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sound radiation</npo:preferred_Name>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sound radiation</rdfs:label>
     </owl:Class>
     
 
@@ -843,391 +140,12 @@ drug release from nanoparticle during systemic circulation part_of systemic circ
     <!-- http://purl.obolibrary.org/obo/NPO_1744 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/NPO_1744">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ultrasound radiation</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NPO_1743"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/http://purl.bioontology.org/ontology/npo#has_part"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NPO_1730"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <npo:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;ncicp:ComplexDefinition xmlns:ncicp=&quot;http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#&quot;&gt;&lt;ncicp:def-definition&gt;A sound radiation which consists of waves that transmit sound energy at frequencies above 20 kHz (upper limit of the human audible frequency range)&lt;/ncicp:def-definition&gt;&lt;ncicp:Definition_Review_Date&gt;100608&lt;/ncicp:Definition_Review_Date&gt;&lt;ncicp:def-source&gt;NPO&lt;/ncicp:def-source&gt;&lt;ncicp:Definition_Reviewer_Name&gt;Dennis Thomas&lt;/ncicp:Definition_Reviewer_Name&gt;&lt;/ncicp:ComplexDefinition&gt;</npo:definition>
-        <npo:FULL_SYN rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;ncicp:ComplexTerm xmlns:ncicp=&quot;http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#&quot;&gt;&lt;ncicp:term-name&gt;ultrasound radiation&lt;/ncicp:term-name&gt;&lt;ncicp:term-group&gt;PT&lt;/ncicp:term-group&gt;&lt;ncicp:term-source&gt;NCI&lt;/ncicp:term-source&gt;&lt;/ncicp:ComplexTerm&gt;</npo:FULL_SYN>
-        <npo:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NPO:1744</npo:code>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NPO:1744</oboInOwl:id>
-        <npo:preferred_Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ultrasound radiation</npo:preferred_Name>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ultrasound radiation</rdfs:label>
     </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/NPO_1745 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NPO_1745">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">energy</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/http://purl.bioontology.org/ontology/npo#RealizableEntity"/>
-        <npo:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;ncicp:ComplexDefinition xmlns:ncicp=&quot;http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#&quot;&gt;&lt;ncicp:def-definition&gt;A realizable entity which is the capacity to do work or to exert force over a distance.&lt;/ncicp:def-definition&gt;&lt;ncicp:Definition_Review_Date&gt;100608&lt;/ncicp:Definition_Review_Date&gt;&lt;ncicp:def-source&gt;NPO&lt;/ncicp:def-source&gt;&lt;ncicp:Definition_Reviewer_Name&gt;Dennis Thomas&lt;/ncicp:Definition_Reviewer_Name&gt;&lt;/ncicp:ComplexDefinition&gt;</npo:definition>
-        <npo:FULL_SYN rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;ncicp:ComplexTerm xmlns:ncicp=&quot;http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#&quot;&gt;&lt;ncicp:term-name&gt;energy&lt;/ncicp:term-name&gt;&lt;ncicp:term-group&gt;PT&lt;/ncicp:term-group&gt;&lt;ncicp:term-source&gt;NCI&lt;/ncicp:term-source&gt;&lt;/ncicp:ComplexTerm&gt;</npo:FULL_SYN>
-        <npo:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NPO:1745</npo:code>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NPO:1745</oboInOwl:id>
-        <npo:preferred_Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">energy</npo:preferred_Name>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/NPO_1746 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NPO_1746">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">kinetic energy</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NPO_1745"/>
-        <npo:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;ncicp:ComplexDefinition xmlns:ncicp=&quot;http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#&quot;&gt;&lt;ncicp:def-definition&gt;Energy associated with a moving object by virtue of its motion.&lt;/ncicp:def-definition&gt;&lt;ncicp:Definition_Review_Date&gt;100608&lt;/ncicp:Definition_Review_Date&gt;&lt;ncicp:def-source&gt;NPO&lt;/ncicp:def-source&gt;&lt;ncicp:Definition_Reviewer_Name&gt;Dennis Thomas&lt;/ncicp:Definition_Reviewer_Name&gt;&lt;/ncicp:ComplexDefinition&gt;</npo:definition>
-        <npo:FULL_SYN rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;ncicp:ComplexTerm xmlns:ncicp=&quot;http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#&quot;&gt;&lt;ncicp:term-name&gt;kinetic energy&lt;/ncicp:term-name&gt;&lt;ncicp:term-group&gt;PT&lt;/ncicp:term-group&gt;&lt;ncicp:term-source&gt;NCI&lt;/ncicp:term-source&gt;&lt;/ncicp:ComplexTerm&gt;</npo:FULL_SYN>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NPO:1746</oboInOwl:id>
-        <npo:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NPO:1746</npo:code>
-        <npo:preferred_Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">kinetic energy</npo:preferred_Name>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/NPO_1750 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NPO_1750">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">light energy</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NPO_1746"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/http://purl.bioontology.org/ontology/npo#is_realized_in"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NPO_1714"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <npo:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;ncicp:ComplexDefinition xmlns:ncicp=&quot;http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#&quot;&gt;&lt;ncicp:def-definition&gt;Kinetic energy which is associated with the motion of electromagnetic waves produced by the acceleration of electric charges.&lt;/ncicp:def-definition&gt;&lt;ncicp:Definition_Review_Date&gt;100608&lt;/ncicp:Definition_Review_Date&gt;&lt;ncicp:def-source&gt;NPO&lt;/ncicp:def-source&gt;&lt;ncicp:Definition_Reviewer_Name&gt;Dennis Thomas&lt;/ncicp:Definition_Reviewer_Name&gt;&lt;/ncicp:ComplexDefinition&gt;</npo:definition>
-        <npo:FULL_SYN rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;ncicp:ComplexTerm xmlns:ncicp=&quot;http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#&quot;&gt;&lt;ncicp:term-name&gt;light energy&lt;/ncicp:term-name&gt;&lt;ncicp:term-group&gt;PT&lt;/ncicp:term-group&gt;&lt;ncicp:term-source&gt;NCI&lt;/ncicp:term-source&gt;&lt;/ncicp:ComplexTerm&gt;</npo:FULL_SYN>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NPO:1750</oboInOwl:id>
-        <npo:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NPO:1750</npo:code>
-        <npo:synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">electromagnetic energy</npo:synonym>
-        <npo:synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">light</npo:synonym>
-        <npo:preferred_Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">light energy</npo:preferred_Name>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/NPO_1751 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NPO_1751">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">infrared light energy</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NPO_1750"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/http://purl.bioontology.org/ontology/npo#is_realized_in"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NPO_1720"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <npo:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;ncicp:ComplexDefinition xmlns:ncicp=&quot;http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#&quot;&gt;&lt;ncicp:def-definition&gt;Light energy which is associated with the motion of infrared waves.&lt;/ncicp:def-definition&gt;&lt;ncicp:Definition_Review_Date&gt;100608&lt;/ncicp:Definition_Review_Date&gt;&lt;ncicp:def-source&gt;NPO&lt;/ncicp:def-source&gt;&lt;ncicp:Definition_Reviewer_Name&gt;Dennis Thomas&lt;/ncicp:Definition_Reviewer_Name&gt;&lt;/ncicp:ComplexDefinition&gt;</npo:definition>
-        <npo:FULL_SYN rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;ncicp:ComplexTerm xmlns:ncicp=&quot;http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#&quot;&gt;&lt;ncicp:term-name&gt;infrared light energy&lt;/ncicp:term-name&gt;&lt;ncicp:term-group&gt;PT&lt;/ncicp:term-group&gt;&lt;ncicp:term-source&gt;NCI&lt;/ncicp:term-source&gt;&lt;/ncicp:ComplexTerm&gt;</npo:FULL_SYN>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NPO:1751</oboInOwl:id>
-        <npo:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NPO:1751</npo:code>
-        <npo:synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">infrared light</npo:synonym>
-        <npo:preferred_Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">infrared light energy</npo:preferred_Name>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/NPO_1752 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NPO_1752">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">far-infrared light energy</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NPO_1751"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/http://purl.bioontology.org/ontology/npo#is_realized_in"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NPO_1721"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <npo:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;ncicp:ComplexDefinition xmlns:ncicp=&quot;http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#&quot;&gt;&lt;ncicp:def-definition&gt;Light energy which is associated with the motion of far-infrared waves.&lt;/ncicp:def-definition&gt;&lt;ncicp:Definition_Review_Date&gt;100608&lt;/ncicp:Definition_Review_Date&gt;&lt;ncicp:def-source&gt;NPO&lt;/ncicp:def-source&gt;&lt;ncicp:Definition_Reviewer_Name&gt;Dennis Thomas&lt;/ncicp:Definition_Reviewer_Name&gt;&lt;/ncicp:ComplexDefinition&gt;</npo:definition>
-        <npo:FULL_SYN rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;ncicp:ComplexTerm xmlns:ncicp=&quot;http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#&quot;&gt;&lt;ncicp:term-name&gt;far-infrared light energy&lt;/ncicp:term-name&gt;&lt;ncicp:term-group&gt;PT&lt;/ncicp:term-group&gt;&lt;ncicp:term-source&gt;NCI&lt;/ncicp:term-source&gt;&lt;/ncicp:ComplexTerm&gt;</npo:FULL_SYN>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NPO:1752</oboInOwl:id>
-        <npo:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NPO:1752</npo:code>
-        <npo:synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">far-infrared light</npo:synonym>
-        <npo:preferred_Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">far-infrared light energy</npo:preferred_Name>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/NPO_1753 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NPO_1753">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mid-infrared light energy</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NPO_1751"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/http://purl.bioontology.org/ontology/npo#is_realized_in"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NPO_1722"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <npo:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;ncicp:ComplexDefinition xmlns:ncicp=&quot;http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#&quot;&gt;&lt;ncicp:def-definition&gt;Infrared light energy which is asscoated with the motion of mid-infrared waves.&lt;/ncicp:def-definition&gt;&lt;ncicp:Definition_Review_Date&gt;100608&lt;/ncicp:Definition_Review_Date&gt;&lt;ncicp:def-source&gt;NPO&lt;/ncicp:def-source&gt;&lt;ncicp:Definition_Reviewer_Name&gt;Dennis Thomas&lt;/ncicp:Definition_Reviewer_Name&gt;&lt;/ncicp:ComplexDefinition&gt;</npo:definition>
-        <npo:FULL_SYN rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;ncicp:ComplexTerm xmlns:ncicp=&quot;http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#&quot;&gt;&lt;ncicp:term-name&gt;mid-infrared light energy&lt;/ncicp:term-name&gt;&lt;ncicp:term-group&gt;PT&lt;/ncicp:term-group&gt;&lt;ncicp:term-source&gt;NCI&lt;/ncicp:term-source&gt;&lt;/ncicp:ComplexTerm&gt;</npo:FULL_SYN>
-        <npo:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NPO:1753</npo:code>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NPO:1753</oboInOwl:id>
-        <npo:synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mid-infrared light</npo:synonym>
-        <npo:preferred_Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mid-infrared light energy</npo:preferred_Name>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/NPO_1754 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NPO_1754">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">near-infrared light energy</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NPO_1751"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/http://purl.bioontology.org/ontology/npo#is_realized_in"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NPO_1723"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <npo:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;ncicp:ComplexDefinition xmlns:ncicp=&quot;http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#&quot;&gt;&lt;ncicp:def-definition&gt;Infrared light energy which is associated with the motion of near-infrared light waves.&lt;/ncicp:def-definition&gt;&lt;ncicp:Definition_Review_Date&gt;100608&lt;/ncicp:Definition_Review_Date&gt;&lt;ncicp:def-source&gt;NPO&lt;/ncicp:def-source&gt;&lt;ncicp:Definition_Reviewer_Name&gt;Dennis Thomas&lt;/ncicp:Definition_Reviewer_Name&gt;&lt;/ncicp:ComplexDefinition&gt;</npo:definition>
-        <npo:FULL_SYN rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;ncicp:ComplexTerm xmlns:ncicp=&quot;http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#&quot;&gt;&lt;ncicp:term-name&gt;near-infrared light energy&lt;/ncicp:term-name&gt;&lt;ncicp:term-group&gt;PT&lt;/ncicp:term-group&gt;&lt;ncicp:term-source&gt;NCI&lt;/ncicp:term-source&gt;&lt;/ncicp:ComplexTerm&gt;</npo:FULL_SYN>
-        <npo:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NPO:1754</npo:code>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NPO:1754</oboInOwl:id>
-        <npo:synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">near-infrared light</npo:synonym>
-        <npo:preferred_Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">near-infrared light energy</npo:preferred_Name>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/NPO_1755 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NPO_1755">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ultraviolet light energy</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NPO_1750"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/http://purl.bioontology.org/ontology/npo#is_realized_in"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NPO_1718"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <npo:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;ncicp:ComplexDefinition xmlns:ncicp=&quot;http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#&quot;&gt;&lt;ncicp:def-definition&gt;Light energy which is associated with the motion of ultraviolet waves.&lt;/ncicp:def-definition&gt;&lt;ncicp:Definition_Review_Date&gt;100608&lt;/ncicp:Definition_Review_Date&gt;&lt;ncicp:def-source&gt;NPO&lt;/ncicp:def-source&gt;&lt;ncicp:Definition_Reviewer_Name&gt;Dennis Thomas&lt;/ncicp:Definition_Reviewer_Name&gt;&lt;/ncicp:ComplexDefinition&gt;</npo:definition>
-        <npo:FULL_SYN rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;ncicp:ComplexTerm xmlns:ncicp=&quot;http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#&quot;&gt;&lt;ncicp:term-name&gt;ultraviolet light energy&lt;/ncicp:term-name&gt;&lt;ncicp:term-group&gt;PT&lt;/ncicp:term-group&gt;&lt;ncicp:term-source&gt;NCI&lt;/ncicp:term-source&gt;&lt;/ncicp:ComplexTerm&gt;</npo:FULL_SYN>
-        <npo:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NPO:1755</npo:code>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NPO:1755</oboInOwl:id>
-        <npo:synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UV light</npo:synonym>
-        <npo:synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ultraviolet light</npo:synonym>
-        <npo:preferred_Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ultraviolet light energy</npo:preferred_Name>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/NPO_1756 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NPO_1756">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">visible light energy</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NPO_1750"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/http://purl.bioontology.org/ontology/npo#is_realized_in"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NPO_1719"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <npo:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;ncicp:ComplexDefinition xmlns:ncicp=&quot;http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#&quot;&gt;&lt;ncicp:def-definition&gt;Light energy which is associated with the motion of visible light waves.&lt;/ncicp:def-definition&gt;&lt;ncicp:Definition_Review_Date&gt;100608&lt;/ncicp:Definition_Review_Date&gt;&lt;ncicp:def-source&gt;NPO&lt;/ncicp:def-source&gt;&lt;ncicp:Definition_Reviewer_Name&gt;Dennis Thomas&lt;/ncicp:Definition_Reviewer_Name&gt;&lt;/ncicp:ComplexDefinition&gt;</npo:definition>
-        <npo:FULL_SYN rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;ncicp:ComplexTerm xmlns:ncicp=&quot;http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#&quot;&gt;&lt;ncicp:term-name&gt;visible light energy&lt;/ncicp:term-name&gt;&lt;ncicp:term-group&gt;PT&lt;/ncicp:term-group&gt;&lt;ncicp:term-source&gt;NCI&lt;/ncicp:term-source&gt;&lt;/ncicp:ComplexTerm&gt;</npo:FULL_SYN>
-        <npo:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NPO:1756</npo:code>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NPO:1756</oboInOwl:id>
-        <npo:synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">visible light</npo:synonym>
-        <npo:preferred_Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">visible light energy</npo:preferred_Name>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/NPO_1757 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NPO_1757">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sound energy</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NPO_1746"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/http://purl.bioontology.org/ontology/npo#is_realized_in"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NPO_1728"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <npo:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;ncicp:ComplexDefinition xmlns:ncicp=&quot;http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#&quot;&gt;&lt;ncicp:def-definition&gt;Kinetic energy which is produced by the vibrations of an object, and transported by disturbances (sound waves) traveling through a medium.&lt;/ncicp:def-definition&gt;&lt;ncicp:Definition_Review_Date&gt;100608&lt;/ncicp:Definition_Review_Date&gt;&lt;ncicp:def-source&gt;NPO&lt;/ncicp:def-source&gt;&lt;ncicp:Definition_Reviewer_Name&gt;Dennis Thomas&lt;/ncicp:Definition_Reviewer_Name&gt;&lt;/ncicp:ComplexDefinition&gt;</npo:definition>
-        <npo:FULL_SYN rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;ncicp:ComplexTerm xmlns:ncicp=&quot;http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#&quot;&gt;&lt;ncicp:term-name&gt;sound energy&lt;/ncicp:term-name&gt;&lt;ncicp:term-group&gt;PT&lt;/ncicp:term-group&gt;&lt;ncicp:term-source&gt;NCI&lt;/ncicp:term-source&gt;&lt;/ncicp:ComplexTerm&gt;</npo:FULL_SYN>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NPO:1757</oboInOwl:id>
-        <npo:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NPO:1757</npo:code>
-        <npo:synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sound</npo:synonym>
-        <npo:preferred_Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sound energy</npo:preferred_Name>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/NPO_1759 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NPO_1759">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ultrasound energy</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NPO_1757"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/http://purl.bioontology.org/ontology/npo#is_realized_in"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NPO_1730"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <npo:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;ncicp:ComplexDefinition xmlns:ncicp=&quot;http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#&quot;&gt;&lt;ncicp:def-definition&gt;Sound energy which is carried by waves (ultrasound waves) that travel at frequencies above the human audible range (above 20 kHz).&lt;/ncicp:def-definition&gt;&lt;ncicp:Definition_Review_Date&gt;100608&lt;/ncicp:Definition_Review_Date&gt;&lt;ncicp:def-source&gt;NPO&lt;/ncicp:def-source&gt;&lt;ncicp:Definition_Reviewer_Name&gt;Dennis Thomas&lt;/ncicp:Definition_Reviewer_Name&gt;&lt;/ncicp:ComplexDefinition&gt;</npo:definition>
-        <npo:FULL_SYN rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;ncicp:ComplexTerm xmlns:ncicp=&quot;http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#&quot;&gt;&lt;ncicp:term-name&gt;ultrasound energy&lt;/ncicp:term-name&gt;&lt;ncicp:term-group&gt;PT&lt;/ncicp:term-group&gt;&lt;ncicp:term-source&gt;NCI&lt;/ncicp:term-source&gt;&lt;/ncicp:ComplexTerm&gt;</npo:FULL_SYN>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NPO:1759</oboInOwl:id>
-        <npo:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NPO:1759</npo:code>
-        <npo:synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ultrasonic sound</npo:synonym>
-        <npo:synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ultrasound</npo:synonym>
-        <npo:preferred_Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ultrasound energy</npo:preferred_Name>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/http://purl.bioontology.org/ontology/npo#Continuant -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/http://purl.bioontology.org/ontology/npo#Continuant">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">continuant</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/http://purl.bioontology.org/ontology/npo#Entity"/>
-        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/http://purl.bioontology.org/ontology/npo#Occurrent"/>
-        <npo:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;ncicp:ComplexDefinition xmlns:ncicp=&quot;http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#&quot;&gt;&lt;ncicp:def-definition&gt;An entity [bfo:Entity] that exists in full at any time in which it exists at all, persists through time while maintaining its identity and has no temporal parts.&lt;/ncicp:def-definition&gt;&lt;ncicp:Definition_Review_Date&gt;100428&lt;/ncicp:Definition_Review_Date&gt;&lt;ncicp:def-source&gt;NPO&lt;/ncicp:def-source&gt;&lt;ncicp:attr&gt;BFO (v. 1.1)&lt;/ncicp:attr&gt;&lt;ncicp:Definition_Reviewer_Name&gt;Dennis Thomas&lt;/ncicp:Definition_Reviewer_Name&gt;&lt;/ncicp:ComplexDefinition&gt;</npo:definition>
-        <npo:FULL_SYN rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral">&lt;ncicp:ComplexTerm&gt;&lt;ncicp:term-name&gt;continuant&lt;/ncicp:term-name&gt;&lt;ncicp:term-group&gt;PT&lt;/ncicp:term-group&gt;&lt;ncicp:term-source&gt;NCI&lt;/ncicp:term-source&gt;&lt;/ncicp:ComplexTerm&gt;</npo:FULL_SYN>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Continuant</oboInOwl:id>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Examples: a heart, a person, the color of a tomato, the mass of a cloud, a symphony orchestra, the disposition of blood to coagulate, the lawn and atmosphere in front of our building</rdfs:comment>
-        <npo:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NPO:259</npo:code>
-        <npo:preferred_Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">continuant</npo:preferred_Name>
-        <npo:synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">endurant</npo:synonym>
-        <npo:dBXrefID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">snap:Continuant</npo:dBXrefID>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/http://purl.bioontology.org/ontology/npo#DependentContinuant -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/http://purl.bioontology.org/ontology/npo#DependentContinuant">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dependent_continuant</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/http://purl.bioontology.org/ontology/npo#Continuant"/>
-        <npo:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;ncicp:ComplexDefinition xmlns:ncicp=&quot;http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#&quot;&gt;&lt;ncicp:def-definition&gt;A continuant [snap:Continuant] that is either dependent on one or other independent continuant [snap:IndependentContinuant] bearers or inheres in or is borne by other entities.&lt;/ncicp:def-definition&gt;&lt;ncicp:Definition_Review_Date&gt;100428&lt;/ncicp:Definition_Review_Date&gt;&lt;ncicp:def-source&gt;NPO&lt;/ncicp:def-source&gt;&lt;ncicp:attr&gt;BFO (v. 1.1)&lt;/ncicp:attr&gt;&lt;ncicp:Definition_Reviewer_Name&gt;Dennis Thomas&lt;/ncicp:Definition_Reviewer_Name&gt;&lt;/ncicp:ComplexDefinition&gt;</npo:definition>
-        <npo:FULL_SYN rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral">&lt;ncicp:ComplexTerm&gt;&lt;ncicp:term-name&gt;dependent continuant&lt;/ncicp:term-name&gt;&lt;ncicp:term-group&gt;PT&lt;/ncicp:term-group&gt;&lt;ncicp:term-source&gt;NCI&lt;/ncicp:term-source&gt;&lt;/ncicp:ComplexTerm&gt;</npo:FULL_SYN>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DependentContinuant</oboInOwl:id>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">In order for a dependent continuant to exist, some other entity must exist.</rdfs:comment>
-        <npo:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NPO:607</npo:code>
-        <npo:preferred_Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dependent continuant</npo:preferred_Name>
-        <npo:dBXrefID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">snap:DependentContinuant</npo:dBXrefID>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/http://purl.bioontology.org/ontology/npo#Entity -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/http://purl.bioontology.org/ontology/npo#Entity">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">entity</rdfs:label>
-        <npo:definition rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral">&lt;ncicp:ComplexDefinition&gt;&lt;ncicp:def-source&gt;NPO&lt;/ncicp:def-source&gt;&lt;ncicp:def-definition&gt;An entity is a thing which exists in reality.&lt;/ncicp:def-definition&gt;&lt;/ncicp:ComplexDefinition&gt;</npo:definition>
-        <npo:FULL_SYN rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral">&lt;ncicp:ComplexTerm&gt;&lt;ncicp:term-name&gt;entity&lt;/ncicp:term-name&gt;&lt;ncicp:term-group&gt;PT&lt;/ncicp:term-group&gt;&lt;ncicp:term-source&gt;NCI&lt;/ncicp:term-source&gt;&lt;/ncicp:ComplexTerm&gt;</npo:FULL_SYN>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Entity</oboInOwl:id>
-        <npo:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NPO:258</npo:code>
-        <npo:preferred_Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">entity</npo:preferred_Name>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/http://purl.bioontology.org/ontology/npo#Occurrent -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/http://purl.bioontology.org/ontology/npo#Occurrent">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">occurrent</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/http://purl.bioontology.org/ontology/npo#Entity"/>
-        <npo:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;ncicp:ComplexDefinition xmlns:ncicp=&quot;http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#&quot;&gt;&lt;ncicp:def-definition&gt;An entity [bfo:Entity] that has temporal parts and that happens, unfolds or develops through time. Sometimes also called perdurants.&lt;/ncicp:def-definition&gt;&lt;ncicp:Definition_Review_Date&gt;100428&lt;/ncicp:Definition_Review_Date&gt;&lt;ncicp:def-source&gt;NPO&lt;/ncicp:def-source&gt;&lt;ncicp:attr&gt;BFO (v. 1.1)&lt;/ncicp:attr&gt;&lt;ncicp:Definition_Reviewer_Name&gt;Dennis Thomas&lt;/ncicp:Definition_Reviewer_Name&gt;&lt;/ncicp:ComplexDefinition&gt;</npo:definition>
-        <npo:FULL_SYN rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral">&lt;ncicp:ComplexTerm&gt;&lt;ncicp:term-name&gt;occurrent&lt;/ncicp:term-name&gt;&lt;ncicp:term-group&gt;PT&lt;/ncicp:term-group&gt;&lt;ncicp:term-source&gt;NCI&lt;/ncicp:term-source&gt;&lt;/ncicp:ComplexTerm&gt;</npo:FULL_SYN>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Examples: the life of an organism, a surgical operation as processual context for a nosocomical infection, the spatiotemporal context occupied by a process of cellular meiosis, the most interesting part of Van Gogh&apos;s life, the spatiotemporal region occupied by the development of a cancer tumor</rdfs:comment>
-        <npo:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NPO:923</npo:code>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Occurrent</oboInOwl:id>
-        <npo:preferred_Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">occurrent</npo:preferred_Name>
-        <npo:synonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">perdurant</npo:synonym>
-        <npo:dBXrefID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">span:Occurrent</npo:dBXrefID>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/http://purl.bioontology.org/ontology/npo#Process -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/http://purl.bioontology.org/ontology/npo#Process">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">process</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/http://purl.bioontology.org/ontology/npo#ProcessualEntity"/>
-        <npo:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;ncicp:ComplexDefinition xmlns:ncicp=&quot;http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#&quot;&gt;&lt;ncicp:def-definition&gt;A processual entity [span:ProcessualEntity] that is a maximally connected spatiotemporal whole and has bona fide beginnings and endings corresponding to real discontinuities.&lt;/ncicp:def-definition&gt;&lt;ncicp:Definition_Review_Date&gt;100405&lt;/ncicp:Definition_Review_Date&gt;&lt;ncicp:def-source&gt;NPO&lt;/ncicp:def-source&gt;&lt;ncicp:attr&gt;BFO&lt;/ncicp:attr&gt;&lt;ncicp:Definition_Reviewer_Name&gt;Dennis Thomas&lt;/ncicp:Definition_Reviewer_Name&gt;&lt;/ncicp:ComplexDefinition&gt;</npo:definition>
-        <npo:FULL_SYN rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral">&lt;ncicp:ComplexTerm&gt;&lt;ncicp:term-name&gt;process&lt;/ncicp:term-name&gt;&lt;ncicp:term-group&gt;PT&lt;/ncicp:term-group&gt;&lt;ncicp:term-source&gt;NCI&lt;/ncicp:term-source&gt;&lt;/ncicp:ComplexTerm&gt;</npo:FULL_SYN>
-        <npo:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NPO:336</npo:code>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Process</oboInOwl:id>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[definition source]: BFO</rdfs:comment>
-        <npo:preferred_Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">process</npo:preferred_Name>
-        <npo:dBXrefID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">span:Process</npo:dBXrefID>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/http://purl.bioontology.org/ontology/npo#ProcessualEntity -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/http://purl.bioontology.org/ontology/npo#ProcessualEntity">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">processual_entity</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/http://purl.bioontology.org/ontology/npo#Occurrent"/>
-        <npo:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;ncicp:ComplexDefinition xmlns:ncicp=&quot;http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#&quot;&gt;&lt;ncicp:def-definition&gt;An occurrent [span:Occurrent] that exists in time by occurring or happening, has temporal parts and always involves and depends on some entity.&lt;/ncicp:def-definition&gt;&lt;ncicp:Definition_Review_Date&gt;100428&lt;/ncicp:Definition_Review_Date&gt;&lt;ncicp:def-source&gt;NPO&lt;/ncicp:def-source&gt;&lt;ncicp:attr&gt;BFO (v. 1.1)&lt;/ncicp:attr&gt;&lt;ncicp:Definition_Reviewer_Name&gt;Dennis Thomas&lt;/ncicp:Definition_Reviewer_Name&gt;&lt;/ncicp:ComplexDefinition&gt;</npo:definition>
-        <npo:FULL_SYN rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral">&lt;ncicp:ComplexTerm&gt;&lt;ncicp:term-name&gt;processual entity&lt;/ncicp:term-name&gt;&lt;ncicp:term-group&gt;PT&lt;/ncicp:term-group&gt;&lt;ncicp:term-source&gt;NCI&lt;/ncicp:term-source&gt;&lt;/ncicp:ComplexTerm&gt;</npo:FULL_SYN>
-        <npo:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NPO:703</npo:code>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ProcessualEntity</oboInOwl:id>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[source]: BFO v. 1.1</rdfs:comment>
-        <npo:preferred_Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">processual entity</npo:preferred_Name>
-        <npo:dBXrefID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">span:ProcessualEntity</npo:dBXrefID>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/http://purl.bioontology.org/ontology/npo#RealizableEntity -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/http://purl.bioontology.org/ontology/npo#RealizableEntity">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">realizable_entity</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/http://purl.bioontology.org/ontology/npo#SpecificallyDependentContinuant"/>
-        <npo:definition rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral">&lt;ncicp:ComplexDefinition&gt;&lt;ncicp:def-source&gt;NPO&lt;/ncicp:def-source&gt;&lt;ncicp:def-definition&gt;A specifically dependent continuant [snap:SpecificallyDependentContinuant] that inheres in continuant [snap:Continuant] entities and are not exhibited in full at every time in which it inheres in an entity or group of entities. The exhibition or actualization of a realizable entity is a particular manifestation, functioning or process that occurs under certain circumstances.&lt;/ncicp:def-definition&gt;&lt;/ncicp:ComplexDefinition&gt;</npo:definition>
-        <npo:FULL_SYN rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral">&lt;ncicp:ComplexTerm&gt;&lt;ncicp:term-name&gt;realizable entity&lt;/ncicp:term-name&gt;&lt;ncicp:term-group&gt;PT&lt;/ncicp:term-group&gt;&lt;ncicp:term-source&gt;NCI&lt;/ncicp:term-source&gt;&lt;/ncicp:ComplexTerm&gt;</npo:FULL_SYN>
-        <npo:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NPO:237</npo:code>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RealizableEntity</oboInOwl:id>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Source: (1) BFO.owl v. 1.1; (2) Robert Arp and Barry Smith &quot;Function, Role and Disposition in Basic Formal Ontology&quot; NATURE PROCEEDINGS, 2008.</rdfs:comment>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">realizable entities are defined by the fact that they can be realized (manifested, actualized, executed) in occurrents of corresponding sorts.</rdfs:comment>
-        <npo:preferred_Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">realizable entity</npo:preferred_Name>
-        <npo:dBXrefID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">snap:RealizableEntity</npo:dBXrefID>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/http://purl.bioontology.org/ontology/npo#SpecificallyDependentContinuant -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/http://purl.bioontology.org/ontology/npo#SpecificallyDependentContinuant">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">specifically_dependent_continuant</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/http://purl.bioontology.org/ontology/npo#DependentContinuant"/>
-        <npo:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;ncicp:ComplexDefinition xmlns:ncicp=&quot;http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#&quot;&gt;&lt;ncicp:def-definition&gt;A continuant [snap:Continuant] that inheres in or is borne by other entities. Every instance of A requires some specific instance of B which must always be the same.&lt;/ncicp:def-definition&gt;&lt;ncicp:Definition_Review_Date&gt;100428&lt;/ncicp:Definition_Review_Date&gt;&lt;ncicp:def-source&gt;NPO&lt;/ncicp:def-source&gt;&lt;ncicp:attr&gt;BFO&lt;/ncicp:attr&gt;&lt;ncicp:Definition_Reviewer_Name&gt;Dennis Thomas&lt;/ncicp:Definition_Reviewer_Name&gt;&lt;/ncicp:ComplexDefinition&gt;</npo:definition>
-        <npo:FULL_SYN rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral">&lt;ncicp:ComplexTerm&gt;&lt;ncicp:term-name&gt;specifically dependent continuant&lt;/ncicp:term-name&gt;&lt;ncicp:term-group&gt;PT&lt;/ncicp:term-group&gt;&lt;ncicp:term-source&gt;NCI&lt;/ncicp:term-source&gt;&lt;/ncicp:ComplexTerm&gt;</npo:FULL_SYN>
-        <npo:code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NPO:1601</npo:code>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SpecificallyDependentContinuant</oboInOwl:id>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Synonyms: property, trope, mode; Examples: the mass of a cloud, the smell of mozzarella, the liquidity of blood, the color of a tomato, the disposition of fish to decay, the role of being a doctor, the function of the heart in the body: to pump blood, to receive de-oxygenated and oxygenated blood, etc.</rdfs:comment>
-        <npo:dBXrefID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">snap:SpecificallyDependentContinuant</npo:dBXrefID>
-        <npo:preferred_Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">specifically dependent continuant</npo:preferred_Name>
-    </owl:Class>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Individuals
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://purl.bioontology.org/ontology/npo -->
-
-    <owl:NamedIndividual rdf:about="http://purl.bioontology.org/ontology/npo">
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dennis G. Thomas</dc:creator>
-    </owl:NamedIndividual>
 </rdf:RDF>
 
 
 
-<!-- Generated by the OWL API (version 0.0.1-SNAPSHOT) http://owlapi.sourceforge.net -->
+<!-- Generated by the OWL API (version 0.0.1-SNAPSHOT) https://github.com/owlcs/owlapi -->
 

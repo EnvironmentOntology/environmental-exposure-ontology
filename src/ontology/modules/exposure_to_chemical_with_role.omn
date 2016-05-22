@@ -2,23 +2,23 @@ Prefix: : <http://purl.obolibrary.org/obo/>
 Prefix: IAO: <http://purl.obolibrary.org/obo/IAO_>
 Prefix: DOSDP: <http://geneontology.org/foo/>
 Prefix: oio: <http://www.geneontology.org/formats/oboInOwl#>
-Prefix: PATO: <http://purl.obolibrary.org/obo/PATO_>
-Prefix: PO: <http://purl.obolibrary.org/obo/PO_>
-Prefix: UBERON: <http://purl.obolibrary.org/obo/UBERON_>
-Prefix: ECTO: <http://purl.obolibrary.org/obo/ECTO_>
 Prefix: SO: <http://purl.obolibrary.org/obo/SO_>
-Prefix: GO: <http://purl.obolibrary.org/obo/GO_>
-Prefix: BFO: <http://purl.obolibrary.org/obo/BFO_>
-Prefix: OBA: <http://purl.obolibrary.org/obo/OBA_>
-Prefix: RO: <http://purl.obolibrary.org/obo/RO_>
-Prefix: PR: <http://purl.obolibrary.org/obo/PR_>
-Prefix: GOCHE: <http://purl.obolibrary.org/obo/GOCHE_>
-Prefix: CL: <http://purl.obolibrary.org/obo/CL_>
-Prefix: NPO: <http://purl.obolibrary.org/obo/NPO_>
-Prefix: ENVO: <http://purl.obolibrary.org/obo/ENVO_>
-Prefix: CHEBI: <http://purl.obolibrary.org/obo/CHEBI_>
 Prefix: ExO: <http://purl.obolibrary.org/obo/ExO_>
 Prefix: NBO: <http://purl.obolibrary.org/obo/NBO_>
+Prefix: GOCHE: <http://purl.obolibrary.org/obo/GOCHE_>
+Prefix: PR: <http://purl.obolibrary.org/obo/PR_>
+Prefix: PO: <http://purl.obolibrary.org/obo/PO_>
+Prefix: UBERON: <http://purl.obolibrary.org/obo/UBERON_>
+Prefix: CL: <http://purl.obolibrary.org/obo/CL_>
+Prefix: ECTO: <http://purl.obolibrary.org/obo/ECTO_>
+Prefix: RO: <http://purl.obolibrary.org/obo/RO_>
+Prefix: PATO: <http://purl.obolibrary.org/obo/PATO_>
+Prefix: NPO: <http://purl.obolibrary.org/obo/NPO_>
+Prefix: OBA: <http://purl.obolibrary.org/obo/OBA_>
+Prefix: BFO: <http://purl.obolibrary.org/obo/BFO_>
+Prefix: ENVO: <http://purl.obolibrary.org/obo/ENVO_>
+Prefix: CHEBI: <http://purl.obolibrary.org/obo/CHEBI_>
+Prefix: GO: <http://purl.obolibrary.org/obo/GO_>
 
  ## Auto-generated
 
@@ -30,10 +30,10 @@ AnnotationProperty: oio:hasExactSynonym
 AnnotationProperty: oio:hasExactSynonym
 Class: CHEBI:24431 ## chemical entity
 Class: ExO:0000002 ## exposure event
-ObjectProperty: BFO_0000050 ## stressor
-ObjectProperty: RO:0000087 ## has role
-ObjectProperty: BFO_0000050 ## part of
 ObjectProperty: RO:0002233 ## has input
+ObjectProperty: BFO_0000050 ## stressor
+ObjectProperty: BFO_0000050 ## part of
+ObjectProperty: RO:0000087 ## has role
 ## Auto-generated classes
 
 Class: CHEBI:24432 ## biological role
@@ -4355,3 +4355,354 @@ Class: ECTO:0000964
  Annotations: oio:hasExactSynonym "elastin-laminin receptor agonist exposure"
  Annotations: oio:hasExactSynonym "elastin-laminin receptor agonist exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (RO:0000087 some CHEBI:91139) ## 'exposure event' and 'has input' some ('has role' some elastin-laminin receptor agonist)
+
+Class: CHEBI:22583 ## antifeedant
+## {"stressor": "CHEBI:22583"}
+Class: ECTO:0001013
+ Annotations: rdfs:label "exposure to antifeedant"
+ Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to a antifeedant. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion."
+ Annotations: oio:hasExactSynonym "antifeedant exposure"
+ Annotations: oio:hasExactSynonym "antifeedant exposure event"
+ EquivalentTo: ExO:0000002 and RO:0002233 some (RO:0000087 some CHEBI:22583) ## 'exposure event' and 'has input' some ('has role' some antifeedant)
+
+Class: CHEBI:23092 ## chemosterilant
+## {"stressor": "CHEBI:23092"}
+Class: ECTO:0001014
+ Annotations: rdfs:label "exposure to chemosterilant"
+ Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to a chemosterilant. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion."
+ Annotations: oio:hasExactSynonym "chemosterilant exposure"
+ Annotations: oio:hasExactSynonym "chemosterilant exposure event"
+ EquivalentTo: ExO:0000002 and RO:0002233 some (RO:0000087 some CHEBI:23092) ## 'exposure event' and 'has input' some ('has role' some chemosterilant)
+
+Class: CHEBI:23100 ## chitin synthesis inhibitor
+## {"stressor": "CHEBI:23100"}
+Class: ECTO:0001015
+ Annotations: rdfs:label "exposure to chitin synthesis inhibitor"
+ Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to a chitin synthesis inhibitor. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion."
+ Annotations: oio:hasExactSynonym "chitin synthesis inhibitor exposure"
+ Annotations: oio:hasExactSynonym "chitin synthesis inhibitor exposure event"
+ EquivalentTo: ExO:0000002 and RO:0002233 some (RO:0000087 some CHEBI:23100) ## 'exposure event' and 'has input' some ('has role' some chitin synthesis inhibitor)
+
+Class: CHEBI:23529 ## cytochrome-b6f complex inhibitor
+## {"stressor": "CHEBI:23529"}
+Class: ECTO:0001016
+ Annotations: rdfs:label "exposure to cytochrome-b6f complex inhibitor"
+ Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to a cytochrome-b6f complex inhibitor. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion."
+ Annotations: oio:hasExactSynonym "cytochrome-b6f complex inhibitor exposure"
+ Annotations: oio:hasExactSynonym "cytochrome-b6f complex inhibitor exposure event"
+ EquivalentTo: ExO:0000002 and RO:0002233 some (RO:0000087 some CHEBI:23529) ## 'exposure event' and 'has input' some ('has role' some cytochrome-b6f complex inhibitor)
+
+Class: CHEBI:23891 ## ecdysone antagonists
+## {"stressor": "CHEBI:23891"}
+Class: ECTO:0001017
+ Annotations: rdfs:label "exposure to ecdysone antagonists"
+ Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to a ecdysone antagonists. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion."
+ Annotations: oio:hasExactSynonym "ecdysone antagonists exposure"
+ Annotations: oio:hasExactSynonym "ecdysone antagonists exposure event"
+ EquivalentTo: ExO:0000002 and RO:0002233 some (RO:0000087 some CHEBI:23891) ## 'exposure event' and 'has input' some ('has role' some ecdysone antagonists)
+
+Class: CHEBI:24850 ## insect attractant
+## {"stressor": "CHEBI:24850"}
+Class: ECTO:0001018
+ Annotations: rdfs:label "exposure to insect attractant"
+ Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to a insect attractant. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion."
+ Annotations: oio:hasExactSynonym "insect attractant exposure"
+ Annotations: oio:hasExactSynonym "insect attractant exposure event"
+ EquivalentTo: ExO:0000002 and RO:0002233 some (RO:0000087 some CHEBI:24850) ## 'exposure event' and 'has input' some ('has role' some insect attractant)
+
+Class: CHEBI:24851 ## insect growth regulator
+## {"stressor": "CHEBI:24851"}
+Class: ECTO:0001019
+ Annotations: rdfs:label "exposure to insect growth regulator"
+ Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to a insect growth regulator. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion."
+ Annotations: oio:hasExactSynonym "insect growth regulator exposure"
+ Annotations: oio:hasExactSynonym "insect growth regulator exposure event"
+ EquivalentTo: ExO:0000002 and RO:0002233 some (RO:0000087 some CHEBI:24851) ## 'exposure event' and 'has input' some ('has role' some insect growth regulator)
+
+Class: CHEBI:24941 ## juvenile hormone antagonists
+## {"stressor": "CHEBI:24941"}
+Class: ECTO:0001020
+ Annotations: rdfs:label "exposure to juvenile hormone antagonists"
+ Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to a juvenile hormone antagonists. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion."
+ Annotations: oio:hasExactSynonym "juvenile hormone antagonists exposure"
+ Annotations: oio:hasExactSynonym "juvenile hormone antagonists exposure event"
+ EquivalentTo: ExO:0000002 and RO:0002233 some (RO:0000087 some CHEBI:24941) ## 'exposure event' and 'has input' some ('has role' some juvenile hormone antagonists)
+
+Class: CHEBI:24942 ## juvenile hormone mimic
+## {"stressor": "CHEBI:24942"}
+Class: ECTO:0001021
+ Annotations: rdfs:label "exposure to juvenile hormone mimic"
+ Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to a juvenile hormone mimic. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion."
+ Annotations: oio:hasExactSynonym "juvenile hormone mimic exposure"
+ Annotations: oio:hasExactSynonym "juvenile hormone mimic exposure event"
+ EquivalentTo: ExO:0000002 and RO:0002233 some (RO:0000087 some CHEBI:24942) ## 'exposure event' and 'has input' some ('has role' some juvenile hormone mimic)
+
+Class: CHEBI:25943 ## pesticide synergist
+## {"stressor": "CHEBI:25943"}
+Class: ECTO:0001022
+ Annotations: rdfs:label "exposure to pesticide synergist"
+ Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to a pesticide synergist. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion."
+ Annotations: oio:hasExactSynonym "pesticide synergist exposure"
+ Annotations: oio:hasExactSynonym "pesticide synergist exposure event"
+ EquivalentTo: ExO:0000002 and RO:0002233 some (RO:0000087 some CHEBI:25943) ## 'exposure event' and 'has input' some ('has role' some pesticide synergist)
+
+Class: CHEBI:26087 ## photosynthetic electron-transport chain inhibitor
+## {"stressor": "CHEBI:26087"}
+Class: ECTO:0001023
+ Annotations: rdfs:label "exposure to photosynthetic electron-transport chain inhibitor"
+ Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to a photosynthetic electron-transport chain inhibitor. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion."
+ Annotations: oio:hasExactSynonym "photosynthetic electron-transport chain inhibitor exposure"
+ Annotations: oio:hasExactSynonym "photosynthetic electron-transport chain inhibitor exposure event"
+ EquivalentTo: ExO:0000002 and RO:0002233 some (RO:0000087 some CHEBI:26087) ## 'exposure event' and 'has input' some ('has role' some photosynthetic electron-transport chain inhibitor)
+
+Class: CHEBI:26088 ## photosystem-I inhibitor
+## {"stressor": "CHEBI:26088"}
+Class: ECTO:0001024
+ Annotations: rdfs:label "exposure to photosystem-I inhibitor"
+ Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to a photosystem-I inhibitor. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion."
+ Annotations: oio:hasExactSynonym "photosystem-I inhibitor exposure"
+ Annotations: oio:hasExactSynonym "photosystem-I inhibitor exposure event"
+ EquivalentTo: ExO:0000002 and RO:0002233 some (RO:0000087 some CHEBI:26088) ## 'exposure event' and 'has input' some ('has role' some photosystem-I inhibitor)
+
+Class: CHEBI:26089 ## photosystem-II inhibitor
+## {"stressor": "CHEBI:26089"}
+Class: ECTO:0001025
+ Annotations: rdfs:label "exposure to photosystem-II inhibitor"
+ Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to a photosystem-II inhibitor. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion."
+ Annotations: oio:hasExactSynonym "photosystem-II inhibitor exposure"
+ Annotations: oio:hasExactSynonym "photosystem-II inhibitor exposure event"
+ EquivalentTo: ExO:0000002 and RO:0002233 some (RO:0000087 some CHEBI:26089) ## 'exposure event' and 'has input' some ('has role' some photosystem-II inhibitor)
+
+Class: CHEBI:26220 ## precocenes
+## {"stressor": "CHEBI:26220"}
+Class: ECTO:0001026
+ Annotations: rdfs:label "exposure to precocenes"
+ Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to a precocenes. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion."
+ Annotations: oio:hasExactSynonym "precocenes exposure"
+ Annotations: oio:hasExactSynonym "precocenes exposure event"
+ EquivalentTo: ExO:0000002 and RO:0002233 some (RO:0000087 some CHEBI:26220) ## 'exposure event' and 'has input' some ('has role' some precocenes)
+
+Class: CHEBI:26413 ## pyrethroid insecticide
+## {"stressor": "CHEBI:26413"}
+Class: ECTO:0001027
+ Annotations: rdfs:label "exposure to pyrethroid insecticide"
+ Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to a pyrethroid insecticide. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion."
+ Annotations: oio:hasExactSynonym "pyrethroid insecticide exposure"
+ Annotations: oio:hasExactSynonym "pyrethroid insecticide exposure event"
+ EquivalentTo: ExO:0000002 and RO:0002233 some (RO:0000087 some CHEBI:26413) ## 'exposure event' and 'has input' some ('has role' some pyrethroid insecticide)
+
+Class: CHEBI:33904 ## molluscicide
+## {"stressor": "CHEBI:33904"}
+Class: ECTO:0001028
+ Annotations: rdfs:label "exposure to molluscicide"
+ Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to a molluscicide. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion."
+ Annotations: oio:hasExactSynonym "molluscicide exposure"
+ Annotations: oio:hasExactSynonym "molluscicide exposure event"
+ EquivalentTo: ExO:0000002 and RO:0002233 some (RO:0000087 some CHEBI:33904) ## 'exposure event' and 'has input' some ('has role' some molluscicide)
+
+Class: CHEBI:36053 ## acaricide drug
+## {"stressor": "CHEBI:36053"}
+Class: ECTO:0001029
+ Annotations: rdfs:label "exposure to acaricide drug"
+ Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to a acaricide drug. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion."
+ Annotations: oio:hasExactSynonym "acaricide drug exposure"
+ Annotations: oio:hasExactSynonym "acaricide drug exposure event"
+ EquivalentTo: ExO:0000002 and RO:0002233 some (RO:0000087 some CHEBI:36053) ## 'exposure event' and 'has input' some ('has role' some acaricide drug)
+
+Class: CHEBI:38456 ## ecdysone agonist
+## {"stressor": "CHEBI:38456"}
+Class: ECTO:0001030
+ Annotations: rdfs:label "exposure to ecdysone agonist"
+ Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to a ecdysone agonist. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion."
+ Annotations: oio:hasExactSynonym "ecdysone agonist exposure"
+ Annotations: oio:hasExactSynonym "ecdysone agonist exposure event"
+ EquivalentTo: ExO:0000002 and RO:0002233 some (RO:0000087 some CHEBI:38456) ## 'exposure event' and 'has input' some ('has role' some ecdysone agonist)
+
+Class: CHEBI:38461 ## carbamate insecticide
+## {"stressor": "CHEBI:38461"}
+Class: ECTO:0001031
+ Annotations: rdfs:label "exposure to carbamate insecticide"
+ Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to a carbamate insecticide. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion."
+ Annotations: oio:hasExactSynonym "carbamate insecticide exposure"
+ Annotations: oio:hasExactSynonym "carbamate insecticide exposure event"
+ EquivalentTo: ExO:0000002 and RO:0002233 some (RO:0000087 some CHEBI:38461) ## 'exposure event' and 'has input' some ('has role' some carbamate insecticide)
+
+Class: CHEBI:39116 ## pyrethroid ester insecticide
+## {"stressor": "CHEBI:39116"}
+Class: ECTO:0001032
+ Annotations: rdfs:label "exposure to pyrethroid ester insecticide"
+ Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to a pyrethroid ester insecticide. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion."
+ Annotations: oio:hasExactSynonym "pyrethroid ester insecticide exposure"
+ Annotations: oio:hasExactSynonym "pyrethroid ester insecticide exposure event"
+ EquivalentTo: ExO:0000002 and RO:0002233 some (RO:0000087 some CHEBI:39116) ## 'exposure event' and 'has input' some ('has role' some pyrethroid ester insecticide)
+
+Class: CHEBI:39208 ## antibiotic insecticide
+## {"stressor": "CHEBI:39208"}
+Class: ECTO:0001033
+ Annotations: rdfs:label "exposure to antibiotic insecticide"
+ Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to a antibiotic insecticide. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion."
+ Annotations: oio:hasExactSynonym "antibiotic insecticide exposure"
+ Annotations: oio:hasExactSynonym "antibiotic insecticide exposure event"
+ EquivalentTo: ExO:0000002 and RO:0002233 some (RO:0000087 some CHEBI:39208) ## 'exposure event' and 'has input' some ('has role' some antibiotic insecticide)
+
+Class: CHEBI:39215 ## antibiotic pesticide
+## {"stressor": "CHEBI:39215"}
+Class: ECTO:0001034
+ Annotations: rdfs:label "exposure to antibiotic pesticide"
+ Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to a antibiotic pesticide. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion."
+ Annotations: oio:hasExactSynonym "antibiotic pesticide exposure"
+ Annotations: oio:hasExactSynonym "antibiotic pesticide exposure event"
+ EquivalentTo: ExO:0000002 and RO:0002233 some (RO:0000087 some CHEBI:39215) ## 'exposure event' and 'has input' some ('has role' some antibiotic pesticide)
+
+Class: CHEBI:39216 ## antibiotic acaricide
+## {"stressor": "CHEBI:39216"}
+Class: ECTO:0001035
+ Annotations: rdfs:label "exposure to antibiotic acaricide"
+ Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to a antibiotic acaricide. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion."
+ Annotations: oio:hasExactSynonym "antibiotic acaricide exposure"
+ Annotations: oio:hasExactSynonym "antibiotic acaricide exposure event"
+ EquivalentTo: ExO:0000002 and RO:0002233 some (RO:0000087 some CHEBI:39216) ## 'exposure event' and 'has input' some ('has role' some antibiotic acaricide)
+
+Class: CHEBI:39217 ## antibiotic nematicide
+## {"stressor": "CHEBI:39217"}
+Class: ECTO:0001036
+ Annotations: rdfs:label "exposure to antibiotic nematicide"
+ Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to a antibiotic nematicide. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion."
+ Annotations: oio:hasExactSynonym "antibiotic nematicide exposure"
+ Annotations: oio:hasExactSynonym "antibiotic nematicide exposure event"
+ EquivalentTo: ExO:0000002 and RO:0002233 some (RO:0000087 some CHEBI:39217) ## 'exposure event' and 'has input' some ('has role' some antibiotic nematicide)
+
+Class: CHEBI:39259 ## pyrethroid ester acaricide
+## {"stressor": "CHEBI:39259"}
+Class: ECTO:0001037
+ Annotations: rdfs:label "exposure to pyrethroid ester acaricide"
+ Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to a pyrethroid ester acaricide. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion."
+ Annotations: oio:hasExactSynonym "pyrethroid ester acaricide exposure"
+ Annotations: oio:hasExactSynonym "pyrethroid ester acaricide exposure event"
+ EquivalentTo: ExO:0000002 and RO:0002233 some (RO:0000087 some CHEBI:39259) ## 'exposure event' and 'has input' some ('has role' some pyrethroid ester acaricide)
+
+Class: CHEBI:39276 ## fumigant
+## {"stressor": "CHEBI:39276"}
+Class: ECTO:0001038
+ Annotations: rdfs:label "exposure to fumigant"
+ Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to a fumigant. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion."
+ Annotations: oio:hasExactSynonym "fumigant exposure"
+ Annotations: oio:hasExactSynonym "fumigant exposure event"
+ EquivalentTo: ExO:0000002 and RO:0002233 some (RO:0000087 some CHEBI:39276) ## 'exposure event' and 'has input' some ('has role' some fumigant)
+
+Class: CHEBI:39277 ## fumigant insecticide
+## {"stressor": "CHEBI:39277"}
+Class: ECTO:0001039
+ Annotations: rdfs:label "exposure to fumigant insecticide"
+ Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to a fumigant insecticide. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion."
+ Annotations: oio:hasExactSynonym "fumigant insecticide exposure"
+ Annotations: oio:hasExactSynonym "fumigant insecticide exposure event"
+ EquivalentTo: ExO:0000002 and RO:0002233 some (RO:0000087 some CHEBI:39277) ## 'exposure event' and 'has input' some ('has role' some fumigant insecticide)
+
+Class: CHEBI:39301 ## sulfite ester acaricide
+## {"stressor": "CHEBI:39301"}
+Class: ECTO:0001040
+ Annotations: rdfs:label "exposure to sulfite ester acaricide"
+ Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to a sulfite ester acaricide. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion."
+ Annotations: oio:hasExactSynonym "sulfite ester acaricide exposure"
+ Annotations: oio:hasExactSynonym "sulfite ester acaricide exposure event"
+ EquivalentTo: ExO:0000002 and RO:0002233 some (RO:0000087 some CHEBI:39301) ## 'exposure event' and 'has input' some ('has role' some sulfite ester acaricide)
+
+Class: CHEBI:39316 ## mite growth regulator
+## {"stressor": "CHEBI:39316"}
+Class: ECTO:0001041
+ Annotations: rdfs:label "exposure to mite growth regulator"
+ Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to a mite growth regulator. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion."
+ Annotations: oio:hasExactSynonym "mite growth regulator exposure"
+ Annotations: oio:hasExactSynonym "mite growth regulator exposure event"
+ EquivalentTo: ExO:0000002 and RO:0002233 some (RO:0000087 some CHEBI:39316) ## 'exposure event' and 'has input' some ('has role' some mite growth regulator)
+
+Class: CHEBI:39318 ## tetrazine acaricide
+## {"stressor": "CHEBI:39318"}
+Class: ECTO:0001042
+ Annotations: rdfs:label "exposure to tetrazine acaricide"
+ Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to a tetrazine acaricide. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion."
+ Annotations: oio:hasExactSynonym "tetrazine acaricide exposure"
+ Annotations: oio:hasExactSynonym "tetrazine acaricide exposure event"
+ EquivalentTo: ExO:0000002 and RO:0002233 some (RO:0000087 some CHEBI:39318) ## 'exposure event' and 'has input' some ('has role' some tetrazine acaricide)
+
+Class: CHEBI:39351 ## pyrethroid ether insecticide
+## {"stressor": "CHEBI:39351"}
+Class: ECTO:0001043
+ Annotations: rdfs:label "exposure to pyrethroid ether insecticide"
+ Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to a pyrethroid ether insecticide. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion."
+ Annotations: oio:hasExactSynonym "pyrethroid ether insecticide exposure"
+ Annotations: oio:hasExactSynonym "pyrethroid ether insecticide exposure event"
+ EquivalentTo: ExO:0000002 and RO:0002233 some (RO:0000087 some CHEBI:39351) ## 'exposure event' and 'has input' some ('has role' some pyrethroid ether insecticide)
+
+Class: CHEBI:39369 ## pyrethroid ether acaricide
+## {"stressor": "CHEBI:39369"}
+Class: ECTO:0001044
+ Annotations: rdfs:label "exposure to pyrethroid ether acaricide"
+ Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to a pyrethroid ether acaricide. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion."
+ Annotations: oio:hasExactSynonym "pyrethroid ether acaricide exposure"
+ Annotations: oio:hasExactSynonym "pyrethroid ether acaricide exposure event"
+ EquivalentTo: ExO:0000002 and RO:0002233 some (RO:0000087 some CHEBI:39369) ## 'exposure event' and 'has input' some ('has role' some pyrethroid ether acaricide)
+
+Class: CHEBI:39378 ## homopteran inhibitor of chitin biosynthesis
+## {"stressor": "CHEBI:39378"}
+Class: ECTO:0001045
+ Annotations: rdfs:label "exposure to homopteran inhibitor of chitin biosynthesis"
+ Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to a homopteran inhibitor of chitin biosynthesis. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion."
+ Annotations: oio:hasExactSynonym "homopteran inhibitor of chitin biosynthesis exposure"
+ Annotations: oio:hasExactSynonym "homopteran inhibitor of chitin biosynthesis exposure event"
+ EquivalentTo: ExO:0000002 and RO:0002233 some (RO:0000087 some CHEBI:39378) ## 'exposure event' and 'has input' some ('has role' some homopteran inhibitor of chitin biosynthesis)
+
+Class: CHEBI:39379 ## lepidopteran inhibitor of chitin biosynthesis
+## {"stressor": "CHEBI:39379"}
+Class: ECTO:0001046
+ Annotations: rdfs:label "exposure to lepidopteran inhibitor of chitin biosynthesis"
+ Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to a lepidopteran inhibitor of chitin biosynthesis. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion."
+ Annotations: oio:hasExactSynonym "lepidopteran inhibitor of chitin biosynthesis exposure"
+ Annotations: oio:hasExactSynonym "lepidopteran inhibitor of chitin biosynthesis exposure event"
+ EquivalentTo: ExO:0000002 and RO:0002233 some (RO:0000087 some CHEBI:39379) ## 'exposure event' and 'has input' some ('has role' some lepidopteran inhibitor of chitin biosynthesis)
+
+Class: CHEBI:39415 ## dinitrophenol insecticide
+## {"stressor": "CHEBI:39415"}
+Class: ECTO:0001047
+ Annotations: rdfs:label "exposure to dinitrophenol insecticide"
+ Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to a dinitrophenol insecticide. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion."
+ Annotations: oio:hasExactSynonym "dinitrophenol insecticide exposure"
+ Annotations: oio:hasExactSynonym "dinitrophenol insecticide exposure event"
+ EquivalentTo: ExO:0000002 and RO:0002233 some (RO:0000087 some CHEBI:39415) ## 'exposure event' and 'has input' some ('has role' some dinitrophenol insecticide)
+
+Class: CHEBI:51076 ## antifouling biocide
+## {"stressor": "CHEBI:51076"}
+Class: ECTO:0001048
+ Annotations: rdfs:label "exposure to antifouling biocide"
+ Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to a antifouling biocide. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion."
+ Annotations: oio:hasExactSynonym "antifouling biocide exposure"
+ Annotations: oio:hasExactSynonym "antifouling biocide exposure event"
+ EquivalentTo: ExO:0000002 and RO:0002233 some (RO:0000087 some CHEBI:51076) ## 'exposure event' and 'has input' some ('has role' some antifouling biocide)
+
+Class: CHEBI:67105 ## insect sterilant
+## {"stressor": "CHEBI:67105"}
+Class: ECTO:0001049
+ Annotations: rdfs:label "exposure to insect sterilant"
+ Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to a insect sterilant. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion."
+ Annotations: oio:hasExactSynonym "insect sterilant exposure"
+ Annotations: oio:hasExactSynonym "insect sterilant exposure event"
+ EquivalentTo: ExO:0000002 and RO:0002233 some (RO:0000087 some CHEBI:67105) ## 'exposure event' and 'has input' some ('has role' some insect sterilant)
+
+Class: CHEBI:71692 ## insect repellent
+## {"stressor": "CHEBI:71692"}
+Class: ECTO:0001050
+ Annotations: rdfs:label "exposure to insect repellent"
+ Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to a insect repellent. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion."
+ Annotations: oio:hasExactSynonym "insect repellent exposure"
+ Annotations: oio:hasExactSynonym "insect repellent exposure event"
+ EquivalentTo: ExO:0000002 and RO:0002233 some (RO:0000087 some CHEBI:71692) ## 'exposure event' and 'has input' some ('has role' some insect repellent)
+
+Class: CHEBI:73333 ## scabicide
+## {"stressor": "CHEBI:73333"}
+Class: ECTO:0001051
+ Annotations: rdfs:label "exposure to scabicide"
+ Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to a scabicide. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion."
+ Annotations: oio:hasExactSynonym "scabicide exposure"
+ Annotations: oio:hasExactSynonym "scabicide exposure event"
+ EquivalentTo: ExO:0000002 and RO:0002233 some (RO:0000087 some CHEBI:73333) ## 'exposure event' and 'has input' some ('has role' some scabicide)

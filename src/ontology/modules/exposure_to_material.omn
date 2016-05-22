@@ -2,23 +2,23 @@ Prefix: : <http://purl.obolibrary.org/obo/>
 Prefix: IAO: <http://purl.obolibrary.org/obo/IAO_>
 Prefix: DOSDP: <http://geneontology.org/foo/>
 Prefix: oio: <http://www.geneontology.org/formats/oboInOwl#>
-Prefix: ExO: <http://purl.obolibrary.org/obo/ExO_>
-Prefix: PATO: <http://purl.obolibrary.org/obo/PATO_>
-Prefix: ENVO: <http://purl.obolibrary.org/obo/ENVO_>
-Prefix: GO: <http://purl.obolibrary.org/obo/GO_>
 Prefix: NBO: <http://purl.obolibrary.org/obo/NBO_>
-Prefix: ECTO: <http://purl.obolibrary.org/obo/ECTO_>
 Prefix: NPO: <http://purl.obolibrary.org/obo/NPO_>
+Prefix: ExO: <http://purl.obolibrary.org/obo/ExO_>
+Prefix: OBA: <http://purl.obolibrary.org/obo/OBA_>
+Prefix: RO: <http://purl.obolibrary.org/obo/RO_>
+Prefix: ECTO: <http://purl.obolibrary.org/obo/ECTO_>
+Prefix: CHEBI: <http://purl.obolibrary.org/obo/CHEBI_>
+Prefix: ENVO: <http://purl.obolibrary.org/obo/ENVO_>
+Prefix: UBERON: <http://purl.obolibrary.org/obo/UBERON_>
+Prefix: PO: <http://purl.obolibrary.org/obo/PO_>
+Prefix: GO: <http://purl.obolibrary.org/obo/GO_>
+Prefix: BFO: <http://purl.obolibrary.org/obo/BFO_>
+Prefix: SO: <http://purl.obolibrary.org/obo/SO_>
 Prefix: CL: <http://purl.obolibrary.org/obo/CL_>
 Prefix: PR: <http://purl.obolibrary.org/obo/PR_>
-Prefix: SO: <http://purl.obolibrary.org/obo/SO_>
 Prefix: GOCHE: <http://purl.obolibrary.org/obo/GOCHE_>
-Prefix: OBA: <http://purl.obolibrary.org/obo/OBA_>
-Prefix: PO: <http://purl.obolibrary.org/obo/PO_>
-Prefix: RO: <http://purl.obolibrary.org/obo/RO_>
-Prefix: CHEBI: <http://purl.obolibrary.org/obo/CHEBI_>
-Prefix: UBERON: <http://purl.obolibrary.org/obo/UBERON_>
-Prefix: BFO: <http://purl.obolibrary.org/obo/BFO_>
+Prefix: PATO: <http://purl.obolibrary.org/obo/PATO_>
 
  ## Auto-generated
 
@@ -28,10 +28,10 @@ AnnotationProperty: exo/patterns/exposure_to_material/stressor
 AnnotationProperty: DOSDP:applies-pattern
 AnnotationProperty: oio:hasExactSynonym
 AnnotationProperty: oio:hasExactSynonym
-Class: ENVO:00010483 ## environmental material
 Class: ExO:0000002 ## exposure event
-ObjectProperty: RO:0002233 ## has input
+Class: ENVO:00010483 ## environmental material
 ObjectProperty: BFO_0000050 ## part of
+ObjectProperty: RO:0002233 ## has input
 ObjectProperty: BFO_0000050 ## stressor
 ## Auto-generated classes
 
@@ -529,15 +529,6 @@ Class: ECTO:0000069
  Annotations: oio:hasExactSynonym "bile exposure"
  Annotations: oio:hasExactSynonym "bile exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some ENVO:02000023 ## 'exposure event' and 'has input' some bile
-
-Class: ENVO:01000060 ## particulate matter
-## {"stressor": "ENVO:01000060"}
-Class: ECTO:0000109
- Annotations: rdfs:label "exposure to particulate matter"
- Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to particulate matter. Exposure may be through a variety of means, including through the air or through ingestion."
- Annotations: oio:hasExactSynonym "particulate matter exposure"
- Annotations: oio:hasExactSynonym "particulate matter exposure event"
- EquivalentTo: ExO:0000002 and RO:0002233 some ENVO:01000060 ## 'exposure event' and 'has input' some particulate matter
 
 Class: ENVO:00010505 ## aerosol
 ## {"stressor": "ENVO:00010505"}

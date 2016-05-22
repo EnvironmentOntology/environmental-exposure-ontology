@@ -52,6 +52,35 @@ name: physical object quality
 is_a: PATO:0000001 ! quality
 
 [Term]
+id: PATO:0001305
+name: increased temperature
+is_a: PATO:0000146 ! temperature
+is_a: PATO:0002305 ! increased object quality
+
+[Term]
+id: PATO:0001306
+name: decreased temperature
+is_a: PATO:0000146 ! temperature
+is_a: PATO:0002303 ! decreased object quality
+
+[Term]
+id: PATO:0001575
+name: decreased pressure
+is_a: PATO:0001025 ! pressure
+is_a: PATO:0002303 ! decreased object quality
+
+[Term]
+id: PATO:0001576
+name: increased pressure
+is_a: PATO:0001025 ! pressure
+is_a: PATO:0002305 ! increased object quality
+
+[Term]
+id: PATO:0001985
+name: frozen
+is_a: PATO:0000146 ! temperature
+
+[Term]
 id: PATO:0001997
 name: decreased amount
 is_a: PATO:0000467 ! present
@@ -66,6 +95,18 @@ is_a: PATO:0000069 ! deviation(from_normal)
 id: PATO:0002301
 name: decreased quality
 is_a: PATO:0000069 ! deviation(from_normal)
+
+[Term]
+id: PATO:0002303
+name: decreased object quality
+is_a: PATO:0001241 ! physical object quality
+is_a: PATO:0002301 ! decreased quality
+
+[Term]
+id: PATO:0002305
+name: increased object quality
+is_a: PATO:0001241 ! physical object quality
+is_a: PATO:0002300 ! increased quality
 
 [Typedef]
 id: BFO:0000050

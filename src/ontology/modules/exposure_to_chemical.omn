@@ -2,23 +2,23 @@ Prefix: : <http://purl.obolibrary.org/obo/>
 Prefix: IAO: <http://purl.obolibrary.org/obo/IAO_>
 Prefix: DOSDP: <http://geneontology.org/foo/>
 Prefix: oio: <http://www.geneontology.org/formats/oboInOwl#>
-Prefix: UBERON: <http://purl.obolibrary.org/obo/UBERON_>
-Prefix: RO: <http://purl.obolibrary.org/obo/RO_>
-Prefix: BFO: <http://purl.obolibrary.org/obo/BFO_>
-Prefix: GOCHE: <http://purl.obolibrary.org/obo/GOCHE_>
-Prefix: PR: <http://purl.obolibrary.org/obo/PR_>
 Prefix: SO: <http://purl.obolibrary.org/obo/SO_>
-Prefix: CHEBI: <http://purl.obolibrary.org/obo/CHEBI_>
-Prefix: ECTO: <http://purl.obolibrary.org/obo/ECTO_>
-Prefix: PO: <http://purl.obolibrary.org/obo/PO_>
+Prefix: PR: <http://purl.obolibrary.org/obo/PR_>
+Prefix: PATO: <http://purl.obolibrary.org/obo/PATO_>
+Prefix: NBO: <http://purl.obolibrary.org/obo/NBO_>
+Prefix: GOCHE: <http://purl.obolibrary.org/obo/GOCHE_>
 Prefix: ExO: <http://purl.obolibrary.org/obo/ExO_>
-Prefix: GO: <http://purl.obolibrary.org/obo/GO_>
-Prefix: CL: <http://purl.obolibrary.org/obo/CL_>
+Prefix: UBERON: <http://purl.obolibrary.org/obo/UBERON_>
 Prefix: ENVO: <http://purl.obolibrary.org/obo/ENVO_>
 Prefix: OBA: <http://purl.obolibrary.org/obo/OBA_>
-Prefix: NBO: <http://purl.obolibrary.org/obo/NBO_>
-Prefix: PATO: <http://purl.obolibrary.org/obo/PATO_>
+Prefix: CHEBI: <http://purl.obolibrary.org/obo/CHEBI_>
+Prefix: PO: <http://purl.obolibrary.org/obo/PO_>
+Prefix: ECTO: <http://purl.obolibrary.org/obo/ECTO_>
+Prefix: RO: <http://purl.obolibrary.org/obo/RO_>
 Prefix: NPO: <http://purl.obolibrary.org/obo/NPO_>
+Prefix: GO: <http://purl.obolibrary.org/obo/GO_>
+Prefix: CL: <http://purl.obolibrary.org/obo/CL_>
+Prefix: BFO: <http://purl.obolibrary.org/obo/BFO_>
 
  ## Auto-generated
 
@@ -28,11 +28,11 @@ AnnotationProperty: exo/patterns/exposure_to_chemical/stressor
 AnnotationProperty: DOSDP:applies-pattern
 AnnotationProperty: oio:hasExactSynonym
 AnnotationProperty: oio:hasExactSynonym
-Class: CHEBI:24431 ## chemical entity
 Class: ExO:0000002 ## exposure event
+Class: CHEBI:24431 ## chemical entity
+ObjectProperty: BFO_0000050 ## part of
 ObjectProperty: BFO_0000050 ## stressor
 ObjectProperty: RO:0002233 ## has input
-ObjectProperty: BFO_0000050 ## part of
 ## Auto-generated classes
 
 Class: CHEBI:26523 ## reactive oxygen species
@@ -3355,3 +3355,12 @@ Class: ECTO:0000484
  Annotations: oio:hasExactSynonym "double-stranded DNA exposure"
  Annotations: oio:hasExactSynonym "double-stranded DNA exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some CHEBI:4705 ## 'exposure event' and 'has input' some double-stranded DNA
+
+Class: CHEBI:15379 ## dioxygen
+## {"stressor": "CHEBI:15379"}
+Class: 
+ Annotations: rdfs:label "exposure to dioxygen"
+ Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to dioxygen. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion."
+ Annotations: oio:hasExactSynonym "dioxygen exposure"
+ Annotations: oio:hasExactSynonym "dioxygen exposure event"
+ EquivalentTo: ExO:0000002 and RO:0002233 some CHEBI:15379 ## 'exposure event' and 'has input' some dioxygen

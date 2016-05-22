@@ -3,6 +3,7 @@ USECAT= --catalog-xml catalog-v001.xml
 SRC=ecto-edit.obo
 ONTDIR=.
 MODDIR=modules
+DATE=`date +%Y-%m-%d`
 
 MODS = exposure_to_radiation exposure_to_material exposure_to_environmental_process exposure_to_environmental_condition exposure_to_chemical exposure_to_chemical_with_role exposure_to_levels_in_medium exposure_to_change_in_levels exposure_via_route
 MODS_CSV = $(patsubst %,$(MODDIR)/%.csv,$(MODS))
@@ -26,16 +27,17 @@ ecto-core.obo: ecto-core.owl
 	owltools $(USECAT) $< -o -f obo --no-check $@.tmp && grep -v ^owl-axioms $@.tmp > $@
 
 ecto-core-inferred.owl: ecto-core.owl  all_imports
-##	owltools $(USECAT) $<  --merge-support-ontologies --assert-inferred-subclass-axioms --allowEquivalencies --always-assert-super-classes --markIsInferred --reasoner mexr --remove-redundant-inferred-svfs  -o $@
-	robot reason --input $< --reasoner elk -o $@
+	robot reason --input $< --reasoner elk reduce --reasoner elk -o $@
 
 subsets/ecto-basic.owl: ecto-core-inferred.owl
 	owltools $(USECAT) $< --remove-imports-declarations --make-subset-by-properties -f BFO:0000050 --remove-dangling --remove-axioms -t EquivalentClasses --set-ontology-id $(OBO)/ecto/$@ -o $@
 subsets/ecto-basic.obo: subsets/ecto-basic.owl
-	owltools $< -o -f obo --no-check $@.tmp && grep -v ^owl-axioms $@.tmp > $@
+	robot -i $< -o $@.tmp.obo && grep -v ^owl-axioms $@.tmp.obo > $@
+##	owltools $< -o -f obo --no-check $@.tmp && grep -v ^owl-axioms $@.tmp > $@
 
 ecto.owl: ecto-core-inferred.owl
-	owltools $(USECAT) $< --set-ontology-id $(OBO)/$@ -o $@
+	robot annotate -i $< -O $(OBO)/$@ -V $(OBO)/ecto/releases/$(DATE)/ecto.owl -o $@
+#	owltools $(USECAT) $< --set-ontology-id $(OBO)/$@ -o $@
 
 #ecto.owl: ecto-core-inferred.owl $(ONTDIR)/vt.obo
 #	owltools $(USECAT) $^ --merge-support-ontologies -o $@
@@ -80,7 +82,7 @@ imports/seed.tsv: ecto-core.owl imports/seed_curated.tsv
 	owltools $(USECAT) $< --merge-support-ontologies --export-table $@.tmp && cut -f1 $@.tmp imports/seed_curated.tsv | sort -u > $@
 
 imports/%_import.owl: $(SRC) mirror/%.owl imports/seed.tsv
-	robot extract -i mirror/$*.owl -T imports/seed.tsv -m BOT -O $(OBO)/ecto/$@ -o $@
+	robot extract -i mirror/$*.owl -T imports/seed.tsv -m BOT -O $(OBO)/ecto/$@ -o $@.tmp.owl && mv $@.tmp.owl $@
 
 imports/%_import.obo: imports/%_import.owl
 	owltools $(USECAT) $< -o -f obo --no-check $@
@@ -161,6 +163,8 @@ ecto-edit.tsv: ecto-edit.obo
 
 fill: ecto-edit.csv
 	fill-col1-ids.pl $(MODS_CSV) $<
+testfill: ecto-edit.csv
+	fill-col1-ids.pl -n $(MODS_CSV) $<
 
 radiation-npo.tsv:
 	blip-findall  -i mirror/npo.obo "subclassRT(X,'NPO:1731')"  -label -select "x('',X)" -no_pred -use_tabs > $@
@@ -168,6 +172,21 @@ material-envo.tsv:
 	blip-findall  -r envo "subclassRT(X,'ENVO:00010483')"  -label -select "x('',X)" -no_pred -use_tabs > $@
 material-envop.tsv:
 	blip-findall  -r envo "subclassRT(X,'ENVO:02500000')"  -label -select "x('',X)" -no_pred -use_tabs > $@
+
+candidates-roles.csv: modules/exposure_to_chemical_with_role.pro
+	blip-findall -i $<  -r chebi "class(R,'pesticide'),subclassRT(X,R),\+ct(_,_,X,_)"  -label -select "x('',X)" -no_pred -use_tabs | sort -u > $@.tmp && tsv2csv.py $@.tmp > $@ && cat $@
+
+candidates-roles.csv: modules/exposure_to_chemical_with_role.pro
+	blip-findall -i $<  -r chebi "class(R,'pesticide'),subclassRT(X,R),\+ct(_,_,X,_)"  -label -select "x('',X)" -no_pred -use_tabs | sort -u > $@.tmp && tsv2csv.py $@.tmp > $@ && cat $@
+
+candidates-condition.csv: modules/exposure_to_environmental_condition.pro
+	blip-findall -i $<  -r pato -r envo "ct(_,_,A,_,E,_),subclass(A2,A),entity_partition(A2,value_slim),\+ct(_,_,A2,_,E,_)"  -label -select "x('',A2,E)" -no_pred -use_tabs | sort -u > $@.tmp && tsv2csv.py $@.tmp > $@ && cat $@
+
+candidates-levels.csv: modules/exposure_to_change_in_levels.pro
+	blip-findall -i $<  -r pato -r chebi -r envo "ct(_,_,A,_,E,_,W,_),parent(A2,subclass,A),entity_partition(A2,value_slim),\+ct(_,_,A2,_,E,_,W,_)"  -label -select "x('',A2,E,W)" -no_pred -use_tabs | sort -u > $@.tmp && tsv2csv.py $@.tmp > $@ && cat $@
+
+modules/%.pro: modules/%.csv
+	csv2tsv.py $< | tbl2p -p ct > $@.tmp && mv $@.tmp $@
 
 #%.csv: %.tsv
 #	tsv2csv.py $< $@
