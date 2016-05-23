@@ -47,6 +47,12 @@ is_a: CHEBI:37176 ! mononuclear parent hydride
 is_a: CHEBI:52625 ! inorganic hydroxy compound
 
 [Term]
+id: CHEBI:15379
+name: dioxygen
+is_a: CHEBI:25362 ! elemental molecule
+is_a: CHEBI:33263 ! diatomic oxygen
+
+[Term]
 id: CHEBI:15422
 name: ATP
 is_a: CHEBI:37045 ! purine ribonucleoside 5'-triphosphate
@@ -699,6 +705,11 @@ name: elemental oxygen
 is_a: CHEBI:24835 ! inorganic molecular entity
 is_a: CHEBI:25806 ! oxygen molecular entity
 is_a: CHEBI:33259 ! elemental molecular entity
+
+[Term]
+id: CHEBI:33263
+name: diatomic oxygen
+is_a: CHEBI:33262 ! elemental oxygen
 
 [Term]
 id: CHEBI:33265
@@ -2621,6 +2632,11 @@ name: qualitative
 is_a: PATO:0000001 ! quality
 
 [Term]
+id: PATO:0000069
+name: deviation(from_normal)
+is_a: PATO:0000068 ! qualitative
+
+[Term]
 id: PATO:0000070
 name: amount
 is_a: PATO:0000068 ! qualitative
@@ -2644,6 +2660,34 @@ is_a: PATO:0001018 ! physical quality
 id: PATO:0001241
 name: physical object quality
 is_a: PATO:0000001 ! quality
+
+[Term]
+id: PATO:0001305
+name: increased temperature
+is_a: PATO:0000146 ! temperature
+is_a: PATO:0002305 ! increased object quality
+
+[Term]
+id: PATO:0001576
+name: increased pressure
+is_a: PATO:0001025 ! pressure
+is_a: PATO:0002305 ! increased object quality
+
+[Term]
+id: PATO:0001985
+name: frozen
+is_a: PATO:0000146 ! temperature
+
+[Term]
+id: PATO:0002300
+name: increased quality
+is_a: PATO:0000069 ! deviation(from_normal)
+
+[Term]
+id: PATO:0002305
+name: increased object quality
+is_a: PATO:0001241 ! physical object quality
+is_a: PATO:0002300 ! increased quality
 
 [Term]
 id: UBERON:0000061

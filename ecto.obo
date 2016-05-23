@@ -1,11 +1,12 @@
 format-version: 1.2
-remark: Includes Ontology(OntologyID(OntologyIRI(<http://purl.obolibrary.org/obo/ecto/modules/exposure_to_change_in_levels.owl>))) [Axioms: 145 Logical Axioms: 24]
-remark: Includes Ontology(OntologyID(OntologyIRI(<http://purl.obolibrary.org/obo/ecto/modules/exposure_to_chemical.owl>))) [Axioms: 2590 Logical Axioms: 369]
-remark: Includes Ontology(OntologyID(OntologyIRI(<http://purl.obolibrary.org/obo/ecto/modules/exposure_to_chemical_with_role.owl>))) [Axioms: 3369 Logical Axioms: 480]
-remark: Includes Ontology(OntologyID(OntologyIRI(<http://purl.obolibrary.org/obo/ecto/modules/exposure_to_environmental_condition.owl>))) [Axioms: 35 Logical Axioms: 4]
-remark: Includes Ontology(OntologyID(OntologyIRI(<http://purl.obolibrary.org/obo/ecto/modules/exposure_to_environmental_process.owl>))) [Axioms: 276 Logical Axioms: 39]
+data-version: releases/2016-05-23
+remark: Includes Ontology(OntologyID(OntologyIRI(<http://purl.obolibrary.org/obo/ecto/modules/exposure_to_change_in_levels.owl>))) [Axioms: 232 Logical Axioms: 40]
+remark: Includes Ontology(OntologyID(OntologyIRI(<http://purl.obolibrary.org/obo/ecto/modules/exposure_to_chemical.owl>))) [Axioms: 2597 Logical Axioms: 370]
+remark: Includes Ontology(OntologyID(OntologyIRI(<http://purl.obolibrary.org/obo/ecto/modules/exposure_to_chemical_with_role.owl>))) [Axioms: 3642 Logical Axioms: 519]
+remark: Includes Ontology(OntologyID(OntologyIRI(<http://purl.obolibrary.org/obo/ecto/modules/exposure_to_environmental_condition.owl>))) [Axioms: 95 Logical Axioms: 15]
+remark: Includes Ontology(OntologyID(OntologyIRI(<http://purl.obolibrary.org/obo/ecto/modules/exposure_to_environmental_process.owl>))) [Axioms: 252 Logical Axioms: 35]
 remark: Includes Ontology(OntologyID(OntologyIRI(<http://purl.obolibrary.org/obo/ecto/modules/exposure_to_levels_in_medium.owl>))) [Axioms: 45 Logical Axioms: 6]
-remark: Includes Ontology(OntologyID(OntologyIRI(<http://purl.obolibrary.org/obo/ecto/modules/exposure_to_material.owl>))) [Axioms: 447 Logical Axioms: 63]
+remark: Includes Ontology(OntologyID(OntologyIRI(<http://purl.obolibrary.org/obo/ecto/modules/exposure_to_material.owl>))) [Axioms: 441 Logical Axioms: 62]
 remark: Includes Ontology(OntologyID(OntologyIRI(<http://purl.obolibrary.org/obo/ecto/modules/exposure_to_radiation.owl>))) [Axioms: 105 Logical Axioms: 14]
 remark: Includes Ontology(OntologyID(OntologyIRI(<http://purl.obolibrary.org/obo/ecto/modules/exposure_via_route.owl>))) [Axioms: 69 Logical Axioms: 10]
 import: http://purl.obolibrary.org/obo/ecto/imports/chebi_import.owl
@@ -5249,6 +5250,14 @@ id: CHEBI:39024
 is_a: CHEBI:39022
 
 [Term]
+id: CHEBI:39025
+is_a: CHEBI:6495
+
+[Term]
+id: CHEBI:39026
+is_a: CHEBI:6495
+
+[Term]
 id: CHEBI:39123
 is_a: CHEBI:33513
 is_a: CHEBI:39124
@@ -8894,14 +8903,6 @@ is_a: CHEBI:24533
 is_a: CHEBI:25905
 
 [Term]
-id: Continuant
-is_a: Entity
-
-[Term]
-id: DependentContinuant
-is_a: Continuant
-
-[Term]
 id: ECTO:0000001
 name: exposure to radiation
 def: "A radiation exposure event involving the interaction of an exposure receptor to radiation." []
@@ -9723,16 +9724,6 @@ intersection_of: ExO:0000002
 intersection_of: RO:0002233 ENVO:02500036
 
 [Term]
-id: ECTO:0000083
-name: exposure to desertification
-def: "A exposure event involving the interaction of an exposure receptor to desertification." []
-synonym: "desertification exposure" EXACT []
-synonym: "desertification exposure event" EXACT []
-is_a: ECTO:0000070 ! exposure to environmental system process
-intersection_of: ExO:0000002
-intersection_of: RO:0002233 ENVO:02500001
-
-[Term]
 id: ECTO:0000084
 name: exposure to ocean acidification
 def: "A exposure event involving the interaction of an exposure receptor to ocean acidification." []
@@ -9873,16 +9864,6 @@ intersection_of: ExO:0000002
 intersection_of: RO:0002233 ENVO:02500024
 
 [Term]
-id: ECTO:0000098
-name: exposure to accumulation of toxins from algal bloom process
-def: "A exposure event involving the interaction of an exposure receptor to accumulation of toxins from algal bloom process." []
-synonym: "accumulation of toxins from algal bloom process exposure" EXACT []
-synonym: "accumulation of toxins from algal bloom process exposure event" EXACT []
-is_a: ECTO:0000070 ! exposure to environmental system process
-intersection_of: ExO:0000002
-intersection_of: RO:0002233 ENVO:02500024
-
-[Term]
 id: ECTO:0000099
 name: exposure to degradation of toxins from algal bloom process
 def: "A exposure event involving the interaction of an exposure receptor to degradation of toxins from algal bloom process." []
@@ -9893,27 +9874,7 @@ intersection_of: ExO:0000002
 intersection_of: RO:0002233 ENVO:02500025
 
 [Term]
-id: ECTO:0000100
-name: exposure to degradation of toxins from algal bloom process
-def: "A exposure event involving the interaction of an exposure receptor to degradation of toxins from algal bloom process." []
-synonym: "degradation of toxins from algal bloom process exposure" EXACT []
-synonym: "degradation of toxins from algal bloom process exposure event" EXACT []
-is_a: ECTO:0000070 ! exposure to environmental system process
-intersection_of: ExO:0000002
-intersection_of: RO:0002233 ENVO:02500025
-
-[Term]
 id: ECTO:0000101
-name: exposure to anthropogenic modulatory intervention process
-def: "A exposure event involving the interaction of an exposure receptor to anthropogenic modulatory intervention process." []
-synonym: "anthropogenic modulatory intervention process exposure" EXACT []
-synonym: "anthropogenic modulatory intervention process exposure event" EXACT []
-is_a: ECTO:0000070 ! exposure to environmental system process
-intersection_of: ExO:0000002
-intersection_of: RO:0002233 ENVO:02500026
-
-[Term]
-id: ECTO:0000102
 name: exposure to anthropogenic modulatory intervention process
 def: "A exposure event involving the interaction of an exposure receptor to anthropogenic modulatory intervention process." []
 synonym: "anthropogenic modulatory intervention process exposure" EXACT []
@@ -9983,23 +9944,12 @@ intersection_of: ExO:0000002
 intersection_of: RO:0002233 ENVO:1000745
 
 [Term]
-id: ECTO:0000109
-name: exposure to particulate matter
-def: "A exposure event involving the interaction of an exposure receptor to particulate matter. Exposure may be through a variety of means, including through the air or through ingestion." []
-synonym: "particulate matter exposure" EXACT []
-synonym: "particulate matter exposure event" EXACT []
-is_a: ECTO:0000015 ! exposure to environmental material
-intersection_of: ExO:0000002
-intersection_of: RO:0002233 ENVO:01000060
-
-[Term]
 id: ECTO:0000110
 name: exposure to aerosol
 def: "A exposure event involving the interaction of an exposure receptor to aerosol. Exposure may be through a variety of means, including through the air or through ingestion." []
 synonym: "aerosol exposure" EXACT []
 synonym: "aerosol exposure event" EXACT []
 is_a: ECTO:0000019 ! exposure to particulate matter
-is_a: ECTO:0000109 ! exposure to particulate matter
 intersection_of: ExO:0000002
 intersection_of: RO:0002233 ENVO:00010505
 
@@ -10010,7 +9960,6 @@ def: "A exposure event involving the interaction of an exposure receptor to wate
 synonym: "waterborne particulate matter exposure" EXACT []
 synonym: "waterborne particulate matter exposure event" EXACT []
 is_a: ECTO:0000019 ! exposure to particulate matter
-is_a: ECTO:0000109 ! exposure to particulate matter
 intersection_of: ExO:0000002
 intersection_of: RO:0002233 ENVO:01000436
 
@@ -10074,14 +10023,7 @@ def: "A exposure event involving the interaction of an exposure receptor to sing
 synonym: "singlet dioxygen exposure" EXACT []
 synonym: "singlet dioxygen exposure event" EXACT []
 is_a: ECTO:0000115 ! exposure to reactive oxygen species
-is_a: ECTO:0000137 ! exposure to inorganic molecular entity
-is_a: ECTO:0000538 ! exposure to micronutrient
-is_a: ECTO:0000552 ! exposure to reagent
-is_a: ECTO:0000569 ! exposure to anti-inflammatory drug
-is_a: ECTO:0000786 ! exposure to oxidising agent
-is_a: ECTO:0000882 ! exposure to Saccharomyces cerevisiae metabolite
-is_a: ECTO:0000919 ! exposure to human metabolite
-is_a: ECTO:0000926 ! exposure to food packaging gas
+is_a: ECTO:0001063 ! exposure to dioxygen
 intersection_of: ExO:0000002
 intersection_of: RO:0002233 CHEBI:26689
 
@@ -18955,7 +18897,7 @@ intersection_of: RO:0002233 ENVO:00010505
 
 [Term]
 id: ECTO:0000979
-name: exposure to temperature of environmental material in surroundings
+name: exposure to temperature of surroundings
 def: "A exposure event involving the interaction of an exposure receptor to the condition of temperature in the surrounding environmental material." []
 synonym: "environmental material temperature exposure" EXACT []
 is_a: ExO:0000002
@@ -18965,14 +18907,14 @@ id: ECTO:0000980
 name: exposure to temperature of air in surroundings
 def: "A exposure event involving the interaction of an exposure receptor to the condition of temperature in the surrounding air." []
 synonym: "air temperature exposure" EXACT []
-is_a: ECTO:0000979 ! exposure to temperature of environmental material in surroundings
+is_a: ECTO:0000979 ! exposure to temperature of surroundings
 
 [Term]
 id: ECTO:0000981
 name: exposure to temperature of water in surroundings
 def: "A exposure event involving the interaction of an exposure receptor to the condition of temperature in the surrounding water." []
 synonym: "water temperature exposure" EXACT []
-is_a: ECTO:0000979 ! exposure to temperature of environmental material in surroundings
+is_a: ECTO:0000979 ! exposure to temperature of surroundings
 
 [Term]
 id: ECTO:0000982
@@ -19056,7 +18998,7 @@ id: ECTO:0000993
 name: exposure to amount of glucose in food product
 def: "A exposure event involving the interaction of an exposure receptor to amount of glucose in food product." []
 synonym: "amount glucose exposure in food product" EXACT []
-is_a: ECTO:0000992 ! exposure to amount of chemical entity in food product
+is_a: ECTO:0001064 ! exposure to amount of monosaccharide in food product
 
 [Term]
 id: ECTO:0000994
@@ -19070,7 +19012,7 @@ id: ECTO:0000995
 name: exposure to amount of fructose in food product
 def: "A exposure event involving the interaction of an exposure receptor to amount of fructose in food product." []
 synonym: "amount fructose exposure in food product" EXACT []
-is_a: ECTO:0000992 ! exposure to amount of chemical entity in food product
+is_a: ECTO:0001064 ! exposure to amount of monosaccharide in food product
 
 [Term]
 id: ECTO:0000996
@@ -19093,7 +19035,7 @@ name: exposure to increased amount of glucose in food product
 def: "A exposure event involving the interaction of an exposure receptor to increased amount of glucose in food product." []
 synonym: "increased amount glucose exposure in food product" EXACT []
 is_a: ECTO:0000993 ! exposure to amount of glucose in food product
-is_a: ECTO:0000997 ! exposure to increased amount of chemical entity in food product
+is_a: ECTO:0001012 ! exposure to increased amount of monosaccharide in food product
 
 [Term]
 id: ECTO:0000999
@@ -19109,7 +19051,7 @@ name: exposure to increased amount of fructose in food product
 def: "A exposure event involving the interaction of an exposure receptor to increased amount of fructose in food product." []
 synonym: "increased amount fructose exposure in food product" EXACT []
 is_a: ECTO:0000995 ! exposure to amount of fructose in food product
-is_a: ECTO:0000997 ! exposure to increased amount of chemical entity in food product
+is_a: ECTO:0001012 ! exposure to increased amount of monosaccharide in food product
 
 [Term]
 id: ECTO:0001001
@@ -19133,7 +19075,7 @@ name: exposure to decreased amount of glucose in food product
 def: "A exposure event involving the interaction of an exposure receptor to decreased amount of glucose in food product." []
 synonym: "decreased amount glucose exposure in food product" EXACT []
 is_a: ECTO:0000993 ! exposure to amount of glucose in food product
-is_a: ECTO:0001002 ! exposure to decreased amount of chemical entity in food product
+is_a: ECTO:0001011 ! exposure to decreased amount of monosaccharide in food product
 
 [Term]
 id: ECTO:0001004
@@ -19149,7 +19091,7 @@ name: exposure to decreased amount of fructose in food product
 def: "A exposure event involving the interaction of an exposure receptor to decreased amount of fructose in food product." []
 synonym: "decreased amount fructose exposure in food product" EXACT []
 is_a: ECTO:0000995 ! exposure to amount of fructose in food product
-is_a: ECTO:0001002 ! exposure to decreased amount of chemical entity in food product
+is_a: ECTO:0001011 ! exposure to decreased amount of monosaccharide in food product
 
 [Term]
 id: ECTO:0001006
@@ -19198,6 +19140,541 @@ is_a: ECTO:0000231 ! exposure to chemical entity
 intersection_of: ExO:0000002
 intersection_of: BFO:0000050 UBERON:0002199
 intersection_of: RO:0002233 CHEBI:24431
+
+[Term]
+id: ECTO:0001011
+name: exposure to decreased amount of monosaccharide in food product
+def: "A exposure event involving the interaction of an exposure receptor to decreased amount of monosaccharide in food product." []
+synonym: "decreased amount monosaccharide exposure in food product" EXACT []
+is_a: ECTO:0001002 ! exposure to decreased amount of chemical entity in food product
+is_a: ECTO:0001064 ! exposure to amount of monosaccharide in food product
+
+[Term]
+id: ECTO:0001012
+name: exposure to increased amount of monosaccharide in food product
+def: "A exposure event involving the interaction of an exposure receptor to increased amount of monosaccharide in food product." []
+synonym: "increased amount monosaccharide exposure in food product" EXACT []
+is_a: ECTO:0000997 ! exposure to increased amount of chemical entity in food product
+is_a: ECTO:0001064 ! exposure to amount of monosaccharide in food product
+
+[Term]
+id: ECTO:0001013
+name: exposure to antifeedant
+def: "A exposure event involving the interaction of an exposure receptor to a antifeedant. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "antifeedant exposure" EXACT []
+synonym: "antifeedant exposure event" EXACT []
+is_a: ExO:0000002
+
+[Term]
+id: ECTO:0001014
+name: exposure to chemosterilant
+def: "A exposure event involving the interaction of an exposure receptor to a chemosterilant. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "chemosterilant exposure" EXACT []
+synonym: "chemosterilant exposure event" EXACT []
+is_a: ExO:0000002
+
+[Term]
+id: ECTO:0001015
+name: exposure to chitin synthesis inhibitor
+def: "A exposure event involving the interaction of an exposure receptor to a chitin synthesis inhibitor. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "chitin synthesis inhibitor exposure" EXACT []
+synonym: "chitin synthesis inhibitor exposure event" EXACT []
+is_a: ExO:0000002
+
+[Term]
+id: ECTO:0001016
+name: exposure to cytochrome-b6f complex inhibitor
+def: "A exposure event involving the interaction of an exposure receptor to a cytochrome-b6f complex inhibitor. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "cytochrome-b6f complex inhibitor exposure" EXACT []
+synonym: "cytochrome-b6f complex inhibitor exposure event" EXACT []
+is_a: ExO:0000002
+
+[Term]
+id: ECTO:0001017
+name: exposure to ecdysone antagonists
+def: "A exposure event involving the interaction of an exposure receptor to a ecdysone antagonists. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "ecdysone antagonists exposure" EXACT []
+synonym: "ecdysone antagonists exposure event" EXACT []
+is_a: ExO:0000002
+
+[Term]
+id: ECTO:0001018
+name: exposure to insect attractant
+def: "A exposure event involving the interaction of an exposure receptor to a insect attractant. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "insect attractant exposure" EXACT []
+synonym: "insect attractant exposure event" EXACT []
+is_a: ExO:0000002
+
+[Term]
+id: ECTO:0001019
+name: exposure to insect growth regulator
+def: "A exposure event involving the interaction of an exposure receptor to a insect growth regulator. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "insect growth regulator exposure" EXACT []
+synonym: "insect growth regulator exposure event" EXACT []
+is_a: ExO:0000002
+
+[Term]
+id: ECTO:0001020
+name: exposure to juvenile hormone antagonists
+def: "A exposure event involving the interaction of an exposure receptor to a juvenile hormone antagonists. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "juvenile hormone antagonists exposure" EXACT []
+synonym: "juvenile hormone antagonists exposure event" EXACT []
+is_a: ExO:0000002
+
+[Term]
+id: ECTO:0001021
+name: exposure to juvenile hormone mimic
+def: "A exposure event involving the interaction of an exposure receptor to a juvenile hormone mimic. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "juvenile hormone mimic exposure" EXACT []
+synonym: "juvenile hormone mimic exposure event" EXACT []
+is_a: ExO:0000002
+
+[Term]
+id: ECTO:0001022
+name: exposure to pesticide synergist
+def: "A exposure event involving the interaction of an exposure receptor to a pesticide synergist. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "pesticide synergist exposure" EXACT []
+synonym: "pesticide synergist exposure event" EXACT []
+is_a: ExO:0000002
+
+[Term]
+id: ECTO:0001023
+name: exposure to photosynthetic electron-transport chain inhibitor
+def: "A exposure event involving the interaction of an exposure receptor to a photosynthetic electron-transport chain inhibitor. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "photosynthetic electron-transport chain inhibitor exposure" EXACT []
+synonym: "photosynthetic electron-transport chain inhibitor exposure event" EXACT []
+is_a: ExO:0000002
+
+[Term]
+id: ECTO:0001024
+name: exposure to photosystem-I inhibitor
+def: "A exposure event involving the interaction of an exposure receptor to a photosystem-I inhibitor. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "photosystem-I inhibitor exposure" EXACT []
+synonym: "photosystem-I inhibitor exposure event" EXACT []
+is_a: ExO:0000002
+
+[Term]
+id: ECTO:0001025
+name: exposure to photosystem-II inhibitor
+def: "A exposure event involving the interaction of an exposure receptor to a photosystem-II inhibitor. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "photosystem-II inhibitor exposure" EXACT []
+synonym: "photosystem-II inhibitor exposure event" EXACT []
+is_a: ExO:0000002
+
+[Term]
+id: ECTO:0001026
+name: exposure to precocenes
+def: "A exposure event involving the interaction of an exposure receptor to a precocenes. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "precocenes exposure" EXACT []
+synonym: "precocenes exposure event" EXACT []
+is_a: ExO:0000002
+
+[Term]
+id: ECTO:0001027
+name: exposure to pyrethroid insecticide
+def: "A exposure event involving the interaction of an exposure receptor to a pyrethroid insecticide. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "pyrethroid insecticide exposure" EXACT []
+synonym: "pyrethroid insecticide exposure event" EXACT []
+is_a: ExO:0000002
+
+[Term]
+id: ECTO:0001028
+name: exposure to molluscicide
+def: "A exposure event involving the interaction of an exposure receptor to a molluscicide. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "molluscicide exposure" EXACT []
+synonym: "molluscicide exposure event" EXACT []
+is_a: ExO:0000002
+
+[Term]
+id: ECTO:0001029
+name: exposure to acaricide drug
+def: "A exposure event involving the interaction of an exposure receptor to a acaricide drug. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "acaricide drug exposure" EXACT []
+synonym: "acaricide drug exposure event" EXACT []
+is_a: ExO:0000002
+
+[Term]
+id: ECTO:0001030
+name: exposure to ecdysone agonist
+def: "A exposure event involving the interaction of an exposure receptor to a ecdysone agonist. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "ecdysone agonist exposure" EXACT []
+synonym: "ecdysone agonist exposure event" EXACT []
+is_a: ExO:0000002
+
+[Term]
+id: ECTO:0001031
+name: exposure to carbamate insecticide
+def: "A exposure event involving the interaction of an exposure receptor to a carbamate insecticide. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "carbamate insecticide exposure" EXACT []
+synonym: "carbamate insecticide exposure event" EXACT []
+is_a: ExO:0000002
+
+[Term]
+id: ECTO:0001032
+name: exposure to pyrethroid ester insecticide
+def: "A exposure event involving the interaction of an exposure receptor to a pyrethroid ester insecticide. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "pyrethroid ester insecticide exposure" EXACT []
+synonym: "pyrethroid ester insecticide exposure event" EXACT []
+is_a: ExO:0000002
+
+[Term]
+id: ECTO:0001033
+name: exposure to antibiotic insecticide
+def: "A exposure event involving the interaction of an exposure receptor to a antibiotic insecticide. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "antibiotic insecticide exposure" EXACT []
+synonym: "antibiotic insecticide exposure event" EXACT []
+is_a: ExO:0000002
+
+[Term]
+id: ECTO:0001034
+name: exposure to antibiotic pesticide
+def: "A exposure event involving the interaction of an exposure receptor to a antibiotic pesticide. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "antibiotic pesticide exposure" EXACT []
+synonym: "antibiotic pesticide exposure event" EXACT []
+is_a: ExO:0000002
+
+[Term]
+id: ECTO:0001035
+name: exposure to antibiotic acaricide
+def: "A exposure event involving the interaction of an exposure receptor to a antibiotic acaricide. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "antibiotic acaricide exposure" EXACT []
+synonym: "antibiotic acaricide exposure event" EXACT []
+is_a: ExO:0000002
+
+[Term]
+id: ECTO:0001036
+name: exposure to antibiotic nematicide
+def: "A exposure event involving the interaction of an exposure receptor to a antibiotic nematicide. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "antibiotic nematicide exposure" EXACT []
+synonym: "antibiotic nematicide exposure event" EXACT []
+is_a: ExO:0000002
+
+[Term]
+id: ECTO:0001037
+name: exposure to pyrethroid ester acaricide
+def: "A exposure event involving the interaction of an exposure receptor to a pyrethroid ester acaricide. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "pyrethroid ester acaricide exposure" EXACT []
+synonym: "pyrethroid ester acaricide exposure event" EXACT []
+is_a: ExO:0000002
+
+[Term]
+id: ECTO:0001038
+name: exposure to fumigant
+def: "A exposure event involving the interaction of an exposure receptor to a fumigant. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "fumigant exposure" EXACT []
+synonym: "fumigant exposure event" EXACT []
+is_a: ExO:0000002
+
+[Term]
+id: ECTO:0001039
+name: exposure to fumigant insecticide
+def: "A exposure event involving the interaction of an exposure receptor to a fumigant insecticide. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "fumigant insecticide exposure" EXACT []
+synonym: "fumigant insecticide exposure event" EXACT []
+is_a: ExO:0000002
+
+[Term]
+id: ECTO:0001040
+name: exposure to sulfite ester acaricide
+def: "A exposure event involving the interaction of an exposure receptor to a sulfite ester acaricide. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "sulfite ester acaricide exposure" EXACT []
+synonym: "sulfite ester acaricide exposure event" EXACT []
+is_a: ExO:0000002
+
+[Term]
+id: ECTO:0001041
+name: exposure to mite growth regulator
+def: "A exposure event involving the interaction of an exposure receptor to a mite growth regulator. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "mite growth regulator exposure" EXACT []
+synonym: "mite growth regulator exposure event" EXACT []
+is_a: ExO:0000002
+
+[Term]
+id: ECTO:0001042
+name: exposure to tetrazine acaricide
+def: "A exposure event involving the interaction of an exposure receptor to a tetrazine acaricide. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "tetrazine acaricide exposure" EXACT []
+synonym: "tetrazine acaricide exposure event" EXACT []
+is_a: ExO:0000002
+
+[Term]
+id: ECTO:0001043
+name: exposure to pyrethroid ether insecticide
+def: "A exposure event involving the interaction of an exposure receptor to a pyrethroid ether insecticide. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "pyrethroid ether insecticide exposure" EXACT []
+synonym: "pyrethroid ether insecticide exposure event" EXACT []
+is_a: ExO:0000002
+
+[Term]
+id: ECTO:0001044
+name: exposure to pyrethroid ether acaricide
+def: "A exposure event involving the interaction of an exposure receptor to a pyrethroid ether acaricide. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "pyrethroid ether acaricide exposure" EXACT []
+synonym: "pyrethroid ether acaricide exposure event" EXACT []
+is_a: ExO:0000002
+
+[Term]
+id: ECTO:0001045
+name: exposure to homopteran inhibitor of chitin biosynthesis
+def: "A exposure event involving the interaction of an exposure receptor to a homopteran inhibitor of chitin biosynthesis. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "homopteran inhibitor of chitin biosynthesis exposure" EXACT []
+synonym: "homopteran inhibitor of chitin biosynthesis exposure event" EXACT []
+is_a: ExO:0000002
+
+[Term]
+id: ECTO:0001046
+name: exposure to lepidopteran inhibitor of chitin biosynthesis
+def: "A exposure event involving the interaction of an exposure receptor to a lepidopteran inhibitor of chitin biosynthesis. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "lepidopteran inhibitor of chitin biosynthesis exposure" EXACT []
+synonym: "lepidopteran inhibitor of chitin biosynthesis exposure event" EXACT []
+is_a: ExO:0000002
+
+[Term]
+id: ECTO:0001047
+name: exposure to dinitrophenol insecticide
+def: "A exposure event involving the interaction of an exposure receptor to a dinitrophenol insecticide. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "dinitrophenol insecticide exposure" EXACT []
+synonym: "dinitrophenol insecticide exposure event" EXACT []
+is_a: ExO:0000002
+
+[Term]
+id: ECTO:0001048
+name: exposure to antifouling biocide
+def: "A exposure event involving the interaction of an exposure receptor to a antifouling biocide. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "antifouling biocide exposure" EXACT []
+synonym: "antifouling biocide exposure event" EXACT []
+is_a: ExO:0000002
+
+[Term]
+id: ECTO:0001049
+name: exposure to insect sterilant
+def: "A exposure event involving the interaction of an exposure receptor to a insect sterilant. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "insect sterilant exposure" EXACT []
+synonym: "insect sterilant exposure event" EXACT []
+is_a: ExO:0000002
+
+[Term]
+id: ECTO:0001050
+name: exposure to insect repellent
+def: "A exposure event involving the interaction of an exposure receptor to a insect repellent. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "insect repellent exposure" EXACT []
+synonym: "insect repellent exposure event" EXACT []
+is_a: ExO:0000002
+
+[Term]
+id: ECTO:0001051
+name: exposure to scabicide
+def: "A exposure event involving the interaction of an exposure receptor to a scabicide. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "scabicide exposure" EXACT []
+synonym: "scabicide exposure event" EXACT []
+is_a: ExO:0000002
+
+[Term]
+id: ECTO:0001052
+name: exposure to increased temperature of air in surroundings
+def: "A exposure event involving the interaction of an exposure receptor to the condition of increased temperature in the surrounding air." []
+synonym: "air increased temperature exposure" EXACT []
+is_a: ECTO:0000980 ! exposure to temperature of air in surroundings
+is_a: ECTO:0001054 ! exposure to increased temperature of environmental material in surroundings
+
+[Term]
+id: ECTO:0001053
+name: exposure to increased temperature of water in surroundings
+def: "A exposure event involving the interaction of an exposure receptor to the condition of increased temperature in the surrounding water." []
+synonym: "water increased temperature exposure" EXACT []
+is_a: ECTO:0000981 ! exposure to temperature of water in surroundings
+is_a: ECTO:0001054 ! exposure to increased temperature of environmental material in surroundings
+
+[Term]
+id: ECTO:0001054
+name: exposure to increased temperature of environmental material in surroundings
+def: "A exposure event involving the interaction of an exposure receptor to the condition of increased temperature in the surrounding environmental material." []
+synonym: "environmental material increased temperature exposure" EXACT []
+is_a: ECTO:0000979 ! exposure to temperature of surroundings
+
+[Term]
+id: ECTO:0001055
+name: exposure to decreased temperature of air in surroundings
+def: "A exposure event involving the interaction of an exposure receptor to the condition of decreased temperature in the surrounding air." []
+synonym: "air decreased temperature exposure" EXACT []
+is_a: ECTO:0000980 ! exposure to temperature of air in surroundings
+is_a: ECTO:0001057 ! exposure to decreased temperature of environmental material in surroundings
+
+[Term]
+id: ECTO:0001056
+name: exposure to decreased temperature of water in surroundings
+def: "A exposure event involving the interaction of an exposure receptor to the condition of decreased temperature in the surrounding water." []
+synonym: "water decreased temperature exposure" EXACT []
+is_a: ECTO:0000981 ! exposure to temperature of water in surroundings
+is_a: ECTO:0001057 ! exposure to decreased temperature of environmental material in surroundings
+
+[Term]
+id: ECTO:0001057
+name: exposure to decreased temperature of environmental material in surroundings
+def: "A exposure event involving the interaction of an exposure receptor to the condition of decreased temperature in the surrounding environmental material." []
+synonym: "environmental material decreased temperature exposure" EXACT []
+is_a: ECTO:0000979 ! exposure to temperature of surroundings
+
+[Term]
+id: ECTO:0001058
+name: exposure to decreased pressure of water in surroundings
+def: "A exposure event involving the interaction of an exposure receptor to the condition of decreased pressure in the surrounding water." []
+synonym: "water decreased pressure exposure" EXACT []
+is_a: ECTO:0000982 ! exposure to pressure of water in surroundings
+
+[Term]
+id: ECTO:0001059
+name: exposure to increased pressure of water in surroundings
+def: "A exposure event involving the interaction of an exposure receptor to the condition of increased pressure in the surrounding water." []
+synonym: "water increased pressure exposure" EXACT []
+is_a: ECTO:0000982 ! exposure to pressure of water in surroundings
+
+[Term]
+id: ECTO:0001060
+name: exposure to freezing of air in surroundings
+def: "A exposure event involving the interaction of an exposure receptor to the condition of freezing in the surrounding air." []
+synonym: "air freezing exposure" EXACT []
+is_a: ECTO:0000980 ! exposure to temperature of air in surroundings
+is_a: ECTO:0001062 ! exposure to freezing of environmental material in surroundings
+
+[Term]
+id: ECTO:0001061
+name: exposure to freezing of water in surroundings
+def: "A exposure event involving the interaction of an exposure receptor to the condition of freezing in the surrounding water." []
+synonym: "water freezing exposure" EXACT []
+is_a: ECTO:0000981 ! exposure to temperature of water in surroundings
+is_a: ECTO:0001062 ! exposure to freezing of environmental material in surroundings
+
+[Term]
+id: ECTO:0001062
+name: exposure to freezing of environmental material in surroundings
+def: "A exposure event involving the interaction of an exposure receptor to the condition of freezing in the surrounding environmental material." []
+synonym: "environmental material freezing exposure" EXACT []
+is_a: ECTO:0000979 ! exposure to temperature of surroundings
+
+[Term]
+id: ECTO:0001063
+name: exposure to dioxygen
+def: "A exposure event involving the interaction of an exposure receptor to dioxygen. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "dioxygen exposure" EXACT []
+synonym: "dioxygen exposure event" EXACT []
+is_a: ECTO:0000137 ! exposure to inorganic molecular entity
+is_a: ECTO:0000371 ! exposure to oxygen molecular entity
+is_a: ECTO:0000538 ! exposure to micronutrient
+is_a: ECTO:0000552 ! exposure to reagent
+is_a: ECTO:0000569 ! exposure to anti-inflammatory drug
+is_a: ECTO:0000786 ! exposure to oxidising agent
+is_a: ECTO:0000882 ! exposure to Saccharomyces cerevisiae metabolite
+is_a: ECTO:0000919 ! exposure to human metabolite
+is_a: ECTO:0000926 ! exposure to food packaging gas
+intersection_of: ExO:0000002
+intersection_of: RO:0002233 CHEBI:15379
+
+[Term]
+id: ECTO:0001064
+name: exposure to amount of monosaccharide in food product
+def: "A exposure event involving the interaction of an exposure receptor to amount of monosaccharide in food product." []
+synonym: "amount monosaccharide exposure in food product" EXACT []
+is_a: ECTO:0000992 ! exposure to amount of chemical entity in food product
+
+[Term]
+id: ECTO:0001065
+name: exposure to amount of cholesterol in food product
+def: "A exposure event involving the interaction of an exposure receptor to amount of cholesterol in food product." []
+synonym: "amount cholesterol exposure in food product" EXACT []
+is_a: ECTO:0000992 ! exposure to amount of chemical entity in food product
+
+[Term]
+id: ECTO:0001066
+name: exposure to amount of triglyceride in food product
+def: "A exposure event involving the interaction of an exposure receptor to amount of triglyceride in food product." []
+synonym: "amount triglyceride exposure in food product" EXACT []
+is_a: ECTO:0000992 ! exposure to amount of chemical entity in food product
+
+[Term]
+id: ECTO:0001067
+name: exposure to amount of low-density lipoprotein in food product
+def: "A exposure event involving the interaction of an exposure receptor to amount of low-density lipoprotein in food product." []
+synonym: "amount low-density lipoprotein exposure in food product" EXACT []
+is_a: ECTO:0000996 ! exposure to amount of protein in food product
+
+[Term]
+id: ECTO:0001068
+name: exposure to amount of high-density lipoprotein in food product
+def: "A exposure event involving the interaction of an exposure receptor to amount of high-density lipoprotein in food product." []
+synonym: "amount high-density lipoprotein exposure in food product" EXACT []
+is_a: ECTO:0000996 ! exposure to amount of protein in food product
+
+[Term]
+id: ECTO:0001069
+name: exposure to increased amount of cholesterol in food product
+def: "A exposure event involving the interaction of an exposure receptor to increased amount of cholesterol in food product." []
+synonym: "increased amount cholesterol exposure in food product" EXACT []
+is_a: ECTO:0000997 ! exposure to increased amount of chemical entity in food product
+is_a: ECTO:0001065 ! exposure to amount of cholesterol in food product
+
+[Term]
+id: ECTO:0001070
+name: exposure to increased amount of triglyceride in food product
+def: "A exposure event involving the interaction of an exposure receptor to increased amount of triglyceride in food product." []
+synonym: "increased amount triglyceride exposure in food product" EXACT []
+is_a: ECTO:0000997 ! exposure to increased amount of chemical entity in food product
+is_a: ECTO:0001066 ! exposure to amount of triglyceride in food product
+
+[Term]
+id: ECTO:0001071
+name: exposure to increased amount of high-density lipoprotein in food product
+def: "A exposure event involving the interaction of an exposure receptor to increased amount of high-density lipoprotein in food product." []
+synonym: "increased amount high-density lipoprotein exposure in food product" EXACT []
+is_a: ECTO:0001001 ! exposure to increased amount of protein in food product
+is_a: ECTO:0001068 ! exposure to amount of high-density lipoprotein in food product
+
+[Term]
+id: ECTO:0001072
+name: exposure to increased amount of low-density lipoprotein in food product
+def: "A exposure event involving the interaction of an exposure receptor to increased amount of low-density lipoprotein in food product." []
+synonym: "increased amount low-density lipoprotein exposure in food product" EXACT []
+is_a: ECTO:0001001 ! exposure to increased amount of protein in food product
+is_a: ECTO:0001067 ! exposure to amount of low-density lipoprotein in food product
+
+[Term]
+id: ECTO:0001073
+name: exposure to decreased amount of cholesterol in food product
+def: "A exposure event involving the interaction of an exposure receptor to decreased amount of cholesterol in food product." []
+synonym: "decreased amount cholesterol exposure in food product" EXACT []
+is_a: ECTO:0001002 ! exposure to decreased amount of chemical entity in food product
+is_a: ECTO:0001065 ! exposure to amount of cholesterol in food product
+
+[Term]
+id: ECTO:0001074
+name: exposure to decreased amount of triglyceride in food product
+def: "A exposure event involving the interaction of an exposure receptor to decreased amount of triglyceride in food product." []
+synonym: "decreased amount triglyceride exposure in food product" EXACT []
+is_a: ECTO:0001002 ! exposure to decreased amount of chemical entity in food product
+is_a: ECTO:0001066 ! exposure to amount of triglyceride in food product
+
+[Term]
+id: ECTO:0001075
+name: exposure to decreased amount of high-density lipoprotein in food product
+def: "A exposure event involving the interaction of an exposure receptor to decreased amount of high-density lipoprotein in food product." []
+synonym: "decreased amount high-density lipoprotein exposure in food product" EXACT []
+is_a: ECTO:0001006 ! exposure to decreased amount of protein in food product
+is_a: ECTO:0001068 ! exposure to amount of high-density lipoprotein in food product
+
+[Term]
+id: ECTO:0001076
+name: exposure to decreased amount of low-density lipoprotein in food product
+def: "A exposure event involving the interaction of an exposure receptor to decreased amount of low-density lipoprotein in food product." []
+synonym: "decreased amount low-density lipoprotein exposure in food product" EXACT []
+is_a: ECTO:0001006 ! exposure to decreased amount of protein in food product
+is_a: ECTO:0001067 ! exposure to amount of low-density lipoprotein in food product
+
+[Term]
+id: ECTO:0001077
+name: exposure to amount of lipid in ENVO:00002002
+def: "A exposure event involving the interaction of an exposure receptor to amount of lipid in ENVO:00002002." []
+synonym: "amount lipid exposure in ENVO:00002002" EXACT []
+is_a: ExO:0000002
 
 [Term]
 id: ENVO:00000000
@@ -19968,74 +20445,6 @@ id: GOCHE:64909
 is_a: GOCHE:24432
 
 [Term]
-id: NPO:1713
-is_a: Process
-
-[Term]
-id: NPO:1714
-is_a: NPO:1713
-
-[Term]
-id: NPO:1715
-is_a: NPO:1713
-
-[Term]
-id: NPO:1716
-is_a: NPO:1714
-
-[Term]
-id: NPO:1717
-is_a: NPO:1714
-
-[Term]
-id: NPO:1718
-is_a: NPO:1714
-
-[Term]
-id: NPO:1719
-is_a: NPO:1714
-
-[Term]
-id: NPO:1720
-is_a: NPO:1714
-
-[Term]
-id: NPO:1721
-is_a: NPO:1720
-
-[Term]
-id: NPO:1722
-is_a: NPO:1720
-
-[Term]
-id: NPO:1723
-is_a: NPO:1720
-
-[Term]
-id: NPO:1724
-is_a: NPO:1714
-
-[Term]
-id: NPO:1725
-is_a: NPO:1714
-
-[Term]
-id: NPO:1727
-is_a: NPO:1715
-
-[Term]
-id: NPO:1728
-is_a: NPO:1727
-
-[Term]
-id: NPO:1730
-is_a: NPO:1728
-
-[Term]
-id: NPO:1731
-is_a: Process
-
-[Term]
 id: NPO:1732
 is_a: NPO:1731
 
@@ -20088,54 +20497,6 @@ id: NPO:1744
 is_a: NPO:1743
 
 [Term]
-id: NPO:1745
-is_a: RealizableEntity
-
-[Term]
-id: NPO:1746
-is_a: NPO:1745
-
-[Term]
-id: NPO:1750
-is_a: NPO:1746
-
-[Term]
-id: NPO:1751
-is_a: NPO:1750
-
-[Term]
-id: NPO:1752
-is_a: NPO:1751
-
-[Term]
-id: NPO:1753
-is_a: NPO:1751
-
-[Term]
-id: NPO:1754
-is_a: NPO:1751
-
-[Term]
-id: NPO:1755
-is_a: NPO:1750
-
-[Term]
-id: NPO:1756
-is_a: NPO:1750
-
-[Term]
-id: NPO:1757
-is_a: NPO:1746
-
-[Term]
-id: NPO:1759
-is_a: NPO:1757
-
-[Term]
-id: Occurrent
-is_a: Entity
-
-[Term]
 id: PATO:0000001
 is_a: BFO:0000020
 
@@ -20177,6 +20538,30 @@ id: PATO:0001241
 is_a: PATO:0000001
 
 [Term]
+id: PATO:0001305
+is_a: PATO:0000146
+is_a: PATO:0002305
+
+[Term]
+id: PATO:0001306
+is_a: PATO:0000146
+is_a: PATO:0002303
+
+[Term]
+id: PATO:0001575
+is_a: PATO:0001025
+is_a: PATO:0002303
+
+[Term]
+id: PATO:0001576
+is_a: PATO:0001025
+is_a: PATO:0002305
+
+[Term]
+id: PATO:0001985
+is_a: PATO:0000146
+
+[Term]
 id: PATO:0001997
 is_a: PATO:0000467
 is_a: PATO:0002301
@@ -20190,20 +20575,14 @@ id: PATO:0002301
 is_a: PATO:0000069
 
 [Term]
-id: Process
-is_a: ProcessualEntity
+id: PATO:0002303
+is_a: PATO:0001241
+is_a: PATO:0002301
 
 [Term]
-id: ProcessualEntity
-is_a: Occurrent
-
-[Term]
-id: RealizableEntity
-is_a: SpecificallyDependentContinuant
-
-[Term]
-id: SpecificallyDependentContinuant
-is_a: DependentContinuant
+id: PATO:0002305
+is_a: PATO:0001241
+is_a: PATO:0002300
 
 [Term]
 id: UBERON:0000061
