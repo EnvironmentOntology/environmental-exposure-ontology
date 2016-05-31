@@ -7,7 +7,11 @@ addons:
   apt:
     packages:
       - oracle-java8-installer
-      
+
+# other answer:      
+before_install:
+  - java install oraclejdk8
+  
 install:
   - "pip install pyyaml"
 
