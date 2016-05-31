@@ -2,23 +2,24 @@ Prefix: : <http://purl.obolibrary.org/obo/>
 Prefix: IAO: <http://purl.obolibrary.org/obo/IAO_>
 Prefix: DOSDP: <http://geneontology.org/foo/>
 Prefix: oio: <http://www.geneontology.org/formats/oboInOwl#>
-Prefix: ExO: <http://purl.obolibrary.org/obo/ExO_>
-Prefix: GOCHE: <http://purl.obolibrary.org/obo/GOCHE_>
-Prefix: BFO: <http://purl.obolibrary.org/obo/BFO_>
-Prefix: PO: <http://purl.obolibrary.org/obo/PO_>
-Prefix: SO: <http://purl.obolibrary.org/obo/SO_>
 Prefix: UBERON: <http://purl.obolibrary.org/obo/UBERON_>
-Prefix: CL: <http://purl.obolibrary.org/obo/CL_>
-Prefix: PR: <http://purl.obolibrary.org/obo/PR_>
-Prefix: PATO: <http://purl.obolibrary.org/obo/PATO_>
-Prefix: ENVO: <http://purl.obolibrary.org/obo/ENVO_>
 Prefix: CHEBI: <http://purl.obolibrary.org/obo/CHEBI_>
-Prefix: OBA: <http://purl.obolibrary.org/obo/OBA_>
+Prefix: ExO: <http://purl.obolibrary.org/obo/ExO_>
 Prefix: NBO: <http://purl.obolibrary.org/obo/NBO_>
-Prefix: NPO: <http://purl.obolibrary.org/obo/NPO_>
-Prefix: ECTO: <http://purl.obolibrary.org/obo/ECTO_>
-Prefix: RO: <http://purl.obolibrary.org/obo/RO_>
 Prefix: GO: <http://purl.obolibrary.org/obo/GO_>
+Prefix: CL: <http://purl.obolibrary.org/obo/CL_>
+Prefix: BFO: <http://purl.obolibrary.org/obo/BFO_>
+Prefix: SO: <http://purl.obolibrary.org/obo/SO_>
+Prefix: GOCHE: <http://purl.obolibrary.org/obo/GOCHE_>
+Prefix: NCIT: <http://purl.obolibrary.org/obo/NCIT_>
+Prefix: ENVO: <http://purl.obolibrary.org/obo/ENVO_>
+Prefix: OBA: <http://purl.obolibrary.org/obo/OBA_>
+Prefix: ECTO: <http://purl.obolibrary.org/obo/ECTO_>
+Prefix: PATO: <http://purl.obolibrary.org/obo/PATO_>
+Prefix: PO: <http://purl.obolibrary.org/obo/PO_>
+Prefix: NPO: <http://purl.obolibrary.org/obo/NPO_>
+Prefix: PR: <http://purl.obolibrary.org/obo/PR_>
+Prefix: RO: <http://purl.obolibrary.org/obo/RO_>
 
  ## Auto-generated
 
@@ -30,9 +31,9 @@ AnnotationProperty: oio:hasExactSynonym
 AnnotationProperty: oio:hasExactSynonym
 Class: ExO:0000002 ## exposure event
 Class: CHEBI:24431 ## chemical entity
-ObjectProperty: RO:0002233 ## has input
-ObjectProperty: BFO_0000050 ## stressor
 ObjectProperty: BFO_0000050 ## part of
+ObjectProperty: BFO_0000050 ## stressor
+ObjectProperty: RO:0002233 ## has input
 ## Auto-generated classes
 
 Class: CHEBI:26523 ## reactive oxygen species
@@ -3364,3 +3365,156 @@ Class: ECTO:0001063
  Annotations: oio:hasExactSynonym "dioxygen exposure"
  Annotations: oio:hasExactSynonym "dioxygen exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some CHEBI:15379 ## 'exposure event' and 'has input' some dioxygen
+
+Class: CHEBI:22271 ## aflatoxin
+## {"stressor": "CHEBI:22271"}
+Class: ECTO:0001108
+ Annotations: rdfs:label "exposure to aflatoxin"
+ Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to aflatoxin. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion."
+ Annotations: oio:hasExactSynonym "aflatoxin exposure"
+ Annotations: oio:hasExactSynonym "aflatoxin exposure event"
+ EquivalentTo: ExO:0000002 and RO:0002233 some CHEBI:22271 ## 'exposure event' and 'has input' some aflatoxin
+
+Class: CHEBI:15930 ## atrazine
+## {"stressor": "CHEBI:15930"}
+Class: ECTO:0001136
+ Annotations: rdfs:label "exposure to atrazine"
+ Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to atrazine. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion."
+ Annotations: oio:hasExactSynonym "atrazine exposure"
+ Annotations: oio:hasExactSynonym "atrazine exposure event"
+ EquivalentTo: ExO:0000002 and RO:0002233 some CHEBI:15930 ## 'exposure event' and 'has input' some atrazine
+
+Class: CHEBI:26092 ## phthalate
+## {"stressor": "CHEBI:26092"}
+Class: ECTO:0001137
+ Annotations: rdfs:label "exposure to phthalate"
+ Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to phthalate. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion."
+ Annotations: oio:hasExactSynonym "phthalate exposure"
+ Annotations: oio:hasExactSynonym "phthalate exposure event"
+ EquivalentTo: ExO:0000002 and RO:0002233 some CHEBI:26092 ## 'exposure event' and 'has input' some phthalate
+
+Class: CHEBI:27789 ## 1
+## {"stressor": "CHEBI:27789"}
+Class: ECTO:0001138
+ Annotations: rdfs:label "exposure to 1"
+ Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to 1. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion."
+ Annotations: oio:hasExactSynonym "1 exposure"
+ Annotations: oio:hasExactSynonym "1 exposure event"
+ EquivalentTo: ExO:0000002 and RO:0002233 some CHEBI:27789 ## 'exposure event' and 'has input' some 1
+
+Class: CHEBI:28097 ## chlorobenzene
+## {"stressor": "CHEBI:28097"}
+Class: ECTO:0001139
+ Annotations: rdfs:label "exposure to chlorobenzene"
+ Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to chlorobenzene. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion."
+ Annotations: oio:hasExactSynonym "chlorobenzene exposure"
+ Annotations: oio:hasExactSynonym "chlorobenzene exposure event"
+ EquivalentTo: ExO:0000002 and RO:0002233 some CHEBI:28097 ## 'exposure event' and 'has input' some chlorobenzene
+
+Class: CHEBI:15767 ## dichloromethane
+## {"stressor": "CHEBI:15767"}
+Class: ECTO:0001140
+ Annotations: rdfs:label "exposure to dichloromethane"
+ Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to dichloromethane. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion."
+ Annotations: oio:hasExactSynonym "dichloromethane exposure"
+ Annotations: oio:hasExactSynonym "dichloromethane exposure event"
+ EquivalentTo: ExO:0000002 and RO:0002233 some CHEBI:15767 ## 'exposure event' and 'has input' some dichloromethane
+
+Class: CHEBI:16101 ## ethylbenzene
+## {"stressor": "CHEBI:16101"}
+Class: ECTO:0001141
+ Annotations: rdfs:label "exposure to ethylbenzene"
+ Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to ethylbenzene. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion."
+ Annotations: oio:hasExactSynonym "ethylbenzene exposure"
+ Annotations: oio:hasExactSynonym "ethylbenzene exposure event"
+ EquivalentTo: ExO:0000002 and RO:0002233 some CHEBI:16101 ## 'exposure event' and 'has input' some ethylbenzene
+
+Class: CHEBI:27798 ## nitrobenzene
+## {"stressor": "CHEBI:27798"}
+Class: ECTO:0001142
+ Annotations: rdfs:label "exposure to nitrobenzene"
+ Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to nitrobenzene. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion."
+ Annotations: oio:hasExactSynonym "nitrobenzene exposure"
+ Annotations: oio:hasExactSynonym "nitrobenzene exposure event"
+ EquivalentTo: ExO:0000002 and RO:0002233 some CHEBI:27798 ## 'exposure event' and 'has input' some nitrobenzene
+
+Class: CHEBI:27452 ## styrene
+## {"stressor": "CHEBI:27452"}
+Class: ECTO:0001143
+ Annotations: rdfs:label "exposure to styrene"
+ Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to styrene. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion."
+ Annotations: oio:hasExactSynonym "styrene exposure"
+ Annotations: oio:hasExactSynonym "styrene exposure event"
+ EquivalentTo: ExO:0000002 and RO:0002233 some CHEBI:27452 ## 'exposure event' and 'has input' some styrene
+
+Class: CHEBI:17300 ## tetrachloroethene
+## {"stressor": "CHEBI:17300"}
+Class: ECTO:0001144
+ Annotations: rdfs:label "exposure to tetrachloroethene"
+ Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to tetrachloroethene. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion."
+ Annotations: oio:hasExactSynonym "tetrachloroethene exposure"
+ Annotations: oio:hasExactSynonym "tetrachloroethene exposure event"
+ EquivalentTo: ExO:0000002 and RO:0002233 some CHEBI:17300 ## 'exposure event' and 'has input' some tetrachloroethene
+
+Class: CHEBI:16602 ## trichloroethene
+## {"stressor": "CHEBI:16602"}
+Class: ECTO:0001145
+ Annotations: rdfs:label "exposure to trichloroethene"
+ Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to trichloroethene. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion."
+ Annotations: oio:hasExactSynonym "trichloroethene exposure"
+ Annotations: oio:hasExactSynonym "trichloroethene exposure event"
+ EquivalentTo: ExO:0000002 and RO:0002233 some CHEBI:16602 ## 'exposure event' and 'has input' some trichloroethene
+
+Class: CHEBI:28063 ## o-xylene
+## {"stressor": "CHEBI:28063"}
+Class: ECTO:0001146
+ Annotations: rdfs:label "exposure to o-xylene"
+ Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to o-xylene. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion."
+ Annotations: oio:hasExactSynonym "o-xylene exposure"
+ Annotations: oio:hasExactSynonym "o-xylene exposure event"
+ EquivalentTo: ExO:0000002 and RO:0002233 some CHEBI:28063 ## 'exposure event' and 'has input' some o-xylene
+
+Class: CHEBI:18022 ## thiocyanate
+## {"stressor": "CHEBI:18022"}
+Class: ECTO:0001147
+ Annotations: rdfs:label "exposure to thiocyanate"
+ Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to thiocyanate. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion."
+ Annotations: oio:hasExactSynonym "thiocyanate exposure"
+ Annotations: oio:hasExactSynonym "thiocyanate exposure event"
+ EquivalentTo: ExO:0000002 and RO:0002233 some CHEBI:18022 ## 'exposure event' and 'has input' some thiocyanate
+
+Class: CHEBI:37143 ## organofluorine compound
+## {"stressor": "CHEBI:37143"}
+Class: ECTO:0001148
+ Annotations: rdfs:label "exposure to organofluorine compound"
+ Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to organofluorine compound. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion."
+ Annotations: oio:hasExactSynonym "organofluorine compound exposure"
+ Annotations: oio:hasExactSynonym "organofluorine compound exposure event"
+ EquivalentTo: ExO:0000002 and RO:0002233 some CHEBI:37143 ## 'exposure event' and 'has input' some organofluorine compound
+
+Class: CHEBI:33406 ## organoarsenic compound
+## {"stressor": "CHEBI:33406"}
+Class: ECTO:0001149
+ Annotations: rdfs:label "exposure to organoarsenic compound"
+ Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to organoarsenic compound. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion."
+ Annotations: oio:hasExactSynonym "organoarsenic compound exposure"
+ Annotations: oio:hasExactSynonym "organoarsenic compound exposure event"
+ EquivalentTo: ExO:0000002 and RO:0002233 some CHEBI:33406 ## 'exposure event' and 'has input' some organoarsenic compound
+
+Class: CHEBI:53156 ## polychlorobiphenyl
+## {"stressor": "CHEBI:53156"}
+Class: ECTO:0001151
+ Annotations: rdfs:label "exposure to polychlorobiphenyl"
+ Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to polychlorobiphenyl. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion."
+ Annotations: oio:hasExactSynonym "polychlorobiphenyl exposure"
+ Annotations: oio:hasExactSynonym "polychlorobiphenyl exposure event"
+ EquivalentTo: ExO:0000002 and RO:0002233 some CHEBI:53156 ## 'exposure event' and 'has input' some polychlorobiphenyl
+
+Class: CHEBI:36683 ## organochlorine compound
+## {"stressor": "CHEBI:36683"}
+Class: ECTO:0001152
+ Annotations: rdfs:label "exposure to organochlorine compound"
+ Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to organochlorine compound. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion."
+ Annotations: oio:hasExactSynonym "organochlorine compound exposure"
+ Annotations: oio:hasExactSynonym "organochlorine compound exposure event"
+ EquivalentTo: ExO:0000002 and RO:0002233 some CHEBI:36683 ## 'exposure event' and 'has input' some organochlorine compound

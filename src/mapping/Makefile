@@ -1,6 +1,6 @@
-all: all_exposure probs.tsv m.tsv unmapped.tsv rpt.html merged-exposure.obo axioms-r.obo  merged-exposure.png merged-exposure.hier
+all: all_exposure probs.tsv m.tsv unmapped.tsv rpt.html merged-exposure.obo axioms-r.obo  hier all_ecto
 
-MOD = eo xco zeco snomed ncit go exo
+MOD = eo xco zeco snomed ncit go exo mre
 
 all_exposure: $(patsubst %, exposure-%.obo,$(MOD))
 
@@ -26,6 +26,9 @@ exposure-go.obo:
 exposure-exo.obo:
 	blip ontol-query -r exo -query "class(ID)" -to obo  > $@
 
+exposure-mre.obo:
+	blip ontol-query -r mre -query "class(ID)" -to obo  > $@
+
 
 
 
@@ -33,7 +36,7 @@ combined-exposure.obo: all_exposure
 	obo-cat.pl exposure-*.obo | grep -v ^namespace: | grep -v ^property_value: | ./add-syns.pl > $@
 
 probs.tsv: combined-exposure.obo ignore.pro
-	blip-findall  -i ignore.pro -debug index -goal nlp_index_all -i $< -u metadata_nlp entity_pair_mprobs/6 -no_pred > $@
+	blip-findall  -i ignore.pro -debug index -goal nlp_index_all -i $< -u metadata_nlp entity_pair_mprobs/6 -no_pred > $@.tmp && mv $@.tmp $@
 
 m.tsv: combined-exposure.obo ignore.pro
 	blip-findall  -i ignore.pro -debug index -goal nlp_index_all -i $< -u metadata_nlp entity_pair_label_match/6 -label -no_pred > $@
@@ -71,12 +74,18 @@ merged-exposure.owl: combined-exposure.owl axioms.owl
 merged-exposure.obo: merged-exposure.owl
 	owltools $< -o -f obo --no-check $@
 
+#hier: merged-exposure.png merged-exposure.hier
+hier:
+	echo suppressed
+
 merged-exposure.hier: merged-exposure.obo
-	blip ontol-subset -i $< -n % > $@
+	blip ontol-subset -i $< -n % -rel subclass > $@
 
 merged-exposure.png: merged-exposure.obo
-	blip ontol-subset -i $< -n $< -to png -u ontol_config_rad  -n % > $@
+	blip ontol-subset -i $< -n $< -to png -rel subclass -u ontol_config_rad  -n % > $@
 
+
+all_ecto: unmatched_ecto.tsv not_in_ecto.tsv
 
 ECTO=../ontology/ecto.obo
 combined2ecto.tsv: combined-exposure.obo ignore.pro

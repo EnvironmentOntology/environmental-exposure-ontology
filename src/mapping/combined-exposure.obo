@@ -10526,6 +10526,1288 @@ is_a: GO:0042594  ! response to starvation
 
 
 [Term]
+id: MRE:0000000
+name: Exposure
+
+[Term]
+id: MRE:0000001
+name: Prenatal exposure
+is_a: MRE:0000000  ! Exposure
+
+[Term]
+id: MRE:0000002
+name: Dietary exposure
+def: "Dietary exposure to the amount of chemical ingested via food." [HPO:probinson]
+is_a: MRE:0000000  ! Exposure
+
+[Term]
+id: MRE:0000003
+name: Diagnostic medical exposure
+is_a: MRE:0000000  ! Exposure
+
+[Term]
+id: MRE:0000004
+name: Radiological exposure
+def: "Exposure to a medical examination or procedure that utilizes ionizing radiation." [HPO:probinson]
+is_a: MRE:0000003  ! Diagnostic medical exposure
+
+[Term]
+id: MRE:0000005
+name: Diagnostic radiological examination
+def: "Exposure to a diagnostic medical examination that utilizes ionizing radiation." [HPO:probinson, PMID:21343316]
+is_a: MRE:0000004  ! Radiological exposure
+
+[Term]
+id: MRE:0000006
+name: Interventional radiological procedure
+def: "Exposure to an interventional medical procedure that utilizes ionizing radiation." [HPO:probinson]
+is_a: MRE:0000004  ! Radiological exposure
+
+[Term]
+id: MRE:0000007
+name: Radiograph
+def: "Exposure to a radiograph (X-ray)." [HPO:probinson]
+comment: In radiography (x-rays), x rays pass through the body to form pictures on a computer monitor, which are viewed by a radiologist.
+is_a: MRE:0000005  ! Diagnostic radiological examination
+
+[Term]
+id: MRE:0000008
+name: Chest radiograph
+def: "Exposure to a radiographical examination of the thorax (chest X-ray)." [HPO:probinson]
+is_a: MRE:0000007  ! Radiograph
+
+[Term]
+id: MRE:0000009
+name: Exposure to infectious agent
+is_a: MRE:0000000  ! Exposure
+
+[Term]
+id: MRE:0000010
+name: Exposure to airborne pollution
+def: "Exposure to an air-borne agent." [HPO:probinson]
+is_a: MRE:0000000  ! Exposure
+
+[Term]
+id: MRE:0000011
+name: Dietary exposure to a chemical residue
+is_a: MRE:0000002  ! Dietary exposure
+
+[Term]
+id: MRE:0000012
+name: Dietary aflatoxin exposure
+def: "Ingestion in food of aflatoxins. Aflatoxins are related to the presence of the bacteria  Aspergillus flavus, and represent a group of are toxic and cancer-causing chemicals that are produced by certain molds (Aspergillus flavus and Aspergillus parasiticus) which grow in soil, decaying vegetation, hay, and grains." [HPO:probinson, PMID:20881231]
+is_a: MRE:0000011  ! Dietary exposure to a chemical residue
+
+[Term]
+id: MRE:0000013
+name: Dietary antimony exposure
+def: "Ingestion in food of antimony, a chemical element with symbol Sb and atomic number 51. Antimony trioxide, used in the manufacturing of polyethylene terephthalate (PET) plastic, has been classified as a possible human carcinogen by the International Agency for Research on Cancer." [HPO:probinson, PMID:21684578]
+is_a: MRE:0000011  ! Dietary exposure to a chemical residue
+
+[Term]
+id: MRE:0000014
+name: Dietary arsenic exposure
+def: "Ingestion in food of arsenic, a chemical element with symbol As and atomic number 33. Exposure to arsenic has been linked to a variety of adverse human health effects, including skin lesions; skin, lung, and bladder cancer; vascular diseases; low birth weight; and potentially diabetes mellitus and increased susceptibility to infection." [HPO:probinson, PMID:24237880]
+is_a: MRE:0000011  ! Dietary exposure to a chemical residue
+
+[Term]
+id: MRE:0000015
+name: Dietary cadmium exposure
+def: "Ingestion in food of cadmium, a chemical element with symbol Cd and atomic number 48. Environmental exposure to cadmium causes renal dysfunction and bone damage. Cadmium contamination in food is regarded as the main environmental source of non-occupational exposure." [HPO:probinson, PMID:23773573]
+is_a: MRE:0000011  ! Dietary exposure to a chemical residue
+
+[Term]
+id: MRE:0000016
+name: Dietary mercury exposure
+def: "Ingestion in food of mercury, a chemical element with symbol Hg and atomic number 80." [HPO:probinson, PMID:23811414]
+comment: Very high levels of prenatal maternal mercury have adverse effects on the developing fetal brain.
+is_a: MRE:0000011  ! Dietary exposure to a chemical residue
+
+[Term]
+id: MRE:0000017
+name: Dietary exposure to food additive
+def: "Ingestion in food of a substance added to the food to preserve flavor or enhance its taste and appearance." [HPO:probinson]
+is_a: MRE:0000002  ! Dietary exposure
+
+[Term]
+id: MRE:0000018
+name: Dietary exposure to low-calorie sweetener
+def: "Ingestion in food of a chemical perceived to have a sweet taste without possessing a high amount of food energy (calories)." [HPO:probinson]
+synonym: "Artifical sweetener" EXACT []
+synonym: "Non-nutritive sweetener" EXACT []
+synonym: "Sugar substitute" EXACT []
+is_a: MRE:0000017  ! Dietary exposure to food additive
+
+[Term]
+id: MRE:0000019
+name: Dietary exposure to preservative
+def: "Ingestion in food of an agent designed to prevent food spoilage from bacteria, molds, fungi, or yeast (antimicrobials). Preservatives act to slow or prevent changes in color, flavor, or texture and delay rancidity (antioxidants) as well as to maintain freshness." [HPO:probinson]
+comment: Common preservatives include Ascorbic acid, citric acid, sodium benzoate, calcium propionate, sodium erythorbate, sodium nitrite, calcium sorbate, potassium sorbate, BHA, BHT, EDTA, tocopherols (Vitamin E). Information from the Website of the Food and Drug Administration of the United States of America.
+is_a: MRE:0000017  ! Dietary exposure to food additive
+
+[Term]
+id: MRE:0000020
+name: Dietary exposure to color additive
+def: "Ingestion in food of an agent designed to offset color loss due to exposure to light, air, temperature extremes, moisture and storage conditions; correct natural variations in color; enhance colors that occur naturally; provide color to colorless and fun foods." [HPO:probinson]
+comment: FD&C Blue Nos. 1 and 2, FD&C Green No. 3, FD&C Red Nos. 3 and 40, FD&C Yellow Nos. 5 and 6, Orange B, Citrus Red No. 2, annatto extract, beta-carotene, grape skin extract, cochineal extract or carmine, paprika oleoresin, caramel color, fruit and vegetable juices, saffron. Information from the Website of the Food and Drug Administration of the United States of America.
+is_a: MRE:0000017  ! Dietary exposure to food additive
+
+[Term]
+id: MRE:0000021
+name: Dietary exposure to flavor enhancer
+def: "Ingestion in food of an agent designed to enhance or improve flavors already present in foods (without providing their own separate flavor)." [HPO:probinson]
+comment: Flavor enhancers include monosodium glutamate (MSG), hydrolyzed soy protein, autolyzed yeast extract, disodium guanylate or inosinate. Information from the Website of the Food and Drug Administration of the United States of America.
+is_a: MRE:0000017  ! Dietary exposure to food additive
+
+[Term]
+id: MRE:0000022
+name: Dietary exposure to bisphenol A
+def: "Ingestion in food of bisphenol A (BPA), a chemical used in the production of polycarbonate and epoxy resins. BPA is an endocrine disruptor that has been shown to be harmful in laboratory animal studies." [HPO:23994667, HPO:probinson, PMID:22249005]
+is_a: MRE:0000002  ! Dietary exposure
+
+[Term]
+id: MRE:0000023
+name: Dietary exposure to deoxynivalenol
+def: "Ingestion in food of deoxynivalenol, a natural toxin that can contaminate grains in the field." [HPO:probinson, PMID:21538849]
+comment: Deoxynivalenol (DON), a trichothecene mycotoxin produced by the phytopathogenic, fungus Fusarium, commonly contaminates grains such as wheat, barley and corn worldwide and is relatively recalcitrant to food processing. DON is not thought to be carcinogenic, but exposure to very high levels may cause immunosuppressive and gastrointestinal effects.
+is_a: MRE:0000002  ! Dietary exposure
+
+[Term]
+id: MRE:0000024
+name: Dietary exposure to emulsifier
+def: "Ingestion in food of an emulsifer, i.e., an agent designed to keep food products stable, reduce stickiness, control crystallization, keep ingredients dispersed, and to help products dissolve more easily." [HPO:probinson]
+comment: Emulsifiers may be found in salad dressings, peanut butter, chocolate, margarine, frozen desserts, and include agenets such as soy lecithin, mono- and diglycerides, egg yolks, polysorbates, sorbitan monostearate. Information from the Website of the Food and Drug Administration of the United States of America.
+is_a: MRE:0000017  ! Dietary exposure to food additive
+
+[Term]
+id: MRE:0000025
+name: Dietary exposure to monosodium glutamate
+def: "Ingestion in food of monosodium glutamate, the sodium salt of glutamic acid and a flavor enhancer commonly added to Chinese food, canned vegetables, soups and processed meats." [HPO:probinson, PMID:26493866]
+comment: Monosodium glutamate (MSG) is a commonly-used additive in processed food and Asian cuisine to increase palatability. However, several studies in animals have shown that MSG is toxic to the various organs such as the liver, brain, thymus, and kidneys. Published data indicate that renal fibrosis is associated with the chronic consumption of MSG and oxidative stress is the main cause of kidney injury [PMID:26493866].
+is_a: MRE:0000021  ! Dietary exposure to flavor enhancer
+
+[Term]
+id: MRE:0000026
+name: Dietary exposure to disodium guanylate
+def: "Ingestion in food of disodium guanylate, a natural sodium salt of guanosine monophosphate that is used as a flavor enhancer." [HPO:probinson]
+comment: Disodium guanylate and monosodium glutamate are both used to add a meaty or savory flavor to foods.
+is_a: MRE:0000021  ! Dietary exposure to flavor enhancer
+
+[Term]
+id: MRE:0000027
+name: Nuclear medicine procedure
+def: "Exposure to a nuclear medicine procedure, in which a small amount of radioactive material is inhaled, injected, or swallowed by a patient. Energy emitted from the radioactive material is used to visualize organs and their level of function." [HPO:probinson]
+is_a: MRE:0000004  ! Radiological exposure
+
+[Term]
+id: MRE:0000028
+name: Cervical spine radiograph
+def: "Exposure to a radiographical examination of the cervical spine (cervical spine X-ray)." [HPO:probinson]
+is_a: MRE:0000007  ! Radiograph
+
+[Term]
+id: MRE:0000029
+name: Pelvis radiograph
+def: "Exposure to a radiographical examination of the pelvis (that is, pelvis X-ray)." [HPO:probinson]
+is_a: MRE:0000007  ! Radiograph
+
+[Term]
+id: MRE:0000030
+name: Skull radiograph
+def: "Exposure to a radiographical examination of the skull (that is, skull X-ray)." [HPO:probinson]
+is_a: MRE:0000007  ! Radiograph
+
+[Term]
+id: MRE:0000031
+name: Intravenous pyelogram
+def: "Exposure to an intravenous pyelogram (IVP), a radiological procedure used to visualize abnormalities of the urinary system, including the kidneys, ureters, and bladder. To perform an IVP, X-ray contrast medium is injected into a vein. Since the contrast is excreted or removed from the bloodstream via the kidneys, it becomes visible on X-rays almost immediately after injection." [HPO:probinson]
+is_a: MRE:0000005  ! Diagnostic radiological examination
+
+[Term]
+id: MRE:0000032
+name: Computer tomography
+def: "Exposure to an examination by computer tomography (CAT scan)." [HPO:probinson]
+is_a: MRE:0000005  ! Diagnostic radiological examination
+
+[Term]
+id: MRE:0000033
+name: Positron emission tomography scan
+def: "Exposure to a positron emission tomography (PET) scan, an imaging test that uses radioactive tracers that highlight specific organ systems and their functioning." [HPO:probinson]
+is_a: MRE:0000027  ! Nuclear medicine procedure
+
+[Term]
+id: MRE:0000034
+name: Exposure to cigarette smoke
+def: "Passive or active inhalation of smoke from tobacco cigarettes." [HPO:probinson]
+is_a: MRE:0000050  ! Drug use
+
+[Term]
+id: MRE:0000035
+name: Passive smoking
+def: "Inhaling of cigarette, cigar, and pipe smoke of others." [HPO:probinson]
+comment: Passive smoking in the sense used by this ontology refers to the habitual inhalation of smoke exhaled by smokers by a nonsmoker in an enclosed area.
+synonym: "Environmental tobacco smoke" EXACT []
+synonym: "Involuntary exposure to tobacco smoke" EXACT []
+synonym: "Second-hand smoke exposure" EXACT []
+is_a: MRE:0000034  ! Exposure to cigarette smoke
+
+[Term]
+id: MRE:0000036
+name: Prenatal drug exposure
+def: "Exposure of an embryo or fetus to a drug transmitted from the maternal circulation to the fetal circulation through the placenta and resulting from maternal abuse of the drug." [HPO:probinson, PMID:23439891]
+comment: Almost all drugs are known to cross the placenta and have some effect on the fetus.
+synonym: "Prenatal substance abuse" EXACT []
+is_a: MRE:0000001  ! Prenatal exposure
+
+[Term]
+id: MRE:0000038
+name: Maternal cigarette use
+def: "Exposure of the fetus to compounds related to tobacco because of maternal smoking." [HPO:probinson, PMID:23439891]
+comment: Nicotine is only one of more than 4000 compounds to which the fetus is exposed through maternal smoking. Of these, 30 compounds have been associated  with  adverse  health  outcomes.
+is_a: MRE:0000036  ! Prenatal drug exposure
+
+[Term]
+id: MRE:0000039
+name: Maternal alcohol use
+def: "Exposure of the fetus to alcohol because of ingestion of alcoholic beverages by the mother." [HPO:probinson, PMID:23439891]
+comment: Ethanol easily crosses the placenta into the fetus, with a significant concentration of the drug identified in the amniotic fluid as well as in maternal and  fetal  blood.
+is_a: MRE:0000036  ! Prenatal drug exposure
+
+[Term]
+id: MRE:0000040
+name: Maternal marijuana use
+def: "Exposure of the fetus to marijuana because of maternal marijuana use." [HPO:probinson, PMID:25986032]
+comment: Marijuana freely crosses the placenta and is found in breast milk. It may have adverse effects on both perinatal outcomes and fetal neurodevelopment. Specifically, marijuana may be associated with fetal growth restriction, stillbirth, and preterm birth.
+is_a: MRE:0000036  ! Prenatal drug exposure
+
+[Term]
+id: MRE:0000041
+name: Maternal opiate use
+def: "Exposure of the fetus to opiates because of maternal opiate use." [PMID:23439891]
+comment: Opiates have been shown to decrease brain growth and cell development in animals, but studies of their effects on neurotransmitter levels and opioid receptors have produced mixednresults.
+is_a: MRE:0000036  ! Prenatal drug exposure
+
+[Term]
+id: MRE:0000042
+name: Maternal cocaine use
+def: "Exposure of the fetus to cocaine because of maternal cocaine use." [HPO:probinson, PMID:23439891]
+comment: Cocaine easily crosses both the placenta and the blood-brain barrier and can have significant teratogenic effects on the developing fetus, directly and indirectly.
+is_a: MRE:0000036  ! Prenatal drug exposure
+
+[Term]
+id: MRE:0000043
+name: Maternal methamphetamine use
+def: "Exposure of the fetus to methamphetamine because of maternal methamphetamine use." [HPO:probinson]
+is_a: MRE:0000036  ! Prenatal drug exposure
+
+[Term]
+id: MRE:0000044
+name: Occupational exposure
+def: "A skin, eye, mucous membrane, or parenteral contact with a substance or infectious material that may result from the performance of one's professional duties." [HPO:probinson]
+is_a: MRE:0000000  ! Exposure
+
+[Term]
+id: MRE:0000045
+name: Tobacco smoking
+def: "Inhalation of the products of smoked  forms  of  tobacco  include  various kinds of cigarettes (manufactured,  hand-rolled,  filtered, unfiltered  and flavored), cigars and pipes." [HPO:probinson]
+is_a: MRE:0000034  ! Exposure to cigarette smoke
+
+[Term]
+id: MRE:0000046
+name: Cigarette smoking
+def: "Inhalation of the products of smoked cigarettes  (manufactured,  hand-rolled,  filtered, unfiltered  and flavored)." [HPO:probinson]
+is_a: MRE:0000045  ! Tobacco smoking
+
+[Term]
+id: MRE:0000047
+name: Cigar smoking
+def: "Inhalation of the products of smoked cigars." [HPO:probinson]
+is_a: MRE:0000045  ! Tobacco smoking
+
+[Term]
+id: MRE:0000048
+name: Tobacco pipe smoking
+def: "Inhalation of the products of smoked tobacco from a pipe." [HPO:probinson]
+is_a: MRE:0000045  ! Tobacco smoking
+
+[Term]
+id: MRE:0000049
+name: Occupational exposure to pesticide
+def: "Contact with pesticides during the performance of job duties, generally in agriculture. Pesticides are substances released into the environment to kill plants or insects." [HPO:probinson, PMID:17017381]
+comment: Pesticide are unique chemicals as they are intrinsically toxic for several biological targets, are deliberately spread into the environment, and their toxicity has a limited species selectivity. Pesticide toxicity depends on the compound family and is generally greater for the older compounds; in humans, they are responsible for acute poisonings as well as for long term health effects, including cancer and adverse effects on reproduction.
+is_a: MRE:0000044  ! Occupational exposure
+
+[Term]
+id: MRE:0000050
+name: Drug use
+alt_id: MRE:0000037
+def: "Being exposed to recreational drugs." [HPO:probinson]
+synonym: "Substance abuse" EXACT []
+is_a: MRE:0000000  ! Exposure
+
+[Term]
+id: MRE:0000051
+name: Alcohol use
+def: "Ingestion of alcoholic beverages (containing ethanol that has formula C2H6O)." [HPO:probinson]
+is_a: MRE:0000050  ! Drug use
+
+[Term]
+id: MRE:0000052
+name: Occupational exposure to herbicide
+def: "Contact with herbicide during the performance of job duties, generally in agriculture. A herbicide is a substance used to kill or otherwise control unwanted plants." [HPO:probinson]
+is_a: MRE:0000049  ! Occupational exposure to pesticide
+
+[Term]
+id: MRE:0000053
+name: Occupational exposure to insecticide
+def: "Contact with insecticide during the performance of job duties, generally in agriculture. A insecticide is a substance used to kill or otherwise control unwanted insects." [HPO:probinson]
+is_a: MRE:0000049  ! Occupational exposure to pesticide
+
+[Term]
+id: MRE:0000054
+name: Occupational exposure to fungicide
+def: "Contact with fungicide during the performance of job duties, generally in agriculture. A fungicide is a substance used to kill or otherwise control unwanted fungi." [HPO:probinson]
+is_a: MRE:0000049  ! Occupational exposure to pesticide
+
+[Term]
+id: MRE:0000055
+name: Occupational exposure to rodenticide
+def: "Contact with rodenticide during the performance of job duties, generally in agriculture. A rodenticide is a substance used to kill or otherwise control unwanted mice, rats or other rodents." [HPO:probinson]
+is_a: MRE:0000049  ! Occupational exposure to pesticide
+
+[Term]
+id: MRE:0000056
+name: Occupational exposure to bactericide
+def: "Contact with bactericide during the performance of job duties, generally in agriculture. A bactericide is a substance used to kill or otherwise control unwanted bacteria." [HPO:probinson]
+is_a: MRE:0000049  ! Occupational exposure to pesticide
+
+[Term]
+id: MRE:0000057
+name: Occupational exposure to carbamate insecticide
+def: "Contact with a carbamate insecticide during the performance of job duties, generally in agriculture. A insecticide is a substance used to kill or otherwise control unwanted insects." [HPO:probinson]
+is_a: MRE:0000053  ! Occupational exposure to insecticide
+
+[Term]
+id: MRE:0000058
+name: Occupational dust exposure
+def: "Exposure to airborne dust incurred while performing job duties. Dust is defined as small solid particles, conventionally taken as those particles below 75 micrometers in diameter, which settle out under their own weight but which may remain suspended for some time (According to the International Standardization Organization; ISO 4225-ISO, 1994)." [HPO:probinson, PMID:27103386]
+is_a: MRE:0000059  ! Occupational aerosol exposure
+
+[Term]
+id: MRE:0000059
+name: Occupational aerosol exposure
+def: "Exposure to an aerosol incurred while performing job duties. An aerosol is defined as a system of particles suspended in the air in the form of airborne dusts, sprays, mists, smokes and fumes." [HPO:probinson]
+is_a: MRE:0000010  ! Exposure to airborne pollution
+is_a: MRE:0000044  ! Occupational exposure
+
+[Term]
+id: MRE:0000060
+name: Occupational mineral dust exposure
+def: "Exposure to airborne mineral dust incurred while performing job duties. Mineral dust includes dust categories containing  free  crystalline  silica  (e.g.,  as  quartz),  coal and cement dusts." [HPO:probinson]
+is_a: MRE:0000058  ! Occupational dust exposure
+
+[Term]
+id: MRE:0000061
+name: Occupational metallic dust exposure
+def: "Exposure to airborne metallic dust incurred while performing job duties. Metallic dust seen in the workplace may include dusts containing lead, cadmium, nickel, and beryllium." [HPO:probinson]
+is_a: MRE:0000058  ! Occupational dust exposure
+
+[Term]
+id: MRE:0000062
+name: Occupational fibrous dust exposure
+def: "Exposure to airborne fibrous dust incurred while performing job duties. Fibrous dust is defined as having diameter less than 3 micrometers and length greater than 5 micrometers with and aspect ratio (length to width) greater than or equal to 3 to 1." [HPO:probinson]
+is_a: MRE:0000058  ! Occupational dust exposure
+
+[Term]
+id: MRE:0000063
+name: Occupational fibrous glass dust exposure
+def: "Exposure to airborne fibrous glass dust incurred while performing job duties. Fibrous glass dust is a type of fibrous dust originating from fiber glass or glass fibers, or glass wool." [HPO:probinson, PMID:14739382]
+is_a: MRE:0000062  ! Occupational fibrous dust exposure
+
+[Term]
+id: MRE:0000064
+name: Maternal heroin use
+def: "Exposure of the fetus to heroin because of maternal heroin use." [HPO:probinson]
+is_a: MRE:0000041  ! Maternal opiate use
+
+[Term]
+id: MRE:0000065
+name: Poisoning
+def: "A condition or physical state produced by the ingestion, injection, inhalation of or exposure to a deleterious agent." [HPO:probinson, MeSH:D011041]
+is_a: MRE:0000000  ! Exposure
+
+[Term]
+id: MRE:0000066
+name: Occupational exposure to Paraquat
+def: "Contact with the herbicide Paraquat during the performance of job duties, generally in agriculture." [HPO:probinson, PMID:27042505]
+is_a: MRE:0000052  ! Occupational exposure to herbicide
+
+[Term]
+id: MRE:0000067
+name: Occupational exposure to Diquat
+def: "Contact with the herbicide Diquat during the performance of job duties, generally in agriculture." [HPO:probinson, PMID:26785375]
+is_a: MRE:0000052  ! Occupational exposure to herbicide
+
+[Term]
+id: MRE:0000068
+name: Occupational exposure to urea-based herbicide
+def: "Contact with a urea-based herbicide during the performance of job duties, generally in agriculture." [HPO:probinson, PMID:26785375]
+is_a: MRE:0000052  ! Occupational exposure to herbicide
+
+[Term]
+id: MRE:0000069
+name: Occupational exposure to isoproturon
+def: "Contact with the urea-based herbicide isoproturon during the performance of job duties, generally in agriculture." [HPO:probinson, PMID:26785375]
+is_a: MRE:0000068  ! Occupational exposure to urea-based herbicide
+
+[Term]
+id: MRE:0000070
+name: Occupational exposure to organophosphorus herbicide
+def: "Contact with an organophosphorus-based herbicide during the performance of job duties, generally in agriculture." [HPO:probinson, PMID:11906102]
+is_a: MRE:0000052  ! Occupational exposure to herbicide
+
+[Term]
+id: MRE:0000071
+name: Occupational exposure to anilofos
+def: "Contact with the organophosphorus-based herbicide anilofos during the performance of job duties, generally in agriculture." [HPO:probinson, PMID:11906102]
+is_a: MRE:0000070  ! Occupational exposure to organophosphorus herbicide
+
+[Term]
+id: MRE:0000072
+name: Occupational exposure to gluphosphate
+def: "Contact with the organophosphorus-based herbicide gluphosphate during the performance of job duties, generally in agriculture." [HPO:probinson]
+is_a: MRE:0000070  ! Occupational exposure to organophosphorus herbicide
+
+[Term]
+id: MRE:0000073
+name: Occupational exposure to nitrile herbicide
+def: "Contact with the nitrile herbicide isoproturon during the performance of job duties, generally in agriculture." [HPO:probinson]
+is_a: MRE:0000049  ! Occupational exposure to pesticide
+is_a: MRE:0000052  ! Occupational exposure to herbicide
+
+[Term]
+id: MRE:0000074
+name: Occupational exposure to toxic waste
+def: "Exposure to toxic waste incurred while performing job duties. Toxic wastes, also referred to as hazardous wastes, are poisonous by-products of manufacturing, farming, city septic systems, construction, automotive garages, laboratories, hospitals and other industries." [HPO:probinson]
+is_a: MRE:0000044  ! Occupational exposure
+
+[Term]
+id: MRE:0000075
+name: Occupational exposure to anticoagulant rodenticide
+def: "Contact with an anticoagulant rodenticide during the performance of job duties, generally in agriculture. This type of rodenticide is designed to kill rodents by causing bleeding." [HPO:probinson]
+is_a: MRE:0000055  ! Occupational exposure to rodenticide
+
+[Term]
+id: MRE:0000076
+name: Mammography
+def: "Exposure to a radiographic examination of the breast using low-energy X-rays." [HPO:probinson, MeSH:D008327]
+is_a: MRE:0000007  ! Radiograph
+
+[Term]
+id: MRE:0000077
+name: Angiography
+def: "Exposure to a radiographic examination of blood vessels after injection of a contrast medium." [HPO:probinson, MeSH:D000792]
+is_a: MRE:0000007  ! Radiograph
+
+[Term]
+id: MRE:0000078
+name: Exposure to ultrasonography
+def: "Exposure to a medical examination that employs ultrasonic waves directed into the tissues in order to visualize of deep structures of the body." [HPO:probinson]
+synonym: "Exposure to medical sonography" EXACT []
+synonym: "Exposure to ultrasonic imaging" EXACT []
+is_a: MRE:0000003  ! Diagnostic medical exposure
+
+[Term]
+id: MRE:0000079
+name: Radiation exposure
+def: "Exposure to radioactive waves or particles." [HPO:probinson]
+is_a: MRE:0000080  ! Exposure to radioactivity
+
+[Term]
+id: MRE:0000080
+name: Exposure to radioactivity
+def: "Radioactive contamination or radioactive exposure." [HPO:probinson]
+is_a: MRE:0000000  ! Exposure
+
+[Term]
+id: MRE:0000081
+name: Radioactive contamination
+def: "Ingestion or absorption of radioactive materials." [HPO:probinson]
+is_a: MRE:0000080  ! Exposure to radioactivity
+
+[Term]
+id: MRE:0000082
+name: Exposure to water pollution
+is_a: MRE:0000000  ! Exposure
+
+[Term]
+id: MRE:0000083
+name: Exposure to polychlorinated biphenyl
+def: "Exposure to polychlorinated biphenyl (PCB), a synthetic, organic chlorine compound derived from biphenyl." [HPO:probinson, PMID:11693948]
+is_a: MRE:0000084  ! Exposure to organochlorine compound
+
+[Term]
+id: MRE:0000084
+name: Exposure to organochlorine compound
+is_a: MRE:0000128  ! Exposure to organic compound
+
+[Term]
+id: MRE:0000085
+name: Human papilloma virus infection
+def: "A history of infection with human papilloma virus infection." [HPO:probinson]
+is_a: MRE:0000009  ! Exposure to infectious agent
+
+[Term]
+id: MRE:0000086
+name: Helicobacter pylori infection
+def: "A history of infection with helicobacter pylori." [HPO:probinson]
+is_a: MRE:0000009  ! Exposure to infectious agent
+
+[Term]
+id: MRE:0000087
+name: Exposure to organochloride pesticide
+is_a: MRE:0000084  ! Exposure to organochlorine compound
+
+[Term]
+id: MRE:0000088
+name: Exposure to heptachlor epoxide
+def: "Exposure to heptachlor epoxide. Heptachlor epoxide is a degradation product of heptachlor (an insecticide) that occurs in soil following treatment with heptachlor." [HPO:probinson]
+is_a: MRE:0000087  ! Exposure to organochloride pesticide
+
+[Term]
+id: MRE:0000089
+name: Exposure to noise
+is_a: MRE:0000000  ! Exposure
+
+[Term]
+id: MRE:0000090
+name: Occupational noise exposure
+def: "Exposure to high level of noise on the job." [HPO:probinson]
+is_a: MRE:0000044  ! Occupational exposure
+is_a: MRE:0000089  ! Exposure to noise
+
+[Term]
+id: MRE:0000091
+name: Occupational exposure to infrasound
+def: "Exposure on the job to low-frequency sound, is sound that is lower in frequency than 20 Hz (Hertz, i.e., cycles per second)." [HPO:probinson]
+is_a: MRE:0000090  ! Occupational noise exposure
+
+[Term]
+id: MRE:0000092
+name: Prenatal air pollutant exposure
+def: "Maternal exposure to an air pollutant during pregnancy." [HPO:probinson]
+synonym: "Exposure to air pollutant during pregnancy" EXACT []
+is_a: MRE:0000001  ! Prenatal exposure
+
+[Term]
+id: MRE:0000093
+name: Prenatal polycyclic aromatic hydrocarbon exposure
+def: "Maternal exposure to polycyclic aromatic hydrocarbons during pregnancy." [HPO:probinson, PMID:26989990]
+is_a: MRE:0000092  ! Prenatal air pollutant exposure
+
+[Term]
+id: MRE:0000094
+name: Prenatal medication exposure
+def: "Exposure of an embryo or fetus to a drug transmitted from the maternal circulation to the fetal circulation through the placenta." [HPO:probinson]
+comment: Distinct from Prenatal (recreational or illicit) drug use.
+is_a: MRE:0000001  ! Prenatal exposure
+
+[Term]
+id: MRE:0000095
+name: Prenatal exposure to maternal famine
+def: "Exposure of the fetus to severe maternal undernourishment during pregnancy." [HPO:probinson, PMID:15893910]
+is_a: MRE:0000001  ! Prenatal exposure
+
+[Term]
+id: MRE:0000096
+name: Prenatal exposure to serotonin reuptake inhibitor
+def: "Exposure of an embryo or fetus to a serotonin reuptake inhibitor transmitted from the maternal circulation to the fetal circulation through the placenta." [HPO:probinson, PMID:25252317]
+is_a: MRE:0000094  ! Prenatal medication exposure
+
+[Term]
+id: MRE:0000097
+name: Prenatal lead exposure
+def: "Exposure of the fetus to lead transmitted from the maternal circulation to the fetal circulation through the placenta." [HPO:probinson, PMID:26825887]
+is_a: MRE:0000001  ! Prenatal exposure
+
+[Term]
+id: MRE:0000098
+name: Exposure to gas
+is_a: MRE:0000000  ! Exposure
+
+[Term]
+id: MRE:0000099
+name: Carbon monoxide exposure
+is_a: MRE:0000098  ! Exposure to gas
+
+[Term]
+id: MRE:0000100
+name: Exposure to 2,2',4'-tribromodiphenyl ether
+def: "Being exposed to the polybrominated diphenyl ether 2,2',4'-tribromodiphenyl ether." [HPO:probinson]
+is_a: MRE:0000161  ! Exposure to polybrominated diphenyl ether
+
+[Term]
+id: MRE:0000101
+name: Exposure to dichlorodiphenyltrichloroethane
+def: "Exposure to dichlorodiphenyltrichloroethane (DDT), a pesticide." [HPO:probinson]
+comment: Dichlorodiphenyltrichloroethane was banned in the United States in 1973.
+is_a: MRE:0000087  ! Exposure to organochloride pesticide
+
+[Term]
+id: MRE:0000102
+name: Exposure to endocrine-disrupting chemical
+def: "Exposure to an exogenous chemical, or mixture of chemicals, that interferes with any aspect of hormone action." [HPO:probinson, PMID:26544531]
+is_a: MRE:0000000  ! Exposure
+
+[Term]
+id: MRE:0000103
+name: Exposure to phthalate
+def: "Exposure to phthalate. Phthalates and phthalate esters are a large group of compounds used as liquid plasticizers found in a wide range of products including  plastics, coatings, cosmetics, and medical tubing." [HPO:probinson, PMID:26544531]
+is_a: MRE:0000102  ! Exposure to endocrine-disrupting chemical
+
+[Term]
+id: MRE:0000104
+name: Exposure to atrazine
+def: "Exposure to atrazine (2-chloro-4-ethylamino-6-isopropylamino-s-triazine) (ATR) is a widely used chlorotriazine herbicide used to control broadleaf and grass weed growth on crops such as commercial corn, sorghum, and sugar cane." [HPO:probinson, PMID:26544531]
+is_a: MRE:0000102  ! Exposure to endocrine-disrupting chemical
+
+[Term]
+id: MRE:0000105
+name: Exposure to chemical element
+def: "Being exposed to a chemical element, A chemical element, i.e., a species of atoms having the same number of protons in the nucleus." [HPO:probinson]
+is_a: MRE:0000000  ! Exposure
+
+[Term]
+id: MRE:0000106
+name: Exposure to metal
+def: "Exposure to a metal element, i.e., a chemical element that is typically hard, opaque, shiny." [HPO:probinson]
+is_a: MRE:0000105  ! Exposure to chemical element
+
+[Term]
+id: MRE:0000107
+name: Exposure to metalloid
+def: "Exposure to a metalloid element, i.e., a chemical element with properties in between those of metals and nonmetals." [HPO:probinson]
+comment: The six commonly recognised metalloids are boron, silicon, germanium, arsenic, antimony, and tellurium.
+is_a: MRE:0000105  ! Exposure to chemical element
+
+[Term]
+id: MRE:0000108
+name: Exposure to antimony
+def: "Being exposed to antimony, a metalloid element." [HPO:probinson]
+is_a: MRE:0000107  ! Exposure to metalloid
+
+[Term]
+id: MRE:0000109
+name: Exposure to arsenic
+def: "Being exposed to arsenic, a metalloid element." [HPO:probinson]
+is_a: MRE:0000107  ! Exposure to metalloid
+
+[Term]
+id: MRE:0000110
+name: Exposure to barium
+def: "Being exposed to barium, a metal element." [HPO:probinson]
+is_a: MRE:0000106  ! Exposure to metal
+
+[Term]
+id: MRE:0000111
+name: Exposure to beryllium
+def: "Being exposed to beryllium, a metal element." [HPO:probinson]
+is_a: MRE:0000106  ! Exposure to metal
+
+[Term]
+id: MRE:0000112
+name: Exposure to cadmium
+def: "Being exposed to cadmium, a metal element." [HPO:probinson]
+is_a: MRE:0000106  ! Exposure to metal
+
+[Term]
+id: MRE:0000113
+name: Exposure to cesium
+def: "Being exposed to cesium, a metal element." [HPO:probinson]
+is_a: MRE:0000106  ! Exposure to metal
+
+[Term]
+id: MRE:0000114
+name: Exposure to cobalt
+def: "Being exposed to cobalt, a metal element." [HPO:probinson]
+is_a: MRE:0000106  ! Exposure to metal
+
+[Term]
+id: MRE:0000115
+name: Exposure to copper
+def: "Being exposed to copper, a metal element." [HPO:probinson]
+is_a: MRE:0000106  ! Exposure to metal
+
+[Term]
+id: MRE:0000116
+name: Exposure to lead
+def: "Being exposed to lead, a metal element." [HPO:probinson]
+is_a: MRE:0000106  ! Exposure to metal
+
+[Term]
+id: MRE:0000117
+name: Exposure to manganese
+def: "Being exposed to manganese, a metal element." [HPO:probinson]
+is_a: MRE:0000106  ! Exposure to metal
+
+[Term]
+id: MRE:0000118
+name: Exposure to mercury
+def: "Being exposed to mercury, a metal element." [HPO:probinson]
+is_a: MRE:0000106  ! Exposure to metal
+
+[Term]
+id: MRE:0000119
+name: Exposure to molybdenum
+def: "Being exposed to molybdenum, a metal element." [HPO:probinson]
+is_a: MRE:0000106  ! Exposure to metal
+
+[Term]
+id: MRE:0000120
+name: Exposure to platinum
+def: "Being exposed to platinum, a metal element." [HPO:probinson]
+is_a: MRE:0000106  ! Exposure to metal
+
+[Term]
+id: MRE:0000121
+name: Exposure to selenium
+def: "Being exposed to selenium, a metal element." [HPO:probinson]
+is_a: MRE:0000106  ! Exposure to metal
+
+[Term]
+id: MRE:0000122
+name: Exposure to strontium
+def: "Being exposed to strontium, a metal element." [HPO:probinson]
+is_a: MRE:0000106  ! Exposure to metal
+
+[Term]
+id: MRE:0000123
+name: Exposure to thallium
+def: "Being exposed to thallium, a metal element." [HPO:probinson]
+is_a: MRE:0000106  ! Exposure to metal
+
+[Term]
+id: MRE:0000124
+name: Exposure to tin
+def: "Being exposed to tin, a metal element." [HPO:probinson]
+is_a: MRE:0000106  ! Exposure to metal
+
+[Term]
+id: MRE:0000125
+name: Exposure to tungsten
+def: "Being exposed to tungsten, a metal element." [HPO:probinson]
+is_a: MRE:0000106  ! Exposure to metal
+
+[Term]
+id: MRE:0000126
+name: Exposure to uranium
+def: "Being exposed to uranium, a metal element." [HPO:probinson]
+is_a: MRE:0000106  ! Exposure to metal
+
+[Term]
+id: MRE:0000127
+name: Exposure to zinc
+def: "Being exposed to zinc, a metal element." [HPO:probinson]
+is_a: MRE:0000106  ! Exposure to metal
+
+[Term]
+id: MRE:0000128
+name: Exposure to organic compound
+def: "Being exposed to a chemical compound whose molecules include carbon." [HPO:probinson]
+is_a: MRE:0000000  ! Exposure
+
+[Term]
+id: MRE:0000129
+name: Exposure to polycyclic aromatic hydrocarbon
+def: "Being exposed to a polycyclic aromatic hydrocarbon (PAH), i.e., to an organic compound that contains only carbon and hydrogen and is composed of multiple aromatic rings without further branching substituents." [HPO:probinson]
+synonym: "Exposure to polyaromatic hydrocarbon" EXACT []
+is_a: MRE:0000128  ! Exposure to organic compound
+
+[Term]
+id: MRE:0000130
+name: Exposure to volatile organic compound
+def: "Being exposed to an organic compound with a high vapor pressure at room temperature. High volatility causes large numbers of molecules to evaporate or sublimate from the liquid or solid form of the compound and enter the surrounding air." [HPO:probinson]
+is_a: MRE:0000128  ! Exposure to organic compound
+
+[Term]
+id: MRE:0000131
+name: Exposure to fluorene
+def: "Being exposed to fluorene, one of the most abundant polycyclic aromatic hydrocarbons (PAHs) throughout the gas phase in the environment, especially in tobacco smoke condensate." [HPO:probinson]
+comment: 2-Hydroxyfluorene (2-OHF) is a metabolite of fluorene.
+is_a: MRE:0000129  ! Exposure to polycyclic aromatic hydrocarbon
+
+[Term]
+id: MRE:0000132
+name: Exposure to 1,1,1-trichloroethane
+def: "Being exposed to the volatile organic compound 1,1,1-trichloroethane (methyl chloroform)." [HPO:probinson]
+is_a: MRE:0000130  ! Exposure to volatile organic compound
+
+[Term]
+id: MRE:0000133
+name: Exposure to 1,1,2,2-tetrachloroethane
+def: "Being exposed to the volatile organic compound 1,1,2,2-tetrachloroethane." [HPO:probinson]
+is_a: MRE:0000130  ! Exposure to volatile organic compound
+
+[Term]
+id: MRE:0000134
+name: Exposure to 1,1,2-trichloroethane
+def: "Being exposed to the volatile organic compound 1,1,2-trichloroethane." [HPO:probinson]
+is_a: MRE:0000130  ! Exposure to volatile organic compound
+
+[Term]
+id: MRE:0000135
+name: Exposure to 1,1-dichloroethane
+def: "Being exposed to the volatile organic compound 1,1-dichloroethane." [HPO:probinson]
+is_a: MRE:0000130  ! Exposure to volatile organic compound
+
+[Term]
+id: MRE:0000136
+name: Exposure to 1,1-dichloroethene
+def: "Being exposed to the volatile organic compound 1,1-dichloroethene (vinylidene chloride)." [HPO:probinson]
+is_a: MRE:0000130  ! Exposure to volatile organic compound
+
+[Term]
+id: MRE:0000137
+name: Exposure to 1,2-dibromo-3-chloropropane
+def: "Being exposed to the volatile organic compound 1,2-dibromo-3-chloropropane (DBCP)." [HPO:probinson]
+is_a: MRE:0000130  ! Exposure to volatile organic compound
+
+[Term]
+id: MRE:0000138
+name: Exposure to 1,2-dichlorobenzene
+def: "Being exposed to the volatile organic compound 1,2-dichlorobenzene (o-dichlorobenzene)." [HPO:probinson]
+is_a: MRE:0000130  ! Exposure to volatile organic compound
+
+[Term]
+id: MRE:0000139
+name: Exposure to 1,2-dichloroethane
+def: "Being exposed to the volatile organic compound 1,2-dichloroethane (ethylene dichloride)." [HPO:probinson]
+is_a: MRE:0000130  ! Exposure to volatile organic compound
+
+[Term]
+id: MRE:0000140
+name: Exposure to cis-1,2-dichloroethene
+def: "Being exposed to the volatile organic compound cis-1,2-dichloroethene." [HPO:probinson]
+is_a: MRE:0000130  ! Exposure to volatile organic compound
+
+[Term]
+id: MRE:0000141
+name: Exposure to trans-1,2-dichloroethene
+def: "Being exposed to the volatile organic compound trans-1,2-dichloroethene." [HPO:probinson]
+is_a: MRE:0000130  ! Exposure to volatile organic compound
+
+[Term]
+id: MRE:0000142
+name: Exposure to 1,2-dichloropropane
+def: "Being exposed to the volatile organic compound  1,2-dichloropropane." [HPO:probinson]
+is_a: MRE:0000130  ! Exposure to volatile organic compound
+
+[Term]
+id: MRE:0000143
+name: Exposure to 1,3-dichloropropane
+def: "Being exposed to the volatile organic compound  1,3-dichloropropane (m-dichlorobenzene)." [HPO:probinson]
+is_a: MRE:0000130  ! Exposure to volatile organic compound
+
+[Term]
+id: MRE:0000144
+name: Exposure to 1,4-dichloropropane
+def: "Being exposed to the volatile organic compound  1,4-dichloropropane (paradichlorobenzene)." [HPO:probinson]
+is_a: MRE:0000130  ! Exposure to volatile organic compound
+
+[Term]
+id: MRE:0000145
+name: Exposure to 2,5-dimethylfuran
+def: "Being exposed to the volatile organic compound  2,5-dimethylfuran." [HPO:probinson]
+is_a: MRE:0000130  ! Exposure to volatile organic compound
+
+[Term]
+id: MRE:0000146
+name: Exposure to benzene
+def: "Being exposed to the volatile organic compound benzene." [HPO:probinson]
+is_a: MRE:0000130  ! Exposure to volatile organic compound
+
+[Term]
+id: MRE:0000147
+name: Exposure to chlorobenzene
+def: "Being exposed to the volatile organic compound chlorobenzene (monochlorobenzene)." [HPO:probinson]
+is_a: MRE:0000130  ! Exposure to volatile organic compound
+
+[Term]
+id: MRE:0000148
+name: Exposure to dibromomethane
+def: "Being exposed to the volatile organic compound dibromomethane." [HPO:probinson]
+is_a: MRE:0000130  ! Exposure to volatile organic compound
+
+[Term]
+id: MRE:0000149
+name: Exposure to dichloromethane
+def: "Being exposed to the volatile organic compound dichloromethane (methylene chloride)." [HPO:probinson]
+is_a: MRE:0000130  ! Exposure to volatile organic compound
+
+[Term]
+id: MRE:0000150
+name: Exposure to ethylbenzene
+def: "Being exposed to the volatile organic compound ethylbenzene." [HPO:probinson]
+is_a: MRE:0000130  ! Exposure to volatile organic compound
+
+[Term]
+id: MRE:0000151
+name: Exposure to hexachloroethane
+def: "Being exposed to the volatile organic compound hexachloroethane." [HPO:probinson]
+is_a: MRE:0000130  ! Exposure to volatile organic compound
+
+[Term]
+id: MRE:0000152
+name: Exposure to methyl-tert-butyl ether
+def: "Being exposed to the volatile organic compound  (MTBE)." [HPO:probinson]
+is_a: MRE:0000130  ! Exposure to volatile organic compound
+
+[Term]
+id: MRE:0000153
+name: Exposure to nitrobenzene
+def: "Being exposed to the volatile organic compound nitrobenzene." [HPO:probinson]
+is_a: MRE:0000130  ! Exposure to volatile organic compound
+
+[Term]
+id: MRE:0000154
+name: Exposure to styrene
+def: "Being exposed to the volatile organic compound styrene." [HPO:probinson]
+is_a: MRE:0000130  ! Exposure to volatile organic compound
+
+[Term]
+id: MRE:0000155
+name: Exposure to tetrachloroethene
+def: "Being exposed to the volatile organic compound tetrachloroethene (perchloroethylene)." [HPO:probinson]
+is_a: MRE:0000130  ! Exposure to volatile organic compound
+
+[Term]
+id: MRE:0000156
+name: Exposure to tetrachloromethane
+def: "Being exposed to the volatile organic compound tetrachloromethane (carbon tetrachloride)." [HPO:probinson]
+is_a: MRE:0000130  ! Exposure to volatile organic compound
+
+[Term]
+id: MRE:0000157
+name: Exposure to toluene
+def: "Being exposed to the volatile organic compound toluene." [HPO:probinson]
+is_a: MRE:0000130  ! Exposure to volatile organic compound
+
+[Term]
+id: MRE:0000158
+name: Exposure to trichloroethene
+def: "Being exposed to the volatile organic compound trichloroethene (Trichloroethylene)." [HPO:probinson]
+is_a: MRE:0000130  ! Exposure to volatile organic compound
+
+[Term]
+id: MRE:0000159
+name: Exposure to m-/p-xylene
+def: "Being exposed to the volatile organic compound m-/p-xylene." [HPO:probinson]
+is_a: MRE:0000130  ! Exposure to volatile organic compound
+
+[Term]
+id: MRE:0000160
+name: Exposure to o-xylene
+def: "Being exposed to the volatile organic compound o-xylene." [HPO:probinson]
+is_a: MRE:0000130  ! Exposure to volatile organic compound
+
+[Term]
+id: MRE:0000161
+name: Exposure to polybrominated diphenyl ether
+def: "Being exposed to a polybrominated diphenyl ether (PBDE), organobromie compounds that have been used in many products as flame retardants." [HPO:probinson]
+is_a: MRE:0000102  ! Exposure to endocrine-disrupting chemical
+is_a: MRE:0000128  ! Exposure to organic compound
+
+[Term]
+id: MRE:0000162
+name: Exposure to 2,4,4'-tribromodiphenyl ether
+def: "Being exposed to the polybrominated diphenyl ether 2,4,4'-tribromodiphenyl ether." [HPO:probinson]
+is_a: MRE:0000161  ! Exposure to polybrominated diphenyl ether
+
+[Term]
+id: MRE:0000163
+name: Exposure to 2,2',4,4'-tetrabromodiphenyl ether
+def: "Being exposed to the polybrominated diphenyl ether 2,2',4,4'-tetrabromodiphenyl ether." [HPO:probinson]
+is_a: MRE:0000161  ! Exposure to polybrominated diphenyl ether
+
+[Term]
+id: MRE:0000164
+name: Exposure to 2,3',4,4'-tetrabromodiphenyl ether
+def: "Being exposed to the polybrominated diphenyl ether 2,3',4,4'-tetrabromodiphenyl ether." [HPO:probinson]
+is_a: MRE:0000161  ! Exposure to polybrominated diphenyl ether
+
+[Term]
+id: MRE:0000165
+name: Exposure to 2,2',3,4,4'-pentabromodiphenyl ether
+def: "Being exposed to the polybrominated diphenyl ether 2,2',3,4,4'-pentabromodiphenyl ether." [HPO:probinson]
+is_a: MRE:0000161  ! Exposure to polybrominated diphenyl ether
+
+[Term]
+id: MRE:0000166
+name: Exposure to 2,2',4,4',5-pentabromodiphenyl ether
+def: "Being exposed to the polybrominated diphenyl ether 2,2',4,4',5-pentabromodiphenyl ether." [HPO:probinson]
+is_a: MRE:0000161  ! Exposure to polybrominated diphenyl ether
+
+[Term]
+id: MRE:0000167
+name: Exposure to 2,2',4,4',6-pentabromodiphenyl ether
+def: "Being exposed to the polybrominated diphenyl ether 2,2',4,4',6-pentabromodiphenyl ether." [HPO:probinson]
+is_a: MRE:0000161  ! Exposure to polybrominated diphenyl ether
+
+[Term]
+id: MRE:0000168
+name: Exposure to 2,2',4,4',5,5'-hexabromodiphenyl ether
+def: "Being exposed to the polybrominated diphenyl ether 2,2',4,4',5,5'-hexabromodiphenyl ether." [HPO:probinson]
+is_a: MRE:0000161  ! Exposure to polybrominated diphenyl ether
+
+[Term]
+id: MRE:0000169
+name: Exposure to 2,2',4,4',5,6'-hexabromodiphenyl ether
+def: "Being exposed to the polybrominated diphenyl ether 2,2',4,4',5,6'-hexabromodiphenyl ether." [HPO:probinson]
+is_a: MRE:0000161  ! Exposure to polybrominated diphenyl ether
+
+[Term]
+id: MRE:0000170
+name: Exposure to 2,2',3,4,4',5',6-heptabromodiphenyl ether
+def: "Being exposed to the polybrominated diphenyl ether 2,2',3,4,4',5',6-heptabromodiphenyl ether." [HPO:probinson]
+is_a: MRE:0000161  ! Exposure to polybrominated diphenyl ether
+
+[Term]
+id: MRE:0000171
+name: Exposure to 2,2',3,3',4,4',5,5',6,6'-decabromodiphenyl ether
+def: "Being exposed to the polybrominated diphenyl ether 2,2',3,3',4,4',5,5',6,6'-decabromodiphenyl ether." [HPO:probinson]
+is_a: MRE:0000161  ! Exposure to polybrominated diphenyl ether
+
+[Term]
+id: MRE:0000172
+name: Exposure to 2,2',4,4',5,5'-hexabromobiphenyl
+def: "Being exposed to the polybrominated diphenyl ether 2,2',4,4',5,5'-hexabromobiphenyl." [HPO:probinson]
+is_a: MRE:0000161  ! Exposure to polybrominated diphenyl ether
+
+[Term]
+id: MRE:0000173
+name: Exposure to inorganic compound
+def: "Being exposed to a compound that is not organic, i.e.,that does not contain carbon." [HPO:probinson]
+is_a: MRE:0000000  ! Exposure
+
+[Term]
+id: MRE:0000174
+name: Exposure to paraben
+def: "Being exposed to a paraben, i.e., a parahydroxybenzoate or ester of parahydroxybenzoic acid." [HPO:probinson]
+comment: Parabens are widely used as preservatives.
+is_a: MRE:0000128  ! Exposure to organic compound
+
+[Term]
+id: MRE:0000175
+name: Exposure to butyl paraben
+def: "Being exposed to the paraben compound butyl paraben." [HPO:probinson]
+is_a: MRE:0000174  ! Exposure to paraben
+
+[Term]
+id: MRE:0000176
+name: Exposure to ethyl paraben
+def: "Being exposed to the paraben compound ethyl paraben." [HPO:probinson]
+is_a: MRE:0000174  ! Exposure to paraben
+
+[Term]
+id: MRE:0000177
+name: Exposure to methyl paraben
+def: "Being exposed to the paraben compound methyl paraben." [HPO:probinson]
+is_a: MRE:0000174  ! Exposure to paraben
+
+[Term]
+id: MRE:0000178
+name: Exposure to n-propyl paraben
+def: "Being exposed to the paraben compound n-propyl paraben." [HPO:probinson]
+is_a: MRE:0000174  ! Exposure to paraben
+
+[Term]
+id: MRE:0000179
+name: Exposure to inorganic acid
+def: "Being exposed to an inorganic acid or its salt that is not organic." [HPO:probinson]
+comment: An acid is a substance that yields hydrogen ions in solution and from which hydrogen may be displaced by a metal to form a salt.
+is_a: MRE:0000173  ! Exposure to inorganic compound
+
+[Term]
+id: MRE:0000180
+name: Exposure to thiocyanate
+def: "Being exposed to the inorganic salt thiocyanate, i.e., [SCN](-). Thiocyanate is the base of thiocyanic acid." [HPO:probinson, PMID:24701986]
+comment: Thiocyanate exposure may have effects on thyroid function.
+is_a: MRE:0000179  ! Exposure to inorganic acid
+
+[Term]
+id: MRE:0000181
+name: Exposure to perchlorate
+def: "Being exposure to perchloric acid or its salt. Perchloric acid is an inorganic acid with the formula HClO4." [HPO:probinson]
+is_a: MRE:0000179  ! Exposure to inorganic acid
+
+[Term]
+id: MRE:0000182
+name: Exposure to nitrate
+def: "Being exposure to nitrate, NO3(-), the conjugate base of nitric acid." [HPO:probinson]
+is_a: MRE:0000179  ! Exposure to inorganic acid
+
+[Term]
+id: MRE:0000183
+name: Exposure to organofluorine compound
+def: "Being exposed to an organic compound that contain the carbon-fluorine bond." [HPO:probinson]
+is_a: MRE:0000128  ! Exposure to organic compound
+
+[Term]
+id: MRE:0000184
+name: Exposure to perfluorinated compound
+def: "Being exposed to a perfluorinated compound, an organofluorine compound that contains only carbon-fluorine bonds and C-C bonds and other heteroatoms but no C-H bonds." [HPO:probinson]
+is_a: MRE:0000183  ! Exposure to organofluorine compound
+
+[Term]
+id: MRE:0000185
+name: Exposure to perfluorobutane sulfonic acid
+def: "Being exposed to the perfluorinated compound perfluorobutane sulfonic acid (PFBuS)." [HPO:probinson]
+is_a: MRE:0000184  ! Exposure to perfluorinated compound
+
+[Term]
+id: MRE:0000186
+name: Exposure to perfluorodecanoic acid
+def: "Being exposed to the perfluorinated compound perfluorodecanoic acid (PFDeA)." [HPO:probinson]
+is_a: MRE:0000184  ! Exposure to perfluorinated compound
+
+[Term]
+id: MRE:0000187
+name: Exposure to perfluorododecanoic acid
+def: "Being exposed to the perfluorinated compound perfluorododecanoic acid (PFDoA)." [HPO:probinson]
+is_a: MRE:0000184  ! Exposure to perfluorinated compound
+
+[Term]
+id: MRE:0000188
+name: Exposure to perfluoroheptanoic acid
+def: "Being exposed to the perfluorinated compound perfluoroheptanoic acid (PFHpA)." [HPO:probinson]
+is_a: MRE:0000184  ! Exposure to perfluorinated compound
+
+[Term]
+id: MRE:0000189
+name: Exposure to perfluorohexane sulfonic acid
+def: "Being exposed to the perfluorinated compound perfluorohexane sulfonic acid (PFHxS)." [HPO:probinson]
+is_a: MRE:0000184  ! Exposure to perfluorinated compound
+
+[Term]
+id: MRE:0000190
+name: Exposure to perfluorooctanoic acid
+def: "Being exposed to the perfluorinated compound perfluorooctanoic acid." [HPO:probinson]
+is_a: MRE:0000184  ! Exposure to perfluorinated compound
+
+[Term]
+id: MRE:0000191
+name: Exposure to perfluorooctane sulfonic acid
+def: "Being exposed to the perfluorinated compound perfluorooctane sulfonic acid (PFOS)." [HPO:probinson]
+is_a: MRE:0000184  ! Exposure to perfluorinated compound
+
+[Term]
+id: MRE:0000192
+name: Exposure to perfluorooctane sulfonamide
+def: "Being exposed to the perfluorinated compound perfluorooctane sulfonamide (PFOSA)." [HPO:probinson]
+is_a: MRE:0000184  ! Exposure to perfluorinated compound
+
+[Term]
+id: MRE:0000193
+name: Exposure to 2-(N-ethyl-perfluorooctane sulfonamido) acetic acid
+def: "Being exposed to the perfluorinated compound 2-(N-ethyl-perfluorooctane sulfonamido) acetic acid (Et-PFOSA-AcOH)." [HPO:probinson]
+is_a: MRE:0000184  ! Exposure to perfluorinated compound
+
+[Term]
+id: MRE:0000194
+name: Exposure to 2-(N-methyl-perfluorooctane sulfonamido) acetic acid
+def: "Being exposed to the perfluorinated compound 2-(N-methyl-perfluorooctane sulfonamido) acetic acid (Me-PFOSA-AcOH)." [HPO:probinson]
+is_a: MRE:0000184  ! Exposure to perfluorinated compound
+
+[Term]
+id: MRE:0000195
+name: Exposure to perfluoroundecanoic acid
+def: "Being exposed to the perfluorinated compound perfluoroundecanoic acid (PFUA)." [HPO:probinson]
+is_a: MRE:0000184  ! Exposure to perfluorinated compound
+
+[Term]
+id: MRE:0000196
+name: Exposure to phytoestrogen
+def: "Being exposed to a plant-derived xenoestrogens." [HPO:probinson]
+comment: Phytoestrogens are not produced by the endocrine system.
+is_a: MRE:0000128  ! Exposure to organic compound
+
+[Term]
+id: MRE:0000197
+name: Exposure to daidzein
+def: "Being exposed to daidzein, a naturally occurring isoflavone that is a phytoestrogen." [HPO:probinson]
+is_a: MRE:0000196  ! Exposure to phytoestrogen
+
+[Term]
+id: MRE:0000198
+name: Exposure to enterodiol
+def: "Being exposed to enterodiol, a naturally occuring  lignan formed by the action of intestinal bacteria on lignan precursors found in plants. Enterodiol is a phytoestrogen." [HPO:probinson]
+is_a: MRE:0000196  ! Exposure to phytoestrogen
+
+[Term]
+id: MRE:0000199
+name: Exposure to enterolactone
+def: "Being exposed to enterolactone, a naturally occuring  lignan formed by the action of intestinal bacteria on lignan precursors found in plants. Enterodiol is a phytoestrogen." [HPO:probinson]
+is_a: MRE:0000196  ! Exposure to phytoestrogen
+
+[Term]
+id: MRE:0000200
+name: Exposure to equol
+def: "Being exposed to equol, a naturally occuring isoflavandiol metabolized from daidzein, a type of isoflavone, by bacterial flora in the intestines. Equol is a phytoestrogen." [HPO:probinson]
+is_a: MRE:0000196  ! Exposure to phytoestrogen
+
+[Term]
+id: MRE:0000201
+name: Exposure to genistein
+def: "Being exposed to genistein, a naturally occurring isoflavone that is a phytoestrogen." [HPO:probinson]
+is_a: MRE:0000196  ! Exposure to phytoestrogen
+
+[Term]
+id: MRE:0000202
+name: Exposure to O-desmethylangolensin
+def: "Being exposed to O-desmethylangolensin. After ingestion, human intestinal bacteria transform daidzein into dihydrodaidzein, which can be further metabolized to O-desmethylangolensin. O-desmethylangolensin is a phytoestrogen." [HPO:probinson]
+is_a: MRE:0000196  ! Exposure to phytoestrogen
+
+[Term]
+id: MRE:0000203
+name: Exposure to organoarsenic compound
+def: "Being exposed to a compound that contains a chemical bond between arsenic and carbon." [HPO:probinson]
+is_a: MRE:0000128  ! Exposure to organic compound
+
+[Term]
+id: MRE:0000204
+name: Exposure to arsenocholine
+def: "Being exposed to the organoarsenic compound arsenocholine." [HPO:probinson]
+is_a: MRE:0000203  ! Exposure to organoarsenic compound
+
+[Term]
+id: MRE:0000205
+name: Exposure to arsenobetaine
+def: "Being exposed to the organoarsenic compound arsenobetaine." [HPO:probinson]
+comment: Arsenobetaine is the main source of arsenic found in fish.
+is_a: MRE:0000203  ! Exposure to organoarsenic compound
+
+[Term]
+id: MRE:0000206
+name: Exposure to dimethylarsinic acid
+def: "Being exposed to the organoarsenic compound dimethylarsinic acid (also known as cacodylic acid)." [HPO:probinson]
+comment: Derivatives of cacodylic acid, cacodylates, were frequently used as herbicides.
+is_a: MRE:0000203  ! Exposure to organoarsenic compound
+
+[Term]
+id: MRE:0000207
+name: Exposure to monomethylarsonic acid
+def: "Being exposed to the organoarsenic compound monomethylarsonic acid." [HPO:probinson, PMID:16496296]
+is_a: MRE:0000203  ! Exposure to organoarsenic compound
+
+[Term]
+id: MRE:0000208
+name: Exposure to trimethylarsine oxid
+def: "Being exposed to the organoarsenic compound trimethylarsine oxide." [HPO:probinson, PMID:16496296]
+is_a: MRE:0000203  ! Exposure to organoarsenic compound
+
+
+
+[Term]
 id: NCIT:C101045
 name: Drug Induced Methemoglobinemia
 def: "Methemoglobinemia that is caused by exposure to certain drugs (xylocaine and benzene)." [NCIT:C101045]

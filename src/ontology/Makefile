@@ -5,7 +5,7 @@ ONTDIR=.
 MODDIR=modules
 DATE=`date +%Y-%m-%d`
 
-MODS = exposure_to_radiation exposure_to_material exposure_to_environmental_process exposure_to_environmental_condition exposure_to_chemical exposure_to_chemical_with_role exposure_to_levels_in_medium exposure_to_change_in_levels exposure_via_route
+MODS = exposure_to_radiation exposure_to_material exposure_to_environmental_process exposure_to_environmental_condition exposure_to_chemical exposure_to_chemical_with_role exposure_to_levels_in_medium exposure_to_change_in_levels exposure_via_route activity prenatal
 MODS_CSV = $(patsubst %,$(MODDIR)/%.csv,$(MODS))
 
 all: all_imports all_modules ecto.owl ecto.obo all_subsets 
@@ -68,7 +68,7 @@ top-report: ecto.obo
 
 # Ontology dependencies
 # We don't include clo, as this is currently not working
-IMPORTS = pato envo npo exo ro chebi
+IMPORTS = pato envo npo exo ro chebi activity uberon
 
 # Make this target to regenerate ALL
 all_imports_owl: $(patsubst %, imports/%_import.owl,$(IMPORTS))
@@ -103,6 +103,9 @@ mirror/ro.owl:
 mirror/exo.obo:
 	wget --no-check-certificate https://raw.githubusercontent.com/CTDbase/exposure-ontology-draft/master/src/ontology/exo.obo -O $@
 .PRECIOUS: mirror/%.owl
+
+mirror/activity.obo:
+	blip ontol-query -r ncit -query "class(R,'Activity'),subclassRT(ID,R)" -to obo > $@.tmp && mv $@.tmp $@
 
 mirror/chebi.owl:
 	owltools $(OBO)/go/extensions/chebi_import.obo --set-ontology-id $(OBO)/chebi.owl -o $@
@@ -184,6 +187,15 @@ candidates-condition.csv: modules/exposure_to_environmental_condition.pro
 
 candidates-levels.csv: modules/exposure_to_change_in_levels.pro
 	blip-findall -i $<  -r pato -r chebi -r envo "ct(_,_,A,_,E,_,W,_),parent(A2,subclass,A),entity_partition(A2,value_slim),\+ct(_,_,A2,_,E,_,W,_)"  -label -select "x('',A2,E,W)" -no_pred -use_tabs | sort -u > $@.tmp && tsv2csv.py $@.tmp > $@ && cat $@
+
+candidate-procedures.csv: modules/activity.pro
+	blip-findall -i $<  -r ncit "class(R,'Therapeutic Procedure'),subclassRT(X,R),\+ct(_,_,X,_)"  -label -select "x('',X)" -no_pred -use_tabs | sort -u > $@.tmp && tsv2csv.py $@.tmp > $@ && cat $@
+
+candidate-behaviors.csv: modules/activity.pro
+	blip-findall -i $<  -r ncit "class(R,'Personal Behavior'),subclassRT(X,R),\+ct(_,_,X,_)"  -label -select "x('',X)" -no_pred -use_tabs | sort -u > $@.tmp && tsv2csv.py $@.tmp > $@ && cat $@
+
+candidate-occ.csv: modules/activity.pro
+	blip-findall -i $<  -r ncit "class(R,'Occupation'),subclassRT(X,R),\+ct(_,_,X,_)"  -label -select "x('',X)" -no_pred -use_tabs | sort -u > $@.tmp && tsv2csv.py $@.tmp > $@ && cat $@
 
 modules/%.pro: modules/%.csv
 	csv2tsv.py $< | tbl2p -p ct > $@.tmp && mv $@.tmp $@

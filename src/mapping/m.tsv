@@ -1,13 +1,15 @@
 EO:0001005 ! nickel treatment	GO:0010045 ! response to nickel cation	false	label	exact	nickel
+EO:0001005 ! nickel treatment	GO:0010045 ! response to nickel cation	false	label	label	nickel
 EO:0001005 ! nickel treatment	GO:0010045 ! response to nickel cation	true	label	exact	nickel
+EO:0001005 ! nickel treatment	GO:0010045 ! response to nickel cation	true	label	label	nickel
 EO:0001010 ! carbohydrate treatment	XCO:0000172 ! carbohydrate	true	label	label	carbohydr
 EO:0001010 ! carbohydrate treatment	GO:0009743 ! response to carbohydrate	false	label	exact	carbohydrate
 EO:0001010 ! carbohydrate treatment	GO:0009743 ! response to carbohydrate	false	label	label	carbohydrate
 EO:0001010 ! carbohydrate treatment	XCO:0000172 ! carbohydrate	false	label	label	carbohydrate
 EO:0001011 ! monosaccharide treatment	XCO:0000274 ! monosaccharide	true	label	label	monosaccharid
-EO:0001011 ! monosaccharide treatment	GO:0034284 ! response to monosaccharide	false	label	exact	monosaccharide
-EO:0001011 ! monosaccharide treatment	GO:0034284 ! response to monosaccharide	false	label	label	monosaccharide
-EO:0001011 ! monosaccharide treatment	XCO:0000274 ! monosaccharide	false	label	label	monosaccharide
+EO:0001011 ! monosaccharide treatment	GO:0034284 ! response to monosaccharide	false	label	exact	sugar
+EO:0001011 ! monosaccharide treatment	GO:0034284 ! response to monosaccharide	false	label	label	sugar
+EO:0001011 ! monosaccharide treatment	XCO:0000274 ! monosaccharide	false	label	label	sugar
 EO:0001012 ! hexose treatment	GO:0009746 ! response to hexose	false	label	exact	hexose
 EO:0001012 ! hexose treatment	GO:0009746 ! response to hexose	false	label	label	hexose
 EO:0001013 ! glucose treatment	XCO:0000275 ! glucose	true	label	label	glucos
@@ -22,8 +24,14 @@ EO:0001015 ! sucrose treatment	XCO:0000432 ! sucrose	true	label	label	sucros
 EO:0001015 ! sucrose treatment	GO:0009744 ! response to sucrose	false	label	exact	sucrose
 EO:0001015 ! sucrose treatment	GO:0009744 ! response to sucrose	false	label	label	sucrose
 EO:0001015 ! sucrose treatment	XCO:0000432 ! sucrose	false	label	label	sucrose
+EO:0001017 ! ammonium treatment	GO:0060359 ! response to ammonium ion	false	label	label	ammonium
+EO:0001017 ! ammonium treatment	GO:0060359 ! response to ammonium ion	true	label	label	ammonium
 EO:0001018 ! cadmium treatment	GO:0046686 ! response to cadmium ion	false	label	exact	cadmium
+EO:0001018 ! cadmium treatment	GO:0046686 ! response to cadmium ion	false	label	label	cadmium
+EO:0001018 ! cadmium treatment	MRE:0000112 ! Exposure to cadmium	false	label	label	cadmium
 EO:0001018 ! cadmium treatment	GO:0046686 ! response to cadmium ion	true	label	exact	cadmium
+EO:0001018 ! cadmium treatment	GO:0046686 ! response to cadmium ion	true	label	label	cadmium
+EO:0001018 ! cadmium treatment	MRE:0000112 ! Exposure to cadmium	true	label	label	cadmium
 EO:0001020 ! carbon dioxide treatment	GO:0010037 ! response to carbon dioxide	false	label	label	carbondioxide
 EO:0001021 ! ozone treatment	GO:0010193 ! response to ozone	false	label	label	ozone
 EO:0001022 ! gamma radiation treatment	GO:0010332 ! response to gamma radiation	false	label	label	gamma
@@ -171,6 +179,8 @@ EO:0007146 ! gravity	ZECO:0000144 ! gravity	false	label	label	gravity
 EO:0007151 ! radiation treatment	GO:0009314 ! response to radiation	false	label	exact	
 EO:0007151 ! radiation treatment	GO:0009314 ! response to radiation	false	label	label	
 EO:0007151 ! radiation treatment	GO:0050896 ! response to stimulus	false	label	label	
+EO:0007151 ! radiation treatment	MRE:0000000 ! Exposure	false	label	label	
+EO:0007151 ! radiation treatment	MRE:0000079 ! Radiation exposure	false	label	label	
 EO:0007151 ! radiation treatment	NCIT:C17941 ! Exposure	false	label	label	
 EO:0007151 ! radiation treatment	NCIT:C61398 ! Radiation Exposure	false	label	label	
 EO:0007151 ! radiation treatment	NCIT:C61398 ! Radiation Exposure	false	label	related	
@@ -206,7 +216,11 @@ EO:0007171 ! pH regimen	GO:0009268 ! response to pH	false	label	label	ph
 EO:0007171 ! pH regimen	GO:0009268 ! response to pH	true	label	label	ph
 EO:0007183 ! herbicide treatment	GO:0009635 ! response to herbicide	false	label	label	herbicide
 EO:0007185 ! salt treatment	GO:1902074 ! response to salt	false	label	label	salt
+EO:0007185 ! salt treatment	XCO:0000149 ! ion/salt	false	label	label	salt
+EO:0007185 ! salt treatment	XCO:0000149 ! ion/salt	true	label	label	salt
 EO:0007185 ! salt treatment	GO:1902074 ! response to salt	true	label	label	salt
+EO:0007185 ! salt treatment	XCO:0000149 ! ion/salt	true	label	label	salt
+EO:0007185 ! salt treatment	XCO:0000149 ! ion/salt	true	label	label	salt
 EO:0007187 ! salicylic acid treatment	GO:0009751 ! response to salicylic acid	false	label	exact	acidsalicylic
 EO:0007187 ! salicylic acid treatment	GO:0009751 ! response to salicylic acid	false	label	label	acidsalicylic
 EO:0007187 ! salicylic acid treatment	GO:0009751 ! response to salicylic acid	false	label	exact	salicylicacid
@@ -361,11 +375,13 @@ EO:0007396 ! flood prone region	GO:0030912 ! response to deep water	false	relate
 EO:0007396 ! flood prone region	GO:0030912 ! response to deep water	true	related	label	deepwater
 EO:0007396 ! flood prone region	GO:0009413 ! response to flooding	false	related	label	flooding
 EO:0007406 ! nitrate regimen	GO:0010167 ! response to nitrate	false	label	label	nitrate
+EO:0007406 ! nitrate regimen	MRE:0000182 ! Exposure to nitrate	false	label	label	nitrate
 EO:0007409 ! brassinosteroid treatment	GO:0009741 ! response to brassinosteroid	false	label	exact	brassinosteroid
 EO:0007409 ! brassinosteroid treatment	GO:0009741 ! response to brassinosteroid	false	label	label	brassinosteroid
 EO:0007409 ! brassinosteroid treatment	GO:0009741 ! response to brassinosteroid	true	label	exact	brassinosteroid
 EO:0007409 ! brassinosteroid treatment	GO:0009741 ! response to brassinosteroid	true	label	label	brassinosteroid
 EO:0007415 ! hydrogen peroxide treatment	GO:0042542 ! response to hydrogen peroxide	false	label	label	hydrogenperoxide
+EO:0007504 ! 1,2-dichloroethane	MRE:0000139 ! Exposure to 1,2-dichloroethane	false	label	label	12dichloroethane
 EO:0007521 ! actinomycin D treatment	GO:0072716 ! response to actinomycin D	false	label	label	actinomycind
 EO:0007521 ! actinomycin D treatment	GO:0072716 ! response to actinomycin D	true	label	label	actinomycind
 EO:0007524 ! caffeine	GO:0031000 ! response to caffeine	false	label	label	caffeine
@@ -495,8 +511,10 @@ GO:0006950 ! response to stress	GO:0009628 ! response to abiotic stimulus	true	r
 GO:0006950 ! response to stress	GO:0009607 ! response to biotic stimulus	true	related	narrow	responsbioticstress
 GO:0006950 ! response to stress	GO:0009628 ! response to abiotic stimulus	false	related	narrow	responsetoabioticstress
 GO:0006950 ! response to stress	GO:0009607 ! response to biotic stimulus	false	related	narrow	responsetobioticstress
+GO:0006950 ! response to stress	GO:0043157 ! response to cation stress	true	label	label	responsstress
 GO:0006950 ! response to stress	GO:0009628 ! response to abiotic stimulus	true	related	narrow	responstoabiotstress
 GO:0006950 ! response to stress	GO:0009607 ! response to biotic stimulus	true	related	narrow	responstobioticstress
+GO:0006950 ! response to stress	GO:0043157 ! response to cation stress	false	label	label	stress
 GO:0006970 ! response to osmotic stress	EO:0001038 ! osmotic stress treatment	false	exact	label	osmoticstress
 GO:0006970 ! response to osmotic stress	EO:0001038 ! osmotic stress treatment	false	label	label	osmoticstress
 GO:0006979 ! response to oxidative stress	EO:0001037 ! oxidative stress treatment	false	label	label	oxidativestress
@@ -509,6 +527,8 @@ GO:0009268 ! response to pH	EO:0007171 ! pH regimen	true	label	label	ph
 GO:0009270 ! response to humidity	EO:0007197 ! humidity regimen	false	label	label	humidity
 GO:0009314 ! response to radiation	EO:0007151 ! radiation treatment	false	exact	label	
 GO:0009314 ! response to radiation	GO:0050896 ! response to stimulus	false	exact	label	
+GO:0009314 ! response to radiation	MRE:0000000 ! Exposure	false	exact	label	
+GO:0009314 ! response to radiation	MRE:0000079 ! Radiation exposure	false	exact	label	
 GO:0009314 ! response to radiation	NCIT:C17941 ! Exposure	false	exact	label	
 GO:0009314 ! response to radiation	NCIT:C61398 ! Radiation Exposure	false	exact	label	
 GO:0009314 ! response to radiation	NCIT:C61398 ! Radiation Exposure	false	exact	related	
@@ -517,6 +537,8 @@ GO:0009314 ! response to radiation	ZECO:0000124 ! conditions	false	exact	label
 GO:0009314 ! response to radiation	ZECO:0000128 ! experimental conditions	false	exact	label	
 GO:0009314 ! response to radiation	EO:0007151 ! radiation treatment	false	label	label	
 GO:0009314 ! response to radiation	GO:0050896 ! response to stimulus	false	label	label	
+GO:0009314 ! response to radiation	MRE:0000000 ! Exposure	false	label	label	
+GO:0009314 ! response to radiation	MRE:0000079 ! Radiation exposure	false	label	label	
 GO:0009314 ! response to radiation	NCIT:C17941 ! Exposure	false	label	label	
 GO:0009314 ! response to radiation	NCIT:C61398 ! Radiation Exposure	false	label	label	
 GO:0009314 ! response to radiation	NCIT:C61398 ! Radiation Exposure	false	label	related	
@@ -655,8 +677,16 @@ GO:0009753 ! response to jasmonic acid	EO:0007080 ! jasmonic acid treatment	fals
 GO:0009753 ! response to jasmonic acid	EO:0007080 ! jasmonic acid treatment	false	exact	label	jasmonicacid
 GO:0009753 ! response to jasmonic acid	EO:0007080 ! jasmonic acid treatment	false	label	label	jasmonicacid
 GO:0010037 ! response to carbon dioxide	EO:0001020 ! carbon dioxide treatment	false	label	label	carbondioxide
+GO:0010038 ! response to metal ion	MRE:0000106 ! Exposure to metal	false	exact	label	metal
+GO:0010038 ! response to metal ion	MRE:0000106 ! Exposure to metal	false	label	label	metal
+GO:0010042 ! response to manganese ion	MRE:0000117 ! Exposure to manganese	false	exact	label	manganese
+GO:0010042 ! response to manganese ion	MRE:0000117 ! Exposure to manganese	false	label	label	manganese
+GO:0010043 ! response to zinc ion	MRE:0000127 ! Exposure to zinc	false	exact	label	zinc
+GO:0010043 ! response to zinc ion	MRE:0000127 ! Exposure to zinc	false	label	label	zinc
 GO:0010045 ! response to nickel cation	EO:0001005 ! nickel treatment	false	exact	label	nickel
 GO:0010045 ! response to nickel cation	EO:0001005 ! nickel treatment	true	exact	label	nickel
+GO:0010045 ! response to nickel cation	EO:0001005 ! nickel treatment	false	label	label	nickel
+GO:0010045 ! response to nickel cation	EO:0001005 ! nickel treatment	true	label	label	nickel
 GO:0010114 ! response to red light	EO:0007207 ! red light regimen	false	exact	label	lightred
 GO:0010114 ! response to red light	EO:0007207 ! red light regimen	true	exact	label	lightred
 GO:0010114 ! response to red light	EO:0007207 ! red light regimen	false	label	label	lightred
@@ -665,6 +695,8 @@ GO:0010114 ! response to red light	EO:0007207 ! red light regimen	false	exact	la
 GO:0010114 ! response to red light	EO:0007207 ! red light regimen	true	exact	label	redlight
 GO:0010114 ! response to red light	EO:0007207 ! red light regimen	false	label	label	redlight
 GO:0010114 ! response to red light	EO:0007207 ! red light regimen	true	label	label	redlight
+GO:0010164 ! response to cesium ion	MRE:0000113 ! Exposure to cesium	false	exact	label	cesium
+GO:0010164 ! response to cesium ion	MRE:0000113 ! Exposure to cesium	false	label	label	cesium
 GO:0010165 ! response to X-ray	EO:0007628 ! X-ray	false	exact	label	lightx
 GO:0010165 ! response to X-ray	XCO:0000043 ! X-ray exposure	false	exact	label	lightx
 GO:0010165 ! response to X-ray	EO:0007628 ! X-ray	false	label	label	lightx
@@ -680,6 +712,7 @@ GO:0010165 ! response to X-ray	EO:0007628 ! X-ray	false	label	label	xray
 GO:0010165 ! response to X-ray	XCO:0000043 ! X-ray exposure	false	label	label	xray
 GO:0010165 ! response to X-ray	ZECO:0000150 ! xray	false	label	label	xray
 GO:0010167 ! response to nitrate	EO:0007406 ! nitrate regimen	false	label	label	nitrate
+GO:0010167 ! response to nitrate	MRE:0000182 ! Exposure to nitrate	false	label	label	nitrate
 GO:0010193 ! response to ozone	EO:0001021 ! ozone treatment	false	label	label	ozone
 GO:0010212 ! response to ionizing radiation	XCO:0000039 ! ionizing radiation exposure	false	exact	label	ionizing
 GO:0010212 ! response to ionizing radiation	ZECO:0000148 ! ionizing radiation	false	exact	label	ionizing
@@ -743,10 +776,12 @@ GO:0010225 ! response to UV-C	EO:0007129 ! UV-C light regimen	false	label	exact	
 GO:0010225 ! response to UV-C	EO:0007129 ! UV-C light regimen	true	label	exact	uvc
 GO:0010225 ! response to UV-C	EO:0007129 ! UV-C light regimen	false	exact	label	uvclight
 GO:0010225 ! response to UV-C	EO:0007129 ! UV-C light regimen	true	exact	label	uvclight
-GO:0010226 ! response to lithium ion	XCO:0000313 ! lithium ion	false	label	label	ionlithium
-GO:0010226 ! response to lithium ion	XCO:0000313 ! lithium ion	true	label	label	ionlithium
-GO:0010226 ! response to lithium ion	XCO:0000313 ! lithium ion	false	label	label	lithiumion
-GO:0010226 ! response to lithium ion	XCO:0000313 ! lithium ion	true	label	label	lithiumion
+GO:0010226 ! response to lithium ion	XCO:0000313 ! lithium ion	false	label	label	lithium
+GO:0010226 ! response to lithium ion	XCO:0000313 ! lithium ion	true	label	label	lithium
+GO:0010269 ! response to selenium ion	MRE:0000121 ! Exposure to selenium	false	label	label	selenium
+GO:0010288 ! response to lead ion	MRE:0000116 ! Exposure to lead	false	label	label	lead
+GO:0010288 ! response to lead ion	ZECO:0000224 ! lead	false	label	label	lead
+GO:0010288 ! response to lead ion	ZECO:0000224 ! lead	true	label	label	lead
 GO:0010332 ! response to gamma radiation	EO:0001022 ! gamma radiation treatment	false	label	label	gamma
 GO:0010332 ! response to gamma radiation	XCO:0000040 ! gamma ray exposure	false	label	exact	gamma
 GO:0010332 ! response to gamma radiation	XCO:0000040 ! gamma ray exposure	false	related	label	gammalight
@@ -760,6 +795,7 @@ GO:0017085 ! response to insecticide	EO:0007632 ! insecticide treatment	false	la
 GO:0030912 ! response to deep water	EO:0007396 ! flood prone region	false	label	related	deepwater
 GO:0030912 ! response to deep water	EO:0007396 ! flood prone region	true	label	related	deepwater
 GO:0031000 ! response to caffeine	EO:0007524 ! caffeine	false	label	label	caffeine
+GO:0032025 ! response to cobalt ion	MRE:0000114 ! Exposure to cobalt	false	label	label	cobalt
 GO:0032355 ! response to estradiol	XCO:0000092 ! 17 beta-estradiol	false	exact	related	e2
 GO:0032355 ! response to estradiol	XCO:0000092 ! 17 beta-estradiol	true	exact	related	e2
 GO:0032355 ! response to estradiol	XCO:0000092 ! 17 beta-estradiol	false	exact	related	estradiol
@@ -785,14 +821,16 @@ GO:0033273 ! response to vitamin	XCO:0000377 ! vitamin	false	label	label	vitamin
 GO:0033273 ! response to vitamin	XCO:0000377 ! vitamin	true	label	label	vitamin
 GO:0033574 ! response to testosterone	XCO:0000204 ! testosterone	false	exact	label	testosterone
 GO:0033574 ! response to testosterone	XCO:0000204 ! testosterone	false	label	label	testosterone
-GO:0034284 ! response to monosaccharide	EO:0001011 ! monosaccharide treatment	false	exact	label	monosaccharide
-GO:0034284 ! response to monosaccharide	XCO:0000274 ! monosaccharide	false	exact	label	monosaccharide
-GO:0034284 ! response to monosaccharide	EO:0001011 ! monosaccharide treatment	false	label	label	monosaccharide
-GO:0034284 ! response to monosaccharide	XCO:0000274 ! monosaccharide	false	label	label	monosaccharide
+GO:0033595 ! response to genistein	MRE:0000201 ! Exposure to genistein	false	label	label	genistein
+GO:0034284 ! response to monosaccharide	EO:0001011 ! monosaccharide treatment	false	exact	label	sugar
+GO:0034284 ! response to monosaccharide	XCO:0000274 ! monosaccharide	false	exact	label	sugar
+GO:0034284 ! response to monosaccharide	EO:0001011 ! monosaccharide treatment	false	label	label	sugar
+GO:0034284 ! response to monosaccharide	XCO:0000274 ! monosaccharide	false	label	label	sugar
 GO:0034285 ! response to disaccharide	EO:0001014 ! disaccharide treatment	false	exact	label	disaccharide
 GO:0034285 ! response to disaccharide	XCO:0000431 ! disaccharide	false	exact	label	disaccharide
 GO:0034285 ! response to disaccharide	EO:0001014 ! disaccharide treatment	false	label	label	disaccharide
 GO:0034285 ! response to disaccharide	XCO:0000431 ! disaccharide	false	label	label	disaccharide
+GO:0034465 ! response to carbon monoxide	MRE:0000099 ! Carbon monoxide exposure	false	label	label	carbonmonoxide
 GO:0035455 ! response to interferon-alpha	NCIT:C225 ! Recombinant Interferon Alfa	false	label	related	alphainterferon
 GO:0035455 ! response to interferon-alpha	NCIT:C225 ! Recombinant Interferon Alfa	true	label	related	alphainterferon
 GO:0035455 ! response to interferon-alpha	NCIT:C225 ! Recombinant Interferon Alfa	false	exact	related	interferonleukocyte
@@ -813,14 +851,14 @@ GO:0035456 ! response to interferon-beta	NCIT:C495 ! Recombinant Interferon Beta
 GO:0035456 ! response to interferon-beta	NCIT:C495 ! Recombinant Interferon Beta	true	exact	related	interferonbeta
 GO:0035456 ! response to interferon-beta	NCIT:C495 ! Recombinant Interferon Beta	false	label	related	interferonbeta
 GO:0035456 ! response to interferon-beta	NCIT:C495 ! Recombinant Interferon Beta	true	label	related	interferonbeta
-GO:0035864 ! response to potassium ion	XCO:0000150 ! potassium ion	false	exact	exact	+ionk
-GO:0035864 ! response to potassium ion	XCO:0000150 ! potassium ion	true	exact	exact	+ionk
-GO:0035864 ! response to potassium ion	XCO:0000150 ! potassium ion	false	label	label	ionpotassium
-GO:0035864 ! response to potassium ion	XCO:0000150 ! potassium ion	true	label	label	ionpotassium
-GO:0035864 ! response to potassium ion	XCO:0000150 ! potassium ion	false	exact	exact	k+ion
-GO:0035864 ! response to potassium ion	XCO:0000150 ! potassium ion	true	exact	exact	k+ion
-GO:0035864 ! response to potassium ion	XCO:0000150 ! potassium ion	false	label	label	potassiumion
-GO:0035864 ! response to potassium ion	XCO:0000150 ! potassium ion	true	label	label	potassiumion
+GO:0035864 ! response to potassium ion	XCO:0000150 ! potassium ion	false	exact	exact	+k
+GO:0035864 ! response to potassium ion	XCO:0000150 ! potassium ion	true	exact	exact	+k
+GO:0035864 ! response to potassium ion	XCO:0000150 ! potassium ion	false	exact	exact	k+
+GO:0035864 ! response to potassium ion	XCO:0000150 ! potassium ion	true	exact	exact	k+
+GO:0035864 ! response to potassium ion	XCO:0000150 ! potassium ion	false	exact	label	potassium
+GO:0035864 ! response to potassium ion	XCO:0000150 ! potassium ion	true	exact	label	potassium
+GO:0035864 ! response to potassium ion	XCO:0000150 ! potassium ion	false	label	label	potassium
+GO:0035864 ! response to potassium ion	XCO:0000150 ! potassium ion	true	label	label	potassium
 GO:0036270 ! response to diuretic	XCO:0000122 ! diuretic	false	label	label	diuretic
 GO:0042221 ! response to chemical	EO:0007189 ! chemical treatment	false	exact	label	chemical
 GO:0042221 ! response to chemical	NCIT:C36290 ! Chemical Exposure	false	exact	label	chemical
@@ -835,6 +873,8 @@ GO:0042221 ! response to chemical	ZECO:0000239 ! chemical treatment	false	label	
 GO:0042493 ! response to drug	NCIT:C41362 ! Drug Exposure	false	label	label	drug
 GO:0042493 ! response to drug	NCIT:C41362 ! Drug Exposure	false	label	related	drug
 GO:0042542 ! response to hydrogen peroxide	EO:0007415 ! hydrogen peroxide treatment	false	label	label	hydrogenperoxide
+GO:0043157 ! response to cation stress	GO:0006950 ! response to stress	true	label	label	responsstress
+GO:0043157 ! response to cation stress	GO:0006950 ! response to stress	false	label	label	stress
 GO:0043200 ! response to amino acid	XCO:0000119 ! amino acid	false	exact	label	acidamino
 GO:0043200 ! response to amino acid	XCO:0000119 ! amino acid	true	exact	label	acidamino
 GO:0043200 ! response to amino acid	XCO:0000119 ! amino acid	false	label	label	acidamino
@@ -853,8 +893,17 @@ GO:0045471 ! response to ethanol	XCO:0000325 ! ethanol	false	label	label	ethanol
 GO:0045471 ! response to ethanol	XCO:0000325 ! ethanol	true	label	label	ethanol
 GO:0046677 ! response to antibiotic	EO:0007041 ! antibiotic treatment	false	label	label	antibiotic
 GO:0046677 ! response to antibiotic	XCO:0000482 ! antimicrobial agent	false	label	related	antibiotic
+GO:0046685 ! response to arsenic-containing substance	MRE:0000109 ! Exposure to arsenic	false	exact	label	arsenic
 GO:0046686 ! response to cadmium ion	EO:0001018 ! cadmium treatment	false	exact	label	cadmium
 GO:0046686 ! response to cadmium ion	EO:0001018 ! cadmium treatment	true	exact	label	cadmium
+GO:0046686 ! response to cadmium ion	MRE:0000112 ! Exposure to cadmium	false	exact	label	cadmium
+GO:0046686 ! response to cadmium ion	EO:0001018 ! cadmium treatment	false	label	label	cadmium
+GO:0046686 ! response to cadmium ion	EO:0001018 ! cadmium treatment	true	label	label	cadmium
+GO:0046686 ! response to cadmium ion	MRE:0000112 ! Exposure to cadmium	false	label	label	cadmium
+GO:0046688 ! response to copper ion	MRE:0000115 ! Exposure to copper	false	exact	label	copper
+GO:0046688 ! response to copper ion	MRE:0000115 ! Exposure to copper	false	label	label	copper
+GO:0046689 ! response to mercury ion	MRE:0000118 ! Exposure to mercury	false	exact	label	mercury
+GO:0046689 ! response to mercury ion	MRE:0000118 ! Exposure to mercury	false	label	label	mercury
 GO:0048545 ! response to steroid hormone	XCO:0000229 ! steroid hormone	false	exact	label	hormonesteroid
 GO:0048545 ! response to steroid hormone	XCO:0000229 ! steroid hormone	false	label	label	hormonesteroid
 GO:0048545 ! response to steroid hormone	XCO:0000229 ! steroid hormone	false	exact	label	steroidhormone
@@ -862,18 +911,22 @@ GO:0048545 ! response to steroid hormone	XCO:0000229 ! steroid hormone	false	lab
 GO:0050896 ! response to stimulus	EO:0007151 ! radiation treatment	false	label	label	
 GO:0050896 ! response to stimulus	GO:0009314 ! response to radiation	false	label	exact	
 GO:0050896 ! response to stimulus	GO:0009314 ! response to radiation	false	label	label	
+GO:0050896 ! response to stimulus	MRE:0000000 ! Exposure	false	label	label	
+GO:0050896 ! response to stimulus	MRE:0000079 ! Radiation exposure	false	label	label	
 GO:0050896 ! response to stimulus	NCIT:C17941 ! Exposure	false	label	label	
 GO:0050896 ! response to stimulus	NCIT:C61398 ! Radiation Exposure	false	label	label	
 GO:0050896 ! response to stimulus	NCIT:C61398 ! Radiation Exposure	false	label	related	
 GO:0050896 ! response to stimulus	XCO:0000038 ! radiation exposure	false	label	label	
 GO:0050896 ! response to stimulus	ZECO:0000124 ! conditions	false	label	label	
 GO:0050896 ! response to stimulus	ZECO:0000128 ! experimental conditions	false	label	label	
-GO:0051592 ! response to calcium ion	XCO:0000184 ! calcium ion	false	label	label	calciumion
-GO:0051592 ! response to calcium ion	XCO:0000184 ! calcium ion	true	label	label	calciumion
+GO:0051592 ! response to calcium ion	XCO:0000184 ! calcium ion	false	label	label	calcium
+GO:0051592 ! response to calcium ion	XCO:0000184 ! calcium ion	true	label	label	calcium
 GO:0051602 ! response to electrical stimulus	NCIT:C45407 ! Electrical Exposure	false	label	label	electrical
 GO:0051602 ! response to electrical stimulus	NCIT:C45407 ! Electrical Exposure	false	label	related	electrical
 GO:0055093 ! response to hyperoxia	ZECO:0000163 ! hyperoxia	false	label	label	hyperoxia
 GO:0055093 ! response to hyperoxia	ZECO:0000163 ! hyperoxia	true	label	label	hyperoxia
+GO:0060359 ! response to ammonium ion	EO:0001017 ! ammonium treatment	false	label	label	ammonium
+GO:0060359 ! response to ammonium ion	EO:0001017 ! ammonium treatment	true	label	label	ammonium
 GO:0060416 ! response to growth hormone	EO:0007165 ! growth hormone treatment	false	exact	label	growthhormone
 GO:0060416 ! response to growth hormone	EO:0007165 ! growth hormone treatment	false	label	label	growthhormone
 GO:0060992 ! response to fungicide	EO:0007268 ! fungicide treatment	false	label	label	fungicide
@@ -897,6 +950,12 @@ GO:0070141 ! response to UV-A	EO:0007002 ! UV-A light regimen	false	label	exact	
 GO:0070141 ! response to UV-A	EO:0007002 ! UV-A light regimen	true	label	exact	uva
 GO:0070141 ! response to UV-A	EO:0007002 ! UV-A light regimen	false	exact	label	uvalight
 GO:0070141 ! response to UV-A	EO:0007002 ! UV-A light regimen	true	exact	label	uvalight
+GO:0070482 ! response to oxygen levels	ZECO:0000161 ! oxygen content	false	label	label	amountoxygen
+GO:0070482 ! response to oxygen levels	ZECO:0000161 ! oxygen content	true	label	label	amountoxygen
+GO:0070482 ! response to oxygen levels	ZECO:0000161 ! oxygen content	false	label	label	oxygenamount
+GO:0070482 ! response to oxygen levels	ZECO:0000161 ! oxygen content	true	label	label	oxygenamount
+GO:0070541 ! response to platinum ion	MRE:0000120 ! Exposure to platinum	false	exact	label	platinum
+GO:0070541 ! response to platinum ion	MRE:0000120 ! Exposure to platinum	false	label	label	platinum
 GO:0071548 ! response to dexamethasone	XCO:0000372 ! dexamethasone	false	exact	label	dexamethasone
 GO:0071548 ! response to dexamethasone	XCO:0000372 ! dexamethasone	false	label	label	dexamethasone
 GO:0071873 ! response to norepinephrine	XCO:0000127 ! norepinephrine	false	exact	exact	noradrenaline
@@ -922,9 +981,11 @@ GO:0097305 ! response to alcohol	XCO:0000323 ! alcohol	true	label	label	alcohol
 GO:0097327 ! response to antineoplastic agent	XCO:0000435 ! antineoplastic agent	false	label	label	agentantineoplastic
 GO:0097327 ! response to antineoplastic agent	XCO:0000435 ! antineoplastic agent	false	label	label	antineoplasticagent
 GO:0097329 ! response to antimetabolite	XCO:0000390 ! antimetabolite	false	label	label	antimetabolite
+GO:1901423 ! response to benzene	MRE:0000146 ! Exposure to benzene	false	label	label	benzene
 GO:1901423 ! response to benzene	NCIT:C302 ! Benzene	false	label	label	benzene
 GO:1901423 ! response to benzene	NCIT:C36251 ! Benzene Exposure	false	label	label	benzene
 GO:1901423 ! response to benzene	NCIT:C36251 ! Benzene Exposure	false	label	related	benzene
+GO:1901424 ! response to toluene	MRE:0000157 ! Exposure to toluene	false	label	label	toluene
 GO:1901554 ! response to paracetamol	XCO:0000388 ! acetaminophen	false	exact	label	acetaminophen
 GO:1901554 ! response to paracetamol	XCO:0000388 ! acetaminophen	true	exact	label	acetaminophen
 GO:1901554 ! response to paracetamol	XCO:0000388 ! acetaminophen	false	label	exact	paracetamol
@@ -940,6 +1001,8 @@ GO:1902074 ! response to salt	GO:0009651 ! response to salt stress	true	narrow	e
 GO:1902074 ! response to salt	GO:0009651 ! response to salt stress	false	narrow	exact	salinity
 GO:1902074 ! response to salt	EO:0007185 ! salt treatment	false	label	label	salt
 GO:1902074 ! response to salt	EO:0007185 ! salt treatment	true	label	label	salt
+GO:1902074 ! response to salt	XCO:0000149 ! ion/salt	false	label	label	salt
+GO:1902074 ! response to salt	XCO:0000149 ! ion/salt	true	label	label	salt
 GO:1902349 ! response to chloroquine	NCIT:C61671 ! Chloroquine	false	label	label	chloroquine
 GO:1903165 ! response to polycyclic arene	XCO:0000093 ! polycyclic arene	false	label	label	arenepolycyclic
 GO:1903165 ! response to polycyclic arene	XCO:0000093 ! polycyclic arene	false	label	label	polycyclicarene
@@ -953,9 +1016,104 @@ GO:1904578 ! response to thapsigargin	XCO:0000178 ! thapsigargin	false	label	lab
 GO:1904578 ! response to thapsigargin	XCO:0000178 ! thapsigargin	true	label	label	thapsigargin
 GO:1904619 ! response to dimethyl sulfoxide	EO:0007531 ! dimethyl sulfoxide	false	label	label	dimethylsulfoxide
 GO:1904647 ! response to rotenone	XCO:0000501 ! rotenone	false	label	label	rotenone
+GO:1904772 ! response to tetrachloromethane	MRE:0000156 ! Exposure to tetrachloromethane	false	label	label	tetrachloromethane
 GO:1905144 ! response to acetylcholine	XCO:0000143 ! acetylcholine	false	label	label	acetylcholine
 GO:1990776 ! response to angiotensin	XCO:0000126 ! angiotensin	false	label	label	angiotensin
 GO:1990776 ! response to angiotensin	XCO:0000126 ! angiotensin	true	label	label	angiotensin
+MRE:0000000 ! Exposure	EO:0007151 ! radiation treatment	false	label	label	
+MRE:0000000 ! Exposure	GO:0009314 ! response to radiation	false	label	exact	
+MRE:0000000 ! Exposure	GO:0009314 ! response to radiation	false	label	label	
+MRE:0000000 ! Exposure	GO:0050896 ! response to stimulus	false	label	label	
+MRE:0000000 ! Exposure	MRE:0000079 ! Radiation exposure	false	label	label	
+MRE:0000000 ! Exposure	NCIT:C17941 ! Exposure	false	label	label	
+MRE:0000000 ! Exposure	NCIT:C61398 ! Radiation Exposure	false	label	label	
+MRE:0000000 ! Exposure	NCIT:C61398 ! Radiation Exposure	false	label	related	
+MRE:0000000 ! Exposure	XCO:0000038 ! radiation exposure	false	label	label	
+MRE:0000000 ! Exposure	ZECO:0000124 ! conditions	false	label	label	
+MRE:0000000 ! Exposure	ZECO:0000128 ! experimental conditions	false	label	label	
+MRE:0000000 ! Exposure	NCIT:C17941 ! Exposure	true	label	label	exposur
+MRE:0000000 ! Exposure	NCIT:C17941 ! Exposure	false	label	label	exposure
+MRE:0000035 ! Passive smoking	NCIT:C17140 ! Passive Smoke Exposure	false	label	related	passivesmoking
+MRE:0000035 ! Passive smoking	NCIT:C17140 ! Passive Smoke Exposure	true	label	related	passivsmoke
+MRE:0000044 ! Occupational exposure	NCIT:C16929 ! Occupational Exposure	true	label	label	exposuroccup
+MRE:0000044 ! Occupational exposure	NCIT:C16929 ! Occupational Exposure	true	label	related	exposuroccup
+MRE:0000044 ! Occupational exposure	NCIT:C16929 ! Occupational Exposure	false	label	label	occupational
+MRE:0000044 ! Occupational exposure	NCIT:C16929 ! Occupational Exposure	false	label	related	occupational
+MRE:0000044 ! Occupational exposure	NCIT:C16929 ! Occupational Exposure	false	label	label	occupationalexposure
+MRE:0000044 ! Occupational exposure	NCIT:C16929 ! Occupational Exposure	false	label	related	occupationalexposure
+MRE:0000044 ! Occupational exposure	NCIT:C16929 ! Occupational Exposure	true	label	label	occupexposur
+MRE:0000044 ! Occupational exposure	NCIT:C16929 ! Occupational Exposure	true	label	related	occupexposur
+MRE:0000046 ! Cigarette smoking	XCO:0000079 ! cigarette smoking	false	label	label	cigarettesmoking
+MRE:0000046 ! Cigarette smoking	XCO:0000079 ! cigarette smoking	true	label	label	cigarettsmoke
+MRE:0000047 ! Cigar smoking	XCO:0000078 ! cigar smoking	true	label	label	cigarsmoke
+MRE:0000047 ! Cigar smoking	XCO:0000078 ! cigar smoking	false	label	label	cigarsmoking
+MRE:0000065 ! Poisoning	XCO:0000239 ! toxic substance	true	label	related	poison
+MRE:0000065 ! Poisoning	XCO:0000239 ! toxic substance	true	label	related	poison
+MRE:0000079 ! Radiation exposure	EO:0007151 ! radiation treatment	false	label	label	
+MRE:0000079 ! Radiation exposure	GO:0009314 ! response to radiation	false	label	exact	
+MRE:0000079 ! Radiation exposure	GO:0009314 ! response to radiation	false	label	label	
+MRE:0000079 ! Radiation exposure	GO:0050896 ! response to stimulus	false	label	label	
+MRE:0000079 ! Radiation exposure	MRE:0000000 ! Exposure	false	label	label	
+MRE:0000079 ! Radiation exposure	NCIT:C17941 ! Exposure	false	label	label	
+MRE:0000079 ! Radiation exposure	NCIT:C61398 ! Radiation Exposure	false	label	label	
+MRE:0000079 ! Radiation exposure	NCIT:C61398 ! Radiation Exposure	false	label	related	
+MRE:0000079 ! Radiation exposure	XCO:0000038 ! radiation exposure	false	label	label	
+MRE:0000079 ! Radiation exposure	ZECO:0000124 ! conditions	false	label	label	
+MRE:0000079 ! Radiation exposure	ZECO:0000128 ! experimental conditions	false	label	label	
+MRE:0000079 ! Radiation exposure	NCIT:C61398 ! Radiation Exposure	true	label	label	exposurradiat
+MRE:0000079 ! Radiation exposure	NCIT:C61398 ! Radiation Exposure	true	label	related	exposurradiat
+MRE:0000079 ! Radiation exposure	XCO:0000038 ! radiation exposure	true	label	label	exposurradiat
+MRE:0000079 ! Radiation exposure	NCIT:C61398 ! Radiation Exposure	true	label	label	radiatexposur
+MRE:0000079 ! Radiation exposure	NCIT:C61398 ! Radiation Exposure	true	label	related	radiatexposur
+MRE:0000079 ! Radiation exposure	XCO:0000038 ! radiation exposure	true	label	label	radiatexposur
+MRE:0000079 ! Radiation exposure	NCIT:C61398 ! Radiation Exposure	false	label	label	radiationexposure
+MRE:0000079 ! Radiation exposure	NCIT:C61398 ! Radiation Exposure	false	label	related	radiationexposure
+MRE:0000079 ! Radiation exposure	XCO:0000038 ! radiation exposure	false	label	label	radiationexposure
+MRE:0000099 ! Carbon monoxide exposure	GO:0034465 ! response to carbon monoxide	false	label	label	carbonmonoxide
+MRE:0000100 ! Exposure to 2,2',4'-tribromodiphenyl ether	MRE:0000162 ! Exposure to 2,4,4'-tribromodiphenyl ether	true	label	label	'24etherexposurtribromodiphenyl
+MRE:0000100 ! Exposure to 2,2',4'-tribromodiphenyl ether	MRE:0000162 ! Exposure to 2,4,4'-tribromodiphenyl ether	false	label	label	24'ethertribromodiphenyl
+MRE:0000106 ! Exposure to metal	GO:0010038 ! response to metal ion	false	label	exact	metal
+MRE:0000106 ! Exposure to metal	GO:0010038 ! response to metal ion	false	label	label	metal
+MRE:0000109 ! Exposure to arsenic	GO:0046685 ! response to arsenic-containing substance	false	label	exact	arsenic
+MRE:0000112 ! Exposure to cadmium	EO:0001018 ! cadmium treatment	false	label	label	cadmium
+MRE:0000112 ! Exposure to cadmium	EO:0001018 ! cadmium treatment	true	label	label	cadmium
+MRE:0000112 ! Exposure to cadmium	GO:0046686 ! response to cadmium ion	false	label	exact	cadmium
+MRE:0000112 ! Exposure to cadmium	GO:0046686 ! response to cadmium ion	false	label	label	cadmium
+MRE:0000113 ! Exposure to cesium	GO:0010164 ! response to cesium ion	false	label	exact	cesium
+MRE:0000113 ! Exposure to cesium	GO:0010164 ! response to cesium ion	false	label	label	cesium
+MRE:0000114 ! Exposure to cobalt	GO:0032025 ! response to cobalt ion	false	label	label	cobalt
+MRE:0000115 ! Exposure to copper	GO:0046688 ! response to copper ion	false	label	exact	copper
+MRE:0000115 ! Exposure to copper	GO:0046688 ! response to copper ion	false	label	label	copper
+MRE:0000116 ! Exposure to lead	GO:0010288 ! response to lead ion	false	label	label	lead
+MRE:0000116 ! Exposure to lead	ZECO:0000224 ! lead	false	label	label	lead
+MRE:0000116 ! Exposure to lead	ZECO:0000224 ! lead	true	label	label	lead
+MRE:0000117 ! Exposure to manganese	GO:0010042 ! response to manganese ion	false	label	exact	manganese
+MRE:0000117 ! Exposure to manganese	GO:0010042 ! response to manganese ion	false	label	label	manganese
+MRE:0000118 ! Exposure to mercury	GO:0046689 ! response to mercury ion	false	label	exact	mercury
+MRE:0000118 ! Exposure to mercury	GO:0046689 ! response to mercury ion	false	label	label	mercury
+MRE:0000120 ! Exposure to platinum	GO:0070541 ! response to platinum ion	false	label	exact	platinum
+MRE:0000120 ! Exposure to platinum	GO:0070541 ! response to platinum ion	false	label	label	platinum
+MRE:0000121 ! Exposure to selenium	GO:0010269 ! response to selenium ion	false	label	label	selenium
+MRE:0000127 ! Exposure to zinc	GO:0010043 ! response to zinc ion	false	label	exact	zinc
+MRE:0000127 ! Exposure to zinc	GO:0010043 ! response to zinc ion	false	label	label	zinc
+MRE:0000129 ! Exposure to polycyclic aromatic hydrocarbon	XCO:0000093 ! polycyclic arene	false	label	related	aromatichydrocarbonpolycyclic
+MRE:0000129 ! Exposure to polycyclic aromatic hydrocarbon	XCO:0000093 ! polycyclic arene	false	label	related	polycyclicaromatichydrocarbon
+MRE:0000139 ! Exposure to 1,2-dichloroethane	EO:0007504 ! 1,2-dichloroethane	false	label	label	12dichloroethane
+MRE:0000146 ! Exposure to benzene	GO:1901423 ! response to benzene	false	label	label	benzene
+MRE:0000146 ! Exposure to benzene	NCIT:C302 ! Benzene	false	label	label	benzene
+MRE:0000146 ! Exposure to benzene	NCIT:C36251 ! Benzene Exposure	false	label	label	benzene
+MRE:0000146 ! Exposure to benzene	NCIT:C36251 ! Benzene Exposure	false	label	related	benzene
+MRE:0000146 ! Exposure to benzene	NCIT:C36251 ! Benzene Exposure	true	label	label	benzenexposur
+MRE:0000146 ! Exposure to benzene	NCIT:C36251 ! Benzene Exposure	true	label	related	benzenexposur
+MRE:0000151 ! Exposure to hexachloroethane	NCIT:C44389 ! Hexachloroethane	false	label	label	hexachloroethane
+MRE:0000153 ! Exposure to nitrobenzene	NCIT:C44410 ! Nitrobenzene	false	label	label	nitrobenzene
+MRE:0000156 ! Exposure to tetrachloromethane	GO:1904772 ! response to tetrachloromethane	false	label	label	tetrachloromethane
+MRE:0000157 ! Exposure to toluene	GO:1901424 ! response to toluene	false	label	label	toluene
+MRE:0000162 ! Exposure to 2,4,4'-tribromodiphenyl ether	MRE:0000100 ! Exposure to 2,2',4'-tribromodiphenyl ether	true	label	label	'24etherexposurtribromodiphenyl
+MRE:0000162 ! Exposure to 2,4,4'-tribromodiphenyl ether	MRE:0000100 ! Exposure to 2,2',4'-tribromodiphenyl ether	false	label	label	24'ethertribromodiphenyl
+MRE:0000182 ! Exposure to nitrate	EO:0007406 ! nitrate regimen	false	label	label	nitrate
+MRE:0000182 ! Exposure to nitrate	GO:0010167 ! response to nitrate	false	label	label	nitrate
+MRE:0000201 ! Exposure to genistein	GO:0033595 ! response to genistein	false	label	label	genistein
 NCIT:C114476 ! Allergic Reaction	NCIT:C3114 ! Hypersensitivity	false	label	related	allergicreaction
 NCIT:C114476 ! Allergic Reaction	NCIT:C3114 ! Hypersensitivity	false	related	related	allergicreaction
 NCIT:C114476 ! Allergic Reaction	NCIT:C3114 ! Hypersensitivity	true	label	related	allergreaction
@@ -966,6 +1124,16 @@ NCIT:C119826 ! Exposure Method	ExO:0000090 ! method	false	related	label	method
 NCIT:C119826 ! Exposure Method	ExO:0000090 ! method	true	related	label	method
 NCIT:C16552 ! Environmental Exposure	GO:0009605 ! response to external stimulus	false	label	exact	environmental
 NCIT:C16552 ! Environmental Exposure	GO:0009605 ! response to external stimulus	false	related	exact	environmental
+NCIT:C16929 ! Occupational Exposure	MRE:0000044 ! Occupational exposure	true	label	label	exposuroccup
+NCIT:C16929 ! Occupational Exposure	MRE:0000044 ! Occupational exposure	true	related	label	exposuroccup
+NCIT:C16929 ! Occupational Exposure	MRE:0000044 ! Occupational exposure	false	label	label	occupational
+NCIT:C16929 ! Occupational Exposure	MRE:0000044 ! Occupational exposure	false	related	label	occupational
+NCIT:C16929 ! Occupational Exposure	MRE:0000044 ! Occupational exposure	false	label	label	occupationalexposure
+NCIT:C16929 ! Occupational Exposure	MRE:0000044 ! Occupational exposure	false	related	label	occupationalexposure
+NCIT:C16929 ! Occupational Exposure	MRE:0000044 ! Occupational exposure	true	label	label	occupexposur
+NCIT:C16929 ! Occupational Exposure	MRE:0000044 ! Occupational exposure	true	related	label	occupexposur
+NCIT:C17140 ! Passive Smoke Exposure	MRE:0000035 ! Passive smoking	false	related	label	passivesmoking
+NCIT:C17140 ! Passive Smoke Exposure	MRE:0000035 ! Passive smoking	true	related	label	passivsmoke
 NCIT:C17741 ! Oxidative Stress	EO:0001037 ! oxidative stress treatment	false	label	label	oxidativestress
 NCIT:C17741 ! Oxidative Stress	GO:0006979 ! response to oxidative stress	false	label	label	oxidativestress
 NCIT:C17741 ! Oxidative Stress	EO:0001037 ! oxidative stress treatment	false	related	label	oxidativestress
@@ -976,11 +1144,15 @@ NCIT:C17941 ! Exposure	EO:0007151 ! radiation treatment	false	label	label
 NCIT:C17941 ! Exposure	GO:0009314 ! response to radiation	false	label	exact	
 NCIT:C17941 ! Exposure	GO:0009314 ! response to radiation	false	label	label	
 NCIT:C17941 ! Exposure	GO:0050896 ! response to stimulus	false	label	label	
+NCIT:C17941 ! Exposure	MRE:0000000 ! Exposure	false	label	label	
+NCIT:C17941 ! Exposure	MRE:0000079 ! Radiation exposure	false	label	label	
 NCIT:C17941 ! Exposure	NCIT:C61398 ! Radiation Exposure	false	label	label	
 NCIT:C17941 ! Exposure	NCIT:C61398 ! Radiation Exposure	false	label	related	
 NCIT:C17941 ! Exposure	XCO:0000038 ! radiation exposure	false	label	label	
 NCIT:C17941 ! Exposure	ZECO:0000124 ! conditions	false	label	label	
 NCIT:C17941 ! Exposure	ZECO:0000128 ! experimental conditions	false	label	label	
+NCIT:C17941 ! Exposure	MRE:0000000 ! Exposure	true	label	label	exposur
+NCIT:C17941 ! Exposure	MRE:0000000 ! Exposure	false	label	label	exposure
 NCIT:C225 ! Recombinant Interferon Alfa	GO:0035455 ! response to interferon-alpha	false	related	label	alphainterferon
 NCIT:C225 ! Recombinant Interferon Alfa	GO:0035455 ! response to interferon-alpha	true	related	label	alphainterferon
 NCIT:C225 ! Recombinant Interferon Alfa	GO:0035455 ! response to interferon-alpha	false	related	exact	interferonleukocyte
@@ -1021,6 +1193,7 @@ NCIT:C29821 ! Ethylene Oxide	EO:0007536 ! ethylene oxide	true	related	label	ethy
 NCIT:C29821 ! Ethylene Oxide	EO:0007536 ! ethylene oxide	true	label	label	ethylenoxid
 NCIT:C29821 ! Ethylene Oxide	EO:0007536 ! ethylene oxide	true	related	label	ethylenoxid
 NCIT:C302 ! Benzene	GO:1901423 ! response to benzene	false	label	label	benzene
+NCIT:C302 ! Benzene	MRE:0000146 ! Exposure to benzene	false	label	label	benzene
 NCIT:C302 ! Benzene	NCIT:C36251 ! Benzene Exposure	false	label	label	benzene
 NCIT:C302 ! Benzene	NCIT:C36251 ! Benzene Exposure	false	label	related	benzene
 NCIT:C3114 ! Hypersensitivity	NCIT:C114476 ! Allergic Reaction	false	related	label	allergicreaction
@@ -1032,9 +1205,13 @@ NCIT:C34441 ! Burn	NCIT:C50722 ! Radiation Burn	false	label	related	burn
 NCIT:C34441 ! Burn	NCIT:C50722 ! Radiation Burn	true	label	label	burn
 NCIT:C34441 ! Burn	NCIT:C50722 ! Radiation Burn	true	label	related	burn
 NCIT:C36251 ! Benzene Exposure	GO:1901423 ! response to benzene	false	label	label	benzene
+NCIT:C36251 ! Benzene Exposure	MRE:0000146 ! Exposure to benzene	false	label	label	benzene
 NCIT:C36251 ! Benzene Exposure	NCIT:C302 ! Benzene	false	label	label	benzene
 NCIT:C36251 ! Benzene Exposure	GO:1901423 ! response to benzene	false	related	label	benzene
+NCIT:C36251 ! Benzene Exposure	MRE:0000146 ! Exposure to benzene	false	related	label	benzene
 NCIT:C36251 ! Benzene Exposure	NCIT:C302 ! Benzene	false	related	label	benzene
+NCIT:C36251 ! Benzene Exposure	MRE:0000146 ! Exposure to benzene	true	label	label	benzenexposur
+NCIT:C36251 ! Benzene Exposure	MRE:0000146 ! Exposure to benzene	true	related	label	benzenexposur
 NCIT:C36290 ! Chemical Exposure	EO:0007189 ! chemical treatment	false	label	label	chemical
 NCIT:C36290 ! Chemical Exposure	GO:0042221 ! response to chemical	false	label	exact	chemical
 NCIT:C36290 ! Chemical Exposure	GO:0042221 ! response to chemical	false	label	label	chemical
@@ -1055,6 +1232,7 @@ NCIT:C44375 ! Diethyl Sulfate	EO:0007530 ! diethyl sulfate	true	related	label	di
 NCIT:C44375 ! Diethyl Sulfate	EO:0007530 ! diethyl sulfate	false	label	label	diethylsulfate
 NCIT:C44375 ! Diethyl Sulfate	EO:0007530 ! diethyl sulfate	false	related	label	diethylsulfate
 NCIT:C44375 ! Diethyl Sulfate	EO:0007530 ! diethyl sulfate	true	related	label	diethylsulfate
+NCIT:C44389 ! Hexachloroethane	MRE:0000151 ! Exposure to hexachloroethane	false	label	label	hexachloroethane
 NCIT:C44390 ! Hexamethylphosphoramide	EO:0007543 ! hexamethylphosphoramide	true	label	label	hexamethylphosphoramid
 NCIT:C44390 ! Hexamethylphosphoramide	EO:0007543 ! hexamethylphosphoramide	false	label	label	hexamethylphosphoramide
 NCIT:C44406 ! Mustard Gas	EO:0007552 ! mustard gas	true	label	label	gamustard
@@ -1065,6 +1243,7 @@ NCIT:C44406 ! Mustard Gas	EO:0007552 ! mustard gas	true	label	label	mustardga
 NCIT:C44406 ! Mustard Gas	EO:0007552 ! mustard gas	true	related	label	mustardga
 NCIT:C44406 ! Mustard Gas	EO:0007552 ! mustard gas	false	label	label	mustardgas
 NCIT:C44406 ! Mustard Gas	EO:0007552 ! mustard gas	false	related	label	mustardgas
+NCIT:C44410 ! Nitrobenzene	MRE:0000153 ! Exposure to nitrobenzene	false	label	label	nitrobenzene
 NCIT:C44417 ! N-Nitrosodimethylamine	EO:0007554 ! N-nitrosodimethylamine	true	label	label	nnitrosodimethylamin
 NCIT:C44417 ! N-Nitrosodimethylamine	EO:0007554 ! N-nitrosodimethylamine	false	label	label	nnitrosodimethylamine
 NCIT:C44462 ! UV Radiation Exposure	XCO:0000042 ! ultraviolet ray exposure	true	label	exact	exposurradiatultraviolet
@@ -1108,6 +1287,8 @@ NCIT:C61398 ! Radiation Exposure	EO:0007151 ! radiation treatment	false	label	la
 NCIT:C61398 ! Radiation Exposure	GO:0009314 ! response to radiation	false	label	exact	
 NCIT:C61398 ! Radiation Exposure	GO:0009314 ! response to radiation	false	label	label	
 NCIT:C61398 ! Radiation Exposure	GO:0050896 ! response to stimulus	false	label	label	
+NCIT:C61398 ! Radiation Exposure	MRE:0000000 ! Exposure	false	label	label	
+NCIT:C61398 ! Radiation Exposure	MRE:0000079 ! Radiation exposure	false	label	label	
 NCIT:C61398 ! Radiation Exposure	NCIT:C17941 ! Exposure	false	label	label	
 NCIT:C61398 ! Radiation Exposure	XCO:0000038 ! radiation exposure	false	label	label	
 NCIT:C61398 ! Radiation Exposure	ZECO:0000124 ! conditions	false	label	label	
@@ -1116,15 +1297,23 @@ NCIT:C61398 ! Radiation Exposure	EO:0007151 ! radiation treatment	false	related	
 NCIT:C61398 ! Radiation Exposure	GO:0009314 ! response to radiation	false	related	exact	
 NCIT:C61398 ! Radiation Exposure	GO:0009314 ! response to radiation	false	related	label	
 NCIT:C61398 ! Radiation Exposure	GO:0050896 ! response to stimulus	false	related	label	
+NCIT:C61398 ! Radiation Exposure	MRE:0000000 ! Exposure	false	related	label	
+NCIT:C61398 ! Radiation Exposure	MRE:0000079 ! Radiation exposure	false	related	label	
 NCIT:C61398 ! Radiation Exposure	NCIT:C17941 ! Exposure	false	related	label	
 NCIT:C61398 ! Radiation Exposure	XCO:0000038 ! radiation exposure	false	related	label	
 NCIT:C61398 ! Radiation Exposure	ZECO:0000124 ! conditions	false	related	label	
 NCIT:C61398 ! Radiation Exposure	ZECO:0000128 ! experimental conditions	false	related	label	
+NCIT:C61398 ! Radiation Exposure	MRE:0000079 ! Radiation exposure	true	label	label	exposurradiat
 NCIT:C61398 ! Radiation Exposure	XCO:0000038 ! radiation exposure	true	label	label	exposurradiat
+NCIT:C61398 ! Radiation Exposure	MRE:0000079 ! Radiation exposure	true	related	label	exposurradiat
 NCIT:C61398 ! Radiation Exposure	XCO:0000038 ! radiation exposure	true	related	label	exposurradiat
+NCIT:C61398 ! Radiation Exposure	MRE:0000079 ! Radiation exposure	true	label	label	radiatexposur
 NCIT:C61398 ! Radiation Exposure	XCO:0000038 ! radiation exposure	true	label	label	radiatexposur
+NCIT:C61398 ! Radiation Exposure	MRE:0000079 ! Radiation exposure	true	related	label	radiatexposur
 NCIT:C61398 ! Radiation Exposure	XCO:0000038 ! radiation exposure	true	related	label	radiatexposur
+NCIT:C61398 ! Radiation Exposure	MRE:0000079 ! Radiation exposure	false	label	label	radiationexposure
 NCIT:C61398 ! Radiation Exposure	XCO:0000038 ! radiation exposure	false	label	label	radiationexposure
+NCIT:C61398 ! Radiation Exposure	MRE:0000079 ! Radiation exposure	false	related	label	radiationexposure
 NCIT:C61398 ! Radiation Exposure	XCO:0000038 ! radiation exposure	false	related	label	radiationexposure
 NCIT:C61399 ! Radiation Underexposure	NCIT:C72893 ! Radiation Underexposure Medical Device Problem	false	label	related	radiationunderexposure
 NCIT:C61399 ! Radiation Underexposure	NCIT:C72893 ! Radiation Underexposure Medical Device Problem	false	related	related	radiationunderexposure
@@ -1255,15 +1444,20 @@ XCO:0000038 ! radiation exposure	EO:0007151 ! radiation treatment	false	label	la
 XCO:0000038 ! radiation exposure	GO:0009314 ! response to radiation	false	label	exact	
 XCO:0000038 ! radiation exposure	GO:0009314 ! response to radiation	false	label	label	
 XCO:0000038 ! radiation exposure	GO:0050896 ! response to stimulus	false	label	label	
+XCO:0000038 ! radiation exposure	MRE:0000000 ! Exposure	false	label	label	
+XCO:0000038 ! radiation exposure	MRE:0000079 ! Radiation exposure	false	label	label	
 XCO:0000038 ! radiation exposure	NCIT:C17941 ! Exposure	false	label	label	
 XCO:0000038 ! radiation exposure	NCIT:C61398 ! Radiation Exposure	false	label	label	
 XCO:0000038 ! radiation exposure	NCIT:C61398 ! Radiation Exposure	false	label	related	
 XCO:0000038 ! radiation exposure	ZECO:0000124 ! conditions	false	label	label	
 XCO:0000038 ! radiation exposure	ZECO:0000128 ! experimental conditions	false	label	label	
+XCO:0000038 ! radiation exposure	MRE:0000079 ! Radiation exposure	true	label	label	exposurradiat
 XCO:0000038 ! radiation exposure	NCIT:C61398 ! Radiation Exposure	true	label	label	exposurradiat
 XCO:0000038 ! radiation exposure	NCIT:C61398 ! Radiation Exposure	true	label	related	exposurradiat
+XCO:0000038 ! radiation exposure	MRE:0000079 ! Radiation exposure	true	label	label	radiatexposur
 XCO:0000038 ! radiation exposure	NCIT:C61398 ! Radiation Exposure	true	label	label	radiatexposur
 XCO:0000038 ! radiation exposure	NCIT:C61398 ! Radiation Exposure	true	label	related	radiatexposur
+XCO:0000038 ! radiation exposure	MRE:0000079 ! Radiation exposure	false	label	label	radiationexposure
 XCO:0000038 ! radiation exposure	NCIT:C61398 ! Radiation Exposure	false	label	label	radiationexposure
 XCO:0000038 ! radiation exposure	NCIT:C61398 ! Radiation Exposure	false	label	related	radiationexposure
 XCO:0000039 ! ionizing radiation exposure	GO:0010212 ! response to ionizing radiation	false	label	exact	ionizing
@@ -1317,6 +1511,10 @@ XCO:0000070 ! alcoholic drink	XCO:0000325 ! ethanol	true	related	label	ethanol
 XCO:0000070 ! alcoholic drink	GO:0045471 ! response to ethanol	true	related	label	ethanol
 XCO:0000070 ! alcoholic drink	XCO:0000325 ! ethanol	true	related	label	ethanol
 XCO:0000070 ! alcoholic drink	XCO:0000325 ! ethanol	true	related	label	ethanol
+XCO:0000078 ! cigar smoking	MRE:0000047 ! Cigar smoking	true	label	label	cigarsmoke
+XCO:0000078 ! cigar smoking	MRE:0000047 ! Cigar smoking	false	label	label	cigarsmoking
+XCO:0000079 ! cigarette smoking	MRE:0000046 ! Cigarette smoking	false	label	label	cigarettesmoking
+XCO:0000079 ! cigarette smoking	MRE:0000046 ! Cigarette smoking	true	label	label	cigarettsmoke
 XCO:0000088 ! chemical	EO:0007189 ! chemical treatment	true	label	label	chemic
 XCO:0000088 ! chemical	ZECO:0000239 ! chemical treatment	true	label	label	chemic
 XCO:0000088 ! chemical	EO:0007189 ! chemical treatment	false	label	label	chemical
@@ -1332,7 +1530,9 @@ XCO:0000092 ! 17 beta-estradiol	GO:0032355 ! response to estradiol	false	related
 XCO:0000092 ! 17 beta-estradiol	GO:0032355 ! response to estradiol	true	related	exact	estradiol
 XCO:0000092 ! 17 beta-estradiol	GO:0032355 ! response to estradiol	true	related	label	estradiol
 XCO:0000093 ! polycyclic arene	GO:1903165 ! response to polycyclic arene	false	label	label	arenepolycyclic
+XCO:0000093 ! polycyclic arene	MRE:0000129 ! Exposure to polycyclic aromatic hydrocarbon	false	related	label	aromatichydrocarbonpolycyclic
 XCO:0000093 ! polycyclic arene	GO:1903165 ! response to polycyclic arene	false	label	label	polycyclicarene
+XCO:0000093 ! polycyclic arene	MRE:0000129 ! Exposure to polycyclic aromatic hydrocarbon	false	related	label	polycyclicaromatichydrocarbon
 XCO:0000099 ! control condition	ZECO:0000125 ! control conditions	true	label	label	conditcontrol
 XCO:0000099 ! control condition	ZECO:0000125 ! control conditions	true	label	label	controlcondit
 XCO:0000102 ! fasting	ZECO:0000195 ! fasting	true	label	label	fast
@@ -1360,14 +1560,20 @@ XCO:0000127 ! norepinephrine	GO:0071873 ! response to norepinephrine	false	label
 XCO:0000127 ! norepinephrine	GO:0071873 ! response to norepinephrine	false	label	label	norepinephrine
 XCO:0000130 ! ketamine	GO:1901986 ! response to ketamine	false	label	label	ketamine
 XCO:0000143 ! acetylcholine	GO:1905144 ! response to acetylcholine	false	label	label	acetylcholine
-XCO:0000150 ! potassium ion	GO:0035864 ! response to potassium ion	false	exact	exact	+ionk
-XCO:0000150 ! potassium ion	GO:0035864 ! response to potassium ion	true	exact	exact	+ionk
-XCO:0000150 ! potassium ion	GO:0035864 ! response to potassium ion	false	label	label	ionpotassium
-XCO:0000150 ! potassium ion	GO:0035864 ! response to potassium ion	true	label	label	ionpotassium
-XCO:0000150 ! potassium ion	GO:0035864 ! response to potassium ion	false	exact	exact	k+ion
-XCO:0000150 ! potassium ion	GO:0035864 ! response to potassium ion	true	exact	exact	k+ion
-XCO:0000150 ! potassium ion	GO:0035864 ! response to potassium ion	false	label	label	potassiumion
-XCO:0000150 ! potassium ion	GO:0035864 ! response to potassium ion	true	label	label	potassiumion
+XCO:0000149 ! ion/salt	EO:0007185 ! salt treatment	false	label	label	salt
+XCO:0000149 ! ion/salt	EO:0007185 ! salt treatment	true	label	label	salt
+XCO:0000149 ! ion/salt	GO:1902074 ! response to salt	false	label	label	salt
+XCO:0000149 ! ion/salt	EO:0007185 ! salt treatment	true	label	label	salt
+XCO:0000149 ! ion/salt	EO:0007185 ! salt treatment	true	label	label	salt
+XCO:0000149 ! ion/salt	GO:1902074 ! response to salt	true	label	label	salt
+XCO:0000150 ! potassium ion	GO:0035864 ! response to potassium ion	false	exact	exact	+k
+XCO:0000150 ! potassium ion	GO:0035864 ! response to potassium ion	true	exact	exact	+k
+XCO:0000150 ! potassium ion	GO:0035864 ! response to potassium ion	false	exact	exact	k+
+XCO:0000150 ! potassium ion	GO:0035864 ! response to potassium ion	true	exact	exact	k+
+XCO:0000150 ! potassium ion	GO:0035864 ! response to potassium ion	false	label	exact	potassium
+XCO:0000150 ! potassium ion	GO:0035864 ! response to potassium ion	false	label	label	potassium
+XCO:0000150 ! potassium ion	GO:0035864 ! response to potassium ion	true	label	exact	potassium
+XCO:0000150 ! potassium ion	GO:0035864 ! response to potassium ion	true	label	label	potassium
 XCO:0000165 ! surgical manipulation	ZECO:0000130 ! surgical manipulation	false	label	label	manipulationsurgical
 XCO:0000165 ! surgical manipulation	ZECO:0000130 ! surgical manipulation	true	label	label	manipulsurgic
 XCO:0000165 ! surgical manipulation	ZECO:0000130 ! surgical manipulation	false	label	label	surgicalmanipulation
@@ -1385,8 +1591,8 @@ XCO:0000180 ! non-ionizing ultraviolet radiation exposure	ZECO:0000154 ! non-ion
 XCO:0000180 ! non-ionizing ultraviolet radiation exposure	ZECO:0000154 ! non-ionizing uv	false	exact	label	nonionizingultraviolet
 XCO:0000180 ! non-ionizing ultraviolet radiation exposure	ZECO:0000154 ! non-ionizing uv	false	label	label	nonionizingultraviolet
 XCO:0000183 ! controlled exposure to darkness	GO:0009646 ! response to absence of light	false	broad	related	darkness
-XCO:0000184 ! calcium ion	GO:0051592 ! response to calcium ion	false	label	label	calciumion
-XCO:0000184 ! calcium ion	GO:0051592 ! response to calcium ion	true	label	label	calciumion
+XCO:0000184 ! calcium ion	GO:0051592 ! response to calcium ion	false	label	label	calcium
+XCO:0000184 ! calcium ion	GO:0051592 ! response to calcium ion	true	label	label	calcium
 XCO:0000204 ! testosterone	GO:0033574 ! response to testosterone	false	label	exact	testosterone
 XCO:0000204 ! testosterone	GO:0033574 ! response to testosterone	false	label	label	testosterone
 XCO:0000205 ! mutation inducing chemical	EO:0001039 ! radiation mutagen treatment	false	exact	label	mutagen
@@ -1394,6 +1600,38 @@ XCO:0000205 ! mutation inducing chemical	EO:0001039 ! radiation mutagen treatmen
 XCO:0000208 ! 2-acetamidofluorene	NCIT:C29791 ! 2-Acetylaminofluorene	true	related	label	2acetylaminofluoren
 XCO:0000208 ! 2-acetamidofluorene	NCIT:C29791 ! 2-Acetylaminofluorene	false	related	label	2acetylaminofluorene
 XCO:0000214 ! activator	XCO:0000001 ! activity	true	label	label	activ
+XCO:0000216 ! ion channel activator	XCO:0000217 ! cation channel activator	false	label	label	activatorchannel
+XCO:0000216 ! ion channel activator	XCO:0000217 ! cation channel activator	true	label	label	activchannel
+XCO:0000216 ! ion channel activator	XCO:0000217 ! cation channel activator	true	label	label	channelactiv
+XCO:0000216 ! ion channel activator	XCO:0000217 ! cation channel activator	false	label	label	channelactivator
+XCO:0000217 ! cation channel activator	XCO:0000216 ! ion channel activator	false	label	label	activatorchannel
+XCO:0000217 ! cation channel activator	XCO:0000216 ! ion channel activator	true	label	label	activchannel
+XCO:0000217 ! cation channel activator	XCO:0000216 ! ion channel activator	true	label	label	channelactiv
+XCO:0000217 ! cation channel activator	XCO:0000216 ! ion channel activator	false	label	label	channelactivator
+XCO:0000221 ! ion channel inhibitor	XCO:0000222 ! cation channel inhibitor	false	related	related	antagonistchannel
+XCO:0000221 ! ion channel inhibitor	XCO:0000222 ! cation channel inhibitor	true	related	related	antagonistchannel
+XCO:0000221 ! ion channel inhibitor	XCO:0000222 ! cation channel inhibitor	true	related	related	antagonistchannel
+XCO:0000221 ! ion channel inhibitor	XCO:0000222 ! cation channel inhibitor	true	related	related	antagonistchannel
+XCO:0000221 ! ion channel inhibitor	XCO:0000222 ! cation channel inhibitor	false	related	related	channelantagonist
+XCO:0000221 ! ion channel inhibitor	XCO:0000222 ! cation channel inhibitor	true	related	related	channelantagonist
+XCO:0000221 ! ion channel inhibitor	XCO:0000222 ! cation channel inhibitor	true	related	related	channelantagonist
+XCO:0000221 ! ion channel inhibitor	XCO:0000222 ! cation channel inhibitor	true	related	related	channelantagonist
+XCO:0000221 ! ion channel inhibitor	XCO:0000222 ! cation channel inhibitor	false	label	label	channelinhibitor
+XCO:0000221 ! ion channel inhibitor	XCO:0000222 ! cation channel inhibitor	true	label	label	channelinhibitor
+XCO:0000221 ! ion channel inhibitor	XCO:0000222 ! cation channel inhibitor	true	label	label	channelinhibitor
+XCO:0000221 ! ion channel inhibitor	XCO:0000222 ! cation channel inhibitor	true	label	label	channelinhibitor
+XCO:0000222 ! cation channel inhibitor	XCO:0000221 ! ion channel inhibitor	false	related	related	antagonistchannel
+XCO:0000222 ! cation channel inhibitor	XCO:0000221 ! ion channel inhibitor	true	related	related	antagonistchannel
+XCO:0000222 ! cation channel inhibitor	XCO:0000221 ! ion channel inhibitor	true	related	related	antagonistchannel
+XCO:0000222 ! cation channel inhibitor	XCO:0000221 ! ion channel inhibitor	true	related	related	antagonistchannel
+XCO:0000222 ! cation channel inhibitor	XCO:0000221 ! ion channel inhibitor	false	related	related	channelantagonist
+XCO:0000222 ! cation channel inhibitor	XCO:0000221 ! ion channel inhibitor	true	related	related	channelantagonist
+XCO:0000222 ! cation channel inhibitor	XCO:0000221 ! ion channel inhibitor	true	related	related	channelantagonist
+XCO:0000222 ! cation channel inhibitor	XCO:0000221 ! ion channel inhibitor	true	related	related	channelantagonist
+XCO:0000222 ! cation channel inhibitor	XCO:0000221 ! ion channel inhibitor	false	label	label	channelinhibitor
+XCO:0000222 ! cation channel inhibitor	XCO:0000221 ! ion channel inhibitor	true	label	label	channelinhibitor
+XCO:0000222 ! cation channel inhibitor	XCO:0000221 ! ion channel inhibitor	true	label	label	channelinhibitor
+XCO:0000222 ! cation channel inhibitor	XCO:0000221 ! ion channel inhibitor	true	label	label	channelinhibitor
 XCO:0000228 ! peptide hormone	GO:0043434 ! response to peptide hormone	false	label	exact	hormonepeptide
 XCO:0000228 ! peptide hormone	GO:0043434 ! response to peptide hormone	false	label	label	hormonepeptide
 XCO:0000228 ! peptide hormone	GO:0043434 ! response to peptide hormone	false	label	exact	peptidehormone
@@ -1407,6 +1645,8 @@ XCO:0000234 ! deoxyribonucleic acid	EO:0007532 ! DNA	true	exact	label	dna
 XCO:0000234 ! deoxyribonucleic acid	EO:0007532 ! DNA	true	exact	label	dna
 XCO:0000234 ! deoxyribonucleic acid	EO:0007532 ! DNA	true	exact	label	dna
 XCO:0000237 ! viral pathogen	GO:0009615 ! response to virus	false	exact	label	virus
+XCO:0000239 ! toxic substance	MRE:0000065 ! Poisoning	true	related	label	poison
+XCO:0000239 ! toxic substance	MRE:0000065 ! Poisoning	true	related	label	poison
 XCO:0000239 ! toxic substance	GO:0009636 ! response to toxic substance	false	label	label	substancetoxic
 XCO:0000239 ! toxic substance	GO:0009636 ! response to toxic substance	false	label	label	toxicsubstance
 XCO:0000245 ! insulin	GO:0032868 ! response to insulin	false	label	exact	insulin
@@ -1414,9 +1654,9 @@ XCO:0000245 ! insulin	GO:0032868 ! response to insulin	false	label	label	insulin
 XCO:0000245 ! insulin	GO:0032868 ! response to insulin	true	label	exact	insulin
 XCO:0000245 ! insulin	GO:0032868 ! response to insulin	true	label	label	insulin
 XCO:0000274 ! monosaccharide	EO:0001011 ! monosaccharide treatment	true	label	label	monosaccharid
-XCO:0000274 ! monosaccharide	EO:0001011 ! monosaccharide treatment	false	label	label	monosaccharide
-XCO:0000274 ! monosaccharide	GO:0034284 ! response to monosaccharide	false	label	exact	monosaccharide
-XCO:0000274 ! monosaccharide	GO:0034284 ! response to monosaccharide	false	label	label	monosaccharide
+XCO:0000274 ! monosaccharide	EO:0001011 ! monosaccharide treatment	false	label	label	sugar
+XCO:0000274 ! monosaccharide	GO:0034284 ! response to monosaccharide	false	label	exact	sugar
+XCO:0000274 ! monosaccharide	GO:0034284 ! response to monosaccharide	false	label	label	sugar
 XCO:0000275 ! glucose	EO:0001013 ! glucose treatment	true	label	label	glucos
 XCO:0000275 ! glucose	EO:0001013 ! glucose treatment	false	label	label	glucose
 XCO:0000275 ! glucose	GO:0009749 ! response to glucose	false	label	exact	glucose
@@ -1456,10 +1696,8 @@ XCO:0000306 ! cold exposure	ZECO:0000188 ! cold exposure	false	label	label	colde
 XCO:0000308 ! heat exposure	GO:0009408 ! response to heat	false	label	label	heat
 XCO:0000308 ! heat exposure	XCO:0000447 ! estrus	false	label	related	heat
 XCO:0000308 ! heat exposure	XCO:0000447 ! estrus	true	label	related	heat
-XCO:0000313 ! lithium ion	GO:0010226 ! response to lithium ion	false	label	label	ionlithium
-XCO:0000313 ! lithium ion	GO:0010226 ! response to lithium ion	true	label	label	ionlithium
-XCO:0000313 ! lithium ion	GO:0010226 ! response to lithium ion	false	label	label	lithiumion
-XCO:0000313 ! lithium ion	GO:0010226 ! response to lithium ion	true	label	label	lithiumion
+XCO:0000313 ! lithium ion	GO:0010226 ! response to lithium ion	false	label	label	lithium
+XCO:0000313 ! lithium ion	GO:0010226 ! response to lithium ion	true	label	label	lithium
 XCO:0000323 ! alcohol	GO:0097305 ! response to alcohol	false	label	label	alcohol
 XCO:0000323 ! alcohol	GO:0097305 ! response to alcohol	true	label	label	alcohol
 XCO:0000325 ! ethanol	GO:0045471 ! response to ethanol	false	label	label	ethanol
@@ -1576,6 +1814,8 @@ ZECO:0000124 ! conditions	EO:0007151 ! radiation treatment	false	label	label
 ZECO:0000124 ! conditions	GO:0009314 ! response to radiation	false	label	exact	
 ZECO:0000124 ! conditions	GO:0009314 ! response to radiation	false	label	label	
 ZECO:0000124 ! conditions	GO:0050896 ! response to stimulus	false	label	label	
+ZECO:0000124 ! conditions	MRE:0000000 ! Exposure	false	label	label	
+ZECO:0000124 ! conditions	MRE:0000079 ! Radiation exposure	false	label	label	
 ZECO:0000124 ! conditions	NCIT:C17941 ! Exposure	false	label	label	
 ZECO:0000124 ! conditions	NCIT:C61398 ! Radiation Exposure	false	label	label	
 ZECO:0000124 ! conditions	NCIT:C61398 ! Radiation Exposure	false	label	related	
@@ -1587,6 +1827,8 @@ ZECO:0000128 ! experimental conditions	EO:0007151 ! radiation treatment	false	la
 ZECO:0000128 ! experimental conditions	GO:0009314 ! response to radiation	false	label	exact	
 ZECO:0000128 ! experimental conditions	GO:0009314 ! response to radiation	false	label	label	
 ZECO:0000128 ! experimental conditions	GO:0050896 ! response to stimulus	false	label	label	
+ZECO:0000128 ! experimental conditions	MRE:0000000 ! Exposure	false	label	label	
+ZECO:0000128 ! experimental conditions	MRE:0000079 ! Radiation exposure	false	label	label	
 ZECO:0000128 ! experimental conditions	NCIT:C17941 ! Exposure	false	label	label	
 ZECO:0000128 ! experimental conditions	NCIT:C61398 ! Radiation Exposure	false	label	label	
 ZECO:0000128 ! experimental conditions	NCIT:C61398 ! Radiation Exposure	false	label	related	
@@ -1657,6 +1899,10 @@ ZECO:0000156 ! water quality	GO:0009415 ! response to water	true	related	exact	w
 ZECO:0000156 ! water quality	GO:0009415 ! response to water	true	related	label	water
 ZECO:0000156 ! water quality	XCO:0000021 ! water	true	related	label	water
 ZECO:0000156 ! water quality	XCO:0000021 ! water	true	related	label	water
+ZECO:0000161 ! oxygen content	GO:0070482 ! response to oxygen levels	false	label	label	amountoxygen
+ZECO:0000161 ! oxygen content	GO:0070482 ! response to oxygen levels	true	label	label	amountoxygen
+ZECO:0000161 ! oxygen content	GO:0070482 ! response to oxygen levels	false	label	label	oxygenamount
+ZECO:0000161 ! oxygen content	GO:0070482 ! response to oxygen levels	true	label	label	oxygenamount
 ZECO:0000162 ! hypoxia	GO:0001666 ! response to hypoxia	false	label	label	hypoxia
 ZECO:0000162 ! hypoxia	GO:0001666 ! response to hypoxia	true	label	label	hypoxia
 ZECO:0000163 ! hyperoxia	GO:0055093 ! response to hyperoxia	false	label	label	hyperoxia
@@ -1685,6 +1931,10 @@ ZECO:0000193 ! diet	XCO:0000013 ! diet	true	label	related	diet
 ZECO:0000193 ! diet	XCO:0000013 ! diet	true	label	related	diet
 ZECO:0000195 ! fasting	XCO:0000102 ! fasting	true	label	label	fast
 ZECO:0000195 ! fasting	XCO:0000102 ! fasting	false	label	label	fasting
+ZECO:0000224 ! lead	GO:0010288 ! response to lead ion	false	label	label	lead
+ZECO:0000224 ! lead	MRE:0000116 ! Exposure to lead	false	label	label	lead
+ZECO:0000224 ! lead	GO:0010288 ! response to lead ion	true	label	label	lead
+ZECO:0000224 ! lead	MRE:0000116 ! Exposure to lead	true	label	label	lead
 ZECO:0000231 ! light intensity	EO:0007224 ! light intensity regimen	false	label	label	intensitylight
 ZECO:0000231 ! light intensity	GO:0009642 ! response to light intensity	false	label	label	intensitylight
 ZECO:0000231 ! light intensity	EO:0007224 ! light intensity regimen	true	label	label	intenslight
