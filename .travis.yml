@@ -1,3 +1,4 @@
+sudo: true
 language: python
 python:
   - "3.4"
@@ -10,7 +11,9 @@ addons:
 
 # other answer:      
 before_install:
-  - java install oraclejdk8
+  - sudo apt-get update
+  - sudo apt-get install oracle-java8-installer
+  - sudo update-java-alternatives -s java-8-oracle   
   
 install:
   - "pip install pyyaml"
