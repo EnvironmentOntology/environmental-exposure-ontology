@@ -1,0 +1,39 @@
+pattern_name: exo/patterns/prenatal
+classes:
+  exposure event: ExO:0000002
+  embryo stage: UBERON:0000068
+
+relations:
+  stressor: BFO_0000050
+  part of: BFO_0000050
+  has input: RO:0002233
+  immediately causally downstream of: RO:0002405
+    
+vars: 
+  cause: "'cause'"
+
+name:
+  text: "prenatal %s"
+  vars:
+    - cause
+
+annotations: 
+  - property: oio:hasExactSynonym
+    text: "%s via mother"
+    vars:
+      - cause
+  - property: oio:hasNarrowSynonym
+    text: "%s"
+    vars:
+      - cause
+
+def: 
+  text: "A exposure event involving %s."
+  vars:
+    - cause
+
+## TODO: consider requesting a 'route' class in ExO    
+equivalentTo: 
+  text: "'exposure event' and 'part of' some 'embryo stage' and 'immediately causally downstream of' some %s"
+  vars:
+    - cause
