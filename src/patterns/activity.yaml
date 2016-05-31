@@ -1,0 +1,37 @@
+pattern_name: exo/patterns/activity
+classes:
+  exposure event: ExO:0000002
+  activity: NCIT:C43431
+
+relations:
+  stressor: BFO_0000050
+  part of: BFO_0000050
+  has input: RO:0002233
+    
+vars: 
+  activity: "'activity'"
+
+name:
+  text: "%s related exposure"
+  vars:
+    - activity
+
+annotations: 
+  - property: oio:hasExactSynonym
+    text: "%s exposure"
+    vars:
+      - activity
+  - property: oio:hasNarrowSynonym
+    text: "%s"
+    vars:
+      - activity
+
+def: 
+  text: "A exposure event involving %s."
+  vars:
+    - activity
+    
+equivalentTo: 
+  text: "'exposure event' and 'part of' some %s"
+  vars:
+    - activity
