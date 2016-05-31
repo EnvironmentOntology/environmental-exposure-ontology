@@ -2,9 +2,12 @@ language: python
 python:
   - "3.4"
 
-jdk:
-  - oraclejdk8
-  
+## http://superuser.com/questions/993718/can-i-install-java-8-on-travis-ci-for-a-python-project
+addons:
+  apt:
+    packages:
+      - oracle-java8-installer
+      
 install:
   - "pip install pyyaml"
 
