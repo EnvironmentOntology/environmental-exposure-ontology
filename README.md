@@ -37,6 +37,7 @@ Ontologies used in composition (largely orthogonal):
  * UBERON - tissue types (not used yet)
  * NCIT - activities such as smoking
  * SDGIO - social entities
+ * PCO - population attributes (e.g. overcrowding)
 
 Similar ontologies (overlapping/non-orthogonal)
 

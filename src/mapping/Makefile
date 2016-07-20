@@ -1,5 +1,6 @@
 all: all_exposure probs.tsv m.tsv unmapped.tsv rpt.html merged-exposure.obo axioms-r.obo  hier all_ecto
 
+OBO = http://purl.obolibrary.org/obo
 MOD = eo xco zeco snomed ncit go exo mre
 
 all_exposure: $(patsubst %, exposure-%.obo,$(MOD))
@@ -96,3 +97,46 @@ unmatched_ecto.tsv: combined-exposure.obo ignore.pro
 
 not_in_ecto.tsv: combined-exposure.obo ignore.pro
 	blip-findall  -i ignore.pro -debug index -goal nlp_index_all -i $< -i $(ECTO) -u metadata_nlp "entity_nomatch_to(X,'ECTO')"  -label -select X > $@.tmp && mv $@.tmp $@
+
+
+mirror-chebi.obo:
+	wget $(OBO)/chebi.obo -O $@
+
+chebihack.obo:
+	blip ontol-query -r chebi -n % -to obo > $@.tmp && egrep -v '^(def|xref|namespace):' $@.tmp | egrep -v InChI | perl -npe 's@ EXACT @ RELATED @ if m@IUPAC@'  > $@
+
+TAGS = chebi-simple chebi-diet
+OBOL_ALL_E = $(patsubst %,obol-%-exact.obo,$(TAGS))
+OBOL_ALL_S = $(patsubst %,obol-%-all.obo,$(TAGS))
+OBOL_ALL = $(OBOL_ALL_E) $(OBOL_ALL_S)
+obol: $(OBOL_ALL)
+clean_obol:
+	rm $(OBOL_ALL)
+
+OBOL= obol -r ro  -i ../ontology/ecto.obo -i cme.obo -debug qobol -debug index qobol   -tag exposure
+OBOL_MRE= $(OBO) -r exposure -idspace MRE
+
+obol-chebi-%-exact.obo: 
+	$(OBOL_MRE) -i chebihack.obo -tag $*  -undefined_only true -export obo > $@ 
+.PRECIOUS: obol-chebi-%-exact.obo
+
+obol-chebi-%-all.obo: obol-chebi-%-exact.obo
+	$(OBOL_MRE) -i $< -i chebihack.obo -tag $*  -undefined_only true -export obo -scope all > $@
+.PRECIOUS: obol-chebi-%-all.obo
+
+obol.obo: $(OBOL_ALL)
+	obo-cat.pl $^ > $@
+
+cme.obo:
+	blip-findall -consult chebihack.pro -i chebihack.obo w > $@
+
+
+epa-trichem.obo: tri_chemical_list_for_ry15_11_5_2015_1.txt
+	./trichem2obo.pl $< > $@
+
+epa-trichem-obol.obo: epa-trichem.obo
+	$(OBOL) -i $< -idspace EPATRICHEM -i chebihack.obo -tag simple  -undefined_only true -export obo -scope all > $@
+
+epa-trichem-unparsed.txt: epa-trichem.obo epa-trichem-obol.obo
+	blip ontol-query -i epa-trichem.obo -i epa-trichem-obol.obo -query "class(X),id_idspace(X,'EPATRICHEM'),\+genus(X,_),ID=X" -showdefs > $@
+

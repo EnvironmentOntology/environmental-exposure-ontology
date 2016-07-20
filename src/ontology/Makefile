@@ -42,7 +42,7 @@ ecto.owl: ecto-core-inferred.owl
 #ecto.owl: ecto-core-inferred.owl $(ONTDIR)/vt.obo
 #	owltools $(USECAT) $^ --merge-support-ontologies -o $@
 ecto.obo: ecto.owl
-	owltools $(USECAT) $< -o -f obo --no-check $@.tmp && grep -v ^owl-axioms $@.tmp > $@
+	owltools $(USECAT)  $< --merge-imports-closure -o -f obo --no-check $@.tmp && grep -v ^owl-axioms $@.tmp > $@
 
 oort: ecto-core.owl
 	ontology-release-runner $(USECAT) --ignore-selected-equivalent-pairs 'CL:0000000'  --ignoreLock --skip-release-folder --skip-format owx --skip-format obo --no-subsets --outdir target --allow-overwrite --asserted --simple --reasoner elk $<
@@ -107,8 +107,18 @@ mirror/exo.obo:
 mirror/activity.obo:
 	blip ontol-query -r ncit -query "class(R,'Activity'),subclassRT(ID,R)" -to obo > $@.tmp && mv $@.tmp $@
 
-mirror/chebi.owl:
-	owltools $(OBO)/go/extensions/chebi_import.obo --set-ontology-id $(OBO)/chebi.owl -o $@
+mirror/chebi.obo:
+	wget $(OBO)/chebi.obo -O $@
+.PRECIOUS: mirror/chebi.obo
+
+mirror/chebi.owl: mirror/chebi.obo
+	owltools --use-catalog $<  --rename-entity $(OBO)/chebi#has_part $(OBO)/BFO_0000051 --rename-entity $(OBO)/chebi#has_role $(OBO)/RO_0000087  --remove-annotation-assertions -r -l  --set-ontology-id $(OBO)/chebi.owl -o $@
+
+#mirror/chebi.owl:
+#	wget $(OBO)/chebi.obo -O $@.tmp && owltools $@.tmp --make-subset-by-properties -f --extract-mingraph --set-ontology-id $(OBO)/chebi.owl -o $@
+
+#mirror/chebi.owl:
+#	owltools $(OBO)/go/extensions/chebi_import.obo --set-ontology-id $(OBO)/chebi.owl -o $@
 .PRECIOUS: mirror/chebi.owl
 
 mirror/uberon.owl:
@@ -144,8 +154,11 @@ $(MODDIR)/%.omn: $(MODDIR)/%.csv ../patterns/%.yaml
 
 #$(MODDIR)/%-gci.owl: $(MODDIR)/%.omn
 
-$(MODDIR)/%.owl: $(MODDIR)/%.omn 
-	owltools $^ --merge-support-ontologies --set-ontology-id $(OBO)/ecto/$@ -o -f ofn $@
+$(MODDIR)/%.rdf: $(MODDIR)/%.omn 
+	owltools $^ --merge-support-ontologies --set-ontology-id $(OBO)/ecto/$@ -o  $@
+
+$(MODDIR)/%.owl: $(MODDIR)/%.rdf
+	owltools $< -o -f ofn $@
 
 $(MODDIR)/%.obo: $(MODDIR)/%.owl
 	owltools $< -o -f obo $@.tmp && grep -v ^owl-axioms $@.tmp > $@
@@ -161,13 +174,15 @@ $(MODDIR)/existential-graph.owl: ecto-core.owl
 ## HACKS
 
 # for reporting
-ecto-edit.tsv: ecto-edit.obo
-	owltools $(USECAT) $< --merge-support-ontologies --export-table $@.tmp && cut -f1 $@.tmp > $@
+ecto-edit.csv: ecto-edit.obo
+	owltools $(USECAT) $< --merge-support-ontologies --export-table $@.tmp && cut -f1 $@.tmp  > $@
 
 fill: ecto-edit.csv
-	fill-col1-ids.pl $(MODS_CSV) $<
+	fill-col1-ids.pl $(MODS_CSV)
+#	fill-col1-ids.pl $(MODS_CSV) $<
 testfill: ecto-edit.csv
-	fill-col1-ids.pl -n $(MODS_CSV) $<
+	fill-col1-ids.pl -n $(MODS_CSV)
+#	fill-col1-ids.pl -n $(MODS_CSV) $<
 
 radiation-npo.tsv:
 	blip-findall  -i mirror/npo.obo "subclassRT(X,'NPO:1731')"  -label -select "x('',X)" -no_pred -use_tabs > $@
@@ -176,8 +191,22 @@ material-envo.tsv:
 material-envop.tsv:
 	blip-findall  -r envo "subclassRT(X,'ENVO:02500000')"  -label -select "x('',X)" -no_pred -use_tabs > $@
 
-candidates-roles.csv: modules/exposure_to_chemical_with_role.pro
-	blip-findall -i $<  -r chebi "class(R,'pesticide'),subclassRT(X,R),\+ct(_,_,X,_)"  -label -select "x('',X)" -no_pred -use_tabs | sort -u > $@.tmp && tsv2csv.py $@.tmp > $@ && cat $@
+candidates-chemicals-obol.csv: ../mapping/obol.obo modules/exposure_to_chemical.pro
+	blip-findall -r chebi -i $< -i modules/exposure_to_chemical.pro "class_cdef(A,cdef('ExO:0000002',['RO:0002233'=X])),id_idspace(A,'MRE'),id_idspace(X,'CHEBI'),\+ct(_,_,X,_)" -select "x('',X)" -no_pred -label -use_tabs > $@.tmp && tsv2csv.py $@.tmp > $@
+candidates-route-obol.csv: ../mapping/obol.obo modules/exposure_via_route.pro
+	blip-findall -r chebi -r exo -i $< -i modules/exposure_via_route.pro "class_cdef(A,cdef('ExO:0000002',['BFO:0000050'=Route,'RO:0002233'=Chemical])),id_idspace(A,'MRE'),id_idspace(Chemical,'CHEBI'),\+ct(_,_,Chemical,_,Route,_)" -select "x('',Chemical,Route)" -no_pred -label -use_tabs > $@.tmp && tsv2csv.py $@.tmp > $@
+
+#candidates-chemicals0.csv: ../mapping/mre-xp-chebi.obo modules/exposure_to_chemical.pro
+#	blip-findall -r chebi -i $< -i modules/exposure_to_chemical.pro "differentium(A,_,X),id_idspace(A,'MRE'),id_idspace(X,'CHEBI'),\+ct(_,_,X,_)" -select "x('',X)" -no_pred -label -use_tabs > $@.tmp && tsv2csv.py $@.tmp > $@
+
+candidates-chemicals1.csv: modules/exposure_to_chemical.pro
+	blip-findall -i $<  -r chebi "class(R,'environmental contaminant'),parentT(X,R),\+ct(_,_,X,_)"  -label -select "x('',X)" -no_pred -use_tabs | sort -u > $@.tmp && tsv2csv.py $@.tmp > $@ && cat $@
+
+candidates-chemicals2.csv: modules/exposure_to_chemical.pro
+	blip-findall -i $<  -r chebi "class(R,'biological role'),subclassT(Z,R),parent(X,has_role,Z),\+ct(_,_,X,_)"  -label -select "x('',X)" -no_pred -use_tabs | sort -u > $@.tmp && tsv2csv.py $@.tmp > $@ && cat $@
+
+#candidates-roles.csv: modules/exposure_to_chemical_with_role.pro
+#	blip-findall -i $<  -r chebi "class(R,'pesticide'),subclassRT(X,R),\+ct(_,_,X,_)"  -label -select "x('',X)" -no_pred -use_tabs | sort -u > $@.tmp && tsv2csv.py $@.tmp > $@ && cat $@
 
 candidates-roles.csv: modules/exposure_to_chemical_with_role.pro
 	blip-findall -i $<  -r chebi "class(R,'pesticide'),subclassRT(X,R),\+ct(_,_,X,_)"  -label -select "x('',X)" -no_pred -use_tabs | sort -u > $@.tmp && tsv2csv.py $@.tmp > $@ && cat $@

@@ -2,23 +2,24 @@ Prefix: : <http://purl.obolibrary.org/obo/>
 Prefix: IAO: <http://purl.obolibrary.org/obo/IAO_>
 Prefix: DOSDP: <http://geneontology.org/foo/>
 Prefix: oio: <http://www.geneontology.org/formats/oboInOwl#>
+Prefix: NCIT: <http://purl.obolibrary.org/obo/NCIT_>
 Prefix: ExO: <http://purl.obolibrary.org/obo/ExO_>
-Prefix: PATO: <http://purl.obolibrary.org/obo/PATO_>
-Prefix: UBERON: <http://purl.obolibrary.org/obo/UBERON_>
-Prefix: GO: <http://purl.obolibrary.org/obo/GO_>
-Prefix: GOCHE: <http://purl.obolibrary.org/obo/GOCHE_>
-Prefix: SO: <http://purl.obolibrary.org/obo/SO_>
-Prefix: ENVO: <http://purl.obolibrary.org/obo/ENVO_>
-Prefix: NPO: <http://purl.obolibrary.org/obo/NPO_>
-Prefix: ECTO: <http://purl.obolibrary.org/obo/ECTO_>
-Prefix: CHEBI: <http://purl.obolibrary.org/obo/CHEBI_>
-Prefix: BFO: <http://purl.obolibrary.org/obo/BFO_>
 Prefix: PO: <http://purl.obolibrary.org/obo/PO_>
-Prefix: OBA: <http://purl.obolibrary.org/obo/OBA_>
-Prefix: CL: <http://purl.obolibrary.org/obo/CL_>
-Prefix: NBO: <http://purl.obolibrary.org/obo/NBO_>
-Prefix: RO: <http://purl.obolibrary.org/obo/RO_>
 Prefix: PR: <http://purl.obolibrary.org/obo/PR_>
+Prefix: BFO: <http://purl.obolibrary.org/obo/BFO_>
+Prefix: GO: <http://purl.obolibrary.org/obo/GO_>
+Prefix: ENVO: <http://purl.obolibrary.org/obo/ENVO_>
+Prefix: UBERON: <http://purl.obolibrary.org/obo/UBERON_>
+Prefix: RO: <http://purl.obolibrary.org/obo/RO_>
+Prefix: SO: <http://purl.obolibrary.org/obo/SO_>
+Prefix: OBA: <http://purl.obolibrary.org/obo/OBA_>
+Prefix: CHEBI: <http://purl.obolibrary.org/obo/CHEBI_>
+Prefix: NBO: <http://purl.obolibrary.org/obo/NBO_>
+Prefix: ECTO: <http://purl.obolibrary.org/obo/ECTO_>
+Prefix: PATO: <http://purl.obolibrary.org/obo/PATO_>
+Prefix: CL: <http://purl.obolibrary.org/obo/CL_>
+Prefix: NPO: <http://purl.obolibrary.org/obo/NPO_>
+Prefix: GOCHE: <http://purl.obolibrary.org/obo/GOCHE_>
 
  ## Auto-generated
 
@@ -29,11 +30,11 @@ AnnotationProperty: exo/patterns/exposure_to_chemical/route
 AnnotationProperty: DOSDP:applies-pattern
 AnnotationProperty: oio:hasExactSynonym
 Class: ExO:0000002 ## exposure event
-Class: CHEBI:24431 ## chemical entity
 Class: ExO:0000055 ## route
-ObjectProperty: BFO_0000050 ## part of
+Class: CHEBI:24431 ## chemical entity
 ObjectProperty: BFO_0000050 ## stressor
 ObjectProperty: RO:0002233 ## has input
+ObjectProperty: BFO_0000050 ## part of
 ## Auto-generated classes
 
 Class: CHEBI:24431 ## chemical entity
@@ -125,3 +126,66 @@ Class: ECTO:0001010
  Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to chemical entity via integument."
  Annotations: oio:hasExactSynonym "chemical entity exposure, via integument"
  EquivalentTo: ExO:0000002 and RO:0002233 some CHEBI:24431 and BFO_0000050 some UBERON:0002199 ## 'exposure event' and 'has input' some chemical entity and 'part of' some integument
+
+Class: CHEBI:36919 ## antimony
+Class: ExO:0000056 ## ingestion
+## {"stressor": "CHEBI:36919", "route": "ExO:0000056"}
+Class: ECTO:0001583
+ Annotations: rdfs:label "exposure to antimony via ingestion"
+ Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to antimony via ingestion."
+ Annotations: oio:hasExactSynonym "antimony exposure, via ingestion"
+ EquivalentTo: ExO:0000002 and RO:0002233 some CHEBI:36919 and BFO_0000050 some ExO:0000056 ## 'exposure event' and 'has input' some antimony and 'part of' some ingestion
+
+Class: CHEBI:22632 ## arsenic
+Class: ExO:0000056 ## ingestion
+## {"stressor": "CHEBI:22632", "route": "ExO:0000056"}
+Class: ECTO:0001584
+ Annotations: rdfs:label "exposure to arsenic via ingestion"
+ Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to arsenic via ingestion."
+ Annotations: oio:hasExactSynonym "arsenic exposure, via ingestion"
+ EquivalentTo: ExO:0000002 and RO:0002233 some CHEBI:22632 and BFO_0000050 some ExO:0000056 ## 'exposure event' and 'has input' some arsenic and 'part of' some ingestion
+
+Class: CHEBI:22978 ## cadmium
+Class: ExO:0000056 ## ingestion
+## {"stressor": "CHEBI:22978", "route": "ExO:0000056"}
+Class: ECTO:0001585
+ Annotations: rdfs:label "exposure to cadmium via ingestion"
+ Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to cadmium via ingestion."
+ Annotations: oio:hasExactSynonym "cadmium exposure, via ingestion"
+ EquivalentTo: ExO:0000002 and RO:0002233 some CHEBI:22978 and BFO_0000050 some ExO:0000056 ## 'exposure event' and 'has input' some cadmium and 'part of' some ingestion
+
+Class: CHEBI:25196 ## mercury
+Class: ExO:0000056 ## ingestion
+## {"stressor": "CHEBI:25196", "route": "ExO:0000056"}
+Class: ECTO:0001586
+ Annotations: rdfs:label "exposure to mercury via ingestion"
+ Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to mercury via ingestion."
+ Annotations: oio:hasExactSynonym "mercury exposure, via ingestion"
+ EquivalentTo: ExO:0000002 and RO:0002233 some CHEBI:25196 and BFO_0000050 some ExO:0000056 ## 'exposure event' and 'has input' some mercury and 'part of' some ingestion
+
+Class: CHEBI:64047 ## food additive
+Class: ExO:0000056 ## ingestion
+## {"stressor": "CHEBI:64047", "route": "ExO:0000056"}
+Class: ECTO:0001587
+ Annotations: rdfs:label "exposure to food additive via ingestion"
+ Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to food additive via ingestion."
+ Annotations: oio:hasExactSynonym "food additive exposure, via ingestion"
+ EquivalentTo: ExO:0000002 and RO:0002233 some CHEBI:64047 and BFO_0000050 some ExO:0000056 ## 'exposure event' and 'has input' some food additive and 'part of' some ingestion
+
+Class: CHEBI:33216 ## bisphenol A
+Class: ExO:0000056 ## ingestion
+## {"stressor": "CHEBI:33216", "route": "ExO:0000056"}
+Class: ECTO:0001588
+ Annotations: rdfs:label "exposure to bisphenol A via ingestion"
+ Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to bisphenol A via ingestion."
+ Annotations: oio:hasExactSynonym "bisphenol A exposure, via ingestion"
+ EquivalentTo: ExO:0000002 and RO:0002233 some CHEBI:33216 and BFO_0000050 some ExO:0000056 ## 'exposure event' and 'has input' some bisphenol A and 'part of' some ingestion
+
+Class: CHEBI:64220 ## monosodium glutamate
+Class: ExO:0000056 ## ingestion
+## {"stressor": "CHEBI:64220", "route": "ExO:0000056"}
+Class: ECTO:0001590
+ Annotations: rdfs:label "exposure to monosodium glutamate via ingestion"
+ Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to monosodium glutamate via ingestion."
+ Annotations: oio:hasExactSynonym "monosodium glutamate exposure, via ingestion"
+ EquivalentTo: ExO:0000002 and RO:0002233 some CHEBI:64220 and BFO_0000050 some ExO:0000056 ## 'exposure event' and 'has input' some monosodium glutamate and 'part of' some ingestion
