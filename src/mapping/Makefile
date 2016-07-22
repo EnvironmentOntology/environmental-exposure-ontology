@@ -124,8 +124,12 @@ obol-chebi-%-all.obo: obol-chebi-%-exact.obo
 	$(OBOL_MRE) -i $< -i chebihack.obo -tag $*  -undefined_only true -export obo -scope all > $@
 .PRECIOUS: obol-chebi-%-all.obo
 
+
 obol.obo: $(OBOL_ALL)
 	obo-cat.pl $^ > $@
+
+obol-unparsed.txt: obol.obo
+	blip ontol-query -i $< -r exposure -query "class(X),id_idspace(X,'MRE'),\+genus(X,_),ID=X" -showdefs -showrel subclass > $@
 
 cme.obo:
 	blip-findall -consult chebihack.pro -i chebihack.obo w > $@
