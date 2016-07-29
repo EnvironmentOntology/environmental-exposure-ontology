@@ -24,6 +24,16 @@ Class: ECTO:0000977
  EquivalentTo: ExO:0000002 and RO:0002233 some ENVO:01000416 and BFO_0000050 some ExO:0000057 ## 'exposure event' and 'has input' some ultrafine respirable suspended particulate matter and 'part of' some inhalation
 ```
 
+## Quick Start
+
+There is no public browser yet. Use one of the following files:
+
+ * [subsets/ecto-basic.obo](subsets/ecto-basic.obo) - for OBO-Edit users
+ * [ecto.owl](ecto.owl) - open in Protege5
+
+Note to open the OWL in Protege you will need to check out the repo so
+that the catalog can be used.
+
 ### Relationships to other ontologies
 
 Ontologies used in composition (largely orthogonal):

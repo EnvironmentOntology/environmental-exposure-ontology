@@ -18,7 +18,7 @@ TARGETS = $(ONTDIR)/ecto.obo $(ONTDIR)/ecto.owl imports subsets
 ALL_MODS_OWL = $(patsubst %, $(MODDIR)/%.owl, $(MODS))
 
 copy-release:
-	cp -pr $(TARGETS) ../.. && cd ../.. && git add imports/*
+	cp -pr $(TARGETS) catalog-v001.xml ../.. && cd ../.. && git add imports/*
 
 # CORE is the edited source plus compiled modules
 ecto-core.owl: ecto-edit.obo $(ALL_MODS_OWL)
