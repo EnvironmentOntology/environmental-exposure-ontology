@@ -1,0 +1,177 @@
+Prefix(:=<http://purl.obolibrary.org/obo/ecto/modules/surgical_procedure.rdf#>)
+Prefix(foo:=<http://geneontology.org/foo/>)
+Prefix(obo:=<http://purl.obolibrary.org/obo/>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+Prefix(oboInOwl:=<http://www.geneontology.org/formats/oboInOwl#>)
+Prefix(surgical_procedure:=<http://purl.obolibrary.org/obo/exo/patterns/surgical_procedure/>)
+
+
+Ontology(<http://purl.obolibrary.org/obo/ecto/modules/surgical_procedure.rdf>
+
+Declaration(Class(obo:ECTO_0002035))
+Declaration(Class(obo:ECTO_0002036))
+Declaration(Class(obo:ECTO_0002037))
+Declaration(Class(obo:ECTO_0002038))
+Declaration(Class(obo:ECTO_0002039))
+Declaration(Class(obo:ECTO_0002040))
+Declaration(Class(obo:ECTO_0002041))
+Declaration(Class(obo:ECTO_0002042))
+Declaration(Class(obo:ECTO_0002043))
+Declaration(Class(obo:ECTO_0002044))
+Declaration(Class(obo:ECTO_0002045))
+Declaration(Class(obo:ECTO_0002046))
+Declaration(Class(obo:ECTO_0002047))
+Declaration(Class(obo:ECTO_0002048))
+Declaration(Class(obo:ECTO_0002049))
+Declaration(Class(obo:ECTO_0002050))
+Declaration(Class(obo:ExO_0000002))
+Declaration(Class(obo:UBERON_0000026))
+Declaration(Class(obo:UBERON_0000062))
+Declaration(Class(obo:UBERON_0000992))
+Declaration(Class(obo:UBERON_0001021))
+Declaration(Class(obo:UBERON_0001264))
+Declaration(Class(obo:UBERON_0001322))
+Declaration(Class(obo:UBERON_0002107))
+Declaration(Class(obo:UBERON_0002113))
+Declaration(Class(obo:UBERON_0002475))
+Declaration(Class(obo:UBERON_0002530))
+Declaration(Class(obo:UBERON_0004538))
+Declaration(Class(obo:UBERON_0004539))
+Declaration(Class(obo:XCO_0000026))
+Declaration(Class(obo:XCO_0000027))
+Declaration(Class(obo:XCO_0000165))
+Declaration(Class(obo:XCO_0000374))
+Declaration(ObjectProperty(obo:BFO_0000050))
+Declaration(ObjectProperty(obo:RO_0000057))
+Declaration(ObjectProperty(obo:RO_0002233))
+Declaration(ObjectProperty(obo:RO_0002404))
+Declaration(AnnotationProperty(foo:applies-pattern))
+Declaration(AnnotationProperty(obo:IAO_0000115))
+Declaration(AnnotationProperty(surgical_procedure:manipulation))
+Declaration(AnnotationProperty(surgical_procedure:target))
+Declaration(AnnotationProperty(oboInOwl:hasExactSynonym))
+
+
+
+############################
+#   Classes
+############################
+
+# Class: obo:ECTO_0002035 (surgical manipulation of nerve)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ECTO_0002035 "An exposure event involving the surgical manipulation of a nerve, for either medical or experimental reasons")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:ECTO_0002035 "nerve surgical manipulation")
+AnnotationAssertion(rdfs:label obo:ECTO_0002035 "surgical manipulation of nerve")
+EquivalentClasses(obo:ECTO_0002035 ObjectIntersectionOf(obo:ExO_0000002 ObjectSomeValuesFrom(obo:RO_0002233 ObjectIntersectionOf(obo:XCO_0000165 ObjectSomeValuesFrom(obo:RO_0000057 obo:UBERON_0001021)))))
+
+# Class: obo:ECTO_0002036 (surgical manipulation of kidney)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ECTO_0002036 "An exposure event involving the surgical manipulation of a kidney, for either medical or experimental reasons")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:ECTO_0002036 "kidney surgical manipulation")
+AnnotationAssertion(rdfs:label obo:ECTO_0002036 "surgical manipulation of kidney")
+EquivalentClasses(obo:ECTO_0002036 ObjectIntersectionOf(obo:ExO_0000002 ObjectSomeValuesFrom(obo:RO_0002233 ObjectIntersectionOf(obo:XCO_0000165 ObjectSomeValuesFrom(obo:RO_0000057 obo:UBERON_0002113)))))
+
+# Class: obo:ECTO_0002037 (surgical manipulation of appendage)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ECTO_0002037 "An exposure event involving the surgical manipulation of a appendage, for either medical or experimental reasons")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:ECTO_0002037 "appendage surgical manipulation")
+AnnotationAssertion(rdfs:label obo:ECTO_0002037 "surgical manipulation of appendage")
+EquivalentClasses(obo:ECTO_0002037 ObjectIntersectionOf(obo:ExO_0000002 ObjectSomeValuesFrom(obo:RO_0002233 ObjectIntersectionOf(obo:XCO_0000165 ObjectSomeValuesFrom(obo:RO_0000057 obo:UBERON_0000026)))))
+
+# Class: obo:ECTO_0002038 (surgical manipulation of gland)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ECTO_0002038 "An exposure event involving the surgical manipulation of a gland, for either medical or experimental reasons")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:ECTO_0002038 "gland surgical manipulation")
+AnnotationAssertion(rdfs:label obo:ECTO_0002038 "surgical manipulation of gland")
+EquivalentClasses(obo:ECTO_0002038 ObjectIntersectionOf(obo:ExO_0000002 ObjectSomeValuesFrom(obo:RO_0002233 ObjectIntersectionOf(obo:XCO_0000165 ObjectSomeValuesFrom(obo:RO_0000057 obo:UBERON_0002530)))))
+
+# Class: obo:ECTO_0002039 (surgical manipulation of organ)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ECTO_0002039 "An exposure event involving the surgical manipulation of a organ, for either medical or experimental reasons")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:ECTO_0002039 "organ surgical manipulation")
+AnnotationAssertion(rdfs:label obo:ECTO_0002039 "surgical manipulation of organ")
+EquivalentClasses(obo:ECTO_0002039 ObjectIntersectionOf(obo:ExO_0000002 ObjectSomeValuesFrom(obo:RO_0002233 ObjectIntersectionOf(obo:XCO_0000165 ObjectSomeValuesFrom(obo:RO_0000057 obo:UBERON_0000062)))))
+
+# Class: obo:ECTO_0002040 (surgical implantation of organ)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ECTO_0002040 "An exposure event involving the surgical implantation of a organ, for either medical or experimental reasons")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:ECTO_0002040 "organ surgical implantation")
+AnnotationAssertion(rdfs:label obo:ECTO_0002040 "surgical implantation of organ")
+EquivalentClasses(obo:ECTO_0002040 ObjectIntersectionOf(obo:ExO_0000002 ObjectSomeValuesFrom(obo:RO_0002233 ObjectIntersectionOf(obo:XCO_0000027 ObjectSomeValuesFrom(obo:RO_0000057 obo:UBERON_0000062)))))
+
+# Class: obo:ECTO_0002041 (kidney transplant)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ECTO_0002041 "An exposure event involving the surgical implantation of a kidney, for either medical or experimental reasons")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:ECTO_0002041 "kidney surgical implantation")
+AnnotationAssertion(rdfs:label obo:ECTO_0002041 "kidney transplant")
+EquivalentClasses(obo:ECTO_0002041 ObjectIntersectionOf(obo:ExO_0000002 ObjectSomeValuesFrom(obo:RO_0002233 ObjectIntersectionOf(obo:XCO_0000027 ObjectSomeValuesFrom(obo:RO_0000057 obo:UBERON_0002113)))))
+
+# Class: obo:ECTO_0002042 (left kidney transplant)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ECTO_0002042 "An exposure event involving the surgical implantation of a left kidney, for either medical or experimental reasons")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:ECTO_0002042 "left kidney surgical implantation")
+AnnotationAssertion(rdfs:label obo:ECTO_0002042 "left kidney transplant")
+EquivalentClasses(obo:ECTO_0002042 ObjectIntersectionOf(obo:ExO_0000002 ObjectSomeValuesFrom(obo:RO_0002233 ObjectIntersectionOf(obo:XCO_0000027 ObjectSomeValuesFrom(obo:RO_0000057 obo:UBERON_0004538)))))
+
+# Class: obo:ECTO_0002043 (right kidney transplant)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ECTO_0002043 "An exposure event involving the surgical implantation of a right kidney, for either medical or experimental reasons")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:ECTO_0002043 "right kidney surgical implantation")
+AnnotationAssertion(rdfs:label obo:ECTO_0002043 "right kidney transplant")
+EquivalentClasses(obo:ECTO_0002043 ObjectIntersectionOf(obo:ExO_0000002 ObjectSomeValuesFrom(obo:RO_0002233 ObjectIntersectionOf(obo:XCO_0000027 ObjectSomeValuesFrom(obo:RO_0000057 obo:UBERON_0004539)))))
+
+# Class: obo:ECTO_0002044 (axotomy of saphenous nerve)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ECTO_0002044 "An exposure event involving the axotomy of a saphenous nerve, for either medical or experimental reasons")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:ECTO_0002044 "saphenous nerve axotomy")
+AnnotationAssertion(rdfs:label obo:ECTO_0002044 "axotomy of saphenous nerve")
+EquivalentClasses(obo:ECTO_0002044 ObjectIntersectionOf(obo:ExO_0000002 ObjectSomeValuesFrom(obo:RO_0002233 ObjectIntersectionOf(obo:XCO_0000374 ObjectSomeValuesFrom(obo:RO_0000057 obo:UBERON_0002475)))))
+
+# Class: obo:ECTO_0002045 (axotomy of sciatic nerve)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ECTO_0002045 "An exposure event involving the axotomy of a sciatic nerve, for either medical or experimental reasons")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:ECTO_0002045 "sciatic nerve axotomy")
+AnnotationAssertion(rdfs:label obo:ECTO_0002045 "axotomy of sciatic nerve")
+EquivalentClasses(obo:ECTO_0002045 ObjectIntersectionOf(obo:ExO_0000002 ObjectSomeValuesFrom(obo:RO_0002233 ObjectIntersectionOf(obo:XCO_0000374 ObjectSomeValuesFrom(obo:RO_0000057 obo:UBERON_0001322)))))
+
+# Class: obo:ECTO_0002046 (surgical removal of organ)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ECTO_0002046 "An exposure event involving the surgical removal of a organ, for either medical or experimental reasons")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:ECTO_0002046 "organ surgical removal")
+AnnotationAssertion(rdfs:label obo:ECTO_0002046 "surgical removal of organ")
+EquivalentClasses(obo:ECTO_0002046 ObjectIntersectionOf(obo:ExO_0000002 ObjectSomeValuesFrom(obo:RO_0002233 ObjectIntersectionOf(obo:XCO_0000026 ObjectSomeValuesFrom(obo:RO_0000057 obo:UBERON_0000062)))))
+
+# Class: obo:ECTO_0002047 (surgical removal of kidney)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ECTO_0002047 "An exposure event involving the surgical removal of a kidney, for either medical or experimental reasons")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:ECTO_0002047 "kidney surgical removal")
+AnnotationAssertion(rdfs:label obo:ECTO_0002047 "surgical removal of kidney")
+EquivalentClasses(obo:ECTO_0002047 ObjectIntersectionOf(obo:ExO_0000002 ObjectSomeValuesFrom(obo:RO_0002233 ObjectIntersectionOf(obo:XCO_0000026 ObjectSomeValuesFrom(obo:RO_0000057 obo:UBERON_0002113)))))
+
+# Class: obo:ECTO_0002048 (ovariectomy)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ECTO_0002048 "An exposure event involving the surgical removal of a female gonad, for either medical or experimental reasons")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:ECTO_0002048 "female gonad surgical removal")
+AnnotationAssertion(rdfs:label obo:ECTO_0002048 "ovariectomy")
+EquivalentClasses(obo:ECTO_0002048 ObjectIntersectionOf(obo:ExO_0000002 ObjectSomeValuesFrom(obo:RO_0002233 ObjectIntersectionOf(obo:XCO_0000026 ObjectSomeValuesFrom(obo:RO_0000057 obo:UBERON_0000992)))))
+
+# Class: obo:ECTO_0002049 (pancreatectomy)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ECTO_0002049 "An exposure event involving the surgical removal of a pancreas, for either medical or experimental reasons")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:ECTO_0002049 "pancreas surgical removal")
+AnnotationAssertion(rdfs:label obo:ECTO_0002049 "pancreatectomy")
+EquivalentClasses(obo:ECTO_0002049 ObjectIntersectionOf(obo:ExO_0000002 ObjectSomeValuesFrom(obo:RO_0002233 ObjectIntersectionOf(obo:XCO_0000026 ObjectSomeValuesFrom(obo:RO_0000057 obo:UBERON_0001264)))))
+
+# Class: obo:ECTO_0002050 (hepatectomy)
+
+AnnotationAssertion(obo:IAO_0000115 obo:ECTO_0002050 "An exposure event involving the surgical removal of a liver, for either medical or experimental reasons")
+AnnotationAssertion(oboInOwl:hasExactSynonym obo:ECTO_0002050 "liver surgical removal")
+AnnotationAssertion(rdfs:label obo:ECTO_0002050 "hepatectomy")
+EquivalentClasses(obo:ECTO_0002050 ObjectIntersectionOf(obo:ExO_0000002 ObjectSomeValuesFrom(obo:RO_0002233 ObjectIntersectionOf(obo:XCO_0000026 ObjectSomeValuesFrom(obo:RO_0000057 obo:UBERON_0002107)))))
+
+
+)

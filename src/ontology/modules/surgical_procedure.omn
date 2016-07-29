@@ -1,0 +1,184 @@
+Prefix: : <http://purl.obolibrary.org/obo/>
+Prefix: IAO: <http://purl.obolibrary.org/obo/IAO_>
+Prefix: DOSDP: <http://geneontology.org/foo/>
+Prefix: oio: <http://www.geneontology.org/formats/oboInOwl#>
+Prefix: XCO: <http://purl.obolibrary.org/obo/XCO_>
+Prefix: NBO: <http://purl.obolibrary.org/obo/NBO_>
+Prefix: RO: <http://purl.obolibrary.org/obo/RO_>
+Prefix: SO: <http://purl.obolibrary.org/obo/SO_>
+Prefix: NPO: <http://purl.obolibrary.org/obo/NPO_>
+Prefix: ECTO: <http://purl.obolibrary.org/obo/ECTO_>
+Prefix: OBA: <http://purl.obolibrary.org/obo/OBA_>
+Prefix: PR: <http://purl.obolibrary.org/obo/PR_>
+Prefix: ENVO: <http://purl.obolibrary.org/obo/ENVO_>
+Prefix: ExO: <http://purl.obolibrary.org/obo/ExO_>
+Prefix: PATO: <http://purl.obolibrary.org/obo/PATO_>
+Prefix: NCIT: <http://purl.obolibrary.org/obo/NCIT_>
+Prefix: GOCHE: <http://purl.obolibrary.org/obo/GOCHE_>
+Prefix: PO: <http://purl.obolibrary.org/obo/PO_>
+Prefix: CHEBI: <http://purl.obolibrary.org/obo/CHEBI_>
+Prefix: CL: <http://purl.obolibrary.org/obo/CL_>
+Prefix: BFO: <http://purl.obolibrary.org/obo/BFO_>
+Prefix: UBERON: <http://purl.obolibrary.org/obo/UBERON_>
+Prefix: ZECO: <http://purl.obolibrary.org/obo/ZECO_>
+Prefix: GO: <http://purl.obolibrary.org/obo/GO_>
+
+ ## Auto-generated
+
+Ontology: <http://purl.obolibrary.org/obo/auto>
+AnnotationProperty: IAO:0000115
+AnnotationProperty: exo/patterns/surgical_procedure/target
+AnnotationProperty: exo/patterns/surgical_procedure/manipulation
+AnnotationProperty: DOSDP:applies-pattern
+AnnotationProperty: oio:hasExactSynonym
+Class: ExO:0000002 ## exposure event
+Class: XCO:0000165 ## surgical manipulation
+ObjectProperty: RO:0002404 ## causally downstream of
+ObjectProperty: RO:0000057 ## has participant
+ObjectProperty: BFO_0000050 ## part of
+ObjectProperty: RO:0002233 ## has input
+## Auto-generated classes
+
+Class: UBERON:0001021 ## nerve
+Class: XCO:0000165 ## surgical manipulation
+## {"target": "UBERON:0001021", "manipulation": "XCO:0000165"}
+Class: ECTO:0002035
+ Annotations: rdfs:label "surgical manipulation of nerve"
+ Annotations: IAO:0000115 "An exposure event involving the surgical manipulation of a nerve, for either medical or experimental reasons"
+ Annotations: oio:hasExactSynonym "nerve surgical manipulation"
+ EquivalentTo: ExO:0000002 and RO:0002233 some (XCO:0000165 and RO:0000057 some UBERON:0001021) ## 'exposure event' and 'has input' some (surgical manipulation and 'has participant' some nerve)
+
+Class: UBERON:0002113 ## kidney
+Class: XCO:0000165 ## surgical manipulation
+## {"target": "UBERON:0002113", "manipulation": "XCO:0000165"}
+Class: ECTO:0002036
+ Annotations: rdfs:label "surgical manipulation of kidney"
+ Annotations: IAO:0000115 "An exposure event involving the surgical manipulation of a kidney, for either medical or experimental reasons"
+ Annotations: oio:hasExactSynonym "kidney surgical manipulation"
+ EquivalentTo: ExO:0000002 and RO:0002233 some (XCO:0000165 and RO:0000057 some UBERON:0002113) ## 'exposure event' and 'has input' some (surgical manipulation and 'has participant' some kidney)
+
+Class: UBERON:0000026 ## appendage
+Class: XCO:0000165 ## surgical manipulation
+## {"target": "UBERON:0000026", "manipulation": "XCO:0000165"}
+Class: ECTO:0002037
+ Annotations: rdfs:label "surgical manipulation of appendage"
+ Annotations: IAO:0000115 "An exposure event involving the surgical manipulation of a appendage, for either medical or experimental reasons"
+ Annotations: oio:hasExactSynonym "appendage surgical manipulation"
+ EquivalentTo: ExO:0000002 and RO:0002233 some (XCO:0000165 and RO:0000057 some UBERON:0000026) ## 'exposure event' and 'has input' some (surgical manipulation and 'has participant' some appendage)
+
+Class: UBERON:0002530 ## gland
+Class: XCO:0000165 ## surgical manipulation
+## {"target": "UBERON:0002530", "manipulation": "XCO:0000165"}
+Class: ECTO:0002038
+ Annotations: rdfs:label "surgical manipulation of gland"
+ Annotations: IAO:0000115 "An exposure event involving the surgical manipulation of a gland, for either medical or experimental reasons"
+ Annotations: oio:hasExactSynonym "gland surgical manipulation"
+ EquivalentTo: ExO:0000002 and RO:0002233 some (XCO:0000165 and RO:0000057 some UBERON:0002530) ## 'exposure event' and 'has input' some (surgical manipulation and 'has participant' some gland)
+
+Class: UBERON:0000062 ## organ
+Class: XCO:0000165 ## surgical manipulation
+## {"target": "UBERON:0000062", "manipulation": "XCO:0000165"}
+Class: ECTO:0002039
+ Annotations: rdfs:label "surgical manipulation of organ"
+ Annotations: IAO:0000115 "An exposure event involving the surgical manipulation of a organ, for either medical or experimental reasons"
+ Annotations: oio:hasExactSynonym "organ surgical manipulation"
+ EquivalentTo: ExO:0000002 and RO:0002233 some (XCO:0000165 and RO:0000057 some UBERON:0000062) ## 'exposure event' and 'has input' some (surgical manipulation and 'has participant' some organ)
+
+Class: UBERON:0000062 ## organ
+Class: XCO:0000027 ## surgical implantation
+## {"target": "UBERON:0000062", "manipulation": "XCO:0000027"}
+Class: ECTO:0002040
+ Annotations: rdfs:label "surgical implantation of organ"
+ Annotations: IAO:0000115 "An exposure event involving the surgical implantation of a organ, for either medical or experimental reasons"
+ Annotations: oio:hasExactSynonym "organ surgical implantation"
+ EquivalentTo: ExO:0000002 and RO:0002233 some (XCO:0000027 and RO:0000057 some UBERON:0000062) ## 'exposure event' and 'has input' some (surgical implantation and 'has participant' some organ)
+
+Class: UBERON:0002113 ## kidney
+Class: XCO:0000027 ## surgical implantation
+## {"target": "UBERON:0002113", "manipulation": "XCO:0000027"}
+Class: ECTO:0002041
+ Annotations: rdfs:label "kidney transplant"
+ Annotations: IAO:0000115 "An exposure event involving the surgical implantation of a kidney, for either medical or experimental reasons"
+ Annotations: oio:hasExactSynonym "kidney surgical implantation"
+ EquivalentTo: ExO:0000002 and RO:0002233 some (XCO:0000027 and RO:0000057 some UBERON:0002113) ## 'exposure event' and 'has input' some (surgical implantation and 'has participant' some kidney)
+
+Class: UBERON:0004538 ## left kidney
+Class: XCO:0000027 ## surgical implantation
+## {"target": "UBERON:0004538", "manipulation": "XCO:0000027"}
+Class: ECTO:0002042
+ Annotations: rdfs:label "left kidney transplant"
+ Annotations: IAO:0000115 "An exposure event involving the surgical implantation of a left kidney, for either medical or experimental reasons"
+ Annotations: oio:hasExactSynonym "left kidney surgical implantation"
+ EquivalentTo: ExO:0000002 and RO:0002233 some (XCO:0000027 and RO:0000057 some UBERON:0004538) ## 'exposure event' and 'has input' some (surgical implantation and 'has participant' some left kidney)
+
+Class: UBERON:0004539 ## right kidney
+Class: XCO:0000027 ## surgical implantation
+## {"target": "UBERON:0004539", "manipulation": "XCO:0000027"}
+Class: ECTO:0002043
+ Annotations: rdfs:label "right kidney transplant"
+ Annotations: IAO:0000115 "An exposure event involving the surgical implantation of a right kidney, for either medical or experimental reasons"
+ Annotations: oio:hasExactSynonym "right kidney surgical implantation"
+ EquivalentTo: ExO:0000002 and RO:0002233 some (XCO:0000027 and RO:0000057 some UBERON:0004539) ## 'exposure event' and 'has input' some (surgical implantation and 'has participant' some right kidney)
+
+Class: UBERON:0002475 ## saphenous nerve
+Class: XCO:0000374 ## axotomy
+## {"target": "UBERON:0002475", "manipulation": "XCO:0000374"}
+Class: ECTO:0002044
+ Annotations: rdfs:label "axotomy of saphenous nerve"
+ Annotations: IAO:0000115 "An exposure event involving the axotomy of a saphenous nerve, for either medical or experimental reasons"
+ Annotations: oio:hasExactSynonym "saphenous nerve axotomy"
+ EquivalentTo: ExO:0000002 and RO:0002233 some (XCO:0000374 and RO:0000057 some UBERON:0002475) ## 'exposure event' and 'has input' some (axotomy and 'has participant' some saphenous nerve)
+
+Class: UBERON:0001322 ## sciatic nerve
+Class: XCO:0000374 ## axotomy
+## {"target": "UBERON:0001322", "manipulation": "XCO:0000374"}
+Class: ECTO:0002045
+ Annotations: rdfs:label "axotomy of sciatic nerve"
+ Annotations: IAO:0000115 "An exposure event involving the axotomy of a sciatic nerve, for either medical or experimental reasons"
+ Annotations: oio:hasExactSynonym "sciatic nerve axotomy"
+ EquivalentTo: ExO:0000002 and RO:0002233 some (XCO:0000374 and RO:0000057 some UBERON:0001322) ## 'exposure event' and 'has input' some (axotomy and 'has participant' some sciatic nerve)
+
+Class: UBERON:0000062 ## organ
+Class: XCO:0000026 ## surgical removal
+## {"target": "UBERON:0000062", "manipulation": "XCO:0000026"}
+Class: ECTO:0002046
+ Annotations: rdfs:label "surgical removal of organ"
+ Annotations: IAO:0000115 "An exposure event involving the surgical removal of a organ, for either medical or experimental reasons"
+ Annotations: oio:hasExactSynonym "organ surgical removal"
+ EquivalentTo: ExO:0000002 and RO:0002233 some (XCO:0000026 and RO:0000057 some UBERON:0000062) ## 'exposure event' and 'has input' some (surgical removal and 'has participant' some organ)
+
+Class: UBERON:0002113 ## kidney
+Class: XCO:0000026 ## surgical removal
+## {"target": "UBERON:0002113", "manipulation": "XCO:0000026"}
+Class: ECTO:0002047
+ Annotations: rdfs:label "surgical removal of kidney"
+ Annotations: IAO:0000115 "An exposure event involving the surgical removal of a kidney, for either medical or experimental reasons"
+ Annotations: oio:hasExactSynonym "kidney surgical removal"
+ EquivalentTo: ExO:0000002 and RO:0002233 some (XCO:0000026 and RO:0000057 some UBERON:0002113) ## 'exposure event' and 'has input' some (surgical removal and 'has participant' some kidney)
+
+Class: UBERON:0000992 ## female gonad
+Class: XCO:0000026 ## surgical removal
+## {"target": "UBERON:0000992", "manipulation": "XCO:0000026"}
+Class: ECTO:0002048
+ Annotations: rdfs:label "ovariectomy"
+ Annotations: IAO:0000115 "An exposure event involving the surgical removal of a female gonad, for either medical or experimental reasons"
+ Annotations: oio:hasExactSynonym "female gonad surgical removal"
+ EquivalentTo: ExO:0000002 and RO:0002233 some (XCO:0000026 and RO:0000057 some UBERON:0000992) ## 'exposure event' and 'has input' some (surgical removal and 'has participant' some female gonad)
+
+Class: UBERON:0001264 ## pancreas
+Class: XCO:0000026 ## surgical removal
+## {"target": "UBERON:0001264", "manipulation": "XCO:0000026"}
+Class: ECTO:0002049
+ Annotations: rdfs:label "pancreatectomy"
+ Annotations: IAO:0000115 "An exposure event involving the surgical removal of a pancreas, for either medical or experimental reasons"
+ Annotations: oio:hasExactSynonym "pancreas surgical removal"
+ EquivalentTo: ExO:0000002 and RO:0002233 some (XCO:0000026 and RO:0000057 some UBERON:0001264) ## 'exposure event' and 'has input' some (surgical removal and 'has participant' some pancreas)
+
+Class: UBERON:0002107 ## liver
+Class: XCO:0000026 ## surgical removal
+## {"target": "UBERON:0002107", "manipulation": "XCO:0000026"}
+Class: ECTO:0002050
+ Annotations: rdfs:label "hepatectomy"
+ Annotations: IAO:0000115 "An exposure event involving the surgical removal of a liver, for either medical or experimental reasons"
+ Annotations: oio:hasExactSynonym "liver surgical removal"
+ EquivalentTo: ExO:0000002 and RO:0002233 some (XCO:0000026 and RO:0000057 some UBERON:0002107) ## 'exposure event' and 'has input' some (surgical removal and 'has participant' some liver)
