@@ -1,7 +1,7 @@
 format-version: 1.2
-remark: Includes Ontology(OntologyID(OntologyIRI(<http://purl.obolibrary.org/obo/ecto/modules/activity.rdf>) VersionIRI(<null>))) [Axioms: 338 Logical Axioms: 47]
-remark: Includes Ontology(OntologyID(OntologyIRI(<http://purl.obolibrary.org/obo/ecto/modules/exposure_to_change_in_levels.rdf>) VersionIRI(<null>))) [Axioms: 232 Logical Axioms: 40]
-remark: Includes Ontology(OntologyID(OntologyIRI(<http://purl.obolibrary.org/obo/ecto/modules/exposure_to_chemical.rdf>) VersionIRI(<null>))) [Axioms: 8308 Logical Axioms: 1186]
+remark: Includes Ontology(OntologyID(OntologyIRI(<http://purl.obolibrary.org/obo/ecto/modules/activity.rdf>) VersionIRI(<null>))) [Axioms: 358 Logical Axioms: 50]
+remark: Includes Ontology(OntologyID(OntologyIRI(<http://purl.obolibrary.org/obo/ecto/modules/exposure_to_change_in_levels.rdf>) VersionIRI(<null>))) [Axioms: 231 Logical Axioms: 40]
+remark: Includes Ontology(OntologyID(OntologyIRI(<http://purl.obolibrary.org/obo/ecto/modules/exposure_to_chemical.rdf>) VersionIRI(<null>))) [Axioms: 8686 Logical Axioms: 1240]
 remark: Includes Ontology(OntologyID(OntologyIRI(<http://purl.obolibrary.org/obo/ecto/modules/exposure_to_chemical_with_role.rdf>) VersionIRI(<null>))) [Axioms: 3656 Logical Axioms: 521]
 remark: Includes Ontology(OntologyID(OntologyIRI(<http://purl.obolibrary.org/obo/ecto/modules/exposure_to_environmental_condition.rdf>) VersionIRI(<null>))) [Axioms: 95 Logical Axioms: 15]
 remark: Includes Ontology(OntologyID(OntologyIRI(<http://purl.obolibrary.org/obo/ecto/modules/exposure_to_environmental_process.rdf>) VersionIRI(<null>))) [Axioms: 252 Logical Axioms: 35]
@@ -1007,9 +1007,8 @@ name: exposure to brassinosteroid
 def: "A exposure event involving the interaction of an exposure receptor to brassinosteroid. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "brassinosteroid exposure" EXACT []
 synonym: "brassinosteroid exposure event" EXACT []
-is_a: ECTO:0000163 ! exposure to organic cyclic compound
-is_a: ECTO:0000200 ! exposure to lipid
 is_a: ECTO:0000371 ! exposure to oxygen molecular entity
+is_a: ECTO:0002002 ! exposure to steroid
 
 [Term]
 id: ECTO:0000127
@@ -1067,8 +1066,6 @@ name: exposure to salicylic acid
 def: "A exposure event involving the interaction of an exposure receptor to salicylic acid. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "salicylic acid exposure" EXACT []
 synonym: "salicylic acid exposure event" EXACT []
-is_a: ECTO:0000163 ! exposure to organic cyclic compound
-is_a: ECTO:0000371 ! exposure to oxygen molecular entity
 is_a: ECTO:0000562 ! exposure to antiinfective agent
 is_a: ECTO:0000600 ! exposure to antifungal agent
 is_a: ECTO:0000617 ! exposure to plant hormone
@@ -1077,6 +1074,7 @@ is_a: ECTO:0000687 ! exposure to keratolytic drug
 is_a: ECTO:0000861 ! exposure to EC 1.11.1.11 (L-ascorbate peroxidase) inhibitors
 is_a: ECTO:0000893 ! exposure to plant metabolite
 is_a: ECTO:0000950 ! exposure to algal metabolite
+is_a: ECTO:0001997 ! exposure to phenols
 
 [Term]
 id: ECTO:0000133
@@ -1509,8 +1507,7 @@ name: exposure to corticosteroid
 def: "A exposure event involving the interaction of an exposure receptor to corticosteroid. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "corticosteroid exposure" EXACT []
 synonym: "corticosteroid exposure event" EXACT []
-is_a: ECTO:0000163 ! exposure to organic cyclic compound
-is_a: ECTO:0000200 ! exposure to lipid
+is_a: ECTO:0002002 ! exposure to steroid
 
 [Term]
 id: ECTO:0000174
@@ -1544,11 +1541,10 @@ name: exposure to estradiol
 def: "A exposure event involving the interaction of an exposure receptor to estradiol. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "estradiol exposure" EXACT []
 synonym: "estradiol exposure event" EXACT []
-is_a: ECTO:0000163 ! exposure to organic cyclic compound
-is_a: ECTO:0000200 ! exposure to lipid
 is_a: ECTO:0000371 ! exposure to oxygen molecular entity
 is_a: ECTO:0000685 ! exposure to estrogen
 is_a: ECTO:0000919 ! exposure to human metabolite
+is_a: ECTO:0002002 ! exposure to steroid
 
 [Term]
 id: ECTO:0000178
@@ -1583,10 +1579,10 @@ name: exposure to retinoic acid
 def: "A exposure event involving the interaction of an exposure receptor to retinoic acid. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "retinoic acid exposure" EXACT []
 synonym: "retinoic acid exposure event" EXACT []
-is_a: ECTO:0000200 ! exposure to lipid
 is_a: ECTO:0000371 ! exposure to oxygen molecular entity
 is_a: ECTO:0000650 ! exposure to Bronsted acid
 is_a: ECTO:0000919 ! exposure to human metabolite
+is_a: ECTO:0001990 ! exposure to retinoid
 
 [Term]
 id: ECTO:0000182
@@ -1639,9 +1635,9 @@ name: exposure to vitamin A
 def: "A exposure event involving the interaction of an exposure receptor to vitamin A. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "vitamin A exposure" EXACT []
 synonym: "vitamin A exposure event" EXACT []
-is_a: ECTO:0000200 ! exposure to lipid
 is_a: ECTO:0000511 ! exposure to fat-soluble vitamin
 is_a: ECTO:0000521 ! exposure to metabolite
+is_a: ECTO:0001990 ! exposure to retinoid
 
 [Term]
 id: ECTO:0000187
@@ -1684,6 +1680,7 @@ is_a: ECTO:0000538 ! exposure to micronutrient
 is_a: ECTO:0000716 ! exposure to nutraceutical
 is_a: ECTO:0000881 ! exposure to mouse metabolite
 is_a: ECTO:0000938 ! exposure to fundamental metabolite
+is_a: ECTO:0001989 ! exposure to phosphate
 
 [Term]
 id: ECTO:0000191
@@ -1705,10 +1702,9 @@ name: exposure to vitamin D
 def: "A exposure event involving the interaction of an exposure receptor to vitamin D. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "vitamin D exposure" EXACT []
 synonym: "vitamin D exposure event" EXACT []
-is_a: ECTO:0000163 ! exposure to organic cyclic compound
-is_a: ECTO:0000200 ! exposure to lipid
 is_a: ECTO:0000371 ! exposure to oxygen molecular entity
 is_a: ECTO:0000511 ! exposure to fat-soluble vitamin
+is_a: ECTO:0002002 ! exposure to steroid
 
 [Term]
 id: ECTO:0000193
@@ -1716,13 +1712,12 @@ name: exposure to testosterone
 def: "A exposure event involving the interaction of an exposure receptor to testosterone. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "testosterone exposure" EXACT []
 synonym: "testosterone exposure event" EXACT []
-is_a: ECTO:0000163 ! exposure to organic cyclic compound
-is_a: ECTO:0000200 ! exposure to lipid
 is_a: ECTO:0000369 ! exposure to ketone
 is_a: ECTO:0000684 ! exposure to androgen
 is_a: ECTO:0000881 ! exposure to mouse metabolite
 is_a: ECTO:0000919 ! exposure to human metabolite
 is_a: ECTO:0000945 ! exposure to Daphnia magna metabolite
+is_a: ECTO:0002002 ! exposure to steroid
 
 [Term]
 id: ECTO:0000194
@@ -1786,13 +1781,13 @@ name: exposure to methanol
 def: "A exposure event involving the interaction of an exposure receptor to methanol. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "methanol exposure" EXACT []
 synonym: "methanol exposure event" EXACT []
-is_a: ECTO:0000314 ! exposure to alcohol
 is_a: ECTO:0000488 ! exposure to Mycoplasma genitalium metabolite
 is_a: ECTO:0000550 ! exposure to fuel
 is_a: ECTO:0000664 ! exposure to amphiprotic solvent
 is_a: ECTO:0000881 ! exposure to mouse metabolite
 is_a: ECTO:0000900 ! exposure to Escherichia coli metabolite
 is_a: ECTO:0000919 ! exposure to human metabolite
+is_a: ECTO:0001978 ! exposure to primary alcohol
 
 [Term]
 id: ECTO:0000200
@@ -2136,10 +2131,9 @@ name: exposure to sterol
 def: "A exposure event involving the interaction of an exposure receptor to sterol. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "sterol exposure" EXACT []
 synonym: "sterol exposure event" EXACT []
-is_a: ECTO:0000163 ! exposure to organic cyclic compound
-is_a: ECTO:0000200 ! exposure to lipid
 is_a: ECTO:0000371 ! exposure to oxygen molecular entity
 is_a: ECTO:0000881 ! exposure to mouse metabolite
+is_a: ECTO:0002002 ! exposure to steroid
 
 [Term]
 id: ECTO:0000230
@@ -2277,7 +2271,7 @@ name: exposure to pullulan
 def: "A exposure event involving the interaction of an exposure receptor to pullulan. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "pullulan exposure" EXACT []
 synonym: "pullulan exposure event" EXACT []
-is_a: ECTO:0000127 ! exposure to carbohydrate
+is_a: ECTO:0001983 ! exposure to polysaccharide
 
 [Term]
 id: ECTO:0000243
@@ -2285,7 +2279,6 @@ name: exposure to ethanol
 def: "A exposure event involving the interaction of an exposure receptor to ethanol. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "ethanol exposure" EXACT []
 synonym: "ethanol exposure event" EXACT []
-is_a: ECTO:0000314 ! exposure to alcohol
 is_a: ECTO:0000577 ! exposure to central nervous system depressant
 is_a: ECTO:0000656 ! exposure to antiseptic drug
 is_a: ECTO:0000657 ! exposure to disinfectant
@@ -2298,6 +2291,7 @@ is_a: ECTO:0000881 ! exposure to mouse metabolite
 is_a: ECTO:0000882 ! exposure to Saccharomyces cerevisiae metabolite
 is_a: ECTO:0000900 ! exposure to Escherichia coli metabolite
 is_a: ECTO:0000919 ! exposure to human metabolite
+is_a: ECTO:0001978 ! exposure to primary alcohol
 
 [Term]
 id: ECTO:0000244
@@ -2444,9 +2438,8 @@ name: exposure to steroid hormone
 def: "A exposure event involving the interaction of an exposure receptor to steroid hormone. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "steroid hormone exposure" EXACT []
 synonym: "steroid hormone exposure event" EXACT []
-is_a: ECTO:0000163 ! exposure to organic cyclic compound
-is_a: ECTO:0000200 ! exposure to lipid
 is_a: ECTO:0000516 ! exposure to hormone
+is_a: ECTO:0002002 ! exposure to steroid
 
 [Term]
 id: ECTO:0000259
@@ -2514,6 +2507,7 @@ is_a: ECTO:0000371 ! exposure to oxygen molecular entity
 is_a: ECTO:0000881 ! exposure to mouse metabolite
 is_a: ECTO:0000900 ! exposure to Escherichia coli metabolite
 is_a: ECTO:0000919 ! exposure to human metabolite
+is_a: ECTO:0001989 ! exposure to phosphate
 
 [Term]
 id: ECTO:0000265
@@ -2590,6 +2584,7 @@ is_a: ECTO:0000882 ! exposure to Saccharomyces cerevisiae metabolite
 is_a: ECTO:0000893 ! exposure to plant metabolite
 is_a: ECTO:0000900 ! exposure to Escherichia coli metabolite
 is_a: ECTO:0000919 ! exposure to human metabolite
+is_a: ECTO:0001989 ! exposure to phosphate
 
 [Term]
 id: ECTO:0000272
@@ -2705,9 +2700,9 @@ synonym: "indole-3-methanol exposure" EXACT []
 synonym: "indole-3-methanol exposure event" EXACT []
 is_a: ECTO:0000155 ! exposure to organonitrogen compound
 is_a: ECTO:0000163 ! exposure to organic cyclic compound
-is_a: ECTO:0000314 ! exposure to alcohol
 is_a: ECTO:0000588 ! exposure to antineoplastic agent
 is_a: ECTO:0000893 ! exposure to plant metabolite
+is_a: ECTO:0001978 ! exposure to primary alcohol
 
 [Term]
 id: ECTO:0000282
@@ -2749,10 +2744,9 @@ name: exposure to catecholamine
 def: "A exposure event involving the interaction of an exposure receptor to catecholamine. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "catecholamine exposure" EXACT []
 synonym: "catecholamine exposure event" EXACT []
-is_a: ECTO:0000163 ! exposure to organic cyclic compound
 is_a: ECTO:0000284 ! exposure to monoamine
-is_a: ECTO:0000371 ! exposure to oxygen molecular entity
 is_a: ECTO:0000543 ! exposure to molecular messenger
+is_a: ECTO:0001997 ! exposure to phenols
 
 [Term]
 id: ECTO:0000286
@@ -2798,7 +2792,7 @@ name: exposure to mercaptoethanol
 def: "A exposure event involving the interaction of an exposure receptor to mercaptoethanol. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "mercaptoethanol exposure" EXACT []
 synonym: "mercaptoethanol exposure event" EXACT []
-is_a: ECTO:0000314 ! exposure to alcohol
+is_a: ECTO:0001978 ! exposure to primary alcohol
 
 [Term]
 id: ECTO:0000291
@@ -3042,7 +3036,6 @@ name: exposure to L-thyroxine
 def: "A exposure event involving the interaction of an exposure receptor to L-thyroxine. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "L-thyroxine exposure" EXACT []
 synonym: "L-thyroxine exposure event" EXACT []
-is_a: ECTO:0000163 ! exposure to organic cyclic compound
 is_a: ECTO:0000233 ! exposure to amino acid
 is_a: ECTO:0000436 ! exposure to L-phenylalanine derivative
 is_a: ECTO:0000712 ! exposure to antithyroid drug
@@ -3050,6 +3043,7 @@ is_a: ECTO:0000739 ! exposure to mitogen
 is_a: ECTO:0000761 ! exposure to thyroid hormone
 is_a: ECTO:0000881 ! exposure to mouse metabolite
 is_a: ECTO:0000919 ! exposure to human metabolite
+is_a: ECTO:0001997 ! exposure to phenols
 
 [Term]
 id: ECTO:0000313
@@ -3075,10 +3069,10 @@ def: "A exposure event involving the interaction of an exposure receptor to farn
 synonym: "farnesol exposure" EXACT []
 synonym: "farnesol exposure event" EXACT []
 is_a: ECTO:0000200 ! exposure to lipid
-is_a: ECTO:0000314 ! exposure to alcohol
 is_a: ECTO:0000544 ! exposure to antimicrobial agent
 is_a: ECTO:0000893 ! exposure to plant metabolite
 is_a: ECTO:0000894 ! exposure to fungal metabolite
+is_a: ECTO:0001978 ! exposure to primary alcohol
 
 [Term]
 id: ECTO:0000316
@@ -3273,10 +3267,9 @@ def: "A exposure event involving the interaction of an exposure receptor to anti
 synonym: "antimycin A exposure" EXACT []
 synonym: "antimycin A exposure event" EXACT []
 is_a: ECTO:0000155 ! exposure to organonitrogen compound
-is_a: ECTO:0000163 ! exposure to organic cyclic compound
-is_a: ECTO:0000371 ! exposure to oxygen molecular entity
 is_a: ECTO:0000522 ! exposure to mitochondrial respiratory-chain inhibitor
 is_a: ECTO:0000600 ! exposure to antifungal agent
+is_a: ECTO:0001997 ! exposure to phenols
 
 [Term]
 id: ECTO:0000330
@@ -3284,12 +3277,11 @@ name: exposure to tetracycline
 def: "A exposure event involving the interaction of an exposure receptor to tetracycline. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "tetracycline exposure" EXACT []
 synonym: "tetracycline exposure event" EXACT []
-is_a: ECTO:0000163 ! exposure to organic cyclic compound
-is_a: ECTO:0000371 ! exposure to oxygen molecular entity
 is_a: ECTO:0000602 ! exposure to antiprotozoal drug
 is_a: ECTO:0000608 ! exposure to antibacterial drug
 is_a: ECTO:0000655 ! exposure to protein synthesis inhibitor
 is_a: ECTO:0000900 ! exposure to Escherichia coli metabolite
+is_a: ECTO:0001997 ! exposure to phenols
 
 [Term]
 id: ECTO:0000331
@@ -3395,10 +3387,10 @@ name: exposure to butan-1-ol
 def: "A exposure event involving the interaction of an exposure receptor to butan-1-ol. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "butan-1-ol exposure" EXACT []
 synonym: "butan-1-ol exposure event" EXACT []
-is_a: ECTO:0000314 ! exposure to alcohol
 is_a: ECTO:0000662 ! exposure to protic solvent
 is_a: ECTO:0000881 ! exposure to mouse metabolite
 is_a: ECTO:0000919 ! exposure to human metabolite
+is_a: ECTO:0001978 ! exposure to primary alcohol
 
 [Term]
 id: ECTO:0000340
@@ -3453,9 +3445,9 @@ name: exposure to propan-1-ol
 def: "A exposure event involving the interaction of an exposure receptor to propan-1-ol. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "propan-1-ol exposure" EXACT []
 synonym: "propan-1-ol exposure event" EXACT []
-is_a: ECTO:0000314 ! exposure to alcohol
 is_a: ECTO:0000521 ! exposure to metabolite
 is_a: ECTO:0000662 ! exposure to protic solvent
+is_a: ECTO:0001978 ! exposure to primary alcohol
 
 [Term]
 id: ECTO:0000345
@@ -3537,8 +3529,6 @@ def: "A exposure event involving the interaction of an exposure receptor to para
 synonym: "paracetamol exposure" EXACT []
 synonym: "paracetamol exposure event" EXACT []
 is_a: ECTO:0000155 ! exposure to organonitrogen compound
-is_a: ECTO:0000163 ! exposure to organic cyclic compound
-is_a: ECTO:0000371 ! exposure to oxygen molecular entity
 is_a: ECTO:0000571 ! exposure to non-steroidal anti-inflammatory drug
 is_a: ECTO:0000574 ! exposure to non-narcotic analgesic
 is_a: ECTO:0000578 ! exposure to antipyretic
@@ -3548,6 +3538,7 @@ is_a: ECTO:0000710 ! exposure to cyclooxygenase 1 inhibitor
 is_a: ECTO:0000865 ! exposure to cyclooxygenase 3 inhibitor
 is_a: ECTO:0000931 ! exposure to environmental contaminant
 is_a: ECTO:0000956 ! exposure to human blood serum metabolite
+is_a: ECTO:0001997 ! exposure to phenols
 
 [Term]
 id: ECTO:0000354
@@ -3677,10 +3668,9 @@ def: "A exposure event involving the interaction of an exposure receptor to caps
 synonym: "capsazepine exposure" EXACT []
 synonym: "capsazepine exposure event" EXACT []
 is_a: ECTO:0000155 ! exposure to organonitrogen compound
-is_a: ECTO:0000163 ! exposure to organic cyclic compound
-is_a: ECTO:0000371 ! exposure to oxygen molecular entity
 is_a: ECTO:0000850 ! exposure to capsaicin receptor antagonist
 is_a: ECTO:0001152 ! exposure to organochlorine compound
+is_a: ECTO:0001997 ! exposure to phenols
 
 [Term]
 id: ECTO:0000365
@@ -3691,6 +3681,7 @@ synonym: "hesperadin exposure event" EXACT []
 is_a: ECTO:0000163 ! exposure to organic cyclic compound
 is_a: ECTO:0000168 ! exposure to amine
 is_a: ECTO:0000849 ! exposure to Aurora kinase inhibitor
+is_a: ECTO:0002003 ! exposure to sulfonamide
 
 [Term]
 id: ECTO:0000366
@@ -3759,9 +3750,9 @@ name: exposure to tamsulosin
 def: "A exposure event involving the interaction of an exposure receptor to tamsulosin. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "tamsulosin exposure" EXACT []
 synonym: "tamsulosin exposure event" EXACT []
-is_a: ECTO:0000370 ! exposure to nitrogen
 is_a: ECTO:0000588 ! exposure to antineoplastic agent
 is_a: ECTO:0000619 ! exposure to alpha-adrenergic antagonist
+is_a: ECTO:0002003 ! exposure to sulfonamide
 
 [Term]
 id: ECTO:0000373
@@ -3962,8 +3953,8 @@ name: exposure to isobutanol
 def: "A exposure event involving the interaction of an exposure receptor to isobutanol. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "isobutanol exposure" EXACT []
 synonym: "isobutanol exposure event" EXACT []
-is_a: ECTO:0000314 ! exposure to alcohol
 is_a: ECTO:0000882 ! exposure to Saccharomyces cerevisiae metabolite
+is_a: ECTO:0001978 ! exposure to primary alcohol
 
 [Term]
 id: ECTO:0000391
@@ -3971,12 +3962,12 @@ name: exposure to plumbagin
 def: "A exposure event involving the interaction of an exposure receptor to plumbagin. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "plumbagin exposure" EXACT []
 synonym: "plumbagin exposure event" EXACT []
-is_a: ECTO:0000163 ! exposure to organic cyclic compound
 is_a: ECTO:0000521 ! exposure to metabolite
 is_a: ECTO:0000588 ! exposure to antineoplastic agent
 is_a: ECTO:0000693 ! exposure to anticoagulant
 is_a: ECTO:0000721 ! exposure to immunological adjuvant
 is_a: ECTO:0001884 ! exposure to quinone
+is_a: ECTO:0001997 ! exposure to phenols
 
 [Term]
 id: ECTO:0000392
@@ -4043,6 +4034,7 @@ is_a: ECTO:0000369 ! exposure to ketone
 is_a: ECTO:0000559 ! exposure to effector
 is_a: ECTO:0000877 ! exposure to eukaryotic metabolite
 is_a: ECTO:0001703 ! exposure to dichlorobenzene
+is_a: ECTO:0001997 ! exposure to phenols
 
 [Term]
 id: ECTO:0000399
@@ -4074,10 +4066,9 @@ name: exposure to bile acid
 def: "A exposure event involving the interaction of an exposure receptor to bile acid. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "bile acid exposure" EXACT []
 synonym: "bile acid exposure event" EXACT []
-is_a: ECTO:0000163 ! exposure to organic cyclic compound
-is_a: ECTO:0000200 ! exposure to lipid
 is_a: ECTO:0000371 ! exposure to oxygen molecular entity
 is_a: ECTO:0000650 ! exposure to Bronsted acid
+is_a: ECTO:0002002 ! exposure to steroid
 
 [Term]
 id: ECTO:0000402
@@ -4139,13 +4130,12 @@ name: exposure to dehydroepiandrosterone
 def: "A exposure event involving the interaction of an exposure receptor to dehydroepiandrosterone. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "dehydroepiandrosterone exposure" EXACT []
 synonym: "dehydroepiandrosterone exposure event" EXACT []
-is_a: ECTO:0000163 ! exposure to organic cyclic compound
-is_a: ECTO:0000200 ! exposure to lipid
 is_a: ECTO:0000314 ! exposure to alcohol
 is_a: ECTO:0000369 ! exposure to ketone
 is_a: ECTO:0000684 ! exposure to androgen
 is_a: ECTO:0000881 ! exposure to mouse metabolite
 is_a: ECTO:0000919 ! exposure to human metabolite
+is_a: ECTO:0002002 ! exposure to steroid
 
 [Term]
 id: ECTO:0000408
@@ -4221,11 +4211,10 @@ name: exposure to bisphenol A
 def: "A exposure event involving the interaction of an exposure receptor to bisphenol A. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "bisphenol A exposure" EXACT []
 synonym: "bisphenol A exposure event" EXACT []
-is_a: ECTO:0000163 ! exposure to organic cyclic compound
-is_a: ECTO:0000371 ! exposure to oxygen molecular entity
 is_a: ECTO:0000597 ! exposure to xenobiotic
 is_a: ECTO:0000902 ! exposure to xenoestrogen
 is_a: ECTO:0000931 ! exposure to environmental contaminant
+is_a: ECTO:0001997 ! exposure to phenols
 
 [Term]
 id: ECTO:0000415
@@ -4310,12 +4299,11 @@ name: exposure to serotonin
 def: "A exposure event involving the interaction of an exposure receptor to serotonin. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "serotonin exposure" EXACT []
 synonym: "serotonin exposure event" EXACT []
-is_a: ECTO:0000163 ! exposure to organic cyclic compound
 is_a: ECTO:0000284 ! exposure to monoamine
-is_a: ECTO:0000371 ! exposure to oxygen molecular entity
 is_a: ECTO:0000526 ! exposure to neurotransmitter
 is_a: ECTO:0000881 ! exposure to mouse metabolite
 is_a: ECTO:0000919 ! exposure to human metabolite
+is_a: ECTO:0001997 ! exposure to phenols
 
 [Term]
 id: ECTO:0000423
@@ -4427,6 +4415,7 @@ is_a: ECTO:0000595 ! exposure to antihypertensive agent
 is_a: ECTO:0000686 ! exposure to bronchoconstrictor agent
 is_a: ECTO:0000692 ! exposure to hematologic agent
 is_a: ECTO:0000881 ! exposure to mouse metabolite
+is_a: ECTO:0001989 ! exposure to phosphate
 
 [Term]
 id: ECTO:0000433
@@ -4464,7 +4453,7 @@ synonym: "sodium phosphate exposure" EXACT []
 synonym: "sodium phosphate exposure event" EXACT []
 is_a: ECTO:0000137 ! exposure to inorganic
 is_a: ECTO:0000375 ! exposure to salt
-is_a: ECTO:0001864 ! exposure to phosphorus molecular entity
+is_a: ECTO:0001989 ! exposure to phosphate
 
 [Term]
 id: ECTO:0000436
@@ -4554,10 +4543,9 @@ name: exposure to 17alpha-ethynylestradiol
 def: "A exposure event involving the interaction of an exposure receptor to 17alpha-ethynylestradiol. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "17alpha-ethynylestradiol exposure" EXACT []
 synonym: "17alpha-ethynylestradiol exposure event" EXACT []
-is_a: ECTO:0000163 ! exposure to organic cyclic compound
-is_a: ECTO:0000200 ! exposure to lipid
 is_a: ECTO:0000371 ! exposure to oxygen molecular entity
 is_a: ECTO:0000902 ! exposure to xenoestrogen
+is_a: ECTO:0002002 ! exposure to steroid
 
 [Term]
 id: ECTO:0000444
@@ -4608,6 +4596,7 @@ is_a: ECTO:0000250 ! exposure to organophosphorus compound
 is_a: ECTO:0000371 ! exposure to oxygen molecular entity
 is_a: ECTO:0000881 ! exposure to mouse metabolite
 is_a: ECTO:0000900 ! exposure to Escherichia coli metabolite
+is_a: ECTO:0001989 ! exposure to phosphate
 
 [Term]
 id: ECTO:0000448
@@ -4763,9 +4752,9 @@ def: "A exposure event involving the interaction of an exposure receptor to resv
 synonym: "resveratrol exposure" EXACT []
 synonym: "resveratrol exposure event" EXACT []
 is_a: ECTO:0000216 ! exposure to stilbenoid
-is_a: ECTO:0000371 ! exposure to oxygen molecular entity
 is_a: ECTO:0000497 ! exposure to antioxidant
 is_a: ECTO:0000532 ! exposure to phytoalexin
+is_a: ECTO:0001997 ! exposure to phenols
 
 [Term]
 id: ECTO:0000464
@@ -4786,9 +4775,8 @@ name: exposure to dinitrophenol
 def: "A exposure event involving the interaction of an exposure receptor to dinitrophenol. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "dinitrophenol exposure" EXACT []
 synonym: "dinitrophenol exposure event" EXACT []
-is_a: ECTO:0000163 ! exposure to organic cyclic compound
 is_a: ECTO:0000370 ! exposure to nitrogen
-is_a: ECTO:0000371 ! exposure to oxygen molecular entity
+is_a: ECTO:0001997 ! exposure to phenols
 
 [Term]
 id: ECTO:0000466
@@ -4796,7 +4784,6 @@ name: exposure to curcumin
 def: "A exposure event involving the interaction of an exposure receptor to curcumin. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "curcumin exposure" EXACT []
 synonym: "curcumin exposure event" EXACT []
-is_a: ECTO:0000163 ! exposure to organic cyclic compound
 is_a: ECTO:0000244 ! exposure to ether
 is_a: ECTO:0000369 ! exposure to ketone
 is_a: ECTO:0000533 ! exposure to biological pigment
@@ -4822,6 +4809,7 @@ is_a: ECTO:0000887 ! exposure to EC 2.7.10.2 (non-specific protein-tyrosine kina
 is_a: ECTO:0000893 ! exposure to plant metabolite
 is_a: ECTO:0000910 ! exposure to food colouring
 is_a: ECTO:0000914 ! exposure to EC 1.1.1.25 (shikimate dehydrogenase) inhibitor
+is_a: ECTO:0001997 ! exposure to phenols
 
 [Term]
 id: ECTO:0000467
@@ -9733,14 +9721,14 @@ id: ECTO:0001065
 name: exposure to amount of cholesterol in food product
 def: "A exposure event involving the interaction of an exposure receptor to amount of cholesterol in food product." []
 synonym: "amount cholesterol exposure in food product" EXACT []
-is_a: ECTO:0000992 ! exposure to amount of chemical entity in food product
+is_a: ECTO:0001077 ! exposure to amount of lipid in food product
 
 [Term]
 id: ECTO:0001066
 name: exposure to amount of triglyceride in food product
 def: "A exposure event involving the interaction of an exposure receptor to amount of triglyceride in food product." []
 synonym: "amount triglyceride exposure in food product" EXACT []
-is_a: ECTO:0000992 ! exposure to amount of chemical entity in food product
+is_a: ECTO:0001077 ! exposure to amount of lipid in food product
 
 [Term]
 id: ECTO:0001067
@@ -9822,10 +9810,10 @@ is_a: ECTO:0001067 ! exposure to amount of low-density lipoprotein in food produ
 
 [Term]
 id: ECTO:0001077
-name: exposure to amount of lipid in ENVO:00002002
-def: "A exposure event involving the interaction of an exposure receptor to amount of lipid in ENVO:00002002." []
-synonym: "amount lipid exposure in ENVO:00002002" EXACT []
-is_a: ExO:0000002
+name: exposure to amount of lipid in food product
+def: "A exposure event involving the interaction of an exposure receptor to amount of lipid in food product." []
+synonym: "amount lipid exposure in food product" EXACT []
+is_a: ECTO:0000992 ! exposure to amount of chemical entity in food product
 
 [Term]
 id: ECTO:0001078
@@ -10044,7 +10032,7 @@ name: Clinical or Research Activity related exposure
 def: "A exposure event involving Clinical or Research Activity." []
 synonym: "Clinical or Research Activity" NARROW []
 synonym: "Clinical or Research Activity exposure" EXACT []
-is_a: ExO:0000002
+is_a: ECTO:0002032 ! Activity related exposure
 
 [Term]
 id: ECTO:0001110
@@ -10164,7 +10152,7 @@ name: Violence related exposure
 def: "A exposure event involving Violence." []
 synonym: "Violence" NARROW []
 synonym: "Violence exposure" EXACT []
-is_a: ExO:0000002
+is_a: ECTO:0002032 ! Activity related exposure
 
 [Term]
 id: ECTO:0001126
@@ -10180,7 +10168,7 @@ name: Poverty related exposure
 def: "A exposure event involving Poverty." []
 synonym: "Poverty" NARROW []
 synonym: "Poverty exposure" EXACT []
-is_a: ExO:0000002
+is_a: ECTO:0002034 ! Socioeconomic Factors related exposure
 
 [Term]
 id: ECTO:0001128
@@ -10483,6 +10471,7 @@ is_a: ECTO:0000701 ! exposure to EC 2.5.1.15 (dihydropteroate synthase) inhibito
 is_a: ECTO:0000725 ! exposure to carcinogenic agent
 is_a: ECTO:0000738 ! exposure to ligand
 is_a: ECTO:0000931 ! exposure to environmental contaminant
+is_a: ECTO:0002003 ! exposure to sulfonamide
 
 [Term]
 id: ECTO:0001159
@@ -10560,6 +10549,7 @@ is_a: ECTO:0000562 ! exposure to antiinfective agent
 is_a: ECTO:0000597 ! exposure to xenobiotic
 is_a: ECTO:0000688 ! exposure to dermatologic drug
 is_a: ECTO:0000931 ! exposure to environmental contaminant
+is_a: ECTO:0002003 ! exposure to sulfonamide
 
 [Term]
 id: ECTO:0001165
@@ -10686,8 +10676,6 @@ name: exposure to mycophenolic acid
 def: "A exposure event involving the interaction of an exposure receptor to mycophenolic acid. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "mycophenolic acid exposure" EXACT []
 synonym: "mycophenolic acid exposure event" EXACT []
-is_a: ECTO:0000163 ! exposure to organic cyclic compound
-is_a: ECTO:0000371 ! exposure to oxygen molecular entity
 is_a: ECTO:0000524 ! exposure to mycotoxin
 is_a: ECTO:0000544 ! exposure to antimicrobial agent
 is_a: ECTO:0000588 ! exposure to antineoplastic agent
@@ -10697,6 +10685,7 @@ is_a: ECTO:0000650 ! exposure to Bronsted acid
 is_a: ECTO:0000745 ! exposure to EC 1.1.1.205 (IMP dehydrogenase) inhibitor
 is_a: ECTO:0000896 ! exposure to Penicillium metabolite
 is_a: ECTO:0000931 ! exposure to environmental contaminant
+is_a: ECTO:0001997 ! exposure to phenols
 
 [Term]
 id: ECTO:0001176
@@ -10704,10 +10693,9 @@ name: exposure to biphenyl-2-ol
 def: "A exposure event involving the interaction of an exposure receptor to biphenyl-2-ol. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "biphenyl-2-ol exposure" EXACT []
 synonym: "biphenyl-2-ol exposure event" EXACT []
-is_a: ECTO:0000163 ! exposure to organic cyclic compound
-is_a: ECTO:0000371 ! exposure to oxygen molecular entity
 is_a: ECTO:0000959 ! exposure to antifungal agrochemical
 is_a: ECTO:0001562 ! exposure to environmental food contaminant
+is_a: ECTO:0001997 ! exposure to phenols
 
 [Term]
 id: ECTO:0001177
@@ -10716,11 +10704,10 @@ def: "A exposure event involving the interaction of an exposure receptor to 3,5-
 synonym: "3,5-dibromo-4-hydroxybenzonitrile exposure" EXACT []
 synonym: "3,5-dibromo-4-hydroxybenzonitrile exposure event" EXACT []
 is_a: ECTO:0000155 ! exposure to organonitrogen compound
-is_a: ECTO:0000163 ! exposure to organic cyclic compound
-is_a: ECTO:0000371 ! exposure to oxygen molecular entity
 is_a: ECTO:0000515 ! exposure to herbicide
 is_a: ECTO:0000597 ! exposure to xenobiotic
 is_a: ECTO:0000931 ! exposure to environmental contaminant
+is_a: ECTO:0001997 ! exposure to phenols
 
 [Term]
 id: ECTO:0001178
@@ -10796,12 +10783,12 @@ def: "A exposure event involving the interaction of an exposure receptor to albu
 synonym: "albuterol exposure" EXACT []
 synonym: "albuterol exposure event" EXACT []
 is_a: ECTO:0000155 ! exposure to organonitrogen compound
-is_a: ECTO:0000163 ! exposure to organic cyclic compound
 is_a: ECTO:0000314 ! exposure to alcohol
 is_a: ECTO:0000581 ! exposure to beta-adrenergic agonist
 is_a: ECTO:0000582 ! exposure to bronchodilator agent
 is_a: ECTO:0000597 ! exposure to xenobiotic
 is_a: ECTO:0000931 ! exposure to environmental contaminant
+is_a: ECTO:0001997 ! exposure to phenols
 
 [Term]
 id: ECTO:0001184
@@ -11182,6 +11169,7 @@ is_a: ECTO:0000371 ! exposure to oxygen molecular entity
 is_a: ECTO:0000597 ! exposure to xenobiotic
 is_a: ECTO:0000703 ! exposure to sweetening agent
 is_a: ECTO:0000931 ! exposure to environmental contaminant
+is_a: ECTO:0002003 ! exposure to sulfonamide
 
 [Term]
 id: ECTO:0001216
@@ -11208,6 +11196,7 @@ is_a: ECTO:0000544 ! exposure to antimicrobial agent
 is_a: ECTO:0000562 ! exposure to antiinfective agent
 is_a: ECTO:0000597 ! exposure to xenobiotic
 is_a: ECTO:0000931 ! exposure to environmental contaminant
+is_a: ECTO:0002003 ! exposure to sulfonamide
 
 [Term]
 id: ECTO:0001218
@@ -11461,13 +11450,13 @@ name: exposure to oxybenzone
 def: "A exposure event involving the interaction of an exposure receptor to oxybenzone. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "oxybenzone exposure" EXACT []
 synonym: "oxybenzone exposure event" EXACT []
-is_a: ECTO:0000163 ! exposure to organic cyclic compound
 is_a: ECTO:0000244 ! exposure to ether
 is_a: ECTO:0000369 ! exposure to ketone
 is_a: ECTO:0000597 ! exposure to xenobiotic
 is_a: ECTO:0000688 ! exposure to dermatologic drug
 is_a: ECTO:0000866 ! exposure to ultraviolet filter
 is_a: ECTO:0000931 ! exposure to environmental contaminant
+is_a: ECTO:0001997 ! exposure to phenols
 
 [Term]
 id: ECTO:0001245
@@ -11506,9 +11495,8 @@ name: exposure to 4-nonylphenol
 def: "A exposure event involving the interaction of an exposure receptor to 4-nonylphenol. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "4-nonylphenol exposure" EXACT []
 synonym: "4-nonylphenol exposure event" EXACT []
-is_a: ECTO:0000163 ! exposure to organic cyclic compound
-is_a: ECTO:0000371 ! exposure to oxygen molecular entity
 is_a: ECTO:0000931 ! exposure to environmental contaminant
+is_a: ECTO:0001997 ! exposure to phenols
 
 [Term]
 id: ECTO:0001249
@@ -11548,6 +11536,7 @@ is_a: ECTO:0000616 ! exposure to EC 3.1.1.8 (cholinesterase) inhibitor
 is_a: ECTO:0000635 ! exposure to EC 3.1.1.7 (acetylcholinesterase) inhibitor
 is_a: ECTO:0000931 ! exposure to environmental contaminant
 is_a: ECTO:0001152 ! exposure to organochlorine compound
+is_a: ECTO:0001989 ! exposure to phosphate
 
 [Term]
 id: ECTO:0001252
@@ -11566,6 +11555,7 @@ is_a: ECTO:0000597 ! exposure to xenobiotic
 is_a: ECTO:0000635 ! exposure to EC 3.1.1.7 (acetylcholinesterase) inhibitor
 is_a: ECTO:0000931 ! exposure to environmental contaminant
 is_a: ECTO:0001152 ! exposure to organochlorine compound
+is_a: ECTO:0001989 ! exposure to phosphate
 
 [Term]
 id: ECTO:0001253
@@ -11592,6 +11582,7 @@ is_a: ECTO:0000597 ! exposure to xenobiotic
 is_a: ECTO:0000616 ! exposure to EC 3.1.1.8 (cholinesterase) inhibitor
 is_a: ECTO:0000635 ! exposure to EC 3.1.1.7 (acetylcholinesterase) inhibitor
 is_a: ECTO:0000931 ! exposure to environmental contaminant
+is_a: ECTO:0001989 ! exposure to phosphate
 
 [Term]
 id: ECTO:0001255
@@ -11621,6 +11612,7 @@ is_a: ECTO:0000597 ! exposure to xenobiotic
 is_a: ECTO:0000616 ! exposure to EC 3.1.1.8 (cholinesterase) inhibitor
 is_a: ECTO:0000635 ! exposure to EC 3.1.1.7 (acetylcholinesterase) inhibitor
 is_a: ECTO:0000931 ! exposure to environmental contaminant
+is_a: ECTO:0001989 ! exposure to phosphate
 
 [Term]
 id: ECTO:0001257
@@ -11706,6 +11698,7 @@ is_a: ECTO:0000250 ! exposure to organophosphorus compound
 is_a: ECTO:0000371 ! exposure to oxygen molecular entity
 is_a: ECTO:0000486 ! exposure to chemical with application
 is_a: ECTO:0000931 ! exposure to environmental contaminant
+is_a: ECTO:0001989 ! exposure to phosphate
 
 [Term]
 id: ECTO:0001264
@@ -12036,6 +12029,7 @@ is_a: ECTO:0000833 ! exposure to anti-inflammatory agent
 is_a: ECTO:0000912 ! exposure to cardioprotective agent
 is_a: ECTO:0000931 ! exposure to environmental contaminant
 is_a: ECTO:0001148 ! exposure to organofluorine compound
+is_a: ECTO:0002003 ! exposure to sulfonamide
 
 [Term]
 id: ECTO:0001292
@@ -12050,6 +12044,7 @@ is_a: ECTO:0000517 ! exposure to insecticide
 is_a: ECTO:0000547 ! exposure to agrochemical
 is_a: ECTO:0000635 ! exposure to EC 3.1.1.7 (acetylcholinesterase) inhibitor
 is_a: ECTO:0000931 ! exposure to environmental contaminant
+is_a: ECTO:0001989 ! exposure to phosphate
 
 [Term]
 id: ECTO:0001293
@@ -12068,6 +12063,7 @@ is_a: ECTO:0000616 ! exposure to EC 3.1.1.8 (cholinesterase) inhibitor
 is_a: ECTO:0000635 ! exposure to EC 3.1.1.7 (acetylcholinesterase) inhibitor
 is_a: ECTO:0000724 ! exposure to genotoxin
 is_a: ECTO:0000931 ! exposure to environmental contaminant
+is_a: ECTO:0001989 ! exposure to phosphate
 
 [Term]
 id: ECTO:0001294
@@ -12084,6 +12080,7 @@ is_a: ECTO:0000517 ! exposure to insecticide
 is_a: ECTO:0000547 ! exposure to agrochemical
 is_a: ECTO:0000635 ! exposure to EC 3.1.1.7 (acetylcholinesterase) inhibitor
 is_a: ECTO:0000931 ! exposure to environmental contaminant
+is_a: ECTO:0001989 ! exposure to phosphate
 
 [Term]
 id: ECTO:0001295
@@ -12309,6 +12306,7 @@ is_a: ECTO:0000371 ! exposure to oxygen molecular entity
 is_a: ECTO:0000515 ! exposure to herbicide
 is_a: ECTO:0000597 ! exposure to xenobiotic
 is_a: ECTO:0000931 ! exposure to environmental contaminant
+is_a: ECTO:0002003 ! exposure to sulfonamide
 
 [Term]
 id: ECTO:0001316
@@ -12531,13 +12529,13 @@ def: "A exposure event involving the interaction of an exposure receptor to furo
 synonym: "furosemide exposure" EXACT []
 synonym: "furosemide exposure event" EXACT []
 is_a: ECTO:0000163 ! exposure to organic cyclic compound
-is_a: ECTO:0000370 ! exposure to nitrogen
 is_a: ECTO:0000371 ! exposure to oxygen molecular entity
 is_a: ECTO:0000579 ! exposure to diuretic
 is_a: ECTO:0000597 ! exposure to xenobiotic
 is_a: ECTO:0000650 ! exposure to Bronsted acid
 is_a: ECTO:0000931 ! exposure to environmental contaminant
 is_a: ECTO:0001152 ! exposure to organochlorine compound
+is_a: ECTO:0002003 ! exposure to sulfonamide
 
 [Term]
 id: ECTO:0001335
@@ -12560,10 +12558,9 @@ name: exposure to 2,4,6-tribromophenol
 def: "A exposure event involving the interaction of an exposure receptor to 2,4,6-tribromophenol. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "2,4,6-tribromophenol exposure" EXACT []
 synonym: "2,4,6-tribromophenol exposure event" EXACT []
-is_a: ECTO:0000163 ! exposure to organic cyclic compound
-is_a: ECTO:0000371 ! exposure to oxygen molecular entity
 is_a: ECTO:0000513 ! exposure to fungicide
 is_a: ECTO:0000931 ! exposure to environmental contaminant
+is_a: ECTO:0001997 ! exposure to phenols
 
 [Term]
 id: ECTO:0001337
@@ -12668,13 +12665,12 @@ name: exposure to exemestane
 def: "A exposure event involving the interaction of an exposure receptor to exemestane. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "exemestane exposure" EXACT []
 synonym: "exemestane exposure event" EXACT []
-is_a: ECTO:0000163 ! exposure to organic cyclic compound
-is_a: ECTO:0000200 ! exposure to lipid
 is_a: ECTO:0000369 ! exposure to ketone
 is_a: ECTO:0000557 ! exposure to inhibitor
 is_a: ECTO:0000588 ! exposure to antineoplastic agent
 is_a: ECTO:0000597 ! exposure to xenobiotic
 is_a: ECTO:0000931 ! exposure to environmental contaminant
+is_a: ECTO:0002002 ! exposure to steroid
 
 [Term]
 id: ECTO:0001346
@@ -12776,6 +12772,7 @@ is_a: ECTO:0000369 ! exposure to ketone
 is_a: ECTO:0000597 ! exposure to xenobiotic
 is_a: ECTO:0000627 ! exposure to anti-arrhythmia drug
 is_a: ECTO:0000931 ! exposure to environmental contaminant
+is_a: ECTO:0002003 ! exposure to sulfonamide
 
 [Term]
 id: ECTO:0001353
@@ -12857,6 +12854,7 @@ is_a: ECTO:0000595 ! exposure to antihypertensive agent
 is_a: ECTO:0000597 ! exposure to xenobiotic
 is_a: ECTO:0000931 ! exposure to environmental contaminant
 is_a: ECTO:0001152 ! exposure to organochlorine compound
+is_a: ECTO:0002003 ! exposure to sulfonamide
 
 [Term]
 id: ECTO:0001360
@@ -13020,6 +13018,7 @@ is_a: ECTO:0000585 ! exposure to beta-adrenergic antagonist
 is_a: ECTO:0000597 ! exposure to xenobiotic
 is_a: ECTO:0000627 ! exposure to anti-arrhythmia drug
 is_a: ECTO:0000931 ! exposure to environmental contaminant
+is_a: ECTO:0002003 ! exposure to sulfonamide
 
 [Term]
 id: ECTO:0001373
@@ -13237,8 +13236,6 @@ name: exposure to 6alpha-methylprednisolone
 def: "A exposure event involving the interaction of an exposure receptor to 6alpha-methylprednisolone. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "6alpha-methylprednisolone exposure" EXACT []
 synonym: "6alpha-methylprednisolone exposure event" EXACT []
-is_a: ECTO:0000163 ! exposure to organic cyclic compound
-is_a: ECTO:0000200 ! exposure to lipid
 is_a: ECTO:0000369 ! exposure to ketone
 is_a: ECTO:0000569 ! exposure to anti-inflammatory drug
 is_a: ECTO:0000597 ! exposure to xenobiotic
@@ -13246,6 +13243,7 @@ is_a: ECTO:0000624 ! exposure to adrenergic agent
 is_a: ECTO:0000732 ! exposure to antiemetic
 is_a: ECTO:0000789 ! exposure to neuroprotective agent
 is_a: ECTO:0000931 ! exposure to environmental contaminant
+is_a: ECTO:0002002 ! exposure to steroid
 
 [Term]
 id: ECTO:0001390
@@ -13280,13 +13278,13 @@ synonym: "metronidazole exposure" EXACT []
 synonym: "metronidazole exposure event" EXACT []
 is_a: ECTO:0000155 ! exposure to organonitrogen compound
 is_a: ECTO:0000163 ! exposure to organic cyclic compound
-is_a: ECTO:0000314 ! exposure to alcohol
 is_a: ECTO:0000597 ! exposure to xenobiotic
 is_a: ECTO:0000602 ! exposure to antiprotozoal drug
 is_a: ECTO:0000608 ! exposure to antibacterial drug
 is_a: ECTO:0000653 ! exposure to photosensitizing agent
 is_a: ECTO:0000694 ! exposure to prodrug
 is_a: ECTO:0000931 ! exposure to environmental contaminant
+is_a: ECTO:0001978 ! exposure to primary alcohol
 
 [Term]
 id: ECTO:0001393
@@ -13407,6 +13405,7 @@ is_a: ECTO:0000163 ! exposure to organic cyclic compound
 is_a: ECTO:0000515 ! exposure to herbicide
 is_a: ECTO:0000597 ! exposure to xenobiotic
 is_a: ECTO:0000931 ! exposure to environmental contaminant
+is_a: ECTO:0002003 ! exposure to sulfonamide
 
 [Term]
 id: ECTO:0001402
@@ -13657,6 +13656,7 @@ is_a: ECTO:0000515 ! exposure to herbicide
 is_a: ECTO:0000547 ! exposure to agrochemical
 is_a: ECTO:0000597 ! exposure to xenobiotic
 is_a: ECTO:0000931 ! exposure to environmental contaminant
+is_a: ECTO:0002003 ! exposure to sulfonamide
 
 [Term]
 id: ECTO:0001427
@@ -13787,11 +13787,10 @@ def: "A exposure event involving the interaction of an exposure receptor to ioxy
 synonym: "ioxynil exposure" EXACT []
 synonym: "ioxynil exposure event" EXACT []
 is_a: ECTO:0000155 ! exposure to organonitrogen compound
-is_a: ECTO:0000163 ! exposure to organic cyclic compound
-is_a: ECTO:0000371 ! exposure to oxygen molecular entity
 is_a: ECTO:0000515 ! exposure to herbicide
 is_a: ECTO:0000597 ! exposure to xenobiotic
 is_a: ECTO:0000931 ! exposure to environmental contaminant
+is_a: ECTO:0001997 ! exposure to phenols
 
 [Term]
 id: ECTO:0001438
@@ -13970,11 +13969,11 @@ name: exposure to sulfluramid
 def: "A exposure event involving the interaction of an exposure receptor to sulfluramid. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "sulfluramid exposure" EXACT []
 synonym: "sulfluramid exposure event" EXACT []
-is_a: ECTO:0000370 ! exposure to nitrogen
 is_a: ECTO:0000494 ! exposure to acaricide
 is_a: ECTO:0000517 ! exposure to insecticide
 is_a: ECTO:0000597 ! exposure to xenobiotic
 is_a: ECTO:0000931 ! exposure to environmental contaminant
+is_a: ECTO:0002003 ! exposure to sulfonamide
 
 [Term]
 id: ECTO:0001452
@@ -14157,6 +14156,7 @@ is_a: ECTO:0000371 ! exposure to oxygen molecular entity
 is_a: ECTO:0000515 ! exposure to herbicide
 is_a: ECTO:0000597 ! exposure to xenobiotic
 is_a: ECTO:0000931 ! exposure to environmental contaminant
+is_a: ECTO:0002003 ! exposure to sulfonamide
 
 [Term]
 id: ECTO:0001466
@@ -14266,6 +14266,7 @@ is_a: ECTO:0000515 ! exposure to herbicide
 is_a: ECTO:0000597 ! exposure to xenobiotic
 is_a: ECTO:0000931 ! exposure to environmental contaminant
 is_a: ECTO:0001148 ! exposure to organofluorine compound
+is_a: ECTO:0002003 ! exposure to sulfonamide
 
 [Term]
 id: ECTO:0001475
@@ -14292,6 +14293,7 @@ is_a: ECTO:0000244 ! exposure to ether
 is_a: ECTO:0000515 ! exposure to herbicide
 is_a: ECTO:0000597 ! exposure to xenobiotic
 is_a: ECTO:0000931 ! exposure to environmental contaminant
+is_a: ECTO:0002003 ! exposure to sulfonamide
 
 [Term]
 id: ECTO:0001477
@@ -14310,12 +14312,12 @@ name: exposure to perfluorooctane sulfonamidoacetic acid
 def: "A exposure event involving the interaction of an exposure receptor to perfluorooctane sulfonamidoacetic acid. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "perfluorooctane sulfonamidoacetic acid exposure" EXACT []
 synonym: "perfluorooctane sulfonamidoacetic acid exposure event" EXACT []
-is_a: ECTO:0000370 ! exposure to nitrogen
 is_a: ECTO:0000371 ! exposure to oxygen molecular entity
 is_a: ECTO:0000597 ! exposure to xenobiotic
 is_a: ECTO:0000650 ! exposure to Bronsted acid
 is_a: ECTO:0000931 ! exposure to environmental contaminant
 is_a: ECTO:0001148 ! exposure to organofluorine compound
+is_a: ECTO:0002003 ! exposure to sulfonamide
 
 [Term]
 id: ECTO:0001479
@@ -14323,12 +14325,12 @@ name: exposure to N-methylperfluorooctane sulfonamidoacetic acid
 def: "A exposure event involving the interaction of an exposure receptor to N-methylperfluorooctane sulfonamidoacetic acid. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "N-methylperfluorooctane sulfonamidoacetic acid exposure" EXACT []
 synonym: "N-methylperfluorooctane sulfonamidoacetic acid exposure event" EXACT []
-is_a: ECTO:0000370 ! exposure to nitrogen
 is_a: ECTO:0000371 ! exposure to oxygen molecular entity
 is_a: ECTO:0000597 ! exposure to xenobiotic
 is_a: ECTO:0000650 ! exposure to Bronsted acid
 is_a: ECTO:0000931 ! exposure to environmental contaminant
 is_a: ECTO:0001148 ! exposure to organofluorine compound
+is_a: ECTO:0002003 ! exposure to sulfonamide
 
 [Term]
 id: ECTO:0001480
@@ -14336,12 +14338,12 @@ name: exposure to N-ethylperfluorooctane sulfonamidoacetic acid
 def: "A exposure event involving the interaction of an exposure receptor to N-ethylperfluorooctane sulfonamidoacetic acid. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "N-ethylperfluorooctane sulfonamidoacetic acid exposure" EXACT []
 synonym: "N-ethylperfluorooctane sulfonamidoacetic acid exposure event" EXACT []
-is_a: ECTO:0000370 ! exposure to nitrogen
 is_a: ECTO:0000371 ! exposure to oxygen molecular entity
 is_a: ECTO:0000597 ! exposure to xenobiotic
 is_a: ECTO:0000650 ! exposure to Bronsted acid
 is_a: ECTO:0000931 ! exposure to environmental contaminant
 is_a: ECTO:0001148 ! exposure to organofluorine compound
+is_a: ECTO:0002003 ! exposure to sulfonamide
 
 [Term]
 id: ECTO:0001481
@@ -14354,6 +14356,7 @@ is_a: ECTO:0000371 ! exposure to oxygen molecular entity
 is_a: ECTO:0000597 ! exposure to xenobiotic
 is_a: ECTO:0000931 ! exposure to environmental contaminant
 is_a: ECTO:0001148 ! exposure to organofluorine compound
+is_a: ECTO:0001989 ! exposure to phosphate
 
 [Term]
 id: ECTO:0001482
@@ -14485,6 +14488,7 @@ is_a: ECTO:0000371 ! exposure to oxygen molecular entity
 is_a: ECTO:0000597 ! exposure to xenobiotic
 is_a: ECTO:0000931 ! exposure to environmental contaminant
 is_a: ECTO:0001148 ! exposure to organofluorine compound
+is_a: ECTO:0001989 ! exposure to phosphate
 
 [Term]
 id: ECTO:0001492
@@ -14497,6 +14501,7 @@ is_a: ECTO:0000371 ! exposure to oxygen molecular entity
 is_a: ECTO:0000597 ! exposure to xenobiotic
 is_a: ECTO:0000931 ! exposure to environmental contaminant
 is_a: ECTO:0001148 ! exposure to organofluorine compound
+is_a: ECTO:0001989 ! exposure to phosphate
 
 [Term]
 id: ECTO:0001493
@@ -14508,6 +14513,7 @@ is_a: ECTO:0000250 ! exposure to organophosphorus compound
 is_a: ECTO:0000371 ! exposure to oxygen molecular entity
 is_a: ECTO:0000597 ! exposure to xenobiotic
 is_a: ECTO:0000931 ! exposure to environmental contaminant
+is_a: ECTO:0001989 ! exposure to phosphate
 
 [Term]
 id: ECTO:0001494
@@ -14731,6 +14737,7 @@ is_a: ECTO:0000244 ! exposure to ether
 is_a: ECTO:0000515 ! exposure to herbicide
 is_a: ECTO:0000597 ! exposure to xenobiotic
 is_a: ECTO:0000931 ! exposure to environmental contaminant
+is_a: ECTO:0002003 ! exposure to sulfonamide
 
 [Term]
 id: ECTO:0001513
@@ -14749,14 +14756,13 @@ name: exposure to spironolactone
 def: "A exposure event involving the interaction of an exposure receptor to spironolactone. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "spironolactone exposure" EXACT []
 synonym: "spironolactone exposure event" EXACT []
-is_a: ECTO:0000163 ! exposure to organic cyclic compound
-is_a: ECTO:0000200 ! exposure to lipid
 is_a: ECTO:0000369 ! exposure to ketone
 is_a: ECTO:0000579 ! exposure to diuretic
 is_a: ECTO:0000595 ! exposure to antihypertensive agent
 is_a: ECTO:0000597 ! exposure to xenobiotic
 is_a: ECTO:0000673 ! exposure to antagonist
 is_a: ECTO:0000931 ! exposure to environmental contaminant
+is_a: ECTO:0002002 ! exposure to steroid
 
 [Term]
 id: ECTO:0001515
@@ -14784,6 +14790,7 @@ is_a: ECTO:0000597 ! exposure to xenobiotic
 is_a: ECTO:0000601 ! exposure to coccidiostat
 is_a: ECTO:0000701 ! exposure to EC 2.5.1.15 (dihydropteroate synthase) inhibitor
 is_a: ECTO:0000931 ! exposure to environmental contaminant
+is_a: ECTO:0002003 ! exposure to sulfonamide
 
 [Term]
 id: ECTO:0001517
@@ -14802,6 +14809,7 @@ is_a: ECTO:0000701 ! exposure to EC 2.5.1.15 (dihydropteroate synthase) inhibito
 is_a: ECTO:0000742 ! exposure to epitope
 is_a: ECTO:0000931 ! exposure to environmental contaminant
 is_a: ECTO:0000960 ! exposure to drug allergen
+is_a: ECTO:0002003 ! exposure to sulfonamide
 
 [Term]
 id: ECTO:0001518
@@ -14816,6 +14824,7 @@ is_a: ECTO:0000562 ! exposure to antiinfective agent
 is_a: ECTO:0000597 ! exposure to xenobiotic
 is_a: ECTO:0000701 ! exposure to EC 2.5.1.15 (dihydropteroate synthase) inhibitor
 is_a: ECTO:0000931 ! exposure to environmental contaminant
+is_a: ECTO:0002003 ! exposure to sulfonamide
 
 [Term]
 id: ECTO:0001519
@@ -15165,8 +15174,7 @@ name: exposure to paraben
 def: "A exposure event involving the interaction of an exposure receptor to paraben. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "paraben exposure" EXACT []
 synonym: "paraben exposure event" EXACT []
-is_a: ECTO:0000163 ! exposure to organic cyclic compound
-is_a: ECTO:0000371 ! exposure to oxygen molecular entity
+is_a: ECTO:0001997 ! exposure to phenols
 
 [Term]
 id: ECTO:0001553
@@ -15495,6 +15503,7 @@ is_a: ECTO:0000494 ! exposure to acaricide
 is_a: ECTO:0000517 ! exposure to insecticide
 is_a: ECTO:0000547 ! exposure to agrochemical
 is_a: ECTO:0000635 ! exposure to EC 3.1.1.7 (acetylcholinesterase) inhibitor
+is_a: ECTO:0001989 ! exposure to phosphate
 
 [Term]
 id: ECTO:0001594
@@ -15617,12 +15626,12 @@ name: exposure to allyl alcohol
 def: "A exposure event involving the interaction of an exposure receptor to allyl alcohol. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "allyl alcohol exposure" EXACT []
 synonym: "allyl alcohol exposure event" EXACT []
-is_a: ECTO:0000314 ! exposure to alcohol
 is_a: ECTO:0000513 ! exposure to fungicide
 is_a: ECTO:0000515 ! exposure to herbicide
 is_a: ECTO:0000517 ! exposure to insecticide
 is_a: ECTO:0000545 ! exposure to antibacterial agent
 is_a: ECTO:0000893 ! exposure to plant metabolite
+is_a: ECTO:0001978 ! exposure to primary alcohol
 
 [Term]
 id: ECTO:0001605
@@ -16064,11 +16073,10 @@ name: exposure to catechol
 def: "A exposure event involving the interaction of an exposure receptor to catechol. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "catechol exposure" EXACT []
 synonym: "catechol exposure event" EXACT []
-is_a: ECTO:0000163 ! exposure to organic cyclic compound
-is_a: ECTO:0000371 ! exposure to oxygen molecular entity
 is_a: ECTO:0000724 ! exposure to genotoxin
 is_a: ECTO:0000775 ! exposure to allelochemical
 is_a: ECTO:0000893 ! exposure to plant metabolite
+is_a: ECTO:0001997 ! exposure to phenols
 
 [Term]
 id: ECTO:0001653
@@ -16113,6 +16121,7 @@ is_a: ECTO:0000155 ! exposure to organonitrogen compound
 is_a: ECTO:0000163 ! exposure to organic cyclic compound
 is_a: ECTO:0000371 ! exposure to oxygen molecular entity
 is_a: ECTO:0001152 ! exposure to organochlorine compound
+is_a: ECTO:0002003 ! exposure to sulfonamide
 
 [Term]
 id: ECTO:0001657
@@ -16369,9 +16378,8 @@ name: exposure to cresol
 def: "A exposure event involving the interaction of an exposure receptor to cresol. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "cresol exposure" EXACT []
 synonym: "cresol exposure event" EXACT []
-is_a: ECTO:0000163 ! exposure to organic cyclic compound
-is_a: ECTO:0000371 ! exposure to oxygen molecular entity
 is_a: ECTO:0000513 ! exposure to fungicide
+is_a: ECTO:0001997 ! exposure to phenols
 
 [Term]
 id: ECTO:0001684
@@ -16649,6 +16657,7 @@ is_a: ECTO:0000600 ! exposure to antifungal agent
 is_a: ECTO:0000616 ! exposure to EC 3.1.1.8 (cholinesterase) inhibitor
 is_a: ECTO:0000635 ! exposure to EC 3.1.1.7 (acetylcholinesterase) inhibitor
 is_a: ECTO:0001152 ! exposure to organochlorine compound
+is_a: ECTO:0001989 ! exposure to phosphate
 
 [Term]
 id: ECTO:0001711
@@ -16797,8 +16806,7 @@ name: exposure to 2,4-Dimethylphenol
 def: "A exposure event involving the interaction of an exposure receptor to 2,4-Dimethylphenol. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "2,4-Dimethylphenol exposure" EXACT []
 synonym: "2,4-Dimethylphenol exposure event" EXACT []
-is_a: ECTO:0000163 ! exposure to organic cyclic compound
-is_a: ECTO:0000371 ! exposure to oxygen molecular entity
+is_a: ECTO:0001997 ! exposure to phenols
 
 [Term]
 id: ECTO:0001727
@@ -16806,9 +16814,8 @@ name: exposure to Dimethyl phthalate
 def: "A exposure event involving the interaction of an exposure receptor to Dimethyl phthalate. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "Dimethyl phthalate exposure" EXACT []
 synonym: "Dimethyl phthalate exposure event" EXACT []
-is_a: ECTO:0000163 ! exposure to organic cyclic compound
-is_a: ECTO:0000371 ! exposure to oxygen molecular entity
 is_a: ECTO:0000650 ! exposure to Bronsted acid
+is_a: ECTO:0001997 ! exposure to phenols
 
 [Term]
 id: ECTO:0001728
@@ -16857,12 +16864,11 @@ def: "A exposure event involving the interaction of an exposure receptor to 4,6-
 synonym: "4,6-dinitro-o-cresol exposure" EXACT []
 synonym: "4,6-dinitro-o-cresol exposure event" EXACT []
 is_a: ECTO:0000155 ! exposure to organonitrogen compound
-is_a: ECTO:0000163 ! exposure to organic cyclic compound
-is_a: ECTO:0000371 ! exposure to oxygen molecular entity
 is_a: ECTO:0000494 ! exposure to acaricide
 is_a: ECTO:0000513 ! exposure to fungicide
 is_a: ECTO:0000515 ! exposure to herbicide
 is_a: ECTO:0001047 ! exposure to dinitrophenol insecticide
+is_a: ECTO:0001997 ! exposure to phenols
 
 [Term]
 id: ECTO:0001733
@@ -16983,6 +16989,7 @@ is_a: ECTO:0000517 ! exposure to insecticide
 is_a: ECTO:0000547 ! exposure to agrochemical
 is_a: ECTO:0000565 ! exposure to antinematodal drug
 is_a: ECTO:0000635 ! exposure to EC 3.1.1.7 (acetylcholinesterase) inhibitor
+is_a: ECTO:0001989 ! exposure to phosphate
 
 [Term]
 id: ECTO:0001745
@@ -16991,9 +16998,9 @@ def: "A exposure event involving the interaction of an exposure receptor to 2-et
 synonym: "2-ethoxyethanol exposure" EXACT []
 synonym: "2-ethoxyethanol exposure event" EXACT []
 is_a: ECTO:0000244 ! exposure to ether
-is_a: ECTO:0000314 ! exposure to alcohol
 is_a: ECTO:0000662 ! exposure to protic solvent
 is_a: ECTO:0000727 ! exposure to teratogenic agent
+is_a: ECTO:0001978 ! exposure to primary alcohol
 
 [Term]
 id: ECTO:0001746
@@ -17057,6 +17064,7 @@ is_a: ECTO:0000517 ! exposure to insecticide
 is_a: ECTO:0000547 ! exposure to agrochemical
 is_a: ECTO:0000564 ! exposure to anthelminthic drug
 is_a: ECTO:0000635 ! exposure to EC 3.1.1.7 (acetylcholinesterase) inhibitor
+is_a: ECTO:0001989 ! exposure to phosphate
 
 [Term]
 id: ECTO:0001752
@@ -17114,6 +17122,7 @@ is_a: ECTO:0000547 ! exposure to agrochemical
 is_a: ECTO:0000549 ! exposure to avicide
 is_a: ECTO:0000616 ! exposure to EC 3.1.1.8 (cholinesterase) inhibitor
 is_a: ECTO:0000635 ! exposure to EC 3.1.1.7 (acetylcholinesterase) inhibitor
+is_a: ECTO:0001989 ! exposure to phosphate
 
 [Term]
 id: ECTO:0001757
@@ -17197,6 +17206,7 @@ synonym: "Fomesafen exposure event" EXACT []
 is_a: ECTO:0000155 ! exposure to organonitrogen compound
 is_a: ECTO:0000163 ! exposure to organic cyclic compound
 is_a: ECTO:0000244 ! exposure to ether
+is_a: ECTO:0002003 ! exposure to sulfonamide
 
 [Term]
 id: ECTO:0001765
@@ -17218,7 +17228,7 @@ synonym: "glycidol exposure" EXACT []
 synonym: "glycidol exposure event" EXACT []
 is_a: ECTO:0000163 ! exposure to organic cyclic compound
 is_a: ECTO:0000244 ! exposure to ether
-is_a: ECTO:0000314 ! exposure to alcohol
+is_a: ECTO:0001978 ! exposure to primary alcohol
 
 [Term]
 id: ECTO:0001767
@@ -17234,13 +17244,12 @@ name: exposure to hexachlorophene
 def: "A exposure event involving the interaction of an exposure receptor to hexachlorophene. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "hexachlorophene exposure" EXACT []
 synonym: "hexachlorophene exposure event" EXACT []
-is_a: ECTO:0000163 ! exposure to organic cyclic compound
-is_a: ECTO:0000371 ! exposure to oxygen molecular entity
 is_a: ECTO:0000494 ! exposure to acaricide
 is_a: ECTO:0000545 ! exposure to antibacterial agent
 is_a: ECTO:0000656 ! exposure to antiseptic drug
 is_a: ECTO:0000959 ! exposure to antifungal agrochemical
 is_a: ECTO:0001152 ! exposure to organochlorine compound
+is_a: ECTO:0001997 ! exposure to phenols
 
 [Term]
 id: ECTO:0001769
@@ -17318,8 +17327,6 @@ name: exposure to hydroquinone
 def: "A exposure event involving the interaction of an exposure receptor to hydroquinone. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "hydroquinone exposure" EXACT []
 synonym: "hydroquinone exposure event" EXACT []
-is_a: ECTO:0000163 ! exposure to organic cyclic compound
-is_a: ECTO:0000371 ! exposure to oxygen molecular entity
 is_a: ECTO:0000497 ! exposure to antioxidant
 is_a: ECTO:0000505 ! exposure to cofactor
 is_a: ECTO:0000725 ! exposure to carcinogenic agent
@@ -17327,6 +17334,7 @@ is_a: ECTO:0000881 ! exposure to mouse metabolite
 is_a: ECTO:0000897 ! exposure to human xenobiotic metabolite
 is_a: ECTO:0000900 ! exposure to Escherichia coli metabolite
 is_a: ECTO:0000951 ! exposure to skin lightening agent
+is_a: ECTO:0001997 ! exposure to phenols
 
 [Term]
 id: ECTO:0001777
@@ -17437,6 +17445,7 @@ is_a: ECTO:0000635 ! exposure to EC 3.1.1.7 (acetylcholinesterase) inhibitor
 is_a: ECTO:0000640 ! exposure to pediculicide
 is_a: ECTO:0000650 ! exposure to Bronsted acid
 is_a: ECTO:0001051 ! exposure to scabicide
+is_a: ECTO:0001989 ! exposure to phosphate
 
 [Term]
 id: ECTO:0001788
@@ -17643,6 +17652,7 @@ is_a: ECTO:0000517 ! exposure to insecticide
 is_a: ECTO:0000547 ! exposure to agrochemical
 is_a: ECTO:0000549 ! exposure to avicide
 is_a: ECTO:0000635 ! exposure to EC 3.1.1.7 (acetylcholinesterase) inhibitor
+is_a: ECTO:0001989 ! exposure to phosphate
 
 [Term]
 id: ECTO:0001810
@@ -17696,6 +17706,7 @@ is_a: ECTO:0000600 ! exposure to antifungal agent
 is_a: ECTO:0000616 ! exposure to EC 3.1.1.8 (cholinesterase) inhibitor
 is_a: ECTO:0000635 ! exposure to EC 3.1.1.7 (acetylcholinesterase) inhibitor
 is_a: ECTO:0001152 ! exposure to organochlorine compound
+is_a: ECTO:0001989 ! exposure to phosphate
 
 [Term]
 id: ECTO:0001815
@@ -17829,9 +17840,8 @@ name: exposure to 2-nitrophenol
 def: "A exposure event involving the interaction of an exposure receptor to 2-nitrophenol. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "2-nitrophenol exposure" EXACT []
 synonym: "2-nitrophenol exposure event" EXACT []
-is_a: ECTO:0000163 ! exposure to organic cyclic compound
 is_a: ECTO:0000370 ! exposure to nitrogen
-is_a: ECTO:0000371 ! exposure to oxygen molecular entity
+is_a: ECTO:0001997 ! exposure to phenols
 
 [Term]
 id: ECTO:0001829
@@ -17839,11 +17849,10 @@ name: exposure to 4-nitrophenol
 def: "A exposure event involving the interaction of an exposure receptor to 4-nitrophenol. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "4-nitrophenol exposure" EXACT []
 synonym: "4-nitrophenol exposure event" EXACT []
-is_a: ECTO:0000163 ! exposure to organic cyclic compound
 is_a: ECTO:0000370 ! exposure to nitrogen
-is_a: ECTO:0000371 ! exposure to oxygen molecular entity
 is_a: ECTO:0000881 ! exposure to mouse metabolite
 is_a: ECTO:0000897 ! exposure to human xenobiotic metabolite
+is_a: ECTO:0001997 ! exposure to phenols
 
 [Term]
 id: ECTO:0001830
@@ -17963,6 +17972,7 @@ synonym: "oryzalin exposure event" EXACT []
 is_a: ECTO:0000155 ! exposure to organonitrogen compound
 is_a: ECTO:0000163 ! exposure to organic cyclic compound
 is_a: ECTO:0000515 ! exposure to herbicide
+is_a: ECTO:0002003 ! exposure to sulfonamide
 
 [Term]
 id: ECTO:0001843
@@ -17987,6 +17997,7 @@ is_a: ECTO:0000494 ! exposure to acaricide
 is_a: ECTO:0000517 ! exposure to insecticide
 is_a: ECTO:0000547 ! exposure to agrochemical
 is_a: ECTO:0000635 ! exposure to EC 3.1.1.7 (acetylcholinesterase) inhibitor
+is_a: ECTO:0001989 ! exposure to phosphate
 
 [Term]
 id: ECTO:0001845
@@ -18087,12 +18098,11 @@ name: exposure to phenol
 def: "A exposure event involving the interaction of an exposure receptor to phenol. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "phenol exposure" EXACT []
 synonym: "phenol exposure event" EXACT []
-is_a: ECTO:0000163 ! exposure to organic cyclic compound
-is_a: ECTO:0000371 ! exposure to oxygen molecular entity
 is_a: ECTO:0000656 ! exposure to antiseptic drug
 is_a: ECTO:0000657 ! exposure to disinfectant
 is_a: ECTO:0000881 ! exposure to mouse metabolite
 is_a: ECTO:0000897 ! exposure to human xenobiotic metabolite
+is_a: ECTO:0001997 ! exposure to phenols
 
 [Term]
 id: ECTO:0001856
@@ -18100,8 +18110,7 @@ name: exposure to phenolphthalein
 def: "A exposure event involving the interaction of an exposure receptor to phenolphthalein. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "phenolphthalein exposure" EXACT []
 synonym: "phenolphthalein exposure event" EXACT []
-is_a: ECTO:0000163 ! exposure to organic cyclic compound
-is_a: ECTO:0000371 ! exposure to oxygen molecular entity
+is_a: ECTO:0001997 ! exposure to phenols
 
 [Term]
 id: ECTO:0001857
@@ -18246,6 +18255,7 @@ is_a: ECTO:0000517 ! exposure to insecticide
 is_a: ECTO:0000547 ! exposure to agrochemical
 is_a: ECTO:0000635 ! exposure to EC 3.1.1.7 (acetylcholinesterase) inhibitor
 is_a: ECTO:0001152 ! exposure to organochlorine compound
+is_a: ECTO:0001989 ! exposure to phosphate
 
 [Term]
 id: ECTO:0001871
@@ -18280,8 +18290,8 @@ name: exposure to prop-2-yn-1-ol
 def: "A exposure event involving the interaction of an exposure receptor to prop-2-yn-1-ol. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "prop-2-yn-1-ol exposure" EXACT []
 synonym: "prop-2-yn-1-ol exposure event" EXACT []
-is_a: ECTO:0000314 ! exposure to alcohol
 is_a: ECTO:0000882 ! exposure to Saccharomyces cerevisiae metabolite
+is_a: ECTO:0001978 ! exposure to primary alcohol
 
 [Term]
 id: ECTO:0001876
@@ -18506,6 +18516,7 @@ is_a: ECTO:0000371 ! exposure to oxygen molecular entity
 is_a: ECTO:0000517 ! exposure to insecticide
 is_a: ECTO:0000547 ! exposure to agrochemical
 is_a: ECTO:0000635 ! exposure to EC 3.1.1.7 (acetylcholinesterase) inhibitor
+is_a: ECTO:0001989 ! exposure to phosphate
 
 [Term]
 id: ECTO:0001898
@@ -18528,6 +18539,7 @@ is_a: ECTO:0000517 ! exposure to insecticide
 is_a: ECTO:0000547 ! exposure to agrochemical
 is_a: ECTO:0000563 ! exposure to antiparasitic agent
 is_a: ECTO:0000635 ! exposure to EC 3.1.1.7 (acetylcholinesterase) inhibitor
+is_a: ECTO:0001989 ! exposure to phosphate
 
 [Term]
 id: ECTO:0001900
@@ -18544,9 +18556,8 @@ name: exposure to 3,3',5,5'-tetrabromobisphenol A
 def: "A exposure event involving the interaction of an exposure receptor to 3,3',5,5'-tetrabromobisphenol A. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "3,3',5,5'-tetrabromobisphenol A exposure" EXACT []
 synonym: "3,3',5,5'-tetrabromobisphenol A exposure event" EXACT []
-is_a: ECTO:0000163 ! exposure to organic cyclic compound
-is_a: ECTO:0000371 ! exposure to oxygen molecular entity
 is_a: ECTO:0000486 ! exposure to chemical with application
+is_a: ECTO:0001997 ! exposure to phenols
 
 [Term]
 id: ECTO:0001902
@@ -18571,6 +18582,7 @@ is_a: ECTO:0000547 ! exposure to agrochemical
 is_a: ECTO:0000616 ! exposure to EC 3.1.1.8 (cholinesterase) inhibitor
 is_a: ECTO:0000635 ! exposure to EC 3.1.1.7 (acetylcholinesterase) inhibitor
 is_a: ECTO:0001152 ! exposure to organochlorine compound
+is_a: ECTO:0001989 ! exposure to phosphate
 
 [Term]
 id: ECTO:0001904
@@ -18737,6 +18749,7 @@ is_a: ECTO:0000155 ! exposure to organonitrogen compound
 is_a: ECTO:0000163 ! exposure to organic cyclic compound
 is_a: ECTO:0000244 ! exposure to ether
 is_a: ECTO:0000515 ! exposure to herbicide
+is_a: ECTO:0002003 ! exposure to sulfonamide
 
 [Term]
 id: ECTO:0001921
@@ -18747,6 +18760,7 @@ synonym: "tribufos exposure event" EXACT []
 is_a: ECTO:0000250 ! exposure to organophosphorus compound
 is_a: ECTO:0000371 ! exposure to oxygen molecular entity
 is_a: ECTO:0000508 ! exposure to defoliant
+is_a: ECTO:0001989 ! exposure to phosphate
 
 [Term]
 id: ECTO:0001922
@@ -18870,6 +18884,7 @@ synonym: "Tris(2,3-dibromopropyl) phosphate exposure" EXACT []
 synonym: "Tris(2,3-dibromopropyl) phosphate exposure event" EXACT []
 is_a: ECTO:0000250 ! exposure to organophosphorus compound
 is_a: ECTO:0000371 ! exposure to oxygen molecular entity
+is_a: ECTO:0001989 ! exposure to phosphate
 
 [Term]
 id: ECTO:0001934
@@ -18990,9 +19005,8 @@ name: exposure to chlorophenol
 def: "A exposure event involving the interaction of an exposure receptor to chlorophenol. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "chlorophenol exposure" EXACT []
 synonym: "chlorophenol exposure event" EXACT []
-is_a: ECTO:0000163 ! exposure to organic cyclic compound
-is_a: ECTO:0000371 ! exposure to oxygen molecular entity
 is_a: ECTO:0001152 ! exposure to organochlorine compound
+is_a: ECTO:0001997 ! exposure to phenols
 
 [Term]
 id: ECTO:0001947
@@ -19213,7 +19227,7 @@ name: Behavior related exposure
 def: "A exposure event involving Behavior." []
 synonym: "Behavior" NARROW []
 synonym: "Behavior exposure" EXACT []
-is_a: ExO:0000002
+is_a: ECTO:0002032 ! Activity related exposure
 
 [Term]
 id: ECTO:0001975
@@ -19222,6 +19236,600 @@ def: "A exposure event involving the interaction of an exposure receptor to a se
 synonym: "sex hormone exposure" EXACT []
 synonym: "sex hormone exposure event" EXACT []
 is_a: ECTO:0000516 ! exposure to hormone
+
+[Term]
+id: ECTO:0001976
+name: exposure to squalene
+def: "A exposure event involving the interaction of an exposure receptor to squalene. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "squalene exposure" EXACT []
+synonym: "squalene exposure event" EXACT []
+is_a: ECTO:0000200 ! exposure to lipid
+is_a: ECTO:0000881 ! exposure to mouse metabolite
+is_a: ECTO:0000882 ! exposure to Saccharomyces cerevisiae metabolite
+is_a: ECTO:0000893 ! exposure to plant metabolite
+is_a: ECTO:0000919 ! exposure to human metabolite
+
+[Term]
+id: ECTO:0001977
+name: exposure to inulin
+def: "A exposure event involving the interaction of an exposure receptor to inulin. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "inulin exposure" EXACT []
+synonym: "inulin exposure event" EXACT []
+is_a: ECTO:0001983 ! exposure to polysaccharide
+
+[Term]
+id: ECTO:0001978
+name: exposure to primary alcohol
+def: "A exposure event involving the interaction of an exposure receptor to primary alcohol. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "primary alcohol exposure" EXACT []
+synonym: "primary alcohol exposure event" EXACT []
+is_a: ECTO:0000314 ! exposure to alcohol
+
+[Term]
+id: ECTO:0001979
+name: exposure to lycopene
+def: "A exposure event involving the interaction of an exposure receptor to lycopene. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "lycopene exposure" EXACT []
+synonym: "lycopene exposure event" EXACT []
+is_a: ECTO:0000200 ! exposure to lipid
+is_a: ECTO:0000497 ! exposure to antioxidant
+is_a: ECTO:0000893 ! exposure to plant metabolite
+
+[Term]
+id: ECTO:0001980
+name: exposure to quercetin
+def: "A exposure event involving the interaction of an exposure receptor to quercetin. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "quercetin exposure" EXACT []
+synonym: "quercetin exposure event" EXACT []
+is_a: ECTO:0000135 ! exposure to organic
+is_a: ECTO:0000371 ! exposure to oxygen molecular entity
+is_a: ECTO:0000497 ! exposure to antioxidant
+is_a: ECTO:0000545 ! exposure to antibacterial agent
+is_a: ECTO:0000588 ! exposure to antineoplastic agent
+is_a: ECTO:0000614 ! exposure to protein kinase inhibitor
+is_a: ECTO:0000893 ! exposure to plant metabolite
+is_a: ECTO:0000904 ! exposure to EC 1.10.99.2 [ribosyldihydronicotinamide dehydrogenase (quinone)] inhibitor
+
+[Term]
+id: ECTO:0001981
+name: exposure to 1H-pyrazole
+def: "A exposure event involving the interaction of an exposure receptor to 1H-pyrazole. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "1H-pyrazole exposure" EXACT []
+synonym: "1H-pyrazole exposure event" EXACT []
+is_a: ECTO:0000155 ! exposure to organonitrogen compound
+is_a: ECTO:0000163 ! exposure to organic cyclic compound
+
+[Term]
+id: ECTO:0001982
+name: exposure to 1-methyl-4-phenyl-1
+def: "A exposure event involving the interaction of an exposure receptor to 1-methyl-4-phenyl-1. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "1-methyl-4-phenyl-1 exposure" EXACT []
+synonym: "1-methyl-4-phenyl-1 exposure event" EXACT []
+is_a: ECTO:0000155 ! exposure to organonitrogen compound
+is_a: ECTO:0000163 ! exposure to organic cyclic compound
+is_a: ECTO:0000730 ! exposure to neurotoxin
+
+[Term]
+id: ECTO:0001983
+name: exposure to polysaccharide
+def: "A exposure event involving the interaction of an exposure receptor to polysaccharide. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "polysaccharide exposure" EXACT []
+synonym: "polysaccharide exposure event" EXACT []
+is_a: ECTO:0000127 ! exposure to carbohydrate
+
+[Term]
+id: ECTO:0001984
+name: exposure to N-methyl-N'-nitro-N-nitrosoguanidine
+def: "A exposure event involving the interaction of an exposure receptor to N-methyl-N'-nitro-N-nitrosoguanidine. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "N-methyl-N'-nitro-N-nitrosoguanidine exposure" EXACT []
+synonym: "N-methyl-N'-nitro-N-nitrosoguanidine exposure event" EXACT []
+is_a: ECTO:0000370 ! exposure to nitrogen
+is_a: ECTO:0000496 ! exposure to alkylating agent
+
+[Term]
+id: ECTO:0001985
+name: exposure to alpha-tocopherol
+def: "A exposure event involving the interaction of an exposure receptor to alpha-tocopherol. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "alpha-tocopherol exposure" EXACT []
+synonym: "alpha-tocopherol exposure event" EXACT []
+is_a: ECTO:0000189 ! exposure to vitamin E
+is_a: ECTO:0000893 ! exposure to plant metabolite
+is_a: ECTO:0000923 ! exposure to food antioxidant
+
+[Term]
+id: ECTO:0001986
+name: exposure to N-ethyl-N-nitrosourea
+def: "A exposure event involving the interaction of an exposure receptor to N-ethyl-N-nitrosourea. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "N-ethyl-N-nitrosourea exposure" EXACT []
+synonym: "N-ethyl-N-nitrosourea exposure event" EXACT []
+is_a: ECTO:0000370 ! exposure to nitrogen
+is_a: ECTO:0000496 ! exposure to alkylating agent
+is_a: ECTO:0000725 ! exposure to carcinogenic agent
+
+[Term]
+id: ECTO:0001987
+name: exposure to 7
+def: "A exposure event involving the interaction of an exposure receptor to 7. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "7 exposure" EXACT []
+synonym: "7 exposure event" EXACT []
+is_a: ECTO:0000399 ! exposure to polycyclic arene
+
+[Term]
+id: ECTO:0001988
+name: exposure to alendronic acid
+def: "A exposure event involving the interaction of an exposure receptor to alendronic acid. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "alendronic acid exposure" EXACT []
+synonym: "alendronic acid exposure event" EXACT []
+is_a: ECTO:0000155 ! exposure to organonitrogen compound
+is_a: ECTO:0000557 ! exposure to inhibitor
+is_a: ECTO:0000711 ! exposure to bone density conservation agent
+is_a: ECTO:0001864 ! exposure to phosphorus molecular entity
+
+[Term]
+id: ECTO:0001989
+name: exposure to phosphate
+def: "A exposure event involving the interaction of an exposure receptor to phosphate. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "phosphate exposure" EXACT []
+synonym: "phosphate exposure event" EXACT []
+is_a: ECTO:0001864 ! exposure to phosphorus molecular entity
+
+[Term]
+id: ECTO:0001990
+name: exposure to retinoid
+def: "A exposure event involving the interaction of an exposure receptor to retinoid. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "retinoid exposure" EXACT []
+synonym: "retinoid exposure event" EXACT []
+is_a: ECTO:0000200 ! exposure to lipid
+
+[Term]
+id: ECTO:0001991
+name: exposure to sodium chloride
+def: "A exposure event involving the interaction of an exposure receptor to sodium chloride. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "sodium chloride exposure" EXACT []
+synonym: "sodium chloride exposure event" EXACT []
+is_a: ECTO:0000137 ! exposure to inorganic
+is_a: ECTO:0000375 ! exposure to salt
+
+[Term]
+id: ECTO:0001992
+name: exposure to ceftriaxone
+def: "A exposure event involving the interaction of an exposure receptor to ceftriaxone. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "ceftriaxone exposure" EXACT []
+synonym: "ceftriaxone exposure event" EXACT []
+is_a: ECTO:0000155 ! exposure to organonitrogen compound
+is_a: ECTO:0000163 ! exposure to organic cyclic compound
+is_a: ECTO:0000244 ! exposure to ether
+is_a: ECTO:0000592 ! exposure to EC 3.5.2.6 (beta-lactamase) inhibitor
+is_a: ECTO:0000608 ! exposure to antibacterial drug
+is_a: ECTO:0000960 ! exposure to drug allergen
+
+[Term]
+id: ECTO:0001993
+name: exposure to sodium nitroprusside
+def: "A exposure event involving the interaction of an exposure receptor to sodium nitroprusside. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "sodium nitroprusside exposure" EXACT []
+synonym: "sodium nitroprusside exposure event" EXACT []
+is_a: ECTO:0000375 ! exposure to salt
+is_a: ECTO:0000708 ! exposure to nitric oxide donor
+
+[Term]
+id: ECTO:0001994
+name: exposure to potassium chloride
+def: "A exposure event involving the interaction of an exposure receptor to potassium chloride. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "potassium chloride exposure" EXACT []
+synonym: "potassium chloride exposure event" EXACT []
+is_a: ECTO:0000137 ! exposure to inorganic
+is_a: ECTO:0000375 ! exposure to salt
+
+[Term]
+id: ECTO:0001995
+name: exposure to technetium-99
+def: "A exposure event involving the interaction of an exposure receptor to technetium-99. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "technetium-99 exposure" EXACT []
+synonym: "technetium-99 exposure event" EXACT []
+is_a: ECTO:0000231 ! exposure to chemical entity
+
+[Term]
+id: ECTO:0001996
+name: exposure to captopril
+def: "A exposure event involving the interaction of an exposure receptor to captopril. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "captopril exposure" EXACT []
+synonym: "captopril exposure event" EXACT []
+is_a: ECTO:0000155 ! exposure to organonitrogen compound
+is_a: ECTO:0000163 ! exposure to organic cyclic compound
+is_a: ECTO:0000371 ! exposure to oxygen molecular entity
+is_a: ECTO:0000566 ! exposure to EC 3.4.15.1 (peptidyl-dipeptidase A) inhibitor
+is_a: ECTO:0000650 ! exposure to Bronsted acid
+
+[Term]
+id: ECTO:0001997
+name: exposure to phenols
+def: "A exposure event involving the interaction of an exposure receptor to phenols. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "phenols exposure" EXACT []
+synonym: "phenols exposure event" EXACT []
+is_a: ECTO:0000163 ! exposure to organic cyclic compound
+is_a: ECTO:0000371 ! exposure to oxygen molecular entity
+
+[Term]
+id: ECTO:0001998
+name: exposure to carrageenan
+def: "A exposure event involving the interaction of an exposure receptor to carrageenan. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "carrageenan exposure" EXACT []
+synonym: "carrageenan exposure event" EXACT []
+is_a: ECTO:0000135 ! exposure to organic
+is_a: ECTO:0000371 ! exposure to oxygen molecular entity
+is_a: ECTO:0000950 ! exposure to algal metabolite
+
+[Term]
+id: ECTO:0001999
+name: exposure to 4-octylphenol
+def: "A exposure event involving the interaction of an exposure receptor to 4-octylphenol. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "4-octylphenol exposure" EXACT []
+synonym: "4-octylphenol exposure event" EXACT []
+is_a: ECTO:0000487 ! exposure to chemical with chemical role
+is_a: ECTO:0000521 ! exposure to metabolite
+is_a: ECTO:0000902 ! exposure to xenoestrogen
+is_a: ECTO:0001997 ! exposure to phenols
+
+[Term]
+id: ECTO:0002000
+name: exposure to pentolinium ion
+def: "A exposure event involving the interaction of an exposure receptor to pentolinium ion. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "pentolinium ion exposure" EXACT []
+synonym: "pentolinium ion exposure event" EXACT []
+is_a: ECTO:0000135 ! exposure to organic
+
+[Term]
+id: ECTO:0002001
+name: exposure to ruthenium red
+def: "A exposure event involving the interaction of an exposure receptor to ruthenium red. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "ruthenium red exposure" EXACT []
+synonym: "ruthenium red exposure event" EXACT []
+is_a: ECTO:0000481 ! exposure to transition element
+is_a: ECTO:0000643 ! exposure to ryanodine receptor modulator
+
+[Term]
+id: ECTO:0002002
+name: exposure to steroid
+def: "A exposure event involving the interaction of an exposure receptor to steroid. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "steroid exposure" EXACT []
+synonym: "steroid exposure event" EXACT []
+is_a: ECTO:0000163 ! exposure to organic cyclic compound
+is_a: ECTO:0000200 ! exposure to lipid
+
+[Term]
+id: ECTO:0002003
+name: exposure to sulfonamide
+def: "A exposure event involving the interaction of an exposure receptor to sulfonamide. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "sulfonamide exposure" EXACT []
+synonym: "sulfonamide exposure event" EXACT []
+is_a: ECTO:0000370 ! exposure to nitrogen
+
+[Term]
+id: ECTO:0002004
+name: exposure to benfotiamine
+def: "A exposure event involving the interaction of an exposure receptor to benfotiamine. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "benfotiamine exposure" EXACT []
+synonym: "benfotiamine exposure event" EXACT []
+is_a: ECTO:0000155 ! exposure to organonitrogen compound
+is_a: ECTO:0000163 ! exposure to organic cyclic compound
+is_a: ECTO:0000250 ! exposure to organophosphorus compound
+is_a: ECTO:0000371 ! exposure to oxygen molecular entity
+is_a: ECTO:0000497 ! exposure to antioxidant
+is_a: ECTO:0000716 ! exposure to nutraceutical
+is_a: ECTO:0000721 ! exposure to immunological adjuvant
+is_a: ECTO:0001989 ! exposure to phosphate
+
+[Term]
+id: ECTO:0002005
+name: exposure to diethylstilbestrol
+def: "A exposure event involving the interaction of an exposure receptor to diethylstilbestrol. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "diethylstilbestrol exposure" EXACT []
+synonym: "diethylstilbestrol exposure event" EXACT []
+is_a: ECTO:0000557 ! exposure to inhibitor
+is_a: ECTO:0000588 ! exposure to antineoplastic agent
+is_a: ECTO:0000725 ! exposure to carcinogenic agent
+is_a: ECTO:0000902 ! exposure to xenoestrogen
+is_a: ECTO:0001997 ! exposure to phenols
+
+[Term]
+id: ECTO:0002006
+name: exposure to acepromazine
+def: "A exposure event involving the interaction of an exposure receptor to acepromazine. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "acepromazine exposure" EXACT []
+synonym: "acepromazine exposure event" EXACT []
+is_a: ECTO:0000155 ! exposure to organonitrogen compound
+is_a: ECTO:0000163 ! exposure to organic cyclic compound
+is_a: ECTO:0000369 ! exposure to ketone
+is_a: ECTO:0000620 ! exposure to phenothiazine antipsychotic drug
+
+[Term]
+id: ECTO:0002007
+name: exposure to dihydrocapsaicin
+def: "A exposure event involving the interaction of an exposure receptor to dihydrocapsaicin. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "dihydrocapsaicin exposure" EXACT []
+synonym: "dihydrocapsaicin exposure event" EXACT []
+is_a: ECTO:0000155 ! exposure to organonitrogen compound
+is_a: ECTO:0000200 ! exposure to lipid
+is_a: ECTO:0000371 ! exposure to oxygen molecular entity
+is_a: ECTO:0000521 ! exposure to metabolite
+
+[Term]
+id: ECTO:0002008
+name: exposure to 5-bromo-2'-deoxyuridine
+def: "A exposure event involving the interaction of an exposure receptor to 5-bromo-2'-deoxyuridine. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "5-bromo-2'-deoxyuridine exposure" EXACT []
+synonym: "5-bromo-2'-deoxyuridine exposure event" EXACT []
+is_a: ECTO:0000155 ! exposure to organonitrogen compound
+is_a: ECTO:0000163 ! exposure to organic cyclic compound
+is_a: ECTO:0000371 ! exposure to oxygen molecular entity
+is_a: ECTO:0000556 ! exposure to antimetabolite
+is_a: ECTO:0000588 ! exposure to antineoplastic agent
+
+[Term]
+id: ECTO:0002009
+name: exposure to 4-methyl-2-oxopentanoic acid
+def: "A exposure event involving the interaction of an exposure receptor to 4-methyl-2-oxopentanoic acid. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "4-methyl-2-oxopentanoic acid exposure" EXACT []
+synonym: "4-methyl-2-oxopentanoic acid exposure event" EXACT []
+is_a: ECTO:0000135 ! exposure to organic
+is_a: ECTO:0000371 ! exposure to oxygen molecular entity
+is_a: ECTO:0000650 ! exposure to Bronsted acid
+is_a: ECTO:0000919 ! exposure to human metabolite
+is_a: ECTO:0000950 ! exposure to algal metabolite
+
+[Term]
+id: ECTO:0002010
+name: exposure to angiotensin II
+def: "A exposure event involving the interaction of an exposure receptor to angiotensin II. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "angiotensin II exposure" EXACT []
+synonym: "angiotensin II exposure event" EXACT []
+is_a: ECTO:0000483 ! exposure to angiotensin
+is_a: ECTO:0000706 ! exposure to vasoconstrictor agent
+
+[Term]
+id: ECTO:0002011
+name: exposure to lithium chloride
+def: "A exposure event involving the interaction of an exposure receptor to lithium chloride. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "lithium chloride exposure" EXACT []
+synonym: "lithium chloride exposure event" EXACT []
+is_a: ECTO:0000137 ! exposure to inorganic
+is_a: ECTO:0000375 ! exposure to salt
+is_a: ECTO:0000568 ! exposure to psychotropic drug
+is_a: ECTO:0000577 ! exposure to central nervous system depressant
+
+[Term]
+id: ECTO:0002013
+name: exposure to naringenin
+def: "A exposure event involving the interaction of an exposure receptor to naringenin. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "naringenin exposure" EXACT []
+synonym: "naringenin exposure event" EXACT []
+is_a: ECTO:0000311 ! exposure to phenylpropanoid
+is_a: ECTO:0000369 ! exposure to ketone
+
+[Term]
+id: ECTO:0002014
+name: exposure to titanium dioxide nanoparticle
+def: "A exposure event involving the interaction of an exposure receptor to titanium dioxide nanoparticle. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "titanium dioxide nanoparticle exposure" EXACT []
+synonym: "titanium dioxide nanoparticle exposure event" EXACT []
+is_a: ECTO:0000481 ! exposure to transition element
+is_a: ECTO:0000910 ! exposure to food colouring
+
+[Term]
+id: ECTO:0002015
+name: exposure to pristane
+def: "A exposure event involving the interaction of an exposure receptor to pristane. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "pristane exposure" EXACT []
+synonym: "pristane exposure event" EXACT []
+is_a: ECTO:0000392 ! exposure to alkane
+is_a: ECTO:0000721 ! exposure to immunological adjuvant
+is_a: ECTO:0000750 ! exposure to biomarker
+
+[Term]
+id: ECTO:0002016
+name: exposure to glyburide
+def: "A exposure event involving the interaction of an exposure receptor to glyburide. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "glyburide exposure" EXACT []
+synonym: "glyburide exposure event" EXACT []
+is_a: ECTO:0000163 ! exposure to organic cyclic compound
+is_a: ECTO:0000557 ! exposure to inhibitor
+is_a: ECTO:0000584 ! exposure to hypoglycemic agent
+is_a: ECTO:0000627 ! exposure to anti-arrhythmia drug
+is_a: ECTO:0001152 ! exposure to organochlorine compound
+is_a: ECTO:0002003 ! exposure to sulfonamide
+
+[Term]
+id: ECTO:0002017
+name: exposure to pentolinium tartrate
+def: "A exposure event involving the interaction of an exposure receptor to pentolinium tartrate. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "pentolinium tartrate exposure" EXACT []
+synonym: "pentolinium tartrate exposure event" EXACT []
+is_a: ECTO:0000375 ! exposure to salt
+is_a: ECTO:0000595 ! exposure to antihypertensive agent
+
+[Term]
+id: ECTO:0002018
+name: exposure to guanethidine
+def: "A exposure event involving the interaction of an exposure receptor to guanethidine. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "guanethidine exposure" EXACT []
+synonym: "guanethidine exposure event" EXACT []
+is_a: ECTO:0000155 ! exposure to organonitrogen compound
+is_a: ECTO:0000163 ! exposure to organic cyclic compound
+is_a: ECTO:0000595 ! exposure to antihypertensive agent
+is_a: ECTO:0000618 ! exposure to adrenergic antagonist
+
+[Term]
+id: ECTO:0002019
+name: exposure to isotretinoin
+def: "A exposure event involving the interaction of an exposure receptor to isotretinoin. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "isotretinoin exposure" EXACT []
+synonym: "isotretinoin exposure event" EXACT []
+is_a: ECTO:0000181 ! exposure to retinoic acid
+is_a: ECTO:0000588 ! exposure to antineoplastic agent
+is_a: ECTO:0000687 ! exposure to keratolytic drug
+is_a: ECTO:0000727 ! exposure to teratogenic agent
+
+[Term]
+id: ECTO:0002020
+name: exposure to isoprenaline
+def: "A exposure event involving the interaction of an exposure receptor to isoprenaline. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "isoprenaline exposure" EXACT []
+synonym: "isoprenaline exposure event" EXACT []
+is_a: ECTO:0000155 ! exposure to organonitrogen compound
+is_a: ECTO:0000314 ! exposure to alcohol
+is_a: ECTO:0000581 ! exposure to beta-adrenergic agonist
+is_a: ECTO:0000582 ! exposure to bronchodilator agent
+is_a: ECTO:0000583 ! exposure to sympathomimetic agent
+is_a: ECTO:0000628 ! exposure to cardiotonic drug
+is_a: ECTO:0001997 ! exposure to phenols
+
+[Term]
+id: ECTO:0002021
+name: exposure to losartan
+def: "A exposure event involving the interaction of an exposure receptor to losartan. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "losartan exposure" EXACT []
+synonym: "losartan exposure event" EXACT []
+is_a: ECTO:0000155 ! exposure to organonitrogen compound
+is_a: ECTO:0000163 ! exposure to organic cyclic compound
+is_a: ECTO:0000595 ! exposure to antihypertensive agent
+is_a: ECTO:0000627 ! exposure to anti-arrhythmia drug
+is_a: ECTO:0000768 ! exposure to angiotensin receptor antagonist
+
+[Term]
+id: ECTO:0002022
+name: exposure to methacholine
+def: "A exposure event involving the interaction of an exposure receptor to methacholine. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "methacholine exposure" EXACT []
+synonym: "methacholine exposure event" EXACT []
+is_a: ECTO:0000135 ! exposure to organic
+is_a: ECTO:0000270 ! exposure to ammonium ion
+is_a: ECTO:0000371 ! exposure to oxygen molecular entity
+is_a: ECTO:0000590 ! exposure to vasodilator agent
+is_a: ECTO:0000634 ! exposure to muscarinic agonist
+is_a: ECTO:0000686 ! exposure to bronchoconstrictor agent
+is_a: ECTO:0000742 ! exposure to epitope
+
+[Term]
+id: ECTO:0002023
+name: exposure to methylene blue
+def: "A exposure event involving the interaction of an exposure receptor to methylene blue. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "methylene blue exposure" EXACT []
+synonym: "methylene blue exposure event" EXACT []
+is_a: ECTO:0000375 ! exposure to salt
+is_a: ECTO:0000497 ! exposure to antioxidant
+is_a: ECTO:0000554 ! exposure to tracer
+is_a: ECTO:0000567 ! exposure to antidepressant
+is_a: ECTO:0000616 ! exposure to EC 3.1.1.8 (cholinesterase) inhibitor
+is_a: ECTO:0000626 ! exposure to antimalarial
+is_a: ECTO:0000789 ! exposure to neuroprotective agent
+is_a: ECTO:0000909 ! exposure to histological dye
+is_a: ECTO:0000912 ! exposure to cardioprotective agent
+
+[Term]
+id: ECTO:0002024
+name: exposure to 1
+def: "A exposure event involving the interaction of an exposure receptor to 1. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "1 exposure" EXACT []
+synonym: "1 exposure event" EXACT []
+is_a: ECTO:0000370 ! exposure to nitrogen
+is_a: ECTO:0000496 ! exposure to alkylating agent
+is_a: ECTO:0000725 ! exposure to carcinogenic agent
+
+[Term]
+id: ECTO:0002025
+name: exposure to chrysin
+def: "A exposure event involving the interaction of an exposure receptor to chrysin. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "chrysin exposure" EXACT []
+synonym: "chrysin exposure event" EXACT []
+is_a: ECTO:0000135 ! exposure to organic
+is_a: ECTO:0000371 ! exposure to oxygen molecular entity
+is_a: ECTO:0000497 ! exposure to antioxidant
+is_a: ECTO:0000588 ! exposure to antineoplastic agent
+is_a: ECTO:0000614 ! exposure to protein kinase inhibitor
+is_a: ECTO:0000778 ! exposure to hepatoprotective agent
+is_a: ECTO:0000833 ! exposure to anti-inflammatory agent
+is_a: ECTO:0000893 ! exposure to plant metabolite
+
+[Term]
+id: ECTO:0002026
+name: exposure to 3-methyl-4'-dimethylaminoazobenzene
+def: "A exposure event involving the interaction of an exposure receptor to 3-methyl-4'-dimethylaminoazobenzene. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "3-methyl-4'-dimethylaminoazobenzene exposure" EXACT []
+synonym: "3-methyl-4'-dimethylaminoazobenzene exposure event" EXACT []
+is_a: ECTO:0000155 ! exposure to organonitrogen compound
+is_a: ECTO:0000163 ! exposure to organic cyclic compound
+is_a: ECTO:0000725 ! exposure to carcinogenic agent
+
+[Term]
+id: ECTO:0002028
+name: exposure to oxidopamine
+def: "A exposure event involving the interaction of an exposure receptor to oxidopamine. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "oxidopamine exposure" EXACT []
+synonym: "oxidopamine exposure event" EXACT []
+is_a: ECTO:0000285 ! exposure to catecholamine
+is_a: ECTO:0000678 ! exposure to drug metabolite
+is_a: ECTO:0000730 ! exposure to neurotoxin
+
+[Term]
+id: ECTO:0002029
+name: exposure to phenylephrine
+def: "A exposure event involving the interaction of an exposure receptor to phenylephrine. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "phenylephrine exposure" EXACT []
+synonym: "phenylephrine exposure event" EXACT []
+is_a: ECTO:0000155 ! exposure to organonitrogen compound
+is_a: ECTO:0000314 ! exposure to alcohol
+is_a: ECTO:0000583 ! exposure to sympathomimetic agent
+is_a: ECTO:0000628 ! exposure to cardiotonic drug
+is_a: ECTO:0000705 ! exposure to mydriatic agent
+is_a: ECTO:0000706 ! exposure to vasoconstrictor agent
+
+[Term]
+id: ECTO:0002030
+name: exposure to streptozocin
+def: "A exposure event involving the interaction of an exposure receptor to streptozocin. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "streptozocin exposure" EXACT []
+synonym: "streptozocin exposure event" EXACT []
+is_a: ECTO:0000135 ! exposure to organic
+is_a: ECTO:0000370 ! exposure to nitrogen
+is_a: ECTO:0000371 ! exposure to oxygen molecular entity
+is_a: ECTO:0000521 ! exposure to metabolite
+is_a: ECTO:0000544 ! exposure to antimicrobial agent
+is_a: ECTO:0000588 ! exposure to antineoplastic agent
+is_a: ECTO:0000752 ! exposure to DNA synthesis inhibitor
+
+[Term]
+id: ECTO:0002031
+name: exposure to trimethaphan camsylate
+def: "A exposure event involving the interaction of an exposure receptor to trimethaphan camsylate. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "trimethaphan camsylate exposure" EXACT []
+synonym: "trimethaphan camsylate exposure event" EXACT []
+is_a: ECTO:0000163 ! exposure to organic cyclic compound
+is_a: ECTO:0000595 ! exposure to antihypertensive agent
+
+[Term]
+id: ECTO:0002032
+name: Activity related exposure
+def: "A exposure event involving Activity." []
+synonym: "Activity" NARROW []
+synonym: "Activity exposure" EXACT []
+is_a: ExO:0000002
+
+[Term]
+id: ECTO:0002033
+name: Social Circumstances related exposure
+def: "A exposure event involving Social Circumstances." []
+synonym: "Social Circumstances" NARROW []
+synonym: "Social Circumstances exposure" EXACT []
+is_a: ExO:0000002
+
+[Term]
+id: ECTO:0002034
+name: Socioeconomic Factors related exposure
+def: "A exposure event involving Socioeconomic Factors." []
+synonym: "Socioeconomic Factors" NARROW []
+synonym: "Socioeconomic Factors exposure" EXACT []
+is_a: ECTO:0002033 ! Social Circumstances related exposure
 
 [Term]
 id: ExO:0000002

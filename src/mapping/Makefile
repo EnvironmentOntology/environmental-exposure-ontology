@@ -30,6 +30,8 @@ exposure-exo.obo:
 exposure-mre.obo:
 	blip ontol-query -r mre -query "class(ID)" -to obo  > $@
 
+access-ncit.obo:
+	blip ontol-query -r ncit -n 'Access to%' -to obo > $@
 
 
 
@@ -97,6 +99,9 @@ unmatched_ecto.tsv: combined-exposure.obo ignore.pro
 
 not_in_ecto.tsv: combined-exposure.obo ignore.pro
 	blip-findall  -i ignore.pro -debug index -goal nlp_index_all -i $< -i $(ECTO) -u metadata_nlp "entity_nomatch_to(X,'ECTO')"  -label -select X > $@.tmp && mv $@.tmp $@
+
+not_in_ecto_x.tsv: combined-exposure.obo ignore.pro
+	blip-findall  -i ignore.pro -debug index -goal nlp_index_all -i $< -i $(ECTO) -u metadata_nlp "entity_nomatch_to(X,'ECTO'),entity_xref(X,Y)"  -label -select X-Y -no_pred > $@.tmp && mv $@.tmp $@
 
 
 mirror-chebi.obo:

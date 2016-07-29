@@ -87,7 +87,6 @@ imports/%_import.owl: $(SRC) mirror/%.owl imports/seed.tsv
 imports/%_import.obo: imports/%_import.owl
 	owltools $(USECAT) $< -o -f obo --no-check $@
 
-
 # clone remote ontology locally, perfoming some excision of relations and annotations
 mirror/%.obo:
 	wget --no-check-certificate $(OBO)/$*.obo -O $@

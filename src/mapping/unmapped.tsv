@@ -5,7 +5,6 @@ EO:0001006 ! phosphate treatment
 EO:0001007 ! mineral salt treatment
 EO:0001008 ! sulfate treatment
 EO:0001009 ! inorganic anion treatment
-EO:0001016 ! inorganic cation treatment
 EO:0001019 ! organic gas treatment
 EO:0001023 ! agar growth medium
 EO:0001024 ! vertical agar growth medium
@@ -453,9 +452,7 @@ EO:0007617 ! ggr ray
 EO:0007618 ! 137-Cs or ggr ray
 EO:0007619 ! 226-Ra or agr ray
 EO:0007620 ! 60-Co or ggr ray
-EO:0007622 ! neutrons
 EO:0007623 ! 252-Cf fission neutrons
-EO:0007624 ! radio wave
 EO:0007625 ! stratosphere exposure
 EO:0007626 ! supersonic-treatment
 EO:0007629 ! hydrogen regimen
@@ -542,6 +539,7 @@ GO:0000305 ! response to oxygen radical
 GO:0000749 ! response to pheromone involved in conjugation with cellular fusion
 GO:0000756 ! response to pheromone involved in conjugation with mutual genetic exchange
 GO:0000765 ! response to pheromone involved in pheromone-induced unidirectional conjugation
+GO:0001101 ! response to acid chemical
 GO:0001878 ! response to yeast
 GO:0001975 ! response to amphetamine
 GO:0002021 ! response to dietary excess
@@ -552,7 +550,6 @@ GO:0002240 ! response to molecule of oomycetes origin
 GO:0002241 ! response to parasitic plant
 GO:0002347 ! response to tumor cell
 GO:0002931 ! response to ischemia
-GO:0006950 ! response to stress
 GO:0006982 ! response to lipid hydroperoxide
 GO:0006986 ! response to unfolded protein
 GO:0006991 ! response to sterol depletion
@@ -639,6 +636,7 @@ GO:0032572 ! response to menaquinone
 GO:0032573 ! response to phylloquinone
 GO:0033194 ! response to hydroperoxide
 GO:0033195 ! response to alkyl hydroperoxide
+GO:0033198 ! response to ATP
 GO:0033274 ! response to vitamin B2
 GO:0033280 ! response to vitamin D
 GO:0033552 ! response to vitamin B3
@@ -702,7 +700,6 @@ GO:0036296 ! response to increased oxygen levels
 GO:0036314 ! response to sterol
 GO:0042220 ! response to cocaine
 GO:0042594 ! response to starvation
-GO:0043157 ! response to cation stress
 GO:0043201 ! response to leucine
 GO:0043207 ! response to external biotic stimulus
 GO:0043278 ! response to morphine
@@ -1036,7 +1033,6 @@ GO:1990089 ! response to nerve growth factor
 GO:1990267 ! response to transition metal nanoparticle
 GO:1990268 ! response to gold nanoparticle
 GO:1990418 ! response to insulin-like growth factor stimulus
-GO:1990478 ! response to ultrasound
 GO:1990637 ! response to prolactin
 GO:1990638 ! response to granulocyte colony-stimulating factor
 GO:1990641 ! response to iron ion starvation
@@ -1157,7 +1153,6 @@ MRE:0000105 ! Exposure to chemical element
 MRE:0000107 ! Exposure to metalloid
 MRE:0000108 ! Exposure to antimony
 MRE:0000110 ! Exposure to barium
-MRE:0000111 ! Exposure to beryllium
 MRE:0000119 ! Exposure to molybdenum
 MRE:0000122 ! Exposure to strontium
 MRE:0000123 ! Exposure to thallium
@@ -1202,7 +1197,6 @@ MRE:0000169 ! Exposure to 2,2',4,4',5,6'-hexabromodiphenyl ether
 MRE:0000170 ! Exposure to 2,2',3,4,4',5',6-heptabromodiphenyl ether
 MRE:0000171 ! Exposure to 2,2',3,3',4,4',5,5',6,6'-decabromodiphenyl ether
 MRE:0000172 ! Exposure to 2,2',4,4',5,5'-hexabromobiphenyl
-MRE:0000173 ! Exposure to inorganic compound
 MRE:0000174 ! Exposure to paraben
 MRE:0000175 ! Exposure to butyl paraben
 MRE:0000176 ! Exposure to ethyl paraben
@@ -1487,7 +1481,6 @@ NCIT:C44340 ! b-Hexachlorocyclohexane
 NCIT:C44341 ! Diethylhexylphthalate
 NCIT:C44343 ! Bis(chloromethyl) Ether
 NCIT:C44346 ! Bromoethene
-NCIT:C44349 ! Cadmium Compound
 NCIT:C44352 ! Chlordecone
 NCIT:C44353 ! Chlorendic Acid
 NCIT:C44355 ! Chloromethyl Methyl Ether
@@ -1513,13 +1506,11 @@ NCIT:C44385 ! Furan
 NCIT:C44387 ! Glycidol
 NCIT:C44388 ! Hexachlorobenzene
 NCIT:C44392 ! Hydrazobenzene
-NCIT:C44395 ! Lead Compound
 NCIT:C44397 ! Lindane
 NCIT:C44400 ! Methylene Chloride
 NCIT:C44402 ! Michler's Base
 NCIT:C44403 ! Michler's Ketone
 NCIT:C44404 ! Mirex
-NCIT:C44407 ! Nickel Compound
 NCIT:C44408 ! Nitrilotriacetic Acid
 NCIT:C44411 ! Nitrofen
 NCIT:C44412 ! Nitromethane
@@ -1568,8 +1559,6 @@ NCIT:C45534 ! Direct Brown 95
 NCIT:C45537 ! Respirable Quartz
 NCIT:C45538 ! Respirable Cristobalite
 NCIT:C45539 ! Respirable Tridymite
-NCIT:C45557 ! Arsenic Compound
-NCIT:C45558 ! Beryllium Compound
 NCIT:C45593 ! UV Mutation Abnormality
 NCIT:C45863 ! Nickel Hydroxide
 NCIT:C45864 ! Nickel Monoxide
@@ -1798,6 +1787,7 @@ XCO:0000022 ! controlled sodium content diet
 XCO:0000023 ! controlled ethanol content drinking water
 XCO:0000024 ! controlled iron content diet
 XCO:0000025 ! controlled fat content diet
+XCO:0000026 ! surgical removal
 XCO:0000027 ! surgical implantation
 XCO:0000028 ! caffeinated drink
 XCO:0000029 ! controlled carbohydrate content diet
@@ -1809,6 +1799,8 @@ XCO:0000035 ! housing in pairs
 XCO:0000036 ! housing with socially dominant partner
 XCO:0000037 ! housing with socially subordinate partner
 XCO:0000041 ! radon exposure
+XCO:0000044 ! non-ionizing radiation exposure
+XCO:0000046 ! infrared radiation exposure
 XCO:0000047 ! sensory stimulus
 XCO:0000049 ! visual stimulus
 XCO:0000050 ! olfactory stimulus
@@ -1817,7 +1809,6 @@ XCO:0000052 ! tactile stimulus
 XCO:0000053 ! targeted heat exposure
 XCO:0000054 ! targeted cold exposure
 XCO:0000055 ! electric shock exposure
-XCO:0000056 ! naive control condition
 XCO:0000057 ! rebreathed air
 XCO:0000058 ! room temperature ambient air
 XCO:0000059 ! physical activity
@@ -1917,6 +1908,8 @@ XCO:0000174 ! inulin
 XCO:0000175 ! tritiated inulin
 XCO:0000176 ! enzyme
 XCO:0000177 ! thrombin
+XCO:0000179 ! ionizing ultraviolet radiation exposure
+XCO:0000180 ! non-ionizing ultraviolet radiation exposure
 XCO:0000181 ! controlled visible light condition
 XCO:0000182 ! controlled exposure to ambient light
 XCO:0000185 ! calcium ion solution
@@ -2078,6 +2071,7 @@ XCO:0000364 ! Toxoplasma gondii
 XCO:0000365 ! Toxoplasma gondii cysts
 XCO:0000367 ! sham surgical device implantation
 XCO:0000368 ! autoimmune disease-inducing chemical
+XCO:0000369 ! aurothiopropanol sulfonate
 XCO:0000370 ! Trichinella spiralis
 XCO:0000371 ! Trichinella spiralis larvae
 XCO:0000373 ! surgical denervation
@@ -2191,98 +2185,116 @@ XCO:0000496 ! neurotoxin
 XCO:0000497 ! Parkinson disease inducing chemical
 XCO:0000498 ! oxidopamine
 XCO:0000499 ! 1-methyl-4-phenyl-1,2,3,6-tetrahydropyridine
-ZECO:0000126 ! generic control
-ZECO:0000127 ! standard
-ZECO:0000129 ! physical experimental conditions
-ZECO:0000132 ! fin amputation
-ZECO:0000133 ! caudal fin amputation
-ZECO:0000134 ! pectoral fin amputation
-ZECO:0000135 ! heart amputation
-ZECO:0000136 ! barbel amputation
-ZECO:0000137 ! targeted damage (ablation)
-ZECO:0000138 ! retinal damage
-ZECO:0000140 ! perforation
-ZECO:0000141 ! skin damage
-ZECO:0000142 ! mechanical stress
-ZECO:0000143 ! vibration
-ZECO:0000147 ! electric field
-ZECO:0000157 ! gas composition
-ZECO:0000158 ! carbon dioxide content
-ZECO:0000159 ! hypocapnia
-ZECO:0000160 ! hypercapnia
-ZECO:0000164 ! water salinity
-ZECO:0000165 ! hypertonic
-ZECO:0000166 ! hypotonic
-ZECO:0000167 ! isotonic
-ZECO:0000168 ! stable
-ZECO:0000169 ! ion composition
-ZECO:0000170 ! modified calcium composition
-ZECO:0000171 ! high calcium
-ZECO:0000172 ! low calcium
-ZECO:0000173 ! modified sodium composition
-ZECO:0000174 ! high sodium
-ZECO:0000175 ! low sodium
-ZECO:0000176 ! modified potassium
-ZECO:0000177 ! high potassium
-ZECO:0000178 ! low potassium
-ZECO:0000179 ! ph (of the environment) hydrogen ion concentration
-ZECO:0000181 ! basic
-ZECO:0000182 ! germ free
-ZECO:0000184 ! overcrowding
-ZECO:0000185 ! open roofed
-ZECO:0000187 ! stable temperature exposure
-ZECO:0000189 ! hot exposure
-ZECO:0000190 ! exposure to temperature shock
-ZECO:0000191 ! cold shock
-ZECO:0000194 ! food availability
-ZECO:0000196 ! limited availability
-ZECO:0000197 ! unlimited availability
-ZECO:0000198 ! food content
-ZECO:0000199 ! fat content
-ZECO:0000200 ! high fat
-ZECO:0000201 ! high triglyceride
-ZECO:0000202 ! high ldl
-ZECO:0000203 ! high hdl
-ZECO:0000204 ! low fat
-ZECO:0000205 ! low triglyceride
-ZECO:0000206 ! low ldl
-ZECO:0000207 ! low hdl
-ZECO:0000208 ! cholesterol content
-ZECO:0000209 ! high cholesterol
-ZECO:0000210 ! low cholesterol
-ZECO:0000211 ! sugar content
-ZECO:0000212 ! high sugar
-ZECO:0000213 ! high glucose
-ZECO:0000214 ! high fructose
-ZECO:0000215 ! high sucrose
-ZECO:0000216 ! low sugar
-ZECO:0000217 ! low glucose
-ZECO:0000218 ! low fructose
-ZECO:0000219 ! low  sucrose
-ZECO:0000220 ! protein content
-ZECO:0000221 ! high protein
-ZECO:0000222 ! low protein
-ZECO:0000223 ! food contaminated content
-ZECO:0000225 ! radionuclides
-ZECO:0000226 ! lighting conditions
-ZECO:0000227 ! light duration
-ZECO:0000228 ! constant light
-ZECO:0000229 ! constant dark
-ZECO:0000230 ! altered light/dark cycle
-ZECO:0000232 ! high intensity
-ZECO:0000233 ! low intensity
-ZECO:0000235 ! bacterial treatment
-ZECO:0000236 ! fungal treatment
-ZECO:0000237 ! viral treatment
-ZECO:0000240 ! genetic treatment
-ZECO:0000241 ! mo
-ZECO:0000242 ! talen
-ZECO:0000243 ! crisper
-ZECO:0000244 ! rna injection
-ZECO:0000245 ! protein injection
-ZECO:0000246 ! in vitro culture
-ZECO:0000247 ! organ culture
-ZECO:0000248 ! primary cell culture
+ZECO:0000102 ! generic control
+ZECO:0000106 ! bacterial treatment
+ZECO:0000107 ! fungal treatment
+ZECO:0000108 ! germ free
+ZECO:0000110 ! viral treatment
+ZECO:0000113 ! food availability
+ZECO:0000115 ! limited availability
+ZECO:0000116 ! unlimited availability
+ZECO:0000117 ! food content
+ZECO:0000118 ! cholesterol content
+ZECO:0000119 ! high cholesterol
+ZECO:0000120 ! low cholesterol
+ZECO:0000121 ! fat content
+ZECO:0000122 ! high fat
+ZECO:0000123 ! high saturated fat
+ZECO:0000124 ! high monounsaturated fat
+ZECO:0000125 ! low fat
+ZECO:0000126 ! low trans fat
+ZECO:0000127 ! low polyunsaturated fat
+ZECO:0000128 ! protein content
+ZECO:0000129 ! high protein
+ZECO:0000130 ! low protein
+ZECO:0000132 ! high sugar
+ZECO:0000133 ! high fructose
+ZECO:0000134 ! high glucose
+ZECO:0000135 ! high sucrose
+ZECO:0000136 ! low sugar
+ZECO:0000137 ! low sucrose
+ZECO:0000138 ! low fructose
+ZECO:0000139 ! low glucose
+ZECO:0000141 ! open roofed
+ZECO:0000142 ! overcrowding
+ZECO:0000143 ! in vitro culture
+ZECO:0000144 ! organ culture
+ZECO:0000145 ! primary cell culture
+ZECO:0000146 ! lighting conditions
+ZECO:0000147 ! light duration
+ZECO:0000148 ! altered light dark cycle
+ZECO:0000149 ! constant dark
+ZECO:0000150 ! constant light
+ZECO:0000155 ! mechanical stress
+ZECO:0000156 ! vibration
+ZECO:0000157 ! water flow
+ZECO:0000158 ! circular flow
+ZECO:0000159 ! through flow
+ZECO:0000161 ! stable temperature exposure
+ZECO:0000164 ! temperature shock
+ZECO:0000165 ! cold shock
+ZECO:0000168 ! ablation
+ZECO:0000169 ! chemical ablation
+ZECO:0000170 ! light ablation
+ZECO:0000171 ! resection
+ZECO:0000172 ! amputation
+ZECO:0000173 ! vaccine treatment
+ZECO:0000174 ! laceration
+ZECO:0000177 ! xenotransplantation
+ZECO:0000178 ! perforation
+ZECO:0000179 ! abrasion
+ZECO:0000180 ! contusion
+ZECO:0000181 ! transection
+ZECO:0000183 ! gas composition
+ZECO:0000184 ! carbon dioxide content
+ZECO:0000185 ! hypercapnia
+ZECO:0000186 ! hypocapnia
+ZECO:0000190 ! ion composition
+ZECO:0000191 ! modified calcium composition
+ZECO:0000192 ! high calcium
+ZECO:0000193 ! low calcium
+ZECO:0000194 ! modified potassium composition
+ZECO:0000195 ! high potassium
+ZECO:0000196 ! low potassium
+ZECO:0000197 ! modified sodium composition
+ZECO:0000198 ! high sodium
+ZECO:0000199 ! low sodium
+ZECO:0000201 ! acidic
+ZECO:0000202 ! basic
+ZECO:0000203 ! water salinity
+ZECO:0000204 ! hypertonic
+ZECO:0000205 ! hypotonic
+ZECO:0000206 ! isotonic
+ZECO:0000207 ! stable
+ZECO:0000211 ! microwaves
+ZECO:0000212 ! infared
+ZECO:0000216 ! gama ray
+ZECO:0000217 ! particle radiation
+ZECO:0000218 ! proton
+ZECO:0000220 ! acoustic radiation
+ZECO:0000221 ! alpha particle
+ZECO:0000222 ! electromagnetic field
+ZECO:0000223 ! electric field
+ZECO:0000225 ! high polysunsaturated fat
+ZECO:0000226 ! high trans fat
+ZECO:0000227 ! low saturated fat
+ZECO:0000228 ! low monounsaturated fat
+ZECO:0000229 ! physical alteration
+ZECO:0000230 ! bacterial treatment by injection
+ZECO:0000231 ! bacterial treatment by exposure to environment
+ZECO:0000232 ! fungal treatment by injection
+ZECO:0000233 ! fungal treatment by exposure to environment
+ZECO:0000234 ! viral treatment by exposure to environment
+ZECO:0000235 ! viral treatment by injection
+ZECO:0000236 ! cancer xenotransplantation
+ZECO:0000237 ! chemical treatment by injection
+ZECO:0000238 ! chemical treatment by environment
+ZECO:0000239 ! chemical treatment by diet
+ZECO:0000240 ! carbohydrate content
+ZECO:0000241 ! high carbohydrate
+ZECO:0000242 ! low carbohydrate
+ZECO:0000243 ! stress by handling
+ZECO:0000245 ! light damage
 characterizes
 has_component
 interacts_with

@@ -20903,630 +20903,821 @@ xref: BFO:0000050
 
 
 [Term]
-id: ZECO:0000124
+id: ZECO:0000100
 name: conditions
-is_a: owl:Thing 
+def: "The state in which an organism exists. " []
+
+[Term]
+id: ZECO:0000101
+name: control conditions
+def: "Condition which serves as a standard against which experimental conditions can be compared." []
+is_a: ZECO:0000100  ! conditions
+
+[Term]
+id: ZECO:0000102
+name: generic control
+def: "Control condition in which the conditions of the organism in the control experiment are not standard but are being used as the condition against which the experimental condition is compared." []
+synonym: "innocuous condition" EXACT []
+is_a: ZECO:0000101  ! control conditions
+
+[Term]
+id: ZECO:0000103
+name: standard conditions
+def: "Experimental condition that is the standard environment for zebrafish husbandry, as described in bThe Zebrafish Bookb. In general the standard environment utilizes contaminant free tank water, heated to 28.5 degrees C, with the fish fed a normal contaminant free diet, with standard osmolarity, pH, and normal light cycle of 14hr light/10hr dark." []
+is_a: ZECO:0000100  ! conditions
+
+[Term]
+id: ZECO:0000104
+name: experimental conditions
+def: "Condition in which variables of the experiment are manipulated to determine the variables effect by comparing to a control condition." []
+is_a: ZECO:0000100  ! conditions
+
+[Term]
+id: ZECO:0000105
+name: biological treatment
+def: "Experimental condition in which the organism is treated with a microorganism." []
+is_a: ZECO:0000104  ! experimental conditions
+
+[Term]
+id: ZECO:0000106
+name: bacterial treatment
+def: "Biological treatment in which fish have been infected with bacteria. This infection can be done by addition of bacteria in the water or by injection of bacteria, (for example in the brain ventricle, in the caudal vein, in the yolk sac), or ingestion, or other means." []
+is_a: ZECO:0000105  ! biological treatment
+
+[Term]
+id: ZECO:0000107
+name: fungal treatment
+def: "Biological treatment in which fish have been infected with a fungus." []
+is_a: ZECO:0000105  ! biological treatment
+
+[Term]
+id: ZECO:0000108
+name: germ free
+def: "Biological treatment in which fish were raised in the absence of bacteria." []
+is_a: ZECO:0000105  ! biological treatment
+
+[Term]
+id: ZECO:0000109
+name: protozoan treatment
+def: "Biological treatment in which fish have been infected with protozoa." []
+is_a: ZECO:0000105  ! biological treatment
+
+[Term]
+id: ZECO:0000110
+name: viral treatment
+def: "Biological treatment in which fish have been infected with a virus." []
+is_a: ZECO:0000105  ! biological treatment
+
+[Term]
+id: ZECO:0000111
+name: chemical treatment
+def: "Experimental condition in which the fish is treated with a chemical substance. This treatment could be administered by adding the chemical substance to the tank water, injections, or by consumption." []
+is_a: ZECO:0000104  ! experimental conditions
+
+[Term]
+id: ZECO:0000112
+name: diet
+def: "Experimental condition where the food of the zebrafish is manipulated in some way." []
+is_a: ZECO:0000104  ! experimental conditions
+
+[Term]
+id: ZECO:0000113
+name: food availability
+def: "Diet condition in which the availabity of food is manipulated." []
+is_a: ZECO:0000112  ! diet
+
+[Term]
+id: ZECO:0000114
+name: fasting
+def: "Limited food availability condition in which there is no food provided." []
+is_a: ZECO:0000115  ! limited availability
+
+[Term]
+id: ZECO:0000115
+name: limited availability
+def: "Food availability condition in which food is provided in limited supply." []
+is_a: ZECO:0000113  ! food availability
+
+[Term]
+id: ZECO:0000116
+name: unlimited availability
+def: "Food availability condition in which food is available in unlimited supply." []
+is_a: ZECO:0000113  ! food availability
+
+[Term]
+id: ZECO:0000117
+name: food content
+def: "Diet condition in which the contents of the food is manipulated." []
+is_a: ZECO:0000112  ! diet
+
+[Term]
+id: ZECO:0000118
+name: cholesterol content
+def: "Food content condition in which the amount of cholesterol in the diet is manipulated." []
+is_a: ZECO:0000117  ! food content
+
+[Term]
+id: ZECO:0000119
+name: high cholesterol
+def: "Cholesterol content condition in which the amount of cholesterol in the diet is elevated." []
+is_a: ZECO:0000118  ! cholesterol content
+
+[Term]
+id: ZECO:0000120
+name: low cholesterol
+def: "Cholesterol content condition in which the amount of cholesterol in the diet is reduced." []
+is_a: ZECO:0000118  ! cholesterol content
+
+[Term]
+id: ZECO:0000121
+name: fat content
+def: "Food content condition in which the amount of fat in the diet is manipulated." []
+is_a: ZECO:0000117  ! food content
+
+[Term]
+id: ZECO:0000122
+name: high fat
+def: "Fat content condition in which the amount of fat in the diet is elevated." []
+is_a: ZECO:0000121  ! fat content
+
+[Term]
+id: ZECO:0000123
+name: high saturated fat
+def: "High fat condition in which the amount of saturated fat in the diet is elevated." []
+is_a: ZECO:0000122  ! high fat
+
+[Term]
+id: ZECO:0000124
+name: high monounsaturated fat
+def: "High fat condition in which the amount of monounsaturated fat in the diet is elevated." []
+is_a: ZECO:0000122  ! high fat
 
 [Term]
 id: ZECO:0000125
-name: control conditions
-is_a: ZECO:0000124  ! conditions
+name: low fat
+def: "Fat content condition in which the amount of fat in the diet is reduced." []
+is_a: ZECO:0000121  ! fat content
 
 [Term]
 id: ZECO:0000126
-name: generic control
-is_a: ZECO:0000125  ! control conditions
+name: low trans fat
+def: "Low fat condition in which the amount of trans fat in the diet is reduced." []
+is_a: ZECO:0000125  ! low fat
 
 [Term]
 id: ZECO:0000127
-name: standard
-is_a: ZECO:0000125  ! control conditions
+name: low polyunsaturated fat
+def: "Low fat condition in which the amount of polyunsaturated fat in the diet is reduced." []
+is_a: ZECO:0000125  ! low fat
 
 [Term]
 id: ZECO:0000128
-name: experimental conditions
-is_a: ZECO:0000124  ! conditions
+name: protein content
+def: "Food content condition in which the amount of protein in the diet is manipulated." []
+is_a: ZECO:0000117  ! food content
 
 [Term]
 id: ZECO:0000129
-name: physical experimental conditions
-is_a: ZECO:0000128  ! experimental conditions
+name: high protein
+def: "Protein content condition in which the protein in the diet is elevated." []
+is_a: ZECO:0000128  ! protein content
 
 [Term]
 id: ZECO:0000130
-name: surgical manipulation
-is_a: ZECO:0000129  ! physical experimental conditions
+name: low protein
+def: "Protein content condition in which the protein in the diet is reduced." []
+is_a: ZECO:0000128  ! protein content
 
 [Term]
 id: ZECO:0000131
-name: surgical removal
-is_a: ZECO:0000129  ! physical experimental conditions
+name: stress
+is_a: ZECO:0000104  ! experimental conditions
 
 [Term]
 id: ZECO:0000132
-name: fin amputation
-is_a: ZECO:0000131  ! surgical removal
+name: high sugar
+def: "High carbohydrate conditions in which the amount of sugar in the diet is elevated." []
+is_a: ZECO:0000241  ! high carbohydrate
 
 [Term]
 id: ZECO:0000133
-name: caudal fin amputation
-is_a: ZECO:0000132  ! fin amputation
+name: high fructose
+def: "High sugar condition in which the amount of fructose in the diet is elevated." []
+is_a: ZECO:0000132  ! high sugar
 
 [Term]
 id: ZECO:0000134
-name: pectoral fin amputation
-is_a: ZECO:0000132  ! fin amputation
+name: high glucose
+def: "High sugar condition in which the amount of glucose in the diet is elevated." []
+is_a: ZECO:0000132  ! high sugar
 
 [Term]
 id: ZECO:0000135
-name: heart amputation
-is_a: ZECO:0000131  ! surgical removal
+name: high sucrose
+def: "High sugar condition in which the amount of sucrose in the diet is elevated." []
+is_a: ZECO:0000132  ! high sugar
 
 [Term]
 id: ZECO:0000136
-name: barbel amputation
-is_a: ZECO:0000131  ! surgical removal
+name: low sugar
+def: "High carbohydrate conditions in which the amount of sugar in the diet is reduced." []
+is_a: ZECO:0000242  ! low carbohydrate
 
 [Term]
 id: ZECO:0000137
-name: targeted damage (ablation)
-is_a: ZECO:0000129  ! physical experimental conditions
+name: low sucrose
+def: "Low sugar condition in which the amount of sucrose in the diet is reduced." []
+is_a: ZECO:0000136  ! low sugar
 
 [Term]
 id: ZECO:0000138
-name: retinal damage
-is_a: ZECO:0000137  ! targeted damage (ablation)
+name: low fructose
+def: "Low sugar condition in which the amount of fructose in the diet is reduced." []
+is_a: ZECO:0000136  ! low sugar
 
 [Term]
 id: ZECO:0000139
-name: high intensity light
-is_a: ZECO:0000138  ! retinal damage
+name: low glucose
+def: "Low sugar condition in which the amount of glucose in the diet is reduced." []
+is_a: ZECO:0000136  ! low sugar
 
 [Term]
 id: ZECO:0000140
-name: perforation
-is_a: ZECO:0000138  ! retinal damage
+name: housing conditions
+def: "Experimental condition that manipulates the enclosure of the fish." []
+is_a: ZECO:0000104  ! experimental conditions
 
 [Term]
 id: ZECO:0000141
-name: skin damage
-is_a: ZECO:0000137  ! targeted damage (ablation)
+name: open roofed
+def: "Housing condition in which the roof of the enclosure if open." []
+is_a: ZECO:0000140  ! housing conditions
 
 [Term]
 id: ZECO:0000142
-name: mechanical stress
-is_a: ZECO:0000129  ! physical experimental conditions
+name: overcrowding
+def: "Housing condition in which the enclosure of the fish is overcrowded or contains an excess of fish or obstacles that reduce the available space of the enclosure. " []
+is_a: ZECO:0000140  ! housing conditions
 
 [Term]
 id: ZECO:0000143
-name: vibration
-is_a: ZECO:0000142  ! mechanical stress
+name: in vitro culture
+def: "Experimental condition in which components of the fish have been removed and are maintained separately." []
+is_a: ZECO:0000104  ! experimental conditions
 
 [Term]
 id: ZECO:0000144
-name: gravity
-is_a: ZECO:0000129  ! physical experimental conditions
+name: organ culture
+def: "In vitro culture condition in which an organ is dissected/isolated/collected from the fish and placed in culture. The analysis of the experiment is done on this organ in culture." []
+is_a: ZECO:0000143  ! in vitro culture
 
 [Term]
 id: ZECO:0000145
-name: electromagnetic radiation experimental conditions
-is_a: ZECO:0000128  ! experimental conditions
+name: primary cell culture
+def: "In vitro culture condition in which an embryo or adult fish is dissociated to a single cell suspension. The analysis is made on this cell culture." []
+is_a: ZECO:0000143  ! in vitro culture
 
 [Term]
 id: ZECO:0000146
-name: magnetic field
-is_a: ZECO:0000145  ! electromagnetic radiation experimental conditions
+name: lighting conditions
+def: "Experimental condition in which the intensity, wavelength, and/or duration of illumination is (are) different from the one in controlled conditions." []
+is_a: ZECO:0000104  ! experimental conditions
 
 [Term]
 id: ZECO:0000147
-name: electric field
-is_a: ZECO:0000145  ! electromagnetic radiation experimental conditions
+name: light duration
+is_a: ZECO:0000146  ! lighting conditions
 
 [Term]
 id: ZECO:0000148
-name: ionizing radiation
-is_a: ZECO:0000145  ! electromagnetic radiation experimental conditions
+name: altered light dark cycle
+is_a: ZECO:0000147  ! light duration
 
 [Term]
 id: ZECO:0000149
-name: gamma ray
-is_a: ZECO:0000148  ! ionizing radiation
+name: constant dark
+is_a: ZECO:0000147  ! light duration
 
 [Term]
 id: ZECO:0000150
-name: xray
-is_a: ZECO:0000148  ! ionizing radiation
+name: constant light
+is_a: ZECO:0000147  ! light duration
 
 [Term]
 id: ZECO:0000151
-name: ionizing uv radiation
-is_a: ZECO:0000148  ! ionizing radiation
+name: light intensity
+is_a: ZECO:0000146  ! lighting conditions
 
 [Term]
 id: ZECO:0000152
-name: non-ionizing radiation
-is_a: ZECO:0000145  ! electromagnetic radiation experimental conditions
+name: high light intensity
+is_a: ZECO:0000151  ! light intensity
 
 [Term]
 id: ZECO:0000153
-name: visible light
-is_a: ZECO:0000152  ! non-ionizing radiation
+name: low light intensity
+is_a: ZECO:0000151  ! light intensity
 
 [Term]
 id: ZECO:0000154
-name: non-ionizing uv
-is_a: ZECO:0000152  ! non-ionizing radiation
+name: gravity
+def: "Experimental condition in which gravity forces are applied. For zebrafish, this can be in the form of centrifugal forces or trips to outerspace." []
+is_a: ZECO:0000104  ! experimental conditions
 
 [Term]
 id: ZECO:0000155
-name: infrared
-is_a: ZECO:0000152  ! non-ionizing radiation
+name: mechanical stress
+def: "Experimental condition in which an external mechanical force is applied to the fish or part of the fish." []
+is_a: ZECO:0000131  ! stress
 
 [Term]
 id: ZECO:0000156
-name: water quality
-synonym: "water" RELATED []
-is_a: ZECO:0000128  ! experimental conditions
+name: vibration
+is_a: ZECO:0000155  ! mechanical stress
 
 [Term]
 id: ZECO:0000157
-name: gas composition
-is_a: ZECO:0000156  ! water quality
+name: water flow
+is_a: ZECO:0000155  ! mechanical stress
 
 [Term]
 id: ZECO:0000158
-name: carbon dioxide content
-is_a: ZECO:0000157  ! gas composition
+name: circular flow
+is_a: ZECO:0000157  ! water flow
 
 [Term]
 id: ZECO:0000159
-name: hypocapnia
-is_a: ZECO:0000158  ! carbon dioxide content
+name: through flow
+is_a: ZECO:0000157  ! water flow
 
 [Term]
 id: ZECO:0000160
-name: hypercapnia
-is_a: ZECO:0000158  ! carbon dioxide content
+name: temperature exposure
+def: "Experimental condition in which the zebrafish is exposed to an increased or decreased temperature." []
+is_a: ZECO:0000104  ! experimental conditions
 
 [Term]
 id: ZECO:0000161
-name: oxygen content
-is_a: ZECO:0000157  ! gas composition
+name: stable temperature exposure
+def: "Temperature exposure condition in which fish are raised in temperature different (lower or higher) than the controlled temperature. The standard controlled temperature (according to the zebrafish book) is 28.5 degrees C." []
+is_a: ZECO:0000160  ! temperature exposure
 
 [Term]
 id: ZECO:0000162
-name: hypoxia
-is_a: ZECO:0000161  ! oxygen content
+name: cold exposure
+def: "Temperature exposure condition in which fish are raised in temperature that is lower than the controlled temperature. The standard controlled temperature (according to the zebrafish book) is 28.5 degrees C." []
+is_a: ZECO:0000161  ! stable temperature exposure
 
 [Term]
 id: ZECO:0000163
-name: hyperoxia
-is_a: ZECO:0000161  ! oxygen content
+name: heat exposure
+def: "Temperature exposure condition in which fish are raised in temperature that is higher than the controlled temperature. The standard controlled temperature (according to the zebrafish book) is 28.5 degrees C." []
+is_a: ZECO:0000161  ! stable temperature exposure
 
 [Term]
 id: ZECO:0000164
-name: water salinity
-is_a: ZECO:0000156  ! water quality
+name: temperature shock
+def: "Temperature exposure condition in which fish are subjected for a short period of time to temperature that is lower or higher than the controlled temperature. The standard controlled temperature (according to the zebrafish book) is 28.5 degrees C." []
+is_a: ZECO:0000160  ! temperature exposure
 
 [Term]
 id: ZECO:0000165
-name: hypertonic
-is_a: ZECO:0000164  ! water salinity
+name: cold shock
+def: "Temperature shock condition in which fish are subjected for a short period of time to temperature lower than the controlled temperature. The standard controlled temperature (according to the zebrafish book) is 28.5 degrees C." []
+is_a: ZECO:0000164  ! temperature shock
 
 [Term]
 id: ZECO:0000166
-name: hypotonic
-is_a: ZECO:0000164  ! water salinity
-
-[Term]
-id: ZECO:0000167
-name: isotonic
-is_a: ZECO:0000164  ! water salinity
+name: heat shock
+def: "Temperature shock condition in which fish are subjected for a short period of time to temperature higher than the controlled temperature. The standard controlled temperature (according to the zebrafish book) is 28.5 degrees C." []
+is_a: ZECO:0000164  ! temperature shock
 
 [Term]
 id: ZECO:0000168
-name: stable
-is_a: ZECO:0000164  ! water salinity
+name: ablation
+def: "Targeted destruction of an anatomical structure." []
+is_a: ZECO:0000229  ! physical alteration
 
 [Term]
 id: ZECO:0000169
-name: ion composition
-is_a: ZECO:0000156  ! water quality
+name: chemical ablation
+def: "Experimental condition which uses a chemical to ablate an anatomical structure or cell." []
+is_a: ZECO:0000168  ! ablation
 
 [Term]
 id: ZECO:0000170
-name: modified calcium composition
-is_a: ZECO:0000169  ! ion composition
+name: light ablation
+def: "Experimental condition which uses focused light to ablate an anatomical structure or cell." []
+is_a: ZECO:0000168  ! ablation
 
 [Term]
 id: ZECO:0000171
-name: high calcium
-is_a: ZECO:0000170  ! modified calcium composition
+name: resection
+def: "Surgical manipulation in which a particular organ, appendage, or part of the zebrafish is removed." []
+is_a: ZECO:0000176  ! surgical manipulation
 
 [Term]
 id: ZECO:0000172
-name: low calcium
-is_a: ZECO:0000170  ! modified calcium composition
+name: amputation
+def: "Resection condtion in which all or part of an extremity such as the fin or tail are removed." []
+is_a: ZECO:0000171  ! resection
 
 [Term]
 id: ZECO:0000173
-name: modified sodium composition
-is_a: ZECO:0000169  ! ion composition
+name: vaccine treatment
+def: "Biological treatment in which the organism is treated with a substance to stimulate the production of antibodies and provide immunity against one or several diseases." []
+is_a: ZECO:0000105  ! biological treatment
 
 [Term]
 id: ZECO:0000174
-name: high sodium
-is_a: ZECO:0000173  ! modified sodium composition
-
-[Term]
-id: ZECO:0000175
-name: low sodium
-is_a: ZECO:0000173  ! modified sodium composition
+name: laceration
+def: "Experimental condition in which there is a deep cut or tear of the flesh." []
+is_a: ZECO:0000229  ! physical alteration
 
 [Term]
 id: ZECO:0000176
-name: modified potassium
-is_a: ZECO:0000169  ! ion composition
+name: surgical manipulation
+def: "Experimental condition that involves  manual or instrumental techniques to alter anatomical structures." []
+is_a: ZECO:0000229  ! physical alteration
 
 [Term]
 id: ZECO:0000177
-name: high potassium
-is_a: ZECO:0000176  ! modified potassium
+name: xenotransplantation
+def: "Experimental condition in which living cells or tissues from one species are transplanted into another." []
+is_a: ZECO:0000176  ! surgical manipulation
 
 [Term]
 id: ZECO:0000178
-name: low potassium
-is_a: ZECO:0000176  ! modified potassium
+name: perforation
+def: "Experimental condition in which a hole or break in the membranes of an organ or structure of the body is created." []
+is_a: ZECO:0000229  ! physical alteration
 
 [Term]
 id: ZECO:0000179
-name: ph (of the environment) hydrogen ion concentration
-is_a: ZECO:0000169  ! ion composition
+name: abrasion
+def: "Experimental condition that results in superficial damage of tissue such that it is scraped or worn away." []
+is_a: ZECO:0000229  ! physical alteration
 
 [Term]
 id: ZECO:0000180
-name: acidic
-is_a: ZECO:0000179  ! ph (of the environment) hydrogen ion concentration
+name: contusion
+def: "Experimental condition that results in hematoma of tissue in which capillaries and sometimes venules are damaged by trauma, allowing blood to seep, hemorrhage, or extravasate into the surrounding interstitial tissues. (https://en.wikipedia.org/wiki/Bruise)" []
+is_a: ZECO:0000229  ! physical alteration
 
 [Term]
 id: ZECO:0000181
-name: basic
-is_a: ZECO:0000179  ! ph (of the environment) hydrogen ion concentration
+name: transection
+def: "Cutting transversly of an organ or tissue. Type of cutting often used to divide the spinal cord to investigate neural regeneration in zebrafish." []
+is_a: ZECO:0000176  ! surgical manipulation
 
 [Term]
 id: ZECO:0000182
-name: germ free
-is_a: ZECO:0000156  ! water quality
+name: water quality
+synonym: "water" RELATED []
+is_a: ZECO:0000104  ! experimental conditions
 
 [Term]
 id: ZECO:0000183
-name: housing conditions
-is_a: ZECO:0000128  ! experimental conditions
+name: gas composition
+is_a: ZECO:0000182  ! water quality
 
 [Term]
 id: ZECO:0000184
-name: overcrowding
-is_a: ZECO:0000183  ! housing conditions
+name: carbon dioxide content
+is_a: ZECO:0000183  ! gas composition
 
 [Term]
 id: ZECO:0000185
-name: open roofed
-is_a: ZECO:0000183  ! housing conditions
+name: hypercapnia
+is_a: ZECO:0000184  ! carbon dioxide content
 
 [Term]
 id: ZECO:0000186
-name: temperature exposure
-is_a: ZECO:0000128  ! experimental conditions
+name: hypocapnia
+is_a: ZECO:0000184  ! carbon dioxide content
 
 [Term]
 id: ZECO:0000187
-name: stable temperature exposure
-is_a: ZECO:0000186  ! temperature exposure
+name: oxygen content
+is_a: ZECO:0000183  ! gas composition
 
 [Term]
 id: ZECO:0000188
-name: cold exposure
-is_a: ZECO:0000186  ! temperature exposure
+name: hyperoxia
+is_a: ZECO:0000187  ! oxygen content
 
 [Term]
 id: ZECO:0000189
-name: hot exposure
-is_a: ZECO:0000186  ! temperature exposure
+name: hypoxia
+is_a: ZECO:0000187  ! oxygen content
 
 [Term]
 id: ZECO:0000190
-name: exposure to temperature shock
-is_a: ZECO:0000128  ! experimental conditions
+name: ion composition
+is_a: ZECO:0000182  ! water quality
 
 [Term]
 id: ZECO:0000191
-name: cold shock
-is_a: ZECO:0000190  ! exposure to temperature shock
+name: modified calcium composition
+is_a: ZECO:0000190  ! ion composition
 
 [Term]
 id: ZECO:0000192
-name: heat shock
-is_a: ZECO:0000190  ! exposure to temperature shock
+name: high calcium
+is_a: ZECO:0000191  ! modified calcium composition
 
 [Term]
 id: ZECO:0000193
-name: diet
-is_a: ZECO:0000128  ! experimental conditions
+name: low calcium
+is_a: ZECO:0000191  ! modified calcium composition
 
 [Term]
 id: ZECO:0000194
-name: food availability
-is_a: ZECO:0000193  ! diet
+name: modified potassium composition
+is_a: ZECO:0000190  ! ion composition
 
 [Term]
 id: ZECO:0000195
-name: fasting
-is_a: ZECO:0000194  ! food availability
+name: high potassium
+is_a: ZECO:0000194  ! modified potassium composition
 
 [Term]
 id: ZECO:0000196
-name: limited availability
-is_a: ZECO:0000194  ! food availability
+name: low potassium
+is_a: ZECO:0000194  ! modified potassium composition
 
 [Term]
 id: ZECO:0000197
-name: unlimited availability
-is_a: ZECO:0000194  ! food availability
+name: modified sodium composition
+is_a: ZECO:0000190  ! ion composition
 
 [Term]
 id: ZECO:0000198
-name: food content
-is_a: ZECO:0000193  ! diet
+name: high sodium
+is_a: ZECO:0000197  ! modified sodium composition
 
 [Term]
 id: ZECO:0000199
-name: fat content
-is_a: ZECO:0000198  ! food content
+name: low sodium
+is_a: ZECO:0000197  ! modified sodium composition
 
 [Term]
 id: ZECO:0000200
-name: high fat
-is_a: ZECO:0000199  ! fat content
+name: pH
+is_a: ZECO:0000190  ! ion composition
 
 [Term]
 id: ZECO:0000201
-name: high triglyceride
-is_a: ZECO:0000199  ! fat content
+name: acidic
+def: "Experimental condition in which the pH of the water is lower than the pH of the controlled conditions." []
+is_a: ZECO:0000200  ! pH
 
 [Term]
 id: ZECO:0000202
-name: high ldl
-is_a: ZECO:0000199  ! fat content
+name: basic
+def: "Experimental condition in which the pH of the water is higher than the pH of the controlled conditions." []
+is_a: ZECO:0000200  ! pH
 
 [Term]
 id: ZECO:0000203
-name: high hdl
-is_a: ZECO:0000199  ! fat content
+name: water salinity
+is_a: ZECO:0000182  ! water quality
 
 [Term]
 id: ZECO:0000204
-name: low fat
-is_a: ZECO:0000198  ! food content
+name: hypertonic
+def: "Experimental condition in which the salt concentration is higher than the one in controlled conditions." []
+is_a: ZECO:0000203  ! water salinity
 
 [Term]
 id: ZECO:0000205
-name: low triglyceride
-is_a: ZECO:0000204  ! low fat
+name: hypotonic
+def: "Experimental condition in which the salt concentration is lower than the one in controlled conditions." []
+is_a: ZECO:0000203  ! water salinity
 
 [Term]
 id: ZECO:0000206
-name: low ldl
-is_a: ZECO:0000204  ! low fat
+name: isotonic
+is_a: ZECO:0000203  ! water salinity
 
 [Term]
 id: ZECO:0000207
-name: low hdl
-is_a: ZECO:0000204  ! low fat
+name: stable
+is_a: ZECO:0000203  ! water salinity
 
 [Term]
 id: ZECO:0000208
-name: cholesterol content
-is_a: ZECO:0000198  ! food content
+name: radiation
+is_a: ZECO:0000104  ! experimental conditions
 
 [Term]
 id: ZECO:0000209
-name: high cholesterol
-is_a: ZECO:0000208  ! cholesterol content
+name: electromagnetic radiation
+is_a: ZECO:0000208  ! radiation
 
 [Term]
 id: ZECO:0000210
-name: low cholesterol
-is_a: ZECO:0000208  ! cholesterol content
+name: radio waves
+is_a: ZECO:0000209  ! electromagnetic radiation
 
 [Term]
 id: ZECO:0000211
-name: sugar content
-is_a: ZECO:0000198  ! food content
+name: microwaves
+is_a: ZECO:0000209  ! electromagnetic radiation
 
 [Term]
 id: ZECO:0000212
-name: high sugar
-is_a: ZECO:0000211  ! sugar content
+name: infared
+is_a: ZECO:0000209  ! electromagnetic radiation
 
 [Term]
 id: ZECO:0000213
-name: high glucose
-is_a: ZECO:0000212  ! high sugar
+name: visible light
+is_a: ZECO:0000209  ! electromagnetic radiation
 
 [Term]
 id: ZECO:0000214
-name: high fructose
-is_a: ZECO:0000212  ! high sugar
+name: UV
+is_a: ZECO:0000209  ! electromagnetic radiation
 
 [Term]
 id: ZECO:0000215
-name: high sucrose
-is_a: ZECO:0000212  ! high sugar
+name: x-ray
+is_a: ZECO:0000209  ! electromagnetic radiation
 
 [Term]
 id: ZECO:0000216
-name: low sugar
-is_a: ZECO:0000211  ! sugar content
+name: gama ray
+is_a: ZECO:0000209  ! electromagnetic radiation
 
 [Term]
 id: ZECO:0000217
-name: low glucose
-is_a: ZECO:0000216  ! low sugar
+name: particle radiation
+is_a: ZECO:0000208  ! radiation
 
 [Term]
 id: ZECO:0000218
-name: low fructose
-is_a: ZECO:0000216  ! low sugar
+name: proton
+is_a: ZECO:0000217  ! particle radiation
 
 [Term]
 id: ZECO:0000219
-name: low  sucrose
-is_a: ZECO:0000216  ! low sugar
+name: neutron
+is_a: ZECO:0000217  ! particle radiation
 
 [Term]
 id: ZECO:0000220
-name: protein content
-is_a: ZECO:0000198  ! food content
+name: acoustic radiation
+is_a: ZECO:0000208  ! radiation
 
 [Term]
 id: ZECO:0000221
-name: high protein
-is_a: ZECO:0000220  ! protein content
+name: alpha particle
+is_a: ZECO:0000217  ! particle radiation
 
 [Term]
 id: ZECO:0000222
-name: low protein
-is_a: ZECO:0000220  ! protein content
+name: electromagnetic field
+def: "Experimental condition in which the fish is exposed to a physical field that is produced by electrically charged objects." []
+is_a: ZECO:0000104  ! experimental conditions
 
 [Term]
 id: ZECO:0000223
-name: food contaminated content
-is_a: ZECO:0000198  ! food content
+name: electric field
+def: "Experimental condition where the fish is exposed to materials that produce an electric field." []
+is_a: ZECO:0000222  ! electromagnetic field
 
 [Term]
 id: ZECO:0000224
-name: lead
-is_a: ZECO:0000223  ! food contaminated content
+name: magnetic field
+def: "Experimental condition where the fish is exposed to magnetic materials." []
+is_a: ZECO:0000222  ! electromagnetic field
 
 [Term]
 id: ZECO:0000225
-name: radionuclides
-is_a: ZECO:0000223  ! food contaminated content
+name: high polysunsaturated fat
+def: "High fat condition in which the amount of polyunsaturated fat in the diet is elevated." []
+is_a: ZECO:0000122  ! high fat
 
 [Term]
 id: ZECO:0000226
-name: lighting conditions
-is_a: ZECO:0000128  ! experimental conditions
+name: high trans fat
+def: "High fat condition in which the amount of trans fat in the diet is elevated." []
+is_a: ZECO:0000122  ! high fat
 
 [Term]
 id: ZECO:0000227
-name: light duration
-is_a: ZECO:0000226  ! lighting conditions
+name: low saturated fat
+def: "Low fat condition in which the amount of saturated fat in the diet is reduced." []
+is_a: ZECO:0000125  ! low fat
 
 [Term]
 id: ZECO:0000228
-name: constant light
-is_a: ZECO:0000227  ! light duration
+name: low monounsaturated fat
+def: "Low fat condition in which the amount of monounsaturated fat in the diet is reduced." []
+is_a: ZECO:0000125  ! low fat
 
 [Term]
 id: ZECO:0000229
-name: constant dark
-is_a: ZECO:0000227  ! light duration
+name: physical alteration
+def: "Experimental condition in which an anatomical structure, cell, or organ has sustained targeted physical change, usually through the use of an instrument." []
+is_a: ZECO:0000104  ! experimental conditions
 
 [Term]
 id: ZECO:0000230
-name: altered light/dark cycle
-is_a: ZECO:0000227  ! light duration
+name: bacterial treatment by injection
+def: "Bacterial treatment where the bacteria are injected into the fish." []
+is_a: ZECO:0000106  ! bacterial treatment
 
 [Term]
 id: ZECO:0000231
-name: light intensity
-is_a: ZECO:0000226  ! lighting conditions
+name: bacterial treatment by exposure to environment
+def: "Bacterial treatment where the bacteria are introduced via the environment. For zebrafish this is the tank water." []
+is_a: ZECO:0000106  ! bacterial treatment
 
 [Term]
 id: ZECO:0000232
-name: high intensity
-is_a: ZECO:0000231  ! light intensity
+name: fungal treatment by injection
+def: "Fungal treatment where the fungus is injected into the fish." []
+is_a: ZECO:0000107  ! fungal treatment
 
 [Term]
 id: ZECO:0000233
-name: low intensity
-is_a: ZECO:0000231  ! light intensity
+name: fungal treatment by exposure to environment
+def: "Fungal treatment where the fungus is introduced via the environment. For zebrafish this is the tank water." []
+is_a: ZECO:0000107  ! fungal treatment
 
 [Term]
 id: ZECO:0000234
-name: biological treatment
-is_a: ZECO:0000128  ! experimental conditions
+name: viral treatment by exposure to environment
+def: "Viral treatment where the virus is introduced via the environment. For zebrafish this is the tank water." []
+is_a: ZECO:0000110  ! viral treatment
 
 [Term]
 id: ZECO:0000235
-name: bacterial treatment
-is_a: ZECO:0000234  ! biological treatment
+name: viral treatment by injection
+def: "Viral treatment where the virus is injected into the fish." []
+is_a: ZECO:0000110  ! viral treatment
 
 [Term]
 id: ZECO:0000236
-name: fungal treatment
-is_a: ZECO:0000234  ! biological treatment
+name: cancer xenotransplantation
+def: "Xenotransplantation condition in which cancer cells are injected or grafted into the zebrafish." []
+is_a: ZECO:0000177  ! xenotransplantation
 
 [Term]
 id: ZECO:0000237
-name: viral treatment
-is_a: ZECO:0000234  ! biological treatment
+name: chemical treatment by injection
+def: "Chemical treatment in which the chemical is injected into the zebrafish." []
+is_a: ZECO:0000111  ! chemical treatment
 
 [Term]
 id: ZECO:0000238
-name: protozoan treatment
-is_a: ZECO:0000234  ! biological treatment
+name: chemical treatment by environment
+def: "Chemical treatment condition in which the chemical is introduced through the environment. For zebrafish this is the tank water." []
+is_a: ZECO:0000111  ! chemical treatment
 
 [Term]
 id: ZECO:0000239
-name: chemical treatment
-is_a: ZECO:0000128  ! experimental conditions
+name: chemical treatment by diet
+def: "Chemical treatment condition in which the chemical is introduced through the diet." []
+is_a: ZECO:0000111  ! chemical treatment
+is_a: ZECO:0000112  ! diet
 
 [Term]
 id: ZECO:0000240
-name: genetic treatment
-is_a: ZECO:0000128  ! experimental conditions
+name: carbohydrate content
+def: "Food content condition in which the amount of carbohydrate in the diet is manipulated." []
+is_a: ZECO:0000117  ! food content
 
 [Term]
 id: ZECO:0000241
-name: mo
-is_a: ZECO:0000240  ! genetic treatment
+name: high carbohydrate
+def: "Food content condtion in which the amount of carbohydrate in the diet is elevated." []
+is_a: ZECO:0000240  ! carbohydrate content
 
 [Term]
 id: ZECO:0000242
-name: talen
-is_a: ZECO:0000240  ! genetic treatment
+name: low carbohydrate
+def: "Food content condtion in which the amount of carbohydrate in the diet is reduced." []
+is_a: ZECO:0000240  ! carbohydrate content
 
 [Term]
 id: ZECO:0000243
-name: crisper
-is_a: ZECO:0000240  ! genetic treatment
+name: stress by handling
+is_a: ZECO:0000131  ! stress
 
 [Term]
 id: ZECO:0000244
-name: rna injection
-is_a: ZECO:0000240  ! genetic treatment
+name: ultrasound
+def: "Mechanical stress condition where the organism is subjected to vibrations having an ultrasonic frequency." []
+is_a: ZECO:0000156  ! vibration
 
 [Term]
 id: ZECO:0000245
-name: protein injection
-is_a: ZECO:0000240  ! genetic treatment
-
-[Term]
-id: ZECO:0000246
-name: in vitro culture
-is_a: ZECO:0000128  ! experimental conditions
-
-[Term]
-id: ZECO:0000247
-name: organ culture
-is_a: ZECO:0000246  ! in vitro culture
-
-[Term]
-id: ZECO:0000248
-name: primary cell culture
-is_a: ZECO:0000246  ! in vitro culture
+name: light damage
+def: "Physical alteration which uses light to damage the anatomical structure, cell, or organ." []
+is_a: ZECO:0000229  ! physical alteration
 
 
 

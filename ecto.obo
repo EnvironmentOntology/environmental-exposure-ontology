@@ -1,15 +1,15 @@
 format-version: 1.2
-data-version: releases/2016-07-20
-remark: Includes Ontology(OntologyID(OntologyIRI(<http://purl.obolibrary.org/obo/ecto/imports/chebi_import.owl>) VersionIRI(<null>))) [Axioms: 21233 Logical Axioms: 12161]
-remark: Includes Ontology(OntologyID(OntologyIRI(<http://purl.obolibrary.org/obo/ecto/imports/envo_import.owl>) VersionIRI(<null>))) [Axioms: 1908 Logical Axioms: 776]
+data-version: releases/2016-07-29
+remark: Includes Ontology(OntologyID(OntologyIRI(<http://purl.obolibrary.org/obo/ecto/imports/chebi_import.owl>) VersionIRI(<null>))) [Axioms: 21934 Logical Axioms: 12566]
+remark: Includes Ontology(OntologyID(OntologyIRI(<http://purl.obolibrary.org/obo/ecto/imports/envo_import.owl>) VersionIRI(<null>))) [Axioms: 1957 Logical Axioms: 799]
 remark: Includes Ontology(OntologyID(OntologyIRI(<http://purl.obolibrary.org/obo/ecto/imports/exo_import.owl>) VersionIRI(<null>))) [Axioms: 10 Logical Axioms: 2]
 remark: Includes Ontology(OntologyID(OntologyIRI(<http://purl.obolibrary.org/obo/ecto/imports/ncit_import.owl>) VersionIRI(<null>))) [Axioms: 258 Logical Axioms: 65]
 remark: Includes Ontology(OntologyID(OntologyIRI(<http://purl.obolibrary.org/obo/ecto/imports/npo_import.owl>) VersionIRI(<null>))) [Axioms: 41 Logical Axioms: 13]
 remark: Includes Ontology(OntologyID(OntologyIRI(<http://purl.obolibrary.org/obo/ecto/imports/pato_import.owl>) VersionIRI(<null>))) [Axioms: 70 Logical Axioms: 28]
 remark: Includes Ontology(OntologyID(OntologyIRI(<http://purl.obolibrary.org/obo/ecto/imports/ro_import.owl>) VersionIRI(<null>))) [Axioms: 154 Logical Axioms: 26]
-remark: Includes Ontology(OntologyID(OntologyIRI(<http://purl.obolibrary.org/obo/ecto/modules/activity.rdf>) VersionIRI(<null>))) [Axioms: 338 Logical Axioms: 47]
-remark: Includes Ontology(OntologyID(OntologyIRI(<http://purl.obolibrary.org/obo/ecto/modules/exposure_to_change_in_levels.rdf>) VersionIRI(<null>))) [Axioms: 232 Logical Axioms: 40]
-remark: Includes Ontology(OntologyID(OntologyIRI(<http://purl.obolibrary.org/obo/ecto/modules/exposure_to_chemical.rdf>) VersionIRI(<null>))) [Axioms: 8308 Logical Axioms: 1186]
+remark: Includes Ontology(OntologyID(OntologyIRI(<http://purl.obolibrary.org/obo/ecto/modules/activity.rdf>) VersionIRI(<null>))) [Axioms: 358 Logical Axioms: 50]
+remark: Includes Ontology(OntologyID(OntologyIRI(<http://purl.obolibrary.org/obo/ecto/modules/exposure_to_change_in_levels.rdf>) VersionIRI(<null>))) [Axioms: 231 Logical Axioms: 40]
+remark: Includes Ontology(OntologyID(OntologyIRI(<http://purl.obolibrary.org/obo/ecto/modules/exposure_to_chemical.rdf>) VersionIRI(<null>))) [Axioms: 8686 Logical Axioms: 1240]
 remark: Includes Ontology(OntologyID(OntologyIRI(<http://purl.obolibrary.org/obo/ecto/modules/exposure_to_chemical_with_role.rdf>) VersionIRI(<null>))) [Axioms: 3656 Logical Axioms: 521]
 remark: Includes Ontology(OntologyID(OntologyIRI(<http://purl.obolibrary.org/obo/ecto/modules/exposure_to_environmental_condition.rdf>) VersionIRI(<null>))) [Axioms: 95 Logical Axioms: 15]
 remark: Includes Ontology(OntologyID(OntologyIRI(<http://purl.obolibrary.org/obo/ecto/modules/exposure_to_environmental_process.rdf>) VersionIRI(<null>))) [Axioms: 252 Logical Axioms: 35]
@@ -257,6 +257,11 @@ name: EC 2.7.7.7 (DNA-directed DNA polymerase) inhibitor
 is_a: CHEBI:38234 ! DNA polymerase inhibitor
 
 [Term]
+id: CHEBI:131770
+name: EC 3.6.3.49 (channel-conductance-controlling ATPase) inhibitor
+is_a: CHEBI:76895 ! EC 3.6.3.* (acid anhydride hydrolase catalysing transmembrane movement of substances) inhibitor
+
+[Term]
 id: CHEBI:13193
 name: hydrogen acceptor
 is_a: CHEBI:17654 ! electron acceptor
@@ -317,6 +322,13 @@ is_a: CHEBI:33558 ! alpha-amino-acid anion
 relationship: is_conjugate_acid_of CHEBI:29987 ! glutamate(2-)
 relationship: is_conjugate_base_of CHEBI:18237 ! glutamic acid
 relationship: RO:0000087 CHEBI:78675 ! has role fundamental metabolite
+
+[Term]
+id: CHEBI:14973
+name: pyrazole
+is_a: CHEBI:26410 ! pyrazoles
+is_a: CHEBI:35555 ! mancude organic heteromonocyclic parent
+relationship: is_conjugate_acid_of CHEBI:38596 ! pyrazolide
 
 [Term]
 id: CHEBI:15022
@@ -545,6 +557,20 @@ relationship: RO:0000087 CHEBI:64571 ! has role NMDA receptor agonist
 relationship: RO:0000087 CHEBI:78675 ! has role fundamental metabolite
 
 [Term]
+id: CHEBI:15440
+name: squalene
+is_a: CHEBI:35191 ! triterpene
+relationship: RO:0000087 CHEBI:75771 ! has role mouse metabolite
+relationship: RO:0000087 CHEBI:75772 ! has role Saccharomyces cerevisiae metabolite
+relationship: RO:0000087 CHEBI:76924 ! has role plant metabolite
+relationship: RO:0000087 CHEBI:77746 ! has role human metabolite
+
+[Term]
+id: CHEBI:15443
+name: inulin
+is_a: CHEBI:29084 ! (2->1)-beta-D-fructan
+
+[Term]
 id: CHEBI:15570
 name: D-alanine
 is_a: CHEBI:16449 ! alanine
@@ -754,6 +780,13 @@ relationship: RO:0000087 CHEBI:75769 ! has role B vitamin
 relationship: RO:0000087 CHEBI:75771 ! has role mouse metabolite
 relationship: RO:0000087 CHEBI:76971 ! has role Escherichia coli metabolite
 relationship: RO:0000087 CHEBI:84264 ! has role EC 3.5.1.19 (nicotinamidase) inhibitor
+
+[Term]
+id: CHEBI:15948
+name: lycopene
+is_a: CHEBI:35162 ! acyclic carotene
+relationship: RO:0000087 CHEBI:22586 ! has role antioxidant
+relationship: RO:0000087 CHEBI:76924 ! has role plant metabolite
 
 [Term]
 id: CHEBI:15956
@@ -1082,6 +1115,19 @@ relationship: RO:0000087 CHEBI:75771 ! has role mouse metabolite
 relationship: RO:0000087 CHEBI:75772 ! has role Saccharomyces cerevisiae metabolite
 relationship: RO:0000087 CHEBI:76967 ! has role human xenobiotic metabolite
 relationship: RO:0000087 CHEBI:76971 ! has role Escherichia coli metabolite
+
+[Term]
+id: CHEBI:16243
+name: quercetin
+is_a: CHEBI:25883 ! pentahydroxyflavone
+is_a: CHEBI:52267 ! 7-hydroxyflavonol
+relationship: is_conjugate_acid_of CHEBI:57694 ! quercetin-7-olate
+relationship: RO:0000087 CHEBI:22586 ! has role antioxidant
+relationship: RO:0000087 CHEBI:33282 ! has role antibacterial agent
+relationship: RO:0000087 CHEBI:35610 ! has role antineoplastic agent
+relationship: RO:0000087 CHEBI:37699 ! has role protein kinase inhibitor
+relationship: RO:0000087 CHEBI:76924 ! has role plant metabolite
+relationship: RO:0000087 CHEBI:77020 ! has role EC 1.10.99.2 [ribosyldihydronicotinamide dehydrogenase (quinone)] inhibitor
 
 [Term]
 id: CHEBI:16247
@@ -1968,6 +2014,15 @@ is_a: CHEBI:33917 ! aldohexose
 relationship: RO:0000087 CHEBI:78675 ! has role fundamental metabolite
 
 [Term]
+id: CHEBI:17241
+name: 1H-pyrazole
+is_a: CHEBI:14973 ! pyrazole
+relationship: is_conjugate_acid_of CHEBI:30367 ! pyrazol-1-ide
+relationship: is_conjugate_base_of CHEBI:33140 ! pyrazolium
+relationship: is_tautomer_of CHEBI:38595 ! 3H-pyrazole
+relationship: is_tautomer_of CHEBI:38599 ! 4H-pyrazole
+
+[Term]
 id: CHEBI:17245
 name: carbon monoxide
 is_a: CHEBI:23014 ! carbon oxide
@@ -2465,6 +2520,15 @@ relationship: RO:0000087 CHEBI:75771 ! has role mouse metabolite
 relationship: RO:0000087 CHEBI:77746 ! has role human metabolite
 
 [Term]
+id: CHEBI:17865
+name: 4-methyl-2-oxopentanoate
+is_a: CHEBI:35179 ! 2-oxo monocarboxylic acid anion
+relationship: has_functional_parent CHEBI:31011 ! valerate
+relationship: is_conjugate_base_of CHEBI:48430 ! 4-methyl-2-oxopentanoic acid
+relationship: RO:0000087 CHEBI:75772 ! has role Saccharomyces cerevisiae metabolite
+relationship: RO:0000087 CHEBI:77746 ! has role human metabolite
+
+[Term]
 id: CHEBI:17879
 name: 4-hydroxybenzoate
 is_a: CHEBI:25388 ! monohydroxybenzoate
@@ -2516,6 +2580,14 @@ name: styrene oxide
 is_a: CHEBI:32955 ! epoxide
 relationship: has_parent_hydride CHEBI:27452 ! styrene
 relationship: RO:0000087 CHEBI:76967 ! has role human xenobiotic metabolite
+
+[Term]
+id: CHEBI:17963
+name: 1-methyl-4-phenyl-1,2,3,6-tetrahydropyridine
+is_a: CHEBI:25340 ! methylpyridines
+is_a: CHEBI:26921 ! tetrahydropyridine
+is_a: CHEBI:38193 ! phenylpyridine
+relationship: RO:0000087 CHEBI:50910 ! has role neurotoxin
 
 [Term]
 id: CHEBI:17967
@@ -3095,6 +3167,13 @@ is_a: CHEBI:35352 ! organonitrogen compound
 is_a: CHEBI:63161 ! glycosyl compound
 
 [Term]
+id: CHEBI:21759
+name: N-methyl-N'-nitro-N-nitrosoguanidine
+is_a: CHEBI:35800 ! nitroso compound
+relationship: has_functional_parent CHEBI:39179 ! nitroguanidine
+relationship: RO:0000087 CHEBI:22333 ! has role alkylating agent
+
+[Term]
 id: CHEBI:22063
 name: sulfoxide
 is_a: CHEBI:33261 ! organosulfur compound
@@ -3231,6 +3310,13 @@ is_a: CHEBI:25435 ! mutagen
 id: CHEBI:22455
 name: alpha-hydroxynitrile
 is_a: CHEBI:24730 ! hydroxynitrile
+
+[Term]
+id: CHEBI:22470
+name: alpha-tocopherol
+is_a: CHEBI:27013 ! tocopherol
+relationship: RO:0000087 CHEBI:76924 ! has role plant metabolite
+relationship: RO:0000087 CHEBI:77962 ! has role food antioxidant
 
 [Term]
 id: CHEBI:22472
@@ -3532,6 +3618,12 @@ is_a: CHEBI:24396 ! glycopeptide
 relationship: RO:0000087 CHEBI:33281 ! has role antimicrobial agent
 
 [Term]
+id: CHEBI:22912
+name: bornane monoterpenoid
+is_a: CHEBI:25409 ! monoterpenoid
+relationship: has_parent_hydride CHEBI:35783 ! bornane
+
+[Term]
 id: CHEBI:22916
 name: boron molecular entity
 is_a: CHEBI:33581 ! boron group molecular entity
@@ -3687,9 +3779,20 @@ name: carbonyl group
 is_a: CHEBI:51422 ! organodiyl group
 
 [Term]
+id: CHEBI:23042
+name: carotene
+is_a: CHEBI:35193 ! tetraterpene
+
+[Term]
 id: CHEBI:23053
 name: catechin
 is_a: CHEBI:72010 ! hydroxyflavan
+
+[Term]
+id: CHEBI:23066
+name: cephalosporin
+is_a: CHEBI:38311 ! cephem
+relationship: RO:0000087 CHEBI:88188 ! has role drug allergen
 
 [Term]
 id: CHEBI:23089
@@ -3950,6 +4053,12 @@ is_a: CHEBI:22455 ! alpha-hydroxynitrile
 id: CHEBI:23443
 name: cyclic amide
 is_a: CHEBI:32988 ! amide
+
+[Term]
+id: CHEBI:23446
+name: cyclic monoterpene ketone
+is_a: CHEBI:25408 ! monoterpene ketone
+is_a: CHEBI:36130 ! cyclic terpene ketone
 
 [Term]
 id: CHEBI:23447
@@ -4255,6 +4364,16 @@ relationship: has_functional_parent CHEBI:16236 ! ethanol
 relationship: has_functional_parent CHEBI:33575 ! carboxylic acid
 
 [Term]
+id: CHEBI:23995
+name: N-ethyl-N-nitrosourea
+is_a: CHEBI:76551 ! N-nitrosoureas
+relationship: has_functional_parent CHEBI:16199 ! urea
+relationship: RO:0000087 CHEBI:22333 ! has role alkylating agent
+relationship: RO:0000087 CHEBI:25435 ! has role mutagen
+relationship: RO:0000087 CHEBI:50902 ! has role genotoxin
+relationship: RO:0000087 CHEBI:50903 ! has role carcinogenic agent
+
+[Term]
 id: CHEBI:23996
 name: ethyl sulfide
 is_a: CHEBI:22327 ! aliphatic sulfide
@@ -4280,6 +4399,11 @@ name: ferulic acids
 is_a: CHEBI:24688 ! monohydroxycinnamic acid
 is_a: CHEBI:33853 ! phenols
 is_a: CHEBI:35618 ! aromatic ether
+
+[Term]
+id: CHEBI:24043
+name: flavones
+is_a: CHEBI:47916 ! flavonoid
 
 [Term]
 id: CHEBI:24059
@@ -4629,6 +4753,18 @@ is_a: CHEBI:24689 ! hydroxycinnamic acid
 id: CHEBI:24689
 name: hydroxycinnamic acid
 is_a: CHEBI:23252 ! cinnamic acids
+
+[Term]
+id: CHEBI:24697
+name: hydroxyflavanone
+is_a: CHEBI:28863 ! flavanones
+is_a: CHEBI:33822 ! organic hydroxy compound
+
+[Term]
+id: CHEBI:24698
+name: hydroxyflavone
+is_a: CHEBI:24043 ! flavones
+is_a: CHEBI:33822 ! organic hydroxy compound
 
 [Term]
 id: CHEBI:24727
@@ -5145,6 +5281,11 @@ relationship: RO:0000087 CHEBI:35703 ! has role xenobiotic
 relationship: RO:0000087 CHEBI:78298 ! has role environmental contaminant
 
 [Term]
+id: CHEBI:25340
+name: methylpyridines
+is_a: CHEBI:26421 ! pyridines
+
+[Term]
 id: CHEBI:25348
 name: methylxanthine
 is_a: CHEBI:26385 ! purine alkaloid
@@ -5216,6 +5357,17 @@ is_a: CHEBI:24751 ! hydroxytoluene
 is_a: CHEBI:87034 ! aromatic fungicide
 
 [Term]
+id: CHEBI:25408
+name: monoterpene ketone
+is_a: CHEBI:26872 ! terpene ketone
+
+[Term]
+id: CHEBI:25409
+name: monoterpenoid
+is_a: CHEBI:26873 ! terpenoid
+relationship: has_parent_hydride CHEBI:35187 ! monoterpene
+
+[Term]
 id: CHEBI:25413
 name: monounsaturated fatty acid
 is_a: CHEBI:27208 ! unsaturated fatty acid
@@ -5255,6 +5407,13 @@ id: CHEBI:25442
 name: mycotoxin
 is_a: CHEBI:27026 ! toxin
 is_a: CHEBI:76946 ! fungal metabolite
+
+[Term]
+id: CHEBI:254496
+name: 7,12-dimethyltetraphene
+is_a: CHEBI:35296 ! ortho-fused polycyclic arene
+is_a: CHEBI:51067 ! tetraphenes
+relationship: RO:0000087 CHEBI:50903 ! has role carcinogenic agent
 
 [Term]
 id: CHEBI:25477
@@ -5445,6 +5604,15 @@ relationship: RO:0000087 CHEBI:75772 ! has role Saccharomyces cerevisiae metabol
 relationship: RO:0000087 CHEBI:77746 ! has role human metabolite
 
 [Term]
+id: CHEBI:2567
+name: alendronic acid
+is_a: CHEBI:50994 ! primary amino compound
+is_a: CHEBI:77383 ! 1,1-bis(phosphonic acid)
+relationship: is_conjugate_acid_of CHEBI:50647 ! alendronate(1-)
+relationship: RO:0000087 CHEBI:50643 ! has role EC 2.5.1.1 (dimethylallyltranstransferase) inhibitor
+relationship: RO:0000087 CHEBI:50646 ! has role bone density conservation agent
+
+[Term]
 id: CHEBI:25676
 name: oligopeptide
 is_a: CHEBI:16670 ! peptide
@@ -5617,6 +5785,11 @@ relationship: RO:0000087 CHEBI:48219 ! has role disinfectant
 relationship: RO:0000087 CHEBI:59739 ! has role electrophilic reagent
 relationship: RO:0000087 CHEBI:63248 ! has role oxidising agent
 relationship: RO:0000087 CHEBI:76413 ! has role greenhouse gas
+
+[Term]
+id: CHEBI:25883
+name: pentahydroxyflavone
+is_a: CHEBI:24698 ! hydroxyflavone
 
 [Term]
 id: CHEBI:25900
@@ -6334,6 +6507,12 @@ is_a: CHEBI:22314 ! alkali metal atom
 relationship: RO:0000087 CHEBI:75772 ! has role Saccharomyces cerevisiae metabolite
 
 [Term]
+id: CHEBI:26710
+name: sodium chloride
+is_a: CHEBI:36093 ! inorganic chloride
+is_a: CHEBI:38702 ! inorganic sodium salt
+
+[Term]
 id: CHEBI:26712
 name: sodium molecular entity
 is_a: CHEBI:33296 ! alkali metal molecular entity
@@ -6461,6 +6640,12 @@ is_a: CHEBI:22676 ! auxin
 is_a: CHEBI:35703 ! xenobiotic
 
 [Term]
+id: CHEBI:26872
+name: terpene ketone
+is_a: CHEBI:17087 ! ketone
+is_a: CHEBI:26873 ! terpenoid
+
+[Term]
 id: CHEBI:26873
 name: terpenoid
 is_a: CHEBI:24913 ! isoprenoid
@@ -6495,6 +6680,11 @@ id: CHEBI:26912
 name: oxolanes
 is_a: CHEBI:25693 ! organic heteromonocyclic compound
 is_a: CHEBI:38104 ! oxacycle
+
+[Term]
+id: CHEBI:26921
+name: tetrahydropyridine
+is_a: CHEBI:26421 ! pyridines
 
 [Term]
 id: CHEBI:26932
@@ -6545,6 +6735,12 @@ id: CHEBI:27008
 name: tin molecular entity
 is_a: CHEBI:33582 ! carbon group molecular entity
 relationship: BFO_0000051 CHEBI:27007 ! tin atom
+
+[Term]
+id: CHEBI:27013
+name: tocopherol
+is_a: CHEBI:33234 ! vitamin E
+is_a: CHEBI:39437 ! tocol
 
 [Term]
 id: CHEBI:27021
@@ -7159,6 +7355,12 @@ is_a: CHEBI:25996 ! phenylhydrazines
 relationship: RO:0000087 CHEBI:35703 ! has role xenobiotic
 
 [Term]
+id: CHEBI:27933
+name: beta-lactam antibiotic
+is_a: CHEBI:25558 ! organonitrogen heterocyclic antibiotic
+is_a: CHEBI:35627 ! beta-lactam
+
+[Term]
 id: CHEBI:27941
 name: pullulan
 is_a: CHEBI:26384 ! pullulans
@@ -7690,6 +7892,17 @@ relationship: is_conjugate_base_of CHEBI:10589 ! m-toluic acid
 relationship: RO:0000087 CHEBI:76967 ! has role human xenobiotic metabolite
 
 [Term]
+id: CHEBI:28796
+name: fructan
+is_a: CHEBI:37164 ! homopolysaccharide
+
+[Term]
+id: CHEBI:28802
+name: flavonols
+is_a: CHEBI:24698 ! hydroxyflavone
+relationship: is_conjugate_acid_of CHEBI:58588 ! flavonol oxoanion
+
+[Term]
 id: CHEBI:28805
 name: cis-1,2-dichloroethene
 is_a: CHEBI:18882 ! 1,2-dichloroethene
@@ -7743,6 +7956,12 @@ relationship: RO:0000087 CHEBI:26841 ! has role synthetic auxin
 relationship: RO:0000087 CHEBI:33286 ! has role agrochemical
 relationship: RO:0000087 CHEBI:77484 ! has role EC 1.1.1.25 (shikimate dehydrogenase) inhibitor
 relationship: RO:0000087 CHEBI:78298 ! has role environmental contaminant
+
+[Term]
+id: CHEBI:28863
+name: flavanones
+is_a: CHEBI:38672 ! flavans
+is_a: CHEBI:3992 ! cyclic ketone
 
 [Term]
 id: CHEBI:28866
@@ -7844,6 +8063,18 @@ id: CHEBI:29005
 name: cyclohexane
 is_a: CHEBI:23453 ! cycloalkane
 relationship: RO:0000087 CHEBI:48355 ! has role non-polar solvent
+
+[Term]
+id: CHEBI:29007
+name: ceftriaxone
+is_a: CHEBI:23066 ! cephalosporin
+is_a: CHEBI:36816 ! oxime O-ether
+is_a: CHEBI:38418 ! 1,3-thiazole
+is_a: CHEBI:39410 ! 1,2,4-triazines
+relationship: is_conjugate_acid_of CHEBI:53658 ! ceftriaxone(1-)
+relationship: RO:0000087 CHEBI:35625 ! has role EC 3.5.2.6 (beta-lactamase) inhibitor
+relationship: RO:0000087 CHEBI:36047 ! has role antibacterial drug
+relationship: RO:0000087 CHEBI:88188 ! has role drug allergen
 
 [Term]
 id: CHEBI:29014
@@ -7951,6 +8182,11 @@ relationship: RO:0000087 CHEBI:77962 ! has role food antioxidant
 id: CHEBI:29075
 name: mononucleotide
 is_a: CHEBI:36976 ! nucleotide
+
+[Term]
+id: CHEBI:29084
+name: (2->1)-beta-D-fructan
+is_a: CHEBI:28796 ! fructan
 
 [Term]
 id: CHEBI:29101
@@ -8119,6 +8355,13 @@ name: gold atom
 is_a: CHEBI:33366 ! copper group element atom
 
 [Term]
+id: CHEBI:29321
+name: sodium nitroprusside
+is_a: CHEBI:38700 ! organic sodium salt
+relationship: BFO_0000051 CHEBI:7596 ! nitroprusside
+relationship: RO:0000087 CHEBI:50566 ! has role nitric oxide donor
+
+[Term]
 id: CHEBI:29337
 name: azanide
 is_a: CHEBI:35106 ! nitrogen hydride
@@ -8137,6 +8380,14 @@ relationship: is_conjugate_base_of CHEBI:29337 ! azanide
 id: CHEBI:29347
 name: monocarboxylic acid amide
 is_a: CHEBI:37622 ! carboxamide
+
+[Term]
+id: CHEBI:29348
+name: fatty amide
+is_a: CHEBI:18059 ! lipid
+is_a: CHEBI:29347 ! monocarboxylic acid amide
+is_a: CHEBI:61697 ! fatty acid derivative
+relationship: has_functional_parent CHEBI:35366 ! fatty acid
 
 [Term]
 id: CHEBI:29360
@@ -8648,6 +8899,12 @@ relationship: RO:0000087 CHEBI:78017 ! has role food propellant
 relationship: RO:0000087 CHEBI:78433 ! has role refrigerant
 
 [Term]
+id: CHEBI:30367
+name: pyrazol-1-ide
+is_a: CHEBI:38596 ! pyrazolide
+relationship: is_conjugate_base_of CHEBI:17241 ! 1H-pyrazole
+
+[Term]
 id: CHEBI:30411
 name: cobalamin
 is_a: CHEBI:23334 ! cobalamins
@@ -8807,6 +9064,12 @@ name: thyronine
 is_a: CHEBI:33853 ! phenols
 is_a: CHEBI:62761 ! tyrosine derivative
 is_a: CHEBI:83925 ! non-proteinogenic alpha-amino acid
+
+[Term]
+id: CHEBI:30682
+name: ruthenium atom
+is_a: CHEBI:33356 ! iron group element atom
+is_a: CHEBI:33365 ! platinum group metal atom
 
 [Term]
 id: CHEBI:30687
@@ -9260,6 +9523,12 @@ relationship: RO:0000087 CHEBI:35703 ! has role xenobiotic
 relationship: RO:0000087 CHEBI:78298 ! has role environmental contaminant
 
 [Term]
+id: CHEBI:32234
+name: titanium dioxide
+is_a: CHEBI:37217 ! titanium molecular entity
+relationship: RO:0000087 CHEBI:77182 ! has role food colouring
+
+[Term]
 id: CHEBI:32354
 name: 4-hydroxybenzenesulfonic acid
 is_a: CHEBI:33555 ! arenesulfonic acid
@@ -9642,6 +9911,12 @@ id: CHEBI:32565
 name: lysinium(2+)
 is_a: CHEBI:33719 ! alpha-amino-acid cation
 relationship: is_conjugate_acid_of CHEBI:32564 ! lysinium(1+)
+
+[Term]
+id: CHEBI:32588
+name: potassium chloride
+is_a: CHEBI:26218 ! potassium salt
+is_a: CHEBI:36093 ! inorganic chloride
 
 [Term]
 id: CHEBI:3259
@@ -10101,6 +10376,20 @@ is_a: CHEBI:50335 ! organic nitrogen anion
 relationship: is_conjugate_base_of CHEBI:9328 ! sulfadiazine
 
 [Term]
+id: CHEBI:33135
+name: pyrrolidine
+is_a: CHEBI:36389 ! saturated organic heteromonocyclic parent
+is_a: CHEBI:37949 ! azacycloalkane
+is_a: CHEBI:38260 ! pyrrolidines
+relationship: is_conjugate_base_of CHEBI:52145 ! pyrrolidinium ion
+
+[Term]
+id: CHEBI:33140
+name: pyrazolium
+is_a: CHEBI:38179 ! monocyclic heteroarene
+relationship: is_conjugate_acid_of CHEBI:17241 ! 1H-pyrazole
+
+[Term]
 id: CHEBI:33143
 name: chromic acid
 is_a: CHEBI:35401 ! chromium oxoacid
@@ -10485,6 +10774,16 @@ name: zinc group element atom
 is_a: CHEBI:33561 ! d-block element atom
 
 [Term]
+id: CHEBI:33341
+name: titanium atom
+is_a: CHEBI:33345 ! titanium group element atom
+
+[Term]
+id: CHEBI:33345
+name: titanium group element atom
+is_a: CHEBI:33561 ! d-block element atom
+
+[Term]
 id: CHEBI:33347
 name: vanadium group element atom
 is_a: CHEBI:33561 ! d-block element atom
@@ -10498,6 +10797,11 @@ is_a: CHEBI:33561 ! d-block element atom
 id: CHEBI:33352
 name: manganese group element atom
 is_a: CHEBI:33561 ! d-block element atom
+
+[Term]
+id: CHEBI:33353
+name: technetium atom
+is_a: CHEBI:33352 ! manganese group element atom
 
 [Term]
 id: CHEBI:33356
@@ -10529,6 +10833,11 @@ is_a: CHEBI:27081 ! transition element atom
 id: CHEBI:33366
 name: copper group element atom
 is_a: CHEBI:33561 ! d-block element atom
+
+[Term]
+id: CHEBI:33371
+name: technetium-99
+is_a: CHEBI:33353 ! technetium atom
 
 [Term]
 id: CHEBI:33385
@@ -11300,6 +11609,12 @@ is_a: CHEBI:33676 ! d-block molecular entity
 relationship: BFO_0000051 CHEBI:33358 ! cobalt group element atom
 
 [Term]
+id: CHEBI:33768
+name: titanium group molecular entity
+is_a: CHEBI:33676 ! d-block molecular entity
+relationship: BFO_0000051 CHEBI:33345 ! titanium group element atom
+
+[Term]
 id: CHEBI:33780
 name: beryllium molecular entity
 is_a: CHEBI:33299 ! alkaline earth molecular entity
@@ -11319,6 +11634,16 @@ is_a: CHEBI:33791 ! canonical nucleoside residue
 id: CHEBI:33793
 name: canonical deoxyribonucleoside residue
 is_a: CHEBI:33791 ! canonical nucleoside residue
+
+[Term]
+id: CHEBI:3380
+name: captopril
+is_a: CHEBI:46701 ! pyrrolidinemonocarboxylic acid
+is_a: CHEBI:46766 ! N-acylpyrrolidine
+is_a: CHEBI:47908 ! alkanethiol
+is_a: CHEBI:84186 ! L-proline derivative
+relationship: RO:0000087 CHEBI:35457 ! has role EC 3.4.15.1 (peptidyl-dipeptidase A) inhibitor
+relationship: RO:0000087 CHEBI:35674 ! has role antihypertensive agent
 
 [Term]
 id: CHEBI:33822
@@ -11856,10 +12181,25 @@ relationship: RO:0000087 CHEBI:50903 ! has role carcinogenic agent
 relationship: RO:0000087 CHEBI:72768 ! has role aryl hydrocarbon receptor agonist
 
 [Term]
+id: CHEBI:3435
+name: carrageenan
+is_a: CHEBI:37944 ! polysaccharide sulfate
+relationship: has_functional_parent CHEBI:37165 ! galactan
+relationship: RO:0000087 CHEBI:84735 ! has role algal metabolite
+
+[Term]
 id: CHEBI:34364
 name: 4,4'-dichlorobiphenyl
 is_a: CHEBI:36718 ! dichlorobiphenyl
 is_a: CHEBI:83403 ! monochlorobenzenes
+
+[Term]
+id: CHEBI:34432
+name: 4-octylphenol
+is_a: CHEBI:33853 ! phenols
+relationship: RO:0000087 CHEBI:25212 ! has role metabolite
+relationship: RO:0000087 CHEBI:35195 ! has role surfactant
+relationship: RO:0000087 CHEBI:76988 ! has role xenoestrogen
 
 [Term]
 id: CHEBI:34440
@@ -12073,6 +12413,12 @@ relationship: RO:0000087 CHEBI:35703 ! has role xenobiotic
 relationship: RO:0000087 CHEBI:78298 ! has role environmental contaminant
 
 [Term]
+id: CHEBI:347401
+name: pentolinium ion
+is_a: CHEBI:25697 ! organic cation
+relationship: BFO_0000051 CHEBI:52145 ! pyrrolidinium ion
+
+[Term]
 id: CHEBI:34741
 name: equol
 is_a: CHEBI:76250 ! hydroxyisoflavans
@@ -12260,6 +12606,12 @@ relationship: RO:0000087 CHEBI:38461 ! has role carbamate insecticide
 relationship: RO:0000087 CHEBI:38462 ! has role EC 3.1.1.7 (acetylcholinesterase) inhibitor
 
 [Term]
+id: CHEBI:34956
+name: ruthenium red
+is_a: CHEBI:35733 ! ruthenium coordination entity
+relationship: RO:0000087 CHEBI:38809 ! has role ryanodine receptor modulator
+
+[Term]
 id: CHEBI:35005
 name: tetrachlorvinphos
 is_a: CHEBI:16648 ! dialkyl phosphate
@@ -12375,6 +12727,11 @@ is_a: CHEBI:36364 ! alkaline earth salt
 relationship: BFO_0000051 CHEBI:29108 ! calcium(2+)
 
 [Term]
+id: CHEBI:35162
+name: acyclic carotene
+is_a: CHEBI:23042 ! carotene
+
+[Term]
 id: CHEBI:35166
 name: vanadium coordination entity
 is_a: CHEBI:27275 ! vanadium molecular entity
@@ -12397,10 +12754,21 @@ relationship: is_conjugate_acid_of CHEBI:35168 ! hydrogenvanadate
 relationship: is_conjugate_base_of CHEBI:27273 ! vanadic acid
 
 [Term]
+id: CHEBI:35179
+name: 2-oxo monocarboxylic acid anion
+is_a: CHEBI:35902 ! oxo monocarboxylic acid anion
+relationship: is_conjugate_base_of CHEBI:35910 ! 2-oxo monocarboxylic acid
+
+[Term]
 id: CHEBI:35186
 name: terpene
 is_a: CHEBI:24632 ! hydrocarbon
 is_a: CHEBI:24913 ! isoprenoid
+
+[Term]
+id: CHEBI:35187
+name: monoterpene
+is_a: CHEBI:35186 ! terpene
 
 [Term]
 id: CHEBI:35188
@@ -12420,6 +12788,11 @@ is_a: CHEBI:35186 ! terpene
 [Term]
 id: CHEBI:35191
 name: triterpene
+is_a: CHEBI:35186 ! terpene
+
+[Term]
+id: CHEBI:35193
+name: tetraterpene
 is_a: CHEBI:35186 ! terpene
 
 [Term]
@@ -12451,6 +12824,11 @@ id: CHEBI:35204
 name: tracer
 is_a: CHEBI:33232 ! application
 relationship: BFO_0000051 CHEBI:35209 ! label
+
+[Term]
+id: CHEBI:35208
+name: physical tracer
+is_a: CHEBI:35204 ! tracer
 
 [Term]
 id: CHEBI:35209
@@ -13225,6 +13603,12 @@ name: mancude ring
 is_a: CHEBI:23367 ! molecular entity
 
 [Term]
+id: CHEBI:35569
+name: alpha-adrenergic agonist
+is_a: CHEBI:37886 ! adrenergic agonist
+is_a: CHEBI:48539 ! alpha-adrenergic drug
+
+[Term]
 id: CHEBI:35570
 name: mancude organic heterobicyclic parent
 is_a: CHEBI:27171 ! organic heterobicyclic compound
@@ -13358,6 +13742,11 @@ is_a: CHEBI:38101 ! organonitrogen heterocyclic compound
 id: CHEBI:35625
 name: EC 3.5.2.6 (beta-lactamase) inhibitor
 is_a: CHEBI:76808 ! EC 3.5.2.* (non-peptide cyclic amide C-N hydrolase) inhibitor
+
+[Term]
+id: CHEBI:35627
+name: beta-lactam
+is_a: CHEBI:24995 ! lactam
 
 [Term]
 id: CHEBI:35640
@@ -13557,6 +13946,18 @@ is_a: CHEBI:33744 ! iron group molecular entity
 relationship: BFO_0000051 CHEBI:30687 ! osmium atom
 
 [Term]
+id: CHEBI:35733
+name: ruthenium coordination entity
+is_a: CHEBI:33861 ! transition element coordination entity
+is_a: CHEBI:35734 ! ruthenium molecular entity
+
+[Term]
+id: CHEBI:35734
+name: ruthenium molecular entity
+is_a: CHEBI:33744 ! iron group molecular entity
+relationship: BFO_0000051 CHEBI:30682 ! ruthenium atom
+
+[Term]
 id: CHEBI:35735
 name: dicarboxylic acid monoamide
 is_a: CHEBI:23690 ! dicarboxylic acid amide
@@ -13621,6 +14022,12 @@ name: phosphate ion
 is_a: CHEBI:33461 ! phosphorus oxoanion
 relationship: is_conjugate_base_of CHEBI:26078 ! phosphoric acid
 relationship: RO:0000087 CHEBI:77746 ! has role human metabolite
+
+[Term]
+id: CHEBI:35783
+name: bornane
+is_a: CHEBI:35187 ! monoterpene
+is_a: CHEBI:35662 ! terpenoid fundamental parent
 
 [Term]
 id: CHEBI:35788
@@ -13753,6 +14160,12 @@ relationship: is_conjugate_base_of CHEBI:35871 ! oxo monocarboxylic acid
 id: CHEBI:35903
 name: oxo carboxylic acid anion
 is_a: CHEBI:29067 ! carboxylic acid anion
+
+[Term]
+id: CHEBI:35910
+name: 2-oxo monocarboxylic acid
+is_a: CHEBI:35871 ! oxo monocarboxylic acid
+relationship: is_conjugate_acid_of CHEBI:35179 ! 2-oxo monocarboxylic acid anion
 
 [Term]
 id: CHEBI:35923
@@ -13942,6 +14355,12 @@ is_a: CHEBI:24675 ! hydroxybenzoate
 relationship: is_conjugate_base_of CHEBI:23778 ! dihydroxybenzoic acid
 
 [Term]
+id: CHEBI:36093
+name: inorganic chloride
+is_a: CHEBI:23114 ! chloride salt
+is_a: CHEBI:24839 ! inorganic salt
+
+[Term]
 id: CHEBI:36094
 name: organic chloride salt
 is_a: CHEBI:23114 ! chloride salt
@@ -13952,6 +14371,12 @@ id: CHEBI:36128
 name: cyclopropanecarboxylate
 is_a: CHEBI:35757 ! monocarboxylic acid anion
 relationship: is_conjugate_base_of CHEBI:23500 ! cyclopropanecarboxylic acid
+
+[Term]
+id: CHEBI:36130
+name: cyclic terpene ketone
+is_a: CHEBI:26872 ! terpene ketone
+is_a: CHEBI:36132 ! alicyclic ketone
 
 [Term]
 id: CHEBI:36132
@@ -14456,6 +14881,13 @@ is_a: CHEBI:23849 ! diterpenoid
 relationship: has_parent_hydride CHEBI:36505 ! labdane
 
 [Term]
+id: CHEBI:36773
+name: camphor
+is_a: CHEBI:22912 ! bornane monoterpenoid
+is_a: CHEBI:23446 ! cyclic monoterpene ketone
+relationship: RO:0000087 CHEBI:76924 ! has role plant metabolite
+
+[Term]
 id: CHEBI:36785
 name: carbobicyclic compound
 is_a: CHEBI:33636 ! bicyclic compound
@@ -14951,6 +15383,12 @@ name: homopolysaccharide
 is_a: CHEBI:18154 ! polysaccharide
 
 [Term]
+id: CHEBI:37165
+name: galactan
+is_a: CHEBI:37164 ! homopolysaccharide
+relationship: RO:0000087 CHEBI:75771 ! has role mouse metabolite
+
+[Term]
 id: CHEBI:37175
 name: organic hydride
 is_a: CHEBI:33692 ! hydrides
@@ -14980,6 +15418,12 @@ is_a: CHEBI:26191 ! polyol
 id: CHEBI:37206
 name: hexol
 is_a: CHEBI:26191 ! polyol
+
+[Term]
+id: CHEBI:37217
+name: titanium molecular entity
+is_a: CHEBI:33768 ! titanium group molecular entity
+relationship: BFO_0000051 CHEBI:33341 ! titanium atom
 
 [Term]
 id: CHEBI:3723
@@ -15538,6 +15982,12 @@ is_a: CHEBI:38101 ! organonitrogen heterocyclic compound
 is_a: CHEBI:38106 ! organosulfur heterocyclic compound
 
 [Term]
+id: CHEBI:37944
+name: polysaccharide sulfate
+is_a: CHEBI:35724 ! carbohydrate sulfate
+is_a: CHEBI:65212 ! polysaccharide derivative
+
+[Term]
 id: CHEBI:37947
 name: benzothiazoles
 is_a: CHEBI:27171 ! organic heterobicyclic compound
@@ -15822,6 +16272,11 @@ is_a: CHEBI:35757 ! monocarboxylic acid anion
 relationship: is_conjugate_base_of CHEBI:26420 ! pyridinemonocarboxylic acid
 
 [Term]
+id: CHEBI:38193
+name: phenylpyridine
+is_a: CHEBI:26421 ! pyridines
+
+[Term]
 id: CHEBI:38207
 name: aminopyridine
 is_a: CHEBI:26421 ! pyridines
@@ -15925,6 +16380,13 @@ id: CHEBI:38304
 name: diazolidine
 is_a: CHEBI:25693 ! organic heteromonocyclic compound
 is_a: CHEBI:38101 ! organonitrogen heterocyclic compound
+
+[Term]
+id: CHEBI:38311
+name: cephem
+is_a: CHEBI:27171 ! organic heterobicyclic compound
+is_a: CHEBI:27933 ! beta-lactam antibiotic
+is_a: CHEBI:38106 ! organosulfur heterocyclic compound
 
 [Term]
 id: CHEBI:38313
@@ -16281,15 +16743,47 @@ name: 1,3-difluorobenzene
 is_a: CHEBI:38582 ! difluorobenzene
 
 [Term]
+id: CHEBI:38595
+name: 3H-pyrazole
+is_a: CHEBI:14973 ! pyrazole
+relationship: is_tautomer_of CHEBI:17241 ! 1H-pyrazole
+relationship: is_tautomer_of CHEBI:38599 ! 4H-pyrazole
+
+[Term]
+id: CHEBI:38596
+name: pyrazolide
+is_a: CHEBI:25696 ! organic anion
+relationship: is_conjugate_base_of CHEBI:14973 ! pyrazole
+
+[Term]
 id: CHEBI:38597
 name: triazole
 is_a: CHEBI:35555 ! mancude organic heteromonocyclic parent
 is_a: CHEBI:35727 ! triazoles
 
 [Term]
+id: CHEBI:38599
+name: 4H-pyrazole
+is_a: CHEBI:14973 ! pyrazole
+relationship: is_conjugate_acid_of CHEBI:38600 ! 4H-pyrazol-4-ide
+relationship: is_tautomer_of CHEBI:17241 ! 1H-pyrazole
+relationship: is_tautomer_of CHEBI:38595 ! 3H-pyrazole
+
+[Term]
+id: CHEBI:38600
+name: 4H-pyrazol-4-ide
+is_a: CHEBI:38596 ! pyrazolide
+relationship: is_conjugate_base_of CHEBI:38599 ! 4H-pyrazole
+
+[Term]
 id: CHEBI:38605
 name: phenethylamine alkaloid
 is_a: CHEBI:22315 ! alkaloid
+
+[Term]
+id: CHEBI:38623
+name: EC 1.4.3.4 (monoamine oxidase) inhibitor
+is_a: CHEBI:76861 ! EC 1.4.3.* (oxidoreductase acting on donor CH-NH2 group, oxygen as acceptor) inhibitor
 
 [Term]
 id: CHEBI:38629
@@ -16410,6 +16904,11 @@ is_a: CHEBI:32955 ! epoxide
 relationship: has_functional_parent CHEBI:27561 ! oxirane
 
 [Term]
+id: CHEBI:38686
+name: dihydroxyflavone
+is_a: CHEBI:24698 ! hydroxyflavone
+
+[Term]
 id: CHEBI:38699
 name: sodium fluoroacetate
 is_a: CHEBI:38700 ! organic sodium salt
@@ -16512,6 +17011,11 @@ is_a: CHEBI:37512 ! organic thiophosphate
 relationship: RO:0000087 CHEBI:23582 ! has role defoliant
 
 [Term]
+id: CHEBI:38739
+name: trihydroxyflavanone
+is_a: CHEBI:24697 ! hydroxyflavanone
+
+[Term]
 id: CHEBI:38746
 name: parathion-methyl
 is_a: CHEBI:25715 ! organothiophosphate insecticide
@@ -16577,6 +17081,19 @@ is_a: CHEBI:38104 ! oxacycle
 id: CHEBI:38785
 name: morpholines
 is_a: CHEBI:46952 ! oxazinane
+
+[Term]
+id: CHEBI:38791
+name: azocanes
+is_a: CHEBI:25693 ! organic heteromonocyclic compound
+is_a: CHEBI:38101 ! organonitrogen heterocyclic compound
+
+[Term]
+id: CHEBI:38792
+name: azocane
+is_a: CHEBI:36389 ! saturated organic heteromonocyclic parent
+is_a: CHEBI:37949 ! azacycloalkane
+is_a: CHEBI:38791 ! azocanes
 
 [Term]
 id: CHEBI:38793
@@ -17758,6 +18275,13 @@ is_a: CHEBI:25693 ! organic heteromonocyclic compound
 is_a: CHEBI:38104 ! oxacycle
 
 [Term]
+id: CHEBI:39437
+name: tocol
+is_a: CHEBI:23229 ! chromanol
+relationship: has_functional_parent CHEBI:78631 ! chroman-6-ol
+relationship: RO:0000087 CHEBI:22586 ! has role antioxidant
+
+[Term]
 id: CHEBI:39439
 name: benzoquinone
 is_a: CHEBI:22729 ! benzoquinones
@@ -18001,6 +18525,20 @@ relationship: is_conjugate_base_of CHEBI:29449 ! hydrogen azide
 relationship: RO:0000087 CHEBI:25355 ! has role mitochondrial respiratory-chain inhibitor
 
 [Term]
+id: CHEBI:41039
+name: benfotiamine
+is_a: CHEBI:24079 ! formamides
+is_a: CHEBI:25703 ! organic phosphate
+is_a: CHEBI:38338 ! aminopyrimidine
+is_a: CHEBI:51277 ! thioester
+relationship: has_functional_parent CHEBI:18385 ! thiamine(1+)
+relationship: RO:0000087 CHEBI:22586 ! has role antioxidant
+relationship: RO:0000087 CHEBI:50267 ! has role protective agent
+relationship: RO:0000087 CHEBI:50733 ! has role nutraceutical
+relationship: RO:0000087 CHEBI:50847 ! has role immunological adjuvant
+relationship: RO:0000087 CHEBI:72470 ! has role provitamin B1
+
+[Term]
 id: CHEBI:41218
 name: mercaptoethanol
 is_a: CHEBI:15734 ! primary alcohol
@@ -18100,6 +18638,15 @@ id: CHEBI:41921
 name: 1H-indene
 is_a: CHEBI:35426 ! ortho-fused bicyclic arene
 is_a: CHEBI:37910 ! indene
+
+[Term]
+id: CHEBI:41922
+name: diethylstilbestrol
+is_a: CHEBI:26195 ! polyphenol
+relationship: RO:0000087 CHEBI:35610 ! has role antineoplastic agent
+relationship: RO:0000087 CHEBI:49200 ! has role EC 3.6.3.10 (H(+)/K(+)-exchanging ATPase) inhibitor
+relationship: RO:0000087 CHEBI:50903 ! has role carcinogenic agent
+relationship: RO:0000087 CHEBI:76988 ! has role xenoestrogen
 
 [Term]
 id: CHEBI:4194
@@ -18254,6 +18801,12 @@ name: butan-1-amine
 is_a: CHEBI:17062 ! primary aliphatic amine
 
 [Term]
+id: CHEBI:43830
+name: 3,7-bis(dimethylamino)phenothiazin-5-ium
+is_a: CHEBI:25697 ! organic cation
+relationship: is_conjugate_acid_of CHEBI:78523 ! 3,7-bis(dimethylamino)phenothiazine
+
+[Term]
 id: CHEBI:43966
 name: melagatran
 is_a: CHEBI:35359 ! carboxamidine
@@ -18366,6 +18919,15 @@ relationship: RO:0000087 CHEBI:35620 ! has role vasodilator agent
 relationship: RO:0000087 CHEBI:35674 ! has role antihypertensive agent
 relationship: RO:0000087 CHEBI:50141 ! has role bronchoconstrictor agent
 relationship: RO:0000087 CHEBI:50248 ! has role hematologic agent
+
+[Term]
+id: CHEBI:44932
+name: acepromazine
+is_a: CHEBI:38093 ! phenothiazines
+is_a: CHEBI:50996 ! tertiary amino compound
+is_a: CHEBI:51867 ! methyl ketone
+is_a: CHEBI:76224 ! aromatic ketone
+relationship: RO:0000087 CHEBI:37930 ! has role phenothiazine antipsychotic drug
 
 [Term]
 id: CHEBI:44976
@@ -18691,6 +19253,12 @@ is_a: CHEBI:38101 ! organonitrogen heterocyclic compound
 is_a: CHEBI:38104 ! oxacycle
 
 [Term]
+id: CHEBI:46701
+name: pyrrolidinemonocarboxylic acid
+is_a: CHEBI:25384 ! monocarboxylic acid
+is_a: CHEBI:46767 ! pyrrolidinecarboxylic acid
+
+[Term]
 id: CHEBI:4672
 name: docetaxel anhydrous
 is_a: CHEBI:52557 ! tetracyclic diterpenoid
@@ -18716,6 +19284,12 @@ id: CHEBI:46761
 name: dipeptide
 is_a: CHEBI:25676 ! oligopeptide
 relationship: is_tautomer_of CHEBI:90799 ! dipeptide zwitterion
+
+[Term]
+id: CHEBI:46766
+name: N-acylpyrrolidine
+is_a: CHEBI:32988 ! amide
+is_a: CHEBI:38260 ! pyrrolidines
 
 [Term]
 id: CHEBI:46767
@@ -18859,6 +19433,17 @@ is_a: CHEBI:25693 ! organic heteromonocyclic compound
 is_a: CHEBI:38104 ! oxacycle
 
 [Term]
+id: CHEBI:46931
+name: capsaicinoid
+is_a: CHEBI:29348 ! fatty amide
+relationship: RO:0000087 CHEBI:25212 ! has role metabolite
+
+[Term]
+id: CHEBI:46932
+name: dihydrocapsaicin
+is_a: CHEBI:46931 ! capsaicinoid
+
+[Term]
 id: CHEBI:46942
 name: oxanes
 is_a: CHEBI:25693 ! organic heteromonocyclic compound
@@ -18924,6 +19509,13 @@ id: CHEBI:47136
 name: pentachlorobenzene
 is_a: CHEBI:83390 ! pentachlorobenzenes
 relationship: RO:0000087 CHEBI:77853 ! has role persistent organic pollutant
+
+[Term]
+id: CHEBI:472552
+name: 5-bromo-2'-deoxyuridine
+is_a: CHEBI:19255 ! pyrimidine 2'-deoxyribonucleoside
+relationship: RO:0000087 CHEBI:35221 ! has role antimetabolite
+relationship: RO:0000087 CHEBI:35610 ! has role antineoplastic agent
 
 [Term]
 id: CHEBI:47319
@@ -19460,12 +20052,27 @@ name: topical anaesthetic
 is_a: CHEBI:36333 ! local anaesthetic
 
 [Term]
+id: CHEBI:48430
+name: 4-methyl-2-oxopentanoic acid
+is_a: CHEBI:35910 ! 2-oxo monocarboxylic acid
+relationship: has_functional_parent CHEBI:17418 ! valeric acid
+relationship: is_conjugate_acid_of CHEBI:17865 ! 4-methyl-2-oxopentanoate
+relationship: RO:0000087 CHEBI:77746 ! has role human metabolite
+relationship: RO:0000087 CHEBI:84735 ! has role algal metabolite
+
+[Term]
 id: CHEBI:48431
 name: formimidic acid
 is_a: CHEBI:48378 ! carboximidic acid
 is_a: CHEBI:64708 ! one-carbon compound
 relationship: has_functional_parent CHEBI:30751 ! formic acid
 relationship: is_tautomer_of CHEBI:16397 ! formamide
+
+[Term]
+id: CHEBI:48432
+name: angiotensin II
+is_a: CHEBI:48433 ! angiotensin
+relationship: RO:0000087 CHEBI:50514 ! has role vasoconstrictor agent
 
 [Term]
 id: CHEBI:48433
@@ -19547,6 +20154,13 @@ is_a: CHEBI:26151 ! piperidines
 id: CHEBI:48590
 name: hydroxypiperidine
 is_a: CHEBI:26151 ! piperidines
+
+[Term]
+id: CHEBI:48607
+name: lithium chloride
+is_a: CHEBI:35478 ! lithium salt
+is_a: CHEBI:36093 ! inorganic chloride
+relationship: RO:0000087 CHEBI:35477 ! has role antimanic drug
 
 [Term]
 id: CHEBI:48626
@@ -20260,6 +20874,11 @@ name: provitamin
 is_a: CHEBI:24432 ! biological role
 
 [Term]
+id: CHEBI:50202
+name: naringenin
+is_a: CHEBI:38739 ! trihydroxyflavanone
+
+[Term]
 id: CHEBI:50211
 name: retinol
 is_a: CHEBI:15734 ! primary alcohol
@@ -20499,6 +21118,11 @@ name: probe
 is_a: CHEBI:33232 ! application
 
 [Term]
+id: CHEBI:50407
+name: acid-base indicator
+is_a: CHEBI:50410 ! colour indicator
+
+[Term]
 id: CHEBI:50408
 name: visual indicator
 is_a: CHEBI:47867 ! indicator
@@ -20646,6 +21270,11 @@ name: thiolate anion
 is_a: CHEBI:84291 ! organic sulfur anion
 
 [Term]
+id: CHEBI:50562
+name: tartrate
+is_a: CHEBI:24868 ! organic salt
+
+[Term]
 id: CHEBI:50566
 name: nitric oxide donor
 is_a: CHEBI:17891 ! donor
@@ -20698,9 +21327,20 @@ name: mononitronaphthalene
 is_a: CHEBI:50631 ! nitronaphthalene
 
 [Term]
+id: CHEBI:50643
+name: EC 2.5.1.1 (dimethylallyltranstransferase) inhibitor
+is_a: CHEBI:76663 ! EC 2.5.1.* (non-methyl-alkyl or aryl transferase) inhibitor
+
+[Term]
 id: CHEBI:50646
 name: bone density conservation agent
 is_a: CHEBI:23888 ! drug
+
+[Term]
+id: CHEBI:50647
+name: alendronate(1-)
+is_a: CHEBI:25696 ! organic anion
+relationship: is_conjugate_base_of CHEBI:2567 ! alendronic acid
 
 [Term]
 id: CHEBI:50659
@@ -20816,6 +21456,16 @@ is_a: CHEBI:23888 ! drug
 id: CHEBI:50790
 name: EC 1.14.14.14 (aromatase) inhibitor
 is_a: CHEBI:76838 ! EC 1.14.14.* (oxidoreductase acting on paired donors, incorporating of 1 atom of oxygen, with reduced flavin or flavoprotein as one donor) inhibitor
+
+[Term]
+id: CHEBI:50795
+name: nanostructure
+is_a: CHEBI:36357 ! polyatomic entity
+
+[Term]
+id: CHEBI:50803
+name: nanoparticle
+is_a: CHEBI:50795 ! nanostructure
 
 [Term]
 id: CHEBI:50830
@@ -21034,6 +21684,12 @@ relationship: RO:0000087 CHEBI:35942 ! has role neurotransmitter agent
 relationship: RO:0000087 CHEBI:78298 ! has role environmental contaminant
 
 [Term]
+id: CHEBI:51050
+name: titanium dioxide nanoparticle
+is_a: CHEBI:32234 ! titanium dioxide
+is_a: CHEBI:52855 ! inorganic nanoparticle
+
+[Term]
 id: CHEBI:51060
 name: hormone agonist
 is_a: CHEBI:48705 ! agonist
@@ -21048,6 +21704,11 @@ is_a: CHEBI:90710 ! receptor modulator
 id: CHEBI:51062
 name: (RS)-amphetamine
 is_a: CHEBI:2679 ! amphetamine
+
+[Term]
+id: CHEBI:51067
+name: tetraphenes
+is_a: CHEBI:33836 ! benzenoid aromatic compound
 
 [Term]
 id: CHEBI:51069
@@ -21317,6 +21978,11 @@ name: organic univalent group
 is_a: CHEBI:33247 ! organic group
 
 [Term]
+id: CHEBI:51451
+name: endothelin receptor antagonist
+is_a: CHEBI:49020 ! hormone antagonist
+
+[Term]
 id: CHEBI:51454
 name: cyclopropanes
 is_a: CHEBI:33598 ! carbocyclic compound
@@ -21489,6 +22155,13 @@ relationship: RO:0000087 CHEBI:75772 ! has role Saccharomyces cerevisiae metabol
 relationship: RO:0000087 CHEBI:77746 ! has role human metabolite
 
 [Term]
+id: CHEBI:52145
+name: pyrrolidinium ion
+is_a: CHEBI:25697 ! organic cation
+is_a: CHEBI:38260 ! pyrrolidines
+relationship: is_conjugate_acid_of CHEBI:33135 ! pyrrolidine
+
+[Term]
 id: CHEBI:52206
 name: biochemical role
 is_a: CHEBI:24432 ! biological role
@@ -21535,6 +22208,12 @@ is_a: CHEBI:33261 ! organosulfur compound
 relationship: has_functional_parent CHEBI:24928 ! isothiocyanic acid
 
 [Term]
+id: CHEBI:52267
+name: 7-hydroxyflavonol
+is_a: CHEBI:28802 ! flavonols
+relationship: is_conjugate_acid_of CHEBI:60090 ! 7-hydroxyflavon-3-olate
+
+[Term]
 id: CHEBI:52289
 name: wortmannin
 is_a: CHEBI:18946 ! delta-lactone
@@ -21570,6 +22249,11 @@ id: CHEBI:52425
 name: EC 3.2.1.18 (exo-alpha-sialidase) inhibitor
 is_a: CHEBI:36044 ! antiviral drug
 is_a: CHEBI:52424 ! EC 3.2.1.* (glycosidase) inhibitor
+
+[Term]
+id: CHEBI:52440
+name: cephalosporin carboxylic acid anion
+is_a: CHEBI:29067 ! carboxylic acid anion
 
 [Term]
 id: CHEBI:52496
@@ -21637,6 +22321,11 @@ name: cyclic organic group
 is_a: CHEBI:33247 ! organic group
 
 [Term]
+id: CHEBI:52855
+name: inorganic nanoparticle
+is_a: CHEBI:50803 ! nanoparticle
+
+[Term]
 id: CHEBI:53000
 name: epitope
 is_a: CHEBI:24432 ! biological role
@@ -21651,6 +22340,19 @@ id: CHEBI:53156
 name: polychlorobiphenyl
 is_a: CHEBI:35446 ! chlorobiphenyl
 relationship: RO:0000087 CHEBI:77853 ! has role persistent organic pollutant
+
+[Term]
+id: CHEBI:53181
+name: pristane
+is_a: CHEBI:53182 ! norterpene
+is_a: CHEBI:83563 ! long-chain alkane
+relationship: RO:0000087 CHEBI:50847 ! has role immunological adjuvant
+relationship: RO:0000087 CHEBI:59163 ! has role biomarker
+
+[Term]
+id: CHEBI:53182
+name: norterpene
+is_a: CHEBI:24632 ! hydrocarbon
 
 [Term]
 id: CHEBI:53183
@@ -21727,6 +22429,12 @@ relationship: RO:0000087 CHEBI:35703 ! has role xenobiotic
 relationship: RO:0000087 CHEBI:78298 ! has role environmental contaminant
 
 [Term]
+id: CHEBI:53658
+name: ceftriaxone(1-)
+is_a: CHEBI:52440 ! cephalosporin carboxylic acid anion
+relationship: is_conjugate_base_of CHEBI:29007 ! ceftriaxone
+
+[Term]
 id: CHEBI:53691
 name: amidotrizoic acid
 is_a: CHEBI:22160 ! acetamides
@@ -21759,6 +22467,16 @@ is_a: CHEBI:35356 ! dicarboximide
 is_a: CHEBI:48589 ! piperidones
 
 [Term]
+id: CHEBI:5441
+name: glyburide
+is_a: CHEBI:76983 ! N-sulfonylurea
+is_a: CHEBI:83403 ! monochlorobenzenes
+relationship: RO:0000087 CHEBI:131770 ! has role EC 3.6.3.49 (channel-conductance-controlling ATPase) inhibitor
+relationship: RO:0000087 CHEBI:35526 ! has role hypoglycemic agent
+relationship: RO:0000087 CHEBI:38070 ! has role anti-arrhythmia drug
+relationship: RO:0000087 CHEBI:77194 ! has role EC 2.7.1.33 (pantothenate kinase) inhibitor
+
+[Term]
 id: CHEBI:55322
 name: mu-opioid receptor agonist
 is_a: CHEBI:60599 ! mu-opioid agent
@@ -21773,6 +22491,18 @@ is_a: CHEBI:55324 ! gastrointestinal drug
 id: CHEBI:55324
 name: gastrointestinal drug
 is_a: CHEBI:23888 ! drug
+
+[Term]
+id: CHEBI:55326
+name: pentolinium tartrate
+is_a: CHEBI:50562 ! tartrate
+relationship: BFO_0000051 CHEBI:347401 ! pentolinium ion
+relationship: RO:0000087 CHEBI:35674 ! has role antihypertensive agent
+
+[Term]
+id: CHEBI:55339
+name: camphorsulfonate salt
+is_a: CHEBI:55382 ! camphorsulfonates
 
 [Term]
 id: CHEBI:55352
@@ -21802,10 +22532,57 @@ name: oxazolidinone
 is_a: CHEBI:38329 ! oxazolidines
 
 [Term]
+id: CHEBI:55379
+name: camphorsulfonic acid
+is_a: CHEBI:33551 ! organosulfonic acid
+relationship: has_functional_parent CHEBI:36773 ! camphor
+relationship: is_conjugate_acid_of CHEBI:55384 ! camphorsulfonate anion
+
+[Term]
 id: CHEBI:55380
 name: beta-hydroxy ketone
 is_a: CHEBI:17087 ! ketone
 relationship: BFO_0000051 CHEBI:43176 ! hydroxy group
+
+[Term]
+id: CHEBI:55382
+name: camphorsulfonates
+is_a: CHEBI:24532 ! organic heterocyclic compound
+relationship: has_functional_parent CHEBI:55379 ! camphorsulfonic acid
+
+[Term]
+id: CHEBI:55384
+name: camphorsulfonate anion
+is_a: CHEBI:33554 ! organosulfonate oxoanion
+relationship: is_conjugate_base_of CHEBI:55379 ! camphorsulfonic acid
+
+[Term]
+id: CHEBI:55401
+name: (R)-camphorsulfonic acid
+is_a: CHEBI:55379 ! camphorsulfonic acid
+relationship: is_conjugate_acid_of CHEBI:55407 ! (R)-camphorsulfonate
+relationship: is_enantiomer_of CHEBI:55403 ! (S)-camphorsulfonic acid
+
+[Term]
+id: CHEBI:55403
+name: (S)-camphorsulfonic acid
+is_a: CHEBI:55379 ! camphorsulfonic acid
+relationship: is_conjugate_acid_of CHEBI:55408 ! (S)-camphorsulfonate
+relationship: is_enantiomer_of CHEBI:55401 ! (R)-camphorsulfonic acid
+
+[Term]
+id: CHEBI:55407
+name: (R)-camphorsulfonate
+is_a: CHEBI:55384 ! camphorsulfonate anion
+relationship: is_conjugate_base_of CHEBI:55401 ! (R)-camphorsulfonic acid
+relationship: is_enantiomer_of CHEBI:55408 ! (S)-camphorsulfonate
+
+[Term]
+id: CHEBI:55408
+name: (S)-camphorsulfonate
+is_a: CHEBI:55384 ! camphorsulfonate anion
+relationship: is_conjugate_base_of CHEBI:55403 ! (S)-camphorsulfonic acid
+relationship: is_enantiomer_of CHEBI:55407 ! (R)-camphorsulfonate
 
 [Term]
 id: CHEBI:55465
@@ -21816,6 +22593,17 @@ is_a: CHEBI:38755 ! hydroxyisoflavone
 id: CHEBI:55505
 name: 1,2-benzisothiazole
 is_a: CHEBI:37947 ! benzothiazoles
+
+[Term]
+id: CHEBI:5557
+name: guanethidine
+is_a: CHEBI:24436 ! guanidines
+is_a: CHEBI:38791 ! azocanes
+relationship: has_functional_parent CHEBI:42820 ! guanidine
+relationship: has_parent_hydride CHEBI:38792 ! azocane
+relationship: RO:0000087 CHEBI:35674 ! has role antihypertensive agent
+relationship: RO:0000087 CHEBI:37887 ! has role adrenergic antagonist
+relationship: RO:0000087 CHEBI:66991 ! has role sympatholytic agent
 
 [Term]
 id: CHEBI:5610
@@ -21973,6 +22761,12 @@ is_a: CHEBI:58001 ! primary aliphatic ammonium ion
 relationship: is_conjugate_acid_of CHEBI:16000 ! ethanolamine
 relationship: RO:0000087 CHEBI:75772 ! has role Saccharomyces cerevisiae metabolite
 relationship: RO:0000087 CHEBI:77746 ! has role human metabolite
+
+[Term]
+id: CHEBI:57694
+name: quercetin-7-olate
+is_a: CHEBI:58588 ! flavonol oxoanion
+relationship: is_conjugate_base_of CHEBI:16243 ! quercetin
 
 [Term]
 id: CHEBI:57703
@@ -22234,6 +23028,12 @@ id: CHEBI:58570
 name: D-tyrosine zwitterion
 is_a: CHEBI:59871 ! D-alpha-amino acid zwitterion
 relationship: is_tautomer_of CHEBI:28479 ! D-tyrosine
+
+[Term]
+id: CHEBI:58588
+name: flavonol oxoanion
+is_a: CHEBI:25696 ! organic anion
+relationship: is_conjugate_base_of CHEBI:28802 ! flavonols
 
 [Term]
 id: CHEBI:5864
@@ -22732,6 +23532,12 @@ relationship: is_conjugate_acid_of CHEBI:27958 ! cocaine
 relationship: RO:0000087 CHEBI:77746 ! has role human metabolite
 
 [Term]
+id: CHEBI:60090
+name: 7-hydroxyflavon-3-olate
+is_a: CHEBI:60038 ! flavonoid oxoanion
+relationship: is_conjugate_base_of CHEBI:52267 ! 7-hydroxyflavonol
+
+[Term]
 id: CHEBI:60186
 name: EC 3.6.3.8 (Ca(2+)-transporting ATPase) inhibitor
 is_a: CHEBI:76895 ! EC 3.6.3.* (acid anhydride hydrolase catalysing transmembrane movement of substances) inhibitor
@@ -22929,6 +23735,14 @@ id: CHEBI:60644
 name: bridged diphenyl antifungal agent
 is_a: CHEBI:33659 ! organic aromatic compound
 relationship: RO:0000087 CHEBI:35718 ! has role antifungal agent
+
+[Term]
+id: CHEBI:6067
+name: isotretinoin
+is_a: CHEBI:26536 ! retinoic acid
+relationship: RO:0000087 CHEBI:35610 ! has role antineoplastic agent
+relationship: RO:0000087 CHEBI:50176 ! has role keratolytic drug
+relationship: RO:0000087 CHEBI:50905 ! has role teratogenic agent
 
 [Term]
 id: CHEBI:60761
@@ -23853,6 +24667,17 @@ is_a: CHEBI:50335 ! organic nitrogen anion
 relationship: is_conjugate_base_of CHEBI:16698 ! cyanamide
 
 [Term]
+id: CHEBI:64317
+name: isoprenaline
+is_a: CHEBI:33566 ! catechols
+is_a: CHEBI:35681 ! secondary alcohol
+is_a: CHEBI:50995 ! secondary amino compound
+relationship: RO:0000087 CHEBI:35522 ! has role beta-adrenergic agonist
+relationship: RO:0000087 CHEBI:35523 ! has role bronchodilator agent
+relationship: RO:0000087 CHEBI:35524 ! has role sympathomimetic agent
+relationship: RO:0000087 CHEBI:38147 ! has role cardiotonic drug
+
+[Term]
 id: CHEBI:6432
 name: levamisole
 is_a: CHEBI:77278 ! 6-phenyl-2,3,5,6-tetrahydroimidazo[2,1-b][1,3]thiazole
@@ -24289,6 +25114,16 @@ name: monoterpenoid indole alkaloid
 is_a: CHEBI:65321 ! terpenoid indole alkaloid
 
 [Term]
+id: CHEBI:6541
+name: losartan
+is_a: CHEBI:24780 ! imidazoles
+is_a: CHEBI:48420 ! biphenylyltetrazole
+relationship: RO:0000087 CHEBI:35674 ! has role antihypertensive agent
+relationship: RO:0000087 CHEBI:38070 ! has role anti-arrhythmia drug
+relationship: RO:0000087 CHEBI:51451 ! has role endothelin receptor antagonist
+relationship: RO:0000087 CHEBI:61016 ! has role angiotensin receptor antagonist
+
+[Term]
 id: CHEBI:6651
 name: malathion
 is_a: CHEBI:23990 ! ethyl ester
@@ -24506,6 +25341,17 @@ relationship: RO:0000087 CHEBI:35703 ! has role xenobiotic
 relationship: RO:0000087 CHEBI:78298 ! has role environmental contaminant
 
 [Term]
+id: CHEBI:6804
+name: methacholine
+is_a: CHEBI:35267 ! quaternary ammonium ion
+is_a: CHEBI:47622 ! acetate ester
+relationship: RO:0000087 CHEBI:35620 ! has role vasodilator agent
+relationship: RO:0000087 CHEBI:38324 ! has role cholinergic agonist
+relationship: RO:0000087 CHEBI:38325 ! has role muscarinic agonist
+relationship: RO:0000087 CHEBI:50141 ! has role bronchoconstrictor agent
+relationship: RO:0000087 CHEBI:53000 ! has role epitope
+
+[Term]
 id: CHEBI:6807
 name: methadone
 is_a: CHEBI:17087 ! ketone
@@ -24621,6 +25467,25 @@ is_a: CHEBI:91079 ! purinergic receptor P2 antagonist
 id: CHEBI:68612
 name: EC 3.4.14.5 (dipeptidyl-peptidase IV) inhibitor
 is_a: CHEBI:76788 ! EC 3.4.14.* (dipeptidyl- and tripeptidyl-peptidases) inhibitor
+
+[Term]
+id: CHEBI:6872
+name: methylene blue
+is_a: CHEBI:36094 ! organic chloride salt
+relationship: BFO_0000051 CHEBI:43830 ! 3,7-bis(dimethylamino)phenothiazin-5-ium
+relationship: RO:0000087 CHEBI:22586 ! has role antioxidant
+relationship: RO:0000087 CHEBI:33281 ! has role antimicrobial agent
+relationship: RO:0000087 CHEBI:35208 ! has role physical tracer
+relationship: RO:0000087 CHEBI:35469 ! has role antidepressant
+relationship: RO:0000087 CHEBI:37733 ! has role EC 3.1.1.8 (cholinesterase) inhibitor
+relationship: RO:0000087 CHEBI:38068 ! has role antimalarial
+relationship: RO:0000087 CHEBI:38623 ! has role EC 1.4.3.4 (monoamine oxidase) inhibitor
+relationship: RO:0000087 CHEBI:50407 ! has role acid-base indicator
+relationship: RO:0000087 CHEBI:51217 ! has role fluorochrome
+relationship: RO:0000087 CHEBI:63726 ! has role neuroprotective agent
+relationship: RO:0000087 CHEBI:77178 ! has role histological dye
+relationship: RO:0000087 CHEBI:77307 ! has role cardioprotective agent
+relationship: RO:0000087 CHEBI:78678 ! has role EC 4.6.1.2 (guanylate cyclase) inhibitor
 
 [Term]
 id: CHEBI:6887
@@ -24952,6 +25817,11 @@ relationship: RO:0000087 CHEBI:78298 ! has role environmental contaminant
 relationship: RO:0000087 CHEBI:86327 ! has role antifungal drug
 
 [Term]
+id: CHEBI:72470
+name: provitamin B1
+is_a: CHEBI:50188 ! provitamin
+
+[Term]
 id: CHEBI:72544
 name: flavonoids
 is_a: CHEBI:25806 ! oxygen molecular entity
@@ -25180,6 +26050,20 @@ is_a: CHEBI:33261 ! organosulfur compound
 is_a: CHEBI:63299 ! carbohydrate derivative
 
 [Term]
+id: CHEBI:73755
+name: 1,2-dimethylhydrazine
+is_a: CHEBI:24631 ! hydrazines
+relationship: is_conjugate_base_of CHEBI:73760 ! 1,2-dimethylhydrazine(2+)
+relationship: RO:0000087 CHEBI:22333 ! has role alkylating agent
+relationship: RO:0000087 CHEBI:50903 ! has role carcinogenic agent
+
+[Term]
+id: CHEBI:73760
+name: 1,2-dimethylhydrazine(2+)
+is_a: CHEBI:25697 ! organic cation
+relationship: is_conjugate_acid_of CHEBI:73755 ! 1,2-dimethylhydrazine
+
+[Term]
 id: CHEBI:73913
 name: antifolate
 is_a: CHEBI:35221 ! antimetabolite
@@ -25321,6 +26205,18 @@ is_a: CHEBI:50699 ! oligosaccharide
 id: CHEBI:75050
 name: chromogenic compound
 is_a: CHEBI:50411 ! one-colour indicator
+
+[Term]
+id: CHEBI:75095
+name: chrysin
+is_a: CHEBI:38686 ! dihydroxyflavone
+is_a: CHEBI:52267 ! 7-hydroxyflavonol
+relationship: RO:0000087 CHEBI:22586 ! has role antioxidant
+relationship: RO:0000087 CHEBI:35610 ! has role antineoplastic agent
+relationship: RO:0000087 CHEBI:62868 ! has role hepatoprotective agent
+relationship: RO:0000087 CHEBI:67079 ! has role anti-inflammatory agent
+relationship: RO:0000087 CHEBI:76924 ! has role plant metabolite
+relationship: RO:0000087 CHEBI:78763 ! has role EC 2.7.11.18 (myosin-light-chain kinase) inhibitor
 
 [Term]
 id: CHEBI:75190
@@ -25621,6 +26517,11 @@ name: Nitrofen
 is_a: CHEBI:50860 ! organic molecular entity
 
 [Term]
+id: CHEBI:7596
+name: nitroprusside
+is_a: CHEBI:33892 ! iron coordination entity
+
+[Term]
 id: CHEBI:76042
 name: aromatic amino-acid zwitterion
 is_a: CHEBI:35238 ! amino acid zwitterion
@@ -25681,6 +26582,13 @@ id: CHEBI:76326
 name: N-nitrosomorpholine
 is_a: CHEBI:35803 ! nitrosamine
 relationship: RO:0000087 CHEBI:25435 ! has role mutagen
+relationship: RO:0000087 CHEBI:50903 ! has role carcinogenic agent
+
+[Term]
+id: CHEBI:76329
+name: 3-methyl-4'-dimethylaminoazobenzene
+is_a: CHEBI:22682 ! azobenzenes
+is_a: CHEBI:50996 ! tertiary amino compound
 relationship: RO:0000087 CHEBI:50903 ! has role carcinogenic agent
 
 [Term]
@@ -25798,6 +26706,11 @@ is_a: CHEBI:76710 ! EC 4.* (lyase) inhibitor
 [Term]
 id: CHEBI:76713
 name: EC 4.3.* (C-N lyase) inhibitor
+is_a: CHEBI:76710 ! EC 4.* (lyase) inhibitor
+
+[Term]
+id: CHEBI:76716
+name: EC 4.6.* (P-O lyase) inhibitor
 is_a: CHEBI:76710 ! EC 4.* (lyase) inhibitor
 
 [Term]
@@ -26283,6 +27196,11 @@ name: food colouring
 is_a: CHEBI:64047 ! food additive
 
 [Term]
+id: CHEBI:77194
+name: EC 2.7.1.33 (pantothenate kinase) inhibitor
+is_a: CHEBI:76881 ! EC 2.7.1.* (phosphotransferases with an alcohol group as acceptor) inhibitor
+
+[Term]
 id: CHEBI:77255
 name: EC 3.4.24.83 (anthrax lethal factor endopeptidase) inhibitor
 is_a: CHEBI:59107 ! EC 3.4.24.* (metalloendopeptidase) inhibitor
@@ -26331,6 +27249,11 @@ relationship: RO:0000087 CHEBI:48876 ! has role muscarinic antagonist
 relationship: RO:0000087 CHEBI:50919 ! has role antiemetic
 relationship: RO:0000087 CHEBI:50949 ! has role serotonin uptake inhibitor
 relationship: RO:0000087 CHEBI:65191 ! has role second generation antipsychotic
+
+[Term]
+id: CHEBI:77383
+name: 1,1-bis(phosphonic acid)
+is_a: CHEBI:26069 ! phosphonic acids
 
 [Term]
 id: CHEBI:77397
@@ -26754,6 +27677,14 @@ name: EC 3.1.1.1 (carboxylesterase) inhibitor
 is_a: CHEBI:76773 ! EC 3.1.1.* (carboxylic ester hydrolase) inhibitor
 
 [Term]
+id: CHEBI:78523
+name: 3,7-bis(dimethylamino)phenothiazine
+is_a: CHEBI:38093 ! phenothiazines
+is_a: CHEBI:50996 ! tertiary amino compound
+relationship: has_parent_hydride CHEBI:37933 ! 4aH-phenothiazine
+relationship: is_conjugate_base_of CHEBI:43830 ! 3,7-bis(dimethylamino)phenothiazin-5-ium
+
+[Term]
 id: CHEBI:78547
 name: protein kinase A agonist
 is_a: CHEBI:64106 ! protein kinase agonist
@@ -26799,6 +27730,27 @@ relationship: RO:0000087 CHEBI:78298 ! has role environmental contaminant
 id: CHEBI:78675
 name: fundamental metabolite
 is_a: CHEBI:25212 ! metabolite
+
+[Term]
+id: CHEBI:78678
+name: EC 4.6.1.2 (guanylate cyclase) inhibitor
+is_a: CHEBI:76716 ! EC 4.6.* (P-O lyase) inhibitor
+
+[Term]
+id: CHEBI:78741
+name: oxidopamine
+is_a: CHEBI:22707 ! benzenetriol
+is_a: CHEBI:33567 ! catecholamine
+is_a: CHEBI:50994 ! primary amino compound
+relationship: has_functional_parent CHEBI:18243 ! dopamine
+relationship: RO:0000087 CHEBI:49103 ! has role drug metabolite
+relationship: RO:0000087 CHEBI:50910 ! has role neurotoxin
+relationship: RO:0000087 CHEBI:77746 ! has role human metabolite
+
+[Term]
+id: CHEBI:78763
+name: EC 2.7.11.18 (myosin-light-chain kinase) inhibitor
+is_a: CHEBI:76812 ! EC 2.7.11.* (protein-serine/threonine kinase) inhibitor
 
 [Term]
 id: CHEBI:78780
@@ -26999,6 +27951,19 @@ relationship: RO:0000087 CHEBI:76967 ! has role human xenobiotic metabolite
 id: CHEBI:8092
 name: 1,3-phenylenediamine
 is_a: CHEBI:51402 ! phenylenediamine
+
+[Term]
+id: CHEBI:8093
+name: phenylephrine
+is_a: CHEBI:25990 ! phenylethanolamines
+is_a: CHEBI:50995 ! secondary amino compound
+relationship: RO:0000087 CHEBI:35524 ! has role sympathomimetic agent
+relationship: RO:0000087 CHEBI:35569 ! has role alpha-adrenergic agonist
+relationship: RO:0000087 CHEBI:38147 ! has role cardiotonic drug
+relationship: RO:0000087 CHEBI:50267 ! has role protective agent
+relationship: RO:0000087 CHEBI:50513 ! has role mydriatic agent
+relationship: RO:0000087 CHEBI:50514 ! has role vasoconstrictor agent
+relationship: RO:0000087 CHEBI:77715 ! has role nasal decongestant
 
 [Term]
 id: CHEBI:8107
@@ -28471,6 +29436,11 @@ name: perfluorodecyl phosphate
 is_a: CHEBI:25381 ! monoalkyl phosphate
 relationship: RO:0000087 CHEBI:35703 ! has role xenobiotic
 relationship: RO:0000087 CHEBI:78298 ! has role environmental contaminant
+
+[Term]
+id: CHEBI:83563
+name: long-chain alkane
+is_a: CHEBI:18310 ! alkane
 
 [Term]
 id: CHEBI:83565
@@ -30052,6 +31022,16 @@ relationship: RO:0000087 CHEBI:83317 ! has role sterol biosynthesis inhibitor
 relationship: RO:0000087 CHEBI:86328 ! has role antifungal agrochemical
 
 [Term]
+id: CHEBI:9288
+name: streptozocin
+is_a: CHEBI:21638 ! N-acylglucosamine
+is_a: CHEBI:76551 ! N-nitrosoureas
+relationship: RO:0000087 CHEBI:25212 ! has role metabolite
+relationship: RO:0000087 CHEBI:33281 ! has role antimicrobial agent
+relationship: RO:0000087 CHEBI:35610 ! has role antineoplastic agent
+relationship: RO:0000087 CHEBI:59517 ! has role DNA synthesis inhibitor
+
+[Term]
 id: CHEBI:9328
 name: sulfadiazine
 is_a: CHEBI:39447 ! pyrimidines
@@ -30248,6 +31228,23 @@ is_a: CHEBI:60600 ! amide fungicide
 relationship: RO:0000087 CHEBI:50904 ! has role allergen
 relationship: RO:0000087 CHEBI:77884 ! has role EC 1.14.13.70 (sterol 14alpha-demethylase) inhibitor
 relationship: RO:0000087 CHEBI:86328 ! has role antifungal agrochemical
+
+[Term]
+id: CHEBI:9728
+name: trimethaphan
+is_a: CHEBI:26830 ! sulfonium compound
+relationship: RO:0000087 CHEBI:35620 ! has role vasodilator agent
+relationship: RO:0000087 CHEBI:35674 ! has role antihypertensive agent
+relationship: RO:0000087 CHEBI:48878 ! has role nicotinic antagonist
+relationship: RO:0000087 CHEBI:60807 ! has role anaesthesia adjuvant
+
+[Term]
+id: CHEBI:9729
+name: trimethaphan camsylate
+is_a: CHEBI:55339 ! camphorsulfonate salt
+relationship: BFO_0000051 CHEBI:55408 ! (S)-camphorsulfonate
+relationship: BFO_0000051 CHEBI:9728 ! trimethaphan
+relationship: RO:0000087 CHEBI:35674 ! has role antihypertensive agent
 
 [Term]
 id: CHEBI:9738
@@ -31554,9 +32551,8 @@ name: exposure to brassinosteroid
 def: "A exposure event involving the interaction of an exposure receptor to brassinosteroid. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "brassinosteroid exposure" EXACT []
 synonym: "brassinosteroid exposure event" EXACT []
-is_a: ECTO:0000163 ! exposure to organic cyclic compound
-is_a: ECTO:0000200 ! exposure to lipid
 is_a: ECTO:0000371 ! exposure to oxygen molecular entity
+is_a: ECTO:0002002 ! exposure to steroid
 intersection_of: ExO:0000002 ! exposure event
 intersection_of: RO:0002233 CHEBI:22921 ! has input brassinosteroid
 
@@ -31626,8 +32622,6 @@ name: exposure to salicylic acid
 def: "A exposure event involving the interaction of an exposure receptor to salicylic acid. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "salicylic acid exposure" EXACT []
 synonym: "salicylic acid exposure event" EXACT []
-is_a: ECTO:0000163 ! exposure to organic cyclic compound
-is_a: ECTO:0000371 ! exposure to oxygen molecular entity
 is_a: ECTO:0000562 ! exposure to antiinfective agent
 is_a: ECTO:0000600 ! exposure to antifungal agent
 is_a: ECTO:0000617 ! exposure to plant hormone
@@ -31636,6 +32630,7 @@ is_a: ECTO:0000687 ! exposure to keratolytic drug
 is_a: ECTO:0000861 ! exposure to EC 1.11.1.11 (L-ascorbate peroxidase) inhibitors
 is_a: ECTO:0000893 ! exposure to plant metabolite
 is_a: ECTO:0000950 ! exposure to algal metabolite
+is_a: ECTO:0001997 ! exposure to phenols
 intersection_of: ExO:0000002 ! exposure event
 intersection_of: RO:0002233 CHEBI:16914 ! has input salicylic acid
 
@@ -32150,8 +33145,7 @@ name: exposure to corticosteroid
 def: "A exposure event involving the interaction of an exposure receptor to corticosteroid. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "corticosteroid exposure" EXACT []
 synonym: "corticosteroid exposure event" EXACT []
-is_a: ECTO:0000163 ! exposure to organic cyclic compound
-is_a: ECTO:0000200 ! exposure to lipid
+is_a: ECTO:0002002 ! exposure to steroid
 intersection_of: ExO:0000002 ! exposure event
 intersection_of: RO:0002233 CHEBI:50858 ! has input corticosteroid
 
@@ -32193,11 +33187,10 @@ name: exposure to estradiol
 def: "A exposure event involving the interaction of an exposure receptor to estradiol. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "estradiol exposure" EXACT []
 synonym: "estradiol exposure event" EXACT []
-is_a: ECTO:0000163 ! exposure to organic cyclic compound
-is_a: ECTO:0000200 ! exposure to lipid
 is_a: ECTO:0000371 ! exposure to oxygen molecular entity
 is_a: ECTO:0000685 ! exposure to estrogen
 is_a: ECTO:0000919 ! exposure to human metabolite
+is_a: ECTO:0002002 ! exposure to steroid
 intersection_of: ExO:0000002 ! exposure event
 intersection_of: RO:0002233 CHEBI:23965 ! has input estradiol
 
@@ -32240,10 +33233,10 @@ name: exposure to retinoic acid
 def: "A exposure event involving the interaction of an exposure receptor to retinoic acid. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "retinoic acid exposure" EXACT []
 synonym: "retinoic acid exposure event" EXACT []
-is_a: ECTO:0000200 ! exposure to lipid
 is_a: ECTO:0000371 ! exposure to oxygen molecular entity
 is_a: ECTO:0000650 ! exposure to Bronsted acid
 is_a: ECTO:0000919 ! exposure to human metabolite
+is_a: ECTO:0001990 ! exposure to retinoid
 intersection_of: ExO:0000002 ! exposure event
 intersection_of: RO:0002233 CHEBI:26536 ! has input retinoic acid
 
@@ -32306,9 +33299,9 @@ name: exposure to vitamin A
 def: "A exposure event involving the interaction of an exposure receptor to vitamin A. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "vitamin A exposure" EXACT []
 synonym: "vitamin A exposure event" EXACT []
-is_a: ECTO:0000200 ! exposure to lipid
 is_a: ECTO:0000511 ! exposure to fat-soluble vitamin
 is_a: ECTO:0000521 ! exposure to metabolite
+is_a: ECTO:0001990 ! exposure to retinoid
 intersection_of: ExO:0000002 ! exposure event
 intersection_of: RO:0002233 CHEBI:12777 ! has input vitamin A
 
@@ -32359,6 +33352,7 @@ is_a: ECTO:0000538 ! exposure to micronutrient
 is_a: ECTO:0000716 ! exposure to nutraceutical
 is_a: ECTO:0000881 ! exposure to mouse metabolite
 is_a: ECTO:0000938 ! exposure to fundamental metabolite
+is_a: ECTO:0001989 ! exposure to phosphate
 intersection_of: ExO:0000002 ! exposure event
 intersection_of: RO:0002233 CHEBI:15422 ! has input ATP
 
@@ -32384,10 +33378,9 @@ name: exposure to vitamin D
 def: "A exposure event involving the interaction of an exposure receptor to vitamin D. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "vitamin D exposure" EXACT []
 synonym: "vitamin D exposure event" EXACT []
-is_a: ECTO:0000163 ! exposure to organic cyclic compound
-is_a: ECTO:0000200 ! exposure to lipid
 is_a: ECTO:0000371 ! exposure to oxygen molecular entity
 is_a: ECTO:0000511 ! exposure to fat-soluble vitamin
+is_a: ECTO:0002002 ! exposure to steroid
 intersection_of: ExO:0000002 ! exposure event
 intersection_of: RO:0002233 CHEBI:27300 ! has input vitamin D
 
@@ -32397,13 +33390,12 @@ name: exposure to testosterone
 def: "A exposure event involving the interaction of an exposure receptor to testosterone. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "testosterone exposure" EXACT []
 synonym: "testosterone exposure event" EXACT []
-is_a: ECTO:0000163 ! exposure to organic cyclic compound
-is_a: ECTO:0000200 ! exposure to lipid
 is_a: ECTO:0000369 ! exposure to ketone
 is_a: ECTO:0000684 ! exposure to androgen
 is_a: ECTO:0000881 ! exposure to mouse metabolite
 is_a: ECTO:0000919 ! exposure to human metabolite
 is_a: ECTO:0000945 ! exposure to Daphnia magna metabolite
+is_a: ECTO:0002002 ! exposure to steroid
 intersection_of: ExO:0000002 ! exposure event
 intersection_of: RO:0002233 CHEBI:17347 ! has input testosterone
 
@@ -32479,13 +33471,13 @@ name: exposure to methanol
 def: "A exposure event involving the interaction of an exposure receptor to methanol. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "methanol exposure" EXACT []
 synonym: "methanol exposure event" EXACT []
-is_a: ECTO:0000314 ! exposure to alcohol
 is_a: ECTO:0000488 ! exposure to Mycoplasma genitalium metabolite
 is_a: ECTO:0000550 ! exposure to fuel
 is_a: ECTO:0000664 ! exposure to amphiprotic solvent
 is_a: ECTO:0000881 ! exposure to mouse metabolite
 is_a: ECTO:0000900 ! exposure to Escherichia coli metabolite
 is_a: ECTO:0000919 ! exposure to human metabolite
+is_a: ECTO:0001978 ! exposure to primary alcohol
 intersection_of: ExO:0000002 ! exposure event
 intersection_of: RO:0002233 CHEBI:17790 ! has input methanol
 
@@ -32889,10 +33881,9 @@ name: exposure to sterol
 def: "A exposure event involving the interaction of an exposure receptor to sterol. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "sterol exposure" EXACT []
 synonym: "sterol exposure event" EXACT []
-is_a: ECTO:0000163 ! exposure to organic cyclic compound
-is_a: ECTO:0000200 ! exposure to lipid
 is_a: ECTO:0000371 ! exposure to oxygen molecular entity
 is_a: ECTO:0000881 ! exposure to mouse metabolite
+is_a: ECTO:0002002 ! exposure to steroid
 intersection_of: ExO:0000002 ! exposure event
 intersection_of: RO:0002233 CHEBI:15889 ! has input sterol
 
@@ -33054,7 +34045,7 @@ name: exposure to pullulan
 def: "A exposure event involving the interaction of an exposure receptor to pullulan. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "pullulan exposure" EXACT []
 synonym: "pullulan exposure event" EXACT []
-is_a: ECTO:0000127 ! exposure to carbohydrate
+is_a: ECTO:0001983 ! exposure to polysaccharide
 intersection_of: ExO:0000002 ! exposure event
 intersection_of: RO:0002233 CHEBI:27941 ! has input pullulan
 
@@ -33064,7 +34055,6 @@ name: exposure to ethanol
 def: "A exposure event involving the interaction of an exposure receptor to ethanol. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "ethanol exposure" EXACT []
 synonym: "ethanol exposure event" EXACT []
-is_a: ECTO:0000314 ! exposure to alcohol
 is_a: ECTO:0000577 ! exposure to central nervous system depressant
 is_a: ECTO:0000656 ! exposure to antiseptic drug
 is_a: ECTO:0000657 ! exposure to disinfectant
@@ -33077,6 +34067,7 @@ is_a: ECTO:0000881 ! exposure to mouse metabolite
 is_a: ECTO:0000882 ! exposure to Saccharomyces cerevisiae metabolite
 is_a: ECTO:0000900 ! exposure to Escherichia coli metabolite
 is_a: ECTO:0000919 ! exposure to human metabolite
+is_a: ECTO:0001978 ! exposure to primary alcohol
 intersection_of: ExO:0000002 ! exposure event
 intersection_of: RO:0002233 CHEBI:16236 ! has input ethanol
 
@@ -33253,9 +34244,8 @@ name: exposure to steroid hormone
 def: "A exposure event involving the interaction of an exposure receptor to steroid hormone. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "steroid hormone exposure" EXACT []
 synonym: "steroid hormone exposure event" EXACT []
-is_a: ECTO:0000163 ! exposure to organic cyclic compound
-is_a: ECTO:0000200 ! exposure to lipid
 is_a: ECTO:0000516 ! exposure to hormone
+is_a: ECTO:0002002 ! exposure to steroid
 intersection_of: ExO:0000002 ! exposure event
 intersection_of: RO:0002233 CHEBI:26764 ! has input steroid hormone
 
@@ -33335,6 +34325,7 @@ is_a: ECTO:0000371 ! exposure to oxygen molecular entity
 is_a: ECTO:0000881 ! exposure to mouse metabolite
 is_a: ECTO:0000900 ! exposure to Escherichia coli metabolite
 is_a: ECTO:0000919 ! exposure to human metabolite
+is_a: ECTO:0001989 ! exposure to phosphate
 intersection_of: ExO:0000002 ! exposure event
 intersection_of: RO:0002233 CHEBI:17489 ! has input 3',5'-cyclic AMP
 
@@ -33425,6 +34416,7 @@ is_a: ECTO:0000882 ! exposure to Saccharomyces cerevisiae metabolite
 is_a: ECTO:0000893 ! exposure to plant metabolite
 is_a: ECTO:0000900 ! exposure to Escherichia coli metabolite
 is_a: ECTO:0000919 ! exposure to human metabolite
+is_a: ECTO:0001989 ! exposure to phosphate
 intersection_of: ExO:0000002 ! exposure event
 intersection_of: RO:0002233 CHEBI:16356 ! has input 3',5'-cyclic GMP
 
@@ -33560,9 +34552,9 @@ synonym: "indole-3-methanol exposure" EXACT []
 synonym: "indole-3-methanol exposure event" EXACT []
 is_a: ECTO:0000155 ! exposure to organonitrogen compound
 is_a: ECTO:0000163 ! exposure to organic cyclic compound
-is_a: ECTO:0000314 ! exposure to alcohol
 is_a: ECTO:0000588 ! exposure to antineoplastic agent
 is_a: ECTO:0000893 ! exposure to plant metabolite
+is_a: ECTO:0001978 ! exposure to primary alcohol
 intersection_of: ExO:0000002 ! exposure event
 intersection_of: RO:0002233 CHEBI:24814 ! has input indole-3-methanol
 
@@ -33612,10 +34604,9 @@ name: exposure to catecholamine
 def: "A exposure event involving the interaction of an exposure receptor to catecholamine. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "catecholamine exposure" EXACT []
 synonym: "catecholamine exposure event" EXACT []
-is_a: ECTO:0000163 ! exposure to organic cyclic compound
 is_a: ECTO:0000284 ! exposure to monoamine
-is_a: ECTO:0000371 ! exposure to oxygen molecular entity
 is_a: ECTO:0000543 ! exposure to molecular messenger
+is_a: ECTO:0001997 ! exposure to phenols
 intersection_of: ExO:0000002 ! exposure event
 intersection_of: RO:0002233 CHEBI:33567 ! has input catecholamine
 
@@ -33671,7 +34662,7 @@ name: exposure to mercaptoethanol
 def: "A exposure event involving the interaction of an exposure receptor to mercaptoethanol. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "mercaptoethanol exposure" EXACT []
 synonym: "mercaptoethanol exposure event" EXACT []
-is_a: ECTO:0000314 ! exposure to alcohol
+is_a: ECTO:0001978 ! exposure to primary alcohol
 intersection_of: ExO:0000002 ! exposure event
 intersection_of: RO:0002233 CHEBI:41218 ! has input mercaptoethanol
 
@@ -33959,7 +34950,6 @@ name: exposure to L-thyroxine
 def: "A exposure event involving the interaction of an exposure receptor to L-thyroxine. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "L-thyroxine exposure" EXACT []
 synonym: "L-thyroxine exposure event" EXACT []
-is_a: ECTO:0000163 ! exposure to organic cyclic compound
 is_a: ECTO:0000233 ! exposure to amino acid
 is_a: ECTO:0000436 ! exposure to L-phenylalanine derivative
 is_a: ECTO:0000712 ! exposure to antithyroid drug
@@ -33967,6 +34957,7 @@ is_a: ECTO:0000739 ! exposure to mitogen
 is_a: ECTO:0000761 ! exposure to thyroid hormone
 is_a: ECTO:0000881 ! exposure to mouse metabolite
 is_a: ECTO:0000919 ! exposure to human metabolite
+is_a: ECTO:0001997 ! exposure to phenols
 intersection_of: ExO:0000002 ! exposure event
 intersection_of: RO:0002233 CHEBI:18332 ! has input L-thyroxine
 
@@ -33998,10 +34989,10 @@ def: "A exposure event involving the interaction of an exposure receptor to farn
 synonym: "farnesol exposure" EXACT []
 synonym: "farnesol exposure event" EXACT []
 is_a: ECTO:0000200 ! exposure to lipid
-is_a: ECTO:0000314 ! exposure to alcohol
 is_a: ECTO:0000544 ! exposure to antimicrobial agent
 is_a: ECTO:0000893 ! exposure to plant metabolite
 is_a: ECTO:0000894 ! exposure to fungal metabolite
+is_a: ECTO:0001978 ! exposure to primary alcohol
 intersection_of: ExO:0000002 ! exposure event
 intersection_of: RO:0002233 CHEBI:28600 ! has input farnesol
 
@@ -34224,10 +35215,9 @@ def: "A exposure event involving the interaction of an exposure receptor to anti
 synonym: "antimycin A exposure" EXACT []
 synonym: "antimycin A exposure event" EXACT []
 is_a: ECTO:0000155 ! exposure to organonitrogen compound
-is_a: ECTO:0000163 ! exposure to organic cyclic compound
-is_a: ECTO:0000371 ! exposure to oxygen molecular entity
 is_a: ECTO:0000522 ! exposure to mitochondrial respiratory-chain inhibitor
 is_a: ECTO:0000600 ! exposure to antifungal agent
+is_a: ECTO:0001997 ! exposure to phenols
 intersection_of: ExO:0000002 ! exposure event
 intersection_of: RO:0002233 CHEBI:22584 ! has input antimycin A
 
@@ -34237,12 +35227,11 @@ name: exposure to tetracycline
 def: "A exposure event involving the interaction of an exposure receptor to tetracycline. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "tetracycline exposure" EXACT []
 synonym: "tetracycline exposure event" EXACT []
-is_a: ECTO:0000163 ! exposure to organic cyclic compound
-is_a: ECTO:0000371 ! exposure to oxygen molecular entity
 is_a: ECTO:0000602 ! exposure to antiprotozoal drug
 is_a: ECTO:0000608 ! exposure to antibacterial drug
 is_a: ECTO:0000655 ! exposure to protein synthesis inhibitor
 is_a: ECTO:0000900 ! exposure to Escherichia coli metabolite
+is_a: ECTO:0001997 ! exposure to phenols
 intersection_of: ExO:0000002 ! exposure event
 intersection_of: RO:0002233 CHEBI:27902 ! has input tetracycline
 
@@ -34366,10 +35355,10 @@ name: exposure to butan-1-ol
 def: "A exposure event involving the interaction of an exposure receptor to butan-1-ol. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "butan-1-ol exposure" EXACT []
 synonym: "butan-1-ol exposure event" EXACT []
-is_a: ECTO:0000314 ! exposure to alcohol
 is_a: ECTO:0000662 ! exposure to protic solvent
 is_a: ECTO:0000881 ! exposure to mouse metabolite
 is_a: ECTO:0000919 ! exposure to human metabolite
+is_a: ECTO:0001978 ! exposure to primary alcohol
 intersection_of: ExO:0000002 ! exposure event
 intersection_of: RO:0002233 CHEBI:28885 ! has input butan-1-ol
 
@@ -34434,9 +35423,9 @@ name: exposure to propan-1-ol
 def: "A exposure event involving the interaction of an exposure receptor to propan-1-ol. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "propan-1-ol exposure" EXACT []
 synonym: "propan-1-ol exposure event" EXACT []
-is_a: ECTO:0000314 ! exposure to alcohol
 is_a: ECTO:0000521 ! exposure to metabolite
 is_a: ECTO:0000662 ! exposure to protic solvent
+is_a: ECTO:0001978 ! exposure to primary alcohol
 intersection_of: ExO:0000002 ! exposure event
 intersection_of: RO:0002233 CHEBI:28831 ! has input propan-1-ol
 
@@ -34536,8 +35525,6 @@ def: "A exposure event involving the interaction of an exposure receptor to para
 synonym: "paracetamol exposure" EXACT []
 synonym: "paracetamol exposure event" EXACT []
 is_a: ECTO:0000155 ! exposure to organonitrogen compound
-is_a: ECTO:0000163 ! exposure to organic cyclic compound
-is_a: ECTO:0000371 ! exposure to oxygen molecular entity
 is_a: ECTO:0000571 ! exposure to non-steroidal anti-inflammatory drug
 is_a: ECTO:0000574 ! exposure to non-narcotic analgesic
 is_a: ECTO:0000578 ! exposure to antipyretic
@@ -34547,6 +35534,7 @@ is_a: ECTO:0000710 ! exposure to cyclooxygenase 1 inhibitor
 is_a: ECTO:0000865 ! exposure to cyclooxygenase 3 inhibitor
 is_a: ECTO:0000931 ! exposure to environmental contaminant
 is_a: ECTO:0000956 ! exposure to human blood serum metabolite
+is_a: ECTO:0001997 ! exposure to phenols
 intersection_of: ExO:0000002 ! exposure event
 intersection_of: RO:0002233 CHEBI:46195 ! has input paracetamol
 
@@ -34698,10 +35686,9 @@ def: "A exposure event involving the interaction of an exposure receptor to caps
 synonym: "capsazepine exposure" EXACT []
 synonym: "capsazepine exposure event" EXACT []
 is_a: ECTO:0000155 ! exposure to organonitrogen compound
-is_a: ECTO:0000163 ! exposure to organic cyclic compound
-is_a: ECTO:0000371 ! exposure to oxygen molecular entity
 is_a: ECTO:0000850 ! exposure to capsaicin receptor antagonist
 is_a: ECTO:0001152 ! exposure to organochlorine compound
+is_a: ECTO:0001997 ! exposure to phenols
 intersection_of: ExO:0000002 ! exposure event
 intersection_of: RO:0002233 CHEBI:70773 ! has input capsazepine
 
@@ -34714,6 +35701,7 @@ synonym: "hesperadin exposure event" EXACT []
 is_a: ECTO:0000163 ! exposure to organic cyclic compound
 is_a: ECTO:0000168 ! exposure to amine
 is_a: ECTO:0000849 ! exposure to Aurora kinase inhibitor
+is_a: ECTO:0002003 ! exposure to sulfonamide
 intersection_of: ExO:0000002 ! exposure event
 intersection_of: RO:0002233 CHEBI:70726 ! has input hesperadin
 
@@ -34796,9 +35784,9 @@ name: exposure to tamsulosin
 def: "A exposure event involving the interaction of an exposure receptor to tamsulosin. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "tamsulosin exposure" EXACT []
 synonym: "tamsulosin exposure event" EXACT []
-is_a: ECTO:0000370 ! exposure to nitrogen
 is_a: ECTO:0000588 ! exposure to antineoplastic agent
 is_a: ECTO:0000619 ! exposure to alpha-adrenergic antagonist
+is_a: ECTO:0002003 ! exposure to sulfonamide
 intersection_of: ExO:0000002 ! exposure event
 intersection_of: RO:0002233 CHEBI:9398 ! has input tamsulosin
 
@@ -35035,8 +36023,8 @@ name: exposure to isobutanol
 def: "A exposure event involving the interaction of an exposure receptor to isobutanol. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "isobutanol exposure" EXACT []
 synonym: "isobutanol exposure event" EXACT []
-is_a: ECTO:0000314 ! exposure to alcohol
 is_a: ECTO:0000882 ! exposure to Saccharomyces cerevisiae metabolite
+is_a: ECTO:0001978 ! exposure to primary alcohol
 intersection_of: ExO:0000002 ! exposure event
 intersection_of: RO:0002233 CHEBI:46645 ! has input isobutanol
 
@@ -35046,12 +36034,12 @@ name: exposure to plumbagin
 def: "A exposure event involving the interaction of an exposure receptor to plumbagin. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "plumbagin exposure" EXACT []
 synonym: "plumbagin exposure event" EXACT []
-is_a: ECTO:0000163 ! exposure to organic cyclic compound
 is_a: ECTO:0000521 ! exposure to metabolite
 is_a: ECTO:0000588 ! exposure to antineoplastic agent
 is_a: ECTO:0000693 ! exposure to anticoagulant
 is_a: ECTO:0000721 ! exposure to immunological adjuvant
 is_a: ECTO:0001884 ! exposure to quinone
+is_a: ECTO:0001997 ! exposure to phenols
 intersection_of: ExO:0000002 ! exposure event
 intersection_of: RO:0002233 CHEBI:8273 ! has input plumbagin
 
@@ -35132,6 +36120,7 @@ is_a: ECTO:0000369 ! exposure to ketone
 is_a: ECTO:0000559 ! exposure to effector
 is_a: ECTO:0000877 ! exposure to eukaryotic metabolite
 is_a: ECTO:0001703 ! exposure to dichlorobenzene
+is_a: ECTO:0001997 ! exposure to phenols
 intersection_of: ExO:0000002 ! exposure event
 intersection_of: RO:0002233 CHEBI:64598 ! has input 1-(3,5-dichloro-2,6-dihydroxy-4-methoxyphenyl)hexan-1-one
 
@@ -35169,10 +36158,9 @@ name: exposure to bile acid
 def: "A exposure event involving the interaction of an exposure receptor to bile acid. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "bile acid exposure" EXACT []
 synonym: "bile acid exposure event" EXACT []
-is_a: ECTO:0000163 ! exposure to organic cyclic compound
-is_a: ECTO:0000200 ! exposure to lipid
 is_a: ECTO:0000371 ! exposure to oxygen molecular entity
 is_a: ECTO:0000650 ! exposure to Bronsted acid
+is_a: ECTO:0002002 ! exposure to steroid
 intersection_of: ExO:0000002 ! exposure event
 intersection_of: RO:0002233 CHEBI:3098 ! has input bile acid
 
@@ -35246,13 +36234,12 @@ name: exposure to dehydroepiandrosterone
 def: "A exposure event involving the interaction of an exposure receptor to dehydroepiandrosterone. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "dehydroepiandrosterone exposure" EXACT []
 synonym: "dehydroepiandrosterone exposure event" EXACT []
-is_a: ECTO:0000163 ! exposure to organic cyclic compound
-is_a: ECTO:0000200 ! exposure to lipid
 is_a: ECTO:0000314 ! exposure to alcohol
 is_a: ECTO:0000369 ! exposure to ketone
 is_a: ECTO:0000684 ! exposure to androgen
 is_a: ECTO:0000881 ! exposure to mouse metabolite
 is_a: ECTO:0000919 ! exposure to human metabolite
+is_a: ECTO:0002002 ! exposure to steroid
 intersection_of: ExO:0000002 ! exposure event
 intersection_of: RO:0002233 CHEBI:28689 ! has input dehydroepiandrosterone
 
@@ -35342,11 +36329,10 @@ name: exposure to bisphenol A
 def: "A exposure event involving the interaction of an exposure receptor to bisphenol A. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "bisphenol A exposure" EXACT []
 synonym: "bisphenol A exposure event" EXACT []
-is_a: ECTO:0000163 ! exposure to organic cyclic compound
-is_a: ECTO:0000371 ! exposure to oxygen molecular entity
 is_a: ECTO:0000597 ! exposure to xenobiotic
 is_a: ECTO:0000902 ! exposure to xenoestrogen
 is_a: ECTO:0000931 ! exposure to environmental contaminant
+is_a: ECTO:0001997 ! exposure to phenols
 intersection_of: ExO:0000002 ! exposure event
 intersection_of: RO:0002233 CHEBI:33216 ! has input bisphenol A
 
@@ -35447,12 +36433,11 @@ name: exposure to serotonin
 def: "A exposure event involving the interaction of an exposure receptor to serotonin. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "serotonin exposure" EXACT []
 synonym: "serotonin exposure event" EXACT []
-is_a: ECTO:0000163 ! exposure to organic cyclic compound
 is_a: ECTO:0000284 ! exposure to monoamine
-is_a: ECTO:0000371 ! exposure to oxygen molecular entity
 is_a: ECTO:0000526 ! exposure to neurotransmitter
 is_a: ECTO:0000881 ! exposure to mouse metabolite
 is_a: ECTO:0000919 ! exposure to human metabolite
+is_a: ECTO:0001997 ! exposure to phenols
 intersection_of: ExO:0000002 ! exposure event
 intersection_of: RO:0002233 CHEBI:28790 ! has input serotonin
 
@@ -35584,6 +36569,7 @@ is_a: ECTO:0000595 ! exposure to antihypertensive agent
 is_a: ECTO:0000686 ! exposure to bronchoconstrictor agent
 is_a: ECTO:0000692 ! exposure to hematologic agent
 is_a: ECTO:0000881 ! exposure to mouse metabolite
+is_a: ECTO:0001989 ! exposure to phosphate
 intersection_of: ExO:0000002 ! exposure event
 intersection_of: RO:0002233 CHEBI:44811 ! has input 2-O-acetyl-1-O-hexadecyl-sn-glycero-3-phosphocholine
 
@@ -35627,7 +36613,7 @@ synonym: "sodium phosphate exposure" EXACT []
 synonym: "sodium phosphate exposure event" EXACT []
 is_a: ECTO:0000137 ! exposure to inorganic
 is_a: ECTO:0000375 ! exposure to salt
-is_a: ECTO:0001864 ! exposure to phosphorus molecular entity
+is_a: ECTO:0001989 ! exposure to phosphate
 intersection_of: ExO:0000002 ! exposure event
 intersection_of: RO:0002233 CHEBI:37586 ! has input sodium phosphate
 
@@ -35733,10 +36719,9 @@ name: exposure to 17alpha-ethynylestradiol
 def: "A exposure event involving the interaction of an exposure receptor to 17alpha-ethynylestradiol. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "17alpha-ethynylestradiol exposure" EXACT []
 synonym: "17alpha-ethynylestradiol exposure event" EXACT []
-is_a: ECTO:0000163 ! exposure to organic cyclic compound
-is_a: ECTO:0000200 ! exposure to lipid
 is_a: ECTO:0000371 ! exposure to oxygen molecular entity
 is_a: ECTO:0000902 ! exposure to xenoestrogen
+is_a: ECTO:0002002 ! exposure to steroid
 intersection_of: ExO:0000002 ! exposure event
 intersection_of: RO:0002233 CHEBI:4903 ! has input 17alpha-ethynylestradiol
 
@@ -35795,6 +36780,7 @@ is_a: ECTO:0000250 ! exposure to organophosphorus compound
 is_a: ECTO:0000371 ! exposure to oxygen molecular entity
 is_a: ECTO:0000881 ! exposure to mouse metabolite
 is_a: ECTO:0000900 ! exposure to Escherichia coli metabolite
+is_a: ECTO:0001989 ! exposure to phosphate
 intersection_of: ExO:0000002 ! exposure event
 intersection_of: RO:0002233 CHEBI:62837 ! has input 1-oleoyl-sn-glycerol 3-phosphate
 
@@ -35982,9 +36968,9 @@ def: "A exposure event involving the interaction of an exposure receptor to resv
 synonym: "resveratrol exposure" EXACT []
 synonym: "resveratrol exposure event" EXACT []
 is_a: ECTO:0000216 ! exposure to stilbenoid
-is_a: ECTO:0000371 ! exposure to oxygen molecular entity
 is_a: ECTO:0000497 ! exposure to antioxidant
 is_a: ECTO:0000532 ! exposure to phytoalexin
+is_a: ECTO:0001997 ! exposure to phenols
 intersection_of: ExO:0000002 ! exposure event
 intersection_of: RO:0002233 CHEBI:27881 ! has input resveratrol
 
@@ -36009,9 +36995,8 @@ name: exposure to dinitrophenol
 def: "A exposure event involving the interaction of an exposure receptor to dinitrophenol. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "dinitrophenol exposure" EXACT []
 synonym: "dinitrophenol exposure event" EXACT []
-is_a: ECTO:0000163 ! exposure to organic cyclic compound
 is_a: ECTO:0000370 ! exposure to nitrogen
-is_a: ECTO:0000371 ! exposure to oxygen molecular entity
+is_a: ECTO:0001997 ! exposure to phenols
 intersection_of: ExO:0000002 ! exposure event
 intersection_of: RO:0002233 CHEBI:39352 ! has input dinitrophenol
 
@@ -36021,7 +37006,6 @@ name: exposure to curcumin
 def: "A exposure event involving the interaction of an exposure receptor to curcumin. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "curcumin exposure" EXACT []
 synonym: "curcumin exposure event" EXACT []
-is_a: ECTO:0000163 ! exposure to organic cyclic compound
 is_a: ECTO:0000244 ! exposure to ether
 is_a: ECTO:0000369 ! exposure to ketone
 is_a: ECTO:0000533 ! exposure to biological pigment
@@ -36047,6 +37031,7 @@ is_a: ECTO:0000887 ! exposure to EC 2.7.10.2 (non-specific protein-tyrosine kina
 is_a: ECTO:0000893 ! exposure to plant metabolite
 is_a: ECTO:0000910 ! exposure to food colouring
 is_a: ECTO:0000914 ! exposure to EC 1.1.1.25 (shikimate dehydrogenase) inhibitor
+is_a: ECTO:0001997 ! exposure to phenols
 intersection_of: ExO:0000002 ! exposure event
 intersection_of: RO:0002233 CHEBI:3962 ! has input curcumin
 
@@ -41032,14 +42017,14 @@ id: ECTO:0001065
 name: exposure to amount of cholesterol in food product
 def: "A exposure event involving the interaction of an exposure receptor to amount of cholesterol in food product." []
 synonym: "amount cholesterol exposure in food product" EXACT []
-is_a: ECTO:0000992 ! exposure to amount of chemical entity in food product
+is_a: ECTO:0001077 ! exposure to amount of lipid in food product
 
 [Term]
 id: ECTO:0001066
 name: exposure to amount of triglyceride in food product
 def: "A exposure event involving the interaction of an exposure receptor to amount of triglyceride in food product." []
 synonym: "amount triglyceride exposure in food product" EXACT []
-is_a: ECTO:0000992 ! exposure to amount of chemical entity in food product
+is_a: ECTO:0001077 ! exposure to amount of lipid in food product
 
 [Term]
 id: ECTO:0001067
@@ -41121,10 +42106,10 @@ is_a: ECTO:0001067 ! exposure to amount of low-density lipoprotein in food produ
 
 [Term]
 id: ECTO:0001077
-name: exposure to amount of lipid in ENVO:00002002
-def: "A exposure event involving the interaction of an exposure receptor to amount of lipid in ENVO:00002002." []
-synonym: "amount lipid exposure in ENVO:00002002" EXACT []
-is_a: ExO:0000002 ! exposure event
+name: exposure to amount of lipid in food product
+def: "A exposure event involving the interaction of an exposure receptor to amount of lipid in food product." []
+synonym: "amount lipid exposure in food product" EXACT []
+is_a: ECTO:0000992 ! exposure to amount of chemical entity in food product
 
 [Term]
 id: ECTO:0001078
@@ -41395,7 +42380,7 @@ name: Clinical or Research Activity related exposure
 def: "A exposure event involving Clinical or Research Activity." []
 synonym: "Clinical or Research Activity" NARROW []
 synonym: "Clinical or Research Activity exposure" EXACT []
-is_a: ExO:0000002 ! exposure event
+is_a: ECTO:0002032 ! Activity related exposure
 intersection_of: ExO:0000002 ! exposure event
 intersection_of: BFO:0000050 NCIT:C16203 ! part_of Clinical or Research Activity
 
@@ -41545,7 +42530,7 @@ name: Violence related exposure
 def: "A exposure event involving Violence." []
 synonym: "Violence" NARROW []
 synonym: "Violence exposure" EXACT []
-is_a: ExO:0000002 ! exposure event
+is_a: ECTO:0002032 ! Activity related exposure
 intersection_of: ExO:0000002 ! exposure event
 intersection_of: BFO:0000050 NCIT:C93214 ! part_of Violence
 
@@ -41565,7 +42550,7 @@ name: Poverty related exposure
 def: "A exposure event involving Poverty." []
 synonym: "Poverty" NARROW []
 synonym: "Poverty exposure" EXACT []
-is_a: ExO:0000002 ! exposure event
+is_a: ECTO:0002034 ! Socioeconomic Factors related exposure
 intersection_of: ExO:0000002 ! exposure event
 intersection_of: BFO:0000050 NCIT:C17009 ! part_of Poverty
 
@@ -41939,6 +42924,7 @@ is_a: ECTO:0000701 ! exposure to EC 2.5.1.15 (dihydropteroate synthase) inhibito
 is_a: ECTO:0000725 ! exposure to carcinogenic agent
 is_a: ECTO:0000738 ! exposure to ligand
 is_a: ECTO:0000931 ! exposure to environmental contaminant
+is_a: ECTO:0002003 ! exposure to sulfonamide
 intersection_of: ExO:0000002 ! exposure event
 intersection_of: RO:0002233 CHEBI:102265 ! has input sulfamethazine
 
@@ -42028,6 +43014,7 @@ is_a: ECTO:0000562 ! exposure to antiinfective agent
 is_a: ECTO:0000597 ! exposure to xenobiotic
 is_a: ECTO:0000688 ! exposure to dermatologic drug
 is_a: ECTO:0000931 ! exposure to environmental contaminant
+is_a: ECTO:0002003 ! exposure to sulfonamide
 intersection_of: ExO:0000002 ! exposure event
 intersection_of: RO:0002233 CHEBI:132842 ! has input sulfapyridine
 
@@ -42176,8 +43163,6 @@ name: exposure to mycophenolic acid
 def: "A exposure event involving the interaction of an exposure receptor to mycophenolic acid. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "mycophenolic acid exposure" EXACT []
 synonym: "mycophenolic acid exposure event" EXACT []
-is_a: ECTO:0000163 ! exposure to organic cyclic compound
-is_a: ECTO:0000371 ! exposure to oxygen molecular entity
 is_a: ECTO:0000524 ! exposure to mycotoxin
 is_a: ECTO:0000544 ! exposure to antimicrobial agent
 is_a: ECTO:0000588 ! exposure to antineoplastic agent
@@ -42187,6 +43172,7 @@ is_a: ECTO:0000650 ! exposure to Bronsted acid
 is_a: ECTO:0000745 ! exposure to EC 1.1.1.205 (IMP dehydrogenase) inhibitor
 is_a: ECTO:0000896 ! exposure to Penicillium metabolite
 is_a: ECTO:0000931 ! exposure to environmental contaminant
+is_a: ECTO:0001997 ! exposure to phenols
 intersection_of: ExO:0000002 ! exposure event
 intersection_of: RO:0002233 CHEBI:168396 ! has input mycophenolic acid
 
@@ -42196,10 +43182,9 @@ name: exposure to biphenyl-2-ol
 def: "A exposure event involving the interaction of an exposure receptor to biphenyl-2-ol. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "biphenyl-2-ol exposure" EXACT []
 synonym: "biphenyl-2-ol exposure event" EXACT []
-is_a: ECTO:0000163 ! exposure to organic cyclic compound
-is_a: ECTO:0000371 ! exposure to oxygen molecular entity
 is_a: ECTO:0000959 ! exposure to antifungal agrochemical
 is_a: ECTO:0001562 ! exposure to environmental food contaminant
+is_a: ECTO:0001997 ! exposure to phenols
 intersection_of: ExO:0000002 ! exposure event
 intersection_of: RO:0002233 CHEBI:17043 ! has input biphenyl-2-ol
 
@@ -42210,11 +43195,10 @@ def: "A exposure event involving the interaction of an exposure receptor to 3,5-
 synonym: "3,5-dibromo-4-hydroxybenzonitrile exposure" EXACT []
 synonym: "3,5-dibromo-4-hydroxybenzonitrile exposure event" EXACT []
 is_a: ECTO:0000155 ! exposure to organonitrogen compound
-is_a: ECTO:0000163 ! exposure to organic cyclic compound
-is_a: ECTO:0000371 ! exposure to oxygen molecular entity
 is_a: ECTO:0000515 ! exposure to herbicide
 is_a: ECTO:0000597 ! exposure to xenobiotic
 is_a: ECTO:0000931 ! exposure to environmental contaminant
+is_a: ECTO:0001997 ! exposure to phenols
 intersection_of: ExO:0000002 ! exposure event
 intersection_of: RO:0002233 CHEBI:17192 ! has input 3,5-dibromo-4-hydroxybenzonitrile
 
@@ -42302,12 +43286,12 @@ def: "A exposure event involving the interaction of an exposure receptor to albu
 synonym: "albuterol exposure" EXACT []
 synonym: "albuterol exposure event" EXACT []
 is_a: ECTO:0000155 ! exposure to organonitrogen compound
-is_a: ECTO:0000163 ! exposure to organic cyclic compound
 is_a: ECTO:0000314 ! exposure to alcohol
 is_a: ECTO:0000581 ! exposure to beta-adrenergic agonist
 is_a: ECTO:0000582 ! exposure to bronchodilator agent
 is_a: ECTO:0000597 ! exposure to xenobiotic
 is_a: ECTO:0000931 ! exposure to environmental contaminant
+is_a: ECTO:0001997 ! exposure to phenols
 intersection_of: ExO:0000002 ! exposure event
 intersection_of: RO:0002233 CHEBI:2549 ! has input albuterol
 
@@ -42752,6 +43736,7 @@ is_a: ECTO:0000371 ! exposure to oxygen molecular entity
 is_a: ECTO:0000597 ! exposure to xenobiotic
 is_a: ECTO:0000703 ! exposure to sweetening agent
 is_a: ECTO:0000931 ! exposure to environmental contaminant
+is_a: ECTO:0002003 ! exposure to sulfonamide
 intersection_of: ExO:0000002 ! exposure event
 intersection_of: RO:0002233 CHEBI:32111 ! has input saccharin
 
@@ -42782,6 +43767,7 @@ is_a: ECTO:0000544 ! exposure to antimicrobial agent
 is_a: ECTO:0000562 ! exposure to antiinfective agent
 is_a: ECTO:0000597 ! exposure to xenobiotic
 is_a: ECTO:0000931 ! exposure to environmental contaminant
+is_a: ECTO:0002003 ! exposure to sulfonamide
 intersection_of: ExO:0000002 ! exposure event
 intersection_of: RO:0002233 CHEBI:32161 ! has input sulfadimethoxine
 
@@ -43089,13 +44075,13 @@ name: exposure to oxybenzone
 def: "A exposure event involving the interaction of an exposure receptor to oxybenzone. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "oxybenzone exposure" EXACT []
 synonym: "oxybenzone exposure event" EXACT []
-is_a: ECTO:0000163 ! exposure to organic cyclic compound
 is_a: ECTO:0000244 ! exposure to ether
 is_a: ECTO:0000369 ! exposure to ketone
 is_a: ECTO:0000597 ! exposure to xenobiotic
 is_a: ECTO:0000688 ! exposure to dermatologic drug
 is_a: ECTO:0000866 ! exposure to ultraviolet filter
 is_a: ECTO:0000931 ! exposure to environmental contaminant
+is_a: ECTO:0001997 ! exposure to phenols
 intersection_of: ExO:0000002 ! exposure event
 intersection_of: RO:0002233 CHEBI:34283 ! has input oxybenzone
 
@@ -43142,9 +44128,8 @@ name: exposure to 4-nonylphenol
 def: "A exposure event involving the interaction of an exposure receptor to 4-nonylphenol. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "4-nonylphenol exposure" EXACT []
 synonym: "4-nonylphenol exposure event" EXACT []
-is_a: ECTO:0000163 ! exposure to organic cyclic compound
-is_a: ECTO:0000371 ! exposure to oxygen molecular entity
 is_a: ECTO:0000931 ! exposure to environmental contaminant
+is_a: ECTO:0001997 ! exposure to phenols
 intersection_of: ExO:0000002 ! exposure event
 intersection_of: RO:0002233 CHEBI:34440 ! has input 4-nonylphenol
 
@@ -43190,6 +44175,7 @@ is_a: ECTO:0000616 ! exposure to EC 3.1.1.8 (cholinesterase) inhibitor
 is_a: ECTO:0000635 ! exposure to EC 3.1.1.7 (acetylcholinesterase) inhibitor
 is_a: ECTO:0000931 ! exposure to environmental contaminant
 is_a: ECTO:0001152 ! exposure to organochlorine compound
+is_a: ECTO:0001989 ! exposure to phosphate
 intersection_of: ExO:0000002 ! exposure event
 intersection_of: RO:0002233 CHEBI:34631 ! has input chlorpyrifos
 
@@ -43210,6 +44196,7 @@ is_a: ECTO:0000597 ! exposure to xenobiotic
 is_a: ECTO:0000635 ! exposure to EC 3.1.1.7 (acetylcholinesterase) inhibitor
 is_a: ECTO:0000931 ! exposure to environmental contaminant
 is_a: ECTO:0001152 ! exposure to organochlorine compound
+is_a: ECTO:0001989 ! exposure to phosphate
 intersection_of: ExO:0000002 ! exposure event
 intersection_of: RO:0002233 CHEBI:34632 ! has input chlorpyrifos-methyl
 
@@ -43240,6 +44227,7 @@ is_a: ECTO:0000597 ! exposure to xenobiotic
 is_a: ECTO:0000616 ! exposure to EC 3.1.1.8 (cholinesterase) inhibitor
 is_a: ECTO:0000635 ! exposure to EC 3.1.1.7 (acetylcholinesterase) inhibitor
 is_a: ECTO:0000931 ! exposure to environmental contaminant
+is_a: ECTO:0001989 ! exposure to phosphate
 intersection_of: ExO:0000002 ! exposure event
 intersection_of: RO:0002233 CHEBI:34682 ! has input diazinon
 
@@ -43273,6 +44261,7 @@ is_a: ECTO:0000597 ! exposure to xenobiotic
 is_a: ECTO:0000616 ! exposure to EC 3.1.1.8 (cholinesterase) inhibitor
 is_a: ECTO:0000635 ! exposure to EC 3.1.1.7 (acetylcholinesterase) inhibitor
 is_a: ECTO:0000931 ! exposure to environmental contaminant
+is_a: ECTO:0001989 ! exposure to phosphate
 intersection_of: ExO:0000002 ! exposure event
 intersection_of: RO:0002233 CHEBI:34714 ! has input dimethoate
 
@@ -43372,6 +44361,7 @@ is_a: ECTO:0000250 ! exposure to organophosphorus compound
 is_a: ECTO:0000371 ! exposure to oxygen molecular entity
 is_a: ECTO:0000486 ! exposure to chemical with application
 is_a: ECTO:0000931 ! exposure to environmental contaminant
+is_a: ECTO:0001989 ! exposure to phosphate
 intersection_of: ExO:0000002 ! exposure event
 intersection_of: RO:0002233 CHEBI:35038 ! has input tris(2-butoxyethyl) phosphate
 
@@ -43758,6 +44748,7 @@ is_a: ECTO:0000833 ! exposure to anti-inflammatory agent
 is_a: ECTO:0000912 ! exposure to cardioprotective agent
 is_a: ECTO:0000931 ! exposure to environmental contaminant
 is_a: ECTO:0001148 ! exposure to organofluorine compound
+is_a: ECTO:0002003 ! exposure to sulfonamide
 intersection_of: ExO:0000002 ! exposure event
 intersection_of: RO:0002233 CHEBI:38545 ! has input rosuvastatin
 
@@ -43774,6 +44765,7 @@ is_a: ECTO:0000517 ! exposure to insecticide
 is_a: ECTO:0000547 ! exposure to agrochemical
 is_a: ECTO:0000635 ! exposure to EC 3.1.1.7 (acetylcholinesterase) inhibitor
 is_a: ECTO:0000931 ! exposure to environmental contaminant
+is_a: ECTO:0001989 ! exposure to phosphate
 intersection_of: ExO:0000002 ! exposure event
 intersection_of: RO:0002233 CHEBI:38663 ! has input ethion
 
@@ -43794,6 +44786,7 @@ is_a: ECTO:0000616 ! exposure to EC 3.1.1.8 (cholinesterase) inhibitor
 is_a: ECTO:0000635 ! exposure to EC 3.1.1.7 (acetylcholinesterase) inhibitor
 is_a: ECTO:0000724 ! exposure to genotoxin
 is_a: ECTO:0000931 ! exposure to environmental contaminant
+is_a: ECTO:0001989 ! exposure to phosphate
 intersection_of: ExO:0000002 ! exposure event
 intersection_of: RO:0002233 CHEBI:38746 ! has input parathion-methyl
 
@@ -43812,6 +44805,7 @@ is_a: ECTO:0000517 ! exposure to insecticide
 is_a: ECTO:0000547 ! exposure to agrochemical
 is_a: ECTO:0000635 ! exposure to EC 3.1.1.7 (acetylcholinesterase) inhibitor
 is_a: ECTO:0000931 ! exposure to environmental contaminant
+is_a: ECTO:0001989 ! exposure to phosphate
 intersection_of: ExO:0000002 ! exposure event
 intersection_of: RO:0002233 CHEBI:38843 ! has input pirimiphos-methyl
 
@@ -44079,6 +45073,7 @@ is_a: ECTO:0000371 ! exposure to oxygen molecular entity
 is_a: ECTO:0000515 ! exposure to herbicide
 is_a: ECTO:0000597 ! exposure to xenobiotic
 is_a: ECTO:0000931 ! exposure to environmental contaminant
+is_a: ECTO:0002003 ! exposure to sulfonamide
 intersection_of: ExO:0000002 ! exposure event
 intersection_of: RO:0002233 CHEBI:39678 ! has input metsulfuron methyl
 
@@ -44339,13 +45334,13 @@ def: "A exposure event involving the interaction of an exposure receptor to furo
 synonym: "furosemide exposure" EXACT []
 synonym: "furosemide exposure event" EXACT []
 is_a: ECTO:0000163 ! exposure to organic cyclic compound
-is_a: ECTO:0000370 ! exposure to nitrogen
 is_a: ECTO:0000371 ! exposure to oxygen molecular entity
 is_a: ECTO:0000579 ! exposure to diuretic
 is_a: ECTO:0000597 ! exposure to xenobiotic
 is_a: ECTO:0000650 ! exposure to Bronsted acid
 is_a: ECTO:0000931 ! exposure to environmental contaminant
 is_a: ECTO:0001152 ! exposure to organochlorine compound
+is_a: ECTO:0002003 ! exposure to sulfonamide
 intersection_of: ExO:0000002 ! exposure event
 intersection_of: RO:0002233 CHEBI:47426 ! has input furosemide
 
@@ -44372,10 +45367,9 @@ name: exposure to 2,4,6-tribromophenol
 def: "A exposure event involving the interaction of an exposure receptor to 2,4,6-tribromophenol. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "2,4,6-tribromophenol exposure" EXACT []
 synonym: "2,4,6-tribromophenol exposure event" EXACT []
-is_a: ECTO:0000163 ! exposure to organic cyclic compound
-is_a: ECTO:0000371 ! exposure to oxygen molecular entity
 is_a: ECTO:0000513 ! exposure to fungicide
 is_a: ECTO:0000931 ! exposure to environmental contaminant
+is_a: ECTO:0001997 ! exposure to phenols
 intersection_of: ExO:0000002 ! exposure event
 intersection_of: RO:0002233 CHEBI:47696 ! has input 2,4,6-tribromophenol
 
@@ -44498,13 +45492,12 @@ name: exposure to exemestane
 def: "A exposure event involving the interaction of an exposure receptor to exemestane. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "exemestane exposure" EXACT []
 synonym: "exemestane exposure event" EXACT []
-is_a: ECTO:0000163 ! exposure to organic cyclic compound
-is_a: ECTO:0000200 ! exposure to lipid
 is_a: ECTO:0000369 ! exposure to ketone
 is_a: ECTO:0000557 ! exposure to inhibitor
 is_a: ECTO:0000588 ! exposure to antineoplastic agent
 is_a: ECTO:0000597 ! exposure to xenobiotic
 is_a: ECTO:0000931 ! exposure to environmental contaminant
+is_a: ECTO:0002002 ! exposure to steroid
 intersection_of: ExO:0000002 ! exposure event
 intersection_of: RO:0002233 CHEBI:4953 ! has input exemestane
 
@@ -44620,6 +45613,7 @@ is_a: ECTO:0000369 ! exposure to ketone
 is_a: ECTO:0000597 ! exposure to xenobiotic
 is_a: ECTO:0000627 ! exposure to anti-arrhythmia drug
 is_a: ECTO:0000931 ! exposure to environmental contaminant
+is_a: ECTO:0002003 ! exposure to sulfonamide
 intersection_of: ExO:0000002 ! exposure event
 intersection_of: RO:0002233 CHEBI:50659 ! has input dronedarone
 
@@ -44715,6 +45709,7 @@ is_a: ECTO:0000595 ! exposure to antihypertensive agent
 is_a: ECTO:0000597 ! exposure to xenobiotic
 is_a: ECTO:0000931 ! exposure to environmental contaminant
 is_a: ECTO:0001152 ! exposure to organochlorine compound
+is_a: ECTO:0002003 ! exposure to sulfonamide
 intersection_of: ExO:0000002 ! exposure event
 intersection_of: RO:0002233 CHEBI:5778 ! has input hydrochlorothiazide
 
@@ -44904,6 +45899,7 @@ is_a: ECTO:0000585 ! exposure to beta-adrenergic antagonist
 is_a: ECTO:0000597 ! exposure to xenobiotic
 is_a: ECTO:0000627 ! exposure to anti-arrhythmia drug
 is_a: ECTO:0000931 ! exposure to environmental contaminant
+is_a: ECTO:0002003 ! exposure to sulfonamide
 intersection_of: ExO:0000002 ! exposure event
 intersection_of: RO:0002233 CHEBI:63622 ! has input sotalol
 
@@ -45155,8 +46151,6 @@ name: exposure to 6alpha-methylprednisolone
 def: "A exposure event involving the interaction of an exposure receptor to 6alpha-methylprednisolone. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "6alpha-methylprednisolone exposure" EXACT []
 synonym: "6alpha-methylprednisolone exposure event" EXACT []
-is_a: ECTO:0000163 ! exposure to organic cyclic compound
-is_a: ECTO:0000200 ! exposure to lipid
 is_a: ECTO:0000369 ! exposure to ketone
 is_a: ECTO:0000569 ! exposure to anti-inflammatory drug
 is_a: ECTO:0000597 ! exposure to xenobiotic
@@ -45164,6 +46158,7 @@ is_a: ECTO:0000624 ! exposure to adrenergic agent
 is_a: ECTO:0000732 ! exposure to antiemetic
 is_a: ECTO:0000789 ! exposure to neuroprotective agent
 is_a: ECTO:0000931 ! exposure to environmental contaminant
+is_a: ECTO:0002002 ! exposure to steroid
 intersection_of: ExO:0000002 ! exposure event
 intersection_of: RO:0002233 CHEBI:6888 ! has input 6alpha-methylprednisolone
 
@@ -45204,13 +46199,13 @@ synonym: "metronidazole exposure" EXACT []
 synonym: "metronidazole exposure event" EXACT []
 is_a: ECTO:0000155 ! exposure to organonitrogen compound
 is_a: ECTO:0000163 ! exposure to organic cyclic compound
-is_a: ECTO:0000314 ! exposure to alcohol
 is_a: ECTO:0000597 ! exposure to xenobiotic
 is_a: ECTO:0000602 ! exposure to antiprotozoal drug
 is_a: ECTO:0000608 ! exposure to antibacterial drug
 is_a: ECTO:0000653 ! exposure to photosensitizing agent
 is_a: ECTO:0000694 ! exposure to prodrug
 is_a: ECTO:0000931 ! exposure to environmental contaminant
+is_a: ECTO:0001978 ! exposure to primary alcohol
 intersection_of: ExO:0000002 ! exposure event
 intersection_of: RO:0002233 CHEBI:6909 ! has input metronidazole
 
@@ -45349,6 +46344,7 @@ is_a: ECTO:0000163 ! exposure to organic cyclic compound
 is_a: ECTO:0000515 ! exposure to herbicide
 is_a: ECTO:0000597 ! exposure to xenobiotic
 is_a: ECTO:0000931 ! exposure to environmental contaminant
+is_a: ECTO:0002003 ! exposure to sulfonamide
 intersection_of: ExO:0000002 ! exposure event
 intersection_of: RO:0002233 CHEBI:7554 ! has input nicosulfuron
 
@@ -45645,6 +46641,7 @@ is_a: ECTO:0000515 ! exposure to herbicide
 is_a: ECTO:0000547 ! exposure to agrochemical
 is_a: ECTO:0000597 ! exposure to xenobiotic
 is_a: ECTO:0000931 ! exposure to environmental contaminant
+is_a: ECTO:0002003 ! exposure to sulfonamide
 intersection_of: ExO:0000002 ! exposure event
 intersection_of: RO:0002233 CHEBI:81696 ! has input asulam
 
@@ -45797,11 +46794,10 @@ def: "A exposure event involving the interaction of an exposure receptor to ioxy
 synonym: "ioxynil exposure" EXACT []
 synonym: "ioxynil exposure event" EXACT []
 is_a: ECTO:0000155 ! exposure to organonitrogen compound
-is_a: ECTO:0000163 ! exposure to organic cyclic compound
-is_a: ECTO:0000371 ! exposure to oxygen molecular entity
 is_a: ECTO:0000515 ! exposure to herbicide
 is_a: ECTO:0000597 ! exposure to xenobiotic
 is_a: ECTO:0000931 ! exposure to environmental contaminant
+is_a: ECTO:0001997 ! exposure to phenols
 intersection_of: ExO:0000002 ! exposure event
 intersection_of: RO:0002233 CHEBI:81821 ! has input ioxynil
 
@@ -46008,11 +47004,11 @@ name: exposure to sulfluramid
 def: "A exposure event involving the interaction of an exposure receptor to sulfluramid. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "sulfluramid exposure" EXACT []
 synonym: "sulfluramid exposure event" EXACT []
-is_a: ECTO:0000370 ! exposure to nitrogen
 is_a: ECTO:0000494 ! exposure to acaricide
 is_a: ECTO:0000517 ! exposure to insecticide
 is_a: ECTO:0000597 ! exposure to xenobiotic
 is_a: ECTO:0000931 ! exposure to environmental contaminant
+is_a: ECTO:0002003 ! exposure to sulfonamide
 intersection_of: ExO:0000002 ! exposure event
 intersection_of: RO:0002233 CHEBI:81945 ! has input sulfluramid
 
@@ -46223,6 +47219,7 @@ is_a: ECTO:0000371 ! exposure to oxygen molecular entity
 is_a: ECTO:0000515 ! exposure to herbicide
 is_a: ECTO:0000597 ! exposure to xenobiotic
 is_a: ECTO:0000931 ! exposure to environmental contaminant
+is_a: ECTO:0002003 ! exposure to sulfonamide
 intersection_of: ExO:0000002 ! exposure event
 intersection_of: RO:0002233 CHEBI:83453 ! has input thifensulfuron-methyl
 
@@ -46350,6 +47347,7 @@ is_a: ECTO:0000515 ! exposure to herbicide
 is_a: ECTO:0000597 ! exposure to xenobiotic
 is_a: ECTO:0000931 ! exposure to environmental contaminant
 is_a: ECTO:0001148 ! exposure to organofluorine compound
+is_a: ECTO:0002003 ! exposure to sulfonamide
 intersection_of: ExO:0000002 ! exposure event
 intersection_of: RO:0002233 CHEBI:83500 ! has input tritosulfuron
 
@@ -46380,6 +47378,7 @@ is_a: ECTO:0000244 ! exposure to ether
 is_a: ECTO:0000515 ! exposure to herbicide
 is_a: ECTO:0000597 ! exposure to xenobiotic
 is_a: ECTO:0000931 ! exposure to environmental contaminant
+is_a: ECTO:0002003 ! exposure to sulfonamide
 intersection_of: ExO:0000002 ! exposure event
 intersection_of: RO:0002233 CHEBI:83502 ! has input foramsulfuron
 
@@ -46402,12 +47401,12 @@ name: exposure to perfluorooctane sulfonamidoacetic acid
 def: "A exposure event involving the interaction of an exposure receptor to perfluorooctane sulfonamidoacetic acid. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "perfluorooctane sulfonamidoacetic acid exposure" EXACT []
 synonym: "perfluorooctane sulfonamidoacetic acid exposure event" EXACT []
-is_a: ECTO:0000370 ! exposure to nitrogen
 is_a: ECTO:0000371 ! exposure to oxygen molecular entity
 is_a: ECTO:0000597 ! exposure to xenobiotic
 is_a: ECTO:0000650 ! exposure to Bronsted acid
 is_a: ECTO:0000931 ! exposure to environmental contaminant
 is_a: ECTO:0001148 ! exposure to organofluorine compound
+is_a: ECTO:0002003 ! exposure to sulfonamide
 intersection_of: ExO:0000002 ! exposure event
 intersection_of: RO:0002233 CHEBI:83505 ! has input perfluorooctane sulfonamidoacetic acid
 
@@ -46417,12 +47416,12 @@ name: exposure to N-methylperfluorooctane sulfonamidoacetic acid
 def: "A exposure event involving the interaction of an exposure receptor to N-methylperfluorooctane sulfonamidoacetic acid. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "N-methylperfluorooctane sulfonamidoacetic acid exposure" EXACT []
 synonym: "N-methylperfluorooctane sulfonamidoacetic acid exposure event" EXACT []
-is_a: ECTO:0000370 ! exposure to nitrogen
 is_a: ECTO:0000371 ! exposure to oxygen molecular entity
 is_a: ECTO:0000597 ! exposure to xenobiotic
 is_a: ECTO:0000650 ! exposure to Bronsted acid
 is_a: ECTO:0000931 ! exposure to environmental contaminant
 is_a: ECTO:0001148 ! exposure to organofluorine compound
+is_a: ECTO:0002003 ! exposure to sulfonamide
 intersection_of: ExO:0000002 ! exposure event
 intersection_of: RO:0002233 CHEBI:83506 ! has input N-methylperfluorooctane sulfonamidoacetic acid
 
@@ -46432,12 +47431,12 @@ name: exposure to N-ethylperfluorooctane sulfonamidoacetic acid
 def: "A exposure event involving the interaction of an exposure receptor to N-ethylperfluorooctane sulfonamidoacetic acid. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "N-ethylperfluorooctane sulfonamidoacetic acid exposure" EXACT []
 synonym: "N-ethylperfluorooctane sulfonamidoacetic acid exposure event" EXACT []
-is_a: ECTO:0000370 ! exposure to nitrogen
 is_a: ECTO:0000371 ! exposure to oxygen molecular entity
 is_a: ECTO:0000597 ! exposure to xenobiotic
 is_a: ECTO:0000650 ! exposure to Bronsted acid
 is_a: ECTO:0000931 ! exposure to environmental contaminant
 is_a: ECTO:0001148 ! exposure to organofluorine compound
+is_a: ECTO:0002003 ! exposure to sulfonamide
 intersection_of: ExO:0000002 ! exposure event
 intersection_of: RO:0002233 CHEBI:83507 ! has input N-ethylperfluorooctane sulfonamidoacetic acid
 
@@ -46452,6 +47451,7 @@ is_a: ECTO:0000371 ! exposure to oxygen molecular entity
 is_a: ECTO:0000597 ! exposure to xenobiotic
 is_a: ECTO:0000931 ! exposure to environmental contaminant
 is_a: ECTO:0001148 ! exposure to organofluorine compound
+is_a: ECTO:0001989 ! exposure to phosphate
 intersection_of: ExO:0000002 ! exposure event
 intersection_of: RO:0002233 CHEBI:83508 ! has input perfluorooctyl phosphate
 
@@ -46603,6 +47603,7 @@ is_a: ECTO:0000371 ! exposure to oxygen molecular entity
 is_a: ECTO:0000597 ! exposure to xenobiotic
 is_a: ECTO:0000931 ! exposure to environmental contaminant
 is_a: ECTO:0001148 ! exposure to organofluorine compound
+is_a: ECTO:0001989 ! exposure to phosphate
 intersection_of: ExO:0000002 ! exposure event
 intersection_of: RO:0002233 CHEBI:83539 ! has input bisperfluorooctyl phosphate
 
@@ -46617,6 +47618,7 @@ is_a: ECTO:0000371 ! exposure to oxygen molecular entity
 is_a: ECTO:0000597 ! exposure to xenobiotic
 is_a: ECTO:0000931 ! exposure to environmental contaminant
 is_a: ECTO:0001148 ! exposure to organofluorine compound
+is_a: ECTO:0001989 ! exposure to phosphate
 intersection_of: ExO:0000002 ! exposure event
 intersection_of: RO:0002233 CHEBI:83540 ! has input bisperfluorodecyl phosphate
 
@@ -46630,6 +47632,7 @@ is_a: ECTO:0000250 ! exposure to organophosphorus compound
 is_a: ECTO:0000371 ! exposure to oxygen molecular entity
 is_a: ECTO:0000597 ! exposure to xenobiotic
 is_a: ECTO:0000931 ! exposure to environmental contaminant
+is_a: ECTO:0001989 ! exposure to phosphate
 intersection_of: ExO:0000002 ! exposure event
 intersection_of: RO:0002233 CHEBI:83541 ! has input perfluorodecyl phosphate
 
@@ -46889,6 +47892,7 @@ is_a: ECTO:0000244 ! exposure to ether
 is_a: ECTO:0000515 ! exposure to herbicide
 is_a: ECTO:0000597 ! exposure to xenobiotic
 is_a: ECTO:0000931 ! exposure to environmental contaminant
+is_a: ECTO:0002003 ! exposure to sulfonamide
 intersection_of: ExO:0000002 ! exposure event
 intersection_of: RO:0002233 CHEBI:8866 ! has input rimsulfuron
 
@@ -46911,14 +47915,13 @@ name: exposure to spironolactone
 def: "A exposure event involving the interaction of an exposure receptor to spironolactone. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "spironolactone exposure" EXACT []
 synonym: "spironolactone exposure event" EXACT []
-is_a: ECTO:0000163 ! exposure to organic cyclic compound
-is_a: ECTO:0000200 ! exposure to lipid
 is_a: ECTO:0000369 ! exposure to ketone
 is_a: ECTO:0000579 ! exposure to diuretic
 is_a: ECTO:0000595 ! exposure to antihypertensive agent
 is_a: ECTO:0000597 ! exposure to xenobiotic
 is_a: ECTO:0000673 ! exposure to antagonist
 is_a: ECTO:0000931 ! exposure to environmental contaminant
+is_a: ECTO:0002002 ! exposure to steroid
 intersection_of: ExO:0000002 ! exposure event
 intersection_of: RO:0002233 CHEBI:9241 ! has input spironolactone
 
@@ -46950,6 +47953,7 @@ is_a: ECTO:0000597 ! exposure to xenobiotic
 is_a: ECTO:0000601 ! exposure to coccidiostat
 is_a: ECTO:0000701 ! exposure to EC 2.5.1.15 (dihydropteroate synthase) inhibitor
 is_a: ECTO:0000931 ! exposure to environmental contaminant
+is_a: ECTO:0002003 ! exposure to sulfonamide
 intersection_of: ExO:0000002 ! exposure event
 intersection_of: RO:0002233 CHEBI:9328 ! has input sulfadiazine
 
@@ -46970,6 +47974,7 @@ is_a: ECTO:0000701 ! exposure to EC 2.5.1.15 (dihydropteroate synthase) inhibito
 is_a: ECTO:0000742 ! exposure to epitope
 is_a: ECTO:0000931 ! exposure to environmental contaminant
 is_a: ECTO:0000960 ! exposure to drug allergen
+is_a: ECTO:0002003 ! exposure to sulfonamide
 intersection_of: ExO:0000002 ! exposure event
 intersection_of: RO:0002233 CHEBI:9332 ! has input sulfamethoxazole
 
@@ -46986,6 +47991,7 @@ is_a: ECTO:0000562 ! exposure to antiinfective agent
 is_a: ECTO:0000597 ! exposure to xenobiotic
 is_a: ECTO:0000701 ! exposure to EC 2.5.1.15 (dihydropteroate synthase) inhibitor
 is_a: ECTO:0000931 ! exposure to environmental contaminant
+is_a: ECTO:0002003 ! exposure to sulfonamide
 intersection_of: ExO:0000002 ! exposure event
 intersection_of: RO:0002233 CHEBI:9337 ! has input sulfathiazole
 
@@ -47403,8 +48409,7 @@ name: exposure to paraben
 def: "A exposure event involving the interaction of an exposure receptor to paraben. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "paraben exposure" EXACT []
 synonym: "paraben exposure event" EXACT []
-is_a: ECTO:0000163 ! exposure to organic cyclic compound
-is_a: ECTO:0000371 ! exposure to oxygen molecular entity
+is_a: ECTO:0001997 ! exposure to phenols
 intersection_of: ExO:0000002 ! exposure event
 intersection_of: RO:0002233 CHEBI:85122 ! has input paraben
 
@@ -47814,6 +48819,7 @@ is_a: ECTO:0000494 ! exposure to acaricide
 is_a: ECTO:0000517 ! exposure to insecticide
 is_a: ECTO:0000547 ! exposure to agrochemical
 is_a: ECTO:0000635 ! exposure to EC 3.1.1.7 (acetylcholinesterase) inhibitor
+is_a: ECTO:0001989 ! exposure to phosphate
 intersection_of: ExO:0000002 ! exposure event
 intersection_of: RO:0002233 CHEBI:34520 ! has input acephate
 
@@ -47958,12 +48964,12 @@ name: exposure to allyl alcohol
 def: "A exposure event involving the interaction of an exposure receptor to allyl alcohol. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "allyl alcohol exposure" EXACT []
 synonym: "allyl alcohol exposure event" EXACT []
-is_a: ECTO:0000314 ! exposure to alcohol
 is_a: ECTO:0000513 ! exposure to fungicide
 is_a: ECTO:0000515 ! exposure to herbicide
 is_a: ECTO:0000517 ! exposure to insecticide
 is_a: ECTO:0000545 ! exposure to antibacterial agent
 is_a: ECTO:0000893 ! exposure to plant metabolite
+is_a: ECTO:0001978 ! exposure to primary alcohol
 intersection_of: ExO:0000002 ! exposure event
 intersection_of: RO:0002233 CHEBI:16605 ! has input allyl alcohol
 
@@ -48499,11 +49505,10 @@ name: exposure to catechol
 def: "A exposure event involving the interaction of an exposure receptor to catechol. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "catechol exposure" EXACT []
 synonym: "catechol exposure event" EXACT []
-is_a: ECTO:0000163 ! exposure to organic cyclic compound
-is_a: ECTO:0000371 ! exposure to oxygen molecular entity
 is_a: ECTO:0000724 ! exposure to genotoxin
 is_a: ECTO:0000775 ! exposure to allelochemical
 is_a: ECTO:0000893 ! exposure to plant metabolite
+is_a: ECTO:0001997 ! exposure to phenols
 intersection_of: ExO:0000002 ! exposure event
 intersection_of: RO:0002233 CHEBI:18135 ! has input catechol
 
@@ -48556,6 +49561,7 @@ is_a: ECTO:0000155 ! exposure to organonitrogen compound
 is_a: ECTO:0000163 ! exposure to organic cyclic compound
 is_a: ECTO:0000371 ! exposure to oxygen molecular entity
 is_a: ECTO:0001152 ! exposure to organochlorine compound
+is_a: ECTO:0002003 ! exposure to sulfonamide
 intersection_of: ExO:0000002 ! exposure event
 intersection_of: RO:0002233 CHEBI:47319 ! has input ethyl 2-{[(4-chloro-6-methoxypyrimidin-2-yl)carbamoyl]sulfamoyl}benzoate
 
@@ -48866,9 +49872,8 @@ name: exposure to cresol
 def: "A exposure event involving the interaction of an exposure receptor to cresol. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "cresol exposure" EXACT []
 synonym: "cresol exposure event" EXACT []
-is_a: ECTO:0000163 ! exposure to organic cyclic compound
-is_a: ECTO:0000371 ! exposure to oxygen molecular entity
 is_a: ECTO:0000513 ! exposure to fungicide
+is_a: ECTO:0001997 ! exposure to phenols
 intersection_of: ExO:0000002 ! exposure event
 intersection_of: RO:0002233 CHEBI:25399 ! has input cresol
 
@@ -49200,6 +50205,7 @@ is_a: ECTO:0000600 ! exposure to antifungal agent
 is_a: ECTO:0000616 ! exposure to EC 3.1.1.8 (cholinesterase) inhibitor
 is_a: ECTO:0000635 ! exposure to EC 3.1.1.7 (acetylcholinesterase) inhibitor
 is_a: ECTO:0001152 ! exposure to organochlorine compound
+is_a: ECTO:0001989 ! exposure to phosphate
 intersection_of: ExO:0000002 ! exposure event
 intersection_of: RO:0002233 CHEBI:34690 ! has input dichlorvos
 
@@ -49380,8 +50386,7 @@ name: exposure to 2,4-Dimethylphenol
 def: "A exposure event involving the interaction of an exposure receptor to 2,4-Dimethylphenol. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "2,4-Dimethylphenol exposure" EXACT []
 synonym: "2,4-Dimethylphenol exposure event" EXACT []
-is_a: ECTO:0000163 ! exposure to organic cyclic compound
-is_a: ECTO:0000371 ! exposure to oxygen molecular entity
+is_a: ECTO:0001997 ! exposure to phenols
 intersection_of: ExO:0000002 ! exposure event
 intersection_of: RO:0002233 CHEBI:34241 ! has input 2,4-Dimethylphenol
 
@@ -49391,9 +50396,8 @@ name: exposure to Dimethyl phthalate
 def: "A exposure event involving the interaction of an exposure receptor to Dimethyl phthalate. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "Dimethyl phthalate exposure" EXACT []
 synonym: "Dimethyl phthalate exposure event" EXACT []
-is_a: ECTO:0000163 ! exposure to organic cyclic compound
-is_a: ECTO:0000371 ! exposure to oxygen molecular entity
 is_a: ECTO:0000650 ! exposure to Bronsted acid
+is_a: ECTO:0001997 ! exposure to phenols
 intersection_of: ExO:0000002 ! exposure event
 intersection_of: RO:0002233 CHEBI:4609 ! has input Dimethyl phthalate
 
@@ -49452,12 +50456,11 @@ def: "A exposure event involving the interaction of an exposure receptor to 4,6-
 synonym: "4,6-dinitro-o-cresol exposure" EXACT []
 synonym: "4,6-dinitro-o-cresol exposure event" EXACT []
 is_a: ECTO:0000155 ! exposure to organonitrogen compound
-is_a: ECTO:0000163 ! exposure to organic cyclic compound
-is_a: ECTO:0000371 ! exposure to oxygen molecular entity
 is_a: ECTO:0000494 ! exposure to acaricide
 is_a: ECTO:0000513 ! exposure to fungicide
 is_a: ECTO:0000515 ! exposure to herbicide
 is_a: ECTO:0001047 ! exposure to dinitrophenol insecticide
+is_a: ECTO:0001997 ! exposure to phenols
 intersection_of: ExO:0000002 ! exposure event
 intersection_of: RO:0002233 CHEBI:39349 ! has input 4,6-dinitro-o-cresol
 
@@ -49602,6 +50605,7 @@ is_a: ECTO:0000517 ! exposure to insecticide
 is_a: ECTO:0000547 ! exposure to agrochemical
 is_a: ECTO:0000565 ! exposure to antinematodal drug
 is_a: ECTO:0000635 ! exposure to EC 3.1.1.7 (acetylcholinesterase) inhibitor
+is_a: ECTO:0001989 ! exposure to phosphate
 intersection_of: ExO:0000002 ! exposure event
 intersection_of: RO:0002233 CHEBI:38665 ! has input ethoprophos
 
@@ -49612,9 +50616,9 @@ def: "A exposure event involving the interaction of an exposure receptor to 2-et
 synonym: "2-ethoxyethanol exposure" EXACT []
 synonym: "2-ethoxyethanol exposure event" EXACT []
 is_a: ECTO:0000244 ! exposure to ether
-is_a: ECTO:0000314 ! exposure to alcohol
 is_a: ECTO:0000662 ! exposure to protic solvent
 is_a: ECTO:0000727 ! exposure to teratogenic agent
+is_a: ECTO:0001978 ! exposure to primary alcohol
 intersection_of: ExO:0000002 ! exposure event
 intersection_of: RO:0002233 CHEBI:46788 ! has input 2-ethoxyethanol
 
@@ -49690,6 +50694,7 @@ is_a: ECTO:0000517 ! exposure to insecticide
 is_a: ECTO:0000547 ! exposure to agrochemical
 is_a: ECTO:0000564 ! exposure to anthelminthic drug
 is_a: ECTO:0000635 ! exposure to EC 3.1.1.7 (acetylcholinesterase) inhibitor
+is_a: ECTO:0001989 ! exposure to phosphate
 intersection_of: ExO:0000002 ! exposure event
 intersection_of: RO:0002233 CHEBI:38677 ! has input famphur
 
@@ -49757,6 +50762,7 @@ is_a: ECTO:0000547 ! exposure to agrochemical
 is_a: ECTO:0000549 ! exposure to avicide
 is_a: ECTO:0000616 ! exposure to EC 3.1.1.8 (cholinesterase) inhibitor
 is_a: ECTO:0000635 ! exposure to EC 3.1.1.7 (acetylcholinesterase) inhibitor
+is_a: ECTO:0001989 ! exposure to phosphate
 intersection_of: ExO:0000002 ! exposure event
 intersection_of: RO:0002233 CHEBI:34761 ! has input fenthion
 
@@ -49856,6 +50862,7 @@ synonym: "Fomesafen exposure event" EXACT []
 is_a: ECTO:0000155 ! exposure to organonitrogen compound
 is_a: ECTO:0000163 ! exposure to organic cyclic compound
 is_a: ECTO:0000244 ! exposure to ether
+is_a: ECTO:0002003 ! exposure to sulfonamide
 intersection_of: ExO:0000002 ! exposure event
 intersection_of: RO:0002233 CHEBI:81925 ! has input Fomesafen
 
@@ -49881,7 +50888,7 @@ synonym: "glycidol exposure" EXACT []
 synonym: "glycidol exposure event" EXACT []
 is_a: ECTO:0000163 ! exposure to organic cyclic compound
 is_a: ECTO:0000244 ! exposure to ether
-is_a: ECTO:0000314 ! exposure to alcohol
+is_a: ECTO:0001978 ! exposure to primary alcohol
 intersection_of: ExO:0000002 ! exposure event
 intersection_of: RO:0002233 CHEBI:30966 ! has input glycidol
 
@@ -49901,13 +50908,12 @@ name: exposure to hexachlorophene
 def: "A exposure event involving the interaction of an exposure receptor to hexachlorophene. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "hexachlorophene exposure" EXACT []
 synonym: "hexachlorophene exposure event" EXACT []
-is_a: ECTO:0000163 ! exposure to organic cyclic compound
-is_a: ECTO:0000371 ! exposure to oxygen molecular entity
 is_a: ECTO:0000494 ! exposure to acaricide
 is_a: ECTO:0000545 ! exposure to antibacterial agent
 is_a: ECTO:0000656 ! exposure to antiseptic drug
 is_a: ECTO:0000959 ! exposure to antifungal agrochemical
 is_a: ECTO:0001152 ! exposure to organochlorine compound
+is_a: ECTO:0001997 ! exposure to phenols
 intersection_of: ExO:0000002 ! exposure event
 intersection_of: RO:0002233 CHEBI:5693 ! has input hexachlorophene
 
@@ -50001,8 +51007,6 @@ name: exposure to hydroquinone
 def: "A exposure event involving the interaction of an exposure receptor to hydroquinone. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "hydroquinone exposure" EXACT []
 synonym: "hydroquinone exposure event" EXACT []
-is_a: ECTO:0000163 ! exposure to organic cyclic compound
-is_a: ECTO:0000371 ! exposure to oxygen molecular entity
 is_a: ECTO:0000497 ! exposure to antioxidant
 is_a: ECTO:0000505 ! exposure to cofactor
 is_a: ECTO:0000725 ! exposure to carcinogenic agent
@@ -50010,6 +51014,7 @@ is_a: ECTO:0000881 ! exposure to mouse metabolite
 is_a: ECTO:0000897 ! exposure to human xenobiotic metabolite
 is_a: ECTO:0000900 ! exposure to Escherichia coli metabolite
 is_a: ECTO:0000951 ! exposure to skin lightening agent
+is_a: ECTO:0001997 ! exposure to phenols
 intersection_of: ExO:0000002 ! exposure event
 intersection_of: RO:0002233 CHEBI:17594 ! has input hydroquinone
 
@@ -50142,6 +51147,7 @@ is_a: ECTO:0000635 ! exposure to EC 3.1.1.7 (acetylcholinesterase) inhibitor
 is_a: ECTO:0000640 ! exposure to pediculicide
 is_a: ECTO:0000650 ! exposure to Bronsted acid
 is_a: ECTO:0001051 ! exposure to scabicide
+is_a: ECTO:0001989 ! exposure to phosphate
 intersection_of: ExO:0000002 ! exposure event
 intersection_of: RO:0002233 CHEBI:6651 ! has input malathion
 
@@ -50392,6 +51398,7 @@ is_a: ECTO:0000517 ! exposure to insecticide
 is_a: ECTO:0000547 ! exposure to agrochemical
 is_a: ECTO:0000549 ! exposure to avicide
 is_a: ECTO:0000635 ! exposure to EC 3.1.1.7 (acetylcholinesterase) inhibitor
+is_a: ECTO:0001989 ! exposure to phosphate
 intersection_of: ExO:0000002 ! exposure event
 intersection_of: RO:0002233 CHEBI:38725 ! has input mevinphos
 
@@ -50455,6 +51462,7 @@ is_a: ECTO:0000600 ! exposure to antifungal agent
 is_a: ECTO:0000616 ! exposure to EC 3.1.1.8 (cholinesterase) inhibitor
 is_a: ECTO:0000635 ! exposure to EC 3.1.1.7 (acetylcholinesterase) inhibitor
 is_a: ECTO:0001152 ! exposure to organochlorine compound
+is_a: ECTO:0001989 ! exposure to phosphate
 intersection_of: ExO:0000002 ! exposure event
 intersection_of: RO:0002233 CHEBI:38729 ! has input naled
 
@@ -50616,9 +51624,8 @@ name: exposure to 2-nitrophenol
 def: "A exposure event involving the interaction of an exposure receptor to 2-nitrophenol. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "2-nitrophenol exposure" EXACT []
 synonym: "2-nitrophenol exposure event" EXACT []
-is_a: ECTO:0000163 ! exposure to organic cyclic compound
 is_a: ECTO:0000370 ! exposure to nitrogen
-is_a: ECTO:0000371 ! exposure to oxygen molecular entity
+is_a: ECTO:0001997 ! exposure to phenols
 intersection_of: ExO:0000002 ! exposure event
 intersection_of: RO:0002233 CHEBI:16260 ! has input 2-nitrophenol
 
@@ -50628,11 +51635,10 @@ name: exposure to 4-nitrophenol
 def: "A exposure event involving the interaction of an exposure receptor to 4-nitrophenol. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "4-nitrophenol exposure" EXACT []
 synonym: "4-nitrophenol exposure event" EXACT []
-is_a: ECTO:0000163 ! exposure to organic cyclic compound
 is_a: ECTO:0000370 ! exposure to nitrogen
-is_a: ECTO:0000371 ! exposure to oxygen molecular entity
 is_a: ECTO:0000881 ! exposure to mouse metabolite
 is_a: ECTO:0000897 ! exposure to human xenobiotic metabolite
+is_a: ECTO:0001997 ! exposure to phenols
 intersection_of: ExO:0000002 ! exposure event
 intersection_of: RO:0002233 CHEBI:16836 ! has input 4-nitrophenol
 
@@ -50778,6 +51784,7 @@ synonym: "oryzalin exposure event" EXACT []
 is_a: ECTO:0000155 ! exposure to organonitrogen compound
 is_a: ECTO:0000163 ! exposure to organic cyclic compound
 is_a: ECTO:0000515 ! exposure to herbicide
+is_a: ECTO:0002003 ! exposure to sulfonamide
 intersection_of: ExO:0000002 ! exposure event
 intersection_of: RO:0002233 CHEBI:73163 ! has input oryzalin
 
@@ -50806,6 +51813,7 @@ is_a: ECTO:0000494 ! exposure to acaricide
 is_a: ECTO:0000517 ! exposure to insecticide
 is_a: ECTO:0000547 ! exposure to agrochemical
 is_a: ECTO:0000635 ! exposure to EC 3.1.1.7 (acetylcholinesterase) inhibitor
+is_a: ECTO:0001989 ! exposure to phosphate
 intersection_of: ExO:0000002 ! exposure event
 intersection_of: RO:0002233 CHEBI:38735 ! has input oxydemeton-methyl
 
@@ -50928,12 +51936,11 @@ name: exposure to phenol
 def: "A exposure event involving the interaction of an exposure receptor to phenol. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "phenol exposure" EXACT []
 synonym: "phenol exposure event" EXACT []
-is_a: ECTO:0000163 ! exposure to organic cyclic compound
-is_a: ECTO:0000371 ! exposure to oxygen molecular entity
 is_a: ECTO:0000656 ! exposure to antiseptic drug
 is_a: ECTO:0000657 ! exposure to disinfectant
 is_a: ECTO:0000881 ! exposure to mouse metabolite
 is_a: ECTO:0000897 ! exposure to human xenobiotic metabolite
+is_a: ECTO:0001997 ! exposure to phenols
 intersection_of: ExO:0000002 ! exposure event
 intersection_of: RO:0002233 CHEBI:15882 ! has input phenol
 
@@ -50943,8 +51950,7 @@ name: exposure to phenolphthalein
 def: "A exposure event involving the interaction of an exposure receptor to phenolphthalein. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "phenolphthalein exposure" EXACT []
 synonym: "phenolphthalein exposure event" EXACT []
-is_a: ECTO:0000163 ! exposure to organic cyclic compound
-is_a: ECTO:0000371 ! exposure to oxygen molecular entity
+is_a: ECTO:0001997 ! exposure to phenols
 intersection_of: ExO:0000002 ! exposure event
 intersection_of: RO:0002233 CHEBI:34914 ! has input phenolphthalein
 
@@ -51117,6 +52123,7 @@ is_a: ECTO:0000517 ! exposure to insecticide
 is_a: ECTO:0000547 ! exposure to agrochemical
 is_a: ECTO:0000635 ! exposure to EC 3.1.1.7 (acetylcholinesterase) inhibitor
 is_a: ECTO:0001152 ! exposure to organochlorine compound
+is_a: ECTO:0001989 ! exposure to phosphate
 intersection_of: ExO:0000002 ! exposure event
 intersection_of: RO:0002233 CHEBI:38845 ! has input profenofos
 
@@ -51159,8 +52166,8 @@ name: exposure to prop-2-yn-1-ol
 def: "A exposure event involving the interaction of an exposure receptor to prop-2-yn-1-ol. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "prop-2-yn-1-ol exposure" EXACT []
 synonym: "prop-2-yn-1-ol exposure event" EXACT []
-is_a: ECTO:0000314 ! exposure to alcohol
 is_a: ECTO:0000882 ! exposure to Saccharomyces cerevisiae metabolite
+is_a: ECTO:0001978 ! exposure to primary alcohol
 intersection_of: ExO:0000002 ! exposure event
 intersection_of: RO:0002233 CHEBI:28905 ! has input prop-2-yn-1-ol
 
@@ -51429,6 +52436,7 @@ is_a: ECTO:0000371 ! exposure to oxygen molecular entity
 is_a: ECTO:0000517 ! exposure to insecticide
 is_a: ECTO:0000547 ! exposure to agrochemical
 is_a: ECTO:0000635 ! exposure to EC 3.1.1.7 (acetylcholinesterase) inhibitor
+is_a: ECTO:0001989 ! exposure to phosphate
 intersection_of: ExO:0000002 ! exposure event
 intersection_of: RO:0002233 CHEBI:38949 ! has input sulprofos
 
@@ -51455,6 +52463,7 @@ is_a: ECTO:0000517 ! exposure to insecticide
 is_a: ECTO:0000547 ! exposure to agrochemical
 is_a: ECTO:0000563 ! exposure to antiparasitic agent
 is_a: ECTO:0000635 ! exposure to EC 3.1.1.7 (acetylcholinesterase) inhibitor
+is_a: ECTO:0001989 ! exposure to phosphate
 intersection_of: ExO:0000002 ! exposure event
 intersection_of: RO:0002233 CHEBI:38954 ! has input temephos
 
@@ -51475,9 +52484,8 @@ name: exposure to 3,3',5,5'-tetrabromobisphenol A
 def: "A exposure event involving the interaction of an exposure receptor to 3,3',5,5'-tetrabromobisphenol A. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "3,3',5,5'-tetrabromobisphenol A exposure" EXACT []
 synonym: "3,3',5,5'-tetrabromobisphenol A exposure event" EXACT []
-is_a: ECTO:0000163 ! exposure to organic cyclic compound
-is_a: ECTO:0000371 ! exposure to oxygen molecular entity
 is_a: ECTO:0000486 ! exposure to chemical with application
+is_a: ECTO:0001997 ! exposure to phenols
 intersection_of: ExO:0000002 ! exposure event
 intersection_of: RO:0002233 CHEBI:33217 ! has input 3,3',5,5'-tetrabromobisphenol A
 
@@ -51506,6 +52514,7 @@ is_a: ECTO:0000547 ! exposure to agrochemical
 is_a: ECTO:0000616 ! exposure to EC 3.1.1.8 (cholinesterase) inhibitor
 is_a: ECTO:0000635 ! exposure to EC 3.1.1.7 (acetylcholinesterase) inhibitor
 is_a: ECTO:0001152 ! exposure to organochlorine compound
+is_a: ECTO:0001989 ! exposure to phosphate
 intersection_of: ExO:0000002 ! exposure event
 intersection_of: RO:0002233 CHEBI:35005 ! has input tetrachlorvinphos
 
@@ -51706,6 +52715,7 @@ is_a: ECTO:0000155 ! exposure to organonitrogen compound
 is_a: ECTO:0000163 ! exposure to organic cyclic compound
 is_a: ECTO:0000244 ! exposure to ether
 is_a: ECTO:0000515 ! exposure to herbicide
+is_a: ECTO:0002003 ! exposure to sulfonamide
 intersection_of: ExO:0000002 ! exposure event
 intersection_of: RO:0002233 CHEBI:9678 ! has input tribenuron methyl
 
@@ -51718,6 +52728,7 @@ synonym: "tribufos exposure event" EXACT []
 is_a: ECTO:0000250 ! exposure to organophosphorus compound
 is_a: ECTO:0000371 ! exposure to oxygen molecular entity
 is_a: ECTO:0000508 ! exposure to defoliant
+is_a: ECTO:0001989 ! exposure to phosphate
 intersection_of: ExO:0000002 ! exposure event
 intersection_of: RO:0002233 CHEBI:38737 ! has input tribufos
 
@@ -51865,6 +52876,7 @@ synonym: "Tris(2,3-dibromopropyl) phosphate exposure" EXACT []
 synonym: "Tris(2,3-dibromopropyl) phosphate exposure event" EXACT []
 is_a: ECTO:0000250 ! exposure to organophosphorus compound
 is_a: ECTO:0000371 ! exposure to oxygen molecular entity
+is_a: ECTO:0001989 ! exposure to phosphate
 intersection_of: ExO:0000002 ! exposure event
 intersection_of: RO:0002233 CHEBI:82282 ! has input Tris(2,3-dibromopropyl) phosphate
 
@@ -52011,9 +53023,8 @@ name: exposure to chlorophenol
 def: "A exposure event involving the interaction of an exposure receptor to chlorophenol. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "chlorophenol exposure" EXACT []
 synonym: "chlorophenol exposure event" EXACT []
-is_a: ECTO:0000163 ! exposure to organic cyclic compound
-is_a: ECTO:0000371 ! exposure to oxygen molecular entity
 is_a: ECTO:0001152 ! exposure to organochlorine compound
+is_a: ECTO:0001997 ! exposure to phenols
 intersection_of: ExO:0000002 ! exposure event
 intersection_of: RO:0002233 CHEBI:23150 ! has input chlorophenol
 
@@ -52284,7 +53295,7 @@ name: Behavior related exposure
 def: "A exposure event involving Behavior." []
 synonym: "Behavior" NARROW []
 synonym: "Behavior exposure" EXACT []
-is_a: ExO:0000002 ! exposure event
+is_a: ECTO:0002032 ! Activity related exposure
 intersection_of: ExO:0000002 ! exposure event
 intersection_of: BFO:0000050 NCIT:C16326 ! part_of Behavior
 
@@ -52295,6 +53306,714 @@ def: "A exposure event involving the interaction of an exposure receptor to a se
 synonym: "sex hormone exposure" EXACT []
 synonym: "sex hormone exposure event" EXACT []
 is_a: ECTO:0000516 ! exposure to hormone
+
+[Term]
+id: ECTO:0001976
+name: exposure to squalene
+def: "A exposure event involving the interaction of an exposure receptor to squalene. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "squalene exposure" EXACT []
+synonym: "squalene exposure event" EXACT []
+is_a: ECTO:0000200 ! exposure to lipid
+is_a: ECTO:0000881 ! exposure to mouse metabolite
+is_a: ECTO:0000882 ! exposure to Saccharomyces cerevisiae metabolite
+is_a: ECTO:0000893 ! exposure to plant metabolite
+is_a: ECTO:0000919 ! exposure to human metabolite
+intersection_of: ExO:0000002 ! exposure event
+intersection_of: RO:0002233 CHEBI:15440 ! has input squalene
+
+[Term]
+id: ECTO:0001977
+name: exposure to inulin
+def: "A exposure event involving the interaction of an exposure receptor to inulin. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "inulin exposure" EXACT []
+synonym: "inulin exposure event" EXACT []
+is_a: ECTO:0001983 ! exposure to polysaccharide
+intersection_of: ExO:0000002 ! exposure event
+intersection_of: RO:0002233 CHEBI:15443 ! has input inulin
+
+[Term]
+id: ECTO:0001978
+name: exposure to primary alcohol
+def: "A exposure event involving the interaction of an exposure receptor to primary alcohol. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "primary alcohol exposure" EXACT []
+synonym: "primary alcohol exposure event" EXACT []
+is_a: ECTO:0000314 ! exposure to alcohol
+intersection_of: ExO:0000002 ! exposure event
+intersection_of: RO:0002233 CHEBI:15734 ! has input primary alcohol
+
+[Term]
+id: ECTO:0001979
+name: exposure to lycopene
+def: "A exposure event involving the interaction of an exposure receptor to lycopene. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "lycopene exposure" EXACT []
+synonym: "lycopene exposure event" EXACT []
+is_a: ECTO:0000200 ! exposure to lipid
+is_a: ECTO:0000497 ! exposure to antioxidant
+is_a: ECTO:0000893 ! exposure to plant metabolite
+intersection_of: ExO:0000002 ! exposure event
+intersection_of: RO:0002233 CHEBI:15948 ! has input lycopene
+
+[Term]
+id: ECTO:0001980
+name: exposure to quercetin
+def: "A exposure event involving the interaction of an exposure receptor to quercetin. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "quercetin exposure" EXACT []
+synonym: "quercetin exposure event" EXACT []
+is_a: ECTO:0000135 ! exposure to organic
+is_a: ECTO:0000371 ! exposure to oxygen molecular entity
+is_a: ECTO:0000497 ! exposure to antioxidant
+is_a: ECTO:0000545 ! exposure to antibacterial agent
+is_a: ECTO:0000588 ! exposure to antineoplastic agent
+is_a: ECTO:0000614 ! exposure to protein kinase inhibitor
+is_a: ECTO:0000893 ! exposure to plant metabolite
+is_a: ECTO:0000904 ! exposure to EC 1.10.99.2 [ribosyldihydronicotinamide dehydrogenase (quinone)] inhibitor
+intersection_of: ExO:0000002 ! exposure event
+intersection_of: RO:0002233 CHEBI:16243 ! has input quercetin
+
+[Term]
+id: ECTO:0001981
+name: exposure to 1H-pyrazole
+def: "A exposure event involving the interaction of an exposure receptor to 1H-pyrazole. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "1H-pyrazole exposure" EXACT []
+synonym: "1H-pyrazole exposure event" EXACT []
+is_a: ECTO:0000155 ! exposure to organonitrogen compound
+is_a: ECTO:0000163 ! exposure to organic cyclic compound
+intersection_of: ExO:0000002 ! exposure event
+intersection_of: RO:0002233 CHEBI:17241 ! has input 1H-pyrazole
+
+[Term]
+id: ECTO:0001982
+name: exposure to 1-methyl-4-phenyl-1
+def: "A exposure event involving the interaction of an exposure receptor to 1-methyl-4-phenyl-1. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "1-methyl-4-phenyl-1 exposure" EXACT []
+synonym: "1-methyl-4-phenyl-1 exposure event" EXACT []
+is_a: ECTO:0000155 ! exposure to organonitrogen compound
+is_a: ECTO:0000163 ! exposure to organic cyclic compound
+is_a: ECTO:0000730 ! exposure to neurotoxin
+intersection_of: ExO:0000002 ! exposure event
+intersection_of: RO:0002233 CHEBI:17963 ! has input 1-methyl-4-phenyl-1,2,3,6-tetrahydropyridine
+
+[Term]
+id: ECTO:0001983
+name: exposure to polysaccharide
+def: "A exposure event involving the interaction of an exposure receptor to polysaccharide. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "polysaccharide exposure" EXACT []
+synonym: "polysaccharide exposure event" EXACT []
+is_a: ECTO:0000127 ! exposure to carbohydrate
+intersection_of: ExO:0000002 ! exposure event
+intersection_of: RO:0002233 CHEBI:18154 ! has input polysaccharide
+
+[Term]
+id: ECTO:0001984
+name: exposure to N-methyl-N'-nitro-N-nitrosoguanidine
+def: "A exposure event involving the interaction of an exposure receptor to N-methyl-N'-nitro-N-nitrosoguanidine. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "N-methyl-N'-nitro-N-nitrosoguanidine exposure" EXACT []
+synonym: "N-methyl-N'-nitro-N-nitrosoguanidine exposure event" EXACT []
+is_a: ECTO:0000370 ! exposure to nitrogen
+is_a: ECTO:0000496 ! exposure to alkylating agent
+intersection_of: ExO:0000002 ! exposure event
+intersection_of: RO:0002233 CHEBI:21759 ! has input N-methyl-N'-nitro-N-nitrosoguanidine
+
+[Term]
+id: ECTO:0001985
+name: exposure to alpha-tocopherol
+def: "A exposure event involving the interaction of an exposure receptor to alpha-tocopherol. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "alpha-tocopherol exposure" EXACT []
+synonym: "alpha-tocopherol exposure event" EXACT []
+is_a: ECTO:0000189 ! exposure to vitamin E
+is_a: ECTO:0000893 ! exposure to plant metabolite
+is_a: ECTO:0000923 ! exposure to food antioxidant
+intersection_of: ExO:0000002 ! exposure event
+intersection_of: RO:0002233 CHEBI:22470 ! has input alpha-tocopherol
+
+[Term]
+id: ECTO:0001986
+name: exposure to N-ethyl-N-nitrosourea
+def: "A exposure event involving the interaction of an exposure receptor to N-ethyl-N-nitrosourea. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "N-ethyl-N-nitrosourea exposure" EXACT []
+synonym: "N-ethyl-N-nitrosourea exposure event" EXACT []
+is_a: ECTO:0000370 ! exposure to nitrogen
+is_a: ECTO:0000496 ! exposure to alkylating agent
+is_a: ECTO:0000725 ! exposure to carcinogenic agent
+intersection_of: ExO:0000002 ! exposure event
+intersection_of: RO:0002233 CHEBI:23995 ! has input N-ethyl-N-nitrosourea
+
+[Term]
+id: ECTO:0001987
+name: exposure to 7
+def: "A exposure event involving the interaction of an exposure receptor to 7. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "7 exposure" EXACT []
+synonym: "7 exposure event" EXACT []
+is_a: ECTO:0000399 ! exposure to polycyclic arene
+intersection_of: ExO:0000002 ! exposure event
+intersection_of: RO:0002233 CHEBI:254496 ! has input 7,12-dimethyltetraphene
+
+[Term]
+id: ECTO:0001988
+name: exposure to alendronic acid
+def: "A exposure event involving the interaction of an exposure receptor to alendronic acid. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "alendronic acid exposure" EXACT []
+synonym: "alendronic acid exposure event" EXACT []
+is_a: ECTO:0000155 ! exposure to organonitrogen compound
+is_a: ECTO:0000557 ! exposure to inhibitor
+is_a: ECTO:0000711 ! exposure to bone density conservation agent
+is_a: ECTO:0001864 ! exposure to phosphorus molecular entity
+intersection_of: ExO:0000002 ! exposure event
+intersection_of: RO:0002233 CHEBI:2567 ! has input alendronic acid
+
+[Term]
+id: ECTO:0001989
+name: exposure to phosphate
+def: "A exposure event involving the interaction of an exposure receptor to phosphate. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "phosphate exposure" EXACT []
+synonym: "phosphate exposure event" EXACT []
+is_a: ECTO:0001864 ! exposure to phosphorus molecular entity
+intersection_of: ExO:0000002 ! exposure event
+intersection_of: RO:0002233 CHEBI:26020 ! has input phosphate
+
+[Term]
+id: ECTO:0001990
+name: exposure to retinoid
+def: "A exposure event involving the interaction of an exposure receptor to retinoid. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "retinoid exposure" EXACT []
+synonym: "retinoid exposure event" EXACT []
+is_a: ECTO:0000200 ! exposure to lipid
+intersection_of: ExO:0000002 ! exposure event
+intersection_of: RO:0002233 CHEBI:26537 ! has input retinoid
+
+[Term]
+id: ECTO:0001991
+name: exposure to sodium chloride
+def: "A exposure event involving the interaction of an exposure receptor to sodium chloride. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "sodium chloride exposure" EXACT []
+synonym: "sodium chloride exposure event" EXACT []
+is_a: ECTO:0000137 ! exposure to inorganic
+is_a: ECTO:0000375 ! exposure to salt
+intersection_of: ExO:0000002 ! exposure event
+intersection_of: RO:0002233 CHEBI:26710 ! has input sodium chloride
+
+[Term]
+id: ECTO:0001992
+name: exposure to ceftriaxone
+def: "A exposure event involving the interaction of an exposure receptor to ceftriaxone. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "ceftriaxone exposure" EXACT []
+synonym: "ceftriaxone exposure event" EXACT []
+is_a: ECTO:0000155 ! exposure to organonitrogen compound
+is_a: ECTO:0000163 ! exposure to organic cyclic compound
+is_a: ECTO:0000244 ! exposure to ether
+is_a: ECTO:0000592 ! exposure to EC 3.5.2.6 (beta-lactamase) inhibitor
+is_a: ECTO:0000608 ! exposure to antibacterial drug
+is_a: ECTO:0000960 ! exposure to drug allergen
+intersection_of: ExO:0000002 ! exposure event
+intersection_of: RO:0002233 CHEBI:29007 ! has input ceftriaxone
+
+[Term]
+id: ECTO:0001993
+name: exposure to sodium nitroprusside
+def: "A exposure event involving the interaction of an exposure receptor to sodium nitroprusside. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "sodium nitroprusside exposure" EXACT []
+synonym: "sodium nitroprusside exposure event" EXACT []
+is_a: ECTO:0000375 ! exposure to salt
+is_a: ECTO:0000708 ! exposure to nitric oxide donor
+intersection_of: ExO:0000002 ! exposure event
+intersection_of: RO:0002233 CHEBI:29321 ! has input sodium nitroprusside
+
+[Term]
+id: ECTO:0001994
+name: exposure to potassium chloride
+def: "A exposure event involving the interaction of an exposure receptor to potassium chloride. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "potassium chloride exposure" EXACT []
+synonym: "potassium chloride exposure event" EXACT []
+is_a: ECTO:0000137 ! exposure to inorganic
+is_a: ECTO:0000375 ! exposure to salt
+intersection_of: ExO:0000002 ! exposure event
+intersection_of: RO:0002233 CHEBI:32588 ! has input potassium chloride
+
+[Term]
+id: ECTO:0001995
+name: exposure to technetium-99
+def: "A exposure event involving the interaction of an exposure receptor to technetium-99. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "technetium-99 exposure" EXACT []
+synonym: "technetium-99 exposure event" EXACT []
+is_a: ECTO:0000231 ! exposure to chemical entity
+intersection_of: ExO:0000002 ! exposure event
+intersection_of: RO:0002233 CHEBI:33371 ! has input technetium-99
+
+[Term]
+id: ECTO:0001996
+name: exposure to captopril
+def: "A exposure event involving the interaction of an exposure receptor to captopril. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "captopril exposure" EXACT []
+synonym: "captopril exposure event" EXACT []
+is_a: ECTO:0000155 ! exposure to organonitrogen compound
+is_a: ECTO:0000163 ! exposure to organic cyclic compound
+is_a: ECTO:0000371 ! exposure to oxygen molecular entity
+is_a: ECTO:0000566 ! exposure to EC 3.4.15.1 (peptidyl-dipeptidase A) inhibitor
+is_a: ECTO:0000650 ! exposure to Bronsted acid
+intersection_of: ExO:0000002 ! exposure event
+intersection_of: RO:0002233 CHEBI:3380 ! has input captopril
+
+[Term]
+id: ECTO:0001997
+name: exposure to phenols
+def: "A exposure event involving the interaction of an exposure receptor to phenols. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "phenols exposure" EXACT []
+synonym: "phenols exposure event" EXACT []
+is_a: ECTO:0000163 ! exposure to organic cyclic compound
+is_a: ECTO:0000371 ! exposure to oxygen molecular entity
+intersection_of: ExO:0000002 ! exposure event
+intersection_of: RO:0002233 CHEBI:33853 ! has input phenols
+
+[Term]
+id: ECTO:0001998
+name: exposure to carrageenan
+def: "A exposure event involving the interaction of an exposure receptor to carrageenan. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "carrageenan exposure" EXACT []
+synonym: "carrageenan exposure event" EXACT []
+is_a: ECTO:0000135 ! exposure to organic
+is_a: ECTO:0000371 ! exposure to oxygen molecular entity
+is_a: ECTO:0000950 ! exposure to algal metabolite
+intersection_of: ExO:0000002 ! exposure event
+intersection_of: RO:0002233 CHEBI:3435 ! has input carrageenan
+
+[Term]
+id: ECTO:0001999
+name: exposure to 4-octylphenol
+def: "A exposure event involving the interaction of an exposure receptor to 4-octylphenol. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "4-octylphenol exposure" EXACT []
+synonym: "4-octylphenol exposure event" EXACT []
+is_a: ECTO:0000487 ! exposure to chemical with chemical role
+is_a: ECTO:0000521 ! exposure to metabolite
+is_a: ECTO:0000902 ! exposure to xenoestrogen
+is_a: ECTO:0001997 ! exposure to phenols
+intersection_of: ExO:0000002 ! exposure event
+intersection_of: RO:0002233 CHEBI:34432 ! has input 4-octylphenol
+
+[Term]
+id: ECTO:0002000
+name: exposure to pentolinium ion
+def: "A exposure event involving the interaction of an exposure receptor to pentolinium ion. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "pentolinium ion exposure" EXACT []
+synonym: "pentolinium ion exposure event" EXACT []
+is_a: ECTO:0000135 ! exposure to organic
+intersection_of: ExO:0000002 ! exposure event
+intersection_of: RO:0002233 CHEBI:347401 ! has input pentolinium ion
+
+[Term]
+id: ECTO:0002001
+name: exposure to ruthenium red
+def: "A exposure event involving the interaction of an exposure receptor to ruthenium red. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "ruthenium red exposure" EXACT []
+synonym: "ruthenium red exposure event" EXACT []
+is_a: ECTO:0000481 ! exposure to transition element
+is_a: ECTO:0000643 ! exposure to ryanodine receptor modulator
+intersection_of: ExO:0000002 ! exposure event
+intersection_of: RO:0002233 CHEBI:34956 ! has input ruthenium red
+
+[Term]
+id: ECTO:0002002
+name: exposure to steroid
+def: "A exposure event involving the interaction of an exposure receptor to steroid. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "steroid exposure" EXACT []
+synonym: "steroid exposure event" EXACT []
+is_a: ECTO:0000163 ! exposure to organic cyclic compound
+is_a: ECTO:0000200 ! exposure to lipid
+intersection_of: ExO:0000002 ! exposure event
+intersection_of: RO:0002233 CHEBI:35341 ! has input steroid
+
+[Term]
+id: ECTO:0002003
+name: exposure to sulfonamide
+def: "A exposure event involving the interaction of an exposure receptor to sulfonamide. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "sulfonamide exposure" EXACT []
+synonym: "sulfonamide exposure event" EXACT []
+is_a: ECTO:0000370 ! exposure to nitrogen
+intersection_of: ExO:0000002 ! exposure event
+intersection_of: RO:0002233 CHEBI:35358 ! has input sulfonamide
+
+[Term]
+id: ECTO:0002004
+name: exposure to benfotiamine
+def: "A exposure event involving the interaction of an exposure receptor to benfotiamine. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "benfotiamine exposure" EXACT []
+synonym: "benfotiamine exposure event" EXACT []
+is_a: ECTO:0000155 ! exposure to organonitrogen compound
+is_a: ECTO:0000163 ! exposure to organic cyclic compound
+is_a: ECTO:0000250 ! exposure to organophosphorus compound
+is_a: ECTO:0000371 ! exposure to oxygen molecular entity
+is_a: ECTO:0000497 ! exposure to antioxidant
+is_a: ECTO:0000716 ! exposure to nutraceutical
+is_a: ECTO:0000721 ! exposure to immunological adjuvant
+is_a: ECTO:0001989 ! exposure to phosphate
+intersection_of: ExO:0000002 ! exposure event
+intersection_of: RO:0002233 CHEBI:41039 ! has input benfotiamine
+
+[Term]
+id: ECTO:0002005
+name: exposure to diethylstilbestrol
+def: "A exposure event involving the interaction of an exposure receptor to diethylstilbestrol. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "diethylstilbestrol exposure" EXACT []
+synonym: "diethylstilbestrol exposure event" EXACT []
+is_a: ECTO:0000557 ! exposure to inhibitor
+is_a: ECTO:0000588 ! exposure to antineoplastic agent
+is_a: ECTO:0000725 ! exposure to carcinogenic agent
+is_a: ECTO:0000902 ! exposure to xenoestrogen
+is_a: ECTO:0001997 ! exposure to phenols
+intersection_of: ExO:0000002 ! exposure event
+intersection_of: RO:0002233 CHEBI:41922 ! has input diethylstilbestrol
+
+[Term]
+id: ECTO:0002006
+name: exposure to acepromazine
+def: "A exposure event involving the interaction of an exposure receptor to acepromazine. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "acepromazine exposure" EXACT []
+synonym: "acepromazine exposure event" EXACT []
+is_a: ECTO:0000155 ! exposure to organonitrogen compound
+is_a: ECTO:0000163 ! exposure to organic cyclic compound
+is_a: ECTO:0000369 ! exposure to ketone
+is_a: ECTO:0000620 ! exposure to phenothiazine antipsychotic drug
+intersection_of: ExO:0000002 ! exposure event
+intersection_of: RO:0002233 CHEBI:44932 ! has input acepromazine
+
+[Term]
+id: ECTO:0002007
+name: exposure to dihydrocapsaicin
+def: "A exposure event involving the interaction of an exposure receptor to dihydrocapsaicin. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "dihydrocapsaicin exposure" EXACT []
+synonym: "dihydrocapsaicin exposure event" EXACT []
+is_a: ECTO:0000155 ! exposure to organonitrogen compound
+is_a: ECTO:0000200 ! exposure to lipid
+is_a: ECTO:0000371 ! exposure to oxygen molecular entity
+is_a: ECTO:0000521 ! exposure to metabolite
+intersection_of: ExO:0000002 ! exposure event
+intersection_of: RO:0002233 CHEBI:46932 ! has input dihydrocapsaicin
+
+[Term]
+id: ECTO:0002008
+name: exposure to 5-bromo-2'-deoxyuridine
+def: "A exposure event involving the interaction of an exposure receptor to 5-bromo-2'-deoxyuridine. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "5-bromo-2'-deoxyuridine exposure" EXACT []
+synonym: "5-bromo-2'-deoxyuridine exposure event" EXACT []
+is_a: ECTO:0000155 ! exposure to organonitrogen compound
+is_a: ECTO:0000163 ! exposure to organic cyclic compound
+is_a: ECTO:0000371 ! exposure to oxygen molecular entity
+is_a: ECTO:0000556 ! exposure to antimetabolite
+is_a: ECTO:0000588 ! exposure to antineoplastic agent
+intersection_of: ExO:0000002 ! exposure event
+intersection_of: RO:0002233 CHEBI:472552 ! has input 5-bromo-2'-deoxyuridine
+
+[Term]
+id: ECTO:0002009
+name: exposure to 4-methyl-2-oxopentanoic acid
+def: "A exposure event involving the interaction of an exposure receptor to 4-methyl-2-oxopentanoic acid. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "4-methyl-2-oxopentanoic acid exposure" EXACT []
+synonym: "4-methyl-2-oxopentanoic acid exposure event" EXACT []
+is_a: ECTO:0000135 ! exposure to organic
+is_a: ECTO:0000371 ! exposure to oxygen molecular entity
+is_a: ECTO:0000650 ! exposure to Bronsted acid
+is_a: ECTO:0000919 ! exposure to human metabolite
+is_a: ECTO:0000950 ! exposure to algal metabolite
+intersection_of: ExO:0000002 ! exposure event
+intersection_of: RO:0002233 CHEBI:48430 ! has input 4-methyl-2-oxopentanoic acid
+
+[Term]
+id: ECTO:0002010
+name: exposure to angiotensin II
+def: "A exposure event involving the interaction of an exposure receptor to angiotensin II. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "angiotensin II exposure" EXACT []
+synonym: "angiotensin II exposure event" EXACT []
+is_a: ECTO:0000483 ! exposure to angiotensin
+is_a: ECTO:0000706 ! exposure to vasoconstrictor agent
+intersection_of: ExO:0000002 ! exposure event
+intersection_of: RO:0002233 CHEBI:48432 ! has input angiotensin II
+
+[Term]
+id: ECTO:0002011
+name: exposure to lithium chloride
+def: "A exposure event involving the interaction of an exposure receptor to lithium chloride. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "lithium chloride exposure" EXACT []
+synonym: "lithium chloride exposure event" EXACT []
+is_a: ECTO:0000137 ! exposure to inorganic
+is_a: ECTO:0000375 ! exposure to salt
+is_a: ECTO:0000568 ! exposure to psychotropic drug
+is_a: ECTO:0000577 ! exposure to central nervous system depressant
+intersection_of: ExO:0000002 ! exposure event
+intersection_of: RO:0002233 CHEBI:48607 ! has input lithium chloride
+
+[Term]
+id: ECTO:0002013
+name: exposure to naringenin
+def: "A exposure event involving the interaction of an exposure receptor to naringenin. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "naringenin exposure" EXACT []
+synonym: "naringenin exposure event" EXACT []
+is_a: ECTO:0000311 ! exposure to phenylpropanoid
+is_a: ECTO:0000369 ! exposure to ketone
+intersection_of: ExO:0000002 ! exposure event
+intersection_of: RO:0002233 CHEBI:50202 ! has input naringenin
+
+[Term]
+id: ECTO:0002014
+name: exposure to titanium dioxide nanoparticle
+def: "A exposure event involving the interaction of an exposure receptor to titanium dioxide nanoparticle. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "titanium dioxide nanoparticle exposure" EXACT []
+synonym: "titanium dioxide nanoparticle exposure event" EXACT []
+is_a: ECTO:0000481 ! exposure to transition element
+is_a: ECTO:0000910 ! exposure to food colouring
+intersection_of: ExO:0000002 ! exposure event
+intersection_of: RO:0002233 CHEBI:51050 ! has input titanium dioxide nanoparticle
+
+[Term]
+id: ECTO:0002015
+name: exposure to pristane
+def: "A exposure event involving the interaction of an exposure receptor to pristane. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "pristane exposure" EXACT []
+synonym: "pristane exposure event" EXACT []
+is_a: ECTO:0000392 ! exposure to alkane
+is_a: ECTO:0000721 ! exposure to immunological adjuvant
+is_a: ECTO:0000750 ! exposure to biomarker
+intersection_of: ExO:0000002 ! exposure event
+intersection_of: RO:0002233 CHEBI:53181 ! has input pristane
+
+[Term]
+id: ECTO:0002016
+name: exposure to glyburide
+def: "A exposure event involving the interaction of an exposure receptor to glyburide. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "glyburide exposure" EXACT []
+synonym: "glyburide exposure event" EXACT []
+is_a: ECTO:0000163 ! exposure to organic cyclic compound
+is_a: ECTO:0000557 ! exposure to inhibitor
+is_a: ECTO:0000584 ! exposure to hypoglycemic agent
+is_a: ECTO:0000627 ! exposure to anti-arrhythmia drug
+is_a: ECTO:0001152 ! exposure to organochlorine compound
+is_a: ECTO:0002003 ! exposure to sulfonamide
+intersection_of: ExO:0000002 ! exposure event
+intersection_of: RO:0002233 CHEBI:5441 ! has input glyburide
+
+[Term]
+id: ECTO:0002017
+name: exposure to pentolinium tartrate
+def: "A exposure event involving the interaction of an exposure receptor to pentolinium tartrate. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "pentolinium tartrate exposure" EXACT []
+synonym: "pentolinium tartrate exposure event" EXACT []
+is_a: ECTO:0000375 ! exposure to salt
+is_a: ECTO:0000595 ! exposure to antihypertensive agent
+intersection_of: ExO:0000002 ! exposure event
+intersection_of: RO:0002233 CHEBI:55326 ! has input pentolinium tartrate
+
+[Term]
+id: ECTO:0002018
+name: exposure to guanethidine
+def: "A exposure event involving the interaction of an exposure receptor to guanethidine. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "guanethidine exposure" EXACT []
+synonym: "guanethidine exposure event" EXACT []
+is_a: ECTO:0000155 ! exposure to organonitrogen compound
+is_a: ECTO:0000163 ! exposure to organic cyclic compound
+is_a: ECTO:0000595 ! exposure to antihypertensive agent
+is_a: ECTO:0000618 ! exposure to adrenergic antagonist
+intersection_of: ExO:0000002 ! exposure event
+intersection_of: RO:0002233 CHEBI:5557 ! has input guanethidine
+
+[Term]
+id: ECTO:0002019
+name: exposure to isotretinoin
+def: "A exposure event involving the interaction of an exposure receptor to isotretinoin. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "isotretinoin exposure" EXACT []
+synonym: "isotretinoin exposure event" EXACT []
+is_a: ECTO:0000181 ! exposure to retinoic acid
+is_a: ECTO:0000588 ! exposure to antineoplastic agent
+is_a: ECTO:0000687 ! exposure to keratolytic drug
+is_a: ECTO:0000727 ! exposure to teratogenic agent
+intersection_of: ExO:0000002 ! exposure event
+intersection_of: RO:0002233 CHEBI:6067 ! has input isotretinoin
+
+[Term]
+id: ECTO:0002020
+name: exposure to isoprenaline
+def: "A exposure event involving the interaction of an exposure receptor to isoprenaline. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "isoprenaline exposure" EXACT []
+synonym: "isoprenaline exposure event" EXACT []
+is_a: ECTO:0000155 ! exposure to organonitrogen compound
+is_a: ECTO:0000314 ! exposure to alcohol
+is_a: ECTO:0000581 ! exposure to beta-adrenergic agonist
+is_a: ECTO:0000582 ! exposure to bronchodilator agent
+is_a: ECTO:0000583 ! exposure to sympathomimetic agent
+is_a: ECTO:0000628 ! exposure to cardiotonic drug
+is_a: ECTO:0001997 ! exposure to phenols
+intersection_of: ExO:0000002 ! exposure event
+intersection_of: RO:0002233 CHEBI:64317 ! has input isoprenaline
+
+[Term]
+id: ECTO:0002021
+name: exposure to losartan
+def: "A exposure event involving the interaction of an exposure receptor to losartan. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "losartan exposure" EXACT []
+synonym: "losartan exposure event" EXACT []
+is_a: ECTO:0000155 ! exposure to organonitrogen compound
+is_a: ECTO:0000163 ! exposure to organic cyclic compound
+is_a: ECTO:0000595 ! exposure to antihypertensive agent
+is_a: ECTO:0000627 ! exposure to anti-arrhythmia drug
+is_a: ECTO:0000768 ! exposure to angiotensin receptor antagonist
+intersection_of: ExO:0000002 ! exposure event
+intersection_of: RO:0002233 CHEBI:6541 ! has input losartan
+
+[Term]
+id: ECTO:0002022
+name: exposure to methacholine
+def: "A exposure event involving the interaction of an exposure receptor to methacholine. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "methacholine exposure" EXACT []
+synonym: "methacholine exposure event" EXACT []
+is_a: ECTO:0000135 ! exposure to organic
+is_a: ECTO:0000270 ! exposure to ammonium ion
+is_a: ECTO:0000371 ! exposure to oxygen molecular entity
+is_a: ECTO:0000590 ! exposure to vasodilator agent
+is_a: ECTO:0000634 ! exposure to muscarinic agonist
+is_a: ECTO:0000686 ! exposure to bronchoconstrictor agent
+is_a: ECTO:0000742 ! exposure to epitope
+intersection_of: ExO:0000002 ! exposure event
+intersection_of: RO:0002233 CHEBI:6804 ! has input methacholine
+
+[Term]
+id: ECTO:0002023
+name: exposure to methylene blue
+def: "A exposure event involving the interaction of an exposure receptor to methylene blue. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "methylene blue exposure" EXACT []
+synonym: "methylene blue exposure event" EXACT []
+is_a: ECTO:0000375 ! exposure to salt
+is_a: ECTO:0000497 ! exposure to antioxidant
+is_a: ECTO:0000554 ! exposure to tracer
+is_a: ECTO:0000567 ! exposure to antidepressant
+is_a: ECTO:0000616 ! exposure to EC 3.1.1.8 (cholinesterase) inhibitor
+is_a: ECTO:0000626 ! exposure to antimalarial
+is_a: ECTO:0000789 ! exposure to neuroprotective agent
+is_a: ECTO:0000909 ! exposure to histological dye
+is_a: ECTO:0000912 ! exposure to cardioprotective agent
+intersection_of: ExO:0000002 ! exposure event
+intersection_of: RO:0002233 CHEBI:6872 ! has input methylene blue
+
+[Term]
+id: ECTO:0002024
+name: exposure to 1
+def: "A exposure event involving the interaction of an exposure receptor to 1. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "1 exposure" EXACT []
+synonym: "1 exposure event" EXACT []
+is_a: ECTO:0000370 ! exposure to nitrogen
+is_a: ECTO:0000496 ! exposure to alkylating agent
+is_a: ECTO:0000725 ! exposure to carcinogenic agent
+intersection_of: ExO:0000002 ! exposure event
+intersection_of: RO:0002233 CHEBI:73755 ! has input 1,2-dimethylhydrazine
+
+[Term]
+id: ECTO:0002025
+name: exposure to chrysin
+def: "A exposure event involving the interaction of an exposure receptor to chrysin. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "chrysin exposure" EXACT []
+synonym: "chrysin exposure event" EXACT []
+is_a: ECTO:0000135 ! exposure to organic
+is_a: ECTO:0000371 ! exposure to oxygen molecular entity
+is_a: ECTO:0000497 ! exposure to antioxidant
+is_a: ECTO:0000588 ! exposure to antineoplastic agent
+is_a: ECTO:0000614 ! exposure to protein kinase inhibitor
+is_a: ECTO:0000778 ! exposure to hepatoprotective agent
+is_a: ECTO:0000833 ! exposure to anti-inflammatory agent
+is_a: ECTO:0000893 ! exposure to plant metabolite
+intersection_of: ExO:0000002 ! exposure event
+intersection_of: RO:0002233 CHEBI:75095 ! has input chrysin
+
+[Term]
+id: ECTO:0002026
+name: exposure to 3-methyl-4'-dimethylaminoazobenzene
+def: "A exposure event involving the interaction of an exposure receptor to 3-methyl-4'-dimethylaminoazobenzene. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "3-methyl-4'-dimethylaminoazobenzene exposure" EXACT []
+synonym: "3-methyl-4'-dimethylaminoazobenzene exposure event" EXACT []
+is_a: ECTO:0000155 ! exposure to organonitrogen compound
+is_a: ECTO:0000163 ! exposure to organic cyclic compound
+is_a: ECTO:0000725 ! exposure to carcinogenic agent
+intersection_of: ExO:0000002 ! exposure event
+intersection_of: RO:0002233 CHEBI:76329 ! has input 3-methyl-4'-dimethylaminoazobenzene
+
+[Term]
+id: ECTO:0002028
+name: exposure to oxidopamine
+def: "A exposure event involving the interaction of an exposure receptor to oxidopamine. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "oxidopamine exposure" EXACT []
+synonym: "oxidopamine exposure event" EXACT []
+is_a: ECTO:0000285 ! exposure to catecholamine
+is_a: ECTO:0000678 ! exposure to drug metabolite
+is_a: ECTO:0000730 ! exposure to neurotoxin
+intersection_of: ExO:0000002 ! exposure event
+intersection_of: RO:0002233 CHEBI:78741 ! has input oxidopamine
+
+[Term]
+id: ECTO:0002029
+name: exposure to phenylephrine
+def: "A exposure event involving the interaction of an exposure receptor to phenylephrine. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "phenylephrine exposure" EXACT []
+synonym: "phenylephrine exposure event" EXACT []
+is_a: ECTO:0000155 ! exposure to organonitrogen compound
+is_a: ECTO:0000314 ! exposure to alcohol
+is_a: ECTO:0000583 ! exposure to sympathomimetic agent
+is_a: ECTO:0000628 ! exposure to cardiotonic drug
+is_a: ECTO:0000705 ! exposure to mydriatic agent
+is_a: ECTO:0000706 ! exposure to vasoconstrictor agent
+intersection_of: ExO:0000002 ! exposure event
+intersection_of: RO:0002233 CHEBI:8093 ! has input phenylephrine
+
+[Term]
+id: ECTO:0002030
+name: exposure to streptozocin
+def: "A exposure event involving the interaction of an exposure receptor to streptozocin. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "streptozocin exposure" EXACT []
+synonym: "streptozocin exposure event" EXACT []
+is_a: ECTO:0000135 ! exposure to organic
+is_a: ECTO:0000370 ! exposure to nitrogen
+is_a: ECTO:0000371 ! exposure to oxygen molecular entity
+is_a: ECTO:0000521 ! exposure to metabolite
+is_a: ECTO:0000544 ! exposure to antimicrobial agent
+is_a: ECTO:0000588 ! exposure to antineoplastic agent
+is_a: ECTO:0000752 ! exposure to DNA synthesis inhibitor
+intersection_of: ExO:0000002 ! exposure event
+intersection_of: RO:0002233 CHEBI:9288 ! has input streptozocin
+
+[Term]
+id: ECTO:0002031
+name: exposure to trimethaphan camsylate
+def: "A exposure event involving the interaction of an exposure receptor to trimethaphan camsylate. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "trimethaphan camsylate exposure" EXACT []
+synonym: "trimethaphan camsylate exposure event" EXACT []
+is_a: ECTO:0000163 ! exposure to organic cyclic compound
+is_a: ECTO:0000595 ! exposure to antihypertensive agent
+intersection_of: ExO:0000002 ! exposure event
+intersection_of: RO:0002233 CHEBI:9729 ! has input trimethaphan camsylate
+
+[Term]
+id: ECTO:0002032
+name: Activity related exposure
+def: "A exposure event involving Activity." []
+synonym: "Activity" NARROW []
+synonym: "Activity exposure" EXACT []
+is_a: ExO:0000002 ! exposure event
+intersection_of: ExO:0000002 ! exposure event
+intersection_of: BFO:0000050 NCIT:C43431 ! part_of Activity
+
+[Term]
+id: ECTO:0002033
+name: Social Circumstances related exposure
+def: "A exposure event involving Social Circumstances." []
+synonym: "Social Circumstances" NARROW []
+synonym: "Social Circumstances exposure" EXACT []
+is_a: ExO:0000002 ! exposure event
+intersection_of: ExO:0000002 ! exposure event
+intersection_of: BFO:0000050 NCIT:C20188 ! part_of Social Circumstances
+
+[Term]
+id: ECTO:0002034
+name: Socioeconomic Factors related exposure
+def: "A exposure event involving Socioeconomic Factors." []
+synonym: "Socioeconomic Factors" NARROW []
+synonym: "Socioeconomic Factors exposure" EXACT []
+is_a: ECTO:0002033 ! Social Circumstances related exposure
+intersection_of: ExO:0000002 ! exposure event
+intersection_of: BFO:0000050 NCIT:C17468 ! part_of Socioeconomic Factors
 
 [Term]
 id: ENVO:00000000
