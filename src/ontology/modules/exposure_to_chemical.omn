@@ -2,24 +2,26 @@ Prefix: : <http://purl.obolibrary.org/obo/>
 Prefix: IAO: <http://purl.obolibrary.org/obo/IAO_>
 Prefix: DOSDP: <http://geneontology.org/foo/>
 Prefix: oio: <http://www.geneontology.org/formats/oboInOwl#>
-Prefix: NPO: <http://purl.obolibrary.org/obo/NPO_>
-Prefix: ExO: <http://purl.obolibrary.org/obo/ExO_>
 Prefix: RO: <http://purl.obolibrary.org/obo/RO_>
-Prefix: OBA: <http://purl.obolibrary.org/obo/OBA_>
-Prefix: PATO: <http://purl.obolibrary.org/obo/PATO_>
-Prefix: PO: <http://purl.obolibrary.org/obo/PO_>
-Prefix: ENVO: <http://purl.obolibrary.org/obo/ENVO_>
 Prefix: UBERON: <http://purl.obolibrary.org/obo/UBERON_>
 Prefix: CHEBI: <http://purl.obolibrary.org/obo/CHEBI_>
-Prefix: GOCHE: <http://purl.obolibrary.org/obo/GOCHE_>
-Prefix: BFO: <http://purl.obolibrary.org/obo/BFO_>
-Prefix: NBO: <http://purl.obolibrary.org/obo/NBO_>
 Prefix: CL: <http://purl.obolibrary.org/obo/CL_>
-Prefix: PR: <http://purl.obolibrary.org/obo/PR_>
-Prefix: GO: <http://purl.obolibrary.org/obo/GO_>
-Prefix: SO: <http://purl.obolibrary.org/obo/SO_>
 Prefix: NCIT: <http://purl.obolibrary.org/obo/NCIT_>
+Prefix: PO: <http://purl.obolibrary.org/obo/PO_>
+Prefix: OBA: <http://purl.obolibrary.org/obo/OBA_>
+Prefix: NBO: <http://purl.obolibrary.org/obo/NBO_>
+Prefix: BFO: <http://purl.obolibrary.org/obo/BFO_>
+Prefix: GO: <http://purl.obolibrary.org/obo/GO_>
+Prefix: ENVO: <http://purl.obolibrary.org/obo/ENVO_>
+Prefix: ZECO: <http://purl.obolibrary.org/obo/ZECO_>
+Prefix: NPO: <http://purl.obolibrary.org/obo/NPO_>
 Prefix: ECTO: <http://purl.obolibrary.org/obo/ECTO_>
+Prefix: ExO: <http://purl.obolibrary.org/obo/ExO_>
+Prefix: PR: <http://purl.obolibrary.org/obo/PR_>
+Prefix: XCO: <http://purl.obolibrary.org/obo/XCO_>
+Prefix: PATO: <http://purl.obolibrary.org/obo/PATO_>
+Prefix: SO: <http://purl.obolibrary.org/obo/SO_>
+Prefix: GOCHE: <http://purl.obolibrary.org/obo/GOCHE_>
 
  ## Auto-generated
 
@@ -31,9 +33,9 @@ AnnotationProperty: oio:hasExactSynonym
 AnnotationProperty: oio:hasExactSynonym
 Class: ExO:0000002 ## exposure event
 Class: CHEBI:24431 ## chemical entity
-ObjectProperty: RO:0002233 ## has input
-ObjectProperty: BFO_0000050 ## stressor
 ObjectProperty: BFO_0000050 ## part of
+ObjectProperty: BFO_0000050 ## stressor
+ObjectProperty: RO:0002233 ## has input
 ## Auto-generated classes
 
 Class: CHEBI:26523 ## reactive oxygen species
@@ -3393,14 +3395,14 @@ Class: ECTO:0001137
  Annotations: oio:hasExactSynonym "phthalate exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some CHEBI:26092 ## 'exposure event' and 'has input' some phthalate
 
-Class: CHEBI:27789 ## 1
+Class: CHEBI:27789 ## 1,2-dichloroethane
 ## {"stressor": "CHEBI:27789"}
 Class: ECTO:0001138
- Annotations: rdfs:label "exposure to 1"
- Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to 1. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion."
- Annotations: oio:hasExactSynonym "1 exposure"
- Annotations: oio:hasExactSynonym "1 exposure event"
- EquivalentTo: ExO:0000002 and RO:0002233 some CHEBI:27789 ## 'exposure event' and 'has input' some 1
+ Annotations: rdfs:label "exposure to 1,2-dichloroethane"
+ Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to 1,2-dichloroethane. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion."
+ Annotations: oio:hasExactSynonym "1,2-dichloroethane exposure"
+ Annotations: oio:hasExactSynonym "1,2-dichloroethane exposure event"
+ EquivalentTo: ExO:0000002 and RO:0002233 some CHEBI:27789 ## 'exposure event' and 'has input' some 1,2-dichloroethane
 
 Class: CHEBI:28097 ## chlorobenzene
 ## {"stressor": "CHEBI:28097"}
@@ -6956,15 +6958,6 @@ Class: ECTO:0001539
  Annotations: oio:hasExactSynonym "1,2-dichlorobenzene exposure"
  Annotations: oio:hasExactSynonym "1,2-dichlorobenzene exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some CHEBI:35290 ## 'exposure event' and 'has input' some 1,2-dichlorobenzene
-
-Class: CHEBI:27789 ## 1,2-dichloroethane
-## {"stressor": "CHEBI:27789"}
-Class: ECTO:0001540
- Annotations: rdfs:label "exposure to 1,2-dichloroethane"
- Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to 1,2-dichloroethane. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion."
- Annotations: oio:hasExactSynonym "1,2-dichloroethane exposure"
- Annotations: oio:hasExactSynonym "1,2-dichloroethane exposure event"
- EquivalentTo: ExO:0000002 and RO:0002233 some CHEBI:27789 ## 'exposure event' and 'has input' some 1,2-dichloroethane
 
 Class: CHEBI:28805 ## cis-1,2-dichloroethene
 ## {"stressor": "CHEBI:28805"}
@@ -10764,14 +10757,14 @@ Class: ECTO:0001981
  Annotations: oio:hasExactSynonym "1H-pyrazole exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some CHEBI:17241 ## 'exposure event' and 'has input' some 1H-pyrazole
 
-Class: CHEBI:17963 ## 1-methyl-4-phenyl-1
+Class: CHEBI:17963 ## 1-methyl-4-phenyl-1,2,3,6-tetrahydropyridine
 ## {"stressor": "CHEBI:17963"}
 Class: ECTO:0001982
- Annotations: rdfs:label "exposure to 1-methyl-4-phenyl-1"
- Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to 1-methyl-4-phenyl-1. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion."
- Annotations: oio:hasExactSynonym "1-methyl-4-phenyl-1 exposure"
- Annotations: oio:hasExactSynonym "1-methyl-4-phenyl-1 exposure event"
- EquivalentTo: ExO:0000002 and RO:0002233 some CHEBI:17963 ## 'exposure event' and 'has input' some 1-methyl-4-phenyl-1
+ Annotations: rdfs:label "exposure to 1-methyl-4-phenyl-1,2,3,6-tetrahydropyridine"
+ Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to 1-methyl-4-phenyl-1,2,3,6-tetrahydropyridine. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion."
+ Annotations: oio:hasExactSynonym "1-methyl-4-phenyl-1,2,3,6-tetrahydropyridine exposure"
+ Annotations: oio:hasExactSynonym "1-methyl-4-phenyl-1,2,3,6-tetrahydropyridine exposure event"
+ EquivalentTo: ExO:0000002 and RO:0002233 some CHEBI:17963 ## 'exposure event' and 'has input' some 1-methyl-4-phenyl-1,2,3,6-tetrahydropyridine
 
 Class: CHEBI:18154 ## polysaccharide
 ## {"stressor": "CHEBI:18154"}
@@ -10809,14 +10802,14 @@ Class: ECTO:0001986
  Annotations: oio:hasExactSynonym "N-ethyl-N-nitrosourea exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some CHEBI:23995 ## 'exposure event' and 'has input' some N-ethyl-N-nitrosourea
 
-Class: CHEBI:254496 ## 7
+Class: CHEBI:254496 ## 7,12-dimethyltetraphene
 ## {"stressor": "CHEBI:254496"}
 Class: ECTO:0001987
- Annotations: rdfs:label "exposure to 7"
- Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to 7. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion."
- Annotations: oio:hasExactSynonym "7 exposure"
- Annotations: oio:hasExactSynonym "7 exposure event"
- EquivalentTo: ExO:0000002 and RO:0002233 some CHEBI:254496 ## 'exposure event' and 'has input' some 7
+ Annotations: rdfs:label "exposure to 7,12-dimethyltetraphene"
+ Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to 7,12-dimethyltetraphene. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion."
+ Annotations: oio:hasExactSynonym "7,12-dimethyltetraphene exposure"
+ Annotations: oio:hasExactSynonym "7,12-dimethyltetraphene exposure event"
+ EquivalentTo: ExO:0000002 and RO:0002233 some CHEBI:254496 ## 'exposure event' and 'has input' some 7,12-dimethyltetraphene
 
 Class: CHEBI:2567 ## alendronic acid
 ## {"stressor": "CHEBI:2567"}
@@ -11133,14 +11126,14 @@ Class: ECTO:0002023
  Annotations: oio:hasExactSynonym "methylene blue exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some CHEBI:6872 ## 'exposure event' and 'has input' some methylene blue
 
-Class: CHEBI:73755 ## 1
+Class: CHEBI:73755 ## 1,2-dimethylhydrazine
 ## {"stressor": "CHEBI:73755"}
 Class: ECTO:0002024
- Annotations: rdfs:label "exposure to 1"
- Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to 1. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion."
- Annotations: oio:hasExactSynonym "1 exposure"
- Annotations: oio:hasExactSynonym "1 exposure event"
- EquivalentTo: ExO:0000002 and RO:0002233 some CHEBI:73755 ## 'exposure event' and 'has input' some 1
+ Annotations: rdfs:label "exposure to 1,2-dimethylhydrazine"
+ Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to 1,2-dimethylhydrazine. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion."
+ Annotations: oio:hasExactSynonym "1,2-dimethylhydrazine exposure"
+ Annotations: oio:hasExactSynonym "1,2-dimethylhydrazine exposure event"
+ EquivalentTo: ExO:0000002 and RO:0002233 some CHEBI:73755 ## 'exposure event' and 'has input' some 1,2-dimethylhydrazine
 
 Class: CHEBI:75095 ## chrysin
 ## {"stressor": "CHEBI:75095"}
@@ -11195,3 +11188,12 @@ Class: ECTO:0002031
  Annotations: oio:hasExactSynonym "trimethaphan camsylate exposure"
  Annotations: oio:hasExactSynonym "trimethaphan camsylate exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some CHEBI:9729 ## 'exposure event' and 'has input' some trimethaphan camsylate
+
+Class: CHEBI:27808 ## heroin
+## {"stressor": "CHEBI:27808"}
+Class: ECTO:0002051
+ Annotations: rdfs:label "exposure to heroin"
+ Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to heroin. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion."
+ Annotations: oio:hasExactSynonym "heroin exposure"
+ Annotations: oio:hasExactSynonym "heroin exposure event"
+ EquivalentTo: ExO:0000002 and RO:0002233 some CHEBI:27808 ## 'exposure event' and 'has input' some heroin

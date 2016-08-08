@@ -3056,14 +3056,29 @@ is_a: PATO:0001241 ! physical object quality
 is_a: PATO:0002300 ! increased quality
 
 [Term]
+id: UBERON:0000026
+name: appendage
+is_a: UBERON:0000475 ! organism subdivision
+
+[Term]
 id: UBERON:0000061
 name: anatomical structure
 is_a: UBERON:0000465 ! material anatomical entity
 
 [Term]
+id: UBERON:0000062
+name: organ
+is_a: UBERON:0010000 ! multicellular anatomical structure
+
+[Term]
 id: UBERON:0000064
 name: organ part
 is_a: UBERON:0010000 ! multicellular anatomical structure
+
+[Term]
+id: UBERON:0000122
+name: neuron projection bundle
+is_a: UBERON:0005162 ! multi cell part structure
 
 [Term]
 id: UBERON:0000344
@@ -3077,9 +3092,65 @@ is_a: BFO:0000040 ! material entity
 is_a: UBERON:0001062 ! anatomical entity
 
 [Term]
+id: UBERON:0000475
+name: organism subdivision
+is_a: UBERON:0010000 ! multicellular anatomical structure
+
+[Term]
+id: UBERON:0000477
+name: anatomical cluster
+is_a: UBERON:0001062 ! anatomical entity
+
+[Term]
+id: UBERON:0000489
+name: cavitated compound organ
+is_a: UBERON:0003103 ! compound organ
+
+[Term]
+id: UBERON:0000991
+name: gonad
+is_a: UBERON:0003133 ! reproductive organ
+
+[Term]
+id: UBERON:0000992
+name: female gonad
+is_a: UBERON:0000991 ! gonad
+is_a: UBERON:0003134 ! female reproductive organ
+
+[Term]
+id: UBERON:0001021
+name: nerve
+is_a: UBERON:0000122 ! neuron projection bundle
+
+[Term]
 id: UBERON:0001062
 name: anatomical entity
 is_a: BFO:0000004 ! independent continuant
+
+[Term]
+id: UBERON:0001264
+name: pancreas
+is_a: UBERON:0002075 ! viscus
+
+[Term]
+id: UBERON:0002075
+name: viscus
+is_a: UBERON:0005177 ! trunk region element
+
+[Term]
+id: UBERON:0002107
+name: liver
+is_a: UBERON:0002365 ! exocrine gland
+is_a: UBERON:0004119 ! endoderm-derived structure
+is_a: UBERON:0005172 ! abdomen element
+is_a: UBERON:0006925 ! digestive gland
+
+[Term]
+id: UBERON:0002113
+name: kidney
+is_a: UBERON:0000489 ! cavitated compound organ
+is_a: UBERON:0005172 ! abdomen element
+is_a: UBERON:0015212 ! lateral structure
 
 [Term]
 id: UBERON:0002199
@@ -3088,14 +3159,86 @@ is_a: UBERON:0003102 ! surface structure
 is_a: UBERON:0011216 ! organ system subdivision
 
 [Term]
+id: UBERON:0002365
+name: exocrine gland
+is_a: UBERON:0002530 ! gland
+
+[Term]
+id: UBERON:0002368
+name: endocrine gland
+is_a: UBERON:0002530 ! gland
+
+[Term]
+id: UBERON:0002530
+name: gland
+is_a: UBERON:0000062 ! organ
+
+[Term]
 id: UBERON:0003102
 name: surface structure
+is_a: UBERON:0000061 ! anatomical structure
+
+[Term]
+id: UBERON:0003103
+name: compound organ
+is_a: UBERON:0000062 ! organ
+
+[Term]
+id: UBERON:0003133
+name: reproductive organ
+is_a: UBERON:0000062 ! organ
+is_a: UBERON:0005156 ! reproductive structure
+
+[Term]
+id: UBERON:0003134
+name: female reproductive organ
+is_a: UBERON:0003133 ! reproductive organ
+
+[Term]
+id: UBERON:0004119
+name: endoderm-derived structure
+is_a: UBERON:0000061 ! anatomical structure
+
+[Term]
+id: UBERON:0004120
+name: mesoderm-derived structure
 is_a: UBERON:0000061 ! anatomical structure
 
 [Term]
 id: UBERON:0004923
 name: organ component layer
 is_a: UBERON:0000064 ! organ part
+
+[Term]
+id: UBERON:0005156
+name: reproductive structure
+is_a: UBERON:0004120 ! mesoderm-derived structure
+
+[Term]
+id: UBERON:0005162
+name: multi cell part structure
+is_a: UBERON:0000477 ! anatomical cluster
+
+[Term]
+id: UBERON:0005172
+name: abdomen element
+is_a: UBERON:0005173 ! abdominal segment element
+
+[Term]
+id: UBERON:0005173
+name: abdominal segment element
+is_a: UBERON:0005177 ! trunk region element
+
+[Term]
+id: UBERON:0005177
+name: trunk region element
+is_a: UBERON:0000062 ! organ
+
+[Term]
+id: UBERON:0006925
+name: digestive gland
+is_a: UBERON:0002368 ! endocrine gland
+is_a: UBERON:0013765 ! digestive system element
 
 [Term]
 id: UBERON:0010000
@@ -3106,6 +3249,16 @@ is_a: UBERON:0000061 ! anatomical structure
 id: UBERON:0011216
 name: organ system subdivision
 is_a: UBERON:0010000 ! multicellular anatomical structure
+
+[Term]
+id: UBERON:0013765
+name: digestive system element
+is_a: UBERON:0000062 ! organ
+
+[Term]
+id: UBERON:0015212
+name: lateral structure
+is_a: UBERON:0000061 ! anatomical structure
 
 [Typedef]
 id: BFO:0000050

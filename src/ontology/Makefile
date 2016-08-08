@@ -26,7 +26,7 @@ ecto-core.owl: ecto-edit.obo $(ALL_MODS_OWL)
 ecto-core.obo: ecto-core.owl
 	owltools $(USECAT) $< -o -f obo --no-check $@.tmp && grep -v ^owl-axioms $@.tmp > $@
 
-ecto-core-inferred.owl: ecto-core.owl  all_imports
+ecto-core-inferred.owl: ecto-core.owl all_imports
 	robot reason --input $< --reasoner elk reduce --reasoner elk -o $@
 
 subsets/ecto-basic.owl: ecto-core-inferred.owl
@@ -68,7 +68,7 @@ top-report: ecto.obo
 
 # Ontology dependencies
 # We don't include clo, as this is currently not working
-IMPORTS = pato envo npo exo ro chebi activity uberon
+IMPORTS = pato envo npo exo xco ro chebi activity uberon
 
 # Make this target to regenerate ALL
 all_imports_owl: $(patsubst %, imports/%_import.owl,$(IMPORTS))

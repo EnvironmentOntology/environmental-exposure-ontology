@@ -1,0 +1,37 @@
+format-version: 1.2
+ontology: ecto/imports/xco_import
+
+[Term]
+id: XCO:0000000
+name: experimental condition
+
+[Term]
+id: XCO:0000026
+name: surgical removal
+is_a: XCO:0000165 ! surgical manipulation
+
+[Term]
+id: XCO:0000027
+name: surgical implantation
+is_a: XCO:0000165 ! surgical manipulation
+
+[Term]
+id: XCO:0000165
+name: surgical manipulation
+is_a: XCO:0000000 ! experimental condition
+
+[Term]
+id: XCO:0000373
+name: surgical denervation
+is_a: XCO:0000026 ! surgical removal
+
+[Term]
+id: XCO:0000374
+name: axotomy
+is_a: XCO:0000373 ! surgical denervation
+
+[Typedef]
+id: BFO:0000050
+name: part_of
+is_transitive: true
+

@@ -2,23 +2,25 @@ Prefix: : <http://purl.obolibrary.org/obo/>
 Prefix: IAO: <http://purl.obolibrary.org/obo/IAO_>
 Prefix: DOSDP: <http://geneontology.org/foo/>
 Prefix: oio: <http://www.geneontology.org/formats/oboInOwl#>
+Prefix: OBA: <http://purl.obolibrary.org/obo/OBA_>
+Prefix: NCIT: <http://purl.obolibrary.org/obo/NCIT_>
 Prefix: CHEBI: <http://purl.obolibrary.org/obo/CHEBI_>
-Prefix: CL: <http://purl.obolibrary.org/obo/CL_>
+Prefix: GOCHE: <http://purl.obolibrary.org/obo/GOCHE_>
+Prefix: BFO: <http://purl.obolibrary.org/obo/BFO_>
 Prefix: PATO: <http://purl.obolibrary.org/obo/PATO_>
 Prefix: RO: <http://purl.obolibrary.org/obo/RO_>
-Prefix: PR: <http://purl.obolibrary.org/obo/PR_>
-Prefix: NPO: <http://purl.obolibrary.org/obo/NPO_>
-Prefix: NCIT: <http://purl.obolibrary.org/obo/NCIT_>
-Prefix: ECTO: <http://purl.obolibrary.org/obo/ECTO_>
-Prefix: SO: <http://purl.obolibrary.org/obo/SO_>
-Prefix: OBA: <http://purl.obolibrary.org/obo/OBA_>
 Prefix: GO: <http://purl.obolibrary.org/obo/GO_>
+Prefix: NPO: <http://purl.obolibrary.org/obo/NPO_>
+Prefix: PR: <http://purl.obolibrary.org/obo/PR_>
+Prefix: CL: <http://purl.obolibrary.org/obo/CL_>
+Prefix: XCO: <http://purl.obolibrary.org/obo/XCO_>
+Prefix: ZECO: <http://purl.obolibrary.org/obo/ZECO_>
+Prefix: SO: <http://purl.obolibrary.org/obo/SO_>
+Prefix: ExO: <http://purl.obolibrary.org/obo/ExO_>
 Prefix: ENVO: <http://purl.obolibrary.org/obo/ENVO_>
 Prefix: NBO: <http://purl.obolibrary.org/obo/NBO_>
 Prefix: PO: <http://purl.obolibrary.org/obo/PO_>
-Prefix: GOCHE: <http://purl.obolibrary.org/obo/GOCHE_>
-Prefix: BFO: <http://purl.obolibrary.org/obo/BFO_>
-Prefix: ExO: <http://purl.obolibrary.org/obo/ExO_>
+Prefix: ECTO: <http://purl.obolibrary.org/obo/ECTO_>
 Prefix: UBERON: <http://purl.obolibrary.org/obo/UBERON_>
 
  ## Auto-generated
@@ -29,12 +31,12 @@ AnnotationProperty: exo/patterns/exposure_to_chemical_with_role/stressor
 AnnotationProperty: DOSDP:applies-pattern
 AnnotationProperty: oio:hasExactSynonym
 AnnotationProperty: oio:hasExactSynonym
-Class: CHEBI:24431 ## chemical entity
 Class: ExO:0000002 ## exposure event
+Class: CHEBI:24431 ## chemical entity
 ObjectProperty: BFO_0000050 ## stressor
 ObjectProperty: RO:0002233 ## has input
-ObjectProperty: RO:0000087 ## has role
 ObjectProperty: BFO_0000050 ## part of
+ObjectProperty: RO:0000087 ## has role
 ## Auto-generated classes
 
 Class: CHEBI:24432 ## biological role
@@ -4725,3 +4727,30 @@ Class: ECTO:0001975
  Annotations: oio:hasExactSynonym "sex hormone exposure"
  Annotations: oio:hasExactSynonym "sex hormone exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:50112) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some sex hormone)
+
+Class: CHEBI:50137 ## mu-opioid receptor antagonist
+## {"stressor": "CHEBI:50137"}
+Class: ECTO:0002052
+ Annotations: rdfs:label "exposure to mu-opioid receptor antagonist"
+ Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to a mu-opioid receptor antagonist. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion."
+ Annotations: oio:hasExactSynonym "mu-opioid receptor antagonist exposure"
+ Annotations: oio:hasExactSynonym "mu-opioid receptor antagonist exposure event"
+ EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:50137) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some mu-opioid receptor antagonist)
+
+Class: CHEBI:35942 ## neurotransmitter agent
+## {"stressor": "CHEBI:35942"}
+Class: ECTO:0002053
+ Annotations: rdfs:label "exposure to neurotransmitter agent"
+ Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to a neurotransmitter agent. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion."
+ Annotations: oio:hasExactSynonym "neurotransmitter agent exposure"
+ Annotations: oio:hasExactSynonym "neurotransmitter agent exposure event"
+ EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:35942) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some neurotransmitter agent)
+
+Class: CHEBI:65255 ## food preservative
+## {"stressor": "CHEBI:65255"}
+Class: ECTO:0002058
+ Annotations: rdfs:label "exposure to food preservative"
+ Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to a food preservative. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion."
+ Annotations: oio:hasExactSynonym "food preservative exposure"
+ Annotations: oio:hasExactSynonym "food preservative exposure event"
+ EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:65255) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some food preservative)
