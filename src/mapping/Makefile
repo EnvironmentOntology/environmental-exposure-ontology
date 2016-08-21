@@ -33,6 +33,8 @@ exposure-mre.obo:
 access-ncit.obo:
 	blip ontol-query -r ncit -n 'Access to%' -to obo > $@
 
+exposure-wikidata.obo:
+	cp ../resources/wikidata/combined.obo $@
 
 
 combined-exposure.obo: all_exposure

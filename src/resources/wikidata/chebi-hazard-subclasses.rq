@@ -1,0 +1,26 @@
+PREFIX wd: <http://www.wikidata.org/entity/> 
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX wikibase: <http://wikiba.se/ontology#>
+PREFIX p: <http://www.wikidata.org/prop/>
+PREFIX ps: <http://www.wikidata.org/prop/statement/>
+PREFIX pq: <http://www.wikidata.org/prop/qualifier/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX bd: <http://www.bigdata.com/rdf#>
+prefix oio: <http://www.geneontology.org/formats/oboInOwl#>
+
+CONSTRUCT {
+  ?x rdfs:label ?xLabel .
+  ?superClass rdfs:label ?superClassLabel .
+  ?x rdfs:subClassOf ?superClass .
+  ?x oio:hasDbXref ?xref
+}
+WHERE {
+  ?x wdt:P279* wd:Q21167512 .
+  ?x wdt:P279 ?superClass .
+  ?x wdt:P828 ?chem .
+  ?chem wdt:P683 ?chebiId .
+  BIND(CONCAT("CHEBI:", ?chebiId) AS ?xref)
+   SERVICE wikibase:label {
+    bd:serviceParam wikibase:language "en" .
+   }
+}

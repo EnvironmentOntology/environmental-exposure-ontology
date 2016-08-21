@@ -57,6 +57,7 @@ Similar ontologies (overlapping/non-orthogonal)
  * SNOMED - has an exposure subset
  * NCIT - has an exposure subset?
  * XCO - experimental conditions (mammal-centric?)
+ * Wikidata - subclasses of hazard (Q1132455)
 
 See below for the merge experiment with these ontologies.
 
