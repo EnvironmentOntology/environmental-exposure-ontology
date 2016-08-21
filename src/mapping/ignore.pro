@@ -1,6 +1,7 @@
 metadata_nlp:synset_hook(['',response]).  %% go
 metadata_nlp:synset_hook(['',stimulus]).  %% go
 metadata_nlp:synset_hook(['',exposure]).
+metadata_nlp:synset_hook(['',poisoning]).
 metadata_nlp:synset_hook(['',to]).
 metadata_nlp:synset_hook(['',conditions]).
 metadata_nlp:synset_hook(['',experimental]).
