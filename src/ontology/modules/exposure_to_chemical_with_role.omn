@@ -2,25 +2,25 @@ Prefix: : <http://purl.obolibrary.org/obo/>
 Prefix: IAO: <http://purl.obolibrary.org/obo/IAO_>
 Prefix: DOSDP: <http://geneontology.org/foo/>
 Prefix: oio: <http://www.geneontology.org/formats/oboInOwl#>
-Prefix: OBA: <http://purl.obolibrary.org/obo/OBA_>
+Prefix: SO: <http://purl.obolibrary.org/obo/SO_>
+Prefix: PO: <http://purl.obolibrary.org/obo/PO_>
 Prefix: NCIT: <http://purl.obolibrary.org/obo/NCIT_>
-Prefix: CHEBI: <http://purl.obolibrary.org/obo/CHEBI_>
-Prefix: GOCHE: <http://purl.obolibrary.org/obo/GOCHE_>
+Prefix: PR: <http://purl.obolibrary.org/obo/PR_>
 Prefix: BFO: <http://purl.obolibrary.org/obo/BFO_>
-Prefix: PATO: <http://purl.obolibrary.org/obo/PATO_>
+Prefix: CHEBI: <http://purl.obolibrary.org/obo/CHEBI_>
+Prefix: CL: <http://purl.obolibrary.org/obo/CL_>
+Prefix: GOCHE: <http://purl.obolibrary.org/obo/GOCHE_>
+Prefix: ECTO: <http://purl.obolibrary.org/obo/ECTO_>
 Prefix: RO: <http://purl.obolibrary.org/obo/RO_>
 Prefix: GO: <http://purl.obolibrary.org/obo/GO_>
-Prefix: NPO: <http://purl.obolibrary.org/obo/NPO_>
-Prefix: PR: <http://purl.obolibrary.org/obo/PR_>
-Prefix: CL: <http://purl.obolibrary.org/obo/CL_>
-Prefix: XCO: <http://purl.obolibrary.org/obo/XCO_>
-Prefix: ZECO: <http://purl.obolibrary.org/obo/ZECO_>
-Prefix: SO: <http://purl.obolibrary.org/obo/SO_>
-Prefix: ExO: <http://purl.obolibrary.org/obo/ExO_>
-Prefix: ENVO: <http://purl.obolibrary.org/obo/ENVO_>
+Prefix: PATO: <http://purl.obolibrary.org/obo/PATO_>
 Prefix: NBO: <http://purl.obolibrary.org/obo/NBO_>
-Prefix: PO: <http://purl.obolibrary.org/obo/PO_>
-Prefix: ECTO: <http://purl.obolibrary.org/obo/ECTO_>
+Prefix: NPO: <http://purl.obolibrary.org/obo/NPO_>
+Prefix: XCO: <http://purl.obolibrary.org/obo/XCO_>
+Prefix: OBA: <http://purl.obolibrary.org/obo/OBA_>
+Prefix: ENVO: <http://purl.obolibrary.org/obo/ENVO_>
+Prefix: ExO: <http://purl.obolibrary.org/obo/ExO_>
+Prefix: ZECO: <http://purl.obolibrary.org/obo/ZECO_>
 Prefix: UBERON: <http://purl.obolibrary.org/obo/UBERON_>
 
  ## Auto-generated
@@ -29,13 +29,14 @@ Ontology: <http://purl.obolibrary.org/obo/auto>
 AnnotationProperty: IAO:0000115
 AnnotationProperty: exo/patterns/exposure_to_chemical_with_role/stressor
 AnnotationProperty: DOSDP:applies-pattern
+AnnotationProperty: oio:hasRelatedSynonym
 AnnotationProperty: oio:hasExactSynonym
 AnnotationProperty: oio:hasExactSynonym
-Class: ExO:0000002 ## exposure event
 Class: CHEBI:24431 ## chemical entity
+Class: ExO:0000002 ## exposure event
 ObjectProperty: BFO_0000050 ## stressor
-ObjectProperty: RO:0002233 ## has input
 ObjectProperty: BFO_0000050 ## part of
+ObjectProperty: RO:0002233 ## has input
 ObjectProperty: RO:0000087 ## has role
 ## Auto-generated classes
 
@@ -47,6 +48,10 @@ Class: ECTO:0000485
  Annotations: oio:hasExactSynonym "biological role exposure"
  Annotations: oio:hasExactSynonym "biological role exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:24432) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some biological role)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to biological role"
+ Annotations: oio:hasRelatedSynonym "exposure to biological role"
 
 Class: CHEBI:33232 ## application
 ## {"stressor": "CHEBI:33232"}
@@ -56,6 +61,10 @@ Class: ECTO:0000486
  Annotations: oio:hasExactSynonym "application exposure"
  Annotations: oio:hasExactSynonym "application exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:33232) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some application)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to application"
+ Annotations: oio:hasRelatedSynonym "exposure to application"
 
 Class: CHEBI:51086 ## chemical role
 ## {"stressor": "CHEBI:51086"}
@@ -65,6 +74,10 @@ Class: ECTO:0000487
  Annotations: oio:hasExactSynonym "chemical role exposure"
  Annotations: oio:hasExactSynonym "chemical role exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:51086) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some chemical role)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to chemical role"
+ Annotations: oio:hasRelatedSynonym "exposure to chemical role"
 
 Class: CHEBI:131604 ## Mycoplasma genitalium metabolite
 ## {"stressor": "CHEBI:131604"}
@@ -92,6 +105,9 @@ Class: ECTO:0000490
  Annotations: oio:hasExactSynonym "electron donor exposure"
  Annotations: oio:hasExactSynonym "electron donor exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:15022) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some electron donor)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to Elektronendonator"
 
 Class: CHEBI:17654 ## electron acceptor
 ## {"stressor": "CHEBI:17654"}
@@ -101,6 +117,9 @@ Class: ECTO:0000491
  Annotations: oio:hasExactSynonym "electron acceptor exposure"
  Annotations: oio:hasExactSynonym "electron acceptor exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:17654) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some electron acceptor)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to Elektronenakzeptor"
 
 Class: CHEBI:20569 ## EC 2.5.1.19 (3-phosphoshikimate 1-carboxyvinyltransferase) inhibitor
 ## {"stressor": "CHEBI:20569"}
@@ -128,6 +147,12 @@ Class: ECTO:0000494
  Annotations: oio:hasExactSynonym "acaricide exposure"
  Annotations: oio:hasExactSynonym "acaricide exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:22153) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some acaricide)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to acaricides"
+ Annotations: oio:hasRelatedSynonym "exposure to Akarizid"
+ Annotations: oio:hasRelatedSynonym "exposure to Akarizide"
+ Annotations: oio:hasRelatedSynonym "exposure to miticide"
 
 Class: CHEBI:22180 ## EC 2.2.1.6 (acetolactate synthase) inhibitor
 ## {"stressor": "CHEBI:22180"}
@@ -155,6 +180,11 @@ Class: ECTO:0000497
  Annotations: oio:hasExactSynonym "antioxidant exposure"
  Annotations: oio:hasExactSynonym "antioxidant exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:22586) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some antioxidant)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to antioxidants"
+ Annotations: oio:hasRelatedSynonym "exposure to antioxydant"
+ Annotations: oio:hasRelatedSynonym "exposure to antoxidant"
 
 Class: CHEBI:22587 ## antiviral agent
 ## {"stressor": "CHEBI:22587"}
@@ -164,6 +194,10 @@ Class: ECTO:0000498
  Annotations: oio:hasExactSynonym "antiviral agent exposure"
  Annotations: oio:hasExactSynonym "antiviral agent exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:22587) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some antiviral agent)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to antiviral"
+ Annotations: oio:hasRelatedSynonym "exposure to antivirals"
 
 Class: CHEBI:22676 ## auxin
 ## {"stressor": "CHEBI:22676"}
@@ -173,6 +207,9 @@ Class: ECTO:0000499
  Annotations: oio:hasExactSynonym "auxin exposure"
  Annotations: oio:hasExactSynonym "auxin exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:22676) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some auxin)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to auxins"
 
 Class: CHEBI:22917 ## phytogenic insecticide
 ## {"stressor": "CHEBI:22917"}
@@ -209,6 +246,9 @@ Class: ECTO:0000503
  Annotations: oio:hasExactSynonym "chromophore exposure"
  Annotations: oio:hasExactSynonym "chromophore exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:23240) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some chromophore)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to chromophores"
 
 Class: CHEBI:23354 ## coenzyme
 ## {"stressor": "CHEBI:23354"}
@@ -218,6 +258,9 @@ Class: ECTO:0000504
  Annotations: oio:hasExactSynonym "coenzyme exposure"
  Annotations: oio:hasExactSynonym "coenzyme exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:23354) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some coenzyme)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to coenzymes"
 
 Class: CHEBI:23357 ## cofactor
 ## {"stressor": "CHEBI:23357"}
@@ -227,6 +270,9 @@ Class: ECTO:0000505
  Annotations: oio:hasExactSynonym "cofactor exposure"
  Annotations: oio:hasExactSynonym "cofactor exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:23357) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some cofactor)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to cofactors"
 
 Class: CHEBI:23366 ## compatible osmolytes
 ## {"stressor": "CHEBI:23366"}
@@ -245,6 +291,9 @@ Class: ECTO:0000507
  Annotations: oio:hasExactSynonym "cytokinin exposure"
  Annotations: oio:hasExactSynonym "cytokinin exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:23530) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some cytokinin)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to cytokinins"
 
 Class: CHEBI:23582 ## defoliant
 ## {"stressor": "CHEBI:23582"}
@@ -254,6 +303,11 @@ Class: ECTO:0000508
  Annotations: oio:hasExactSynonym "defoliant exposure"
  Annotations: oio:hasExactSynonym "defoliant exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:23582) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some defoliant)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to defoliants"
+ Annotations: oio:hasRelatedSynonym "exposure to Defoliationsmittel"
+ Annotations: oio:hasRelatedSynonym "exposure to Entlaubungsmittel"
 
 Class: CHEBI:23888 ## drug
 ## {"stressor": "CHEBI:23888"}
@@ -263,6 +317,10 @@ Class: ECTO:0000509
  Annotations: oio:hasExactSynonym "drug exposure"
  Annotations: oio:hasExactSynonym "drug exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:23888) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some drug)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to drugs"
+ Annotations: oio:hasRelatedSynonym "exposure to medicine"
 
 Class: CHEBI:24002 ## ethylene releasers
 ## {"stressor": "CHEBI:24002"}
@@ -299,6 +357,9 @@ Class: ECTO:0000513
  Annotations: oio:hasExactSynonym "fungicide exposure"
  Annotations: oio:hasExactSynonym "fungicide exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:24127) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some fungicide)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to fungicides"
 
 Class: CHEBI:24319 ## EC 6.3.1.2 (glutamate--ammonia ligase) inhibitor
 ## {"stressor": "CHEBI:24319"}
@@ -317,6 +378,13 @@ Class: ECTO:0000515
  Annotations: oio:hasExactSynonym "herbicide exposure"
  Annotations: oio:hasExactSynonym "herbicide exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:24527) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some herbicide)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to herbicides"
+ Annotations: oio:hasRelatedSynonym "exposure to Herbizid"
+ Annotations: oio:hasRelatedSynonym "exposure to Unkrautbekaempfungsmittel"
+ Annotations: oio:hasRelatedSynonym "exposure to Unkrautvertilgungsmittel"
+ Annotations: oio:hasRelatedSynonym "exposure to Wildkrautbekaempfungsmittel"
 
 Class: CHEBI:24621 ## hormone
 ## {"stressor": "CHEBI:24621"}
@@ -326,6 +394,10 @@ Class: ECTO:0000516
  Annotations: oio:hasExactSynonym "hormone exposure"
  Annotations: oio:hasExactSynonym "hormone exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:24621) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some hormone)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to endocrine"
+ Annotations: oio:hasRelatedSynonym "exposure to hormones"
 
 Class: CHEBI:24852 ## insecticide
 ## {"stressor": "CHEBI:24852"}
@@ -335,6 +407,9 @@ Class: ECTO:0000517
  Annotations: oio:hasExactSynonym "insecticide exposure"
  Annotations: oio:hasExactSynonym "insecticide exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:24852) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some insecticide)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to insecticides"
 
 Class: CHEBI:24853 ## intercalator
 ## {"stressor": "CHEBI:24853"}
@@ -344,6 +419,9 @@ Class: ECTO:0000518
  Annotations: oio:hasExactSynonym "intercalator exposure"
  Annotations: oio:hasExactSynonym "intercalator exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:24853) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some intercalator)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to intercalators"
 
 Class: CHEBI:24869 ## ionophore
 ## {"stressor": "CHEBI:24869"}
@@ -353,6 +431,9 @@ Class: ECTO:0000519
  Annotations: oio:hasExactSynonym "ionophore exposure"
  Annotations: oio:hasExactSynonym "ionophore exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:24869) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some ionophore)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to ionophores"
 
 Class: CHEBI:24937 ## jasmonates
 ## {"stressor": "CHEBI:24937"}
@@ -371,6 +452,9 @@ Class: ECTO:0000521
  Annotations: oio:hasExactSynonym "metabolite exposure"
  Annotations: oio:hasExactSynonym "metabolite exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:25212) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some metabolite)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to metabolites"
 
 Class: CHEBI:25355 ## mitochondrial respiratory-chain inhibitor
 ## {"stressor": "CHEBI:25355"}
@@ -389,6 +473,13 @@ Class: ECTO:0000523
  Annotations: oio:hasExactSynonym "mutagen exposure"
  Annotations: oio:hasExactSynonym "mutagen exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:25435) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some mutagen)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to mutagene"
+ Annotations: oio:hasRelatedSynonym "exposure to mutagenes"
+ Annotations: oio:hasRelatedSynonym "exposure to mutageno"
+ Annotations: oio:hasRelatedSynonym "exposure to mutagenos"
+ Annotations: oio:hasRelatedSynonym "exposure to mutagens"
 
 Class: CHEBI:25442 ## mycotoxin
 ## {"stressor": "CHEBI:25442"}
@@ -398,6 +489,9 @@ Class: ECTO:0000524
  Annotations: oio:hasExactSynonym "mycotoxin exposure"
  Annotations: oio:hasExactSynonym "mycotoxin exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:25442) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some mycotoxin)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to mycotoxins"
 
 Class: CHEBI:25491 ## nematicide
 ## {"stressor": "CHEBI:25491"}
@@ -407,6 +501,10 @@ Class: ECTO:0000525
  Annotations: oio:hasExactSynonym "nematicide exposure"
  Annotations: oio:hasExactSynonym "nematicide exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:25491) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some nematicide)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to nematicides"
+ Annotations: oio:hasRelatedSynonym "exposure to nematocide"
 
 Class: CHEBI:25512 ## neurotransmitter
 ## {"stressor": "CHEBI:25512"}
@@ -416,6 +514,9 @@ Class: ECTO:0000526
  Annotations: oio:hasExactSynonym "neurotransmitter exposure"
  Annotations: oio:hasExactSynonym "neurotransmitter exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:25512) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some neurotransmitter)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to neurotransmitters"
 
 Class: CHEBI:25540 ## neonicotinoid insectide
 ## {"stressor": "CHEBI:25540"}
@@ -425,6 +526,9 @@ Class: ECTO:0000527
  Annotations: oio:hasExactSynonym "neonicotinoid insectide exposure"
  Annotations: oio:hasExactSynonym "neonicotinoid insectide exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:25540) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some neonicotinoid insectide)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to neonicotinamides"
 
 Class: CHEBI:25605 ## nucleoside antibiotic
 ## {"stressor": "CHEBI:25605"}
@@ -443,6 +547,9 @@ Class: ECTO:0000529
  Annotations: oio:hasExactSynonym "osmolyte exposure"
  Annotations: oio:hasExactSynonym "osmolyte exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:25728) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some osmolyte)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to osmolytes"
 
 Class: CHEBI:25944 ## pesticide
 ## {"stressor": "CHEBI:25944"}
@@ -452,6 +559,11 @@ Class: ECTO:0000530
  Annotations: oio:hasExactSynonym "pesticide exposure"
  Annotations: oio:hasExactSynonym "pesticide exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:25944) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some pesticide)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to pesticides"
+ Annotations: oio:hasRelatedSynonym "exposure to Pestizid"
+ Annotations: oio:hasRelatedSynonym "exposure to Pestizide"
 
 Class: CHEBI:26013 ## pheromone
 ## {"stressor": "CHEBI:26013"}
@@ -461,6 +573,11 @@ Class: ECTO:0000531
  Annotations: oio:hasExactSynonym "pheromone exposure"
  Annotations: oio:hasExactSynonym "pheromone exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:26013) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some pheromone)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to ectohormone"
+ Annotations: oio:hasRelatedSynonym "exposure to feromone"
+ Annotations: oio:hasRelatedSynonym "exposure to pheromones"
 
 Class: CHEBI:26115 ## phytoalexin
 ## {"stressor": "CHEBI:26115"}
@@ -470,6 +587,9 @@ Class: ECTO:0000532
  Annotations: oio:hasExactSynonym "phytoalexin exposure"
  Annotations: oio:hasExactSynonym "phytoalexin exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:26115) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some phytoalexin)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to phytoalexins"
 
 Class: CHEBI:26130 ## biological pigment
 ## {"stressor": "CHEBI:26130"}
@@ -479,6 +599,9 @@ Class: ECTO:0000533
  Annotations: oio:hasExactSynonym "biological pigment exposure"
  Annotations: oio:hasExactSynonym "biological pigment exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:26130) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some biological pigment)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to pigments"
 
 Class: CHEBI:26348 ## prosthetic group
 ## {"stressor": "CHEBI:26348"}
@@ -497,6 +620,14 @@ Class: ECTO:0000535
  Annotations: oio:hasExactSynonym "siderophore exposure"
  Annotations: oio:hasExactSynonym "siderophore exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:26672) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some siderophore)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to ferrioxamine"
+ Annotations: oio:hasRelatedSynonym "exposure to ferrioxamines"
+ Annotations: oio:hasRelatedSynonym "exposure to ironophore"
+ Annotations: oio:hasRelatedSynonym "exposure to siderochrome"
+ Annotations: oio:hasRelatedSynonym "exposure to siderochromes"
+ Annotations: oio:hasRelatedSynonym "exposure to siderophores"
 
 Class: CHEBI:26841 ## synthetic auxin
 ## {"stressor": "CHEBI:26841"}
@@ -515,6 +646,9 @@ Class: ECTO:0000537
  Annotations: oio:hasExactSynonym "toxin exposure"
  Annotations: oio:hasExactSynonym "toxin exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:27026) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some toxin)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to toxins"
 
 Class: CHEBI:27027 ## micronutrient
 ## {"stressor": "CHEBI:27027"}
@@ -524,6 +658,9 @@ Class: ECTO:0000538
  Annotations: oio:hasExactSynonym "micronutrient exposure"
  Annotations: oio:hasExactSynonym "micronutrient exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:27027) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some micronutrient)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to micronutrients"
 
 Class: CHEBI:27311 ## volatile oil component
 ## {"stressor": "CHEBI:27311"}
@@ -551,6 +688,9 @@ Class: ECTO:0000541
  Annotations: oio:hasExactSynonym "detergent exposure"
  Annotations: oio:hasExactSynonym "detergent exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:27780) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some detergent)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to Detergents"
 
 Class: CHEBI:33229 ## vitamin
 ## {"stressor": "CHEBI:33229"}
@@ -560,6 +700,15 @@ Class: ECTO:0000542
  Annotations: oio:hasExactSynonym "vitamin exposure"
  Annotations: oio:hasExactSynonym "vitamin exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:33229) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some vitamin)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to Vitamin"
+ Annotations: oio:hasRelatedSynonym "exposure to vitamina"
+ Annotations: oio:hasRelatedSynonym "exposure to vitaminas"
+ Annotations: oio:hasRelatedSynonym "exposure to vitamine"
+ Annotations: oio:hasRelatedSynonym "exposure to vitamines"
+ Annotations: oio:hasRelatedSynonym "exposure to vitamins"
+ Annotations: oio:hasRelatedSynonym "exposure to vitaminum"
 
 Class: CHEBI:33280 ## molecular messenger
 ## {"stressor": "CHEBI:33280"}
@@ -578,6 +727,17 @@ Class: ECTO:0000544
  Annotations: oio:hasExactSynonym "antimicrobial agent exposure"
  Annotations: oio:hasExactSynonym "antimicrobial agent exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:33281) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some antimicrobial agent)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to antibiotic"
+ Annotations: oio:hasRelatedSynonym "exposure to antibiotics"
+ Annotations: oio:hasRelatedSynonym "exposure to Antibiotika"
+ Annotations: oio:hasRelatedSynonym "exposure to Antibiotikum"
+ Annotations: oio:hasRelatedSynonym "exposure to antibiotique"
+ Annotations: oio:hasRelatedSynonym "exposure to antimicrobial"
+ Annotations: oio:hasRelatedSynonym "exposure to antimicrobials"
+ Annotations: oio:hasRelatedSynonym "exposure to microbicide"
+ Annotations: oio:hasRelatedSynonym "exposure to microbicides"
 
 Class: CHEBI:33282 ## antibacterial agent
 ## {"stressor": "CHEBI:33282"}
@@ -587,6 +747,11 @@ Class: ECTO:0000545
  Annotations: oio:hasExactSynonym "antibacterial agent exposure"
  Annotations: oio:hasExactSynonym "antibacterial agent exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:33282) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some antibacterial agent)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to antibacterials"
+ Annotations: oio:hasRelatedSynonym "exposure to bactericide"
+ Annotations: oio:hasRelatedSynonym "exposure to bactericides"
 
 Class: CHEBI:33284 ## nutrient
 ## {"stressor": "CHEBI:33284"}
@@ -596,6 +761,9 @@ Class: ECTO:0000546
  Annotations: oio:hasExactSynonym "nutrient exposure"
  Annotations: oio:hasExactSynonym "nutrient exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:33284) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some nutrient)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to nutrients"
 
 Class: CHEBI:33286 ## agrochemical
 ## {"stressor": "CHEBI:33286"}
@@ -605,6 +773,11 @@ Class: ECTO:0000547
  Annotations: oio:hasExactSynonym "agrochemical exposure"
  Annotations: oio:hasExactSynonym "agrochemical exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:33286) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some agrochemical)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to agrichemical"
+ Annotations: oio:hasRelatedSynonym "exposure to agrichemicals"
+ Annotations: oio:hasRelatedSynonym "exposure to agrochemicals"
 
 Class: CHEBI:33288 ## rodenticide
 ## {"stressor": "CHEBI:33288"}
@@ -614,6 +787,9 @@ Class: ECTO:0000548
  Annotations: oio:hasExactSynonym "rodenticide exposure"
  Annotations: oio:hasExactSynonym "rodenticide exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:33288) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some rodenticide)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to rodenticides"
 
 Class: CHEBI:33289 ## avicide
 ## {"stressor": "CHEBI:33289"}
@@ -623,6 +799,9 @@ Class: ECTO:0000549
  Annotations: oio:hasExactSynonym "avicide exposure"
  Annotations: oio:hasExactSynonym "avicide exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:33289) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some avicide)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to avicides"
 
 Class: CHEBI:33292 ## fuel
 ## {"stressor": "CHEBI:33292"}
@@ -650,6 +829,11 @@ Class: ECTO:0000552
  Annotations: oio:hasExactSynonym "reagent exposure"
  Annotations: oio:hasExactSynonym "reagent exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:33893) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some reagent)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to reactif"
+ Annotations: oio:hasRelatedSynonym "exposure to reactivo"
+ Annotations: oio:hasRelatedSynonym "exposure to reagents"
 
 Class: CHEBI:33937 ## macronutrient
 ## {"stressor": "CHEBI:33937"}
@@ -659,6 +843,9 @@ Class: ECTO:0000553
  Annotations: oio:hasExactSynonym "macronutrient exposure"
  Annotations: oio:hasExactSynonym "macronutrient exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:33937) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some macronutrient)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to macronutrients"
 
 Class: CHEBI:35204 ## tracer
 ## {"stressor": "CHEBI:35204"}
@@ -686,6 +873,9 @@ Class: ECTO:0000556
  Annotations: oio:hasExactSynonym "antimetabolite exposure"
  Annotations: oio:hasExactSynonym "antimetabolite exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:35221) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some antimetabolite)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to antimetabolites"
 
 Class: CHEBI:35222 ## inhibitor
 ## {"stressor": "CHEBI:35222"}
@@ -695,6 +885,11 @@ Class: ECTO:0000557
  Annotations: oio:hasExactSynonym "inhibitor exposure"
  Annotations: oio:hasExactSynonym "inhibitor exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:35222) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some inhibitor)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to inhibidor"
+ Annotations: oio:hasRelatedSynonym "exposure to inhibiteur"
+ Annotations: oio:hasRelatedSynonym "exposure to inhibitors"
 
 Class: CHEBI:35223 ## catalyst
 ## {"stressor": "CHEBI:35223"}
@@ -704,6 +899,11 @@ Class: ECTO:0000558
  Annotations: oio:hasExactSynonym "catalyst exposure"
  Annotations: oio:hasExactSynonym "catalyst exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:35223) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some catalyst)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to catalizador"
+ Annotations: oio:hasRelatedSynonym "exposure to catalyseur"
+ Annotations: oio:hasRelatedSynonym "exposure to Katalysator"
 
 Class: CHEBI:35224 ## effector
 ## {"stressor": "CHEBI:35224"}
@@ -731,6 +931,10 @@ Class: ECTO:0000561
  Annotations: oio:hasExactSynonym "central nervous system stimulant exposure"
  Annotations: oio:hasExactSynonym "central nervous system stimulant exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:35337) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some central nervous system stimulant)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to analeptic"
+ Annotations: oio:hasRelatedSynonym "exposure to analeptics"
 
 Class: CHEBI:35441 ## antiinfective agent
 ## {"stressor": "CHEBI:35441"}
@@ -749,6 +953,10 @@ Class: ECTO:0000563
  Annotations: oio:hasExactSynonym "antiparasitic agent exposure"
  Annotations: oio:hasExactSynonym "antiparasitic agent exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:35442) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some antiparasitic agent)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to antiparasitics"
+ Annotations: oio:hasRelatedSynonym "exposure to parasiticides"
 
 Class: CHEBI:35443 ## anthelminthic drug
 ## {"stressor": "CHEBI:35443"}
@@ -758,6 +966,14 @@ Class: ECTO:0000564
  Annotations: oio:hasExactSynonym "anthelminthic drug exposure"
  Annotations: oio:hasExactSynonym "anthelminthic drug exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:35443) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some anthelminthic drug)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to anthelminthic"
+ Annotations: oio:hasRelatedSynonym "exposure to anthelminthics"
+ Annotations: oio:hasRelatedSynonym "exposure to anthelmintic"
+ Annotations: oio:hasRelatedSynonym "exposure to anthelmintics"
+ Annotations: oio:hasRelatedSynonym "exposure to antihelminth"
+ Annotations: oio:hasRelatedSynonym "exposure to antihelmintico"
 
 Class: CHEBI:35444 ## antinematodal drug
 ## {"stressor": "CHEBI:35444"}
@@ -767,6 +983,9 @@ Class: ECTO:0000565
  Annotations: oio:hasExactSynonym "antinematodal drug exposure"
  Annotations: oio:hasExactSynonym "antinematodal drug exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:35444) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some antinematodal drug)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to antinematodals"
 
 Class: CHEBI:35457 ## EC 3.4.15.1 (peptidyl-dipeptidase A) inhibitor
 ## {"stressor": "CHEBI:35457"}
@@ -785,6 +1004,11 @@ Class: ECTO:0000567
  Annotations: oio:hasExactSynonym "antidepressant exposure"
  Annotations: oio:hasExactSynonym "antidepressant exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:35469) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some antidepressant)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to antidepressants"
+ Annotations: oio:hasRelatedSynonym "exposure to thymoanaleptics"
+ Annotations: oio:hasRelatedSynonym "exposure to thymoleptics"
 
 Class: CHEBI:35471 ## psychotropic drug
 ## {"stressor": "CHEBI:35471"}
@@ -794,6 +1018,9 @@ Class: ECTO:0000568
  Annotations: oio:hasExactSynonym "psychotropic drug exposure"
  Annotations: oio:hasExactSynonym "psychotropic drug exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:35471) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some psychotropic drug)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to psychopharmaceuticals"
 
 Class: CHEBI:35472 ## anti-inflammatory drug
 ## {"stressor": "CHEBI:35472"}
@@ -812,6 +1039,9 @@ Class: ECTO:0000570
  Annotations: oio:hasExactSynonym "anxiolytic drug exposure"
  Annotations: oio:hasExactSynonym "anxiolytic drug exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:35474) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some anxiolytic drug)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to anxiolytics"
 
 Class: CHEBI:35475 ## non-steroidal anti-inflammatory drug
 ## {"stressor": "CHEBI:35475"}
@@ -821,6 +1051,9 @@ Class: ECTO:0000571
  Annotations: oio:hasExactSynonym "non-steroidal anti-inflammatory drug exposure"
  Annotations: oio:hasExactSynonym "non-steroidal anti-inflammatory drug exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:35475) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some non-steroidal anti-inflammatory drug)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to NSAIDs"
 
 Class: CHEBI:35476 ## antipsychotic agent
 ## {"stressor": "CHEBI:35476"}
@@ -830,6 +1063,15 @@ Class: ECTO:0000572
  Annotations: oio:hasExactSynonym "antipsychotic agent exposure"
  Annotations: oio:hasExactSynonym "antipsychotic agent exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:35476) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some antipsychotic agent)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to antipsychotics"
+ Annotations: oio:hasRelatedSynonym "exposure to antipsychotiques"
+ Annotations: oio:hasRelatedSynonym "exposure to neuroleptic"
+ Annotations: oio:hasRelatedSynonym "exposure to neuroleptics"
+ Annotations: oio:hasRelatedSynonym "exposure to Neuroleptikum"
+ Annotations: oio:hasRelatedSynonym "exposure to neuroleptique"
+ Annotations: oio:hasRelatedSynonym "exposure to neuroleptiques"
 
 Class: CHEBI:35480 ## analgesic
 ## {"stressor": "CHEBI:35480"}
@@ -857,6 +1099,10 @@ Class: ECTO:0000575
  Annotations: oio:hasExactSynonym "opioid analgesic exposure"
  Annotations: oio:hasExactSynonym "opioid analgesic exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:35482) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some opioid analgesic)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to narcotic"
+ Annotations: oio:hasRelatedSynonym "exposure to narcotics"
 
 Class: CHEBI:35487 ## EC 1.2.1.3 [aldehyde dehydrogenase (NAD(+))] inhibitor
 ## {"stressor": "CHEBI:35487"}
@@ -884,6 +1130,9 @@ Class: ECTO:0000578
  Annotations: oio:hasExactSynonym "antipyretic exposure"
  Annotations: oio:hasExactSynonym "antipyretic exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:35493) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some antipyretic)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to anti-pyretic"
 
 Class: CHEBI:35498 ## diuretic
 ## {"stressor": "CHEBI:35498"}
@@ -893,6 +1142,9 @@ Class: ECTO:0000579
  Annotations: oio:hasExactSynonym "diuretic exposure"
  Annotations: oio:hasExactSynonym "diuretic exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:35498) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some diuretic)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to diuretics"
 
 Class: CHEBI:35499 ## hallucinogen
 ## {"stressor": "CHEBI:35499"}
@@ -902,6 +1154,10 @@ Class: ECTO:0000580
  Annotations: oio:hasExactSynonym "hallucinogen exposure"
  Annotations: oio:hasExactSynonym "hallucinogen exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:35499) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some hallucinogen)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to hallucinogens"
+ Annotations: oio:hasRelatedSynonym "exposure to psychedelics"
 
 Class: CHEBI:35522 ## beta-adrenergic agonist
 ## {"stressor": "CHEBI:35522"}
@@ -920,6 +1176,9 @@ Class: ECTO:0000582
  Annotations: oio:hasExactSynonym "bronchodilator agent exposure"
  Annotations: oio:hasExactSynonym "bronchodilator agent exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:35523) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some bronchodilator agent)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to bronchodilator"
 
 Class: CHEBI:35524 ## sympathomimetic agent
 ## {"stressor": "CHEBI:35524"}
@@ -929,6 +1188,10 @@ Class: ECTO:0000583
  Annotations: oio:hasExactSynonym "sympathomimetic agent exposure"
  Annotations: oio:hasExactSynonym "sympathomimetic agent exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:35524) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some sympathomimetic agent)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to sympathomimetic"
+ Annotations: oio:hasRelatedSynonym "exposure to sympathomimetics"
 
 Class: CHEBI:35526 ## hypoglycemic agent
 ## {"stressor": "CHEBI:35526"}
@@ -938,6 +1201,11 @@ Class: ECTO:0000584
  Annotations: oio:hasExactSynonym "hypoglycemic agent exposure"
  Annotations: oio:hasExactSynonym "hypoglycemic agent exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:35526) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some hypoglycemic agent)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to antidiabetic"
+ Annotations: oio:hasRelatedSynonym "exposure to antihyperglycemic"
+ Annotations: oio:hasRelatedSynonym "exposure to antihyperglycemics"
 
 Class: CHEBI:35530 ## beta-adrenergic antagonist
 ## {"stressor": "CHEBI:35530"}
@@ -974,6 +1242,10 @@ Class: ECTO:0000588
  Annotations: oio:hasExactSynonym "antineoplastic agent exposure"
  Annotations: oio:hasExactSynonym "antineoplastic agent exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:35610) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some antineoplastic agent)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to antineoplastic"
+ Annotations: oio:hasRelatedSynonym "exposure to cytostatic"
 
 Class: CHEBI:35617 ## flavouring agent
 ## {"stressor": "CHEBI:35617"}
@@ -992,6 +1264,9 @@ Class: ECTO:0000590
  Annotations: oio:hasExactSynonym "vasodilator agent exposure"
  Annotations: oio:hasExactSynonym "vasodilator agent exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:35620) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some vasodilator agent)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to vasodilator"
 
 Class: CHEBI:35623 ## anticonvulsant
 ## {"stressor": "CHEBI:35623"}
@@ -1001,6 +1276,19 @@ Class: ECTO:0000591
  Annotations: oio:hasExactSynonym "anticonvulsant exposure"
  Annotations: oio:hasExactSynonym "anticonvulsant exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:35623) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some anticonvulsant)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to anti-convulsant"
+ Annotations: oio:hasRelatedSynonym "exposure to anti-convulsants"
+ Annotations: oio:hasRelatedSynonym "exposure to anticonvulsants"
+ Annotations: oio:hasRelatedSynonym "exposure to antiepileptic"
+ Annotations: oio:hasRelatedSynonym "exposure to antiepileptics"
+ Annotations: oio:hasRelatedSynonym "exposure to Antiepileptika"
+ Annotations: oio:hasRelatedSynonym "exposure to Antiepileptikum"
+ Annotations: oio:hasRelatedSynonym "exposure to antiepileptique"
+ Annotations: oio:hasRelatedSynonym "exposure to antiepileptiques"
+ Annotations: oio:hasRelatedSynonym "exposure to Antikonvulsiva"
+ Annotations: oio:hasRelatedSynonym "exposure to Antikonvulsivum"
 
 Class: CHEBI:35625 ## EC 3.5.2.6 (beta-lactamase) inhibitor
 ## {"stressor": "CHEBI:35625"}
@@ -1028,6 +1316,9 @@ Class: ECTO:0000594
  Annotations: oio:hasExactSynonym "hydroxymethylglutaryl-CoA reductase inhibitor exposure"
  Annotations: oio:hasExactSynonym "hydroxymethylglutaryl-CoA reductase inhibitor exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:35664) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some hydroxymethylglutaryl-CoA reductase inhibitor)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to EC 1.1.1.34/EC 1.1.1.88 (hydroxymethylglutaryl-CoA reductase) inhibitor"
 
 Class: CHEBI:35674 ## antihypertensive agent
 ## {"stressor": "CHEBI:35674"}
@@ -1037,6 +1328,9 @@ Class: ECTO:0000595
  Annotations: oio:hasExactSynonym "antihypertensive agent exposure"
  Annotations: oio:hasExactSynonym "antihypertensive agent exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:35674) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some antihypertensive agent)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to antihypertensive"
 
 Class: CHEBI:35679 ## antilipemic drug
 ## {"stressor": "CHEBI:35679"}
@@ -1046,6 +1340,14 @@ Class: ECTO:0000596
  Annotations: oio:hasExactSynonym "antilipemic drug exposure"
  Annotations: oio:hasExactSynonym "antilipemic drug exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:35679) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some antilipemic drug)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to antihyperlipemic"
+ Annotations: oio:hasRelatedSynonym "exposure to antihyperlipemics"
+ Annotations: oio:hasRelatedSynonym "exposure to antihyperlipidemic"
+ Annotations: oio:hasRelatedSynonym "exposure to antihyperlipidemics"
+ Annotations: oio:hasRelatedSynonym "exposure to antilipemic"
+ Annotations: oio:hasRelatedSynonym "exposure to antilipemics"
 
 Class: CHEBI:35703 ## xenobiotic
 ## {"stressor": "CHEBI:35703"}
@@ -1055,6 +1357,10 @@ Class: ECTO:0000597
  Annotations: oio:hasExactSynonym "xenobiotic exposure"
  Annotations: oio:hasExactSynonym "xenobiotic exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:35703) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some xenobiotic)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to Xenobiotic"
+ Annotations: oio:hasRelatedSynonym "exposure to xenobiotics"
 
 Class: CHEBI:35705 ## immunosuppressive agent
 ## {"stressor": "CHEBI:35705"}
@@ -1064,6 +1370,10 @@ Class: ECTO:0000598
  Annotations: oio:hasExactSynonym "immunosuppressive agent exposure"
  Annotations: oio:hasExactSynonym "immunosuppressive agent exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:35705) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some immunosuppressive agent)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to immunosuppressant"
+ Annotations: oio:hasRelatedSynonym "exposure to inmunosupresor"
 
 Class: CHEBI:35717 ## sedative
 ## {"stressor": "CHEBI:35717"}
@@ -1073,6 +1383,10 @@ Class: ECTO:0000599
  Annotations: oio:hasExactSynonym "sedative exposure"
  Annotations: oio:hasExactSynonym "sedative exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:35717) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some sedative)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to hypnotics"
+ Annotations: oio:hasRelatedSynonym "exposure to sedatives"
 
 Class: CHEBI:35718 ## antifungal agent
 ## {"stressor": "CHEBI:35718"}
@@ -1082,6 +1396,10 @@ Class: ECTO:0000600
  Annotations: oio:hasExactSynonym "antifungal agent exposure"
  Annotations: oio:hasExactSynonym "antifungal agent exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:35718) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some antifungal agent)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to antifungal"
+ Annotations: oio:hasRelatedSynonym "exposure to antifungals"
 
 Class: CHEBI:35818 ## coccidiostat
 ## {"stressor": "CHEBI:35818"}
@@ -1091,6 +1409,9 @@ Class: ECTO:0000601
  Annotations: oio:hasExactSynonym "coccidiostat exposure"
  Annotations: oio:hasExactSynonym "coccidiostat exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:35818) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some coccidiostat)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to coccidiostats"
 
 Class: CHEBI:35820 ## antiprotozoal drug
 ## {"stressor": "CHEBI:35820"}
@@ -1109,6 +1430,11 @@ Class: ECTO:0000603
  Annotations: oio:hasExactSynonym "anticholesteremic drug exposure"
  Annotations: oio:hasExactSynonym "anticholesteremic drug exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:35821) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some anticholesteremic drug)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to anticholesteremic"
+ Annotations: oio:hasRelatedSynonym "exposure to antihypercholesterolemic"
+ Annotations: oio:hasRelatedSynonym "exposure to antihypercholesterolemics"
 
 Class: CHEBI:35842 ## antirheumatic drug
 ## {"stressor": "CHEBI:35842"}
@@ -1172,6 +1498,9 @@ Class: ECTO:0000610
  Annotations: oio:hasExactSynonym "local anaesthetic exposure"
  Annotations: oio:hasExactSynonym "local anaesthetic exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:36333) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some local anaesthetic)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to Lokalanaesthetikum"
 
 Class: CHEBI:36335 ## trypanocidal drug
 ## {"stressor": "CHEBI:36335"}
@@ -1181,6 +1510,9 @@ Class: ECTO:0000611
  Annotations: oio:hasExactSynonym "trypanocidal drug exposure"
  Annotations: oio:hasExactSynonym "trypanocidal drug exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:36335) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some trypanocidal drug)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to trypanocide"
 
 Class: CHEBI:37153 ## EC 3.1.3.16 (phosphoprotein phosphatase) inhibitor
 ## {"stressor": "CHEBI:37153"}
@@ -1226,6 +1558,10 @@ Class: ECTO:0000616
  Annotations: oio:hasExactSynonym "EC 3.1.1.8 (cholinesterase) inhibitor exposure"
  Annotations: oio:hasExactSynonym "EC 3.1.1.8 (cholinesterase) inhibitor exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:37733) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some EC 3.1.1.8 (cholinesterase) inhibitor)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to anticholinesterase"
+ Annotations: oio:hasRelatedSynonym "exposure to anticholinesterases"
 
 Class: CHEBI:37848 ## plant hormone
 ## {"stressor": "CHEBI:37848"}
@@ -1235,6 +1571,10 @@ Class: ECTO:0000617
  Annotations: oio:hasExactSynonym "plant hormone exposure"
  Annotations: oio:hasExactSynonym "plant hormone exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:37848) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some plant hormone)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to phytohormone"
+ Annotations: oio:hasRelatedSynonym "exposure to phytohormones"
 
 Class: CHEBI:37887 ## adrenergic antagonist
 ## {"stressor": "CHEBI:37887"}
@@ -1280,6 +1620,12 @@ Class: ECTO:0000622
  Annotations: oio:hasExactSynonym "histamine antagonist exposure"
  Annotations: oio:hasExactSynonym "histamine antagonist exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:37956) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some histamine antagonist)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to antihistamine"
+ Annotations: oio:hasRelatedSynonym "exposure to antihistamines"
+ Annotations: oio:hasRelatedSynonym "exposure to antihistaminico"
+ Annotations: oio:hasRelatedSynonym "exposure to antihistaminics"
 
 Class: CHEBI:37958 ## dye
 ## {"stressor": "CHEBI:37958"}
@@ -1289,6 +1635,15 @@ Class: ECTO:0000623
  Annotations: oio:hasExactSynonym "dye exposure"
  Annotations: oio:hasExactSynonym "dye exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:37958) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some dye)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to colorante"
+ Annotations: oio:hasRelatedSynonym "exposure to colorantes"
+ Annotations: oio:hasRelatedSynonym "exposure to dyes"
+ Annotations: oio:hasRelatedSynonym "exposure to Farbstoff"
+ Annotations: oio:hasRelatedSynonym "exposure to Farbstoffe"
+ Annotations: oio:hasRelatedSynonym "exposure to teinture"
+ Annotations: oio:hasRelatedSynonym "exposure to teintures"
 
 Class: CHEBI:37962 ## adrenergic agent
 ## {"stressor": "CHEBI:37962"}
@@ -1298,6 +1653,9 @@ Class: ECTO:0000624
  Annotations: oio:hasExactSynonym "adrenergic agent exposure"
  Annotations: oio:hasExactSynonym "adrenergic agent exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:37962) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some adrenergic agent)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to adrenergics"
 
 Class: CHEBI:38060 ## triazine insecticide
 ## {"stressor": "CHEBI:38060"}
@@ -1316,6 +1674,9 @@ Class: ECTO:0000626
  Annotations: oio:hasExactSynonym "antimalarial exposure"
  Annotations: oio:hasExactSynonym "antimalarial exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:38068) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some antimalarial)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to antimalarials"
 
 Class: CHEBI:38070 ## anti-arrhythmia drug
 ## {"stressor": "CHEBI:38070"}
@@ -1343,6 +1704,10 @@ Class: ECTO:0000629
  Annotations: oio:hasExactSynonym "phytosiderophore exposure"
  Annotations: oio:hasExactSynonym "phytosiderophore exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:38155) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some phytosiderophore)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to Phytosiderophor"
+ Annotations: oio:hasRelatedSynonym "exposure to phytosiderophores"
 
 Class: CHEBI:38157 ## iron chelator
 ## {"stressor": "CHEBI:38157"}
@@ -1361,6 +1726,10 @@ Class: ECTO:0000631
  Annotations: oio:hasExactSynonym "chelator exposure"
  Annotations: oio:hasExactSynonym "chelator exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:38161) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some chelator)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to chelators"
+ Annotations: oio:hasRelatedSynonym "exposure to complexon"
 
 Class: CHEBI:38215 ## calcium channel blocker
 ## {"stressor": "CHEBI:38215"}
@@ -1379,6 +1748,9 @@ Class: ECTO:0000633
  Annotations: oio:hasExactSynonym "phytotoxin exposure"
  Annotations: oio:hasExactSynonym "phytotoxin exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:38231) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some phytotoxin)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to phytotoxins"
 
 Class: CHEBI:38325 ## muscarinic agonist
 ## {"stressor": "CHEBI:38325"}
@@ -1397,6 +1769,9 @@ Class: ECTO:0000635
  Annotations: oio:hasExactSynonym "EC 3.1.1.7 (acetylcholinesterase) inhibitor exposure"
  Annotations: oio:hasExactSynonym "EC 3.1.1.7 (acetylcholinesterase) inhibitor exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:38462) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some EC 3.1.1.7 (acetylcholinesterase) inhibitor)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to AChEI"
 
 Class: CHEBI:38498 ## mitochondrial NADH:ubiquinone reductase inhibitor
 ## {"stressor": "CHEBI:38498"}
@@ -1433,6 +1808,10 @@ Class: ECTO:0000639
  Annotations: oio:hasExactSynonym "tyrosine kinase inhibitor exposure"
  Annotations: oio:hasExactSynonym "tyrosine kinase inhibitor exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:38637) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some tyrosine kinase inhibitor)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to tyrphostin"
+ Annotations: oio:hasRelatedSynonym "exposure to tyrphostins"
 
 Class: CHEBI:38706 ## pediculicide
 ## {"stressor": "CHEBI:38706"}
@@ -1442,6 +1821,9 @@ Class: ECTO:0000640
  Annotations: oio:hasExactSynonym "pediculicide exposure"
  Annotations: oio:hasExactSynonym "pediculicide exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:38706) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some pediculicide)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to pediculicides"
 
 Class: CHEBI:38807 ## calcium channel agonist
 ## {"stressor": "CHEBI:38807"}
@@ -1478,6 +1860,12 @@ Class: ECTO:0000644
  Annotations: oio:hasExactSynonym "anaesthetic exposure"
  Annotations: oio:hasExactSynonym "anaesthetic exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:38867) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some anaesthetic)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to anaesthetics"
+ Annotations: oio:hasRelatedSynonym "exposure to Anaesthetika"
+ Annotations: oio:hasRelatedSynonym "exposure to Anaesthetikum"
+ Annotations: oio:hasRelatedSynonym "exposure to anesthetics"
 
 Class: CHEBI:38869 ## general anaesthetic
 ## {"stressor": "CHEBI:38869"}
@@ -1487,6 +1875,10 @@ Class: ECTO:0000645
  Annotations: oio:hasExactSynonym "general anaesthetic exposure"
  Annotations: oio:hasExactSynonym "general anaesthetic exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:38869) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some general anaesthetic)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to Allgemeinanaesthetika"
+ Annotations: oio:hasRelatedSynonym "exposure to Allgemeinanaesthetikum"
 
 Class: CHEBI:38870 ## inhalation anaesthetic
 ## {"stressor": "CHEBI:38870"}
@@ -1496,6 +1888,12 @@ Class: ECTO:0000646
  Annotations: oio:hasExactSynonym "inhalation anaesthetic exposure"
  Annotations: oio:hasExactSynonym "inhalation anaesthetic exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:38870) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some inhalation anaesthetic)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to Inhalationsanaesthetika"
+ Annotations: oio:hasRelatedSynonym "exposure to Inhalationsanaesthetikum"
+ Annotations: oio:hasRelatedSynonym "exposure to Inhalationsnarkotika"
+ Annotations: oio:hasRelatedSynonym "exposure to Inhalationsnarkotikum"
 
 Class: CHEBI:38877 ## intravenous anaesthetic
 ## {"stressor": "CHEBI:38877"}
@@ -1505,6 +1903,10 @@ Class: ECTO:0000647
  Annotations: oio:hasExactSynonym "intravenous anaesthetic exposure"
  Annotations: oio:hasExactSynonym "intravenous anaesthetic exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:38877) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some intravenous anaesthetic)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to i.v.-Anaesthetika"
+ Annotations: oio:hasRelatedSynonym "exposure to i.v.-Anaesthetikum"
 
 Class: CHEBI:38941 ## schistosomicide drug
 ## {"stressor": "CHEBI:38941"}
@@ -1514,6 +1916,10 @@ Class: ECTO:0000648
  Annotations: oio:hasExactSynonym "schistosomicide drug exposure"
  Annotations: oio:hasExactSynonym "schistosomicide drug exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:38941) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some schistosomicide drug)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to antischistosoma"
+ Annotations: oio:hasRelatedSynonym "exposure to schistosomicides"
 
 Class: CHEBI:38999 ## GABA-gated chloride channel antagonist
 ## {"stressor": "CHEBI:38999"}
@@ -1532,6 +1938,9 @@ Class: ECTO:0000650
  Annotations: oio:hasExactSynonym "Bronsted acid exposure"
  Annotations: oio:hasExactSynonym "Bronsted acid exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:39141) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some Bronsted acid)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to Bronsted-Saeure"
 
 Class: CHEBI:39412 ## bridged diphenyl acaricide
 ## {"stressor": "CHEBI:39412"}
@@ -1550,6 +1959,11 @@ Class: ECTO:0000652
  Annotations: oio:hasExactSynonym "solvent exposure"
  Annotations: oio:hasExactSynonym "solvent exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:46787) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some solvent)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to Loesungsmittel"
+ Annotations: oio:hasRelatedSynonym "exposure to solvant"
+ Annotations: oio:hasRelatedSynonym "exposure to solvents"
 
 Class: CHEBI:47868 ## photosensitizing agent
 ## {"stressor": "CHEBI:47868"}
@@ -1586,6 +2000,10 @@ Class: ECTO:0000656
  Annotations: oio:hasExactSynonym "antiseptic drug exposure"
  Annotations: oio:hasExactSynonym "antiseptic drug exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:48218) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some antiseptic drug)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to antiseptic"
+ Annotations: oio:hasRelatedSynonym "exposure to antiseptics"
 
 Class: CHEBI:48219 ## disinfectant
 ## {"stressor": "CHEBI:48219"}
@@ -1595,6 +2013,11 @@ Class: ECTO:0000657
  Annotations: oio:hasExactSynonym "disinfectant exposure"
  Annotations: oio:hasExactSynonym "disinfectant exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:48219) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some disinfectant)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to desinfectant"
+ Annotations: oio:hasRelatedSynonym "exposure to Desinfektionsmittel"
+ Annotations: oio:hasRelatedSynonym "exposure to disinfectants"
 
 Class: CHEBI:48279 ## serotonergic antagonist
 ## {"stressor": "CHEBI:48279"}
@@ -1613,6 +2036,15 @@ Class: ECTO:0000659
  Annotations: oio:hasExactSynonym "fragrance exposure"
  Annotations: oio:hasExactSynonym "fragrance exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:48318) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some fragrance)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to aroma"
+ Annotations: oio:hasRelatedSynonym "exposure to arome"
+ Annotations: oio:hasRelatedSynonym "exposure to essence"
+ Annotations: oio:hasRelatedSynonym "exposure to Parfuem"
+ Annotations: oio:hasRelatedSynonym "exposure to parfum"
+ Annotations: oio:hasRelatedSynonym "exposure to perfume"
+ Annotations: oio:hasRelatedSynonym "exposure to scent"
 
 Class: CHEBI:48354 ## polar solvent
 ## {"stressor": "CHEBI:48354"}
@@ -1730,6 +2162,11 @@ Class: ECTO:0000672
  Annotations: oio:hasExactSynonym "agonist exposure"
  Annotations: oio:hasExactSynonym "agonist exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:48705) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some agonist)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to agonista"
+ Annotations: oio:hasRelatedSynonym "exposure to agoniste"
+ Annotations: oio:hasRelatedSynonym "exposure to agonists"
 
 Class: CHEBI:48706 ## antagonist
 ## {"stressor": "CHEBI:48706"}
@@ -1739,6 +2176,11 @@ Class: ECTO:0000673
  Annotations: oio:hasExactSynonym "antagonist exposure"
  Annotations: oio:hasExactSynonym "antagonist exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:48706) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some antagonist)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to antagonista"
+ Annotations: oio:hasRelatedSynonym "exposure to antagoniste"
+ Annotations: oio:hasRelatedSynonym "exposure to antagonists"
 
 Class: CHEBI:48873 ## cholinergic antagonist
 ## {"stressor": "CHEBI:48873"}
@@ -1748,6 +2190,13 @@ Class: ECTO:0000674
  Annotations: oio:hasExactSynonym "cholinergic antagonist exposure"
  Annotations: oio:hasExactSynonym "cholinergic antagonist exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:48873) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some cholinergic antagonist)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to anticholinergics"
+ Annotations: oio:hasRelatedSynonym "exposure to Anticholinergika"
+ Annotations: oio:hasRelatedSynonym "exposure to Anticholinergikum"
+ Annotations: oio:hasRelatedSynonym "exposure to anticholinergiques"
+ Annotations: oio:hasRelatedSynonym "exposure to anticolinergicos"
 
 Class: CHEBI:48876 ## muscarinic antagonist
 ## {"stressor": "CHEBI:48876"}
@@ -1757,6 +2206,11 @@ Class: ECTO:0000675
  Annotations: oio:hasExactSynonym "muscarinic antagonist exposure"
  Annotations: oio:hasExactSynonym "muscarinic antagonist exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:48876) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some muscarinic antagonist)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to antimuscarinicos"
+ Annotations: oio:hasRelatedSynonym "exposure to Antimuskarinika"
+ Annotations: oio:hasRelatedSynonym "exposure to Antimuskarinikum"
 
 Class: CHEBI:48878 ## nicotinic antagonist
 ## {"stressor": "CHEBI:48878"}
@@ -1766,6 +2220,9 @@ Class: ECTO:0000676
  Annotations: oio:hasExactSynonym "nicotinic antagonist exposure"
  Annotations: oio:hasExactSynonym "nicotinic antagonist exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:48878) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some nicotinic antagonist)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to antinicotinicos"
 
 Class: CHEBI:49023 ## prostaglandin antagonist
 ## {"stressor": "CHEBI:49023"}
@@ -1838,6 +2295,15 @@ Class: ECTO:0000684
  Annotations: oio:hasExactSynonym "androgen exposure"
  Annotations: oio:hasExactSynonym "androgen exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:50113) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some androgen)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to Androgen"
+ Annotations: oio:hasRelatedSynonym "exposure to Androgene"
+ Annotations: oio:hasRelatedSynonym "exposure to androgene"
+ Annotations: oio:hasRelatedSynonym "exposure to androgenes"
+ Annotations: oio:hasRelatedSynonym "exposure to androgeno"
+ Annotations: oio:hasRelatedSynonym "exposure to androgenos"
+ Annotations: oio:hasRelatedSynonym "exposure to androgens"
 
 Class: CHEBI:50114 ## estrogen
 ## {"stressor": "CHEBI:50114"}
@@ -1847,6 +2313,20 @@ Class: ECTO:0000685
  Annotations: oio:hasExactSynonym "estrogen exposure"
  Annotations: oio:hasExactSynonym "estrogen exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:50114) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some estrogen)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to Estrogene"
+ Annotations: oio:hasRelatedSynonym "exposure to estrogene"
+ Annotations: oio:hasRelatedSynonym "exposure to estrogenes"
+ Annotations: oio:hasRelatedSynonym "exposure to estrogeno"
+ Annotations: oio:hasRelatedSynonym "exposure to estrogenos"
+ Annotations: oio:hasRelatedSynonym "exposure to estrogens"
+ Annotations: oio:hasRelatedSynonym "exposure to Oestrogen"
+ Annotations: oio:hasRelatedSynonym "exposure to oestrogen"
+ Annotations: oio:hasRelatedSynonym "exposure to Oestrogene"
+ Annotations: oio:hasRelatedSynonym "exposure to oestrogene"
+ Annotations: oio:hasRelatedSynonym "exposure to oestrogenes"
+ Annotations: oio:hasRelatedSynonym "exposure to oestrogens"
 
 Class: CHEBI:50141 ## bronchoconstrictor agent
 ## {"stressor": "CHEBI:50141"}
@@ -1901,6 +2381,9 @@ Class: ECTO:0000691
  Annotations: oio:hasExactSynonym "antidote exposure"
  Annotations: oio:hasExactSynonym "antidote exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:50247) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some antidote)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to antidotes"
 
 Class: CHEBI:50248 ## hematologic agent
 ## {"stressor": "CHEBI:50248"}
@@ -1919,6 +2402,10 @@ Class: ECTO:0000693
  Annotations: oio:hasExactSynonym "anticoagulant exposure"
  Annotations: oio:hasExactSynonym "anticoagulant exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:50249) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some anticoagulant)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to anticoagulante"
+ Annotations: oio:hasRelatedSynonym "exposure to anticoagulants"
 
 Class: CHEBI:50266 ## prodrug
 ## {"stressor": "CHEBI:50266"}
@@ -1928,6 +2415,9 @@ Class: ECTO:0000694
  Annotations: oio:hasExactSynonym "prodrug exposure"
  Annotations: oio:hasExactSynonym "prodrug exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:50266) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some prodrug)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to Prodrugs"
 
 Class: CHEBI:50268 ## GABA modulator
 ## {"stressor": "CHEBI:50268"}
@@ -1955,6 +2445,9 @@ Class: ECTO:0000697
  Annotations: oio:hasExactSynonym "parasympatholytic exposure"
  Annotations: oio:hasExactSynonym "parasympatholytic exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:50370) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some parasympatholytic)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to parasympatholytics"
 
 Class: CHEBI:50390 ## EC 1.6.5.2 [NAD(P)H dehydrogenase (quinone)] inhibitor
 ## {"stressor": "CHEBI:50390"}
@@ -2000,6 +2493,14 @@ Class: ECTO:0000702
  Annotations: oio:hasExactSynonym "laxative exposure"
  Annotations: oio:hasExactSynonym "laxative exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:50503) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some laxative)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to aperient"
+ Annotations: oio:hasRelatedSynonym "exposure to aperients"
+ Annotations: oio:hasRelatedSynonym "exposure to laxante"
+ Annotations: oio:hasRelatedSynonym "exposure to laxatives"
+ Annotations: oio:hasRelatedSynonym "exposure to purgative"
+ Annotations: oio:hasRelatedSynonym "exposure to purgatives"
 
 Class: CHEBI:50505 ## sweetening agent
 ## {"stressor": "CHEBI:50505"}
@@ -2009,6 +2510,10 @@ Class: ECTO:0000703
  Annotations: oio:hasExactSynonym "sweetening agent exposure"
  Annotations: oio:hasExactSynonym "sweetening agent exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:50505) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some sweetening agent)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to sweetener"
+ Annotations: oio:hasRelatedSynonym "exposure to sweeteners"
 
 Class: CHEBI:50509 ## potassium channel blocker
 ## {"stressor": "CHEBI:50509"}
@@ -2027,6 +2532,9 @@ Class: ECTO:0000705
  Annotations: oio:hasExactSynonym "mydriatic agent exposure"
  Annotations: oio:hasExactSynonym "mydriatic agent exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:50513) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some mydriatic agent)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to mydriatics"
 
 Class: CHEBI:50514 ## vasoconstrictor agent
 ## {"stressor": "CHEBI:50514"}
@@ -2081,6 +2589,12 @@ Class: ECTO:0000711
  Annotations: oio:hasExactSynonym "bone density conservation agent exposure"
  Annotations: oio:hasExactSynonym "bone density conservation agent exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:50646) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some bone density conservation agent)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to anti-osteoporotic"
+ Annotations: oio:hasRelatedSynonym "exposure to anti-osteoporotics"
+ Annotations: oio:hasRelatedSynonym "exposure to antiosteoporotic"
+ Annotations: oio:hasRelatedSynonym "exposure to antiosteoporotics"
 
 Class: CHEBI:50671 ## antithyroid drug
 ## {"stressor": "CHEBI:50671"}
@@ -2117,6 +2631,9 @@ Class: ECTO:0000715
  Annotations: oio:hasExactSynonym "abortifacient exposure"
  Annotations: oio:hasExactSynonym "abortifacient exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:50691) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some abortifacient)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to abortifacients"
 
 Class: CHEBI:50733 ## nutraceutical
 ## {"stressor": "CHEBI:50733"}
@@ -2153,6 +2670,9 @@ Class: ECTO:0000719
  Annotations: oio:hasExactSynonym "appetite enhancer exposure"
  Annotations: oio:hasExactSynonym "appetite enhancer exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:50779) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some appetite enhancer)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to orexigenic"
 
 Class: CHEBI:50846 ## immunomodulator
 ## {"stressor": "CHEBI:50846"}
@@ -2162,6 +2682,10 @@ Class: ECTO:0000720
  Annotations: oio:hasExactSynonym "immunomodulator exposure"
  Annotations: oio:hasExactSynonym "immunomodulator exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:50846) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some immunomodulator)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to Biomodulator"
+ Annotations: oio:hasRelatedSynonym "exposure to immunomodulators"
 
 Class: CHEBI:50847 ## immunological adjuvant
 ## {"stressor": "CHEBI:50847"}
@@ -2171,6 +2695,12 @@ Class: ECTO:0000721
  Annotations: oio:hasExactSynonym "immunological adjuvant exposure"
  Annotations: oio:hasExactSynonym "immunological adjuvant exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:50847) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some immunological adjuvant)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to Immunoactivator"
+ Annotations: oio:hasRelatedSynonym "exposure to Immunoadjuvant"
+ Annotations: oio:hasRelatedSynonym "exposure to Immunopotentiator"
+ Annotations: oio:hasRelatedSynonym "exposure to Immunostimulant"
 
 Class: CHEBI:50855 ## antiatherogenic agent
 ## {"stressor": "CHEBI:50855"}
@@ -2198,6 +2728,9 @@ Class: ECTO:0000724
  Annotations: oio:hasExactSynonym "genotoxin exposure"
  Annotations: oio:hasExactSynonym "genotoxin exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:50902) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some genotoxin)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to genotoxins"
 
 Class: CHEBI:50903 ## carcinogenic agent
 ## {"stressor": "CHEBI:50903"}
@@ -2207,6 +2740,14 @@ Class: ECTO:0000725
  Annotations: oio:hasExactSynonym "carcinogenic agent exposure"
  Annotations: oio:hasExactSynonym "carcinogenic agent exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:50903) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some carcinogenic agent)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to cancerigene"
+ Annotations: oio:hasRelatedSynonym "exposure to cancerogene"
+ Annotations: oio:hasRelatedSynonym "exposure to carcinogen"
+ Annotations: oio:hasRelatedSynonym "exposure to carcinogene"
+ Annotations: oio:hasRelatedSynonym "exposure to carcinogeno"
+ Annotations: oio:hasRelatedSynonym "exposure to carcinogens"
 
 Class: CHEBI:50904 ## allergen
 ## {"stressor": "CHEBI:50904"}
@@ -2216,6 +2757,10 @@ Class: ECTO:0000726
  Annotations: oio:hasExactSynonym "allergen exposure"
  Annotations: oio:hasExactSynonym "allergen exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:50904) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some allergen)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to alergeno"
+ Annotations: oio:hasRelatedSynonym "exposure to allergene"
 
 Class: CHEBI:50905 ## teratogenic agent
 ## {"stressor": "CHEBI:50905"}
@@ -2225,6 +2770,10 @@ Class: ECTO:0000727
  Annotations: oio:hasExactSynonym "teratogenic agent exposure"
  Annotations: oio:hasExactSynonym "teratogenic agent exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:50905) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some teratogenic agent)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to teratogen"
+ Annotations: oio:hasRelatedSynonym "exposure to teratogeno"
 
 Class: CHEBI:50908 ## hepatotoxic agent
 ## {"stressor": "CHEBI:50908"}
@@ -2234,6 +2783,10 @@ Class: ECTO:0000728
  Annotations: oio:hasExactSynonym "hepatotoxic agent exposure"
  Annotations: oio:hasExactSynonym "hepatotoxic agent exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:50908) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some hepatotoxic agent)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to hepatotoxicant"
+ Annotations: oio:hasRelatedSynonym "exposure to hepatoxicant"
 
 Class: CHEBI:50909 ## nephrotoxic agent
 ## {"stressor": "CHEBI:50909"}
@@ -2243,6 +2796,9 @@ Class: ECTO:0000729
  Annotations: oio:hasExactSynonym "nephrotoxic agent exposure"
  Annotations: oio:hasExactSynonym "nephrotoxic agent exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:50909) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some nephrotoxic agent)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to nephrotoxicant"
 
 Class: CHEBI:50910 ## neurotoxin
 ## {"stressor": "CHEBI:50910"}
@@ -2252,6 +2808,10 @@ Class: ECTO:0000730
  Annotations: oio:hasExactSynonym "neurotoxin exposure"
  Annotations: oio:hasExactSynonym "neurotoxin exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:50910) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some neurotoxin)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to neurotoxicant"
+ Annotations: oio:hasRelatedSynonym "exposure to neurotoxins"
 
 Class: CHEBI:50914 ## EC 2.7.1.137 (phosphatidylinositol 3-kinase) inhibitor
 ## {"stressor": "CHEBI:50914"}
@@ -2270,6 +2830,12 @@ Class: ECTO:0000732
  Annotations: oio:hasExactSynonym "antiemetic exposure"
  Annotations: oio:hasExactSynonym "antiemetic exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:50919) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some antiemetic)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to anti-emetic"
+ Annotations: oio:hasRelatedSynonym "exposure to anti-emetics"
+ Annotations: oio:hasRelatedSynonym "exposure to antiemetico"
+ Annotations: oio:hasRelatedSynonym "exposure to antiemetics"
 
 Class: CHEBI:50925 ## EC 2.7.11.1 (non-specific serine/threonine protein kinase) inhibitor
 ## {"stressor": "CHEBI:50925"}
@@ -2306,6 +2872,9 @@ Class: ECTO:0000736
  Annotations: oio:hasExactSynonym "antitussive exposure"
  Annotations: oio:hasExactSynonym "antitussive exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:51177) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some antitussive)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to anti-tussive"
 
 Class: CHEBI:51371 ## muscle relaxant
 ## {"stressor": "CHEBI:51371"}
@@ -2324,6 +2893,9 @@ Class: ECTO:0000738
  Annotations: oio:hasExactSynonym "ligand exposure"
  Annotations: oio:hasExactSynonym "ligand exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:52214) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some ligand)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to ligands"
 
 Class: CHEBI:52290 ## mitogen
 ## {"stressor": "CHEBI:52290"}
@@ -2333,6 +2905,9 @@ Class: ECTO:0000739
  Annotations: oio:hasExactSynonym "mitogen exposure"
  Annotations: oio:hasExactSynonym "mitogen exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:52290) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some mitogen)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to mitogens"
 
 Class: CHEBI:52425 ## EC 3.2.1.18 (exo-alpha-sialidase) inhibitor
 ## {"stressor": "CHEBI:52425"}
@@ -2396,6 +2971,9 @@ Class: ECTO:0000746
  Annotations: oio:hasExactSynonym "antispasmodic drug exposure"
  Annotations: oio:hasExactSynonym "antispasmodic drug exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:53784) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some antispasmodic drug)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to antispasmodics"
 
 Class: CHEBI:55322 ## mu-opioid receptor agonist
 ## {"stressor": "CHEBI:55322"}
@@ -2414,6 +2992,14 @@ Class: ECTO:0000748
  Annotations: oio:hasExactSynonym "antidiarrhoeal drug exposure"
  Annotations: oio:hasExactSynonym "antidiarrhoeal drug exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:55323) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some antidiarrhoeal drug)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to antidiarrheal"
+ Annotations: oio:hasRelatedSynonym "exposure to antidiarrheals"
+ Annotations: oio:hasRelatedSynonym "exposure to antidiarrhoeal"
+ Annotations: oio:hasRelatedSynonym "exposure to antidiarrhoeals"
+ Annotations: oio:hasRelatedSynonym "exposure to antiperistaltic"
+ Annotations: oio:hasRelatedSynonym "exposure to antiperistaltics"
 
 Class: CHEBI:59132 ## antigen
 ## {"stressor": "CHEBI:59132"}
@@ -2423,6 +3009,9 @@ Class: ECTO:0000749
  Annotations: oio:hasExactSynonym "antigen exposure"
  Annotations: oio:hasExactSynonym "antigen exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:59132) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some antigen)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to antigens"
 
 Class: CHEBI:59163 ## biomarker
 ## {"stressor": "CHEBI:59163"}
@@ -2441,6 +3030,9 @@ Class: ECTO:0000751
  Annotations: oio:hasExactSynonym "hapten exposure"
  Annotations: oio:hasExactSynonym "hapten exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:59174) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some hapten)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to haptens"
 
 Class: CHEBI:59517 ## DNA synthesis inhibitor
 ## {"stressor": "CHEBI:59517"}
@@ -2459,6 +3051,9 @@ Class: ECTO:0000753
  Annotations: oio:hasExactSynonym "phosphoantigen exposure"
  Annotations: oio:hasExactSynonym "phosphoantigen exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:59544) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some phosphoantigen)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to phosphoantigens"
 
 Class: CHEBI:59683 ## antipruritic drug
 ## {"stressor": "CHEBI:59683"}
@@ -2477,6 +3072,10 @@ Class: ECTO:0000755
  Annotations: oio:hasExactSynonym "electrophilic reagent exposure"
  Annotations: oio:hasExactSynonym "electrophilic reagent exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:59739) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some electrophilic reagent)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to electrophile"
+ Annotations: oio:hasRelatedSynonym "exposure to electrophiles"
 
 Class: CHEBI:59740 ## nucleophilic reagent
 ## {"stressor": "CHEBI:59740"}
@@ -2486,6 +3085,10 @@ Class: ECTO:0000756
  Annotations: oio:hasExactSynonym "nucleophilic reagent exposure"
  Annotations: oio:hasExactSynonym "nucleophilic reagent exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:59740) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some nucleophilic reagent)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to nucleophile"
+ Annotations: oio:hasRelatedSynonym "exposure to nucleophiles"
 
 Class: CHEBI:59826 ## progestin
 ## {"stressor": "CHEBI:59826"}
@@ -2495,6 +3098,9 @@ Class: ECTO:0000757
  Annotations: oio:hasExactSynonym "progestin exposure"
  Annotations: oio:hasExactSynonym "progestin exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:59826) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some progestin)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to progestins"
 
 Class: CHEBI:59897 ## EC 2.7.7.49 (RNA-directed DNA polymerase) inhibitor
 ## {"stressor": "CHEBI:59897"}
@@ -2567,6 +3173,9 @@ Class: ECTO:0000765
  Annotations: oio:hasExactSynonym "adjuvant exposure"
  Annotations: oio:hasExactSynonym "adjuvant exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:60809) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some adjuvant)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to adjuvants"
 
 Class: CHEBI:60832 ## tubulin modulator
 ## {"stressor": "CHEBI:60832"}
@@ -2585,6 +3194,9 @@ Class: ECTO:0000767
  Annotations: oio:hasExactSynonym "nephrotoxin exposure"
  Annotations: oio:hasExactSynonym "nephrotoxin exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:61015) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some nephrotoxin)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to nephrotoxins"
 
 Class: CHEBI:61016 ## angiotensin receptor antagonist
 ## {"stressor": "CHEBI:61016"}
@@ -2603,6 +3215,11 @@ Class: ECTO:0000769
  Annotations: oio:hasExactSynonym "EC 3.5.1.98 (histone deacetylase) inhibitor exposure"
  Annotations: oio:hasExactSynonym "EC 3.5.1.98 (histone deacetylase) inhibitor exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:61115) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some EC 3.5.1.98 (histone deacetylase) inhibitor)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to HDACi"
+ Annotations: oio:hasRelatedSynonym "exposure to HDACis"
+ Annotations: oio:hasRelatedSynonym "exposure to HDIs"
 
 Class: CHEBI:61908 ## EC 1.14.13.39 (nitric oxide synthase) inhibitor
 ## {"stressor": "CHEBI:61908"}
@@ -2657,6 +3274,9 @@ Class: ECTO:0000775
  Annotations: oio:hasExactSynonym "allelochemical exposure"
  Annotations: oio:hasExactSynonym "allelochemical exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:62215) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some allelochemical)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to allelochemicals"
 
 Class: CHEBI:62488 ## signalling molecule
 ## {"stressor": "CHEBI:62488"}
@@ -2702,6 +3322,9 @@ Class: ECTO:0000780
  Annotations: oio:hasExactSynonym "EC 2.4.2.30 (NAD(+) ADP-ribosyltransferase) inhibitor exposure"
  Annotations: oio:hasExactSynonym "EC 2.4.2.30 (NAD(+) ADP-ribosyltransferase) inhibitor exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:62913) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some EC 2.4.2.30 (NAD(+) ADP-ribosyltransferase) inhibitor)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to PARPs"
 
 Class: CHEBI:63047 ## food emulsifier
 ## {"stressor": "CHEBI:63047"}
@@ -2747,6 +3370,12 @@ Class: ECTO:0000785
  Annotations: oio:hasExactSynonym "reducing agent exposure"
  Annotations: oio:hasExactSynonym "reducing agent exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:63247) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some reducing agent)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to reducer"
+ Annotations: oio:hasRelatedSynonym "exposure to reducers"
+ Annotations: oio:hasRelatedSynonym "exposure to reductant"
+ Annotations: oio:hasRelatedSynonym "exposure to reductants"
 
 Class: CHEBI:63248 ## oxidising agent
 ## {"stressor": "CHEBI:63248"}
@@ -2756,6 +3385,14 @@ Class: ECTO:0000786
  Annotations: oio:hasExactSynonym "oxidising agent exposure"
  Annotations: oio:hasExactSynonym "oxidising agent exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:63248) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some oxidising agent)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to oxidant"
+ Annotations: oio:hasRelatedSynonym "exposure to oxidants"
+ Annotations: oio:hasRelatedSynonym "exposure to oxidiser"
+ Annotations: oio:hasRelatedSynonym "exposure to oxidisers"
+ Annotations: oio:hasRelatedSynonym "exposure to oxidizer"
+ Annotations: oio:hasRelatedSynonym "exposure to oxidizers"
 
 Class: CHEBI:63332 ## EC 3.1.3.1 (alkaline phosphatase) inhibitor
 ## {"stressor": "CHEBI:63332"}
@@ -2774,6 +3411,9 @@ Class: ECTO:0000788
  Annotations: oio:hasExactSynonym "explosive exposure"
  Annotations: oio:hasExactSynonym "explosive exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:63490) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some explosive)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to explosives"
 
 Class: CHEBI:63726 ## neuroprotective agent
 ## {"stressor": "CHEBI:63726"}
@@ -2783,6 +3423,10 @@ Class: ECTO:0000789
  Annotations: oio:hasExactSynonym "neuroprotective agent exposure"
  Annotations: oio:hasExactSynonym "neuroprotective agent exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:63726) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some neuroprotective agent)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to neuroprotectant"
+ Annotations: oio:hasRelatedSynonym "exposure to neuroprotectants"
 
 Class: CHEBI:63794 ## retinoid X receptor agonist
 ## {"stressor": "CHEBI:63794"}
@@ -2891,6 +3535,9 @@ Class: ECTO:0000801
  Annotations: oio:hasExactSynonym "monolignol exposure"
  Annotations: oio:hasExactSynonym "monolignol exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:64477) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some monolignol)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to monolignols"
 
 Class: CHEBI:64570 ## EC 2.1.2.1 (glycine hydroxymethyltransferase) inhibitor
 ## {"stressor": "CHEBI:64570"}
@@ -2972,6 +3619,9 @@ Class: ECTO:0000810
  Annotations: oio:hasExactSynonym "antimitotic exposure"
  Annotations: oio:hasExactSynonym "antimitotic exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:64911) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some antimitotic)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to antimitotics"
 
 Class: CHEBI:64912 ## antimycobacterial drug
 ## {"stressor": "CHEBI:64912"}
@@ -2981,6 +3631,10 @@ Class: ECTO:0000811
  Annotations: oio:hasExactSynonym "antimycobacterial drug exposure"
  Annotations: oio:hasExactSynonym "antimycobacterial drug exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:64912) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some antimycobacterial drug)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to antimycobacterials"
+ Annotations: oio:hasRelatedSynonym "exposure to antimycobacterium"
 
 Class: CHEBI:64926 ## serine protease inhibitor
 ## {"stressor": "CHEBI:64926"}
@@ -3143,6 +3797,10 @@ Class: ECTO:0000829
  Annotations: oio:hasExactSynonym "nootropic agent exposure"
  Annotations: oio:hasExactSynonym "nootropic agent exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:66980) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some nootropic agent)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to nootropic"
+ Annotations: oio:hasRelatedSynonym "exposure to nootropics"
 
 Class: CHEBI:66987 ## radiation protective agent
 ## {"stressor": "CHEBI:66987"}
@@ -3161,6 +3819,10 @@ Class: ECTO:0000831
  Annotations: oio:hasExactSynonym "tocolytic agent exposure"
  Annotations: oio:hasExactSynonym "tocolytic agent exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:66993) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some tocolytic agent)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to tocolytic"
+ Annotations: oio:hasRelatedSynonym "exposure to tocolytics"
 
 Class: CHEBI:67072 ## cannabinoid receptor agonist
 ## {"stressor": "CHEBI:67072"}
@@ -3386,6 +4048,9 @@ Class: ECTO:0000856
  Annotations: oio:hasExactSynonym "prohormone exposure"
  Annotations: oio:hasExactSynonym "prohormone exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:71212) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some prohormone)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to prohormones"
 
 Class: CHEBI:71232 ## adenosine receptor antagonist
 ## {"stressor": "CHEBI:71232"}
@@ -3485,6 +4150,9 @@ Class: ECTO:0000867
  Annotations: oio:hasExactSynonym "vulnerary exposure"
  Annotations: oio:hasExactSynonym "vulnerary exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:73336) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some vulnerary)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to vulneraries"
 
 Class: CHEBI:73361 ## methionine aminopeptidase 2 inhibitor
 ## {"stressor": "CHEBI:73361"}
@@ -3530,6 +4198,11 @@ Class: ECTO:0000872
  Annotations: oio:hasExactSynonym "astringent exposure"
  Annotations: oio:hasExactSynonym "astringent exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:74783) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some astringent)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to adstringent"
+ Annotations: oio:hasRelatedSynonym "exposure to adstringents"
+ Annotations: oio:hasRelatedSynonym "exposure to astringents"
 
 Class: CHEBI:75050 ## chromogenic compound
 ## {"stressor": "CHEBI:75050"}
@@ -3539,6 +4212,10 @@ Class: ECTO:0000873
  Annotations: oio:hasExactSynonym "chromogenic compound exposure"
  Annotations: oio:hasExactSynonym "chromogenic compound exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:75050) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some chromogenic compound)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to chromogen"
+ Annotations: oio:hasRelatedSynonym "exposure to chromogens"
 
 Class: CHEBI:75190 ## EC 5.4.3.2 (lysine 2,3-aminomutase) inhibitor
 ## {"stressor": "CHEBI:75190"}
@@ -3800,6 +4477,9 @@ Class: ECTO:0000902
  Annotations: oio:hasExactSynonym "xenoestrogen exposure"
  Annotations: oio:hasExactSynonym "xenoestrogen exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:76988) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some xenoestrogen)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to xenoestrogens"
 
 Class: CHEBI:76989 ## phytoestrogen
 ## {"stressor": "CHEBI:76989"}
@@ -3809,6 +4489,9 @@ Class: ECTO:0000903
  Annotations: oio:hasExactSynonym "phytoestrogen exposure"
  Annotations: oio:hasExactSynonym "phytoestrogen exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:76989) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some phytoestrogen)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to phytoestrogens"
 
 Class: CHEBI:77020 ## EC 1.10.99.2 [ribosyldihydronicotinamide dehydrogenase (quinone)] inhibitor
 ## {"stressor": "CHEBI:77020"}
@@ -3836,6 +4519,9 @@ Class: ECTO:0000906
  Annotations: oio:hasExactSynonym "expectorant exposure"
  Annotations: oio:hasExactSynonym "expectorant exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:77035) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some expectorant)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to expectorants"
 
 Class: CHEBI:77111 ## EC 2.1.1.116 [3'-hydroxy-N-methyl-(S)-coclaurine 4'-O-methyltransferase] inhibitor
 ## {"stressor": "CHEBI:77111"}
@@ -3962,6 +4648,9 @@ Class: ECTO:0000920
  Annotations: oio:hasExactSynonym "persistent organic pollutant exposure"
  Annotations: oio:hasExactSynonym "persistent organic pollutant exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:77853) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some persistent organic pollutant)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to POPs"
 
 Class: CHEBI:77881 ## EC 4.3.1.15 (diaminopropionate ammonia-lyase) inhibitor
 ## {"stressor": "CHEBI:77881"}
@@ -3998,6 +4687,12 @@ Class: ECTO:0000924
  Annotations: oio:hasExactSynonym "food stabiliser exposure"
  Annotations: oio:hasExactSynonym "food stabiliser exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:77966) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some food stabiliser)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to stabiliser"
+ Annotations: oio:hasRelatedSynonym "exposure to stabilisers"
+ Annotations: oio:hasRelatedSynonym "exposure to stabilizer"
+ Annotations: oio:hasRelatedSynonym "exposure to stabilizers"
 
 Class: CHEBI:77970 ## food thickening agent
 ## {"stressor": "CHEBI:77970"}
@@ -4088,6 +4783,9 @@ Class: ECTO:0000934
  Annotations: oio:hasExactSynonym "refrigerant exposure"
  Annotations: oio:hasExactSynonym "refrigerant exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:78433) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some refrigerant)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to refrigerants"
 
 Class: CHEBI:78444 ## EC 3.1.1.1 (carboxylesterase) inhibitor
 ## {"stressor": "CHEBI:78444"}
@@ -4151,6 +4849,11 @@ Class: ECTO:0000941
  Annotations: oio:hasExactSynonym "plasticiser exposure"
  Annotations: oio:hasExactSynonym "plasticiser exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:79056) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some plasticiser)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to plasticisers"
+ Annotations: oio:hasRelatedSynonym "exposure to plasticizer"
+ Annotations: oio:hasRelatedSynonym "exposure to plasticizers"
 
 Class: CHEBI:82632 ## phytochrome chromophore
 ## {"stressor": "CHEBI:82632"}
@@ -4367,6 +5070,9 @@ Class: ECTO:0001013
  Annotations: oio:hasExactSynonym "antifeedant exposure"
  Annotations: oio:hasExactSynonym "antifeedant exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:22583) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some antifeedant)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to antifeedants"
 
 Class: CHEBI:23092 ## chemosterilant
 ## {"stressor": "CHEBI:23092"}
@@ -4376,6 +5082,9 @@ Class: ECTO:0001014
  Annotations: oio:hasExactSynonym "chemosterilant exposure"
  Annotations: oio:hasExactSynonym "chemosterilant exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:23092) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some chemosterilant)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to chemosterilants"
 
 Class: CHEBI:23100 ## chitin synthesis inhibitor
 ## {"stressor": "CHEBI:23100"}
@@ -4484,6 +5193,9 @@ Class: ECTO:0001026
  Annotations: oio:hasExactSynonym "precocenes exposure"
  Annotations: oio:hasExactSynonym "precocenes exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:26220) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some precocenes)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to 7-alkoxy-2,2-dimethylchromenes"
 
 Class: CHEBI:26413 ## pyrethroid insecticide
 ## {"stressor": "CHEBI:26413"}
@@ -4502,6 +5214,9 @@ Class: ECTO:0001028
  Annotations: oio:hasExactSynonym "molluscicide exposure"
  Annotations: oio:hasExactSynonym "molluscicide exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:33904) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some molluscicide)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to molluscicides"
 
 Class: CHEBI:36053 ## acaricide drug
 ## {"stressor": "CHEBI:36053"}
@@ -4592,6 +5307,9 @@ Class: ECTO:0001038
  Annotations: oio:hasExactSynonym "fumigant exposure"
  Annotations: oio:hasExactSynonym "fumigant exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:39276) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some fumigant)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to fumigants"
 
 Class: CHEBI:39277 ## fumigant insecticide
 ## {"stressor": "CHEBI:39277"}
@@ -4682,6 +5400,9 @@ Class: ECTO:0001048
  Annotations: oio:hasExactSynonym "antifouling biocide exposure"
  Annotations: oio:hasExactSynonym "antifouling biocide exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:51076) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some antifouling biocide)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to Antifoulant"
 
 Class: CHEBI:67105 ## insect sterilant
 ## {"stressor": "CHEBI:67105"}
@@ -4709,6 +5430,9 @@ Class: ECTO:0001051
  Annotations: oio:hasExactSynonym "scabicide exposure"
  Annotations: oio:hasExactSynonym "scabicide exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:73333) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some scabicide)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to scabicides"
 
 Class: CHEBI:78299 ## environmental food contaminant
 ## {"stressor": "CHEBI:78299"}
@@ -4727,6 +5451,12 @@ Class: ECTO:0001975
  Annotations: oio:hasExactSynonym "sex hormone exposure"
  Annotations: oio:hasExactSynonym "sex hormone exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:50112) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some sex hormone)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to Geschlechtshormon"
+ Annotations: oio:hasRelatedSynonym "exposure to Geschlechtshormone"
+ Annotations: oio:hasRelatedSynonym "exposure to Sexualhormon"
+ Annotations: oio:hasRelatedSynonym "exposure to Sexualhormone"
 
 Class: CHEBI:50137 ## mu-opioid receptor antagonist
 ## {"stressor": "CHEBI:50137"}
@@ -4754,3 +5484,12 @@ Class: ECTO:0002058
  Annotations: oio:hasExactSynonym "food preservative exposure"
  Annotations: oio:hasExactSynonym "food preservative exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:65255) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some food preservative)
+
+Class: CHEBI:79314 ## flame retardant
+## {"stressor": "CHEBI:79314"}
+Class: ECTO:0002283
+ Annotations: rdfs:label "exposure to flame retardant"
+ Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to a flame retardant. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion."
+ Annotations: oio:hasExactSynonym "flame retardant exposure"
+ Annotations: oio:hasExactSynonym "flame retardant exposure event"
+ EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:79314) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some flame retardant)

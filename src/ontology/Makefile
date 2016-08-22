@@ -93,7 +93,7 @@ mirror/%.obo:
 .PRECIOUS: mirror/%.obo
 
 mirror/%.owl: mirror/%.obo
-	owltools $< --remove-annotation-assertions -r -l --remove-dangling-annotations --make-subset-by-properties -f $(KEEPRELS)  -o $@
+	owltools $< --remove-annotation-assertions -r -l -s --remove-dangling-annotations --make-subset-by-properties -f $(KEEPRELS)  -o $@
 .PRECIOUS: mirror/%.owl
 mirror/ro.owl:
 	owltools $(OBO)/ro.owl --merge-imports-closure -o $@
@@ -111,7 +111,7 @@ mirror/chebi.obo:
 .PRECIOUS: mirror/chebi.obo
 
 mirror/chebi.owl: mirror/chebi.obo
-	owltools --use-catalog $<  --rename-entity $(OBO)/chebi#has_part $(OBO)/BFO_0000051 --rename-entity $(OBO)/chebi#has_role $(OBO)/RO_0000087  --remove-annotation-assertions -r -l  --set-ontology-id $(OBO)/chebi.owl -o $@
+	owltools --use-catalog $<  --rename-entity $(OBO)/chebi#has_part $(OBO)/BFO_0000051 --rename-entity $(OBO)/chebi#has_role $(OBO)/RO_0000087  --remove-annotation-assertions -r -l -s  --set-ontology-id $(OBO)/chebi.owl -o $@
 
 #mirror/chebi.owl:
 #	wget $(OBO)/chebi.obo -O $@.tmp && owltools $@.tmp --make-subset-by-properties -f --extract-mingraph --set-ontology-id $(OBO)/chebi.owl -o $@
@@ -136,6 +136,14 @@ mirror/ncbitaxon.owl: ncbitaxon.obo
 mirror/pco.owl: imports/pco_basic.obo
 	OWLTOOLS_MEMORY=12G owltools $< --set-ontology-id $(OBO)/pco.owl -o $@
 
+# ----------------------------------------
+# SYNS
+# ----------------------------------------
+
+# avoid circular dependencies
+SYNFILES = imports/uberon_import.obo
+syns.json: mirror/chebi.obo imports/curated_synonyms.obo
+	../util/parse-obo-syns.pl $^ $(SYNFILES) > $@.tmp && mv $@.tmp $@
 
 
 # ----------------------------------------
@@ -148,8 +156,8 @@ all_modules_owl: $(patsubst %, $(MODDIR)/%.owl, $(MODS))
 all_modules_omn: $(patsubst %, $(MODDIR)/%.omn, $(MODS))
 all_modules_obo: $(patsubst %, $(MODDIR)/%.obo, $(MODS))
 
-$(MODDIR)/%.omn: $(MODDIR)/%.csv ../patterns/%.yaml
-	apply-pattern.py -P curie_map.yaml -b http://purl.obolibrary.org/obo/ -i $< -p ../patterns/$*.yaml -G $(MODDIR)/$*-gci.owl > $@.tmp && mv $@.tmp $@
+$(MODDIR)/%.omn: $(MODDIR)/%.csv ../patterns/%.yaml syns.json
+	apply-pattern.py -S syns.json -P curie_map.yaml -b http://purl.obolibrary.org/obo/ -i $< -p ../patterns/$*.yaml -G $(MODDIR)/$*-gci.owl > $@.tmp && mv $@.tmp $@
 
 #$(MODDIR)/%-gci.owl: $(MODDIR)/%.omn
 
@@ -230,3 +238,6 @@ modules/%.pro: modules/%.csv
 
 #%.csv: %.tsv
 #	tsv2csv.py $< $@
+
+mirror/%.jsonld: mirror/%.owl
+	rdfcat -out JSONLD $< > $@.tmp && mv $@.tmp $@

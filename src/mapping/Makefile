@@ -1,7 +1,7 @@
-all: all_exposure probs.tsv m.tsv unmapped.tsv rpt.html merged-exposure.obo axioms-r.obo  hier all_ecto
+all: all_exposure probs.tsv m.tsv  rpt.html merged-exposure.obo axioms-r.obo  hier all_ecto unmapped.tsv
 
 OBO = http://purl.obolibrary.org/obo
-MOD = eo xco zeco snomed ncit go exo mre
+MOD = eo xco zeco snomed ncit go exo mre wikidata ecto
 
 all_exposure: $(patsubst %, exposure-%.obo,$(MOD))
 
@@ -36,6 +36,8 @@ access-ncit.obo:
 exposure-wikidata.obo:
 	cp ../resources/wikidata/combined.obo $@
 
+exposure-ecto.obo:
+	cp ../../ecto.obo $@
 
 combined-exposure.obo: all_exposure
 	obo-cat.pl exposure-*.obo | grep -v ^namespace: | grep -v ^property_value: | ./add-syns.pl > $@
