@@ -140,10 +140,11 @@ mirror/pco.owl: imports/pco_basic.obo
 # SYNS
 # ----------------------------------------
 
-# avoid circular dependencies
-SYNFILES = imports/uberon_import.obo
+# avoid circular dependencies with imports;
+# some patterns refer to ECTO classes; we use the previous version for this
+SYNFILES = imports/uberon_import.obo ecto.obo
 syns.json: mirror/chebi.obo imports/curated_synonyms.obo
-	../util/parse-obo-syns.pl $^ $(SYNFILES) > $@.tmp && mv $@.tmp $@
+	extract-obo-syns.pl $^ $(SYNFILES) > $@.tmp && mv $@.tmp $@
 
 
 # ----------------------------------------

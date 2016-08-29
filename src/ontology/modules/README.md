@@ -1,48 +1,37 @@
-Consult the [patterns folder](../../patterns) for more details.
+# Design Patterns
 
-DO NOT EDIT THE OBO OR OWL - these are derived. __Edit the CSV.__
+This folder contains design patterns for groupings of classes in the ontology.
 
-## Editors guide
+The design patterns are specified in YAML, and follow the [dead_simple_design_patterns](https://github.com/dosumis/dead_simple_owl_design_patterns/) specification
 
-You do not need to add the ID - this is done automatically by the Makefile.
+Consult each yaml file for details on the specific pattern.
 
-For example, if editing [exposure_via_route.csv](exposure_via_route.csv), you can just add a row at the end:
+# Implementation
 
-```
-iri,iri label,stressor,stressor label,route,route label
-....
-,,CHEBI:64220,monosodium glutamate,ExO:0000056,ingestion
-```
+The design patterns act as templates, with template values coming from the CSVs in the [ontology/modules](../ontology/modules) directory. [pattern2owl](https://github.com/cmungall/pattern2owl) is used to translate the TSVs to OWL. See the [Makefile](../ontology/Makefile) for more details
 
-in the ontology directory, type:
+# General Design Principles
 
-```
-make fill
-```
+## Species-neutrality
 
-this will add the next ID:
+We strive for species-neutrality. This means that we do not bake in
+assumptions such as the surroundings of the organism being air; the
+ontology can be used for fish and other aquatic organisms.
 
-```
-iri,iri label,stressor,stressor label,route,route label
-....
-ECTO:0001590,,CHEBI:64220,monosodium glutamate,ExO:0000056,ingestion
-```
+In some circumstances some assumptions are already baked in, e.g. via
+CHEBI roles such as 'toxin'.
 
-Note you can override the label if you like. Or you can leave it
-blank, in which case it will be derived the OWL from the pattern
-specification.
+## Experimental vs Non-experimental conditions
 
-Here is how this row is transformed in [exposure_via_route.omn](exposure_via_route.omn)
+Some ontologies designed for model organisms bake in assumptions that
+certain kinds of conditions are experiments - e.g. surgical
+manipulations.
 
-```
-Class: CHEBI:64220 ## monosodium glutamate
-Class: ExO:0000056 ## ingestion
-## {"stressor": "CHEBI:64220", "route": "ExO:0000056"}
-Class: ECTO:0001590
- Annotations: rdfs:label "exposure to monosodium glutamate via ingestion"
- Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to monosodium glutamate via ingestion."
- Annotations: oio:hasExactSynonym "monosodium glutamate exposure, via ingestion"
- EquivalentTo: ExO:0000002 and RO:0002233 some CHEBI:64220 and BFO_0000050 some ExO:0000056 ## 'exposure event' and 'has input' some monosodium glutamate and 'part of' some ingestion
-```
+In general, we try and represent conditions in a way that is neutral
+w.r.t the experimental context. When specifying the context is
+necessary, we will follow a standard subclass pattern, e.g.
 
-You can think of this as a kind of TermGenie like system.
+ * surgical manipulation
+    * surgical manipulation in experimental context
+    * surgical manipulation in clinical context
+

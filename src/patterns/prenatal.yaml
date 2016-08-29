@@ -22,13 +22,17 @@ annotations:
     text: "%s via mother"
     vars:
       - cause
-  - property: oio:hasNarrowSynonym
-    text: "%s"
+  - property: oio:hasExactSynonym
+    text: "%s during pregnancy"
+    vars:
+      - cause
+  - property: oio:hasRelatedSynonym
+    text: "maternal %s"
     vars:
       - cause
 
 def: 
-  text: "A exposure event involving %s."
+  text: "A prenatal instance of %s, due to exposure to mother during pregnancy."
   vars:
     - cause
 

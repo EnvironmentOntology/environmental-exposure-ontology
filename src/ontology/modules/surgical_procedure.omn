@@ -2,47 +2,47 @@ Prefix: : <http://purl.obolibrary.org/obo/>
 Prefix: IAO: <http://purl.obolibrary.org/obo/IAO_>
 Prefix: DOSDP: <http://geneontology.org/foo/>
 Prefix: oio: <http://www.geneontology.org/formats/oboInOwl#>
+Prefix: SO: <http://purl.obolibrary.org/obo/SO_>
 Prefix: NPO: <http://purl.obolibrary.org/obo/NPO_>
-Prefix: UBERON: <http://purl.obolibrary.org/obo/UBERON_>
 Prefix: PATO: <http://purl.obolibrary.org/obo/PATO_>
+Prefix: CL: <http://purl.obolibrary.org/obo/CL_>
 Prefix: PR: <http://purl.obolibrary.org/obo/PR_>
-Prefix: GO: <http://purl.obolibrary.org/obo/GO_>
-Prefix: BFO: <http://purl.obolibrary.org/obo/BFO_>
+Prefix: RO: <http://purl.obolibrary.org/obo/RO_>
+Prefix: CHEBI: <http://purl.obolibrary.org/obo/CHEBI_>
+Prefix: XCO: <http://purl.obolibrary.org/obo/XCO_>
+Prefix: NCIT: <http://purl.obolibrary.org/obo/NCIT_>
+Prefix: GOCHE: <http://purl.obolibrary.org/obo/GOCHE_>
+Prefix: UBERON: <http://purl.obolibrary.org/obo/UBERON_>
+Prefix: NBO: <http://purl.obolibrary.org/obo/NBO_>
 Prefix: PO: <http://purl.obolibrary.org/obo/PO_>
+Prefix: ExO: <http://purl.obolibrary.org/obo/ExO_>
+Prefix: OBA: <http://purl.obolibrary.org/obo/OBA_>
+Prefix: ENVO: <http://purl.obolibrary.org/obo/ENVO_>
 Prefix: ZECO: <http://purl.obolibrary.org/obo/ZECO_>
 Prefix: ECTO: <http://purl.obolibrary.org/obo/ECTO_>
-Prefix: SO: <http://purl.obolibrary.org/obo/SO_>
-Prefix: NBO: <http://purl.obolibrary.org/obo/NBO_>
-Prefix: CHEBI: <http://purl.obolibrary.org/obo/CHEBI_>
-Prefix: GOCHE: <http://purl.obolibrary.org/obo/GOCHE_>
-Prefix: OBA: <http://purl.obolibrary.org/obo/OBA_>
-Prefix: XCO: <http://purl.obolibrary.org/obo/XCO_>
-Prefix: RO: <http://purl.obolibrary.org/obo/RO_>
-Prefix: ENVO: <http://purl.obolibrary.org/obo/ENVO_>
-Prefix: CL: <http://purl.obolibrary.org/obo/CL_>
-Prefix: NCIT: <http://purl.obolibrary.org/obo/NCIT_>
-Prefix: ExO: <http://purl.obolibrary.org/obo/ExO_>
+Prefix: GO: <http://purl.obolibrary.org/obo/GO_>
+Prefix: BFO: <http://purl.obolibrary.org/obo/BFO_>
 
  ## Auto-generated
 
 Ontology: <http://purl.obolibrary.org/obo/auto>
 AnnotationProperty: IAO:0000115
-AnnotationProperty: exo/patterns/surgical_procedure/target
 AnnotationProperty: exo/patterns/surgical_procedure/manipulation
+AnnotationProperty: exo/patterns/surgical_procedure/target
 AnnotationProperty: DOSDP:applies-pattern
 AnnotationProperty: oio:hasRelatedSynonym
 AnnotationProperty: oio:hasExactSynonym
-Class: XCO:0000165 ## surgical manipulation
 Class: ExO:0000002 ## exposure event
-ObjectProperty: RO:0002404 ## causally downstream of
-ObjectProperty: BFO_0000050 ## part of
+Class: XCO:0000165 ## surgical manipulation
 ObjectProperty: RO:0000057 ## has participant
+ObjectProperty: BFO_0000050 ## part of
 ObjectProperty: RO:0002233 ## has input
+ObjectProperty: RO:0002404 ## causally downstream of
 ## Auto-generated classes
 
-Class: UBERON:0001021 ## nerve
 Class: XCO:0000165 ## surgical manipulation
-## {"target": "UBERON:0001021", "manipulation": "XCO:0000165"}
+Class: UBERON:0001021 ## nerve
+## {"manipulation": "XCO:0000165", "target": "UBERON:0001021"}
 Class: ECTO:0002035
  Annotations: rdfs:label "surgical manipulation of nerve"
  Annotations: IAO:0000115 "An exposure event involving the surgical manipulation of a nerve, for either medical or experimental reasons"
@@ -51,19 +51,36 @@ Class: ECTO:0002035
   ## Auto-syns
 
  Annotations: oio:hasRelatedSynonym "surgical manipulation of nerves"
+ Annotations: oio:hasRelatedSynonym "surgical manipulation of neural subtree"
+ Annotations: oio:hasRelatedSynonym "surgical manipulation of peripheral nerve"
+ Annotations: oio:hasRelatedSynonym "surgical manipulation of nerves"
+ Annotations: oio:hasRelatedSynonym "surgical manipulation of neural subtree"
+ Annotations: oio:hasRelatedSynonym "surgical manipulation of peripheral nerve"
+ Annotations: oio:hasRelatedSynonym "surgical manipulation of nerves"
+ Annotations: oio:hasRelatedSynonym "surgical manipulation of neural subtree"
+ Annotations: oio:hasRelatedSynonym "surgical manipulation of peripheral nerve"
+ Annotations: oio:hasRelatedSynonym "surgical manipulation of nerves"
+ Annotations: oio:hasRelatedSynonym "surgical manipulation of neural subtree"
+ Annotations: oio:hasRelatedSynonym "surgical manipulation of peripheral nerve"
 
-Class: UBERON:0002113 ## kidney
 Class: XCO:0000165 ## surgical manipulation
-## {"target": "UBERON:0002113", "manipulation": "XCO:0000165"}
+Class: UBERON:0002113 ## kidney
+## {"manipulation": "XCO:0000165", "target": "UBERON:0002113"}
 Class: ECTO:0002036
  Annotations: rdfs:label "surgical manipulation of kidney"
  Annotations: IAO:0000115 "An exposure event involving the surgical manipulation of a kidney, for either medical or experimental reasons"
  Annotations: oio:hasExactSynonym "kidney surgical manipulation"
  EquivalentTo: ExO:0000002 and RO:0002233 some (XCO:0000165 and RO:0000057 some UBERON:0002113) ## 'exposure event' and 'has input' some (surgical manipulation and 'has participant' some kidney)
+  ## Auto-syns
 
-Class: UBERON:0000026 ## appendage
+ Annotations: oio:hasRelatedSynonym "surgical manipulation of reniculate kidney"
+ Annotations: oio:hasRelatedSynonym "surgical manipulation of reniculate kidney"
+ Annotations: oio:hasRelatedSynonym "surgical manipulation of reniculate kidney"
+ Annotations: oio:hasRelatedSynonym "surgical manipulation of reniculate kidney"
+
 Class: XCO:0000165 ## surgical manipulation
-## {"target": "UBERON:0000026", "manipulation": "XCO:0000165"}
+Class: UBERON:0000026 ## appendage
+## {"manipulation": "XCO:0000165", "target": "UBERON:0000026"}
 Class: ECTO:0002037
  Annotations: rdfs:label "surgical manipulation of appendage"
  Annotations: IAO:0000115 "An exposure event involving the surgical manipulation of a appendage, for either medical or experimental reasons"
@@ -75,10 +92,22 @@ Class: ECTO:0002037
  Annotations: oio:hasRelatedSynonym "surgical manipulation of extremitaet"
  Annotations: oio:hasRelatedSynonym "surgical manipulation of extremity"
  Annotations: oio:hasRelatedSynonym "surgical manipulation of limbs/digits/tail"
+ Annotations: oio:hasRelatedSynonym "surgical manipulation of appendages"
+ Annotations: oio:hasRelatedSynonym "surgical manipulation of extremitaet"
+ Annotations: oio:hasRelatedSynonym "surgical manipulation of extremity"
+ Annotations: oio:hasRelatedSynonym "surgical manipulation of limbs/digits/tail"
+ Annotations: oio:hasRelatedSynonym "surgical manipulation of appendages"
+ Annotations: oio:hasRelatedSynonym "surgical manipulation of extremitaet"
+ Annotations: oio:hasRelatedSynonym "surgical manipulation of extremity"
+ Annotations: oio:hasRelatedSynonym "surgical manipulation of limbs/digits/tail"
+ Annotations: oio:hasRelatedSynonym "surgical manipulation of appendages"
+ Annotations: oio:hasRelatedSynonym "surgical manipulation of extremitaet"
+ Annotations: oio:hasRelatedSynonym "surgical manipulation of extremity"
+ Annotations: oio:hasRelatedSynonym "surgical manipulation of limbs/digits/tail"
 
-Class: UBERON:0002530 ## gland
 Class: XCO:0000165 ## surgical manipulation
-## {"target": "UBERON:0002530", "manipulation": "XCO:0000165"}
+Class: UBERON:0002530 ## gland
+## {"manipulation": "XCO:0000165", "target": "UBERON:0002530"}
 Class: ECTO:0002038
  Annotations: rdfs:label "surgical manipulation of gland"
  Annotations: IAO:0000115 "An exposure event involving the surgical manipulation of a gland, for either medical or experimental reasons"
@@ -88,10 +117,20 @@ Class: ECTO:0002038
 
  Annotations: oio:hasRelatedSynonym "surgical manipulation of Druese"
  Annotations: oio:hasRelatedSynonym "surgical manipulation of glandula"
+ Annotations: oio:hasRelatedSynonym "surgical manipulation of glandular organ"
+ Annotations: oio:hasRelatedSynonym "surgical manipulation of Druese"
+ Annotations: oio:hasRelatedSynonym "surgical manipulation of glandula"
+ Annotations: oio:hasRelatedSynonym "surgical manipulation of glandular organ"
+ Annotations: oio:hasRelatedSynonym "surgical manipulation of Druese"
+ Annotations: oio:hasRelatedSynonym "surgical manipulation of glandula"
+ Annotations: oio:hasRelatedSynonym "surgical manipulation of glandular organ"
+ Annotations: oio:hasRelatedSynonym "surgical manipulation of Druese"
+ Annotations: oio:hasRelatedSynonym "surgical manipulation of glandula"
+ Annotations: oio:hasRelatedSynonym "surgical manipulation of glandular organ"
 
-Class: UBERON:0000062 ## organ
 Class: XCO:0000165 ## surgical manipulation
-## {"target": "UBERON:0000062", "manipulation": "XCO:0000165"}
+Class: UBERON:0000062 ## organ
+## {"manipulation": "XCO:0000165", "target": "UBERON:0000062"}
 Class: ECTO:0002039
  Annotations: rdfs:label "surgical manipulation of organ"
  Annotations: IAO:0000115 "An exposure event involving the surgical manipulation of a organ, for either medical or experimental reasons"
@@ -99,11 +138,22 @@ Class: ECTO:0002039
  EquivalentTo: ExO:0000002 and RO:0002233 some (XCO:0000165 and RO:0000057 some UBERON:0000062) ## 'exposure event' and 'has input' some (surgical manipulation and 'has participant' some organ)
   ## Auto-syns
 
+ Annotations: oio:hasRelatedSynonym "surgical manipulation of anatomical unit"
+ Annotations: oio:hasRelatedSynonym "surgical manipulation of body organ"
+ Annotations: oio:hasRelatedSynonym "surgical manipulation of element"
+ Annotations: oio:hasRelatedSynonym "surgical manipulation of anatomical unit"
+ Annotations: oio:hasRelatedSynonym "surgical manipulation of body organ"
+ Annotations: oio:hasRelatedSynonym "surgical manipulation of element"
+ Annotations: oio:hasRelatedSynonym "surgical manipulation of anatomical unit"
+ Annotations: oio:hasRelatedSynonym "surgical manipulation of body organ"
+ Annotations: oio:hasRelatedSynonym "surgical manipulation of element"
+ Annotations: oio:hasRelatedSynonym "surgical manipulation of anatomical unit"
+ Annotations: oio:hasRelatedSynonym "surgical manipulation of body organ"
  Annotations: oio:hasRelatedSynonym "surgical manipulation of element"
 
-Class: UBERON:0000062 ## organ
 Class: XCO:0000027 ## surgical implantation
-## {"target": "UBERON:0000062", "manipulation": "XCO:0000027"}
+Class: UBERON:0000062 ## organ
+## {"manipulation": "XCO:0000027", "target": "UBERON:0000062"}
 Class: ECTO:0002040
  Annotations: rdfs:label "surgical implantation of organ"
  Annotations: IAO:0000115 "An exposure event involving the surgical implantation of a organ, for either medical or experimental reasons"
@@ -111,11 +161,22 @@ Class: ECTO:0002040
  EquivalentTo: ExO:0000002 and RO:0002233 some (XCO:0000027 and RO:0000057 some UBERON:0000062) ## 'exposure event' and 'has input' some (surgical implantation and 'has participant' some organ)
   ## Auto-syns
 
+ Annotations: oio:hasRelatedSynonym "surgical implantation of anatomical unit"
+ Annotations: oio:hasRelatedSynonym "surgical implantation of body organ"
+ Annotations: oio:hasRelatedSynonym "surgical implantation of element"
+ Annotations: oio:hasRelatedSynonym "surgical implantation of anatomical unit"
+ Annotations: oio:hasRelatedSynonym "surgical implantation of body organ"
+ Annotations: oio:hasRelatedSynonym "surgical implantation of element"
+ Annotations: oio:hasRelatedSynonym "surgical implantation of anatomical unit"
+ Annotations: oio:hasRelatedSynonym "surgical implantation of body organ"
+ Annotations: oio:hasRelatedSynonym "surgical implantation of element"
+ Annotations: oio:hasRelatedSynonym "surgical implantation of anatomical unit"
+ Annotations: oio:hasRelatedSynonym "surgical implantation of body organ"
  Annotations: oio:hasRelatedSynonym "surgical implantation of element"
 
-Class: UBERON:0002113 ## kidney
 Class: XCO:0000027 ## surgical implantation
-## {"target": "UBERON:0002113", "manipulation": "XCO:0000027"}
+Class: UBERON:0002113 ## kidney
+## {"manipulation": "XCO:0000027", "target": "UBERON:0002113"}
 Class: ECTO:0002041
  Annotations: rdfs:label "kidney transplant"
  Annotations: IAO:0000115 "An exposure event involving the surgical implantation of a kidney, for either medical or experimental reasons"
@@ -125,10 +186,18 @@ Class: ECTO:0002041
 
  Annotations: oio:hasRelatedSynonym "surgical implantation of kidney"
  Annotations: oio:hasRelatedSynonym "surgical implantation of kidney"
+ Annotations: oio:hasRelatedSynonym "surgical implantation of reniculate kidney"
+ Annotations: oio:hasRelatedSynonym "surgical implantation of kidney"
+ Annotations: oio:hasRelatedSynonym "surgical implantation of reniculate kidney"
+ Annotations: oio:hasRelatedSynonym "surgical implantation of kidney"
+ Annotations: oio:hasRelatedSynonym "surgical implantation of kidney"
+ Annotations: oio:hasRelatedSynonym "surgical implantation of reniculate kidney"
+ Annotations: oio:hasRelatedSynonym "surgical implantation of kidney"
+ Annotations: oio:hasRelatedSynonym "surgical implantation of reniculate kidney"
 
-Class: UBERON:0004538 ## left kidney
 Class: XCO:0000027 ## surgical implantation
-## {"target": "UBERON:0004538", "manipulation": "XCO:0000027"}
+Class: UBERON:0004538 ## left kidney
+## {"manipulation": "XCO:0000027", "target": "UBERON:0004538"}
 Class: ECTO:0002042
  Annotations: rdfs:label "left kidney transplant"
  Annotations: IAO:0000115 "An exposure event involving the surgical implantation of a left kidney, for either medical or experimental reasons"
@@ -138,10 +207,14 @@ Class: ECTO:0002042
 
  Annotations: oio:hasRelatedSynonym "surgical implantation of left kidney"
  Annotations: oio:hasRelatedSynonym "surgical implantation of left kidney"
+ Annotations: oio:hasRelatedSynonym "surgical implantation of left kidney"
+ Annotations: oio:hasRelatedSynonym "surgical implantation of left kidney"
+ Annotations: oio:hasRelatedSynonym "surgical implantation of left kidney"
+ Annotations: oio:hasRelatedSynonym "surgical implantation of left kidney"
 
-Class: UBERON:0004539 ## right kidney
 Class: XCO:0000027 ## surgical implantation
-## {"target": "UBERON:0004539", "manipulation": "XCO:0000027"}
+Class: UBERON:0004539 ## right kidney
+## {"manipulation": "XCO:0000027", "target": "UBERON:0004539"}
 Class: ECTO:0002043
  Annotations: rdfs:label "right kidney transplant"
  Annotations: IAO:0000115 "An exposure event involving the surgical implantation of a right kidney, for either medical or experimental reasons"
@@ -151,28 +224,56 @@ Class: ECTO:0002043
 
  Annotations: oio:hasRelatedSynonym "surgical implantation of right kidney"
  Annotations: oio:hasRelatedSynonym "surgical implantation of right kidney"
+ Annotations: oio:hasRelatedSynonym "surgical implantation of right kidney"
+ Annotations: oio:hasRelatedSynonym "surgical implantation of right kidney"
+ Annotations: oio:hasRelatedSynonym "surgical implantation of right kidney"
+ Annotations: oio:hasRelatedSynonym "surgical implantation of right kidney"
 
-Class: UBERON:0002475 ## saphenous nerve
 Class: XCO:0000374 ## axotomy
-## {"target": "UBERON:0002475", "manipulation": "XCO:0000374"}
+Class: UBERON:0002475 ## saphenous nerve
+## {"manipulation": "XCO:0000374", "target": "UBERON:0002475"}
 Class: ECTO:0002044
  Annotations: rdfs:label "axotomy of saphenous nerve"
  Annotations: IAO:0000115 "An exposure event involving the axotomy of a saphenous nerve, for either medical or experimental reasons"
  Annotations: oio:hasExactSynonym "saphenous nerve axotomy"
  EquivalentTo: ExO:0000002 and RO:0002233 some (XCO:0000374 and RO:0000057 some UBERON:0002475) ## 'exposure event' and 'has input' some (axotomy and 'has participant' some saphenous nerve)
+  ## Auto-syns
 
-Class: UBERON:0001322 ## sciatic nerve
+ Annotations: oio:hasRelatedSynonym "axotomy of nervus saphenus"
+ Annotations: oio:hasRelatedSynonym "axotomy of nervus saphenus"
+ Annotations: oio:hasRelatedSynonym "axotomy of nervus saphenus"
+ Annotations: oio:hasRelatedSynonym "axotomy of nervus saphenus"
+
 Class: XCO:0000374 ## axotomy
-## {"target": "UBERON:0001322", "manipulation": "XCO:0000374"}
+Class: UBERON:0001322 ## sciatic nerve
+## {"manipulation": "XCO:0000374", "target": "UBERON:0001322"}
 Class: ECTO:0002045
  Annotations: rdfs:label "axotomy of sciatic nerve"
  Annotations: IAO:0000115 "An exposure event involving the axotomy of a sciatic nerve, for either medical or experimental reasons"
  Annotations: oio:hasExactSynonym "sciatic nerve axotomy"
  EquivalentTo: ExO:0000002 and RO:0002233 some (XCO:0000374 and RO:0000057 some UBERON:0001322) ## 'exposure event' and 'has input' some (axotomy and 'has participant' some sciatic nerve)
+  ## Auto-syns
 
-Class: UBERON:0000062 ## organ
+ Annotations: oio:hasRelatedSynonym "axotomy of ischiadic nerve"
+ Annotations: oio:hasRelatedSynonym "axotomy of ischiatic nerve"
+ Annotations: oio:hasRelatedSynonym "axotomy of nervus ischiadicus"
+ Annotations: oio:hasRelatedSynonym "axotomy of nervus sciaticus"
+ Annotations: oio:hasRelatedSynonym "axotomy of ischiadic nerve"
+ Annotations: oio:hasRelatedSynonym "axotomy of ischiatic nerve"
+ Annotations: oio:hasRelatedSynonym "axotomy of nervus ischiadicus"
+ Annotations: oio:hasRelatedSynonym "axotomy of nervus sciaticus"
+ Annotations: oio:hasRelatedSynonym "axotomy of ischiadic nerve"
+ Annotations: oio:hasRelatedSynonym "axotomy of ischiatic nerve"
+ Annotations: oio:hasRelatedSynonym "axotomy of nervus ischiadicus"
+ Annotations: oio:hasRelatedSynonym "axotomy of nervus sciaticus"
+ Annotations: oio:hasRelatedSynonym "axotomy of ischiadic nerve"
+ Annotations: oio:hasRelatedSynonym "axotomy of ischiatic nerve"
+ Annotations: oio:hasRelatedSynonym "axotomy of nervus ischiadicus"
+ Annotations: oio:hasRelatedSynonym "axotomy of nervus sciaticus"
+
 Class: XCO:0000026 ## surgical removal
-## {"target": "UBERON:0000062", "manipulation": "XCO:0000026"}
+Class: UBERON:0000062 ## organ
+## {"manipulation": "XCO:0000026", "target": "UBERON:0000062"}
 Class: ECTO:0002046
  Annotations: rdfs:label "surgical removal of organ"
  Annotations: IAO:0000115 "An exposure event involving the surgical removal of a organ, for either medical or experimental reasons"
@@ -180,20 +281,37 @@ Class: ECTO:0002046
  EquivalentTo: ExO:0000002 and RO:0002233 some (XCO:0000026 and RO:0000057 some UBERON:0000062) ## 'exposure event' and 'has input' some (surgical removal and 'has participant' some organ)
   ## Auto-syns
 
+ Annotations: oio:hasRelatedSynonym "surgical removal of anatomical unit"
+ Annotations: oio:hasRelatedSynonym "surgical removal of body organ"
+ Annotations: oio:hasRelatedSynonym "surgical removal of element"
+ Annotations: oio:hasRelatedSynonym "surgical removal of anatomical unit"
+ Annotations: oio:hasRelatedSynonym "surgical removal of body organ"
+ Annotations: oio:hasRelatedSynonym "surgical removal of element"
+ Annotations: oio:hasRelatedSynonym "surgical removal of anatomical unit"
+ Annotations: oio:hasRelatedSynonym "surgical removal of body organ"
+ Annotations: oio:hasRelatedSynonym "surgical removal of element"
+ Annotations: oio:hasRelatedSynonym "surgical removal of anatomical unit"
+ Annotations: oio:hasRelatedSynonym "surgical removal of body organ"
  Annotations: oio:hasRelatedSynonym "surgical removal of element"
 
-Class: UBERON:0002113 ## kidney
 Class: XCO:0000026 ## surgical removal
-## {"target": "UBERON:0002113", "manipulation": "XCO:0000026"}
+Class: UBERON:0002113 ## kidney
+## {"manipulation": "XCO:0000026", "target": "UBERON:0002113"}
 Class: ECTO:0002047
  Annotations: rdfs:label "surgical removal of kidney"
  Annotations: IAO:0000115 "An exposure event involving the surgical removal of a kidney, for either medical or experimental reasons"
  Annotations: oio:hasExactSynonym "kidney surgical removal"
  EquivalentTo: ExO:0000002 and RO:0002233 some (XCO:0000026 and RO:0000057 some UBERON:0002113) ## 'exposure event' and 'has input' some (surgical removal and 'has participant' some kidney)
+  ## Auto-syns
 
-Class: UBERON:0000992 ## female gonad
+ Annotations: oio:hasRelatedSynonym "surgical removal of reniculate kidney"
+ Annotations: oio:hasRelatedSynonym "surgical removal of reniculate kidney"
+ Annotations: oio:hasRelatedSynonym "surgical removal of reniculate kidney"
+ Annotations: oio:hasRelatedSynonym "surgical removal of reniculate kidney"
+
 Class: XCO:0000026 ## surgical removal
-## {"target": "UBERON:0000992", "manipulation": "XCO:0000026"}
+Class: UBERON:0000992 ## female gonad
+## {"manipulation": "XCO:0000026", "target": "UBERON:0000992"}
 Class: ECTO:0002048
  Annotations: rdfs:label "ovariectomy"
  Annotations: IAO:0000115 "An exposure event involving the surgical removal of a female gonad, for either medical or experimental reasons"
@@ -203,13 +321,110 @@ Class: ECTO:0002048
 
  Annotations: oio:hasRelatedSynonym "surgical removal of female gonad"
  Annotations: oio:hasRelatedSynonym "surgical removal of female gonad"
+ Annotations: oio:hasRelatedSynonym "surgical removal of female organism genitalia gonad"
+ Annotations: oio:hasRelatedSynonym "surgical removal of female organism genitalia gonada"
+ Annotations: oio:hasRelatedSynonym "surgical removal of female organism reproductive system gonad"
+ Annotations: oio:hasRelatedSynonym "surgical removal of female organism reproductive system gonada"
+ Annotations: oio:hasRelatedSynonym "surgical removal of female reproductive system gonad"
+ Annotations: oio:hasRelatedSynonym "surgical removal of female reproductive system gonada"
+ Annotations: oio:hasRelatedSynonym "surgical removal of genitalia of female organism gonad"
+ Annotations: oio:hasRelatedSynonym "surgical removal of genitalia of female organism gonada"
+ Annotations: oio:hasRelatedSynonym "surgical removal of gonad of female organism genitalia"
+ Annotations: oio:hasRelatedSynonym "surgical removal of gonad of female organism reproductive system"
+ Annotations: oio:hasRelatedSynonym "surgical removal of gonad of female reproductive system"
+ Annotations: oio:hasRelatedSynonym "surgical removal of gonad of genitalia of female organism"
+ Annotations: oio:hasRelatedSynonym "surgical removal of gonad of reproductive system of female organism"
+ Annotations: oio:hasRelatedSynonym "surgical removal of gonada of female organism genitalia"
+ Annotations: oio:hasRelatedSynonym "surgical removal of gonada of female organism reproductive system"
+ Annotations: oio:hasRelatedSynonym "surgical removal of gonada of female reproductive system"
+ Annotations: oio:hasRelatedSynonym "surgical removal of gonada of genitalia of female organism"
+ Annotations: oio:hasRelatedSynonym "surgical removal of gonada of reproductive system of female organism"
  Annotations: oio:hasRelatedSynonym "surgical removal of ovaries"
  Annotations: oio:hasRelatedSynonym "surgical removal of ovarium"
  Annotations: oio:hasRelatedSynonym "surgical removal of ovary"
+ Annotations: oio:hasRelatedSynonym "surgical removal of ovum-producing ovary"
+ Annotations: oio:hasRelatedSynonym "surgical removal of reproductive system of female organism gonad"
+ Annotations: oio:hasRelatedSynonym "surgical removal of reproductive system of female organism gonada"
+ Annotations: oio:hasRelatedSynonym "surgical removal of female gonad"
+ Annotations: oio:hasRelatedSynonym "surgical removal of female organism genitalia gonad"
+ Annotations: oio:hasRelatedSynonym "surgical removal of female organism genitalia gonada"
+ Annotations: oio:hasRelatedSynonym "surgical removal of female organism reproductive system gonad"
+ Annotations: oio:hasRelatedSynonym "surgical removal of female organism reproductive system gonada"
+ Annotations: oio:hasRelatedSynonym "surgical removal of female reproductive system gonad"
+ Annotations: oio:hasRelatedSynonym "surgical removal of female reproductive system gonada"
+ Annotations: oio:hasRelatedSynonym "surgical removal of genitalia of female organism gonad"
+ Annotations: oio:hasRelatedSynonym "surgical removal of genitalia of female organism gonada"
+ Annotations: oio:hasRelatedSynonym "surgical removal of gonad of female organism genitalia"
+ Annotations: oio:hasRelatedSynonym "surgical removal of gonad of female organism reproductive system"
+ Annotations: oio:hasRelatedSynonym "surgical removal of gonad of female reproductive system"
+ Annotations: oio:hasRelatedSynonym "surgical removal of gonad of genitalia of female organism"
+ Annotations: oio:hasRelatedSynonym "surgical removal of gonad of reproductive system of female organism"
+ Annotations: oio:hasRelatedSynonym "surgical removal of gonada of female organism genitalia"
+ Annotations: oio:hasRelatedSynonym "surgical removal of gonada of female organism reproductive system"
+ Annotations: oio:hasRelatedSynonym "surgical removal of gonada of female reproductive system"
+ Annotations: oio:hasRelatedSynonym "surgical removal of gonada of genitalia of female organism"
+ Annotations: oio:hasRelatedSynonym "surgical removal of gonada of reproductive system of female organism"
+ Annotations: oio:hasRelatedSynonym "surgical removal of ovaries"
+ Annotations: oio:hasRelatedSynonym "surgical removal of ovarium"
+ Annotations: oio:hasRelatedSynonym "surgical removal of ovary"
+ Annotations: oio:hasRelatedSynonym "surgical removal of ovum-producing ovary"
+ Annotations: oio:hasRelatedSynonym "surgical removal of reproductive system of female organism gonad"
+ Annotations: oio:hasRelatedSynonym "surgical removal of reproductive system of female organism gonada"
+ Annotations: oio:hasRelatedSynonym "surgical removal of female gonad"
+ Annotations: oio:hasRelatedSynonym "surgical removal of female gonad"
+ Annotations: oio:hasRelatedSynonym "surgical removal of female organism genitalia gonad"
+ Annotations: oio:hasRelatedSynonym "surgical removal of female organism genitalia gonada"
+ Annotations: oio:hasRelatedSynonym "surgical removal of female organism reproductive system gonad"
+ Annotations: oio:hasRelatedSynonym "surgical removal of female organism reproductive system gonada"
+ Annotations: oio:hasRelatedSynonym "surgical removal of female reproductive system gonad"
+ Annotations: oio:hasRelatedSynonym "surgical removal of female reproductive system gonada"
+ Annotations: oio:hasRelatedSynonym "surgical removal of genitalia of female organism gonad"
+ Annotations: oio:hasRelatedSynonym "surgical removal of genitalia of female organism gonada"
+ Annotations: oio:hasRelatedSynonym "surgical removal of gonad of female organism genitalia"
+ Annotations: oio:hasRelatedSynonym "surgical removal of gonad of female organism reproductive system"
+ Annotations: oio:hasRelatedSynonym "surgical removal of gonad of female reproductive system"
+ Annotations: oio:hasRelatedSynonym "surgical removal of gonad of genitalia of female organism"
+ Annotations: oio:hasRelatedSynonym "surgical removal of gonad of reproductive system of female organism"
+ Annotations: oio:hasRelatedSynonym "surgical removal of gonada of female organism genitalia"
+ Annotations: oio:hasRelatedSynonym "surgical removal of gonada of female organism reproductive system"
+ Annotations: oio:hasRelatedSynonym "surgical removal of gonada of female reproductive system"
+ Annotations: oio:hasRelatedSynonym "surgical removal of gonada of genitalia of female organism"
+ Annotations: oio:hasRelatedSynonym "surgical removal of gonada of reproductive system of female organism"
+ Annotations: oio:hasRelatedSynonym "surgical removal of ovaries"
+ Annotations: oio:hasRelatedSynonym "surgical removal of ovarium"
+ Annotations: oio:hasRelatedSynonym "surgical removal of ovary"
+ Annotations: oio:hasRelatedSynonym "surgical removal of ovum-producing ovary"
+ Annotations: oio:hasRelatedSynonym "surgical removal of reproductive system of female organism gonad"
+ Annotations: oio:hasRelatedSynonym "surgical removal of reproductive system of female organism gonada"
+ Annotations: oio:hasRelatedSynonym "surgical removal of female gonad"
+ Annotations: oio:hasRelatedSynonym "surgical removal of female organism genitalia gonad"
+ Annotations: oio:hasRelatedSynonym "surgical removal of female organism genitalia gonada"
+ Annotations: oio:hasRelatedSynonym "surgical removal of female organism reproductive system gonad"
+ Annotations: oio:hasRelatedSynonym "surgical removal of female organism reproductive system gonada"
+ Annotations: oio:hasRelatedSynonym "surgical removal of female reproductive system gonad"
+ Annotations: oio:hasRelatedSynonym "surgical removal of female reproductive system gonada"
+ Annotations: oio:hasRelatedSynonym "surgical removal of genitalia of female organism gonad"
+ Annotations: oio:hasRelatedSynonym "surgical removal of genitalia of female organism gonada"
+ Annotations: oio:hasRelatedSynonym "surgical removal of gonad of female organism genitalia"
+ Annotations: oio:hasRelatedSynonym "surgical removal of gonad of female organism reproductive system"
+ Annotations: oio:hasRelatedSynonym "surgical removal of gonad of female reproductive system"
+ Annotations: oio:hasRelatedSynonym "surgical removal of gonad of genitalia of female organism"
+ Annotations: oio:hasRelatedSynonym "surgical removal of gonad of reproductive system of female organism"
+ Annotations: oio:hasRelatedSynonym "surgical removal of gonada of female organism genitalia"
+ Annotations: oio:hasRelatedSynonym "surgical removal of gonada of female organism reproductive system"
+ Annotations: oio:hasRelatedSynonym "surgical removal of gonada of female reproductive system"
+ Annotations: oio:hasRelatedSynonym "surgical removal of gonada of genitalia of female organism"
+ Annotations: oio:hasRelatedSynonym "surgical removal of gonada of reproductive system of female organism"
+ Annotations: oio:hasRelatedSynonym "surgical removal of ovaries"
+ Annotations: oio:hasRelatedSynonym "surgical removal of ovarium"
+ Annotations: oio:hasRelatedSynonym "surgical removal of ovary"
+ Annotations: oio:hasRelatedSynonym "surgical removal of ovum-producing ovary"
+ Annotations: oio:hasRelatedSynonym "surgical removal of reproductive system of female organism gonad"
+ Annotations: oio:hasRelatedSynonym "surgical removal of reproductive system of female organism gonada"
 
-Class: UBERON:0001264 ## pancreas
 Class: XCO:0000026 ## surgical removal
-## {"target": "UBERON:0001264", "manipulation": "XCO:0000026"}
+Class: UBERON:0001264 ## pancreas
+## {"manipulation": "XCO:0000026", "target": "UBERON:0001264"}
 Class: ECTO:0002049
  Annotations: rdfs:label "pancreatectomy"
  Annotations: IAO:0000115 "An exposure event involving the surgical removal of a pancreas, for either medical or experimental reasons"
@@ -219,10 +434,14 @@ Class: ECTO:0002049
 
  Annotations: oio:hasRelatedSynonym "surgical removal of pancreas"
  Annotations: oio:hasRelatedSynonym "surgical removal of pancreas"
+ Annotations: oio:hasRelatedSynonym "surgical removal of pancreas"
+ Annotations: oio:hasRelatedSynonym "surgical removal of pancreas"
+ Annotations: oio:hasRelatedSynonym "surgical removal of pancreas"
+ Annotations: oio:hasRelatedSynonym "surgical removal of pancreas"
 
-Class: UBERON:0002107 ## liver
 Class: XCO:0000026 ## surgical removal
-## {"target": "UBERON:0002107", "manipulation": "XCO:0000026"}
+Class: UBERON:0002107 ## liver
+## {"manipulation": "XCO:0000026", "target": "UBERON:0002107"}
 Class: ECTO:0002050
  Annotations: rdfs:label "hepatectomy"
  Annotations: IAO:0000115 "An exposure event involving the surgical removal of a liver, for either medical or experimental reasons"
@@ -231,6 +450,16 @@ Class: ECTO:0002050
   ## Auto-syns
 
  Annotations: oio:hasRelatedSynonym "surgical removal of liver"
+ Annotations: oio:hasRelatedSynonym "surgical removal of liver"
+ Annotations: oio:hasRelatedSynonym "surgical removal of iecur"
+ Annotations: oio:hasRelatedSynonym "surgical removal of jecur"
+ Annotations: oio:hasRelatedSynonym "surgical removal of liver"
+ Annotations: oio:hasRelatedSynonym "surgical removal of iecur"
+ Annotations: oio:hasRelatedSynonym "surgical removal of jecur"
+ Annotations: oio:hasRelatedSynonym "surgical removal of liver"
+ Annotations: oio:hasRelatedSynonym "surgical removal of liver"
+ Annotations: oio:hasRelatedSynonym "surgical removal of iecur"
+ Annotations: oio:hasRelatedSynonym "surgical removal of jecur"
  Annotations: oio:hasRelatedSynonym "surgical removal of liver"
  Annotations: oio:hasRelatedSynonym "surgical removal of iecur"
  Annotations: oio:hasRelatedSynonym "surgical removal of jecur"
