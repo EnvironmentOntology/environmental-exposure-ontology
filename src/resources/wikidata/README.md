@@ -1,3 +1,8 @@
 # Mining wikidata for exposures
 
-Highly experimental
+See the [Makefile](Makefile) for details
+
+Ontology subgraphs are pulled from wikidata using SPARQL queries
+(turtle format - we also convert to obo for convenience purposes).
+
+

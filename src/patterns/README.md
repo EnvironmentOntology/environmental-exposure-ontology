@@ -21,6 +21,10 @@ ontology can be used for fish and other aquatic organisms.
 In some circumstances some assumptions are already baked in, e.g. via
 CHEBI roles such as 'toxin'.
 
+Some non-human use cases:
+
+ * http://www.nature.com/articles/srep33207 - bee exposome       
+
 ## Experimental vs Non-experimental conditions
 
 Some ontologies designed for model organisms bake in assumptions that

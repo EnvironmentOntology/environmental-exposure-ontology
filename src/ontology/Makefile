@@ -213,6 +213,9 @@ candidates-chemicals1.csv: modules/exposure_to_chemical.pro
 candidates-chemicals2.csv: modules/exposure_to_chemical.pro
 	blip-findall -i $<  -r chebi "class(R,'biological role'),subclassT(Z,R),parent(X,has_role,Z),\+ct(_,_,X,_)"  -label -select "x('',X)" -no_pred -use_tabs | sort -u > $@.tmp && tsv2csv.py $@.tmp > $@ && cat $@
 
+candidates-chemicals3.csv: modules/exposure_to_chemical.pro
+	blip-findall -i $< -r chebi  -i ../resources/wikidata/chebi-hazard.obo "entity_xref(W,X),id_idspace(W,'Wikidata'),\+ct(_,_,X,_)"  -label -select "x('',X)" -no_pred -use_tabs | sort -u > $@.tmp && tsv2csv.py $@.tmp > $@ && cat $@
+
 #candidates-roles.csv: modules/exposure_to_chemical_with_role.pro
 #	blip-findall -i $<  -r chebi "class(R,'pesticide'),subclassRT(X,R),\+ct(_,_,X,_)"  -label -select "x('',X)" -no_pred -use_tabs | sort -u > $@.tmp && tsv2csv.py $@.tmp > $@ && cat $@
 

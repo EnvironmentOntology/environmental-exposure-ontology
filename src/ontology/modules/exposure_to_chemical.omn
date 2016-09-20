@@ -2,26 +2,26 @@ Prefix: : <http://purl.obolibrary.org/obo/>
 Prefix: IAO: <http://purl.obolibrary.org/obo/IAO_>
 Prefix: DOSDP: <http://geneontology.org/foo/>
 Prefix: oio: <http://www.geneontology.org/formats/oboInOwl#>
-Prefix: NCIT: <http://purl.obolibrary.org/obo/NCIT_>
-Prefix: RO: <http://purl.obolibrary.org/obo/RO_>
-Prefix: PR: <http://purl.obolibrary.org/obo/PR_>
-Prefix: CHEBI: <http://purl.obolibrary.org/obo/CHEBI_>
-Prefix: ENVO: <http://purl.obolibrary.org/obo/ENVO_>
-Prefix: UBERON: <http://purl.obolibrary.org/obo/UBERON_>
-Prefix: PATO: <http://purl.obolibrary.org/obo/PATO_>
-Prefix: ExO: <http://purl.obolibrary.org/obo/ExO_>
-Prefix: OBA: <http://purl.obolibrary.org/obo/OBA_>
-Prefix: GO: <http://purl.obolibrary.org/obo/GO_>
-Prefix: ZECO: <http://purl.obolibrary.org/obo/ZECO_>
-Prefix: NBO: <http://purl.obolibrary.org/obo/NBO_>
-Prefix: BFO: <http://purl.obolibrary.org/obo/BFO_>
-Prefix: NPO: <http://purl.obolibrary.org/obo/NPO_>
+Prefix: XCO: <http://purl.obolibrary.org/obo/XCO_>
 Prefix: ECTO: <http://purl.obolibrary.org/obo/ECTO_>
+Prefix: SO: <http://purl.obolibrary.org/obo/SO_>
 Prefix: CL: <http://purl.obolibrary.org/obo/CL_>
 Prefix: GOCHE: <http://purl.obolibrary.org/obo/GOCHE_>
-Prefix: SO: <http://purl.obolibrary.org/obo/SO_>
+Prefix: OBA: <http://purl.obolibrary.org/obo/OBA_>
+Prefix: UBERON: <http://purl.obolibrary.org/obo/UBERON_>
+Prefix: ExO: <http://purl.obolibrary.org/obo/ExO_>
+Prefix: PATO: <http://purl.obolibrary.org/obo/PATO_>
+Prefix: NCIT: <http://purl.obolibrary.org/obo/NCIT_>
+Prefix: NBO: <http://purl.obolibrary.org/obo/NBO_>
+Prefix: CHEBI: <http://purl.obolibrary.org/obo/CHEBI_>
+Prefix: ENVO: <http://purl.obolibrary.org/obo/ENVO_>
+Prefix: GO: <http://purl.obolibrary.org/obo/GO_>
+Prefix: ZECO: <http://purl.obolibrary.org/obo/ZECO_>
+Prefix: RO: <http://purl.obolibrary.org/obo/RO_>
+Prefix: BFO: <http://purl.obolibrary.org/obo/BFO_>
+Prefix: PR: <http://purl.obolibrary.org/obo/PR_>
+Prefix: NPO: <http://purl.obolibrary.org/obo/NPO_>
 Prefix: PO: <http://purl.obolibrary.org/obo/PO_>
-Prefix: XCO: <http://purl.obolibrary.org/obo/XCO_>
 
  ## Auto-generated
 
@@ -32,11 +32,11 @@ AnnotationProperty: DOSDP:applies-pattern
 AnnotationProperty: oio:hasRelatedSynonym
 AnnotationProperty: oio:hasExactSynonym
 AnnotationProperty: oio:hasExactSynonym
-Class: CHEBI:24431 ## chemical entity
 Class: ExO:0000002 ## exposure event
-ObjectProperty: RO:0002233 ## has input
-ObjectProperty: BFO_0000050 ## stressor
+Class: CHEBI:24431 ## chemical entity
 ObjectProperty: BFO_0000050 ## part of
+ObjectProperty: BFO_0000050 ## stressor
+ObjectProperty: RO:0002233 ## has input
 ## Auto-generated classes
 
 Class: CHEBI:26523 ## reactive oxygen species
@@ -44024,3 +44024,175 @@ Class: ECTO:0002289
  Annotations: oio:hasExactSynonym "Ricin exposure"
  Annotations: oio:hasExactSynonym "Ricin exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some CHEBI:8852 ## 'exposure event' and 'has input' some Ricin
+
+Class: CHEBI:17747 ## bis(2-ethylhexyl) phthalate
+## {"stressor": "CHEBI:17747"}
+Class: ECTO:0002290
+ Annotations: rdfs:label "exposure to bis(2-ethylhexyl) phthalate"
+ Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to bis(2-ethylhexyl) phthalate. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion."
+ Annotations: oio:hasExactSynonym "bis(2-ethylhexyl) phthalate exposure"
+ Annotations: oio:hasExactSynonym "bis(2-ethylhexyl) phthalate exposure event"
+ EquivalentTo: ExO:0000002 and RO:0002233 some CHEBI:17747 ## 'exposure event' and 'has input' some bis(2-ethylhexyl) phthalate
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to 1,2-Benzenedicarboxylic acid bis(2-ethylhexyl) ester"
+ Annotations: oio:hasRelatedSynonym "exposure to 2-Ethylhexyl phthalate"
+ Annotations: oio:hasRelatedSynonym "exposure to bis(2-ethylhexyl) benzene-1,2-dicarboxylate"
+ Annotations: oio:hasRelatedSynonym "exposure to Bis(2-ethylhexyl) o-phthalate"
+ Annotations: oio:hasRelatedSynonym "exposure to Bis(2-ethylhexyl)phthalate"
+ Annotations: oio:hasRelatedSynonym "exposure to bis(2-ethylhexyl)phthalate"
+ Annotations: oio:hasRelatedSynonym "exposure to Bis(ethylhexyl) phthalate"
+ Annotations: oio:hasRelatedSynonym "exposure to Di(2-ethylhexyl) o-phthalate"
+ Annotations: oio:hasRelatedSynonym "exposure to Di(2-ethylhexyl)orthophthalate"
+ Annotations: oio:hasRelatedSynonym "exposure to Di(2-ethylhexyl)phthalate"
+ Annotations: oio:hasRelatedSynonym "exposure to Di(2-ethylhexyl)phthalate"
+ Annotations: oio:hasRelatedSynonym "exposure to Di(ethylhexyl) phthalate"
+ Annotations: oio:hasRelatedSynonym "exposure to di-iso-Octyl phthalate"
+ Annotations: oio:hasRelatedSynonym "exposure to Di-sec-octyl phthalate"
+ Annotations: oio:hasRelatedSynonym "exposure to Di-sec-octyl phthalate"
+ Annotations: oio:hasRelatedSynonym "exposure to Diethylhexyl phthalate"
+ Annotations: oio:hasRelatedSynonym "exposure to Dioctyl phthalate"
+ Annotations: oio:hasRelatedSynonym "exposure to Octyl phthalate"
+ Annotations: oio:hasRelatedSynonym "exposure to Phthalic acid bis(2-ethylhexyl) ester"
+ Annotations: oio:hasRelatedSynonym "exposure to Phthalic acid di(2-ethylhexyl) ester"
+
+Class: CHEBI:18853 ## 1,1-dimethylhydrazine
+## {"stressor": "CHEBI:18853"}
+Class: ECTO:0002291
+ Annotations: rdfs:label "exposure to 1,1-dimethylhydrazine"
+ Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to 1,1-dimethylhydrazine. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion."
+ Annotations: oio:hasExactSynonym "1,1-dimethylhydrazine exposure"
+ Annotations: oio:hasExactSynonym "1,1-dimethylhydrazine exposure event"
+ EquivalentTo: ExO:0000002 and RO:0002233 some CHEBI:18853 ## 'exposure event' and 'has input' some 1,1-dimethylhydrazine
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to 1,1-Dimethylhydrazin"
+ Annotations: oio:hasRelatedSynonym "exposure to Dimazine"
+ Annotations: oio:hasRelatedSynonym "exposure to gem-Dimethylhydrazine"
+ Annotations: oio:hasRelatedSynonym "exposure to N,N-Dimethylhydrazine"
+ Annotations: oio:hasRelatedSynonym "exposure to unsymmetrical dimethylhydrazine"
+
+Class: CHEBI:18918 ## 1,3-dichloropropene
+## {"stressor": "CHEBI:18918"}
+Class: ECTO:0002292
+ Annotations: rdfs:label "exposure to 1,3-dichloropropene"
+ Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to 1,3-dichloropropene. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion."
+ Annotations: oio:hasExactSynonym "1,3-dichloropropene exposure"
+ Annotations: oio:hasExactSynonym "1,3-dichloropropene exposure event"
+ EquivalentTo: ExO:0000002 and RO:0002233 some CHEBI:18918 ## 'exposure event' and 'has input' some 1,3-dichloropropene
+
+Class: CHEBI:26709 ## sodium hydrogensulfite
+## {"stressor": "CHEBI:26709"}
+Class: ECTO:0002293
+ Annotations: rdfs:label "exposure to sodium hydrogensulfite"
+ Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to sodium hydrogensulfite. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion."
+ Annotations: oio:hasExactSynonym "sodium hydrogensulfite exposure"
+ Annotations: oio:hasExactSynonym "sodium hydrogensulfite exposure event"
+ EquivalentTo: ExO:0000002 and RO:0002233 some CHEBI:26709 ## 'exposure event' and 'has input' some sodium hydrogensulfite
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to NaHSO3"
+ Annotations: oio:hasRelatedSynonym "exposure to Natriumbisulfit"
+ Annotations: oio:hasRelatedSynonym "exposure to Natriumhydrogensulfit"
+ Annotations: oio:hasRelatedSynonym "exposure to primaeres Natriumsulfit"
+ Annotations: oio:hasRelatedSynonym "exposure to saures Natriumsulfit"
+ Annotations: oio:hasRelatedSynonym "exposure to sodium bisulfite"
+ Annotations: oio:hasRelatedSynonym "exposure to sodium bisulphite"
+ Annotations: oio:hasRelatedSynonym "exposure to sodium hydrogen sulfite"
+
+Class: CHEBI:28741 ## sodium fluoride
+## {"stressor": "CHEBI:28741"}
+Class: ECTO:0002294
+ Annotations: rdfs:label "exposure to sodium fluoride"
+ Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to sodium fluoride. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion."
+ Annotations: oio:hasExactSynonym "sodium fluoride exposure"
+ Annotations: oio:hasExactSynonym "sodium fluoride exposure event"
+ EquivalentTo: ExO:0000002 and RO:0002233 some CHEBI:28741 ## 'exposure event' and 'has input' some sodium fluoride
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to NaF"
+ Annotations: oio:hasRelatedSynonym "exposure to Sodium fluoride"
+
+Class: CHEBI:28925 ## mechlorethamine
+## {"stressor": "CHEBI:28925"}
+Class: ECTO:0002295
+ Annotations: rdfs:label "exposure to mechlorethamine"
+ Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to mechlorethamine. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion."
+ Annotations: oio:hasExactSynonym "mechlorethamine exposure"
+ Annotations: oio:hasExactSynonym "mechlorethamine exposure event"
+ EquivalentTo: ExO:0000002 and RO:0002233 some CHEBI:28925 ## 'exposure event' and 'has input' some mechlorethamine
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to 2,2'-dichloro-N-methyldiethylamine"
+ Annotations: oio:hasRelatedSynonym "exposure to 2-chloro-N-(2-chloroethyl)-N-methylethanamine"
+ Annotations: oio:hasRelatedSynonym "exposure to beta,beta'-dichlorodiethyl-N-methylamine"
+ Annotations: oio:hasRelatedSynonym "exposure to bis(2-chloroethyl)methylamine"
+ Annotations: oio:hasRelatedSynonym "exposure to bis(beta-chloroethyl)methylamine"
+ Annotations: oio:hasRelatedSynonym "exposure to Chlormethine"
+ Annotations: oio:hasRelatedSynonym "exposure to chlormethine"
+ Annotations: oio:hasRelatedSynonym "exposure to Mechlorethamine"
+ Annotations: oio:hasRelatedSynonym "exposure to methylbis(2-chloroethyl)amine"
+ Annotations: oio:hasRelatedSynonym "exposure to methylbis(beta-chloroethyl)amine"
+ Annotations: oio:hasRelatedSynonym "exposure to N-methyl-bis(2-chloroethyl)amine"
+ Annotations: oio:hasRelatedSynonym "exposure to N-methyl-bis(beta-chloroethyl)amine"
+ Annotations: oio:hasRelatedSynonym "exposure to nitrogen mustard"
+
+Class: CHEBI:29036 ## copper(2+)
+## {"stressor": "CHEBI:29036"}
+Class: ECTO:0002296
+ Annotations: rdfs:label "exposure to copper(2+)"
+ Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to copper(2+). Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion."
+ Annotations: oio:hasExactSynonym "copper(2+) exposure"
+ Annotations: oio:hasExactSynonym "copper(2+) exposure event"
+ EquivalentTo: ExO:0000002 and RO:0002233 some CHEBI:29036 ## 'exposure event' and 'has input' some copper(2+)
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to copper(2+) ion"
+ Annotations: oio:hasRelatedSynonym "exposure to copper(II) cation"
+ Annotations: oio:hasRelatedSynonym "exposure to copper(II) cation"
+ Annotations: oio:hasRelatedSynonym "exposure to copper, ion (Cu2+)"
+ Annotations: oio:hasRelatedSynonym "exposure to Cu"
+ Annotations: oio:hasRelatedSynonym "exposure to Cu(2+)"
+ Annotations: oio:hasRelatedSynonym "exposure to Cu(II)"
+ Annotations: oio:hasRelatedSynonym "exposure to Cu2+"
+ Annotations: oio:hasRelatedSynonym "exposure to cupric ion"
+
+Class: CHEBI:32145 ## sodium hydroxide
+## {"stressor": "CHEBI:32145"}
+Class: ECTO:0002297
+ Annotations: rdfs:label "exposure to sodium hydroxide"
+ Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to sodium hydroxide. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion."
+ Annotations: oio:hasExactSynonym "sodium hydroxide exposure"
+ Annotations: oio:hasExactSynonym "sodium hydroxide exposure event"
+ EquivalentTo: ExO:0000002 and RO:0002233 some CHEBI:32145 ## 'exposure event' and 'has input' some sodium hydroxide
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to Aetznatron"
+ Annotations: oio:hasRelatedSynonym "exposure to caustic soda"
+ Annotations: oio:hasRelatedSynonym "exposure to hydroxyde de sodium"
+ Annotations: oio:hasRelatedSynonym "exposure to NaOH"
+ Annotations: oio:hasRelatedSynonym "exposure to Natriumhydroxid"
+ Annotations: oio:hasRelatedSynonym "exposure to soda lye"
+ Annotations: oio:hasRelatedSynonym "exposure to sodium hydrate"
+ Annotations: oio:hasRelatedSynonym "exposure to Sodium hydroxide"
+ Annotations: oio:hasRelatedSynonym "exposure to soude caustique"
+
+Class: CHEBI:53556 ## toluene 2,4-diisocyanate
+## {"stressor": "CHEBI:53556"}
+Class: ECTO:0002298
+ Annotations: rdfs:label "exposure to toluene 2,4-diisocyanate"
+ Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to toluene 2,4-diisocyanate. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion."
+ Annotations: oio:hasExactSynonym "toluene 2,4-diisocyanate exposure"
+ Annotations: oio:hasExactSynonym "toluene 2,4-diisocyanate exposure event"
+ EquivalentTo: ExO:0000002 and RO:0002233 some CHEBI:53556 ## 'exposure event' and 'has input' some toluene 2,4-diisocyanate
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to 2,4-diisocyanato-1-methylbenzene"
+ Annotations: oio:hasRelatedSynonym "exposure to 2,4-Diisocyanatotoluene"
+ Annotations: oio:hasRelatedSynonym "exposure to 2,4-Toluene diisocyanate"
+ Annotations: oio:hasRelatedSynonym "exposure to 2,4-Tolylene diisocyanate"
+ Annotations: oio:hasRelatedSynonym "exposure to 4-Methyl-m-phenylene diisocyanate"
+ Annotations: oio:hasRelatedSynonym "exposure to Isocyanic acid, 4-methyl-m-phenylene ester"
+ Annotations: oio:hasRelatedSynonym "exposure to toluene-2,4-diyl diisocyanate"
+ Annotations: oio:hasRelatedSynonym "exposure to Toluylene-2,4-diisocyanate"
+ Annotations: oio:hasRelatedSynonym "exposure to Tolylene-2,4-diisocyanate"
