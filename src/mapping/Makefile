@@ -15,6 +15,9 @@ exposure-xco.obo:
 exposure-zeco.obo:
 	blip ontol-query -r zeco -query "class(ID)" -to obo > $@
 
+exposure-peco.obo:
+	wget --no-check-certificate https://raw.githubusercontent.com/pombase/fypo/master/peco.obo -O $@
+
 exposure-snomed.obo:
 	blip ontol-query -r snomed_tidy -query "class(R,'Exposureure to potentially harmful entity'),subclassRT(ID,R)" -to obo | perl -npe 's@SCTID_@SCTID:@g' > $@
 
