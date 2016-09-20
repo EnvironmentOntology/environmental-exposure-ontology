@@ -52,6 +52,7 @@ Ontologies used in composition (largely orthogonal):
 Similar ontologies (overlapping/non-orthogonal)
 
  * ZECO - zebrafish specific conditions
+ * PECO - pombase specific conditions
  * EO - plant-specific environmental conditions and treatments
  * GO - `response to X` subset shadows many classes here
  * SNOMED - has an exposure subset
