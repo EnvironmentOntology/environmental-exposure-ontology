@@ -5,16 +5,10 @@ BASE=$(OBO)/wikidata
 # Extraction from WD
 # ----------------------------------------
 
-# basic query, subclass closure
-%.rdf: %-subclasses.rq
+%.rdf: %.rq
 	rsparql --query $< --service=https://query.wikidata.org/sparql > $@
 .PRECIOUS: %.rdf
 
-# translate simple triples to SomeValuesFrom
-# For exposure: symptom-route-cause
-%-ont.rdf: %.rq
-	rsparql --query $< --service=https://query.wikidata.org/sparql > $@
-.PRECIOUS: %.rdf
 
 # ----------------------------------------
 # Translation
