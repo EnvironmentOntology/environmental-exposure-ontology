@@ -5,7 +5,7 @@ ONTDIR=.
 MODDIR=modules
 DATE=`date +%Y-%m-%d`
 
-MODS = exposure_to_radiation exposure_to_material exposure_to_environmental_process exposure_to_environmental_condition exposure_to_chemical exposure_to_chemical_with_role exposure_to_levels_in_medium exposure_to_change_in_levels exposure_via_route activity prenatal surgical_procedure
+MODS = exposure_to_radiation exposure_to_material exposure_to_environmental_process exposure_to_environmental_condition exposure_to_chemical exposure_to_chemical_with_role exposure_to_levels_in_medium exposure_to_change_in_levels exposure_via_route activity prenatal surgical_procedure exposure_to_infection
 MODS_CSV = $(patsubst %,$(MODDIR)/%.csv,$(MODS))
 
 all: all_imports all_modules ecto.owl ecto.obo all_subsets 
@@ -68,7 +68,7 @@ top-report: ecto.obo
 
 # Ontology dependencies
 # We don't include clo, as this is currently not working
-IMPORTS = pato envo npo exo xco ro chebi activity uberon
+IMPORTS = pato envo npo exo xco ro chebi activity uberon ncbitaxon
 
 # Make this target to regenerate ALL
 all_imports_owl: $(patsubst %, imports/%_import.owl,$(IMPORTS))
@@ -79,13 +79,20 @@ KEEPRELS = BFO:0000050 BFO:0000051 RO:0002202 immediate_transformation_of
 
 # File used to seed module extraction
 imports/seed.tsv: ecto-core.owl imports/seed_curated.tsv
-	owltools $(USECAT) $< --merge-support-ontologies --export-table $@.tmp && cut -f1 $@.tmp imports/seed_curated.tsv | sort -u > $@
+	owltools $(USECAT) $< --merge-support-ontologies --export-table $@.tmp &&\
+	cut -f1 $@.tmp imports/seed_curated.tsv | sort -u > $@
 
-imports/%_import.owl: $(SRC) mirror/%.owl imports/seed.tsv
-	robot extract -i mirror/$*.owl -T imports/seed.tsv -m BOT -O $(OBO)/ecto/$@ -o $@.tmp.owl && mv $@.tmp.owl $@
+imports/%_import.owl: $(SRC) mirror/%.owl.gz imports/seed.tsv
+	gzip -dc mirror/$*.owl.gz > mirror/$*.owl &&\
+	robot extract -i mirror/$*.owl -T imports/seed.tsv -m BOT -O $(OBO)/ecto/$@ -o $@.tmp.owl && mv $@.tmp.owl $@ &&\
+	rm mirror/$*.owl
 
 imports/%_import.obo: imports/%_import.owl
 	owltools $(USECAT) $< -o -f obo --no-check $@
+
+mirror/%.gz: mirror/%
+	gzip -f $<
+.PRECIOUS: mirror/%.gz
 
 # clone remote ontology locally, perfoming some excision of relations and annotations
 mirror/%.obo:

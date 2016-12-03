@@ -39,20 +39,37 @@ access-ncit.obo:
 exposure-wikidata.obo:
 	cp ../resources/wikidata/combined.obo $@
 
-exposure-ecto.obo:
-	cp ../../ecto.obo $@
+exposure-ecto.obo: ../../ecto.obo
+	cp $< $@
 
-combined-exposure.obo: all_exposure
+#combined-exposure.obo: all_exposure
+combined-exposure.obo:
 	obo-cat.pl exposure-*.obo | grep -v ^namespace: | grep -v ^property_value: | ./add-syns.pl > $@
+.PRECIOUS: combined-exposure.obo
 
 probs.tsv: combined-exposure.obo ignore.pro
 	blip-findall  -i ignore.pro -debug index -goal nlp_index_all -i $< -u metadata_nlp entity_pair_mprobs/6 -no_pred > $@.tmp && mv $@.tmp $@
 
 m.tsv: combined-exposure.obo ignore.pro
 	blip-findall  -i ignore.pro -debug index -goal nlp_index_all -i $< -u metadata_nlp entity_pair_label_match/6 -label -no_pred > $@
+.PRECIOUS: m.tsv
+
+mxrefs.obo: m.tsv
+	cut -f1-2 $< | sort -u | tbl2obolinks.pl -k --rel xref > $@
 
 unmapped.tsv: combined-exposure.obo ignore.pro
 	blip-findall  -i ignore.pro -debug index -goal nlp_index_all -i $< -u metadata_nlp "entity_nomatch/1" -label -no_pred > $@
+
+suggestions.tsv: combined-exposure.obo ignore.pro
+	blip-findall  -i ignore.pro -consult suggester.pro -debug index -goal nlp_index_all -i $< -u metadata_nlp "" -label -no_pred > $@
+
+unmapped-%.tsv: unmapped.tsv
+	grep $*: $< > $@
+
+# not really obol...
+# use odputils to write suggestions based on parsing names using DPs
+obol-%.obo: mxrefs.obo
+	blip-findall -r $* -i ../ontology/ecto.obo -r envo -r chebi -u odputil -i $< -i ../patterns/ecto_patterns.pro "write_suggestion('MRE')" > $@.tmp && mv $@.tmp $@
 
 OBO=http://purl.obolibrary.org/obo
 combined-exposure.owl: combined-exposure.obo
@@ -83,6 +100,13 @@ merged-exposure.owl: combined-exposure.owl axioms.owl
 
 merged-exposure.obo: merged-exposure.owl
 	owltools $< -o -f obo --no-check $@
+
+aggregated-exposure.obo: combined-exposure.owl axioms.owl
+	owltools $^ --merge-support-ontologies  --set-ontology-id $(OBO)/ecto/combined.owl -o -f obo --no-check $@
+.PRECIOUS: aggregated-exposure.obo
+
+relgaps.tsv: aggregated-exposure.obo
+	blip-findall -i $< -u ontol_gapfiller -goal ix relgap/7 -label -no_pred > $@.tmp && mv $@.tmp $@
 
 #hier: merged-exposure.png merged-exposure.hier
 hier:

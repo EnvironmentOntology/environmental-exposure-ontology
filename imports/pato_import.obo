@@ -4,6 +4,7 @@ ontology: ecto/imports/pato_import
 [Term]
 id: PATO:0000001
 name: quality
+synonym: "trait" EXACT []
 
 [Term]
 id: PATO:0000068
@@ -18,6 +19,12 @@ is_a: PATO:0000068 ! qualitative
 [Term]
 id: PATO:0000070
 name: amount
+synonym: "count" EXACT []
+synonym: "count in organism" RELATED []
+synonym: "number" RELATED []
+synonym: "presence" RELATED []
+synonym: "presence or absence in organism" EXACT []
+synonym: "quantitative" EXACT []
 is_a: PATO:0000068 ! qualitative
 
 [Term]
@@ -28,17 +35,24 @@ is_a: PATO:0001018 ! physical quality
 [Term]
 id: PATO:0000467
 name: present
+synonym: "present in organism" RELATED []
 is_a: PATO:0000070 ! amount
 
 [Term]
 id: PATO:0000470
 name: increased amount
+synonym: "accessory" RELATED []
+synonym: "increased" RELATED []
+synonym: "increased number" EXACT []
+synonym: "present in greater numbers in organism" EXACT []
+synonym: "supernumerary" EXACT []
 is_a: PATO:0000467 ! present
 is_a: PATO:0002300 ! increased quality
 
 [Term]
 id: PATO:0001018
 name: physical quality
+synonym: "relational physical quality" EXACT []
 is_a: PATO:0001241 ! physical object quality
 
 [Term]
@@ -49,29 +63,43 @@ is_a: PATO:0001018 ! physical quality
 [Term]
 id: PATO:0001241
 name: physical object quality
+synonym: "monadic quality of a continuant" EXACT []
+synonym: "monadic quality of an object" NARROW []
+synonym: "monadic quality of continuant" NARROW []
+synonym: "multiply inhering quality of a physical entity " EXACT []
+synonym: "quality of a continuant" EXACT []
+synonym: "quality of a single physical entity" EXACT []
+synonym: "quality of an object" EXACT []
+synonym: "quality of continuant" EXACT []
 is_a: PATO:0000001 ! quality
 
 [Term]
 id: PATO:0001305
 name: increased temperature
+synonym: "high temperature" EXACT []
+synonym: "hot" EXACT []
 is_a: PATO:0000146 ! temperature
 is_a: PATO:0002305 ! increased object quality
 
 [Term]
 id: PATO:0001306
 name: decreased temperature
+synonym: "cold" EXACT []
+synonym: "low temperature" EXACT []
 is_a: PATO:0000146 ! temperature
 is_a: PATO:0002303 ! decreased object quality
 
 [Term]
 id: PATO:0001575
 name: decreased pressure
+synonym: "low pressure" EXACT []
 is_a: PATO:0001025 ! pressure
 is_a: PATO:0002303 ! decreased object quality
 
 [Term]
 id: PATO:0001576
 name: increased pressure
+synonym: "high pressure" EXACT []
 is_a: PATO:0001025 ! pressure
 is_a: PATO:0002305 ! increased object quality
 
@@ -83,6 +111,11 @@ is_a: PATO:0000146 ! temperature
 [Term]
 id: PATO:0001997
 name: decreased amount
+synonym: "decreased" RELATED []
+synonym: "decreased number" EXACT []
+synonym: "present in fewer numbers in organism" EXACT []
+synonym: "reduced" RELATED []
+synonym: "subnumerary" RELATED []
 is_a: PATO:0000467 ! present
 is_a: PATO:0002301 ! decreased quality
 
