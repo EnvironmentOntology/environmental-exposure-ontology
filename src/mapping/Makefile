@@ -1,7 +1,10 @@
 all: all_exposure probs.tsv m.tsv  rpt.html merged-exposure.obo axioms-r.obo  hier all_ecto unmapped.tsv
 
 OBO = http://purl.obolibrary.org/obo
-MOD = eo xco zeco snomed ncit go exo mre wikidata ecto
+
+#wd causig loops?
+#MOD = eo xco zeco snomed ncit go exo mre wikidata ecto
+MOD = eo xco zeco snomed ncit go exo mre ecto
 
 all_exposure: $(patsubst %, exposure-%.obo,$(MOD))
 
@@ -42,8 +45,8 @@ exposure-wikidata.obo:
 exposure-ecto.obo: ../../ecto.obo
 	cp $< $@
 
-#combined-exposure.obo: all_exposure
-combined-exposure.obo:
+#combined-exposure.obo:
+combined-exposure.obo: all_exposure
 	obo-cat.pl exposure-*.obo | grep -v ^namespace: | grep -v ^property_value: | ./add-syns.pl > $@
 .PRECIOUS: combined-exposure.obo
 

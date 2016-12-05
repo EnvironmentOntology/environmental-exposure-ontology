@@ -27,7 +27,7 @@ ecto-core.obo: ecto-core.owl
 	owltools $(USECAT) $< -o -f obo --no-check $@.tmp && grep -v ^owl-axioms $@.tmp > $@
 
 ecto-core-inferred.owl: ecto-core.owl all_imports
-	robot reason --input $< --reasoner elk reduce --reasoner elk -o $@
+	robot reason --input $< --reasoner elk -e false reduce --reasoner elk -o $@
 
 subsets/ecto-basic.owl: ecto-core-inferred.owl
 	owltools $(USECAT) $< --remove-imports-declarations --make-subset-by-properties -f BFO:0000050 --remove-dangling --remove-axioms -t EquivalentClasses --set-ontology-id $(OBO)/ecto/$@ -o $@
