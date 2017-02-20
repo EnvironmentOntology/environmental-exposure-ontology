@@ -2,27 +2,27 @@ Prefix: : <http://purl.obolibrary.org/obo/>
 Prefix: IAO: <http://purl.obolibrary.org/obo/IAO_>
 Prefix: DOSDP: <http://geneontology.org/foo/>
 Prefix: oio: <http://www.geneontology.org/formats/oboInOwl#>
-Prefix: CHEBI: <http://purl.obolibrary.org/obo/CHEBI_>
-Prefix: ZECO: <http://purl.obolibrary.org/obo/ZECO_>
-Prefix: NCBITaxon: <http://purl.obolibrary.org/obo/NCBITaxon_>
-Prefix: GOCHE: <http://purl.obolibrary.org/obo/GOCHE_>
-Prefix: GO: <http://purl.obolibrary.org/obo/GO_>
-Prefix: ECTO: <http://purl.obolibrary.org/obo/ECTO_>
-Prefix: CL: <http://purl.obolibrary.org/obo/CL_>
-Prefix: BFO: <http://purl.obolibrary.org/obo/BFO_>
 Prefix: XCO: <http://purl.obolibrary.org/obo/XCO_>
+Prefix: OBA: <http://purl.obolibrary.org/obo/OBA_>
+Prefix: ExO: <http://purl.obolibrary.org/obo/ExO_>
+Prefix: ENVO: <http://purl.obolibrary.org/obo/ENVO_>
+Prefix: PO: <http://purl.obolibrary.org/obo/PO_>
+Prefix: CHEBI: <http://purl.obolibrary.org/obo/CHEBI_>
+Prefix: RO: <http://purl.obolibrary.org/obo/RO_>
+Prefix: ECTO: <http://purl.obolibrary.org/obo/ECTO_>
+Prefix: PR: <http://purl.obolibrary.org/obo/PR_>
 Prefix: NPO: <http://purl.obolibrary.org/obo/NPO_>
 Prefix: PATO: <http://purl.obolibrary.org/obo/PATO_>
-Prefix: NCIT: <http://purl.obolibrary.org/obo/NCIT_>
-Prefix: ENVO: <http://purl.obolibrary.org/obo/ENVO_>
-Prefix: NBO: <http://purl.obolibrary.org/obo/NBO_>
-Prefix: PO: <http://purl.obolibrary.org/obo/PO_>
-Prefix: SO: <http://purl.obolibrary.org/obo/SO_>
-Prefix: ExO: <http://purl.obolibrary.org/obo/ExO_>
+Prefix: BFO: <http://purl.obolibrary.org/obo/BFO_>
 Prefix: UBERON: <http://purl.obolibrary.org/obo/UBERON_>
-Prefix: OBA: <http://purl.obolibrary.org/obo/OBA_>
-Prefix: RO: <http://purl.obolibrary.org/obo/RO_>
-Prefix: PR: <http://purl.obolibrary.org/obo/PR_>
+Prefix: ZECO: <http://purl.obolibrary.org/obo/ZECO_>
+Prefix: GO: <http://purl.obolibrary.org/obo/GO_>
+Prefix: NCIT: <http://purl.obolibrary.org/obo/NCIT_>
+Prefix: CL: <http://purl.obolibrary.org/obo/CL_>
+Prefix: NCBITaxon: <http://purl.obolibrary.org/obo/NCBITaxon_>
+Prefix: SO: <http://purl.obolibrary.org/obo/SO_>
+Prefix: NBO: <http://purl.obolibrary.org/obo/NBO_>
+Prefix: GOCHE: <http://purl.obolibrary.org/obo/GOCHE_>
 
  ## Auto-generated
 
@@ -35,10 +35,10 @@ AnnotationProperty: oio:hasExactSynonym
 AnnotationProperty: oio:hasExactSynonym
 Class: CHEBI:24431 ## chemical entity
 Class: ExO:0000002 ## exposure event
-ObjectProperty: BFO_0000050 ## stressor
 ObjectProperty: RO:0002233 ## has input
-ObjectProperty: RO:0000087 ## has role
 ObjectProperty: BFO_0000050 ## part of
+ObjectProperty: BFO_0000050 ## stressor
+ObjectProperty: RO:0000087 ## has role
 ## Auto-generated classes
 
 Class: CHEBI:24432 ## biological role
@@ -55,6 +55,7 @@ Class: ECTO:0000485
  Annotations: oio:hasRelatedSynonym "exposure to biological role"
  Annotations: oio:hasRelatedSynonym "exposure to biological function"
  Annotations: oio:hasRelatedSynonym "exposure to biological role"
+ Annotations: oio:hasRelatedSynonym "exposure to biological role"
  Annotations: oio:hasRelatedSynonym "exposure to biological function"
 
 Class: CHEBI:33232 ## application
@@ -70,6 +71,7 @@ Class: ECTO:0000486
  Annotations: oio:hasRelatedSynonym "exposure to application"
  Annotations: oio:hasRelatedSynonym "exposure to application"
  Annotations: oio:hasRelatedSynonym "exposure to application"
+ Annotations: oio:hasRelatedSynonym "exposure to application"
 
 Class: CHEBI:51086 ## chemical role
 ## {"stressor": "CHEBI:51086"}
@@ -81,6 +83,7 @@ Class: ECTO:0000487
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:51086) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some chemical role)
   ## Auto-syns
 
+ Annotations: oio:hasRelatedSynonym "exposure to chemical role"
  Annotations: oio:hasRelatedSynonym "exposure to chemical role"
  Annotations: oio:hasRelatedSynonym "exposure to chemical role"
  Annotations: oio:hasRelatedSynonym "exposure to chemical role"
@@ -403,9 +406,6 @@ Class: ECTO:0000496
  Annotations: oio:hasExactSynonym "alkylating agent exposure"
  Annotations: oio:hasExactSynonym "alkylating agent exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:22333) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some alkylating agent)
-  ## Auto-syns
-
- Annotations: oio:hasRelatedSynonym "exposure to alkylating agents"
 
 Class: CHEBI:22586 ## antioxidant
 ## {"stressor": "CHEBI:22586"}
@@ -601,9 +601,6 @@ Class: ECTO:0000507
  Annotations: oio:hasExactSynonym "cytokinin exposure"
  Annotations: oio:hasExactSynonym "cytokinin exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:24431 and RO:0000087 some CHEBI:23530) ## 'exposure event' and 'has input' some ('chemical entity' and 'has role' some cytokinin)
-  ## Auto-syns
-
- Annotations: oio:hasRelatedSynonym "exposure to cytokinins"
 
 Class: CHEBI:23582 ## defoliant
 ## {"stressor": "CHEBI:23582"}
@@ -937,7 +934,6 @@ Class: ECTO:0000527
  Annotations: oio:hasRelatedSynonym "exposure to neonicotinoid insectides"
  Annotations: oio:hasRelatedSynonym "exposure to nicotinoid insectides"
  Annotations: oio:hasRelatedSynonym "exposure to nicotinoid insectide"
- Annotations: oio:hasRelatedSynonym "exposure to neonicotinamides"
  Annotations: oio:hasRelatedSynonym "exposure to neonicotinoid insectides"
  Annotations: oio:hasRelatedSynonym "exposure to nicotinoid insectide"
  Annotations: oio:hasRelatedSynonym "exposure to nicotinoid insectides"
@@ -1127,7 +1123,6 @@ Class: ECTO:0000539
  Annotations: oio:hasRelatedSynonym "exposure to ethereal oil component"
  Annotations: oio:hasRelatedSynonym "exposure to ethereal oil components"
  Annotations: oio:hasRelatedSynonym "exposure to volatile oil components"
- Annotations: oio:hasRelatedSynonym "exposure to volatile oils"
 
 Class: CHEBI:27314 ## water-soluble vitamin
 ## {"stressor": "CHEBI:27314"}
@@ -4091,6 +4086,7 @@ Class: ECTO:0000666
  Annotations: oio:hasRelatedSynonym "exposure to angiostatic agents"
  Annotations: oio:hasRelatedSynonym "exposure to angiogenesis antagonist"
  Annotations: oio:hasRelatedSynonym "exposure to angiostatic agents"
+ Annotations: oio:hasRelatedSynonym "exposure to anti-angiogenic agent"
 
 Class: CHEBI:48550 ## EC 1.1.1.21 (aldehyde reductase) inhibitor
 ## {"stressor": "CHEBI:48550"}
@@ -5984,8 +5980,8 @@ Class: ECTO:0000733
  Annotations: oio:hasRelatedSynonym "exposure to Wee 1-like kinase inhibitors"
  Annotations: oio:hasRelatedSynonym "exposure to Wee-kinase inhibitor"
  Annotations: oio:hasRelatedSynonym "exposure to Wee-kinase inhibitors"
- Annotations: oio:hasRelatedSynonym "exposure to WEE1Hu  inhibitor"
- Annotations: oio:hasRelatedSynonym "exposure to WEE1Hu  inhibitors"
+ Annotations: oio:hasRelatedSynonym "exposure to WEE1Hu inhibitor"
+ Annotations: oio:hasRelatedSynonym "exposure to WEE1Hu inhibitors"
 
 Class: CHEBI:50949 ## serotonin uptake inhibitor
 ## {"stressor": "CHEBI:50949"}
@@ -8692,8 +8688,8 @@ Class: ECTO:0000825
  Annotations: oio:hasRelatedSynonym "exposure to activated blood-coagulation factor II inhibitors"
  Annotations: oio:hasRelatedSynonym "exposure to beta-thrombin inhibitor"
  Annotations: oio:hasRelatedSynonym "exposure to beta-thrombin inhibitors"
- Annotations: oio:hasRelatedSynonym "exposure to blood-coagulation factor IIa  inhibitor"
- Annotations: oio:hasRelatedSynonym "exposure to blood-coagulation factor IIa  inhibitors"
+ Annotations: oio:hasRelatedSynonym "exposure to blood-coagulation factor IIa inhibitor"
+ Annotations: oio:hasRelatedSynonym "exposure to blood-coagulation factor IIa inhibitors"
  Annotations: oio:hasRelatedSynonym "exposure to E thrombin inhibitor"
  Annotations: oio:hasRelatedSynonym "exposure to E thrombin inhibitors"
  Annotations: oio:hasRelatedSynonym "exposure to EC 3.4.21.5 (thrombin) inhibitors"

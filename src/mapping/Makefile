@@ -42,7 +42,7 @@ access-ncit.obo:
 exposure-wikidata.obo:
 	cp ../resources/wikidata/combined.obo $@
 
-exposure-ecto.obo: ../../ecto.obo
+exposure-ecto.obo: ../../subsets/ecto-basic.obo
 	cp $< $@
 
 #combined-exposure.obo:
@@ -50,7 +50,11 @@ combined-exposure.obo: all_exposure
 	obo-cat.pl exposure-*.obo | grep -v ^namespace: | grep -v ^property_value: | ./add-syns.pl > $@
 .PRECIOUS: combined-exposure.obo
 
-probs.tsv: combined-exposure.obo ignore.pro
+slim-exposure.obo: exposure-ncit.obo exposure-snomed.obo exposure-mre.obo exposure-ecto.obo
+	obo-cat.pl $^ | grep -v ^namespace: | grep -v ^property_value: | ./add-syns.pl > $@
+.PRECIOUS: slim-exposure.obo
+
+probs.tsv: slim-exposure.obo ignore.pro
 	blip-findall  -i ignore.pro -debug index -goal nlp_index_all -i $< -u metadata_nlp entity_pair_mprobs/6 -no_pred > $@.tmp && mv $@.tmp $@
 
 m.tsv: combined-exposure.obo ignore.pro
@@ -75,11 +79,11 @@ obol-%.obo: mxrefs.obo
 	blip-findall -r $* -i ../ontology/ecto.obo -r envo -r chebi -u odputil -i $< -i ../patterns/ecto_patterns.pro "write_suggestion('MRE')" > $@.tmp && mv $@.tmp $@
 
 OBO=http://purl.obolibrary.org/obo
-combined-exposure.owl: combined-exposure.obo
+%-exposure.owl: %-exposure.obo
 	owltools $< --set-ontology-id $(OBO)/rad.owl -o $@
 
 MAX_E=8
-axioms.owl: combined-exposure.owl probs.tsv
+axioms.owl: slim-exposure.owl probs.tsv
 	kboom --experimental  --splitSize 50 --max $(MAX_E) -m rpt.md -j rpt.json -n -o $@ -t probs.tsv $<
 
 rpt.html: axioms.owl
@@ -108,8 +112,15 @@ aggregated-exposure.obo: combined-exposure.owl axioms.owl
 	owltools $^ --merge-support-ontologies  --set-ontology-id $(OBO)/ecto/combined.owl -o -f obo --no-check $@
 .PRECIOUS: aggregated-exposure.obo
 
+new-inf-%.txt: exposure-%.obo
+	owltools  exposure-$*.obo axioms.obo exposure-ecto.obo --spike-and-reason > $@
+missing-inf-%.txt: exposure-%.obo
+	owltools  exposure-ecto.obo  axioms.obo exposure-$*.obo  --spike-and-reason > $@
+
 relgaps.tsv: aggregated-exposure.obo
 	blip-findall -i $< -u ontol_gapfiller -goal ix relgap/7 -label -no_pred > $@.tmp && mv $@.tmp $@
+
+
 
 #hier: merged-exposure.png merged-exposure.hier
 hier:

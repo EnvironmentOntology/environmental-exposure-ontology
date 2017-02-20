@@ -2,27 +2,27 @@ Prefix: : <http://purl.obolibrary.org/obo/>
 Prefix: IAO: <http://purl.obolibrary.org/obo/IAO_>
 Prefix: DOSDP: <http://geneontology.org/foo/>
 Prefix: oio: <http://www.geneontology.org/formats/oboInOwl#>
-Prefix: OBA: <http://purl.obolibrary.org/obo/OBA_>
-Prefix: ExO: <http://purl.obolibrary.org/obo/ExO_>
-Prefix: GOCHE: <http://purl.obolibrary.org/obo/GOCHE_>
-Prefix: XCO: <http://purl.obolibrary.org/obo/XCO_>
-Prefix: ENVO: <http://purl.obolibrary.org/obo/ENVO_>
-Prefix: GO: <http://purl.obolibrary.org/obo/GO_>
-Prefix: PR: <http://purl.obolibrary.org/obo/PR_>
-Prefix: ECTO: <http://purl.obolibrary.org/obo/ECTO_>
-Prefix: BFO: <http://purl.obolibrary.org/obo/BFO_>
-Prefix: NCIT: <http://purl.obolibrary.org/obo/NCIT_>
-Prefix: CL: <http://purl.obolibrary.org/obo/CL_>
-Prefix: NCBITaxon: <http://purl.obolibrary.org/obo/NCBITaxon_>
-Prefix: ZECO: <http://purl.obolibrary.org/obo/ZECO_>
-Prefix: PATO: <http://purl.obolibrary.org/obo/PATO_>
-Prefix: UBERON: <http://purl.obolibrary.org/obo/UBERON_>
-Prefix: SO: <http://purl.obolibrary.org/obo/SO_>
-Prefix: RO: <http://purl.obolibrary.org/obo/RO_>
 Prefix: CHEBI: <http://purl.obolibrary.org/obo/CHEBI_>
+Prefix: UBERON: <http://purl.obolibrary.org/obo/UBERON_>
+Prefix: PR: <http://purl.obolibrary.org/obo/PR_>
+Prefix: RO: <http://purl.obolibrary.org/obo/RO_>
+Prefix: ExO: <http://purl.obolibrary.org/obo/ExO_>
+Prefix: NCIT: <http://purl.obolibrary.org/obo/NCIT_>
+Prefix: ENVO: <http://purl.obolibrary.org/obo/ENVO_>
+Prefix: ECTO: <http://purl.obolibrary.org/obo/ECTO_>
 Prefix: NPO: <http://purl.obolibrary.org/obo/NPO_>
-Prefix: NBO: <http://purl.obolibrary.org/obo/NBO_>
+Prefix: NCBITaxon: <http://purl.obolibrary.org/obo/NCBITaxon_>
+Prefix: XCO: <http://purl.obolibrary.org/obo/XCO_>
+Prefix: PATO: <http://purl.obolibrary.org/obo/PATO_>
+Prefix: OBA: <http://purl.obolibrary.org/obo/OBA_>
+Prefix: SO: <http://purl.obolibrary.org/obo/SO_>
 Prefix: PO: <http://purl.obolibrary.org/obo/PO_>
+Prefix: BFO: <http://purl.obolibrary.org/obo/BFO_>
+Prefix: GOCHE: <http://purl.obolibrary.org/obo/GOCHE_>
+Prefix: CL: <http://purl.obolibrary.org/obo/CL_>
+Prefix: GO: <http://purl.obolibrary.org/obo/GO_>
+Prefix: NBO: <http://purl.obolibrary.org/obo/NBO_>
+Prefix: ZECO: <http://purl.obolibrary.org/obo/ZECO_>
 
  ## Auto-generated
 
@@ -33,8 +33,8 @@ AnnotationProperty: DOSDP:applies-pattern
 AnnotationProperty: oio:hasRelatedSynonym
 AnnotationProperty: oio:hasExactSynonym
 AnnotationProperty: oio:hasExactSynonym
-Class: ENVO:00010483 ## environmental material
 Class: ExO:0000002 ## exposure event
+Class: ENVO:00010483 ## environmental material
 ObjectProperty: RO:0002233 ## has input
 ObjectProperty: BFO_0000050 ## part of
 ObjectProperty: BFO_0000050 ## stressor
@@ -48,6 +48,9 @@ Class: ECTO:0000015
  Annotations: oio:hasExactSynonym "environmental material exposure"
  Annotations: oio:hasExactSynonym "environmental material exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some ENVO:00010483 ## 'exposure event' and 'has input' some environmental material
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to portion of environmental material"
 
 Class: ENVO:00002008 ## dust
 ## {"stressor": "ENVO:00002008"}
@@ -93,6 +96,9 @@ Class: ECTO:0000020
  Annotations: oio:hasExactSynonym "organic material exposure"
  Annotations: oio:hasExactSynonym "organic material exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some ENVO:01000155 ## 'exposure event' and 'has input' some organic material
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to biomass"
 
 Class: ENVO:01000231 ## lava
 ## {"stressor": "ENVO:01000231"}
@@ -156,6 +162,11 @@ Class: ECTO:0000027
  Annotations: oio:hasExactSynonym "mine tailing exposure"
  Annotations: oio:hasExactSynonym "mine tailing exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some ENVO:00000003 ## 'exposure event' and 'has input' some mine tailing
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to dumping ground"
+ Annotations: oio:hasRelatedSynonym "exposure to mine dump"
+ Annotations: oio:hasRelatedSynonym "exposure to tailing"
 
 Class: ENVO:00000134 ## permafrost
 ## {"stressor": "ENVO:00000134"}
@@ -165,6 +176,9 @@ Class: ECTO:0000028
  Annotations: oio:hasExactSynonym "permafrost exposure"
  Annotations: oio:hasExactSynonym "permafrost exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some ENVO:00000134 ## 'exposure event' and 'has input' some permafrost
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to Permafrost"
 
 Class: ENVO:00002001 ## waste water
 ## {"stressor": "ENVO:00002001"}
@@ -183,6 +197,12 @@ Class: ECTO:0000030
  Annotations: oio:hasExactSynonym "feces exposure"
  Annotations: oio:hasExactSynonym "feces exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some ENVO:00002003 ## 'exposure event' and 'has input' some feces
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to droppings"
+ Annotations: oio:hasRelatedSynonym "exposure to faeces"
+ Annotations: oio:hasRelatedSynonym "exposure to frass"
+ Annotations: oio:hasRelatedSynonym "exposure to pellet"
 
 Class: ENVO:00002018 ## sewage
 ## {"stressor": "ENVO:00002018"}
@@ -309,6 +329,9 @@ Class: ECTO:0000044
  Annotations: oio:hasExactSynonym "hot dog exposure"
  Annotations: oio:hasExactSynonym "hot dog exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some ENVO:00002174 ## 'exposure event' and 'has input' some hot dog
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to obsolete hot dog"
 
 Class: ENVO:00002259 ## agricultural soil
 ## {"stressor": "ENVO:00002259"}
@@ -336,6 +359,10 @@ Class: ECTO:0000047
  Annotations: oio:hasExactSynonym "chicken breeding waste material exposure"
  Annotations: oio:hasExactSynonym "chicken breeding waste material exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some ENVO:00002266 ## 'exposure event' and 'has input' some chicken breeding waste material
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to chicken breeding waste"
+ Annotations: oio:hasRelatedSynonym "exposure to chicken yard waste"
 
 Class: ENVO:00002267 ## industrial waste material
 ## {"stressor": "ENVO:00002267"}
@@ -345,6 +372,9 @@ Class: ECTO:0000048
  Annotations: oio:hasExactSynonym "industrial waste material exposure"
  Annotations: oio:hasExactSynonym "industrial waste material exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some ENVO:00002267 ## 'exposure event' and 'has input' some industrial waste material
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to industrial waste"
 
 Class: ENVO:00002273 ## fluvisol
 ## {"stressor": "ENVO:00002273"}
@@ -381,6 +411,9 @@ Class: ECTO:0000052
  Annotations: oio:hasExactSynonym "animal waste material exposure"
  Annotations: oio:hasExactSynonym "animal waste material exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some ENVO:00002276 ## 'exposure event' and 'has input' some animal waste material
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to animal waste"
 
 Class: ENVO:00002869 ## hay
 ## {"stressor": "ENVO:00002869"}
@@ -408,6 +441,9 @@ Class: ECTO:0000055
  Annotations: oio:hasExactSynonym "bagasse exposure"
  Annotations: oio:hasExactSynonym "bagasse exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some ENVO:00002872 ## 'exposure event' and 'has input' some bagasse
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to sugarcane bagasse"
 
 Class: ENVO:00002873 ## organic waste material
 ## {"stressor": "ENVO:00002873"}
@@ -417,6 +453,9 @@ Class: ECTO:0000056
  Annotations: oio:hasExactSynonym "organic waste material exposure"
  Annotations: oio:hasExactSynonym "organic waste material exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some ENVO:00002873 ## 'exposure event' and 'has input' some organic waste material
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to organic waste"
 
 Class: ENVO:00002875 ## oil contaminated soil
 ## {"stressor": "ENVO:00002875"}
@@ -444,6 +483,9 @@ Class: ECTO:0000059
  Annotations: oio:hasExactSynonym "petroleum exposure"
  Annotations: oio:hasExactSynonym "petroleum exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some ENVO:00002984 ## 'exposure event' and 'has input' some petroleum
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to crude oil"
 
 Class: ENVO:00003030 ## silage
 ## {"stressor": "ENVO:00003030"}
@@ -516,6 +558,9 @@ Class: ECTO:0000069
  Annotations: oio:hasExactSynonym "bile exposure"
  Annotations: oio:hasExactSynonym "bile exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some ENVO:02000023 ## 'exposure event' and 'has input' some bile
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to gall"
 
 Class: ENVO:00010505 ## aerosol
 ## {"stressor": "ENVO:00010505"}
@@ -543,6 +588,9 @@ Class: ECTO:0000112
  Annotations: oio:hasExactSynonym "respirable suspended particulate matter exposure"
  Annotations: oio:hasExactSynonym "respirable suspended particulate matter exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some ENVO:01000405 ## 'exposure event' and 'has input' some respirable suspended particulate matter
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to PM10"
 
 Class: ENVO:01000415 ## fine respirable suspended particulate matter
 ## {"stressor": "ENVO:01000415"}
@@ -552,6 +600,9 @@ Class: ECTO:0000113
  Annotations: oio:hasExactSynonym "fine respirable suspended particulate matter exposure"
  Annotations: oio:hasExactSynonym "fine respirable suspended particulate matter exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some ENVO:01000415 ## 'exposure event' and 'has input' some fine respirable suspended particulate matter
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to PM2.5"
 
 Class: ENVO:01000416 ## ultrafine respirable suspended particulate matter
 ## {"stressor": "ENVO:01000416"}
@@ -570,6 +621,9 @@ Class: ECTO:0001007
  Annotations: oio:hasExactSynonym "contaminated water exposure"
  Annotations: oio:hasExactSynonym "contaminated water exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some ENVO:00002186 ## 'exposure event' and 'has input' some contaminated water
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to polluted water"
 
 Class: ENVO:00002193 ## pulp-bleaching waste water
 ## {"stressor": "ENVO:00002193"}
@@ -579,3 +633,19 @@ Class: ECTO:0001008
  Annotations: oio:hasExactSynonym "pulp-bleaching waste water exposure"
  Annotations: oio:hasExactSynonym "pulp-bleaching waste water exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some ENVO:00002193 ## 'exposure event' and 'has input' some pulp-bleaching waste water
+
+Class: ENVO:01000460 ## asphalt
+## {"stressor": "ENVO:01000460"}
+Class: ECTO:0002314
+ Annotations: rdfs:label "exposure to asphalt"
+ Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to asphalt. Exposure may be through a variety of means, including through the air or through ingestion."
+ Annotations: oio:hasExactSynonym "asphalt exposure"
+ Annotations: oio:hasExactSynonym "asphalt exposure event"
+ EquivalentTo: ExO:0000002 and RO:0002233 some ENVO:01000460 ## 'exposure event' and 'has input' some asphalt
+  ## Auto-syns
+
+ Annotations: oio:hasRelatedSynonym "exposure to asphaltum"
+ Annotations: oio:hasRelatedSynonym "exposure to bitumen"
+ Annotations: oio:hasRelatedSynonym "exposure to crude bitumen"
+ Annotations: oio:hasRelatedSynonym "exposure to pitch"
+ Annotations: oio:hasRelatedSynonym "exposure to tar"

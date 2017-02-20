@@ -3,10 +3,52 @@
      xml:base="http://purl.obolibrary.org/obo/ecto/imports/envo_import.owl"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/ecto/imports/envo_import.owl"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym"/>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#hasDbXref -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#hasExactSynonym -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
     
 
 
@@ -54,6 +96,7 @@
     <!-- http://purl.obolibrary.org/obo/BFO_0000002 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000002">
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">continuant</rdfs:label>
     </owl:Class>
     
@@ -71,6 +114,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000004">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/BFO_0000020"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">independent continuant</rdfs:label>
     </owl:Class>
     
@@ -99,6 +143,15 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000040">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000004"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">material entity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_131621 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_131621">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_35341"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">C19-steroid</rdfs:label>
     </owl:Class>
     
 
@@ -331,6 +384,7 @@
     <!-- http://purl.obolibrary.org/obo/CHEBI_17347 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_17347">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_131621"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_35343"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_47788"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_50402"/>
@@ -574,12 +628,30 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/CHEBI_22985 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_22985">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33299"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">calcium molecular entity</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/CHEBI_23014 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_23014">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_25701"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_36963"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">carbon oxide</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_23016 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_23016">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_36963"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">carbonates</rdfs:label>
     </owl:Class>
     
 
@@ -626,6 +698,15 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_23367">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_24431"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">molecular entity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_23377 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_23377">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33745"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">copper molecular entity</rdfs:label>
     </owl:Class>
     
 
@@ -1328,6 +1409,15 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/CHEBI_27275 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_27275">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33746"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">vanadium molecular entity</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/CHEBI_27338 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_27338">
@@ -1346,6 +1436,15 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/CHEBI_27364 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_27364">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33673"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">zinc molecular entity</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/CHEBI_27560 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_27560">
@@ -1356,12 +1455,11 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/CHEBI_27594 -->
+    <!-- http://purl.obolibrary.org/obo/CHEBI_27563 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_27594">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_25585"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33306"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">carbon atom</rdfs:label>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_27563">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33300"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">arsenic atom</rdfs:label>
     </owl:Class>
     
 
@@ -1485,6 +1583,17 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_32988">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_51143"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">amide</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_3311 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_3311">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_35156"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_46721"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_64708"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">calcium carbonate</rdfs:label>
     </owl:Class>
     
 
@@ -1674,6 +1783,24 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/CHEBI_33299 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_33299">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33674"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alkaline earth molecular entity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_33300 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_33300">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33560"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pnictogen</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/CHEBI_33302 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_33302">
@@ -1843,6 +1970,24 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/CHEBI_33498 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_33498">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33677"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">actinoid molecular entity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_33499 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_33499">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33498"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">uranium molecular entity</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/CHEBI_33521 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_33521">
@@ -1914,6 +2059,24 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_33582">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33675"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">carbon group molecular entity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_33583 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_33583">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33579"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">noble gas molecular entity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_33585 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_33585">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33582"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lead molecular entity</rdfs:label>
     </owl:Class>
     
 
@@ -2099,6 +2262,15 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/CHEBI_33673 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_33673">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33676"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">zinc group molecular entity</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/CHEBI_33674 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_33674">
@@ -2122,6 +2294,15 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_33676">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33497"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">d-block molecular entity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_33677 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_33677">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33497"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">f-block molecular entity</rdfs:label>
     </owl:Class>
     
 
@@ -2189,6 +2370,24 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_33741">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33676"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chromium group molecular entity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_33745 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_33745">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33676"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">copper group molecular entity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_33746 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_33746">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33676"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">vanadium group molecular entity</rdfs:label>
     </owl:Class>
     
 
@@ -2310,6 +2509,15 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/CHEBI_33969 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_33969">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33745"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">gold molecular entity</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/CHEBI_35106 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_35106">
@@ -2334,6 +2542,16 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_35131">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33447"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">aldose phosphate</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_35156 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_35156">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_22985"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_36364"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">calcium salt</rdfs:label>
     </owl:Class>
     
 
@@ -2734,6 +2952,16 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/CHEBI_36364 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_36364">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_24866"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33299"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alkaline earth salt</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/CHEBI_36388 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_36388">
@@ -2844,6 +3072,15 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33242"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33304"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chalcogen hydride</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_36908 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_36908">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33583"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">argon molecular entity</rdfs:label>
     </owl:Class>
     
 
@@ -3189,6 +3426,15 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/CHEBI_46721 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_46721">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_23016"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">carbonate salt</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/CHEBI_46787 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_46787">
@@ -3355,6 +3601,16 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_48706">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_52210"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">antagonist</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_49976 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_49976">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_27364"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_36093"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">zinc dichloride</rdfs:label>
     </owl:Class>
     
 
@@ -4095,6 +4351,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00000000">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00002297"/>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">macroscopic spatial feature</oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">geographic feature</rdfs:label>
     </owl:Class>
     
@@ -4104,8 +4361,29 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00000003">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_0010001"/>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dumping ground</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mine dump</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tailing</oboInOwl:hasRelatedSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mine tailing</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000003"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dumping ground</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000003"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mine dump</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADL:FTT</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000003"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tailing</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADL:FTT</oboInOwl:hasDbXref>
+    </owl:Axiom>
     
 
 
@@ -4113,8 +4391,15 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00000134">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00001998"/>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Permafrost</oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">permafrost</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000134"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Permafrost</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NASA:earthrealm</oboInOwl:hasDbXref>
+    </owl:Axiom>
     
 
 
@@ -4152,6 +4437,7 @@
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000256"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <oboInOwl:hasBroadSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">regolith</oboInOwl:hasBroadSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">soil</rdfs:label>
     </owl:Class>
     
@@ -4170,8 +4456,8 @@
     <!-- http://purl.obolibrary.org/obo/ENVO_00002002 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00002002">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_0010001"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">food product</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">obsolete food product</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
 
@@ -4180,6 +4466,10 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00002003">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_02000022"/>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">faeces</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">droppings</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">frass</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pellet</oboInOwl:hasRelatedSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">feces</rdfs:label>
     </owl:Class>
     
@@ -4188,7 +4478,25 @@
     <!-- http://purl.obolibrary.org/obo/ENVO_00002005 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00002005">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00010483"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000797"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_15379"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_16526"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_36908"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
@@ -4203,7 +4511,7 @@
     <!-- http://purl.obolibrary.org/obo/ENVO_00002006 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00002006">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00010483"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000815"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">water</rdfs:label>
     </owl:Class>
     
@@ -4221,7 +4529,7 @@
     <!-- http://purl.obolibrary.org/obo/ENVO_00002008 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00002008">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00010483"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000814"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dust</rdfs:label>
     </owl:Class>
     
@@ -4362,39 +4670,11 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/ENVO_00002165 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00002165">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_0010000"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">meat food product</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/ENVO_00002166 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00002166">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00002175"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sausage</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/ENVO_00002174 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00002174">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_0010136"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hot dog</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/ENVO_00002175 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00002175">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00002165"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_0010092"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">processed meat product</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">obsolete hot dog</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
 
@@ -4421,6 +4701,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00002186">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00002006"/>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">polluted water</oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">contaminated water</rdfs:label>
     </owl:Class>
     
@@ -4456,7 +4737,7 @@
     <!-- http://purl.obolibrary.org/obo/ENVO_00002264 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00002264">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_0010001"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00010483"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">waste material</rdfs:label>
     </owl:Class>
     
@@ -4466,6 +4747,8 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00002266">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000371"/>
+        <oboInOwl:hasBroadSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chicken breeding waste</oboInOwl:hasBroadSynonym>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chicken yard waste</oboInOwl:hasRelatedSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chicken breeding waste material</rdfs:label>
     </owl:Class>
     
@@ -4475,6 +4758,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00002267">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00002264"/>
+        <oboInOwl:hasBroadSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">industrial waste</oboInOwl:hasBroadSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">industrial waste material</rdfs:label>
     </owl:Class>
     
@@ -4511,6 +4795,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00002276">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00002873"/>
+        <oboInOwl:hasBroadSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">animal waste</oboInOwl:hasBroadSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">animal waste material</rdfs:label>
     </owl:Class>
     
@@ -4558,7 +4843,8 @@
     <!-- http://purl.obolibrary.org/obo/ENVO_00002872 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00002872">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000371"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00002264"/>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sugarcane bagasse</oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bagasse</rdfs:label>
     </owl:Class>
     
@@ -4567,7 +4853,8 @@
     <!-- http://purl.obolibrary.org/obo/ENVO_00002873 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00002873">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00002264"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000373"/>
+        <oboInOwl:hasBroadSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">organic waste</oboInOwl:hasBroadSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">organic waste material</rdfs:label>
     </owl:Class>
     
@@ -4605,6 +4892,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00002984">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00002985"/>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">crude oil</oboInOwl:hasRelatedSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">petroleum</rdfs:label>
     </owl:Class>
     
@@ -4613,7 +4901,7 @@
     <!-- http://purl.obolibrary.org/obo/ENVO_00002985 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00002985">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00010483"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000815"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">oil</rdfs:label>
     </owl:Class>
     
@@ -4631,7 +4919,7 @@
     <!-- http://purl.obolibrary.org/obo/ENVO_00003031 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00003031">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000371"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00010483"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">animal manure</rdfs:label>
     </owl:Class>
     
@@ -4668,6 +4956,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00010483">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">portion of environmental material</oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">environmental material</rdfs:label>
     </owl:Class>
     
@@ -4678,15 +4967,6 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00010505">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000060"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">aerosol</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/ENVO_0010000 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_0010000">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00002002"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">animal food product</rdfs:label>
     </owl:Class>
     
 
@@ -4705,24 +4985,6 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_0010003">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_0010001"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">agricultural environmental material</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/ENVO_0010092 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_0010092">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00002002"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">processed food product</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/ENVO_0010136 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_0010136">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00002166"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cooked sausage</rdfs:label>
     </owl:Class>
     
 
@@ -4760,6 +5022,7 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000060">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00010483"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">particulate matter</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
 
@@ -4768,6 +5031,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000155">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00010483"/>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">biomass</oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">organic material</rdfs:label>
     </owl:Class>
     
@@ -4776,7 +5040,7 @@
     <!-- http://purl.obolibrary.org/obo/ENVO_01000231 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000231">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00010483"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000815"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lava</rdfs:label>
     </owl:Class>
     
@@ -4785,7 +5049,7 @@
     <!-- http://purl.obolibrary.org/obo/ENVO_01000256 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000256">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00010483"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000814"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mineral material</rdfs:label>
     </owl:Class>
     
@@ -4794,9 +5058,30 @@
     <!-- http://purl.obolibrary.org/obo/ENVO_01000266 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000266">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00010483"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000797"/>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">aqueous vapor</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">aqueous vapour</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">water vapor</oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">water vapour</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000266"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">aqueous vapor</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://en.wikipedia.org/wiki/Water_vapor</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000266"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">aqueous vapour</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://en.wikipedia.org/wiki/Water_vapor</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000266"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">water vapor</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://en.wikipedia.org/wiki/Water_vapor</oboInOwl:hasDbXref>
+    </owl:Axiom>
     
 
 
@@ -4830,8 +5115,15 @@
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000267"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">atmospheric water vapor</oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">atmospheric water vapour</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000268"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">atmospheric water vapor</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://en.wikipedia.org/wiki/Water_vapor</oboInOwl:hasDbXref>
+    </owl:Axiom>
     
 
 
@@ -4848,7 +5140,18 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000371">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00002264"/>
+        <oboInOwl:hasBroadSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">agricultural waste</oboInOwl:hasBroadSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">agricultural waste material</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01000373 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000373">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00002264"/>
+        <oboInOwl:hasBroadSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">biological waste</oboInOwl:hasBroadSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">biological waste material</rdfs:label>
     </owl:Class>
     
 
@@ -4857,6 +5160,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000405">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00010505"/>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PM10</oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">respirable suspended particulate matter</rdfs:label>
     </owl:Class>
     
@@ -4866,8 +5170,15 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000406">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00010483"/>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">snow</oboInOwl:hasRelatedSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">snow</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000406"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">snow</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.eionet.europa.eu/gemet/concept/7769</oboInOwl:hasDbXref>
+    </owl:Axiom>
     
 
 
@@ -4875,6 +5186,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000415">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000405"/>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PM2.5</oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fine respirable suspended particulate matter</rdfs:label>
     </owl:Class>
     
@@ -4901,7 +5213,7 @@
     <!-- http://purl.obolibrary.org/obo/ENVO_01000451 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000451">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00010483"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000797"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
@@ -4909,6 +5221,20 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">atmospheric carbon dioxide</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01000460 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000460">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00002984"/>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">asphaltum</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bitumen</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">crude bitumen</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pitch</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tar</oboInOwl:hasRelatedSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">asphalt</rdfs:label>
     </owl:Class>
     
 
@@ -4943,7 +5269,7 @@
     <!-- http://purl.obolibrary.org/obo/ENVO_01000634 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000634">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_02500000"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_02500031"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">volcanic eruption</rdfs:label>
     </owl:Class>
     
@@ -4980,6 +5306,8 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000689">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_02500000"/>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">seismic sea wave</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tidal wave</oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tsunami</rdfs:label>
     </owl:Class>
     
@@ -4989,6 +5317,8 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000690">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_02500000"/>
+        <oboInOwl:hasBroadSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mass movement</oboInOwl:hasBroadSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">slope movement</oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mass wasting</rdfs:label>
     </owl:Class>
     
@@ -4998,6 +5328,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000692">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000690"/>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">landslip</oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">landslide process</rdfs:label>
     </owl:Class>
     
@@ -5025,6 +5356,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000703">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_02500000"/>
+        <oboInOwl:hasBroadSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">precipitation</oboInOwl:hasBroadSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hydrological precipitation process</rdfs:label>
     </owl:Class>
     
@@ -5106,12 +5438,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000742">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_02500000"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_27594"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
+        <oboInOwl:hasBroadSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">carbon emission process</oboInOwl:hasBroadSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">carbon-bearing gas emission process</rdfs:label>
     </owl:Class>
     
@@ -5121,12 +5448,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000769">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000742"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_16526"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">carbon dioxide emission process</rdfs:label>
     </owl:Class>
     
@@ -5137,6 +5458,34 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000785">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_02500000"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">material extraction process</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01000797 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000797">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00010483"/>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">gas</oboInOwl:hasNarrowSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">gaseous environmental material</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01000814 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000814">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00010483"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">solid environmental material</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01000815 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000815">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00010483"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">liquid environmental material</rdfs:label>
     </owl:Class>
     
 
@@ -5171,6 +5520,7 @@
     <!-- http://purl.obolibrary.org/obo/ENVO_02000022 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_02000022">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00002264"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_02000019"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">excreta</rdfs:label>
     </owl:Class>
@@ -5181,6 +5531,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_02000023">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_02000019"/>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">gall</oboInOwl:hasRelatedSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bile</rdfs:label>
     </owl:Class>
     
@@ -5235,6 +5586,8 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_02500012">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_02500000"/>
+        <oboInOwl:hasBroadSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">clearance</oboInOwl:hasBroadSynonym>
+        <oboInOwl:hasBroadSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">clearing</oboInOwl:hasBroadSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">deforestation</rdfs:label>
     </owl:Class>
     
@@ -5311,10 +5664,20 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/ENVO_02500031 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_02500031">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_02500000"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hydrological process</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/ENVO_02500036 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_02500036">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_02500000"/>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pollution</oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">environmental pollution</rdfs:label>
     </owl:Class>
     
@@ -5498,6 +5861,10 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0000026">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000475"/>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">appendages</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">extremitaet</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">extremity</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">limbs/digits/tail</oboInOwl:hasRelatedSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">appendage</rdfs:label>
     </owl:Class>
     
@@ -5507,6 +5874,8 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0000061">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000465"/>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">biological structure</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">connected biological structure</oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">anatomical structure</rdfs:label>
     </owl:Class>
     
@@ -5516,6 +5885,9 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0000062">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0010000"/>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">anatomical unit</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">body organ</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">element</oboInOwl:hasRelatedSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">organ</rdfs:label>
     </owl:Class>
     
@@ -5525,6 +5897,8 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0000064">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0010000"/>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cardinal organ part</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">regional part of organ</oboInOwl:hasRelatedSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">organ part</rdfs:label>
     </owl:Class>
     
@@ -5534,6 +5908,9 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0000122">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0005162"/>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">funiculus</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nerve fiber bundle</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neural fiber bundle</oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neuron projection bundle</rdfs:label>
     </owl:Class>
     
@@ -5543,6 +5920,13 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0000344">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0004923"/>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mucosa of organ</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mucosa of organ part</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mucosal region</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mucous membrane</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">organ mucosa</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">region of mucosa</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tunica mucosa</oboInOwl:hasRelatedSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mucosa</rdfs:label>
     </owl:Class>
     
@@ -5562,6 +5946,10 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0000475">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0010000"/>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">anatomic region</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">body part</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">body region</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cardinal body part</oboInOwl:hasRelatedSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">organism subdivision</rdfs:label>
     </owl:Class>
     
@@ -5580,6 +5968,8 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0000489">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0003103"/>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cavitated organ</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cavitated compound organs</oboInOwl:hasRelatedSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cavitated compound organ</rdfs:label>
     </owl:Class>
     
@@ -5589,6 +5979,8 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0000991">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0003133"/>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">gonada</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">gonads</oboInOwl:hasRelatedSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">gonad</rdfs:label>
     </owl:Class>
     
@@ -5599,6 +5991,30 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0000992">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000991"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0003134"/>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">female organism genitalia gonad</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">female organism genitalia gonada</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">female organism reproductive system gonad</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">female organism reproductive system gonada</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">female reproductive system gonad</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">female reproductive system gonada</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">genitalia of female organism gonad</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">genitalia of female organism gonada</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">gonad of female organism genitalia</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">gonad of female organism reproductive system</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">gonad of female reproductive system</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">gonad of genitalia of female organism</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">gonad of reproductive system of female organism</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">gonada of female organism genitalia</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">gonada of female organism reproductive system</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">gonada of female reproductive system</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">gonada of genitalia of female organism</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">gonada of reproductive system of female organism</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ovary</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ovum-producing ovary</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">reproductive system of female organism gonad</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">reproductive system of female organism gonada</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ovaries</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ovarium</oboInOwl:hasRelatedSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">female gonad</rdfs:label>
     </owl:Class>
     
@@ -5608,6 +6024,9 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0001021">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000122"/>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nerves</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">peripheral nerve</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neural subtree</oboInOwl:hasRelatedSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nerve</rdfs:label>
     </owl:Class>
     
@@ -5635,6 +6054,12 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0002075">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0005177"/>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">visceral organ</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">visceral organ system</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Organsystem@ge</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">splanchnic tissue</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">viscera</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">visceral tissue</oboInOwl:hasRelatedSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">viscus</rdfs:label>
     </owl:Class>
     
@@ -5647,6 +6072,8 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0004119"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0005172"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0006925"/>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">iecur</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">jecur</oboInOwl:hasRelatedSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">liver</rdfs:label>
     </owl:Class>
     
@@ -5658,6 +6085,7 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000489"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0005172"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0015212"/>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">reniculate kidney</oboInOwl:hasNarrowSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">kidney</rdfs:label>
     </owl:Class>
     
@@ -5668,6 +6096,17 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0002199">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0003102"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0011216"/>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dermis plus epidermis plus hypodermis</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">integumentum commune</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">skin and subcutaneous tissue</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">skin plus hypodermis</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">the integument</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hautsystem@de</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dermal system</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dermoid system</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">skin</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tegument</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">vertebrate integument</oboInOwl:hasRelatedSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">integument</rdfs:label>
     </owl:Class>
     
@@ -5677,6 +6116,8 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0002365">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0002530"/>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ducted gland</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">glandula exocrina</oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exocrine gland</rdfs:label>
     </owl:Class>
     
@@ -5686,6 +6127,10 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0002368">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0002530"/>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ductless gland</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">glandula endocrina</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ductless gland</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">glandulae endocrinae</oboInOwl:hasRelatedSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">endocrine gland</rdfs:label>
     </owl:Class>
     
@@ -5695,6 +6140,9 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0002530">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000062"/>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">glandular organ</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Druese</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">glandula</oboInOwl:hasRelatedSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">gland</rdfs:label>
     </owl:Class>
     
@@ -5704,6 +6152,10 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0003102">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000061"/>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">anatomical surface feature</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">surface feature</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">surface region</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">surface structures</oboInOwl:hasRelatedSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">surface structure</rdfs:label>
     </owl:Class>
     
@@ -5713,6 +6165,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0003103">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000062"/>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">organ</oboInOwl:hasRelatedSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">compound organ</rdfs:label>
     </owl:Class>
     
@@ -5723,6 +6176,10 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0003133">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000062"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0005156"/>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">genital organ</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">reproductive system organ</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sex organ</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">genitalia</oboInOwl:hasRelatedSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">reproductive organ</rdfs:label>
     </owl:Class>
     
@@ -5732,6 +6189,17 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0003134">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0003133"/>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">female organism reproductive organ</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">female organism reproductive structure</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">female organism reproductive system organ</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">female organism sex organ</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">female reproductive gland/organ</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">female reproductive system organ</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">female sex organ</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">reproductive organ of female organism</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">reproductive structure of female organism</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">reproductive system organ of female organism</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sex organ of female organism</oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">female reproductive organ</rdfs:label>
     </owl:Class>
     
@@ -5742,15 +6210,6 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0004119">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000061"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">endoderm-derived structure</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/UBERON_0004120 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0004120">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000061"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mesoderm-derived structure</rdfs:label>
     </owl:Class>
     
 
@@ -5767,7 +6226,9 @@
     <!-- http://purl.obolibrary.org/obo/UBERON_0005156 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0005156">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0004120"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000061"/>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">reproductive system element</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">reproductive system structure</oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">reproductive structure</rdfs:label>
     </owl:Class>
     
@@ -5777,6 +6238,9 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0005162">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000477"/>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">multi-cell-component structure</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">multi-cell-part structure</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cell part cluster</oboInOwl:hasRelatedSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">multi cell part structure</rdfs:label>
     </owl:Class>
     
@@ -5786,6 +6250,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0005172">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0005173"/>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">abdomen organ</oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">abdomen element</rdfs:label>
     </owl:Class>
     
@@ -5795,6 +6260,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0005173">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0005177"/>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">abdominal segment organ</oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">abdominal segment element</rdfs:label>
     </owl:Class>
     
@@ -5804,6 +6270,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0005177">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000062"/>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">trunk organ</oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">trunk region element</rdfs:label>
     </owl:Class>
     
@@ -5814,6 +6281,7 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0006925">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0002368"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0013765"/>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">digestive system gland</oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">digestive gland</rdfs:label>
     </owl:Class>
     
@@ -5823,6 +6291,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0010000">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000061"/>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">multicellular structure</oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">multicellular anatomical structure</rdfs:label>
     </owl:Class>
     
@@ -5841,6 +6310,8 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0013765">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0000062"/>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">digestive organ</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">digestive system organ</oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">digestive system element</rdfs:label>
     </owl:Class>
     

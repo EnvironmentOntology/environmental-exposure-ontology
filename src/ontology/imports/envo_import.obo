@@ -4,6 +4,7 @@ ontology: ecto/imports/envo_import
 [Term]
 id: BFO:0000002
 name: continuant
+disjoint_from: BFO:0000003 ! occurrent
 
 [Term]
 id: BFO:0000003
@@ -13,6 +14,7 @@ name: occurrent
 id: BFO:0000004
 name: independent continuant
 is_a: BFO:0000002 ! continuant
+disjoint_from: BFO:0000020 ! specifically dependent continuant
 
 [Term]
 id: BFO:0000015
@@ -28,6 +30,11 @@ is_a: BFO:0000002 ! continuant
 id: BFO:0000040
 name: material entity
 is_a: BFO:0000004 ! independent continuant
+
+[Term]
+id: CHEBI:131621
+name: C19-steroid
+is_a: CHEBI:35341 ! steroid
 
 [Term]
 id: CHEBI:15022
@@ -165,6 +172,7 @@ is_a: CHEBI:25608 ! nucleoside phosphate
 [Term]
 id: CHEBI:17347
 name: testosterone
+is_a: CHEBI:131621 ! C19-steroid
 is_a: CHEBI:35343 ! 17beta-hydroxy steroid
 is_a: CHEBI:47788 ! 3-oxo steroid
 is_a: CHEBI:50402 ! androstanoid
@@ -305,9 +313,19 @@ name: cadmium atom
 is_a: CHEBI:33340 ! zinc group element atom
 
 [Term]
+id: CHEBI:22985
+name: calcium molecular entity
+is_a: CHEBI:33299 ! alkaline earth molecular entity
+
+[Term]
 id: CHEBI:23014
 name: carbon oxide
 is_a: CHEBI:25701 ! organic oxide
+is_a: CHEBI:36963 ! organooxygen compound
+
+[Term]
+id: CHEBI:23016
+name: carbonates
 is_a: CHEBI:36963 ! organooxygen compound
 
 [Term]
@@ -335,6 +353,11 @@ is_a: CHEBI:33741 ! chromium group molecular entity
 id: CHEBI:23367
 name: molecular entity
 is_a: CHEBI:24431 ! chemical entity
+
+[Term]
+id: CHEBI:23377
+name: copper molecular entity
+is_a: CHEBI:33745 ! copper group molecular entity
 
 [Term]
 id: CHEBI:23888
@@ -743,6 +766,11 @@ is_a: CHEBI:33672 ! heterobicyclic compound
 is_a: CHEBI:38166 ! organic heteropolycyclic compound
 
 [Term]
+id: CHEBI:27275
+name: vanadium molecular entity
+is_a: CHEBI:33746 ! vanadium group molecular entity
+
+[Term]
 id: CHEBI:27338
 name: xylene
 is_a: CHEBI:38975 ! methylbenzene
@@ -753,16 +781,20 @@ name: zinc atom
 is_a: CHEBI:33340 ! zinc group element atom
 
 [Term]
+id: CHEBI:27364
+name: zinc molecular entity
+is_a: CHEBI:33673 ! zinc group molecular entity
+
+[Term]
 id: CHEBI:27560
 name: boron atom
 is_a: CHEBI:25585 ! nonmetal atom
 is_a: CHEBI:33317 ! boron group element atom
 
 [Term]
-id: CHEBI:27594
-name: carbon atom
-is_a: CHEBI:25585 ! nonmetal atom
-is_a: CHEBI:33306 ! carbon group element atom
+id: CHEBI:27563
+name: arsenic atom
+is_a: CHEBI:33300 ! pnictogen
 
 [Term]
 id: CHEBI:27780
@@ -834,6 +866,13 @@ is_a: CHEBI:50047 ! organic amino compound
 id: CHEBI:32988
 name: amide
 is_a: CHEBI:51143 ! nitrogen molecular entity
+
+[Term]
+id: CHEBI:3311
+name: calcium carbonate
+is_a: CHEBI:35156 ! calcium salt
+is_a: CHEBI:46721 ! carbonate salt
+is_a: CHEBI:64708 ! one-carbon compound
 
 [Term]
 id: CHEBI:33232
@@ -941,6 +980,16 @@ name: alkali metal molecular entity
 is_a: CHEBI:33674 ! s-block molecular entity
 
 [Term]
+id: CHEBI:33299
+name: alkaline earth molecular entity
+is_a: CHEBI:33674 ! s-block molecular entity
+
+[Term]
+id: CHEBI:33300
+name: pnictogen
+is_a: CHEBI:33560 ! p-block element atom
+
+[Term]
 id: CHEBI:33302
 name: pnictogen molecular entity
 is_a: CHEBI:33675 ! p-block molecular entity
@@ -1038,6 +1087,16 @@ name: transition element molecular entity
 is_a: CHEBI:23367 ! molecular entity
 
 [Term]
+id: CHEBI:33498
+name: actinoid molecular entity
+is_a: CHEBI:33677 ! f-block molecular entity
+
+[Term]
+id: CHEBI:33499
+name: uranium molecular entity
+is_a: CHEBI:33498 ! actinoid molecular entity
+
+[Term]
 id: CHEBI:33521
 name: metal atom
 is_a: CHEBI:33250 ! atom
@@ -1079,6 +1138,16 @@ is_a: CHEBI:33675 ! p-block molecular entity
 id: CHEBI:33582
 name: carbon group molecular entity
 is_a: CHEBI:33675 ! p-block molecular entity
+
+[Term]
+id: CHEBI:33583
+name: noble gas molecular entity
+is_a: CHEBI:33579 ! main group molecular entity
+
+[Term]
+id: CHEBI:33585
+name: lead molecular entity
+is_a: CHEBI:33582 ! carbon group molecular entity
 
 [Term]
 id: CHEBI:33595
@@ -1186,6 +1255,11 @@ is_a: CHEBI:33636 ! bicyclic compound
 is_a: CHEBI:5686 ! heterocyclic compound
 
 [Term]
+id: CHEBI:33673
+name: zinc group molecular entity
+is_a: CHEBI:33676 ! d-block molecular entity
+
+[Term]
 id: CHEBI:33674
 name: s-block molecular entity
 is_a: CHEBI:33579 ! main group molecular entity
@@ -1198,6 +1272,11 @@ is_a: CHEBI:33579 ! main group molecular entity
 [Term]
 id: CHEBI:33676
 name: d-block molecular entity
+is_a: CHEBI:33497 ! transition element molecular entity
+
+[Term]
+id: CHEBI:33677
+name: f-block molecular entity
 is_a: CHEBI:33497 ! transition element molecular entity
 
 [Term]
@@ -1237,6 +1316,16 @@ is_a: CHEBI:50047 ! organic amino compound
 [Term]
 id: CHEBI:33741
 name: chromium group molecular entity
+is_a: CHEBI:33676 ! d-block molecular entity
+
+[Term]
+id: CHEBI:33745
+name: copper group molecular entity
+is_a: CHEBI:33676 ! d-block molecular entity
+
+[Term]
+id: CHEBI:33746
+name: vanadium group molecular entity
 is_a: CHEBI:33676 ! d-block molecular entity
 
 [Term]
@@ -1309,6 +1398,11 @@ is_a: CHEBI:24866 ! salt
 is_a: CHEBI:37578 ! halide
 
 [Term]
+id: CHEBI:33969
+name: gold molecular entity
+is_a: CHEBI:33745 ! copper group molecular entity
+
+[Term]
 id: CHEBI:35106
 name: nitrogen hydride
 is_a: CHEBI:35881 ! pnictogen hydride
@@ -1323,6 +1417,12 @@ is_a: CHEBI:35106 ! nitrogen hydride
 id: CHEBI:35131
 name: aldose phosphate
 is_a: CHEBI:33447 ! phospho sugar
+
+[Term]
+id: CHEBI:35156
+name: calcium salt
+is_a: CHEBI:22985 ! calcium molecular entity
+is_a: CHEBI:36364 ! alkaline earth salt
 
 [Term]
 id: CHEBI:35195
@@ -1557,6 +1657,12 @@ name: phosphorus oxoacids and derivatives
 is_a: CHEBI:26082 ! phosphorus molecular entity
 
 [Term]
+id: CHEBI:36364
+name: alkaline earth salt
+is_a: CHEBI:24866 ! salt
+is_a: CHEBI:33299 ! alkaline earth molecular entity
+
+[Term]
 id: CHEBI:36388
 name: saturated organic heterocyclic parent
 is_a: CHEBI:35552 ! heterocyclic organic fundamental parent
@@ -1621,6 +1727,11 @@ id: CHEBI:36902
 name: chalcogen hydride
 is_a: CHEBI:33242 ! inorganic hydride
 is_a: CHEBI:33304 ! chalcogen molecular entity
+
+[Term]
+id: CHEBI:36908
+name: argon molecular entity
+is_a: CHEBI:33583 ! noble gas molecular entity
 
 [Term]
 id: CHEBI:36914
@@ -1824,6 +1935,11 @@ is_a: CHEBI:36683 ! organochlorine compound
 is_a: CHEBI:64708 ! one-carbon compound
 
 [Term]
+id: CHEBI:46721
+name: carbonate salt
+is_a: CHEBI:23016 ! carbonates
+
+[Term]
 id: CHEBI:46787
 name: solvent
 is_a: CHEBI:33232 ! application
@@ -1920,6 +2036,12 @@ is_a: CHEBI:48359 ! protophilic solvent
 id: CHEBI:48706
 name: antagonist
 is_a: CHEBI:52210 ! pharmacological role
+
+[Term]
+id: CHEBI:49976
+name: zinc dichloride
+is_a: CHEBI:27364 ! zinc molecular entity
+is_a: CHEBI:36093 ! inorganic chloride
 
 [Term]
 id: CHEBI:50047
@@ -2336,21 +2458,27 @@ is_a: CHEBI:33521 ! metal atom
 [Term]
 id: ENVO:00000000
 name: geographic feature
+synonym: "macroscopic spatial feature" EXACT []
 is_a: ENVO:00002297 ! environmental feature
 
 [Term]
 id: ENVO:00000003
 name: mine tailing
+synonym: "dumping ground" RELATED [USGS:SDTS]
+synonym: "mine dump" RELATED [ADL:FTT]
+synonym: "tailing" RELATED [ADL:FTT]
 is_a: ENVO:0010001 ! anthropogenic environmental material
 
 [Term]
 id: ENVO:00000134
 name: permafrost
+synonym: "Permafrost" EXACT [NASA:earthrealm]
 is_a: ENVO:00001998 ! soil
 
 [Term]
 id: ENVO:00001998
 name: soil
+synonym: "regolith" BROAD []
 is_a: ENVO:00010483 ! environmental material
 relationship: BFO:0000051 ENVO:00002982 ! has part clay
 relationship: BFO:0000051 ENVO:01000016 ! has part silt
@@ -2366,24 +2494,31 @@ is_a: ENVO:00002264 ! waste material
 
 [Term]
 id: ENVO:00002002
-name: food product
-is_a: ENVO:0010001 ! anthropogenic environmental material
+name: obsolete food product
+is_obsolete: true
 
 [Term]
 id: ENVO:00002003
 name: feces
+synonym: "droppings" RELATED []
+synonym: "faeces" EXACT []
+synonym: "frass" RELATED []
+synonym: "pellet" RELATED []
 is_a: ENVO:02000022 ! excreta
 
 [Term]
 id: ENVO:00002005
 name: air
-is_a: ENVO:00010483 ! environmental material
+is_a: ENVO:01000797 ! gaseous environmental material
+relationship: BFO:0000051 CHEBI:15379 ! has part dioxygen
+relationship: BFO:0000051 CHEBI:16526 ! has part carbon dioxide
+relationship: BFO:0000051 CHEBI:36908 ! has part argon molecular entity
 relationship: BFO:0000051 ENVO:01000266 ! has part water vapour
 
 [Term]
 id: ENVO:00002006
 name: water
-is_a: ENVO:00010483 ! environmental material
+is_a: ENVO:01000815 ! liquid environmental material
 
 [Term]
 id: ENVO:00002007
@@ -2393,7 +2528,7 @@ is_a: ENVO:00010483 ! environmental material
 [Term]
 id: ENVO:00002008
 name: dust
-is_a: ENVO:00010483 ! environmental material
+is_a: ENVO:01000814 ! solid environmental material
 
 [Term]
 id: ENVO:00002018
@@ -2471,25 +2606,9 @@ name: xylene contaminated soil
 is_a: ENVO:00002116 ! contaminated soil
 
 [Term]
-id: ENVO:00002165
-name: meat food product
-is_a: ENVO:0010000 ! animal food product
-
-[Term]
-id: ENVO:00002166
-name: sausage
-is_a: ENVO:00002175 ! processed meat product
-
-[Term]
 id: ENVO:00002174
-name: hot dog
-is_a: ENVO:0010136 ! cooked sausage
-
-[Term]
-id: ENVO:00002175
-name: processed meat product
-is_a: ENVO:00002165 ! meat food product
-is_a: ENVO:0010092 ! processed food product
+name: obsolete hot dog
+is_obsolete: true
 
 [Term]
 id: ENVO:00002176
@@ -2504,6 +2623,7 @@ is_a: ENVO:00002202 ! organically contaminated sediment
 [Term]
 id: ENVO:00002186
 name: contaminated water
+synonym: "polluted water" EXACT []
 is_a: ENVO:00002006 ! water
 
 [Term]
@@ -2524,16 +2644,19 @@ is_a: ENVO:00001998 ! soil
 [Term]
 id: ENVO:00002264
 name: waste material
-is_a: ENVO:0010001 ! anthropogenic environmental material
+is_a: ENVO:00010483 ! environmental material
 
 [Term]
 id: ENVO:00002266
 name: chicken breeding waste material
+synonym: "chicken breeding waste" BROAD []
+synonym: "chicken yard waste" RELATED []
 is_a: ENVO:01000371 ! agricultural waste material
 
 [Term]
 id: ENVO:00002267
 name: industrial waste material
+synonym: "industrial waste" BROAD []
 is_a: ENVO:00002264 ! waste material
 
 [Term]
@@ -2554,6 +2677,7 @@ is_a: ENVO:00001998 ! soil
 [Term]
 id: ENVO:00002276
 name: animal waste material
+synonym: "animal waste" BROAD []
 is_a: ENVO:00002873 ! organic waste material
 
 [Term]
@@ -2576,12 +2700,14 @@ relationship: BFO:0000051 ENVO:01000017 ! has part sand
 [Term]
 id: ENVO:00002872
 name: bagasse
-is_a: ENVO:01000371 ! agricultural waste material
+synonym: "sugarcane bagasse" EXACT []
+is_a: ENVO:00002264 ! waste material
 
 [Term]
 id: ENVO:00002873
 name: organic waste material
-is_a: ENVO:00002264 ! waste material
+synonym: "organic waste" BROAD []
+is_a: ENVO:01000373 ! biological waste material
 
 [Term]
 id: ENVO:00002875
@@ -2602,12 +2728,13 @@ is_a: ENVO:00002985 ! oil
 [Term]
 id: ENVO:00002984
 name: petroleum
+synonym: "crude oil" RELATED []
 is_a: ENVO:00002985 ! oil
 
 [Term]
 id: ENVO:00002985
 name: oil
-is_a: ENVO:00010483 ! environmental material
+is_a: ENVO:01000815 ! liquid environmental material
 
 [Term]
 id: ENVO:00003030
@@ -2617,7 +2744,7 @@ is_a: ENVO:0010003 ! agricultural environmental material
 [Term]
 id: ENVO:00003031
 name: animal manure
-is_a: ENVO:01000371 ! agricultural waste material
+is_a: ENVO:00010483 ! environmental material
 
 [Term]
 id: ENVO:00003032
@@ -2637,17 +2764,13 @@ is_a: ENVO:00001998 ! soil
 [Term]
 id: ENVO:00010483
 name: environmental material
+synonym: "portion of environmental material" EXACT []
 is_a: BFO:0000040 ! material entity
 
 [Term]
 id: ENVO:00010505
 name: aerosol
 is_a: ENVO:01000060 ! particulate matter
-
-[Term]
-id: ENVO:0010000
-name: animal food product
-is_a: ENVO:00002002 ! food product
 
 [Term]
 id: ENVO:0010001
@@ -2658,16 +2781,6 @@ is_a: ENVO:00010483 ! environmental material
 id: ENVO:0010003
 name: agricultural environmental material
 is_a: ENVO:0010001 ! anthropogenic environmental material
-
-[Term]
-id: ENVO:0010092
-name: processed food product
-is_a: ENVO:00002002 ! food product
-
-[Term]
-id: ENVO:0010136
-name: cooked sausage
-is_a: ENVO:00002166 ! sausage
 
 [Term]
 id: ENVO:01000001
@@ -2689,26 +2802,31 @@ is_a: ENVO:00010483 ! environmental material
 id: ENVO:01000060
 name: particulate matter
 is_a: ENVO:00010483 ! environmental material
+is_obsolete: true
 
 [Term]
 id: ENVO:01000155
 name: organic material
+synonym: "biomass" EXACT []
 is_a: ENVO:00010483 ! environmental material
 
 [Term]
 id: ENVO:01000231
 name: lava
-is_a: ENVO:00010483 ! environmental material
+is_a: ENVO:01000815 ! liquid environmental material
 
 [Term]
 id: ENVO:01000256
 name: mineral material
-is_a: ENVO:00010483 ! environmental material
+is_a: ENVO:01000814 ! solid environmental material
 
 [Term]
 id: ENVO:01000266
 name: water vapour
-is_a: ENVO:00010483 ! environmental material
+synonym: "aqueous vapor" EXACT [https://en.wikipedia.org/wiki/Water_vapor]
+synonym: "aqueous vapour" EXACT [https://en.wikipedia.org/wiki/Water_vapor]
+synonym: "water vapor" EXACT [https://en.wikipedia.org/wiki/Water_vapor]
+is_a: ENVO:01000797 ! gaseous environmental material
 
 [Term]
 id: ENVO:01000267
@@ -2718,6 +2836,7 @@ is_a: ENVO:01000281 ! layer
 [Term]
 id: ENVO:01000268
 name: atmospheric water vapour
+synonym: "atmospheric water vapor" EXACT [https://en.wikipedia.org/wiki/Water_vapor]
 is_a: ENVO:01000266 ! water vapour
 intersection_of: ENVO:01000266 ! water vapour
 intersection_of: BFO:0000050 ENVO:01000267 ! part of atmosphere
@@ -2731,21 +2850,31 @@ is_a: ENVO:00000000 ! geographic feature
 [Term]
 id: ENVO:01000371
 name: agricultural waste material
+synonym: "agricultural waste" BROAD []
+is_a: ENVO:00002264 ! waste material
+
+[Term]
+id: ENVO:01000373
+name: biological waste material
+synonym: "biological waste" BROAD []
 is_a: ENVO:00002264 ! waste material
 
 [Term]
 id: ENVO:01000405
 name: respirable suspended particulate matter
+synonym: "PM10" EXACT []
 is_a: ENVO:00010505 ! aerosol
 
 [Term]
 id: ENVO:01000406
 name: snow
+synonym: "snow" RELATED [http://www.eionet.europa.eu/gemet/concept/7769]
 is_a: ENVO:00010483 ! environmental material
 
 [Term]
 id: ENVO:01000415
 name: fine respirable suspended particulate matter
+synonym: "PM2.5" EXACT []
 is_a: ENVO:01000405 ! respirable suspended particulate matter
 
 [Term]
@@ -2761,8 +2890,18 @@ is_a: ENVO:01000060 ! particulate matter
 [Term]
 id: ENVO:01000451
 name: atmospheric carbon dioxide
-is_a: ENVO:00010483 ! environmental material
+is_a: ENVO:01000797 ! gaseous environmental material
 relationship: BFO:0000050 ENVO:01000267 ! part of atmosphere
+
+[Term]
+id: ENVO:01000460
+name: asphalt
+synonym: "asphaltum" EXACT []
+synonym: "bitumen" EXACT []
+synonym: "crude bitumen" EXACT []
+synonym: "pitch" RELATED []
+synonym: "tar" RELATED []
+is_a: ENVO:00002984 ! petroleum
 
 [Term]
 id: ENVO:01000629
@@ -2782,7 +2921,7 @@ is_a: ENVO:01000630 ! acidification of an aquatic environment
 [Term]
 id: ENVO:01000634
 name: volcanic eruption
-is_a: ENVO:02500000 ! environmental system process
+is_a: ENVO:02500031 ! hydrological process
 
 [Term]
 id: ENVO:01000648
@@ -2802,16 +2941,21 @@ is_a: ENVO:01000677 ! earthquake
 [Term]
 id: ENVO:01000689
 name: tsunami
+synonym: "seismic sea wave" EXACT []
+synonym: "tidal wave" EXACT []
 is_a: ENVO:02500000 ! environmental system process
 
 [Term]
 id: ENVO:01000690
 name: mass wasting
+synonym: "mass movement" BROAD []
+synonym: "slope movement" EXACT []
 is_a: ENVO:02500000 ! environmental system process
 
 [Term]
 id: ENVO:01000692
 name: landslide process
+synonym: "landslip" EXACT []
 is_a: ENVO:01000690 ! mass wasting
 
 [Term]
@@ -2827,6 +2971,7 @@ is_a: ENVO:00010483 ! environmental material
 [Term]
 id: ENVO:01000703
 name: hydrological precipitation process
+synonym: "precipitation" BROAD []
 is_a: ENVO:02500000 ! environmental system process
 
 [Term]
@@ -2872,19 +3017,34 @@ is_a: ENVO:02500002 ! flooding
 [Term]
 id: ENVO:01000742
 name: carbon-bearing gas emission process
+synonym: "carbon emission process" BROAD []
 is_a: ENVO:02500000 ! environmental system process
-relationship: BFO:0000051 CHEBI:27594 ! has part carbon atom
 
 [Term]
 id: ENVO:01000769
 name: carbon dioxide emission process
 is_a: ENVO:01000742 ! carbon-bearing gas emission process
-relationship: BFO:0000051 CHEBI:16526 ! has part carbon dioxide
 
 [Term]
 id: ENVO:01000785
 name: material extraction process
 is_a: ENVO:02500000 ! environmental system process
+
+[Term]
+id: ENVO:01000797
+name: gaseous environmental material
+synonym: "gas" NARROW []
+is_a: ENVO:00010483 ! environmental material
+
+[Term]
+id: ENVO:01000814
+name: solid environmental material
+is_a: ENVO:00010483 ! environmental material
+
+[Term]
+id: ENVO:01000815
+name: liquid environmental material
+is_a: ENVO:00010483 ! environmental material
 
 [Term]
 id: ENVO:02000019
@@ -2904,11 +3064,13 @@ is_a: ENVO:02000019 ! bodily fluid
 [Term]
 id: ENVO:02000022
 name: excreta
+is_a: ENVO:00002264 ! waste material
 is_a: ENVO:02000019 ! bodily fluid
 
 [Term]
 id: ENVO:02000023
 name: bile
+synonym: "gall" RELATED []
 is_a: ENVO:02000019 ! bodily fluid
 
 [Term]
@@ -2939,6 +3101,8 @@ is_a: ENVO:02500003 ! atmospheric process
 [Term]
 id: ENVO:02500012
 name: deforestation
+synonym: "clearance" BROAD []
+synonym: "clearing" BROAD []
 is_a: ENVO:02500000 ! environmental system process
 
 [Term]
@@ -2975,8 +3139,14 @@ name: anthropogenic environmental process
 is_a: ENVO:02500000 ! environmental system process
 
 [Term]
+id: ENVO:02500031
+name: hydrological process
+is_a: ENVO:02500000 ! environmental system process
+
+[Term]
 id: ENVO:02500036
 name: environmental pollution
+synonym: "pollution" EXACT []
 is_a: ENVO:02500000 ! environmental system process
 
 [Term]
@@ -3080,31 +3250,52 @@ is_a: PATO:0002300 ! increased quality
 [Term]
 id: UBERON:0000026
 name: appendage
+synonym: "appendages" RELATED []
+synonym: "extremitaet" RELATED []
+synonym: "extremity" RELATED []
+synonym: "limbs/digits/tail" RELATED []
 is_a: UBERON:0000475 ! organism subdivision
 
 [Term]
 id: UBERON:0000061
 name: anatomical structure
+synonym: "biological structure" EXACT []
+synonym: "connected biological structure" EXACT []
 is_a: UBERON:0000465 ! material anatomical entity
 
 [Term]
 id: UBERON:0000062
 name: organ
+synonym: "anatomical unit" RELATED []
+synonym: "body organ" RELATED []
+synonym: "element" RELATED []
 is_a: UBERON:0010000 ! multicellular anatomical structure
 
 [Term]
 id: UBERON:0000064
 name: organ part
+synonym: "cardinal organ part" EXACT []
+synonym: "regional part of organ" RELATED []
 is_a: UBERON:0010000 ! multicellular anatomical structure
 
 [Term]
 id: UBERON:0000122
 name: neuron projection bundle
+synonym: "funiculus" EXACT []
+synonym: "nerve fiber bundle" EXACT []
+synonym: "neural fiber bundle" EXACT []
 is_a: UBERON:0005162 ! multi cell part structure
 
 [Term]
 id: UBERON:0000344
 name: mucosa
+synonym: "mucosa of organ" EXACT []
+synonym: "mucosa of organ part" EXACT []
+synonym: "mucosal region" EXACT []
+synonym: "mucous membrane" EXACT []
+synonym: "organ mucosa" EXACT []
+synonym: "region of mucosa" RELATED []
+synonym: "tunica mucosa" RELATED []
 is_a: UBERON:0004923 ! organ component layer
 
 [Term]
@@ -3116,6 +3307,10 @@ is_a: UBERON:0001062 ! anatomical entity
 [Term]
 id: UBERON:0000475
 name: organism subdivision
+synonym: "anatomic region" EXACT []
+synonym: "body part" RELATED []
+synonym: "body region" RELATED []
+synonym: "cardinal body part" RELATED []
 is_a: UBERON:0010000 ! multicellular anatomical structure
 
 [Term]
@@ -3126,22 +3321,53 @@ is_a: UBERON:0001062 ! anatomical entity
 [Term]
 id: UBERON:0000489
 name: cavitated compound organ
+synonym: "cavitated compound organs" RELATED []
+synonym: "cavitated organ" EXACT []
 is_a: UBERON:0003103 ! compound organ
 
 [Term]
 id: UBERON:0000991
 name: gonad
+synonym: "gonada" EXACT []
+synonym: "gonads" RELATED []
 is_a: UBERON:0003133 ! reproductive organ
 
 [Term]
 id: UBERON:0000992
 name: female gonad
+synonym: "female organism genitalia gonad" EXACT []
+synonym: "female organism genitalia gonada" EXACT []
+synonym: "female organism reproductive system gonad" EXACT []
+synonym: "female organism reproductive system gonada" EXACT []
+synonym: "female reproductive system gonad" EXACT []
+synonym: "female reproductive system gonada" EXACT []
+synonym: "genitalia of female organism gonad" EXACT []
+synonym: "genitalia of female organism gonada" EXACT []
+synonym: "gonad of female organism genitalia" EXACT []
+synonym: "gonad of female organism reproductive system" EXACT []
+synonym: "gonad of female reproductive system" EXACT []
+synonym: "gonad of genitalia of female organism" EXACT []
+synonym: "gonad of reproductive system of female organism" EXACT []
+synonym: "gonada of female organism genitalia" EXACT []
+synonym: "gonada of female organism reproductive system" EXACT []
+synonym: "gonada of female reproductive system" EXACT []
+synonym: "gonada of genitalia of female organism" EXACT []
+synonym: "gonada of reproductive system of female organism" EXACT []
+synonym: "ovaries" RELATED []
+synonym: "ovarium" RELATED []
+synonym: "ovary" EXACT []
+synonym: "ovum-producing ovary" EXACT []
+synonym: "reproductive system of female organism gonad" EXACT []
+synonym: "reproductive system of female organism gonada" EXACT []
 is_a: UBERON:0000991 ! gonad
 is_a: UBERON:0003134 ! female reproductive organ
 
 [Term]
 id: UBERON:0001021
 name: nerve
+synonym: "nerves" EXACT []
+synonym: "neural subtree" RELATED []
+synonym: "peripheral nerve" EXACT []
 is_a: UBERON:0000122 ! neuron projection bundle
 
 [Term]
@@ -3157,11 +3383,19 @@ is_a: UBERON:0002075 ! viscus
 [Term]
 id: UBERON:0002075
 name: viscus
+synonym: "Organsystem@ge" RELATED []
+synonym: "splanchnic tissue" RELATED []
+synonym: "viscera" RELATED []
+synonym: "visceral organ" EXACT []
+synonym: "visceral organ system" EXACT []
+synonym: "visceral tissue" RELATED []
 is_a: UBERON:0005177 ! trunk region element
 
 [Term]
 id: UBERON:0002107
 name: liver
+synonym: "iecur" RELATED []
+synonym: "jecur" RELATED []
 is_a: UBERON:0002365 ! exocrine gland
 is_a: UBERON:0004119 ! endoderm-derived structure
 is_a: UBERON:0005172 ! abdomen element
@@ -3170,6 +3404,7 @@ is_a: UBERON:0006925 ! digestive gland
 [Term]
 id: UBERON:0002113
 name: kidney
+synonym: "reniculate kidney" NARROW []
 is_a: UBERON:0000489 ! cavitated compound organ
 is_a: UBERON:0005172 ! abdomen element
 is_a: UBERON:0015212 ! lateral structure
@@ -3177,53 +3412,88 @@ is_a: UBERON:0015212 ! lateral structure
 [Term]
 id: UBERON:0002199
 name: integument
+synonym: "dermal system" RELATED []
+synonym: "dermis plus epidermis plus hypodermis" EXACT []
+synonym: "dermoid system" RELATED []
+synonym: "Hautsystem@de" RELATED []
+synonym: "integumentum commune" EXACT []
+synonym: "skin" RELATED []
+synonym: "skin and subcutaneous tissue" EXACT []
+synonym: "skin plus hypodermis" EXACT []
+synonym: "tegument" RELATED []
+synonym: "the integument" EXACT []
+synonym: "vertebrate integument" RELATED []
 is_a: UBERON:0003102 ! surface structure
 is_a: UBERON:0011216 ! organ system subdivision
 
 [Term]
 id: UBERON:0002365
 name: exocrine gland
+synonym: "ducted gland" EXACT []
+synonym: "glandula exocrina" EXACT []
 is_a: UBERON:0002530 ! gland
 
 [Term]
 id: UBERON:0002368
 name: endocrine gland
+synonym: "ductless gland" EXACT []
+synonym: "ductless gland" RELATED []
+synonym: "glandula endocrina" EXACT []
+synonym: "glandulae endocrinae" RELATED []
 is_a: UBERON:0002530 ! gland
 
 [Term]
 id: UBERON:0002530
 name: gland
+synonym: "Druese" RELATED []
+synonym: "glandula" RELATED []
+synonym: "glandular organ" EXACT []
 is_a: UBERON:0000062 ! organ
 
 [Term]
 id: UBERON:0003102
 name: surface structure
+synonym: "anatomical surface feature" EXACT []
+synonym: "surface feature" RELATED []
+synonym: "surface region" RELATED []
+synonym: "surface structures" RELATED []
 is_a: UBERON:0000061 ! anatomical structure
 
 [Term]
 id: UBERON:0003103
 name: compound organ
+synonym: "organ" RELATED []
 is_a: UBERON:0000062 ! organ
 
 [Term]
 id: UBERON:0003133
 name: reproductive organ
+synonym: "genital organ" EXACT []
+synonym: "genitalia" RELATED []
+synonym: "reproductive system organ" EXACT []
+synonym: "sex organ" EXACT []
 is_a: UBERON:0000062 ! organ
 is_a: UBERON:0005156 ! reproductive structure
 
 [Term]
 id: UBERON:0003134
 name: female reproductive organ
+synonym: "female organism reproductive organ" EXACT []
+synonym: "female organism reproductive structure" EXACT []
+synonym: "female organism reproductive system organ" EXACT []
+synonym: "female organism sex organ" EXACT []
+synonym: "female reproductive gland/organ" EXACT []
+synonym: "female reproductive system organ" EXACT []
+synonym: "female sex organ" EXACT []
+synonym: "reproductive organ of female organism" EXACT []
+synonym: "reproductive structure of female organism" EXACT []
+synonym: "reproductive system organ of female organism" EXACT []
+synonym: "sex organ of female organism" EXACT []
 is_a: UBERON:0003133 ! reproductive organ
 
 [Term]
 id: UBERON:0004119
 name: endoderm-derived structure
-is_a: UBERON:0000061 ! anatomical structure
-
-[Term]
-id: UBERON:0004120
-name: mesoderm-derived structure
 is_a: UBERON:0000061 ! anatomical structure
 
 [Term]
@@ -3234,37 +3504,47 @@ is_a: UBERON:0000064 ! organ part
 [Term]
 id: UBERON:0005156
 name: reproductive structure
-is_a: UBERON:0004120 ! mesoderm-derived structure
+synonym: "reproductive system element" EXACT []
+synonym: "reproductive system structure" EXACT []
+is_a: UBERON:0000061 ! anatomical structure
 
 [Term]
 id: UBERON:0005162
 name: multi cell part structure
+synonym: "cell part cluster" RELATED []
+synonym: "multi-cell-component structure" EXACT []
+synonym: "multi-cell-part structure" EXACT []
 is_a: UBERON:0000477 ! anatomical cluster
 
 [Term]
 id: UBERON:0005172
 name: abdomen element
+synonym: "abdomen organ" EXACT []
 is_a: UBERON:0005173 ! abdominal segment element
 
 [Term]
 id: UBERON:0005173
 name: abdominal segment element
+synonym: "abdominal segment organ" EXACT []
 is_a: UBERON:0005177 ! trunk region element
 
 [Term]
 id: UBERON:0005177
 name: trunk region element
+synonym: "trunk organ" EXACT []
 is_a: UBERON:0000062 ! organ
 
 [Term]
 id: UBERON:0006925
 name: digestive gland
+synonym: "digestive system gland" EXACT []
 is_a: UBERON:0002368 ! endocrine gland
 is_a: UBERON:0013765 ! digestive system element
 
 [Term]
 id: UBERON:0010000
 name: multicellular anatomical structure
+synonym: "multicellular structure" EXACT []
 is_a: UBERON:0000061 ! anatomical structure
 
 [Term]
@@ -3275,6 +3555,8 @@ is_a: UBERON:0010000 ! multicellular anatomical structure
 [Term]
 id: UBERON:0013765
 name: digestive system element
+synonym: "digestive organ" EXACT []
+synonym: "digestive system organ" EXACT []
 is_a: UBERON:0000062 ! organ
 
 [Term]

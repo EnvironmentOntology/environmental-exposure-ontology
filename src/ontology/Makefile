@@ -8,12 +8,12 @@ DATE=`date +%Y-%m-%d`
 MODS = exposure_to_radiation exposure_to_material exposure_to_environmental_process exposure_to_environmental_condition exposure_to_chemical exposure_to_chemical_with_role exposure_to_levels_in_medium exposure_to_change_in_levels exposure_via_route activity prenatal surgical_procedure exposure_to_infection
 MODS_CSV = $(patsubst %,$(MODDIR)/%.csv,$(MODS))
 
-all: all_imports all_modules ecto.owl ecto.obo all_subsets 
+all: all_imports all_modules ecto.json.gz ecto.owl ecto.obo all_subsets 
 all_subsets: subsets/ecto-basic.obo
 test: all
 release: all copy-release
 
-TARGETS = $(ONTDIR)/ecto.obo $(ONTDIR)/ecto.owl $(ONTDIR)/ecto.json imports subsets
+TARGETS = $(ONTDIR)/ecto.obo $(ONTDIR)/ecto.owl $(ONTDIR)/ecto.json.gz imports subsets
 
 ALL_MODS_OWL = $(patsubst %, $(MODDIR)/%.owl, $(MODS))
 
@@ -45,7 +45,10 @@ ecto.obo: ecto.owl
 	owltools $(USECAT)  $< --merge-imports-closure -o -f obo --no-check $@.tmp && grep -v ^owl-axioms $@.tmp > $@
 
 ecto.json: ecto.owl
-	owltools $(USECAT)  $<  -o -f json  $@.tmp && mv $@.tmp > $@
+	owltools $(USECAT)  $<  -o -f json  $@.tmp && mv $@.tmp $@
+
+ecto.json.gz: ecto.json
+	gzip $<
 
 oort: ecto-core.owl
 	ontology-release-runner $(USECAT) --ignore-selected-equivalent-pairs 'CL:0000000'  --ignoreLock --skip-release-folder --skip-format owx --skip-format obo --no-subsets --outdir target --allow-overwrite --asserted --simple --reasoner elk $<
@@ -86,9 +89,9 @@ imports/seed.tsv: ecto-core.owl imports/seed_curated.tsv
 	cut -f1 $@.tmp imports/seed_curated.tsv | sort -u > $@
 
 imports/%_import.owl: $(SRC) mirror/%.owl.gz imports/seed.tsv
-	gzip -dc mirror/$*.owl.gz > mirror/$*.owl &&\
-	robot extract -i mirror/$*.owl -T imports/seed.tsv -m BOT -O $(OBO)/ecto/$@ -o $@.tmp.owl && mv $@.tmp.owl $@ &&\
-	rm mirror/$*.owl
+	gzip -dc mirror/$*.owl.gz > mirror/copy-$*.owl &&\
+	robot extract -i mirror/copy-$*.owl -T imports/seed.tsv -m BOT -O $(OBO)/ecto/$@ -o $@.tmp.owl && mv $@.tmp.owl $@ &&\
+	rm mirror/copy-$*.owl
 
 imports/%_import.obo: imports/%_import.owl
 	owltools $(USECAT) $< -o -f obo --no-check $@
@@ -99,15 +102,15 @@ mirror/%.gz: mirror/%
 
 # clone remote ontology locally, perfoming some excision of relations and annotations
 mirror/%.obo:
-	wget --no-check-certificate $(OBO)/$*.obo -O $@
+	wget --no-check-certificate $(OBO)/$*.obo -O $@.tmp && mv $@.tmp $@ && touch $@
 .PRECIOUS: mirror/%.obo
 
 mirror/%.owl: mirror/%.obo
 	owltools $< --remove-annotation-assertions -r -l -s --remove-dangling-annotations --make-subset-by-properties -f $(KEEPRELS)  -o $@
 .PRECIOUS: mirror/%.owl
 mirror/ro.owl:
-	owltools $(OBO)/ro.owl --merge-imports-closure -o $@
-.PRECIOUS: mirror/%.owl
+	owltools $(OBO)/ro.owl --merge-imports-closure -o $@.tmp && mv $@.tmp $@
+.PRECIOUS: mirror/ro.owl
 
 mirror/exo.obo:
 	wget --no-check-certificate https://raw.githubusercontent.com/CTDbase/exposure-ontology-draft/master/src/ontology/exo.obo -O $@
@@ -117,11 +120,12 @@ mirror/activity.obo:
 	blip ontol-query -r ncit -query "class(R,'Activity'),subclassRT(ID,R)" -to obo > $@.tmp && mv $@.tmp $@
 
 mirror/chebi.obo:
-	wget $(OBO)/chebi.obo -O $@
+	wget $(OBO)/chebi.obo -O $@.tmp && mv $@.tmp $@ && touch $@
 .PRECIOUS: mirror/chebi.obo
 
 mirror/chebi.owl: mirror/chebi.obo
 	owltools --use-catalog $<  --rename-entity $(OBO)/chebi#has_part $(OBO)/BFO_0000051 --rename-entity $(OBO)/chebi#has_role $(OBO)/RO_0000087  --remove-annotation-assertions -r -l -s  --set-ontology-id $(OBO)/chebi.owl -o $@
+.PRECIOUS: mirror/chebi.owl
 
 #mirror/chebi.owl:
 #	wget $(OBO)/chebi.obo -O $@.tmp && owltools $@.tmp --make-subset-by-properties -f --extract-mingraph --set-ontology-id $(OBO)/chebi.owl -o $@

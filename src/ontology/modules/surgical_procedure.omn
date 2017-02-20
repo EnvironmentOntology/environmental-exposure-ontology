@@ -2,27 +2,27 @@ Prefix: : <http://purl.obolibrary.org/obo/>
 Prefix: IAO: <http://purl.obolibrary.org/obo/IAO_>
 Prefix: DOSDP: <http://geneontology.org/foo/>
 Prefix: oio: <http://www.geneontology.org/formats/oboInOwl#>
-Prefix: NCIT: <http://purl.obolibrary.org/obo/NCIT_>
-Prefix: GO: <http://purl.obolibrary.org/obo/GO_>
-Prefix: ZECO: <http://purl.obolibrary.org/obo/ZECO_>
-Prefix: UBERON: <http://purl.obolibrary.org/obo/UBERON_>
-Prefix: NPO: <http://purl.obolibrary.org/obo/NPO_>
-Prefix: PR: <http://purl.obolibrary.org/obo/PR_>
 Prefix: NCBITaxon: <http://purl.obolibrary.org/obo/NCBITaxon_>
-Prefix: NBO: <http://purl.obolibrary.org/obo/NBO_>
+Prefix: PO: <http://purl.obolibrary.org/obo/PO_>
+Prefix: SO: <http://purl.obolibrary.org/obo/SO_>
 Prefix: ExO: <http://purl.obolibrary.org/obo/ExO_>
-Prefix: ENVO: <http://purl.obolibrary.org/obo/ENVO_>
+Prefix: BFO: <http://purl.obolibrary.org/obo/BFO_>
+Prefix: CL: <http://purl.obolibrary.org/obo/CL_>
 Prefix: PATO: <http://purl.obolibrary.org/obo/PATO_>
 Prefix: RO: <http://purl.obolibrary.org/obo/RO_>
-Prefix: PO: <http://purl.obolibrary.org/obo/PO_>
-Prefix: GOCHE: <http://purl.obolibrary.org/obo/GOCHE_>
+Prefix: ZECO: <http://purl.obolibrary.org/obo/ZECO_>
+Prefix: GO: <http://purl.obolibrary.org/obo/GO_>
 Prefix: OBA: <http://purl.obolibrary.org/obo/OBA_>
-Prefix: SO: <http://purl.obolibrary.org/obo/SO_>
-Prefix: CHEBI: <http://purl.obolibrary.org/obo/CHEBI_>
-Prefix: BFO: <http://purl.obolibrary.org/obo/BFO_>
+Prefix: NBO: <http://purl.obolibrary.org/obo/NBO_>
+Prefix: PR: <http://purl.obolibrary.org/obo/PR_>
+Prefix: NPO: <http://purl.obolibrary.org/obo/NPO_>
+Prefix: UBERON: <http://purl.obolibrary.org/obo/UBERON_>
+Prefix: ENVO: <http://purl.obolibrary.org/obo/ENVO_>
+Prefix: GOCHE: <http://purl.obolibrary.org/obo/GOCHE_>
 Prefix: XCO: <http://purl.obolibrary.org/obo/XCO_>
+Prefix: NCIT: <http://purl.obolibrary.org/obo/NCIT_>
+Prefix: CHEBI: <http://purl.obolibrary.org/obo/CHEBI_>
 Prefix: ECTO: <http://purl.obolibrary.org/obo/ECTO_>
-Prefix: CL: <http://purl.obolibrary.org/obo/CL_>
 
  ## Auto-generated
 
@@ -33,10 +33,10 @@ AnnotationProperty: exo/patterns/surgical_procedure/manipulation
 AnnotationProperty: DOSDP:applies-pattern
 AnnotationProperty: oio:hasRelatedSynonym
 AnnotationProperty: oio:hasExactSynonym
-Class: ExO:0000002 ## exposure event
 Class: XCO:0000165 ## surgical manipulation
-ObjectProperty: BFO_0000050 ## part of
+Class: ExO:0000002 ## exposure event
 ObjectProperty: RO:0002404 ## causally downstream of
+ObjectProperty: BFO_0000050 ## part of
 ObjectProperty: RO:0000057 ## has participant
 ObjectProperty: RO:0002233 ## has input
 ## Auto-generated classes
@@ -51,6 +51,12 @@ Class: ECTO:0002035
  EquivalentTo: ExO:0000002 and RO:0002233 some (XCO:0000165 and RO:0000057 some UBERON:0001021) ## 'exposure event' and 'has input' some (surgical manipulation and 'has participant' some nerve)
   ## Auto-syns
 
+ Annotations: oio:hasRelatedSynonym "surgical manipulation of nerves"
+ Annotations: oio:hasRelatedSynonym "surgical manipulation of neural subtree"
+ Annotations: oio:hasRelatedSynonym "surgical manipulation of peripheral nerve"
+ Annotations: oio:hasRelatedSynonym "surgical manipulation of nerves"
+ Annotations: oio:hasRelatedSynonym "surgical manipulation of neural subtree"
+ Annotations: oio:hasRelatedSynonym "surgical manipulation of peripheral nerve"
  Annotations: oio:hasRelatedSynonym "surgical manipulation of nerves"
  Annotations: oio:hasRelatedSynonym "surgical manipulation of neural subtree"
  Annotations: oio:hasRelatedSynonym "surgical manipulation of peripheral nerve"
@@ -78,6 +84,8 @@ Class: ECTO:0002036
  Annotations: oio:hasRelatedSynonym "surgical manipulation of reniculate kidney"
  Annotations: oio:hasRelatedSynonym "surgical manipulation of reniculate kidney"
  Annotations: oio:hasRelatedSynonym "surgical manipulation of reniculate kidney"
+ Annotations: oio:hasRelatedSynonym "surgical manipulation of reniculate kidney"
+ Annotations: oio:hasRelatedSynonym "surgical manipulation of reniculate kidney"
 
 Class: UBERON:0000026 ## appendage
 Class: XCO:0000165 ## surgical manipulation
@@ -89,6 +97,14 @@ Class: ECTO:0002037
  EquivalentTo: ExO:0000002 and RO:0002233 some (XCO:0000165 and RO:0000057 some UBERON:0000026) ## 'exposure event' and 'has input' some (surgical manipulation and 'has participant' some appendage)
   ## Auto-syns
 
+ Annotations: oio:hasRelatedSynonym "surgical manipulation of appendages"
+ Annotations: oio:hasRelatedSynonym "surgical manipulation of extremitaet"
+ Annotations: oio:hasRelatedSynonym "surgical manipulation of extremity"
+ Annotations: oio:hasRelatedSynonym "surgical manipulation of limbs/digits/tail"
+ Annotations: oio:hasRelatedSynonym "surgical manipulation of appendages"
+ Annotations: oio:hasRelatedSynonym "surgical manipulation of extremitaet"
+ Annotations: oio:hasRelatedSynonym "surgical manipulation of extremity"
+ Annotations: oio:hasRelatedSynonym "surgical manipulation of limbs/digits/tail"
  Annotations: oio:hasRelatedSynonym "surgical manipulation of appendages"
  Annotations: oio:hasRelatedSynonym "surgical manipulation of extremitaet"
  Annotations: oio:hasRelatedSynonym "surgical manipulation of extremity"
@@ -128,6 +144,12 @@ Class: ECTO:0002038
  Annotations: oio:hasRelatedSynonym "surgical manipulation of Druese"
  Annotations: oio:hasRelatedSynonym "surgical manipulation of glandula"
  Annotations: oio:hasRelatedSynonym "surgical manipulation of glandular organ"
+ Annotations: oio:hasRelatedSynonym "surgical manipulation of Druese"
+ Annotations: oio:hasRelatedSynonym "surgical manipulation of glandula"
+ Annotations: oio:hasRelatedSynonym "surgical manipulation of glandular organ"
+ Annotations: oio:hasRelatedSynonym "surgical manipulation of Druese"
+ Annotations: oio:hasRelatedSynonym "surgical manipulation of glandula"
+ Annotations: oio:hasRelatedSynonym "surgical manipulation of glandular organ"
 
 Class: UBERON:0000062 ## organ
 Class: XCO:0000165 ## surgical manipulation
@@ -139,6 +161,12 @@ Class: ECTO:0002039
  EquivalentTo: ExO:0000002 and RO:0002233 some (XCO:0000165 and RO:0000057 some UBERON:0000062) ## 'exposure event' and 'has input' some (surgical manipulation and 'has participant' some organ)
   ## Auto-syns
 
+ Annotations: oio:hasRelatedSynonym "surgical manipulation of anatomical unit"
+ Annotations: oio:hasRelatedSynonym "surgical manipulation of body organ"
+ Annotations: oio:hasRelatedSynonym "surgical manipulation of element"
+ Annotations: oio:hasRelatedSynonym "surgical manipulation of anatomical unit"
+ Annotations: oio:hasRelatedSynonym "surgical manipulation of body organ"
+ Annotations: oio:hasRelatedSynonym "surgical manipulation of element"
  Annotations: oio:hasRelatedSynonym "surgical manipulation of anatomical unit"
  Annotations: oio:hasRelatedSynonym "surgical manipulation of body organ"
  Annotations: oio:hasRelatedSynonym "surgical manipulation of element"
@@ -174,6 +202,12 @@ Class: ECTO:0002040
  Annotations: oio:hasRelatedSynonym "surgical implantation of anatomical unit"
  Annotations: oio:hasRelatedSynonym "surgical implantation of body organ"
  Annotations: oio:hasRelatedSynonym "surgical implantation of element"
+ Annotations: oio:hasRelatedSynonym "surgical implantation of anatomical unit"
+ Annotations: oio:hasRelatedSynonym "surgical implantation of body organ"
+ Annotations: oio:hasRelatedSynonym "surgical implantation of element"
+ Annotations: oio:hasRelatedSynonym "surgical implantation of anatomical unit"
+ Annotations: oio:hasRelatedSynonym "surgical implantation of body organ"
+ Annotations: oio:hasRelatedSynonym "surgical implantation of element"
 
 Class: UBERON:0002113 ## kidney
 Class: XCO:0000027 ## surgical implantation
@@ -191,6 +225,10 @@ Class: ECTO:0002041
  Annotations: oio:hasRelatedSynonym "surgical implantation of kidney"
  Annotations: oio:hasRelatedSynonym "surgical implantation of reniculate kidney"
  Annotations: oio:hasRelatedSynonym "surgical implantation of kidney"
+ Annotations: oio:hasRelatedSynonym "surgical implantation of reniculate kidney"
+ Annotations: oio:hasRelatedSynonym "surgical implantation of kidney"
+ Annotations: oio:hasRelatedSynonym "surgical implantation of kidney"
+ Annotations: oio:hasRelatedSynonym "surgical implantation of reniculate kidney"
  Annotations: oio:hasRelatedSynonym "surgical implantation of kidney"
  Annotations: oio:hasRelatedSynonym "surgical implantation of reniculate kidney"
  Annotations: oio:hasRelatedSynonym "surgical implantation of kidney"
@@ -294,6 +332,12 @@ Class: ECTO:0002046
  Annotations: oio:hasRelatedSynonym "surgical removal of anatomical unit"
  Annotations: oio:hasRelatedSynonym "surgical removal of body organ"
  Annotations: oio:hasRelatedSynonym "surgical removal of element"
+ Annotations: oio:hasRelatedSynonym "surgical removal of anatomical unit"
+ Annotations: oio:hasRelatedSynonym "surgical removal of body organ"
+ Annotations: oio:hasRelatedSynonym "surgical removal of element"
+ Annotations: oio:hasRelatedSynonym "surgical removal of anatomical unit"
+ Annotations: oio:hasRelatedSynonym "surgical removal of body organ"
+ Annotations: oio:hasRelatedSynonym "surgical removal of element"
 
 Class: UBERON:0002113 ## kidney
 Class: XCO:0000026 ## surgical removal
@@ -305,6 +349,8 @@ Class: ECTO:0002047
  EquivalentTo: ExO:0000002 and RO:0002233 some (XCO:0000026 and RO:0000057 some UBERON:0002113) ## 'exposure event' and 'has input' some (surgical removal and 'has participant' some kidney)
   ## Auto-syns
 
+ Annotations: oio:hasRelatedSynonym "surgical removal of reniculate kidney"
+ Annotations: oio:hasRelatedSynonym "surgical removal of reniculate kidney"
  Annotations: oio:hasRelatedSynonym "surgical removal of reniculate kidney"
  Annotations: oio:hasRelatedSynonym "surgical removal of reniculate kidney"
  Annotations: oio:hasRelatedSynonym "surgical removal of reniculate kidney"
@@ -372,6 +418,56 @@ Class: ECTO:0002048
  Annotations: oio:hasRelatedSynonym "surgical removal of reproductive system of female organism gonad"
  Annotations: oio:hasRelatedSynonym "surgical removal of reproductive system of female organism gonada"
  Annotations: oio:hasRelatedSynonym "surgical removal of female gonad"
+ Annotations: oio:hasRelatedSynonym "surgical removal of female organism genitalia gonad"
+ Annotations: oio:hasRelatedSynonym "surgical removal of female organism genitalia gonada"
+ Annotations: oio:hasRelatedSynonym "surgical removal of female organism reproductive system gonad"
+ Annotations: oio:hasRelatedSynonym "surgical removal of female organism reproductive system gonada"
+ Annotations: oio:hasRelatedSynonym "surgical removal of female reproductive system gonad"
+ Annotations: oio:hasRelatedSynonym "surgical removal of female reproductive system gonada"
+ Annotations: oio:hasRelatedSynonym "surgical removal of genitalia of female organism gonad"
+ Annotations: oio:hasRelatedSynonym "surgical removal of genitalia of female organism gonada"
+ Annotations: oio:hasRelatedSynonym "surgical removal of gonad of female organism genitalia"
+ Annotations: oio:hasRelatedSynonym "surgical removal of gonad of female organism reproductive system"
+ Annotations: oio:hasRelatedSynonym "surgical removal of gonad of female reproductive system"
+ Annotations: oio:hasRelatedSynonym "surgical removal of gonad of genitalia of female organism"
+ Annotations: oio:hasRelatedSynonym "surgical removal of gonad of reproductive system of female organism"
+ Annotations: oio:hasRelatedSynonym "surgical removal of gonada of female organism genitalia"
+ Annotations: oio:hasRelatedSynonym "surgical removal of gonada of female organism reproductive system"
+ Annotations: oio:hasRelatedSynonym "surgical removal of gonada of female reproductive system"
+ Annotations: oio:hasRelatedSynonym "surgical removal of gonada of genitalia of female organism"
+ Annotations: oio:hasRelatedSynonym "surgical removal of gonada of reproductive system of female organism"
+ Annotations: oio:hasRelatedSynonym "surgical removal of ovaries"
+ Annotations: oio:hasRelatedSynonym "surgical removal of ovarium"
+ Annotations: oio:hasRelatedSynonym "surgical removal of ovary"
+ Annotations: oio:hasRelatedSynonym "surgical removal of ovum-producing ovary"
+ Annotations: oio:hasRelatedSynonym "surgical removal of reproductive system of female organism gonad"
+ Annotations: oio:hasRelatedSynonym "surgical removal of reproductive system of female organism gonada"
+ Annotations: oio:hasRelatedSynonym "surgical removal of female gonad"
+ Annotations: oio:hasRelatedSynonym "surgical removal of female gonad"
+ Annotations: oio:hasRelatedSynonym "surgical removal of female organism genitalia gonad"
+ Annotations: oio:hasRelatedSynonym "surgical removal of female organism genitalia gonada"
+ Annotations: oio:hasRelatedSynonym "surgical removal of female organism reproductive system gonad"
+ Annotations: oio:hasRelatedSynonym "surgical removal of female organism reproductive system gonada"
+ Annotations: oio:hasRelatedSynonym "surgical removal of female reproductive system gonad"
+ Annotations: oio:hasRelatedSynonym "surgical removal of female reproductive system gonada"
+ Annotations: oio:hasRelatedSynonym "surgical removal of genitalia of female organism gonad"
+ Annotations: oio:hasRelatedSynonym "surgical removal of genitalia of female organism gonada"
+ Annotations: oio:hasRelatedSynonym "surgical removal of gonad of female organism genitalia"
+ Annotations: oio:hasRelatedSynonym "surgical removal of gonad of female organism reproductive system"
+ Annotations: oio:hasRelatedSynonym "surgical removal of gonad of female reproductive system"
+ Annotations: oio:hasRelatedSynonym "surgical removal of gonad of genitalia of female organism"
+ Annotations: oio:hasRelatedSynonym "surgical removal of gonad of reproductive system of female organism"
+ Annotations: oio:hasRelatedSynonym "surgical removal of gonada of female organism genitalia"
+ Annotations: oio:hasRelatedSynonym "surgical removal of gonada of female organism reproductive system"
+ Annotations: oio:hasRelatedSynonym "surgical removal of gonada of female reproductive system"
+ Annotations: oio:hasRelatedSynonym "surgical removal of gonada of genitalia of female organism"
+ Annotations: oio:hasRelatedSynonym "surgical removal of gonada of reproductive system of female organism"
+ Annotations: oio:hasRelatedSynonym "surgical removal of ovaries"
+ Annotations: oio:hasRelatedSynonym "surgical removal of ovarium"
+ Annotations: oio:hasRelatedSynonym "surgical removal of ovary"
+ Annotations: oio:hasRelatedSynonym "surgical removal of ovum-producing ovary"
+ Annotations: oio:hasRelatedSynonym "surgical removal of reproductive system of female organism gonad"
+ Annotations: oio:hasRelatedSynonym "surgical removal of reproductive system of female organism gonada"
  Annotations: oio:hasRelatedSynonym "surgical removal of female gonad"
  Annotations: oio:hasRelatedSynonym "surgical removal of female organism genitalia gonad"
  Annotations: oio:hasRelatedSynonym "surgical removal of female organism genitalia gonada"
@@ -439,6 +535,8 @@ Class: ECTO:0002049
  Annotations: oio:hasRelatedSynonym "surgical removal of pancreas"
  Annotations: oio:hasRelatedSynonym "surgical removal of pancreas"
  Annotations: oio:hasRelatedSynonym "surgical removal of pancreas"
+ Annotations: oio:hasRelatedSynonym "surgical removal of pancreas"
+ Annotations: oio:hasRelatedSynonym "surgical removal of pancreas"
 
 Class: UBERON:0002107 ## liver
 Class: XCO:0000026 ## surgical removal
@@ -458,6 +556,12 @@ Class: ECTO:0002050
  Annotations: oio:hasRelatedSynonym "surgical removal of iecur"
  Annotations: oio:hasRelatedSynonym "surgical removal of jecur"
  Annotations: oio:hasRelatedSynonym "surgical removal of liver"
+ Annotations: oio:hasRelatedSynonym "surgical removal of iecur"
+ Annotations: oio:hasRelatedSynonym "surgical removal of jecur"
+ Annotations: oio:hasRelatedSynonym "surgical removal of liver"
+ Annotations: oio:hasRelatedSynonym "surgical removal of liver"
+ Annotations: oio:hasRelatedSynonym "surgical removal of iecur"
+ Annotations: oio:hasRelatedSynonym "surgical removal of jecur"
  Annotations: oio:hasRelatedSynonym "surgical removal of liver"
  Annotations: oio:hasRelatedSynonym "surgical removal of iecur"
  Annotations: oio:hasRelatedSynonym "surgical removal of jecur"
