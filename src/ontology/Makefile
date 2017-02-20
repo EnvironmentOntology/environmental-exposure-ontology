@@ -13,7 +13,7 @@ all_subsets: subsets/ecto-basic.obo
 test: all
 release: all copy-release
 
-TARGETS = $(ONTDIR)/ecto.obo $(ONTDIR)/ecto.owl imports subsets
+TARGETS = $(ONTDIR)/ecto.obo $(ONTDIR)/ecto.owl $(ONTDIR)/ecto.json imports subsets
 
 ALL_MODS_OWL = $(patsubst %, $(MODDIR)/%.owl, $(MODS))
 
@@ -43,6 +43,9 @@ ecto.owl: ecto-core-inferred.owl
 #	owltools $(USECAT) $^ --merge-support-ontologies -o $@
 ecto.obo: ecto.owl
 	owltools $(USECAT)  $< --merge-imports-closure -o -f obo --no-check $@.tmp && grep -v ^owl-axioms $@.tmp > $@
+
+ecto.json: ecto.owl
+	owltools $(USECAT)  $<  -o -f json  $@.tmp && mv $@.tmp > $@
 
 oort: ecto-core.owl
 	ontology-release-runner $(USECAT) --ignore-selected-equivalent-pairs 'CL:0000000'  --ignoreLock --skip-release-folder --skip-format owx --skip-format obo --no-subsets --outdir target --allow-overwrite --asserted --simple --reasoner elk $<
@@ -149,8 +152,9 @@ mirror/pco.owl: imports/pco_basic.obo
 
 # avoid circular dependencies with imports;
 # some patterns refer to ECTO classes; we use the previous version for this
+# TODO: use obographs, and don't centralize assumptions about synonyms in central pattern2owl script.
 SYNFILES = imports/uberon_import.obo ecto.obo
-syns.json: mirror/chebi.obo imports/curated_synonyms.obo
+syns.json: mirror/chebi.obo mirror/envo.obo imports/curated_synonyms.obo
 	extract-obo-syns.pl $^ $(SYNFILES) > $@.tmp && mv $@.tmp $@
 
 
