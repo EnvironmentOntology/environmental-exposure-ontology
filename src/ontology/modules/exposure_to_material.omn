@@ -2,27 +2,27 @@ Prefix: : <http://purl.obolibrary.org/obo/>
 Prefix: IAO: <http://purl.obolibrary.org/obo/IAO_>
 Prefix: DOSDP: <http://geneontology.org/foo/>
 Prefix: oio: <http://www.geneontology.org/formats/oboInOwl#>
-Prefix: CHEBI: <http://purl.obolibrary.org/obo/CHEBI_>
-Prefix: UBERON: <http://purl.obolibrary.org/obo/UBERON_>
-Prefix: PR: <http://purl.obolibrary.org/obo/PR_>
+Prefix: NCBITaxon: <http://purl.obolibrary.org/obo/NCBITaxon_>
+Prefix: SO: <http://purl.obolibrary.org/obo/SO_>
+Prefix: GO: <http://purl.obolibrary.org/obo/GO_>
+Prefix: PO: <http://purl.obolibrary.org/obo/PO_>
 Prefix: RO: <http://purl.obolibrary.org/obo/RO_>
 Prefix: ExO: <http://purl.obolibrary.org/obo/ExO_>
 Prefix: NCIT: <http://purl.obolibrary.org/obo/NCIT_>
-Prefix: ENVO: <http://purl.obolibrary.org/obo/ENVO_>
-Prefix: ECTO: <http://purl.obolibrary.org/obo/ECTO_>
-Prefix: NPO: <http://purl.obolibrary.org/obo/NPO_>
-Prefix: NCBITaxon: <http://purl.obolibrary.org/obo/NCBITaxon_>
-Prefix: XCO: <http://purl.obolibrary.org/obo/XCO_>
-Prefix: PATO: <http://purl.obolibrary.org/obo/PATO_>
 Prefix: OBA: <http://purl.obolibrary.org/obo/OBA_>
-Prefix: SO: <http://purl.obolibrary.org/obo/SO_>
-Prefix: PO: <http://purl.obolibrary.org/obo/PO_>
-Prefix: BFO: <http://purl.obolibrary.org/obo/BFO_>
-Prefix: GOCHE: <http://purl.obolibrary.org/obo/GOCHE_>
-Prefix: CL: <http://purl.obolibrary.org/obo/CL_>
-Prefix: GO: <http://purl.obolibrary.org/obo/GO_>
+Prefix: NPO: <http://purl.obolibrary.org/obo/NPO_>
+Prefix: XCO: <http://purl.obolibrary.org/obo/XCO_>
 Prefix: NBO: <http://purl.obolibrary.org/obo/NBO_>
+Prefix: UBERON: <http://purl.obolibrary.org/obo/UBERON_>
 Prefix: ZECO: <http://purl.obolibrary.org/obo/ZECO_>
+Prefix: GOCHE: <http://purl.obolibrary.org/obo/GOCHE_>
+Prefix: ECTO: <http://purl.obolibrary.org/obo/ECTO_>
+Prefix: BFO: <http://purl.obolibrary.org/obo/BFO_>
+Prefix: ENVO: <http://purl.obolibrary.org/obo/ENVO_>
+Prefix: CHEBI: <http://purl.obolibrary.org/obo/CHEBI_>
+Prefix: PR: <http://purl.obolibrary.org/obo/PR_>
+Prefix: CL: <http://purl.obolibrary.org/obo/CL_>
+Prefix: PATO: <http://purl.obolibrary.org/obo/PATO_>
 
  ## Auto-generated
 
@@ -33,11 +33,11 @@ AnnotationProperty: DOSDP:applies-pattern
 AnnotationProperty: oio:hasRelatedSynonym
 AnnotationProperty: oio:hasExactSynonym
 AnnotationProperty: oio:hasExactSynonym
-Class: ExO:0000002 ## exposure event
 Class: ENVO:00010483 ## environmental material
+Class: ExO:0000002 ## exposure event
 ObjectProperty: RO:0002233 ## has input
-ObjectProperty: BFO_0000050 ## part of
 ObjectProperty: BFO_0000050 ## stressor
+ObjectProperty: BFO_0000050 ## part of
 ## Auto-generated classes
 
 Class: ENVO:00010483 ## environmental material
@@ -100,15 +100,6 @@ Class: ECTO:0000020
 
  Annotations: oio:hasRelatedSynonym "exposure to biomass"
 
-Class: ENVO:01000231 ## lava
-## {"stressor": "ENVO:01000231"}
-Class: ECTO:0000021
- Annotations: rdfs:label "exposure to lava"
- Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to lava. Exposure may be through a variety of means, including through the air or through ingestion."
- Annotations: oio:hasExactSynonym "lava exposure"
- Annotations: oio:hasExactSynonym "lava exposure event"
- EquivalentTo: ExO:0000002 and RO:0002233 some ENVO:01000231 ## 'exposure event' and 'has input' some lava
-
 Class: ENVO:01000406 ## snow
 ## {"stressor": "ENVO:01000406"}
 Class: ECTO:0000022
@@ -126,15 +117,6 @@ Class: ECTO:0000023
  Annotations: oio:hasExactSynonym "atmospheric carbon dioxide exposure"
  Annotations: oio:hasExactSynonym "atmospheric carbon dioxide exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some ENVO:01000451 ## 'exposure event' and 'has input' some atmospheric carbon dioxide
-
-Class: ENVO:01000648 ## magma
-## {"stressor": "ENVO:01000648"}
-Class: ECTO:0000024
- Annotations: rdfs:label "exposure to magma"
- Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to magma. Exposure may be through a variety of means, including through the air or through ingestion."
- Annotations: oio:hasExactSynonym "magma exposure"
- Annotations: oio:hasExactSynonym "magma exposure event"
- EquivalentTo: ExO:0000002 and RO:0002233 some ENVO:01000648 ## 'exposure event' and 'has input' some magma
 
 Class: ENVO:01000701 ## volcanic ash
 ## {"stressor": "ENVO:01000701"}
@@ -320,18 +302,6 @@ Class: ECTO:0000043
  Annotations: oio:hasExactSynonym "xylene contaminated soil exposure"
  Annotations: oio:hasExactSynonym "xylene contaminated soil exposure event"
  EquivalentTo: ExO:0000002 and RO:0002233 some ENVO:00002146 ## 'exposure event' and 'has input' some xylene contaminated soil
-
-Class: ENVO:00002174 ## hot dog
-## {"stressor": "ENVO:00002174"}
-Class: ECTO:0000044
- Annotations: rdfs:label "exposure to hot dog"
- Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to hot dog. Exposure may be through a variety of means, including through the air or through ingestion."
- Annotations: oio:hasExactSynonym "hot dog exposure"
- Annotations: oio:hasExactSynonym "hot dog exposure event"
- EquivalentTo: ExO:0000002 and RO:0002233 some ENVO:00002174 ## 'exposure event' and 'has input' some hot dog
-  ## Auto-syns
-
- Annotations: oio:hasRelatedSynonym "exposure to obsolete hot dog"
 
 Class: ENVO:00002259 ## agricultural soil
 ## {"stressor": "ENVO:00002259"}
