@@ -113,9 +113,9 @@ aggregated-exposure.obo: combined-exposure.owl axioms.owl
 .PRECIOUS: aggregated-exposure.obo
 
 new-inf-%.txt: exposure-%.obo
-	owltools  exposure-$*.obo axioms.obo exposure-ecto.obo --spike-and-reason > $@.tmp && grep ^NEW $@.tmp > $@
+	owltools  exposure-$*.obo axioms.obo exposure-ecto.obo --spike-and-reason > $@.tmp && egrep '\t(ANCESTOR|PARENT)\t' $@.tmp > $@
 missing-inf-%.txt: exposure-%.obo
-	owltools  exposure-ecto.obo  axioms.obo exposure-$*.obo  --spike-and-reason > $@.tmp && grep ^NEW $@.tmp > $@
+	owltools  exposure-ecto.obo  axioms.obo exposure-$*.obo  --spike-and-reason > $@.tmp && egrep '\t(ANCESTOR|PARENT)\t' $@.tmp > $@
 
 relgaps.tsv: aggregated-exposure.obo
 	blip-findall -i $< -u ontol_gapfiller -goal ix relgap/7 -label -no_pred > $@.tmp && mv $@.tmp $@
