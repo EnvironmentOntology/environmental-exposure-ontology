@@ -112,10 +112,11 @@ aggregated-exposure.obo: combined-exposure.owl axioms.owl
 	owltools $^ --merge-support-ontologies  --set-ontology-id $(OBO)/ecto/combined.owl -o -f obo --no-check $@
 .PRECIOUS: aggregated-exposure.obo
 
-new-inf-%.txt: exposure-%.obo
-	owltools  exposure-$*.obo axioms.obo exposure-ecto.obo --spike-and-reason > $@.tmp && egrep '\t(ANCESTOR|PARENT)\t' $@.tmp > $@
-missing-inf-%.txt: exposure-%.obo
-	owltools  exposure-ecto.obo  axioms.obo exposure-$*.obo  --spike-and-reason > $@.tmp && egrep '\t(ANCESTOR|PARENT)\t' $@.tmp > $@
+RPT = $@.tmp && egrep '\t(ANCESTOR|PARENT)\t' $@.tmp | mysort -k3,2,1 > $@
+new-inf-%.tsv: exposure-%.obo
+	owltools  exposure-$*.obo axioms.obo exposure-ecto.obo --spike-and-reason > $(RPT)
+missing-inf-%.tsv: exposure-%.obo
+	owltools  exposure-ecto.obo  axioms.obo exposure-$*.obo  --spike-and-reason > $(RPT)
 
 relgaps.tsv: aggregated-exposure.obo
 	blip-findall -i $< -u ontol_gapfiller -goal ix relgap/7 -label -no_pred > $@.tmp && mv $@.tmp $@
