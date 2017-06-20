@@ -7,7 +7,7 @@ Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
 Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
 Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 Prefix(oboInOwl:=<http://www.geneontology.org/formats/oboInOwl#>)
-Prefix(exposure_to_chemical:=<http://purl.obolibrary.org/obo/exo/patterns/exposure_to_chemical/>)
+Prefix(exposure_via_route:=<http://purl.obolibrary.org/obo/exo/patterns/exposure_via_route/>)
 
 
 Ontology(<http://purl.obolibrary.org/obo/ecto/modules/exposure_via_route.rdf>
@@ -57,11 +57,12 @@ Declaration(Class(obo:ExO_0000060))
 Declaration(Class(obo:UBERON_0000344))
 Declaration(Class(obo:UBERON_0002199))
 Declaration(ObjectProperty(obo:BFO_0000050))
-Declaration(ObjectProperty(obo:RO_0002233))
+Declaration(ObjectProperty(obo:RO_0002242))
+Declaration(ObjectProperty(obo:RO_0002309))
 Declaration(AnnotationProperty(foo:applies-pattern))
 Declaration(AnnotationProperty(obo:IAO_0000115))
-Declaration(AnnotationProperty(exposure_to_chemical:route))
-Declaration(AnnotationProperty(exposure_to_chemical:stressor))
+Declaration(AnnotationProperty(exposure_via_route:route))
+Declaration(AnnotationProperty(exposure_via_route:stressor))
 Declaration(AnnotationProperty(oboInOwl:hasExactSynonym))
 Declaration(AnnotationProperty(oboInOwl:hasRelatedSynonym))
 
@@ -77,7 +78,7 @@ AnnotationAssertion(obo:IAO_0000115 obo:ECTO_0000971 "A exposure event involving
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:ECTO_0000971 "chemical entity exposure, via ingestion")
 AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:ECTO_0000971 "exposure to chemical via ingestion")
 AnnotationAssertion(rdfs:label obo:ECTO_0000971 "exposure to chemical entity via ingestion")
-EquivalentClasses(obo:ECTO_0000971 ObjectIntersectionOf(obo:ExO_0000002 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ExO_0000056) ObjectSomeValuesFrom(obo:RO_0002233 obo:CHEBI_24431)))
+EquivalentClasses(obo:ECTO_0000971 ObjectIntersectionOf(obo:ExO_0000002 ObjectSomeValuesFrom(obo:RO_0002242 obo:ExO_0000056) ObjectSomeValuesFrom(obo:RO_0002309 obo:CHEBI_24431)))
 
 # Class: obo:ECTO_0000972 (exposure to environmental material via ingestion)
 
@@ -85,7 +86,7 @@ AnnotationAssertion(obo:IAO_0000115 obo:ECTO_0000972 "A exposure event involving
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:ECTO_0000972 "environmental material exposure, via ingestion")
 AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:ECTO_0000972 "exposure to portion of environmental material via ingestion")
 AnnotationAssertion(rdfs:label obo:ECTO_0000972 "exposure to environmental material via ingestion")
-EquivalentClasses(obo:ECTO_0000972 ObjectIntersectionOf(obo:ExO_0000002 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ExO_0000056) ObjectSomeValuesFrom(obo:RO_0002233 obo:ENVO_00010483)))
+EquivalentClasses(obo:ECTO_0000972 ObjectIntersectionOf(obo:ExO_0000002 ObjectSomeValuesFrom(obo:RO_0002242 obo:ExO_0000056) ObjectSomeValuesFrom(obo:RO_0002309 obo:ENVO_00010483)))
 
 # Class: obo:ECTO_0000973 (exposure to cadmium cation via ingestion)
 
@@ -93,7 +94,7 @@ AnnotationAssertion(obo:IAO_0000115 obo:ECTO_0000973 "A exposure event involving
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:ECTO_0000973 "cadmium cation exposure, via ingestion")
 AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:ECTO_0000973 "exposure to cadmium cations via ingestion")
 AnnotationAssertion(rdfs:label obo:ECTO_0000973 "exposure to cadmium cation via ingestion")
-EquivalentClasses(obo:ECTO_0000973 ObjectIntersectionOf(obo:ExO_0000002 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ExO_0000056) ObjectSomeValuesFrom(obo:RO_0002233 obo:CHEBI_63063)))
+EquivalentClasses(obo:ECTO_0000973 ObjectIntersectionOf(obo:ExO_0000002 ObjectSomeValuesFrom(obo:RO_0002242 obo:ExO_0000056) ObjectSomeValuesFrom(obo:RO_0002309 obo:CHEBI_63063)))
 
 # Class: obo:ECTO_0000974 (exposure to mercury cation via ingestion)
 
@@ -101,7 +102,7 @@ AnnotationAssertion(obo:IAO_0000115 obo:ECTO_0000974 "A exposure event involving
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:ECTO_0000974 "mercury cation exposure, via ingestion")
 AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:ECTO_0000974 "exposure to mercury cations via ingestion")
 AnnotationAssertion(rdfs:label obo:ECTO_0000974 "exposure to mercury cation via ingestion")
-EquivalentClasses(obo:ECTO_0000974 ObjectIntersectionOf(obo:ExO_0000002 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ExO_0000056) ObjectSomeValuesFrom(obo:RO_0002233 obo:CHEBI_25197)))
+EquivalentClasses(obo:ECTO_0000974 ObjectIntersectionOf(obo:ExO_0000002 ObjectSomeValuesFrom(obo:RO_0002242 obo:ExO_0000056) ObjectSomeValuesFrom(obo:RO_0002309 obo:CHEBI_25197)))
 
 # Class: obo:ECTO_0000975 (exposure to chemical entity via inhalation)
 
@@ -109,7 +110,7 @@ AnnotationAssertion(obo:IAO_0000115 obo:ECTO_0000975 "A exposure event involving
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:ECTO_0000975 "chemical entity exposure, via inhalation")
 AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:ECTO_0000975 "exposure to chemical via inhalation")
 AnnotationAssertion(rdfs:label obo:ECTO_0000975 "exposure to chemical entity via inhalation")
-EquivalentClasses(obo:ECTO_0000975 ObjectIntersectionOf(obo:ExO_0000002 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ExO_0000057) ObjectSomeValuesFrom(obo:RO_0002233 obo:CHEBI_24431)))
+EquivalentClasses(obo:ECTO_0000975 ObjectIntersectionOf(obo:ExO_0000002 ObjectSomeValuesFrom(obo:RO_0002242 obo:ExO_0000057) ObjectSomeValuesFrom(obo:RO_0002309 obo:CHEBI_24431)))
 
 # Class: obo:ECTO_0000976 (exposure to environmental material via inhalation)
 
@@ -117,21 +118,21 @@ AnnotationAssertion(obo:IAO_0000115 obo:ECTO_0000976 "A exposure event involving
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:ECTO_0000976 "environmental material exposure, via inhalation")
 AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:ECTO_0000976 "exposure to portion of environmental material via inhalation")
 AnnotationAssertion(rdfs:label obo:ECTO_0000976 "exposure to environmental material via inhalation")
-EquivalentClasses(obo:ECTO_0000976 ObjectIntersectionOf(obo:ExO_0000002 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ExO_0000057) ObjectSomeValuesFrom(obo:RO_0002233 obo:ENVO_00010483)))
+EquivalentClasses(obo:ECTO_0000976 ObjectIntersectionOf(obo:ExO_0000002 ObjectSomeValuesFrom(obo:RO_0002242 obo:ExO_0000057) ObjectSomeValuesFrom(obo:RO_0002309 obo:ENVO_00010483)))
 
 # Class: obo:ECTO_0000977 (exposure to ultrafine respirable suspended particulate matter via inhalation)
 
 AnnotationAssertion(obo:IAO_0000115 obo:ECTO_0000977 "A exposure event involving the interaction of an exposure receptor to ultrafine respirable suspended particulate matter via inhalation.")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:ECTO_0000977 "ultrafine respirable suspended particulate matter exposure, via inhalation")
 AnnotationAssertion(rdfs:label obo:ECTO_0000977 "exposure to ultrafine respirable suspended particulate matter via inhalation")
-EquivalentClasses(obo:ECTO_0000977 ObjectIntersectionOf(obo:ExO_0000002 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ExO_0000057) ObjectSomeValuesFrom(obo:RO_0002233 obo:ENVO_01000416)))
+EquivalentClasses(obo:ECTO_0000977 ObjectIntersectionOf(obo:ExO_0000002 ObjectSomeValuesFrom(obo:RO_0002242 obo:ExO_0000057) ObjectSomeValuesFrom(obo:RO_0002309 obo:ENVO_01000416)))
 
 # Class: obo:ECTO_0000978 (exposure to aerosol via inhalation)
 
 AnnotationAssertion(obo:IAO_0000115 obo:ECTO_0000978 "A exposure event involving the interaction of an exposure receptor to aerosol via inhalation.")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:ECTO_0000978 "aerosol exposure, via inhalation")
 AnnotationAssertion(rdfs:label obo:ECTO_0000978 "exposure to aerosol via inhalation")
-EquivalentClasses(obo:ECTO_0000978 ObjectIntersectionOf(obo:ExO_0000002 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ExO_0000057) ObjectSomeValuesFrom(obo:RO_0002233 obo:ENVO_00010505)))
+EquivalentClasses(obo:ECTO_0000978 ObjectIntersectionOf(obo:ExO_0000002 ObjectSomeValuesFrom(obo:RO_0002242 obo:ExO_0000057) ObjectSomeValuesFrom(obo:RO_0002309 obo:ENVO_00010505)))
 
 # Class: obo:ECTO_0001009 (exposure to chemical entity via mucosa)
 
@@ -153,7 +154,7 @@ AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:ECTO_0001009 "exposure to che
 AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:ECTO_0001009 "exposure to chemical via region of mucosa")
 AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:ECTO_0001009 "exposure to chemical via tunica mucosa")
 AnnotationAssertion(rdfs:label obo:ECTO_0001009 "exposure to chemical entity via mucosa")
-EquivalentClasses(obo:ECTO_0001009 ObjectIntersectionOf(obo:ExO_0000002 ObjectSomeValuesFrom(obo:BFO_0000050 obo:UBERON_0000344) ObjectSomeValuesFrom(obo:RO_0002233 obo:CHEBI_24431)))
+EquivalentClasses(obo:ECTO_0001009 ObjectIntersectionOf(obo:ExO_0000002 ObjectSomeValuesFrom(obo:RO_0002242 obo:UBERON_0000344) ObjectSomeValuesFrom(obo:RO_0002309 obo:CHEBI_24431)))
 
 # Class: obo:ECTO_0001010 (exposure to chemical entity via integument)
 
@@ -181,7 +182,7 @@ AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:ECTO_0001010 "exposure to che
 AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:ECTO_0001010 "exposure to chemical via the integument")
 AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:ECTO_0001010 "exposure to chemical via vertebrate integument")
 AnnotationAssertion(rdfs:label obo:ECTO_0001010 "exposure to chemical entity via integument")
-EquivalentClasses(obo:ECTO_0001010 ObjectIntersectionOf(obo:ExO_0000002 ObjectSomeValuesFrom(obo:BFO_0000050 obo:UBERON_0002199) ObjectSomeValuesFrom(obo:RO_0002233 obo:CHEBI_24431)))
+EquivalentClasses(obo:ECTO_0001010 ObjectIntersectionOf(obo:ExO_0000002 ObjectSomeValuesFrom(obo:RO_0002242 obo:UBERON_0002199) ObjectSomeValuesFrom(obo:RO_0002309 obo:CHEBI_24431)))
 
 # Class: obo:ECTO_0001583 (exposure to antimony via ingestion)
 
@@ -191,7 +192,7 @@ AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:ECTO_0001583 "exposure to ant
 AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:ECTO_0001583 "exposure to antimony molecular entities via ingestion")
 AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:ECTO_0001583 "exposure to antimony molecular entity via ingestion")
 AnnotationAssertion(rdfs:label obo:ECTO_0001583 "exposure to antimony via ingestion")
-EquivalentClasses(obo:ECTO_0001583 ObjectIntersectionOf(obo:ExO_0000002 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ExO_0000056) ObjectSomeValuesFrom(obo:RO_0002233 obo:CHEBI_36919)))
+EquivalentClasses(obo:ECTO_0001583 ObjectIntersectionOf(obo:ExO_0000002 ObjectSomeValuesFrom(obo:RO_0002242 obo:ExO_0000056) ObjectSomeValuesFrom(obo:RO_0002309 obo:CHEBI_36919)))
 
 # Class: obo:ECTO_0001584 (exposure to arsenic via ingestion)
 
@@ -201,7 +202,7 @@ AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:ECTO_0001584 "exposure to ars
 AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:ECTO_0001584 "exposure to arsenic molecular entities via ingestion")
 AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:ECTO_0001584 "exposure to arsenic molecular entity via ingestion")
 AnnotationAssertion(rdfs:label obo:ECTO_0001584 "exposure to arsenic via ingestion")
-EquivalentClasses(obo:ECTO_0001584 ObjectIntersectionOf(obo:ExO_0000002 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ExO_0000056) ObjectSomeValuesFrom(obo:RO_0002233 obo:CHEBI_22632)))
+EquivalentClasses(obo:ECTO_0001584 ObjectIntersectionOf(obo:ExO_0000002 ObjectSomeValuesFrom(obo:RO_0002242 obo:ExO_0000056) ObjectSomeValuesFrom(obo:RO_0002309 obo:CHEBI_22632)))
 
 # Class: obo:ECTO_0001585 (exposure to cadmium via ingestion)
 
@@ -211,7 +212,7 @@ AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:ECTO_0001585 "exposure to cad
 AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:ECTO_0001585 "exposure to cadmium molecular entities via ingestion")
 AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:ECTO_0001585 "exposure to cadmium molecular entity via ingestion")
 AnnotationAssertion(rdfs:label obo:ECTO_0001585 "exposure to cadmium via ingestion")
-EquivalentClasses(obo:ECTO_0001585 ObjectIntersectionOf(obo:ExO_0000002 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ExO_0000056) ObjectSomeValuesFrom(obo:RO_0002233 obo:CHEBI_22978)))
+EquivalentClasses(obo:ECTO_0001585 ObjectIntersectionOf(obo:ExO_0000002 ObjectSomeValuesFrom(obo:RO_0002242 obo:ExO_0000056) ObjectSomeValuesFrom(obo:RO_0002309 obo:CHEBI_22978)))
 
 # Class: obo:ECTO_0001586 (exposure to mercury via ingestion)
 
@@ -221,7 +222,7 @@ AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:ECTO_0001586 "exposure to mer
 AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:ECTO_0001586 "exposure to mercury molecular entities via ingestion")
 AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:ECTO_0001586 "exposure to mercury molecular entity via ingestion")
 AnnotationAssertion(rdfs:label obo:ECTO_0001586 "exposure to mercury via ingestion")
-EquivalentClasses(obo:ECTO_0001586 ObjectIntersectionOf(obo:ExO_0000002 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ExO_0000056) ObjectSomeValuesFrom(obo:RO_0002233 obo:CHEBI_25196)))
+EquivalentClasses(obo:ECTO_0001586 ObjectIntersectionOf(obo:ExO_0000002 ObjectSomeValuesFrom(obo:RO_0002242 obo:ExO_0000056) ObjectSomeValuesFrom(obo:RO_0002309 obo:CHEBI_25196)))
 
 # Class: obo:ECTO_0001587 (exposure to food additive via ingestion)
 
@@ -229,24 +230,29 @@ AnnotationAssertion(obo:IAO_0000115 obo:ECTO_0001587 "A exposure event involving
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:ECTO_0001587 "food additive exposure, via ingestion")
 AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:ECTO_0001587 "exposure to food additives via ingestion")
 AnnotationAssertion(rdfs:label obo:ECTO_0001587 "exposure to food additive via ingestion")
-EquivalentClasses(obo:ECTO_0001587 ObjectIntersectionOf(obo:ExO_0000002 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ExO_0000056) ObjectSomeValuesFrom(obo:RO_0002233 obo:CHEBI_64047)))
+EquivalentClasses(obo:ECTO_0001587 ObjectIntersectionOf(obo:ExO_0000002 ObjectSomeValuesFrom(obo:RO_0002242 obo:ExO_0000056) ObjectSomeValuesFrom(obo:RO_0002309 obo:CHEBI_64047)))
 
 # Class: obo:ECTO_0001588 (exposure to bisphenol A via ingestion)
 
 AnnotationAssertion(obo:IAO_0000115 obo:ECTO_0001588 "A exposure event involving the interaction of an exposure receptor to bisphenol A via ingestion.")
 AnnotationAssertion(oboInOwl:hasExactSynonym obo:ECTO_0001588 "bisphenol A exposure, via ingestion")
+AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:ECTO_0001588 "exposure to 2, 2-Bis(4-hydroxyphenyl)propane via ingestion")
+AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:ECTO_0001588 "exposure to 2,2-Bis(4'-hydroxyphenyl)propane via ingestion")
 AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:ECTO_0001588 "exposure to 2,2-Bis(4-Hydroxyphenyl)propane via ingestion")
 AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:ECTO_0001588 "exposure to 2,2-Bis(p-hydroxyphenyl)propane via ingestion")
 AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:ECTO_0001588 "exposure to 2,2-Di(4-hydroxyphenyl)propane via ingestion")
 AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:ECTO_0001588 "exposure to 2,2-Di(4-phenylol)propane via ingestion")
+AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:ECTO_0001588 "exposure to 4,4'-(1-Methylethane-1,1-diyl)diphenol via ingestion")
 AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:ECTO_0001588 "exposure to 4,4'-(1-Methylethylidene)bisphenol via ingestion")
+AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:ECTO_0001588 "exposure to 4,4'-(Propane-2,2-diyl)diphenol via ingestion")
 AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:ECTO_0001588 "exposure to 4,4'-(propane-2,2-diyl)diphenol via ingestion")
 AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:ECTO_0001588 "exposure to 4,4'-Bisphenol A via ingestion")
 AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:ECTO_0001588 "exposure to 4,4'-Isopropylidenediphenol via ingestion")
 AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:ECTO_0001588 "exposure to Bisphenol A via ingestion")
+AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:ECTO_0001588 "exposure to Dianin's compound via ingestion")
 AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:ECTO_0001588 "exposure to bisphenol-A via ingestion")
 AnnotationAssertion(rdfs:label obo:ECTO_0001588 "exposure to bisphenol A via ingestion")
-EquivalentClasses(obo:ECTO_0001588 ObjectIntersectionOf(obo:ExO_0000002 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ExO_0000056) ObjectSomeValuesFrom(obo:RO_0002233 obo:CHEBI_33216)))
+EquivalentClasses(obo:ECTO_0001588 ObjectIntersectionOf(obo:ExO_0000002 ObjectSomeValuesFrom(obo:RO_0002242 obo:ExO_0000056) ObjectSomeValuesFrom(obo:RO_0002309 obo:CHEBI_33216)))
 
 # Class: obo:ECTO_0001590 (exposure to monosodium glutamate via ingestion)
 
@@ -256,7 +262,7 @@ AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:ECTO_0001590 "exposure to sod
 AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:ECTO_0001590 "exposure to sodium 2-azaniumylpentanedioate via ingestion")
 AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:ECTO_0001590 "exposure to sodium glutamate via ingestion")
 AnnotationAssertion(rdfs:label obo:ECTO_0001590 "exposure to monosodium glutamate via ingestion")
-EquivalentClasses(obo:ECTO_0001590 ObjectIntersectionOf(obo:ExO_0000002 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ExO_0000056) ObjectSomeValuesFrom(obo:RO_0002233 obo:CHEBI_64220)))
+EquivalentClasses(obo:ECTO_0001590 ObjectIntersectionOf(obo:ExO_0000002 ObjectSomeValuesFrom(obo:RO_0002242 obo:ExO_0000056) ObjectSomeValuesFrom(obo:RO_0002309 obo:CHEBI_64220)))
 
 # Class: obo:ECTO_0002284 (exposure via injection)
 
@@ -265,7 +271,7 @@ AnnotationAssertion(oboInOwl:hasExactSynonym obo:ECTO_0002284 "chemical entity e
 AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:ECTO_0002284 "exposure to chemical entity via injection")
 AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:ECTO_0002284 "exposure to chemical via injection")
 AnnotationAssertion(rdfs:label obo:ECTO_0002284 "exposure via injection")
-EquivalentClasses(obo:ECTO_0002284 ObjectIntersectionOf(obo:ExO_0000002 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ExO_0000060) ObjectSomeValuesFrom(obo:RO_0002233 obo:CHEBI_24431)))
+EquivalentClasses(obo:ECTO_0002284 ObjectIntersectionOf(obo:ExO_0000002 ObjectSomeValuesFrom(obo:RO_0002242 obo:ExO_0000060) ObjectSomeValuesFrom(obo:RO_0002309 obo:CHEBI_24431)))
 
 # Class: obo:ECTO_0002285 (exposure to heroin via injection)
 
@@ -280,7 +286,7 @@ AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:ECTO_0002285 "exposure to Dia
 AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:ECTO_0002285 "exposure to Heroin via injection")
 AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:ECTO_0002285 "exposure to O,O'-Diacetylmorphine via injection")
 AnnotationAssertion(rdfs:label obo:ECTO_0002285 "exposure to heroin via injection")
-EquivalentClasses(obo:ECTO_0002285 ObjectIntersectionOf(obo:ExO_0000002 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ExO_0000060) ObjectSomeValuesFrom(obo:RO_0002233 obo:CHEBI_27808)))
+EquivalentClasses(obo:ECTO_0002285 ObjectIntersectionOf(obo:ExO_0000002 ObjectSomeValuesFrom(obo:RO_0002242 obo:ExO_0000060) ObjectSomeValuesFrom(obo:RO_0002309 obo:CHEBI_27808)))
 
 # Class: obo:ECTO_0002286 (exposure to heroin via inhalation)
 
@@ -295,7 +301,7 @@ AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:ECTO_0002286 "exposure to Dia
 AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:ECTO_0002286 "exposure to Heroin via inhalation")
 AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:ECTO_0002286 "exposure to O,O'-Diacetylmorphine via inhalation")
 AnnotationAssertion(rdfs:label obo:ECTO_0002286 "exposure to heroin via inhalation")
-EquivalentClasses(obo:ECTO_0002286 ObjectIntersectionOf(obo:ExO_0000002 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ExO_0000057) ObjectSomeValuesFrom(obo:RO_0002233 obo:CHEBI_27808)))
+EquivalentClasses(obo:ECTO_0002286 ObjectIntersectionOf(obo:ExO_0000002 ObjectSomeValuesFrom(obo:RO_0002242 obo:ExO_0000057) ObjectSomeValuesFrom(obo:RO_0002309 obo:CHEBI_27808)))
 
 # Class: obo:ECTO_0002287 (exposure to methamphetamine via injection)
 
@@ -317,7 +323,7 @@ AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:ECTO_0002287 "exposure to met
 AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:ECTO_0002287 "exposure to metanfetamina via injection")
 AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:ECTO_0002287 "exposure to methyl-beta-phenylisopropylamine via injection")
 AnnotationAssertion(rdfs:label obo:ECTO_0002287 "exposure to methamphetamine via injection")
-EquivalentClasses(obo:ECTO_0002287 ObjectIntersectionOf(obo:ExO_0000002 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ExO_0000060) ObjectSomeValuesFrom(obo:RO_0002233 obo:CHEBI_6809)))
+EquivalentClasses(obo:ECTO_0002287 ObjectIntersectionOf(obo:ExO_0000002 ObjectSomeValuesFrom(obo:RO_0002242 obo:ExO_0000060) ObjectSomeValuesFrom(obo:RO_0002309 obo:CHEBI_6809)))
 
 # Class: obo:ECTO_0002288 (exposure to methamphetamine via inhalation)
 
@@ -339,7 +345,7 @@ AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:ECTO_0002288 "exposure to met
 AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:ECTO_0002288 "exposure to metanfetamina via inhalation")
 AnnotationAssertion(oboInOwl:hasRelatedSynonym obo:ECTO_0002288 "exposure to methyl-beta-phenylisopropylamine via inhalation")
 AnnotationAssertion(rdfs:label obo:ECTO_0002288 "exposure to methamphetamine via inhalation")
-EquivalentClasses(obo:ECTO_0002288 ObjectIntersectionOf(obo:ExO_0000002 ObjectSomeValuesFrom(obo:BFO_0000050 obo:ExO_0000057) ObjectSomeValuesFrom(obo:RO_0002233 obo:CHEBI_6809)))
+EquivalentClasses(obo:ECTO_0002288 ObjectIntersectionOf(obo:ExO_0000002 ObjectSomeValuesFrom(obo:RO_0002242 obo:ExO_0000057) ObjectSomeValuesFrom(obo:RO_0002309 obo:CHEBI_6809)))
 
 
 )

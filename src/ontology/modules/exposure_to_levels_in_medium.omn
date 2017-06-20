@@ -3,52 +3,52 @@ Prefix: IAO: <http://purl.obolibrary.org/obo/IAO_>
 Prefix: DOSDP: <http://geneontology.org/foo/>
 Prefix: oio: <http://www.geneontology.org/formats/oboInOwl#>
 Prefix: PO: <http://purl.obolibrary.org/obo/PO_>
-Prefix: ZECO: <http://purl.obolibrary.org/obo/ZECO_>
-Prefix: OBA: <http://purl.obolibrary.org/obo/OBA_>
-Prefix: GO: <http://purl.obolibrary.org/obo/GO_>
-Prefix: CL: <http://purl.obolibrary.org/obo/CL_>
-Prefix: SO: <http://purl.obolibrary.org/obo/SO_>
-Prefix: NBO: <http://purl.obolibrary.org/obo/NBO_>
-Prefix: ENVO: <http://purl.obolibrary.org/obo/ENVO_>
-Prefix: NCBITaxon: <http://purl.obolibrary.org/obo/NCBITaxon_>
-Prefix: CHEBI: <http://purl.obolibrary.org/obo/CHEBI_>
-Prefix: PATO: <http://purl.obolibrary.org/obo/PATO_>
-Prefix: PR: <http://purl.obolibrary.org/obo/PR_>
-Prefix: GOCHE: <http://purl.obolibrary.org/obo/GOCHE_>
-Prefix: ECTO: <http://purl.obolibrary.org/obo/ECTO_>
-Prefix: NCIT: <http://purl.obolibrary.org/obo/NCIT_>
-Prefix: ExO: <http://purl.obolibrary.org/obo/ExO_>
-Prefix: BFO: <http://purl.obolibrary.org/obo/BFO_>
-Prefix: UBERON: <http://purl.obolibrary.org/obo/UBERON_>
-Prefix: RO: <http://purl.obolibrary.org/obo/RO_>
-Prefix: NPO: <http://purl.obolibrary.org/obo/NPO_>
 Prefix: XCO: <http://purl.obolibrary.org/obo/XCO_>
+Prefix: NCBITaxon: <http://purl.obolibrary.org/obo/NCBITaxon_>
+Prefix: NPO: <http://purl.obolibrary.org/obo/NPO_>
+Prefix: PR: <http://purl.obolibrary.org/obo/PR_>
+Prefix: OBA: <http://purl.obolibrary.org/obo/OBA_>
+Prefix: NCIT: <http://purl.obolibrary.org/obo/NCIT_>
+Prefix: ENVO: <http://purl.obolibrary.org/obo/ENVO_>
+Prefix: SO: <http://purl.obolibrary.org/obo/SO_>
+Prefix: PATO: <http://purl.obolibrary.org/obo/PATO_>
+Prefix: GOCHE: <http://purl.obolibrary.org/obo/GOCHE_>
+Prefix: NBO: <http://purl.obolibrary.org/obo/NBO_>
+Prefix: CL: <http://purl.obolibrary.org/obo/CL_>
+Prefix: ExO: <http://purl.obolibrary.org/obo/ExO_>
+Prefix: GO: <http://purl.obolibrary.org/obo/GO_>
+Prefix: RO: <http://purl.obolibrary.org/obo/RO_>
+Prefix: CHEBI: <http://purl.obolibrary.org/obo/CHEBI_>
+Prefix: UBERON: <http://purl.obolibrary.org/obo/UBERON_>
+Prefix: ECTO: <http://purl.obolibrary.org/obo/ECTO_>
+Prefix: ZECO: <http://purl.obolibrary.org/obo/ZECO_>
+Prefix: BFO: <http://purl.obolibrary.org/obo/BFO_>
 
  ## Auto-generated
 
 Ontology: <http://purl.obolibrary.org/obo/auto>
 AnnotationProperty: IAO:0000115
-AnnotationProperty: exo/patterns/exposure_to_levels_in_medium/location
 AnnotationProperty: exo/patterns/exposure_to_levels_in_medium/stressor
+AnnotationProperty: exo/patterns/exposure_to_levels_in_medium/location
 AnnotationProperty: DOSDP:applies-pattern
 AnnotationProperty: oio:hasRelatedSynonym
 AnnotationProperty: oio:hasExactSynonym
-Class: ENVO:00010483 ## environmental material
 Class: ExO:0000002 ## exposure event
+Class: ENVO:00010483 ## environmental material
 Class: CHEBI:24431 ## chemical entity
-ObjectProperty: RO:0002233 ## has input
 ObjectProperty: BFO_0000050 ## part of
 ObjectProperty: BFO_0000050 ## stressor
+ObjectProperty: RO:0002309 ## has exposure stimulus
 ## Auto-generated classes
 
-Class: ENVO:00002005 ## air
 Class: CHEBI:34905 ## paraquat
-## {"location": "ENVO:00002005", "stressor": "CHEBI:34905"}
+Class: ENVO:00002005 ## air
+## {"stressor": "CHEBI:34905", "location": "ENVO:00002005"}
 Class: ECTO:0000965
  Annotations: rdfs:label "exposure to paraquat in air"
  Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to paraquat in air."
  Annotations: oio:hasExactSynonym "paraquat exposure in air"
- EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:34905 and BFO_0000050 some ENVO:00002005) ## 'exposure event' and 'has input' some (paraquat and 'part of' some air)
+ EquivalentTo: ExO:0000002 and RO:0002309 some (CHEBI:34905 and BFO_0000050 some ENVO:00002005) ## 'exposure event' and 'has exposure stimulus' some (paraquat and 'part of' some air)
   ## Auto-syns
 
  Annotations: oio:hasRelatedSynonym "exposure to Paraquat in air"
@@ -112,108 +112,131 @@ Class: ECTO:0000965
  Annotations: oio:hasRelatedSynonym "exposure to paraquat ion in air"
  Annotations: oio:hasRelatedSynonym "exposure to paraquat ion in air"
 
-Class: ENVO:00001998 ## soil
 Class: CHEBI:34905 ## paraquat
-## {"location": "ENVO:00001998", "stressor": "CHEBI:34905"}
+Class: ENVO:00001998 ## soil
+## {"stressor": "CHEBI:34905", "location": "ENVO:00001998"}
 Class: ECTO:0000966
  Annotations: rdfs:label "exposure to paraquat in soil"
  Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to paraquat in soil."
  Annotations: oio:hasExactSynonym "paraquat exposure in soil"
- EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:34905 and BFO_0000050 some ENVO:00001998) ## 'exposure event' and 'has input' some (paraquat and 'part of' some soil)
+ EquivalentTo: ExO:0000002 and RO:0002309 some (CHEBI:34905 and BFO_0000050 some ENVO:00001998) ## 'exposure event' and 'has exposure stimulus' some (paraquat and 'part of' some soil)
   ## Auto-syns
 
  Annotations: oio:hasRelatedSynonym "exposure to paraquat in regolith"
  Annotations: oio:hasRelatedSynonym "exposure to paraquat in regolith"
+ Annotations: oio:hasRelatedSynonym "exposure to paraquat in regolith"
+ Annotations: oio:hasRelatedSynonym "exposure to paraquat in regolith"
  Annotations: oio:hasRelatedSynonym "exposure to Paraquat in soil"
  Annotations: oio:hasRelatedSynonym "exposure to Paraquat in soil"
  Annotations: oio:hasRelatedSynonym "exposure to Paraquat in regolith"
  Annotations: oio:hasRelatedSynonym "exposure to Paraquat in soil"
+ Annotations: oio:hasRelatedSynonym "exposure to Paraquat in regolith"
  Annotations: oio:hasRelatedSynonym "exposure to 1,1'-dimethyl-[4,4'-bipyridin]-1,1'-diium in soil"
  Annotations: oio:hasRelatedSynonym "exposure to 1,1'-dimethyl-[4,4'-bipyridin]-1,1'-diium in soil"
  Annotations: oio:hasRelatedSynonym "exposure to 1,1'-dimethyl-[4,4'-bipyridin]-1,1'-diium in regolith"
  Annotations: oio:hasRelatedSynonym "exposure to 1,1'-dimethyl-[4,4'-bipyridin]-1,1'-diium in soil"
+ Annotations: oio:hasRelatedSynonym "exposure to 1,1'-dimethyl-[4,4'-bipyridin]-1,1'-diium in regolith"
  Annotations: oio:hasRelatedSynonym "exposure to 1,1'-dimethyl-4,4'-bipyridyldiylium in soil"
  Annotations: oio:hasRelatedSynonym "exposure to 1,1'-dimethyl-4,4'-bipyridyldiylium in soil"
  Annotations: oio:hasRelatedSynonym "exposure to 1,1'-dimethyl-4,4'-bipyridyldiylium in regolith"
  Annotations: oio:hasRelatedSynonym "exposure to 1,1'-dimethyl-4,4'-bipyridyldiylium in soil"
+ Annotations: oio:hasRelatedSynonym "exposure to 1,1'-dimethyl-4,4'-bipyridyldiylium in regolith"
  Annotations: oio:hasRelatedSynonym "exposure to 1,1'-Dimethyl-4,4'-bipyridinium in soil"
  Annotations: oio:hasRelatedSynonym "exposure to 1,1'-Dimethyl-4,4'-bipyridinium in soil"
  Annotations: oio:hasRelatedSynonym "exposure to 1,1'-Dimethyl-4,4'-bipyridinium in regolith"
  Annotations: oio:hasRelatedSynonym "exposure to 1,1'-Dimethyl-4,4'-bipyridinium in soil"
+ Annotations: oio:hasRelatedSynonym "exposure to 1,1'-Dimethyl-4,4'-bipyridinium in regolith"
  Annotations: oio:hasRelatedSynonym "exposure to N,N'-dimethyl-4,4'-bipyridinium in soil"
  Annotations: oio:hasRelatedSynonym "exposure to N,N'-dimethyl-4,4'-bipyridinium in soil"
  Annotations: oio:hasRelatedSynonym "exposure to N,N'-dimethyl-4,4'-bipyridinium in regolith"
  Annotations: oio:hasRelatedSynonym "exposure to N,N'-dimethyl-4,4'-bipyridinium in soil"
+ Annotations: oio:hasRelatedSynonym "exposure to N,N'-dimethyl-4,4'-bipyridinium in regolith"
  Annotations: oio:hasRelatedSynonym "exposure to paraquat ion in soil"
  Annotations: oio:hasRelatedSynonym "exposure to paraquat ion in soil"
  Annotations: oio:hasRelatedSynonym "exposure to paraquat ion in regolith"
  Annotations: oio:hasRelatedSynonym "exposure to paraquat ion in soil"
+ Annotations: oio:hasRelatedSynonym "exposure to paraquat ion in regolith"
  Annotations: oio:hasRelatedSynonym "exposure to dimethyl viologen in soil"
  Annotations: oio:hasRelatedSynonym "exposure to dimethyl viologen in soil"
  Annotations: oio:hasRelatedSynonym "exposure to dimethyl viologen in regolith"
  Annotations: oio:hasRelatedSynonym "exposure to dimethyl viologen in soil"
+ Annotations: oio:hasRelatedSynonym "exposure to dimethyl viologen in regolith"
  Annotations: oio:hasRelatedSynonym "exposure to methyl viologen ion(2+) in soil"
  Annotations: oio:hasRelatedSynonym "exposure to methyl viologen ion(2+) in soil"
  Annotations: oio:hasRelatedSynonym "exposure to methyl viologen ion(2+) in regolith"
  Annotations: oio:hasRelatedSynonym "exposure to methyl viologen ion(2+) in soil"
+ Annotations: oio:hasRelatedSynonym "exposure to methyl viologen ion(2+) in regolith"
  Annotations: oio:hasRelatedSynonym "exposure to N,N'-dimethyl-4,4'-bipyridinium dication in soil"
  Annotations: oio:hasRelatedSynonym "exposure to N,N'-dimethyl-4,4'-bipyridinium dication in soil"
  Annotations: oio:hasRelatedSynonym "exposure to N,N'-dimethyl-4,4'-bipyridinium dication in regolith"
  Annotations: oio:hasRelatedSynonym "exposure to N,N'-dimethyl-4,4'-bipyridinium dication in soil"
+ Annotations: oio:hasRelatedSynonym "exposure to N,N'-dimethyl-4,4'-bipyridinium dication in regolith"
  Annotations: oio:hasRelatedSynonym "exposure to paraquat dication in soil"
  Annotations: oio:hasRelatedSynonym "exposure to paraquat dication in soil"
  Annotations: oio:hasRelatedSynonym "exposure to paraquat dication in regolith"
  Annotations: oio:hasRelatedSynonym "exposure to paraquat dication in soil"
+ Annotations: oio:hasRelatedSynonym "exposure to paraquat dication in regolith"
+ Annotations: oio:hasRelatedSynonym "exposure to paraquat in regolith"
  Annotations: oio:hasRelatedSynonym "exposure to paraquat in regolith"
  Annotations: oio:hasRelatedSynonym "exposure to 1,1'-Dimethyl-4,4'-bipyridinium in soil"
  Annotations: oio:hasRelatedSynonym "exposure to 1,1'-Dimethyl-4,4'-bipyridinium in soil"
  Annotations: oio:hasRelatedSynonym "exposure to 1,1'-Dimethyl-4,4'-bipyridinium in regolith"
  Annotations: oio:hasRelatedSynonym "exposure to 1,1'-Dimethyl-4,4'-bipyridinium in soil"
+ Annotations: oio:hasRelatedSynonym "exposure to 1,1'-Dimethyl-4,4'-bipyridinium in regolith"
  Annotations: oio:hasRelatedSynonym "exposure to 1,1'-dimethyl-4,4'-bipyridyldiylium in soil"
  Annotations: oio:hasRelatedSynonym "exposure to 1,1'-dimethyl-4,4'-bipyridyldiylium in soil"
  Annotations: oio:hasRelatedSynonym "exposure to 1,1'-dimethyl-4,4'-bipyridyldiylium in regolith"
  Annotations: oio:hasRelatedSynonym "exposure to 1,1'-dimethyl-4,4'-bipyridyldiylium in soil"
+ Annotations: oio:hasRelatedSynonym "exposure to 1,1'-dimethyl-4,4'-bipyridyldiylium in regolith"
  Annotations: oio:hasRelatedSynonym "exposure to 1,1'-dimethyl-[4,4'-bipyridin]-1,1'-diium in soil"
  Annotations: oio:hasRelatedSynonym "exposure to 1,1'-dimethyl-[4,4'-bipyridin]-1,1'-diium in soil"
  Annotations: oio:hasRelatedSynonym "exposure to 1,1'-dimethyl-[4,4'-bipyridin]-1,1'-diium in regolith"
  Annotations: oio:hasRelatedSynonym "exposure to 1,1'-dimethyl-[4,4'-bipyridin]-1,1'-diium in soil"
+ Annotations: oio:hasRelatedSynonym "exposure to 1,1'-dimethyl-[4,4'-bipyridin]-1,1'-diium in regolith"
  Annotations: oio:hasRelatedSynonym "exposure to dimethyl viologen in soil"
  Annotations: oio:hasRelatedSynonym "exposure to dimethyl viologen in soil"
  Annotations: oio:hasRelatedSynonym "exposure to dimethyl viologen in regolith"
  Annotations: oio:hasRelatedSynonym "exposure to dimethyl viologen in soil"
+ Annotations: oio:hasRelatedSynonym "exposure to dimethyl viologen in regolith"
  Annotations: oio:hasRelatedSynonym "exposure to methyl viologen ion(2+) in soil"
  Annotations: oio:hasRelatedSynonym "exposure to methyl viologen ion(2+) in soil"
  Annotations: oio:hasRelatedSynonym "exposure to methyl viologen ion(2+) in regolith"
  Annotations: oio:hasRelatedSynonym "exposure to methyl viologen ion(2+) in soil"
+ Annotations: oio:hasRelatedSynonym "exposure to methyl viologen ion(2+) in regolith"
  Annotations: oio:hasRelatedSynonym "exposure to N,N'-dimethyl-4,4'-bipyridinium in soil"
  Annotations: oio:hasRelatedSynonym "exposure to N,N'-dimethyl-4,4'-bipyridinium in soil"
  Annotations: oio:hasRelatedSynonym "exposure to N,N'-dimethyl-4,4'-bipyridinium in regolith"
  Annotations: oio:hasRelatedSynonym "exposure to N,N'-dimethyl-4,4'-bipyridinium in soil"
+ Annotations: oio:hasRelatedSynonym "exposure to N,N'-dimethyl-4,4'-bipyridinium in regolith"
  Annotations: oio:hasRelatedSynonym "exposure to N,N'-dimethyl-4,4'-bipyridinium dication in soil"
  Annotations: oio:hasRelatedSynonym "exposure to N,N'-dimethyl-4,4'-bipyridinium dication in soil"
  Annotations: oio:hasRelatedSynonym "exposure to N,N'-dimethyl-4,4'-bipyridinium dication in regolith"
  Annotations: oio:hasRelatedSynonym "exposure to N,N'-dimethyl-4,4'-bipyridinium dication in soil"
+ Annotations: oio:hasRelatedSynonym "exposure to N,N'-dimethyl-4,4'-bipyridinium dication in regolith"
  Annotations: oio:hasRelatedSynonym "exposure to Paraquat in soil"
  Annotations: oio:hasRelatedSynonym "exposure to Paraquat in soil"
  Annotations: oio:hasRelatedSynonym "exposure to Paraquat in regolith"
  Annotations: oio:hasRelatedSynonym "exposure to Paraquat in soil"
+ Annotations: oio:hasRelatedSynonym "exposure to Paraquat in regolith"
  Annotations: oio:hasRelatedSynonym "exposure to paraquat dication in soil"
  Annotations: oio:hasRelatedSynonym "exposure to paraquat dication in soil"
  Annotations: oio:hasRelatedSynonym "exposure to paraquat dication in regolith"
  Annotations: oio:hasRelatedSynonym "exposure to paraquat dication in soil"
+ Annotations: oio:hasRelatedSynonym "exposure to paraquat dication in regolith"
  Annotations: oio:hasRelatedSynonym "exposure to paraquat ion in soil"
  Annotations: oio:hasRelatedSynonym "exposure to paraquat ion in soil"
  Annotations: oio:hasRelatedSynonym "exposure to paraquat ion in regolith"
  Annotations: oio:hasRelatedSynonym "exposure to paraquat ion in soil"
+ Annotations: oio:hasRelatedSynonym "exposure to paraquat ion in regolith"
 
-Class: ENVO:00002006 ## water
 Class: CHEBI:34905 ## paraquat
-## {"location": "ENVO:00002006", "stressor": "CHEBI:34905"}
+Class: ENVO:00002006 ## water
+## {"stressor": "CHEBI:34905", "location": "ENVO:00002006"}
 Class: ECTO:0000967
  Annotations: rdfs:label "exposure to paraquat in water"
  Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to paraquat in water."
  Annotations: oio:hasExactSynonym "paraquat exposure in water"
- EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:34905 and BFO_0000050 some ENVO:00002006) ## 'exposure event' and 'has input' some (paraquat and 'part of' some water)
+ EquivalentTo: ExO:0000002 and RO:0002309 some (CHEBI:34905 and BFO_0000050 some ENVO:00002006) ## 'exposure event' and 'has exposure stimulus' some (paraquat and 'part of' some water)
   ## Auto-syns
 
  Annotations: oio:hasRelatedSynonym "exposure to Paraquat in water"
@@ -277,14 +300,14 @@ Class: ECTO:0000967
  Annotations: oio:hasRelatedSynonym "exposure to paraquat ion in water"
  Annotations: oio:hasRelatedSynonym "exposure to paraquat ion in water"
 
-Class: ENVO:00002005 ## air
 Class: CHEBI:16130 ## DDT
-## {"location": "ENVO:00002005", "stressor": "CHEBI:16130"}
+Class: ENVO:00002005 ## air
+## {"stressor": "CHEBI:16130", "location": "ENVO:00002005"}
 Class: ECTO:0000968
  Annotations: rdfs:label "exposure to DDT in air"
  Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to DDT in air."
  Annotations: oio:hasExactSynonym "DDT exposure in air"
- EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:16130 and BFO_0000050 some ENVO:00002005) ## 'exposure event' and 'has input' some (DDT and 'part of' some air)
+ EquivalentTo: ExO:0000002 and RO:0002309 some (CHEBI:16130 and BFO_0000050 some ENVO:00002005) ## 'exposure event' and 'has exposure stimulus' some (DDT and 'part of' some air)
   ## Auto-syns
 
  Annotations: oio:hasRelatedSynonym "exposure to dichlorodiphenyltrichloroethane in air"
@@ -369,136 +392,166 @@ Class: ECTO:0000968
  Annotations: oio:hasRelatedSynonym "exposure to p,p'-dichlorodiphenyltrichloroethane in air"
  Annotations: oio:hasRelatedSynonym "exposure to p,p'-dichlorodiphenyltrichloroethane in air"
 
-Class: ENVO:00001998 ## soil
 Class: CHEBI:16130 ## DDT
-## {"location": "ENVO:00001998", "stressor": "CHEBI:16130"}
+Class: ENVO:00001998 ## soil
+## {"stressor": "CHEBI:16130", "location": "ENVO:00001998"}
 Class: ECTO:0000969
  Annotations: rdfs:label "exposure to DDT in soil"
  Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to DDT in soil."
  Annotations: oio:hasExactSynonym "DDT exposure in soil"
- EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:16130 and BFO_0000050 some ENVO:00001998) ## 'exposure event' and 'has input' some (DDT and 'part of' some soil)
+ EquivalentTo: ExO:0000002 and RO:0002309 some (CHEBI:16130 and BFO_0000050 some ENVO:00001998) ## 'exposure event' and 'has exposure stimulus' some (DDT and 'part of' some soil)
   ## Auto-syns
 
  Annotations: oio:hasRelatedSynonym "exposure to DDT in regolith"
  Annotations: oio:hasRelatedSynonym "exposure to DDT in regolith"
+ Annotations: oio:hasRelatedSynonym "exposure to DDT in regolith"
+ Annotations: oio:hasRelatedSynonym "exposure to DDT in regolith"
  Annotations: oio:hasRelatedSynonym "exposure to dichlorodiphenyltrichloroethane in soil"
  Annotations: oio:hasRelatedSynonym "exposure to dichlorodiphenyltrichloroethane in soil"
  Annotations: oio:hasRelatedSynonym "exposure to dichlorodiphenyltrichloroethane in regolith"
  Annotations: oio:hasRelatedSynonym "exposure to dichlorodiphenyltrichloroethane in soil"
+ Annotations: oio:hasRelatedSynonym "exposure to dichlorodiphenyltrichloroethane in regolith"
  Annotations: oio:hasRelatedSynonym "exposure to 1,1,1-Trichloro-2,2-bis(4-chlorophenyl)ethane in soil"
  Annotations: oio:hasRelatedSynonym "exposure to 1,1,1-Trichloro-2,2-bis(4-chlorophenyl)ethane in soil"
  Annotations: oio:hasRelatedSynonym "exposure to 1,1,1-Trichloro-2,2-bis(4-chlorophenyl)ethane in regolith"
  Annotations: oio:hasRelatedSynonym "exposure to 1,1,1-Trichloro-2,2-bis(4-chlorophenyl)ethane in soil"
+ Annotations: oio:hasRelatedSynonym "exposure to 1,1,1-Trichloro-2,2-bis(4-chlorophenyl)ethane in regolith"
  Annotations: oio:hasRelatedSynonym "exposure to alpha,alpha-bis(p-chlorophenyl)-beta,beta,beta-trichlorethane in soil"
  Annotations: oio:hasRelatedSynonym "exposure to alpha,alpha-bis(p-chlorophenyl)-beta,beta,beta-trichlorethane in soil"
  Annotations: oio:hasRelatedSynonym "exposure to alpha,alpha-bis(p-chlorophenyl)-beta,beta,beta-trichlorethane in regolith"
  Annotations: oio:hasRelatedSynonym "exposure to alpha,alpha-bis(p-chlorophenyl)-beta,beta,beta-trichlorethane in soil"
+ Annotations: oio:hasRelatedSynonym "exposure to alpha,alpha-bis(p-chlorophenyl)-beta,beta,beta-trichlorethane in regolith"
  Annotations: oio:hasRelatedSynonym "exposure to 1,1-bis(4-chlorophenyl)-2,2,2-trichloroethane in soil"
  Annotations: oio:hasRelatedSynonym "exposure to 1,1-bis(4-chlorophenyl)-2,2,2-trichloroethane in soil"
  Annotations: oio:hasRelatedSynonym "exposure to 1,1-bis(4-chlorophenyl)-2,2,2-trichloroethane in regolith"
  Annotations: oio:hasRelatedSynonym "exposure to 1,1-bis(4-chlorophenyl)-2,2,2-trichloroethane in soil"
+ Annotations: oio:hasRelatedSynonym "exposure to 1,1-bis(4-chlorophenyl)-2,2,2-trichloroethane in regolith"
  Annotations: oio:hasRelatedSynonym "exposure to p,p'-DDT in soil"
  Annotations: oio:hasRelatedSynonym "exposure to p,p'-DDT in soil"
  Annotations: oio:hasRelatedSynonym "exposure to p,p'-DDT in regolith"
  Annotations: oio:hasRelatedSynonym "exposure to p,p'-DDT in soil"
+ Annotations: oio:hasRelatedSynonym "exposure to p,p'-DDT in regolith"
  Annotations: oio:hasRelatedSynonym "exposure to 1,1'-(2,2,2-trichloroethylidene)bis[4-chlorobenzene] in soil"
  Annotations: oio:hasRelatedSynonym "exposure to 1,1'-(2,2,2-trichloroethylidene)bis[4-chlorobenzene] in soil"
  Annotations: oio:hasRelatedSynonym "exposure to 1,1'-(2,2,2-trichloroethylidene)bis[4-chlorobenzene] in regolith"
  Annotations: oio:hasRelatedSynonym "exposure to 1,1'-(2,2,2-trichloroethylidene)bis[4-chlorobenzene] in soil"
+ Annotations: oio:hasRelatedSynonym "exposure to 1,1'-(2,2,2-trichloroethylidene)bis[4-chlorobenzene] in regolith"
  Annotations: oio:hasRelatedSynonym "exposure to p,p'-dichlorodiphenyltrichloroethane in soil"
  Annotations: oio:hasRelatedSynonym "exposure to p,p'-dichlorodiphenyltrichloroethane in soil"
  Annotations: oio:hasRelatedSynonym "exposure to p,p'-dichlorodiphenyltrichloroethane in regolith"
  Annotations: oio:hasRelatedSynonym "exposure to p,p'-dichlorodiphenyltrichloroethane in soil"
+ Annotations: oio:hasRelatedSynonym "exposure to p,p'-dichlorodiphenyltrichloroethane in regolith"
  Annotations: oio:hasRelatedSynonym "exposure to 1,1,1-trichloro-2,2-bis(4-chlorophenyl)ethane in soil"
  Annotations: oio:hasRelatedSynonym "exposure to 1,1,1-trichloro-2,2-bis(4-chlorophenyl)ethane in soil"
  Annotations: oio:hasRelatedSynonym "exposure to 1,1,1-trichloro-2,2-bis(4-chlorophenyl)ethane in regolith"
  Annotations: oio:hasRelatedSynonym "exposure to 1,1,1-trichloro-2,2-bis(4-chlorophenyl)ethane in soil"
+ Annotations: oio:hasRelatedSynonym "exposure to 1,1,1-trichloro-2,2-bis(4-chlorophenyl)ethane in regolith"
  Annotations: oio:hasRelatedSynonym "exposure to clofenotane in soil"
  Annotations: oio:hasRelatedSynonym "exposure to clofenotane in soil"
  Annotations: oio:hasRelatedSynonym "exposure to clofenotane in regolith"
  Annotations: oio:hasRelatedSynonym "exposure to clofenotane in soil"
+ Annotations: oio:hasRelatedSynonym "exposure to clofenotane in regolith"
  Annotations: oio:hasRelatedSynonym "exposure to Clofenotane in soil"
  Annotations: oio:hasRelatedSynonym "exposure to Clofenotane in soil"
  Annotations: oio:hasRelatedSynonym "exposure to Clofenotane in regolith"
  Annotations: oio:hasRelatedSynonym "exposure to Clofenotane in soil"
+ Annotations: oio:hasRelatedSynonym "exposure to Clofenotane in regolith"
  Annotations: oio:hasRelatedSynonym "exposure to Dichlorodiphenyltrichloroethane in soil"
  Annotations: oio:hasRelatedSynonym "exposure to Dichlorodiphenyltrichloroethane in soil"
  Annotations: oio:hasRelatedSynonym "exposure to Dichlorodiphenyltrichloroethane in regolith"
  Annotations: oio:hasRelatedSynonym "exposure to Dichlorodiphenyltrichloroethane in soil"
+ Annotations: oio:hasRelatedSynonym "exposure to Dichlorodiphenyltrichloroethane in regolith"
  Annotations: oio:hasRelatedSynonym "exposure to 1-chloro-4-[2,2,2-trichloro-1-(4-chlorophenyl)ethyl]benzene in soil"
  Annotations: oio:hasRelatedSynonym "exposure to 1-chloro-4-[2,2,2-trichloro-1-(4-chlorophenyl)ethyl]benzene in soil"
  Annotations: oio:hasRelatedSynonym "exposure to 1-chloro-4-[2,2,2-trichloro-1-(4-chlorophenyl)ethyl]benzene in regolith"
  Annotations: oio:hasRelatedSynonym "exposure to 1-chloro-4-[2,2,2-trichloro-1-(4-chlorophenyl)ethyl]benzene in soil"
+ Annotations: oio:hasRelatedSynonym "exposure to 1-chloro-4-[2,2,2-trichloro-1-(4-chlorophenyl)ethyl]benzene in regolith"
  Annotations: oio:hasRelatedSynonym "exposure to 1,1,1-Trichloro-2,2-bis-(4'-chlorophenyl)ethane in soil"
  Annotations: oio:hasRelatedSynonym "exposure to 1,1,1-Trichloro-2,2-bis-(4'-chlorophenyl)ethane in soil"
  Annotations: oio:hasRelatedSynonym "exposure to 1,1,1-Trichloro-2,2-bis-(4'-chlorophenyl)ethane in regolith"
  Annotations: oio:hasRelatedSynonym "exposure to 1,1,1-Trichloro-2,2-bis-(4'-chlorophenyl)ethane in soil"
+ Annotations: oio:hasRelatedSynonym "exposure to 1,1,1-Trichloro-2,2-bis-(4'-chlorophenyl)ethane in regolith"
  Annotations: oio:hasRelatedSynonym "exposure to 1,1,1-Trichloro-2,2-bis(4-chlorophenyl)ethane in soil"
  Annotations: oio:hasRelatedSynonym "exposure to 1,1,1-Trichloro-2,2-bis(4-chlorophenyl)ethane in soil"
  Annotations: oio:hasRelatedSynonym "exposure to 1,1,1-Trichloro-2,2-bis(4-chlorophenyl)ethane in regolith"
  Annotations: oio:hasRelatedSynonym "exposure to 1,1,1-Trichloro-2,2-bis(4-chlorophenyl)ethane in soil"
+ Annotations: oio:hasRelatedSynonym "exposure to 1,1,1-Trichloro-2,2-bis(4-chlorophenyl)ethane in regolith"
+ Annotations: oio:hasRelatedSynonym "exposure to DDT in regolith"
  Annotations: oio:hasRelatedSynonym "exposure to DDT in regolith"
  Annotations: oio:hasRelatedSynonym "exposure to 1,1'-(2,2,2-trichloroethylidene)bis[4-chlorobenzene] in soil"
  Annotations: oio:hasRelatedSynonym "exposure to 1,1'-(2,2,2-trichloroethylidene)bis[4-chlorobenzene] in soil"
  Annotations: oio:hasRelatedSynonym "exposure to 1,1'-(2,2,2-trichloroethylidene)bis[4-chlorobenzene] in regolith"
  Annotations: oio:hasRelatedSynonym "exposure to 1,1'-(2,2,2-trichloroethylidene)bis[4-chlorobenzene] in soil"
+ Annotations: oio:hasRelatedSynonym "exposure to 1,1'-(2,2,2-trichloroethylidene)bis[4-chlorobenzene] in regolith"
  Annotations: oio:hasRelatedSynonym "exposure to 1,1,1-Trichloro-2,2-bis(4-chlorophenyl)ethane in soil"
  Annotations: oio:hasRelatedSynonym "exposure to 1,1,1-Trichloro-2,2-bis(4-chlorophenyl)ethane in soil"
  Annotations: oio:hasRelatedSynonym "exposure to 1,1,1-Trichloro-2,2-bis(4-chlorophenyl)ethane in regolith"
  Annotations: oio:hasRelatedSynonym "exposure to 1,1,1-Trichloro-2,2-bis(4-chlorophenyl)ethane in soil"
+ Annotations: oio:hasRelatedSynonym "exposure to 1,1,1-Trichloro-2,2-bis(4-chlorophenyl)ethane in regolith"
  Annotations: oio:hasRelatedSynonym "exposure to 1,1,1-trichloro-2,2-bis(4-chlorophenyl)ethane in soil"
  Annotations: oio:hasRelatedSynonym "exposure to 1,1,1-trichloro-2,2-bis(4-chlorophenyl)ethane in soil"
  Annotations: oio:hasRelatedSynonym "exposure to 1,1,1-trichloro-2,2-bis(4-chlorophenyl)ethane in regolith"
  Annotations: oio:hasRelatedSynonym "exposure to 1,1,1-trichloro-2,2-bis(4-chlorophenyl)ethane in soil"
+ Annotations: oio:hasRelatedSynonym "exposure to 1,1,1-trichloro-2,2-bis(4-chlorophenyl)ethane in regolith"
  Annotations: oio:hasRelatedSynonym "exposure to 1,1,1-Trichloro-2,2-bis-(4'-chlorophenyl)ethane in soil"
  Annotations: oio:hasRelatedSynonym "exposure to 1,1,1-Trichloro-2,2-bis-(4'-chlorophenyl)ethane in soil"
  Annotations: oio:hasRelatedSynonym "exposure to 1,1,1-Trichloro-2,2-bis-(4'-chlorophenyl)ethane in regolith"
  Annotations: oio:hasRelatedSynonym "exposure to 1,1,1-Trichloro-2,2-bis-(4'-chlorophenyl)ethane in soil"
+ Annotations: oio:hasRelatedSynonym "exposure to 1,1,1-Trichloro-2,2-bis-(4'-chlorophenyl)ethane in regolith"
  Annotations: oio:hasRelatedSynonym "exposure to 1,1-bis(4-chlorophenyl)-2,2,2-trichloroethane in soil"
  Annotations: oio:hasRelatedSynonym "exposure to 1,1-bis(4-chlorophenyl)-2,2,2-trichloroethane in soil"
  Annotations: oio:hasRelatedSynonym "exposure to 1,1-bis(4-chlorophenyl)-2,2,2-trichloroethane in regolith"
  Annotations: oio:hasRelatedSynonym "exposure to 1,1-bis(4-chlorophenyl)-2,2,2-trichloroethane in soil"
+ Annotations: oio:hasRelatedSynonym "exposure to 1,1-bis(4-chlorophenyl)-2,2,2-trichloroethane in regolith"
  Annotations: oio:hasRelatedSynonym "exposure to 1-chloro-4-[2,2,2-trichloro-1-(4-chlorophenyl)ethyl]benzene in soil"
  Annotations: oio:hasRelatedSynonym "exposure to 1-chloro-4-[2,2,2-trichloro-1-(4-chlorophenyl)ethyl]benzene in soil"
  Annotations: oio:hasRelatedSynonym "exposure to 1-chloro-4-[2,2,2-trichloro-1-(4-chlorophenyl)ethyl]benzene in regolith"
  Annotations: oio:hasRelatedSynonym "exposure to 1-chloro-4-[2,2,2-trichloro-1-(4-chlorophenyl)ethyl]benzene in soil"
+ Annotations: oio:hasRelatedSynonym "exposure to 1-chloro-4-[2,2,2-trichloro-1-(4-chlorophenyl)ethyl]benzene in regolith"
  Annotations: oio:hasRelatedSynonym "exposure to alpha,alpha-bis(p-chlorophenyl)-beta,beta,beta-trichlorethane in soil"
  Annotations: oio:hasRelatedSynonym "exposure to alpha,alpha-bis(p-chlorophenyl)-beta,beta,beta-trichlorethane in soil"
  Annotations: oio:hasRelatedSynonym "exposure to alpha,alpha-bis(p-chlorophenyl)-beta,beta,beta-trichlorethane in regolith"
  Annotations: oio:hasRelatedSynonym "exposure to alpha,alpha-bis(p-chlorophenyl)-beta,beta,beta-trichlorethane in soil"
+ Annotations: oio:hasRelatedSynonym "exposure to alpha,alpha-bis(p-chlorophenyl)-beta,beta,beta-trichlorethane in regolith"
  Annotations: oio:hasRelatedSynonym "exposure to Clofenotane in soil"
  Annotations: oio:hasRelatedSynonym "exposure to Clofenotane in soil"
  Annotations: oio:hasRelatedSynonym "exposure to Clofenotane in regolith"
  Annotations: oio:hasRelatedSynonym "exposure to Clofenotane in soil"
+ Annotations: oio:hasRelatedSynonym "exposure to Clofenotane in regolith"
  Annotations: oio:hasRelatedSynonym "exposure to clofenotane in soil"
  Annotations: oio:hasRelatedSynonym "exposure to clofenotane in soil"
  Annotations: oio:hasRelatedSynonym "exposure to clofenotane in regolith"
  Annotations: oio:hasRelatedSynonym "exposure to clofenotane in soil"
+ Annotations: oio:hasRelatedSynonym "exposure to clofenotane in regolith"
  Annotations: oio:hasRelatedSynonym "exposure to Dichlorodiphenyltrichloroethane in soil"
  Annotations: oio:hasRelatedSynonym "exposure to Dichlorodiphenyltrichloroethane in soil"
  Annotations: oio:hasRelatedSynonym "exposure to Dichlorodiphenyltrichloroethane in regolith"
  Annotations: oio:hasRelatedSynonym "exposure to Dichlorodiphenyltrichloroethane in soil"
+ Annotations: oio:hasRelatedSynonym "exposure to Dichlorodiphenyltrichloroethane in regolith"
  Annotations: oio:hasRelatedSynonym "exposure to dichlorodiphenyltrichloroethane in soil"
  Annotations: oio:hasRelatedSynonym "exposure to dichlorodiphenyltrichloroethane in soil"
  Annotations: oio:hasRelatedSynonym "exposure to dichlorodiphenyltrichloroethane in regolith"
  Annotations: oio:hasRelatedSynonym "exposure to dichlorodiphenyltrichloroethane in soil"
+ Annotations: oio:hasRelatedSynonym "exposure to dichlorodiphenyltrichloroethane in regolith"
  Annotations: oio:hasRelatedSynonym "exposure to p,p'-DDT in soil"
  Annotations: oio:hasRelatedSynonym "exposure to p,p'-DDT in soil"
  Annotations: oio:hasRelatedSynonym "exposure to p,p'-DDT in regolith"
  Annotations: oio:hasRelatedSynonym "exposure to p,p'-DDT in soil"
+ Annotations: oio:hasRelatedSynonym "exposure to p,p'-DDT in regolith"
  Annotations: oio:hasRelatedSynonym "exposure to p,p'-dichlorodiphenyltrichloroethane in soil"
  Annotations: oio:hasRelatedSynonym "exposure to p,p'-dichlorodiphenyltrichloroethane in soil"
  Annotations: oio:hasRelatedSynonym "exposure to p,p'-dichlorodiphenyltrichloroethane in regolith"
  Annotations: oio:hasRelatedSynonym "exposure to p,p'-dichlorodiphenyltrichloroethane in soil"
+ Annotations: oio:hasRelatedSynonym "exposure to p,p'-dichlorodiphenyltrichloroethane in regolith"
 
-Class: ENVO:00002006 ## water
 Class: CHEBI:16130 ## DDT
-## {"location": "ENVO:00002006", "stressor": "CHEBI:16130"}
+Class: ENVO:00002006 ## water
+## {"stressor": "CHEBI:16130", "location": "ENVO:00002006"}
 Class: ECTO:0000970
  Annotations: rdfs:label "exposure to DDT in water"
  Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to DDT in water."
  Annotations: oio:hasExactSynonym "DDT exposure in water"
- EquivalentTo: ExO:0000002 and RO:0002233 some (CHEBI:16130 and BFO_0000050 some ENVO:00002006) ## 'exposure event' and 'has input' some (DDT and 'part of' some water)
+ EquivalentTo: ExO:0000002 and RO:0002309 some (CHEBI:16130 and BFO_0000050 some ENVO:00002006) ## 'exposure event' and 'has exposure stimulus' some (DDT and 'part of' some water)
   ## Auto-syns
 
  Annotations: oio:hasRelatedSynonym "exposure to dichlorodiphenyltrichloroethane in water"

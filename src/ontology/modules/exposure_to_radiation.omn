@@ -2,27 +2,27 @@ Prefix: : <http://purl.obolibrary.org/obo/>
 Prefix: IAO: <http://purl.obolibrary.org/obo/IAO_>
 Prefix: DOSDP: <http://geneontology.org/foo/>
 Prefix: oio: <http://www.geneontology.org/formats/oboInOwl#>
-Prefix: NPO: <http://purl.obolibrary.org/obo/NPO_>
-Prefix: PR: <http://purl.obolibrary.org/obo/PR_>
-Prefix: RO: <http://purl.obolibrary.org/obo/RO_>
 Prefix: NCIT: <http://purl.obolibrary.org/obo/NCIT_>
-Prefix: ECTO: <http://purl.obolibrary.org/obo/ECTO_>
-Prefix: SO: <http://purl.obolibrary.org/obo/SO_>
-Prefix: ZECO: <http://purl.obolibrary.org/obo/ZECO_>
-Prefix: ENVO: <http://purl.obolibrary.org/obo/ENVO_>
-Prefix: CHEBI: <http://purl.obolibrary.org/obo/CHEBI_>
 Prefix: NBO: <http://purl.obolibrary.org/obo/NBO_>
-Prefix: PATO: <http://purl.obolibrary.org/obo/PATO_>
-Prefix: OBA: <http://purl.obolibrary.org/obo/OBA_>
+Prefix: ENVO: <http://purl.obolibrary.org/obo/ENVO_>
+Prefix: CL: <http://purl.obolibrary.org/obo/CL_>
 Prefix: PO: <http://purl.obolibrary.org/obo/PO_>
+Prefix: ECTO: <http://purl.obolibrary.org/obo/ECTO_>
+Prefix: ZECO: <http://purl.obolibrary.org/obo/ZECO_>
+Prefix: RO: <http://purl.obolibrary.org/obo/RO_>
+Prefix: SO: <http://purl.obolibrary.org/obo/SO_>
+Prefix: NPO: <http://purl.obolibrary.org/obo/NPO_>
+Prefix: CHEBI: <http://purl.obolibrary.org/obo/CHEBI_>
+Prefix: GOCHE: <http://purl.obolibrary.org/obo/GOCHE_>
+Prefix: UBERON: <http://purl.obolibrary.org/obo/UBERON_>
+Prefix: NCBITaxon: <http://purl.obolibrary.org/obo/NCBITaxon_>
 Prefix: BFO: <http://purl.obolibrary.org/obo/BFO_>
 Prefix: ExO: <http://purl.obolibrary.org/obo/ExO_>
-Prefix: UBERON: <http://purl.obolibrary.org/obo/UBERON_>
-Prefix: GOCHE: <http://purl.obolibrary.org/obo/GOCHE_>
 Prefix: GO: <http://purl.obolibrary.org/obo/GO_>
-Prefix: NCBITaxon: <http://purl.obolibrary.org/obo/NCBITaxon_>
-Prefix: CL: <http://purl.obolibrary.org/obo/CL_>
+Prefix: OBA: <http://purl.obolibrary.org/obo/OBA_>
+Prefix: PATO: <http://purl.obolibrary.org/obo/PATO_>
 Prefix: XCO: <http://purl.obolibrary.org/obo/XCO_>
+Prefix: PR: <http://purl.obolibrary.org/obo/PR_>
 
  ## Auto-generated
 
@@ -35,7 +35,7 @@ AnnotationProperty: oio:hasExactSynonym
 AnnotationProperty: oio:hasExactSynonym
 Class: NPO:1731 ## radiation
 Class: ExO:0000002 ## exposure event
-ObjectProperty: RO:0002233 ## has input
+ObjectProperty: RO:0002309 ## has exposure stimulus
 ObjectProperty: BFO_0000050 ## stressor
 ObjectProperty: BFO_0000050 ## part of
 ## Auto-generated classes
@@ -47,7 +47,7 @@ Class: ECTO:0000001
  Annotations: IAO:0000115 "A radiation exposure event involving the interaction of an exposure receptor to radiation."
  Annotations: oio:hasExactSynonym "radiation exposure"
  Annotations: oio:hasExactSynonym "radiation exposure event"
- EquivalentTo: ExO:0000002 and RO:0002233 some NPO:1731 ## 'exposure event' and 'has input' some radiation
+ EquivalentTo: ExO:0000002 and RO:0002309 some NPO:1731 ## 'exposure event' and 'has exposure stimulus' some radiation
 
 Class: NPO:1732 ## electromagnetic radiation
 ## {"stressor": "NPO:1732"}
@@ -56,7 +56,7 @@ Class: ECTO:0000002
  Annotations: IAO:0000115 "A radiation exposure event involving the interaction of an exposure receptor to electromagnetic radiation."
  Annotations: oio:hasExactSynonym "electromagnetic radiation exposure"
  Annotations: oio:hasExactSynonym "electromagnetic radiation exposure event"
- EquivalentTo: ExO:0000002 and RO:0002233 some NPO:1732 ## 'exposure event' and 'has input' some electromagnetic radiation
+ EquivalentTo: ExO:0000002 and RO:0002309 some NPO:1732 ## 'exposure event' and 'has exposure stimulus' some electromagnetic radiation
 
 Class: NPO:1743 ## sound radiation
 ## {"stressor": "NPO:1743"}
@@ -65,7 +65,7 @@ Class: ECTO:0000003
  Annotations: IAO:0000115 "A radiation exposure event involving the interaction of an exposure receptor to sound radiation."
  Annotations: oio:hasExactSynonym "sound radiation exposure"
  Annotations: oio:hasExactSynonym "sound radiation exposure event"
- EquivalentTo: ExO:0000002 and RO:0002233 some NPO:1743 ## 'exposure event' and 'has input' some sound radiation
+ EquivalentTo: ExO:0000002 and RO:0002309 some NPO:1743 ## 'exposure event' and 'has exposure stimulus' some sound radiation
 
 Class: NPO:1733 ## gamma radiation
 ## {"stressor": "NPO:1733"}
@@ -74,7 +74,7 @@ Class: ECTO:0000004
  Annotations: IAO:0000115 "A radiation exposure event involving the interaction of an exposure receptor to gamma radiation."
  Annotations: oio:hasExactSynonym "gamma radiation exposure"
  Annotations: oio:hasExactSynonym "gamma radiation exposure event"
- EquivalentTo: ExO:0000002 and RO:0002233 some NPO:1733 ## 'exposure event' and 'has input' some gamma radiation
+ EquivalentTo: ExO:0000002 and RO:0002309 some NPO:1733 ## 'exposure event' and 'has exposure stimulus' some gamma radiation
 
 Class: NPO:1734 ## x-ray radiation
 ## {"stressor": "NPO:1734"}
@@ -83,7 +83,7 @@ Class: ECTO:0000005
  Annotations: IAO:0000115 "A radiation exposure event involving the interaction of an exposure receptor to x-ray radiation."
  Annotations: oio:hasExactSynonym "x-ray radiation exposure"
  Annotations: oio:hasExactSynonym "x-ray radiation exposure event"
- EquivalentTo: ExO:0000002 and RO:0002233 some NPO:1734 ## 'exposure event' and 'has input' some x-ray radiation
+ EquivalentTo: ExO:0000002 and RO:0002309 some NPO:1734 ## 'exposure event' and 'has exposure stimulus' some x-ray radiation
 
 Class: NPO:1735 ## ultraviolet radiation
 ## {"stressor": "NPO:1735"}
@@ -92,7 +92,7 @@ Class: ECTO:0000006
  Annotations: IAO:0000115 "A radiation exposure event involving the interaction of an exposure receptor to ultraviolet radiation."
  Annotations: oio:hasExactSynonym "ultraviolet radiation exposure"
  Annotations: oio:hasExactSynonym "ultraviolet radiation exposure event"
- EquivalentTo: ExO:0000002 and RO:0002233 some NPO:1735 ## 'exposure event' and 'has input' some ultraviolet radiation
+ EquivalentTo: ExO:0000002 and RO:0002309 some NPO:1735 ## 'exposure event' and 'has exposure stimulus' some ultraviolet radiation
 
 Class: NPO:1736 ## visible light radiation
 ## {"stressor": "NPO:1736"}
@@ -101,7 +101,7 @@ Class: ECTO:0000007
  Annotations: IAO:0000115 "A radiation exposure event involving the interaction of an exposure receptor to visible light radiation."
  Annotations: oio:hasExactSynonym "visible light radiation exposure"
  Annotations: oio:hasExactSynonym "visible light radiation exposure event"
- EquivalentTo: ExO:0000002 and RO:0002233 some NPO:1736 ## 'exposure event' and 'has input' some visible light radiation
+ EquivalentTo: ExO:0000002 and RO:0002309 some NPO:1736 ## 'exposure event' and 'has exposure stimulus' some visible light radiation
 
 Class: NPO:1737 ## infrared radiation
 ## {"stressor": "NPO:1737"}
@@ -110,7 +110,7 @@ Class: ECTO:0000008
  Annotations: IAO:0000115 "A radiation exposure event involving the interaction of an exposure receptor to infrared radiation."
  Annotations: oio:hasExactSynonym "infrared radiation exposure"
  Annotations: oio:hasExactSynonym "infrared radiation exposure event"
- EquivalentTo: ExO:0000002 and RO:0002233 some NPO:1737 ## 'exposure event' and 'has input' some infrared radiation
+ EquivalentTo: ExO:0000002 and RO:0002309 some NPO:1737 ## 'exposure event' and 'has exposure stimulus' some infrared radiation
 
 Class: NPO:1738 ## far-infrared radiation
 ## {"stressor": "NPO:1738"}
@@ -119,7 +119,7 @@ Class: ECTO:0000009
  Annotations: IAO:0000115 "A radiation exposure event involving the interaction of an exposure receptor to far-infrared radiation."
  Annotations: oio:hasExactSynonym "far-infrared radiation exposure"
  Annotations: oio:hasExactSynonym "far-infrared radiation exposure event"
- EquivalentTo: ExO:0000002 and RO:0002233 some NPO:1738 ## 'exposure event' and 'has input' some far-infrared radiation
+ EquivalentTo: ExO:0000002 and RO:0002309 some NPO:1738 ## 'exposure event' and 'has exposure stimulus' some far-infrared radiation
 
 Class: NPO:1739 ## mid-infrared radiation
 ## {"stressor": "NPO:1739"}
@@ -128,7 +128,7 @@ Class: ECTO:0000010
  Annotations: IAO:0000115 "A radiation exposure event involving the interaction of an exposure receptor to mid-infrared radiation."
  Annotations: oio:hasExactSynonym "mid-infrared radiation exposure"
  Annotations: oio:hasExactSynonym "mid-infrared radiation exposure event"
- EquivalentTo: ExO:0000002 and RO:0002233 some NPO:1739 ## 'exposure event' and 'has input' some mid-infrared radiation
+ EquivalentTo: ExO:0000002 and RO:0002309 some NPO:1739 ## 'exposure event' and 'has exposure stimulus' some mid-infrared radiation
 
 Class: NPO:1740 ## near-infrared radiation
 ## {"stressor": "NPO:1740"}
@@ -137,7 +137,7 @@ Class: ECTO:0000011
  Annotations: IAO:0000115 "A radiation exposure event involving the interaction of an exposure receptor to near-infrared radiation."
  Annotations: oio:hasExactSynonym "near-infrared radiation exposure"
  Annotations: oio:hasExactSynonym "near-infrared radiation exposure event"
- EquivalentTo: ExO:0000002 and RO:0002233 some NPO:1740 ## 'exposure event' and 'has input' some near-infrared radiation
+ EquivalentTo: ExO:0000002 and RO:0002309 some NPO:1740 ## 'exposure event' and 'has exposure stimulus' some near-infrared radiation
 
 Class: NPO:1741 ## microwave radiation
 ## {"stressor": "NPO:1741"}
@@ -146,7 +146,7 @@ Class: ECTO:0000012
  Annotations: IAO:0000115 "A radiation exposure event involving the interaction of an exposure receptor to microwave radiation."
  Annotations: oio:hasExactSynonym "microwave radiation exposure"
  Annotations: oio:hasExactSynonym "microwave radiation exposure event"
- EquivalentTo: ExO:0000002 and RO:0002233 some NPO:1741 ## 'exposure event' and 'has input' some microwave radiation
+ EquivalentTo: ExO:0000002 and RO:0002309 some NPO:1741 ## 'exposure event' and 'has exposure stimulus' some microwave radiation
 
 Class: NPO:1742 ## radiowave radiation
 ## {"stressor": "NPO:1742"}
@@ -155,7 +155,7 @@ Class: ECTO:0000013
  Annotations: IAO:0000115 "A radiation exposure event involving the interaction of an exposure receptor to radiowave radiation."
  Annotations: oio:hasExactSynonym "radiowave radiation exposure"
  Annotations: oio:hasExactSynonym "radiowave radiation exposure event"
- EquivalentTo: ExO:0000002 and RO:0002233 some NPO:1742 ## 'exposure event' and 'has input' some radiowave radiation
+ EquivalentTo: ExO:0000002 and RO:0002309 some NPO:1742 ## 'exposure event' and 'has exposure stimulus' some radiowave radiation
 
 Class: NPO:1744 ## ultrasound radiation
 ## {"stressor": "NPO:1744"}
@@ -164,4 +164,4 @@ Class: ECTO:0000014
  Annotations: IAO:0000115 "A radiation exposure event involving the interaction of an exposure receptor to ultrasound radiation."
  Annotations: oio:hasExactSynonym "ultrasound radiation exposure"
  Annotations: oio:hasExactSynonym "ultrasound radiation exposure event"
- EquivalentTo: ExO:0000002 and RO:0002233 some NPO:1744 ## 'exposure event' and 'has input' some ultrasound radiation
+ EquivalentTo: ExO:0000002 and RO:0002309 some NPO:1744 ## 'exposure event' and 'has exposure stimulus' some ultrasound radiation

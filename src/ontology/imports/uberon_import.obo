@@ -169,6 +169,15 @@ name: posterior region of body
 is_a: UBERON:0000475 ! organism subdivision
 
 [Term]
+id: UBERON:0000307
+name: blastula
+def: "Organism at the blastula stage - an early stage of embryonic development in animals. It is produced by cleavage of a fertilized ovum and consists of a spherical layer of around 128 cells surrounding a central fluid-filled cavity called the blastocoel. The blastula follows the morula and precedes the gastrula in the developmental sequence." []
+synonym: "blastosphere" RELATED []
+synonym: "blastula embryo" EXACT []
+is_a: UBERON:0000922 ! embryo
+relationship: RO:0002202 UBERON:0007010 ! develops_from cleaving embryo
+
+[Term]
 id: UBERON:0000328
 name: gut wall
 def: "The wall of the digestive tract. This encompasses all parts of the digestive tract with the exception of the lumen (cavity)." []
@@ -179,6 +188,7 @@ synonym: "wall of gut" EXACT []
 is_a: UBERON:0000060 ! anatomical wall
 intersection_of: UBERON:0000060 ! anatomical wall
 intersection_of: BFO:0000050 UBERON:0001555 ! part of digestive tract
+relationship: BFO:0000050 UBERON:0001555 ! part of digestive tract
 
 [Term]
 id: UBERON:0000344
@@ -355,6 +365,7 @@ name: ectoderm
 def: "Primary germ layer that is the outer of the embryo's three germ layers and gives rise to epidermis and neural tissue." []
 synonym: "embryonic ectoderm" EXACT []
 is_a: UBERON:0000923 ! germ layer
+relationship: RO:0002202 UBERON:0006601 ! develops_from presumptive ectoderm
 
 [Term]
 id: UBERON:0000925
@@ -362,6 +373,7 @@ name: endoderm
 def: "Primary germ layer that lies remote from the surface of the embryo and gives rise to internal tissues such as gut." []
 synonym: "entoderm" RELATED []
 is_a: UBERON:0000923 ! germ layer
+relationship: RO:0002202 UBERON:0006595 ! develops_from presumptive endoderm
 
 [Term]
 id: UBERON:0000926
@@ -371,6 +383,7 @@ synonym: "embryonic mesoderm" RELATED []
 synonym: "entire mesoderm" RELATED []
 synonym: "mesodermal mantle" RELATED []
 is_a: UBERON:0000923 ! germ layer
+relationship: RO:0002202 UBERON:0006603 ! develops_from presumptive mesoderm
 
 [Term]
 id: UBERON:0000949
@@ -506,6 +519,7 @@ is_a: UBERON:0000467 ! anatomical system
 disjoint_from: UBERON:0002330 ! exocrine system
 disjoint_from: UBERON:0002416 ! integumental system
 disjoint_from: UBERON:0002423 ! hepatobiliary system
+relationship: RO:0002202 UBERON:0016880 ! develops_from future nervous system
 
 [Term]
 id: UBERON:0001017
@@ -518,6 +532,7 @@ synonym: "systema nervosum centrale" EXACT []
 is_a: UBERON:0004121 ! ectoderm-derived structure
 is_a: UBERON:0011216 ! organ system subdivision
 relationship: BFO:0000050 UBERON:0001016 ! part of nervous system
+relationship: RO:0002202 UBERON:0016879 ! develops_from future central nervous system
 
 [Term]
 id: UBERON:0001021
@@ -561,6 +576,14 @@ def: "An endoderm derived structure that produces precursors of digestive enzyme
 is_a: UBERON:0002075 ! viscus
 
 [Term]
+id: UBERON:0001267
+name: femoral nerve
+def: "The femoral nerve, the largest branch of the lumbar plexus, arises from the ventral divisions of the second, third, and fourth lumbar nerves. It descends through the fibers of the Psoas major, emerging from the muscle at the lower part of its lateral border, and passes down between it and the Iliacus, behind the iliac fascia; it then runs beneath the inguinal ligament, into the thigh, and splits into an anterior and a posterior division. Under the inguinal ligament, it is separated from the femoral artery by a portion of the Psoas major. [WP,unvetted]." []
+synonym: "anterior crural nerve" EXACT []
+synonym: "nervus femoralis" RELATED []
+is_a: UBERON:0003431 ! leg nerve
+
+[Term]
 id: UBERON:0001322
 name: sciatic nerve
 def: "A large nerve that supplies nearly the whole of the skin of the leg, the muscles of the back of the thigh, and those of the leg and foot. It begins in the lower back and runs through the buttock and down the lower limb." []
@@ -584,6 +607,7 @@ synonym: "gut" BROAD []
 synonym: "gut tube" RELATED []
 is_a: UBERON:0000025 ! tube
 relationship: BFO:0000050 UBERON:0001007 ! part of digestive system
+relationship: RO:0002202 UBERON:0007026 ! develops_from presumptive gut
 
 [Term]
 id: UBERON:0001810
@@ -623,6 +647,7 @@ synonym: "embryonic structures" RELATED []
 is_a: UBERON:0005423 ! developing anatomical structure
 intersection_of: UBERON:0005423 ! developing anatomical structure
 intersection_of: BFO:0000050 UBERON:0000922 ! part of embryo
+relationship: BFO:0000050 UBERON:0000922 ! part of embryo
 
 [Term]
 id: UBERON:0002072
@@ -743,6 +768,7 @@ synonym: "reniculate kidney" NARROW []
 is_a: UBERON:0000489 ! cavitated compound organ
 is_a: UBERON:0005172 ! abdomen element
 is_a: UBERON:0015212 ! lateral structure
+relationship: BFO:0000050 UBERON:0000468 ! part of multicellular organism
 relationship: BFO:0000050 UBERON:0011143 ! part of upper urinary tract
 relationship: RO:0002202 UBERON:0003918 ! develops_from kidney mesenchyme
 relationship: RO:0002202 UBERON:0005095 ! develops_from kidney rudiment
@@ -763,6 +789,7 @@ synonym: "tegument" RELATED []
 synonym: "the integument" EXACT []
 synonym: "vertebrate integument" RELATED []
 is_a: UBERON:0011216 ! organ system subdivision
+relationship: BFO:0000050 UBERON:0000468 ! part of multicellular organism
 relationship: BFO:0000050 UBERON:0002416 ! part of integumental system
 
 [Term]
@@ -783,6 +810,7 @@ synonym: "glandula exocrina" EXACT []
 is_a: UBERON:0002530 ! gland
 intersection_of: UBERON:0002530 ! gland
 intersection_of: BFO:0000050 UBERON:0002330 ! part of exocrine system
+relationship: BFO:0000050 UBERON:0002330 ! part of exocrine system
 
 [Term]
 id: UBERON:0002368
@@ -795,6 +823,7 @@ synonym: "glandulae endocrinae" RELATED []
 is_a: UBERON:0002530 ! gland
 intersection_of: UBERON:0002530 ! gland
 intersection_of: BFO:0000050 UBERON:0000949 ! part of endocrine system
+relationship: BFO:0000050 UBERON:0000949 ! part of endocrine system
 
 [Term]
 id: UBERON:0002416
@@ -809,6 +838,7 @@ synonym: "organism surface" RELATED []
 synonym: "surface" RELATED []
 is_a: UBERON:0000467 ! anatomical system
 disjoint_from: UBERON:0002423 ! hepatobiliary system
+relationship: BFO:0000050 UBERON:0000468 ! part of multicellular organism
 
 [Term]
 id: UBERON:0002417
@@ -834,6 +864,7 @@ is_a: UBERON:0004121 ! ectoderm-derived structure
 is_a: UBERON:0006003 ! integumentary adnexa
 intersection_of: UBERON:0002530 ! gland
 intersection_of: BFO:0000050 UBERON:0002097 ! part of skin of body
+relationship: BFO:0000050 UBERON:0002097 ! part of skin of body
 
 [Term]
 id: UBERON:0002423
@@ -851,6 +882,7 @@ name: saphenous nerve
 def: "The largest cutaneous branch of the femoral nerve. [WP,unvetted]." []
 synonym: "nervus saphenus" RELATED []
 is_a: UBERON:0003431 ! leg nerve
+relationship: BFO:0000050 UBERON:0001267 ! part of femoral nerve
 
 [Term]
 id: UBERON:0002529
@@ -865,6 +897,7 @@ synonym: "subdivision of limb" EXACT []
 is_a: UBERON:0010538 ! paired limb/fin segment
 intersection_of: UBERON:0010758 ! subdivision of organism along appendicular axis
 intersection_of: BFO:0000050 UBERON:0002101 ! part of limb
+relationship: BFO:0000050 UBERON:0002101 ! part of limb
 
 [Term]
 id: UBERON:0002530
@@ -990,6 +1023,7 @@ synonym: "foregut gland" EXACT []
 is_a: UBERON:0003408 ! gland of gut
 intersection_of: UBERON:0002530 ! gland
 intersection_of: BFO:0000050 UBERON:0001041 ! part of foregut
+relationship: BFO:0000050 UBERON:0001041 ! part of foregut
 
 [Term]
 id: UBERON:0003297
@@ -1001,6 +1035,7 @@ synonym: "integumentary gland" EXACT []
 is_a: UBERON:0002530 ! gland
 intersection_of: UBERON:0002530 ! gland
 intersection_of: BFO:0000050 UBERON:0002416 ! part of integumental system
+relationship: BFO:0000050 UBERON:0002416 ! part of integumental system
 
 [Term]
 id: UBERON:0003315
@@ -1018,6 +1053,7 @@ synonym: "ovary mesenchyme" EXACT []
 is_a: UBERON:0003855 ! gonad mesenchyme
 intersection_of: UBERON:0003104 ! mesenchyme
 intersection_of: BFO:0000050 UBERON:0000992 ! part of female gonad
+relationship: BFO:0000050 UBERON:0000992 ! part of female gonad
 
 [Term]
 id: UBERON:0003350
@@ -1028,6 +1064,7 @@ synonym: "lamina epithelialis mucosae" RELATED []
 is_a: UBERON:0000483 ! epithelium
 intersection_of: UBERON:0000483 ! epithelium
 intersection_of: BFO:0000050 UBERON:0000344 ! part of mucosa
+relationship: BFO:0000050 UBERON:0000344 ! part of mucosa
 
 [Term]
 id: UBERON:0003408
@@ -1042,6 +1079,7 @@ is_a: UBERON:0002530 ! gland
 is_a: UBERON:0013765 ! digestive system element
 intersection_of: UBERON:0002530 ! gland
 intersection_of: BFO:0000050 UBERON:0001555 ! part of digestive tract
+relationship: BFO:0000050 UBERON:0001555 ! part of digestive tract
 
 [Term]
 id: UBERON:0003412
@@ -1055,6 +1093,7 @@ synonym: "pelvic fin bud mesenchyme" NARROW []
 is_a: UBERON:0010329 ! paired limb/fin bud mesenchyme
 intersection_of: UBERON:0003104 ! mesenchyme
 intersection_of: BFO:0000050 UBERON:0005420 ! part of pelvic appendage bud
+relationship: BFO:0000050 UBERON:0005420 ! part of pelvic appendage bud
 relationship: RO:0002202 UBERON:0005730 ! develops_from pelvic appendage field
 
 [Term]
@@ -1065,6 +1104,7 @@ synonym: "nerve of abdomen" EXACT []
 is_a: UBERON:0003825 ! nerve of abdominal segment
 intersection_of: UBERON:0001021 ! nerve
 intersection_of: BFO:0000050 UBERON:0000916 ! part of abdomen
+relationship: BFO:0000050 UBERON:0000916 ! part of abdomen
 
 [Term]
 id: UBERON:0003431
@@ -1074,6 +1114,7 @@ synonym: "nerve of leg" EXACT []
 is_a: UBERON:0003442 ! hindlimb nerve
 intersection_of: UBERON:0001021 ! nerve
 intersection_of: BFO:0000050 UBERON:0000978 ! part of leg
+relationship: BFO:0000050 UBERON:0000978 ! part of leg
 
 [Term]
 id: UBERON:0003439
@@ -1086,6 +1127,7 @@ synonym: "trunk nerve" RELATED []
 is_a: UBERON:0001021 ! nerve
 intersection_of: UBERON:0001021 ! nerve
 intersection_of: BFO:0000050 UBERON:0002100 ! part of trunk
+relationship: BFO:0000050 UBERON:0002100 ! part of trunk
 
 [Term]
 id: UBERON:0003440
@@ -1095,6 +1137,7 @@ synonym: "nerve of limb" EXACT []
 is_a: UBERON:0001021 ! nerve
 intersection_of: UBERON:0001021 ! nerve
 intersection_of: BFO:0000050 UBERON:0002101 ! part of limb
+relationship: BFO:0000050 UBERON:0002101 ! part of limb
 
 [Term]
 id: UBERON:0003442
@@ -1108,6 +1151,7 @@ synonym: "nerve of lower extremity" EXACT []
 is_a: UBERON:0003440 ! limb nerve
 intersection_of: UBERON:0001021 ! nerve
 intersection_of: BFO:0000050 UBERON:0002103 ! part of hindlimb
+relationship: BFO:0000050 UBERON:0002103 ! part of hindlimb
 
 [Term]
 id: UBERON:0003697
@@ -1122,6 +1166,7 @@ synonym: "wall of abdomen proper" EXACT []
 is_a: UBERON:0000060 ! anatomical wall
 intersection_of: UBERON:0000060 ! anatomical wall
 intersection_of: BFO:0000050 UBERON:0000916 ! part of abdomen
+relationship: BFO:0000050 UBERON:0000916 ! part of abdomen
 
 [Term]
 id: UBERON:0003714
@@ -1141,6 +1186,7 @@ synonym: "abdominal segment nerve" EXACT []
 is_a: UBERON:0003439 ! nerve of trunk region
 intersection_of: UBERON:0001021 ! nerve
 intersection_of: BFO:0000050 UBERON:0002417 ! part of abdominal segment of trunk
+relationship: BFO:0000050 UBERON:0002417 ! part of abdominal segment of trunk
 
 [Term]
 id: UBERON:0003855
@@ -1153,6 +1199,7 @@ is_a: UBERON:0003104 ! mesenchyme
 is_a: UBERON:0005156 ! reproductive structure
 intersection_of: UBERON:0003104 ! mesenchyme
 intersection_of: BFO:0000050 UBERON:0000991 ! part of gonad
+relationship: BFO:0000050 UBERON:0000991 ! part of gonad
 
 [Term]
 id: UBERON:0003860
@@ -1168,6 +1215,7 @@ synonym: "mesenchyme of lower extremity" EXACT []
 is_a: UBERON:0009749 ! limb mesenchyme
 intersection_of: UBERON:0003104 ! mesenchyme
 intersection_of: BFO:0000050 UBERON:0002103 ! part of hindlimb
+relationship: BFO:0000050 UBERON:0002103 ! part of hindlimb
 
 [Term]
 id: UBERON:0003894
@@ -1217,6 +1265,7 @@ synonym: "gut epithelium" EXACT []
 is_a: UBERON:0000483 ! epithelium
 intersection_of: UBERON:0000483 ! epithelium
 intersection_of: BFO:0000050 UBERON:0001555 ! part of digestive tract
+relationship: BFO:0000050 UBERON:0001555 ! part of digestive tract
 
 [Term]
 id: UBERON:0003937
@@ -1250,6 +1299,7 @@ def: "An anatomical structure that develops (entirely or partially) from the end
 is_a: UBERON:0000061 ! anatomical structure
 intersection_of: UBERON:0000061 ! anatomical structure
 intersection_of: RO:0002202 UBERON:0000925 ! develops_from endoderm
+relationship: RO:0002202 UBERON:0000925 ! develops_from endoderm
 
 [Term]
 id: UBERON:0004120
@@ -1259,6 +1309,7 @@ synonym: "mesodermal derivative" EXACT []
 is_a: UBERON:0000061 ! anatomical structure
 intersection_of: UBERON:0000061 ! anatomical structure
 intersection_of: RO:0002202 UBERON:0000926 ! develops_from mesoderm
+relationship: RO:0002202 UBERON:0000926 ! develops_from mesoderm
 
 [Term]
 id: UBERON:0004121
@@ -1268,6 +1319,7 @@ synonym: "ectodermal deriviative" EXACT []
 is_a: UBERON:0000061 ! anatomical structure
 intersection_of: UBERON:0000061 ! anatomical structure
 intersection_of: RO:0002202 UBERON:0000924 ! develops_from ectoderm
+relationship: RO:0002202 UBERON:0000924 ! develops_from ectoderm
 
 [Term]
 id: UBERON:0004161
@@ -1322,17 +1374,19 @@ id: UBERON:0004538
 name: left kidney
 def: "A kidney that is part of a left side of organism [Automatically generated definition]." []
 is_a: UBERON:0002113 ! kidney
+relationship: BFO:0000050 UBERON:0000468 ! part of multicellular organism
 
 [Term]
 id: UBERON:0004539
 name: right kidney
 def: "A kidney that is part of a right side of organism [Automatically generated definition]." []
 is_a: UBERON:0002113 ! kidney
+relationship: BFO:0000050 UBERON:0000468 ! part of multicellular organism
 
 [Term]
 id: UBERON:0004708
 name: paired limb/fin
-def: "An appendage that is part of a appendage girdle complex." []
+def: "An appendage that is part of an appendage girdle complex." []
 synonym: "girdle-associated appendage" EXACT []
 synonym: "jointed paired lateral appendage" NARROW []
 synonym: "limb or fin" EXACT []
@@ -1359,6 +1413,7 @@ synonym: "posterior paired appendage" EXACT []
 is_a: UBERON:0004708 ! paired limb/fin
 intersection_of: UBERON:0004708 ! paired limb/fin
 intersection_of: BFO:0000050 UBERON:0010709 ! part of pelvic complex
+relationship: BFO:0000050 UBERON:0010709 ! part of pelvic complex
 relationship: RO:0002202 UBERON:0005420 ! develops_from pelvic appendage bud
 
 [Term]
@@ -1372,6 +1427,7 @@ synonym: "renal epithelium" RELATED []
 is_a: UBERON:0000483 ! epithelium
 intersection_of: UBERON:0000483 ! epithelium
 intersection_of: BFO:0000050 UBERON:0002113 ! part of kidney
+relationship: BFO:0000050 UBERON:0002113 ! part of kidney
 
 [Term]
 id: UBERON:0004874
@@ -1403,6 +1459,7 @@ is_a: UBERON:0000483 ! epithelium
 is_a: UBERON:0005156 ! reproductive structure
 intersection_of: UBERON:0000483 ! epithelium
 intersection_of: BFO:0000050 UBERON:0000991 ! part of gonad
+relationship: BFO:0000050 UBERON:0000991 ! part of gonad
 
 [Term]
 id: UBERON:0004911
@@ -1414,6 +1471,7 @@ synonym: "ovary epithelium" EXACT []
 is_a: UBERON:0004909 ! epithelium of gonad
 intersection_of: UBERON:0000483 ! epithelium
 intersection_of: BFO:0000050 UBERON:0000992 ! part of female gonad
+relationship: BFO:0000050 UBERON:0000992 ! part of female gonad
 
 [Term]
 id: UBERON:0004921
@@ -1464,6 +1522,7 @@ synonym: "reproductive system structure" EXACT []
 is_a: UBERON:0010000 ! multicellular anatomical structure
 intersection_of: UBERON:0010000 ! multicellular anatomical structure
 intersection_of: BFO:0000050 UBERON:0000990 ! part of reproductive system
+relationship: BFO:0000050 UBERON:0000990 ! part of reproductive system
 
 [Term]
 id: UBERON:0005162
@@ -1482,6 +1541,7 @@ synonym: "abdomen organ" EXACT []
 is_a: UBERON:0005173 ! abdominal segment element
 intersection_of: UBERON:0000062 ! organ
 intersection_of: BFO:0000050 UBERON:0000916 ! part of abdomen
+relationship: BFO:0000050 UBERON:0000916 ! part of abdomen
 
 [Term]
 id: UBERON:0005173
@@ -1501,6 +1561,7 @@ synonym: "trunk organ" EXACT []
 is_a: UBERON:0000062 ! organ
 intersection_of: UBERON:0000062 ! organ
 intersection_of: BFO:0000050 UBERON:0002100 ! part of trunk
+relationship: BFO:0000050 UBERON:0002100 ! part of trunk
 
 [Term]
 id: UBERON:0005256
@@ -1512,6 +1573,7 @@ is_a: UBERON:0005291 ! embryonic tissue
 intersection_of: UBERON:0003104 ! mesenchyme
 intersection_of: BFO:0000050 UBERON:0000922 ! part of embryo
 intersection_of: BFO:0000050 UBERON:0002100 ! part of trunk
+relationship: BFO:0000050 UBERON:0002100 ! part of trunk
 relationship: BFO:0000050 UBERON:0009142 ! part of entire embryonic mesenchyme
 
 [Term]
@@ -1553,6 +1615,7 @@ synonym: "hindlimb/pelvic fin bud" EXACT []
 synonym: "pelvic fin bud" RELATED []
 synonym: "pelvic fin buds" RELATED []
 is_a: UBERON:0004357 ! paired limb/fin bud
+relationship: BFO:0000050 UBERON:0000154 ! part of posterior region of body
 
 [Term]
 id: UBERON:0005423
@@ -1638,6 +1701,14 @@ def: "A tube that is part of a excretory system." []
 is_a: UBERON:0000025 ! tube
 intersection_of: UBERON:0000025 ! tube
 intersection_of: BFO:0000050 UBERON:0001008 ! part of renal system
+relationship: BFO:0000050 UBERON:0001008 ! part of renal system
+
+[Term]
+id: UBERON:0006595
+name: presumptive endoderm
+def: "Presumptive structure of the blastula that will develop into endoderm." []
+is_a: UBERON:0006598 ! presumptive structure
+relationship: BFO:0000050 UBERON:0000307 ! part of blastula
 
 [Term]
 id: UBERON:0006598
@@ -1648,6 +1719,21 @@ synonym: "presumptive structures" EXACT []
 is_a: UBERON:0002050 ! embryonic structure
 
 [Term]
+id: UBERON:0006601
+name: presumptive ectoderm
+def: "Presumptive structure of the blastula that will develop into ectoderm." []
+synonym: "presumptive epidermis" RELATED []
+is_a: UBERON:0006598 ! presumptive structure
+relationship: BFO:0000050 UBERON:0000307 ! part of blastula
+
+[Term]
+id: UBERON:0006603
+name: presumptive mesoderm
+def: "Presumptive structure of the blastula that will develop into mesoderm." []
+is_a: UBERON:0006598 ! presumptive structure
+relationship: BFO:0000050 UBERON:0000307 ! part of blastula
+
+[Term]
 id: UBERON:0006925
 name: digestive gland
 def: "A gland, such as the liver or pancreas, that secretes into the alimentary canal substances necessary for digestion." []
@@ -1656,6 +1742,24 @@ is_a: UBERON:0002368 ! endocrine gland
 is_a: UBERON:0013765 ! digestive system element
 intersection_of: UBERON:0002368 ! endocrine gland
 intersection_of: BFO:0000050 UBERON:0001007 ! part of digestive system
+
+[Term]
+id: UBERON:0007010
+name: cleaving embryo
+def: "Organism at the cleavage stage." []
+is_a: UBERON:0000922 ! embryo
+
+[Term]
+id: UBERON:0007026
+name: presumptive gut
+synonym: "embryonic digestive tube" RELATED []
+synonym: "future digestive tract" EXACT []
+synonym: "future digestive tube" EXACT []
+synonym: "future gut" EXACT []
+synonym: "primitive gut" EXACT []
+synonym: "primordial digestive tube" RELATED []
+synonym: "primordial gut" RELATED []
+is_a: UBERON:0006598 ! presumptive structure
 
 [Term]
 id: UBERON:0007499
@@ -1709,6 +1813,7 @@ synonym: "subdivision of free lower limb" EXACT []
 is_a: UBERON:0002529 ! limb segment
 intersection_of: UBERON:0002529 ! limb segment
 intersection_of: BFO:0000050 UBERON:0002103 ! part of hindlimb
+relationship: BFO:0000050 UBERON:0002103 ! part of hindlimb
 
 [Term]
 id: UBERON:0008835
@@ -1763,6 +1868,7 @@ def: "Mesenchyme that is part of a foregut-midgut junction." []
 is_a: UBERON:0003104 ! mesenchyme
 intersection_of: UBERON:0003104 ! mesenchyme
 intersection_of: BFO:0000050 UBERON:0006235 ! part of foregut-midgut junction
+relationship: BFO:0000050 UBERON:0006235 ! part of foregut-midgut junction
 
 [Term]
 id: UBERON:0009497
@@ -1774,6 +1880,7 @@ is_a: UBERON:0005911 ! endo-epithelium
 intersection_of: UBERON:0000483 ! epithelium
 intersection_of: BFO:0000050 UBERON:0006235 ! part of foregut-midgut junction
 relationship: BFO:0000050 UBERON:0003929 ! part of digestive tract epithelium
+relationship: BFO:0000050 UBERON:0006235 ! part of foregut-midgut junction
 relationship: RO:0002202 UBERON:0009550 ! develops_from endoderm of foregut-midgut junction
 
 [Term]
@@ -1783,6 +1890,7 @@ def: "An endoderm that is part of a foregut-midgut junction." []
 is_a: UBERON:0000925 ! endoderm
 intersection_of: UBERON:0000925 ! endoderm
 intersection_of: BFO:0000050 UBERON:0006235 ! part of foregut-midgut junction
+relationship: BFO:0000050 UBERON:0006235 ! part of foregut-midgut junction
 
 [Term]
 id: UBERON:0009569
@@ -1800,6 +1908,7 @@ synonym: "limb mesoderm" RELATED []
 is_a: UBERON:0003104 ! mesenchyme
 intersection_of: UBERON:0003104 ! mesenchyme
 intersection_of: BFO:0000050 UBERON:0002101 ! part of limb
+relationship: BFO:0000050 UBERON:0002101 ! part of limb
 
 [Term]
 id: UBERON:0009752
@@ -1808,6 +1917,7 @@ def: "The embryonic connective tissue made up of loosely aggregated mesenchymal 
 is_a: UBERON:0003104 ! mesenchyme
 intersection_of: UBERON:0003104 ! mesenchyme
 intersection_of: BFO:0000050 UBERON:0001264 ! part of pancreas
+relationship: BFO:0000050 UBERON:0001264 ! part of pancreas
 
 [Term]
 id: UBERON:0009854
@@ -1841,6 +1951,7 @@ def: "any of the organized aggregations of cells that function as secretory or e
 is_a: UBERON:0002368 ! endocrine gland
 intersection_of: UBERON:0002368 ! endocrine gland
 intersection_of: BFO:0000050 UBERON:0001016 ! part of nervous system
+relationship: BFO:0000050 UBERON:0001016 ! part of nervous system
 
 [Term]
 id: UBERON:0010316
@@ -1857,6 +1968,7 @@ def: "Mesenchyme that is part of a limb bud." []
 is_a: UBERON:0010329 ! paired limb/fin bud mesenchyme
 intersection_of: UBERON:0003104 ! mesenchyme
 intersection_of: BFO:0000050 UBERON:0004347 ! part of limb bud
+relationship: BFO:0000050 UBERON:0004347 ! part of limb bud
 
 [Term]
 id: UBERON:0010329
@@ -1865,6 +1977,7 @@ def: "Mesenchyme that is part of a limb/fin bud." []
 is_a: UBERON:0010377 ! mesenchyme from somatopleure
 intersection_of: UBERON:0003104 ! mesenchyme
 intersection_of: BFO:0000050 UBERON:0004357 ! part of paired limb/fin bud
+relationship: BFO:0000050 UBERON:0004357 ! part of paired limb/fin bud
 relationship: RO:0002202 UBERON:0010377 ! develops_from mesenchyme from somatopleure
 
 [Term]
@@ -1888,6 +2001,7 @@ intersection_of: UBERON:0003104 ! mesenchyme
 intersection_of: BFO:0000050 UBERON:0000922 ! part of embryo
 intersection_of: RO:0002202 UBERON:0004874 ! develops_from somatopleure
 relationship: BFO:0000050 UBERON:0009142 ! part of entire embryonic mesenchyme
+relationship: RO:0002202 UBERON:0004874 ! develops_from somatopleure
 
 [Term]
 id: UBERON:0010538
@@ -1897,6 +2011,7 @@ synonym: "limb/fin segment" EXACT []
 is_a: UBERON:0010758 ! subdivision of organism along appendicular axis
 intersection_of: UBERON:0010758 ! subdivision of organism along appendicular axis
 intersection_of: BFO:0000050 UBERON:0004708 ! part of paired limb/fin
+relationship: BFO:0000050 UBERON:0004708 ! part of paired limb/fin
 
 [Term]
 id: UBERON:0010707
@@ -1909,6 +2024,7 @@ synonym: "girdle plus limb or fin" EXACT []
 synonym: "limb" RELATED []
 is_a: UBERON:0000475 ! organism subdivision
 is_a: UBERON:0015212 ! lateral structure
+relationship: BFO:0000050 UBERON:0000468 ! part of multicellular organism
 
 [Term]
 id: UBERON:0010709
@@ -1947,6 +2063,7 @@ synonym: "neuraxis layer" EXACT []
 is_a: UBERON:0005162 ! multi cell part structure
 intersection_of: UBERON:0005162 ! multi cell part structure
 intersection_of: BFO:0000050 UBERON:0001017 ! part of central nervous system
+relationship: BFO:0000050 UBERON:0001017 ! part of central nervous system
 
 [Term]
 id: UBERON:0011216
@@ -2007,6 +2124,7 @@ synonym: "gland of foregut-midgut junction" EXACT []
 is_a: UBERON:0003408 ! gland of gut
 intersection_of: UBERON:0002530 ! gland
 intersection_of: BFO:0000050 UBERON:0006235 ! part of foregut-midgut junction
+relationship: BFO:0000050 UBERON:0006235 ! part of foregut-midgut junction
 
 [Term]
 id: UBERON:0013522
@@ -2038,6 +2156,7 @@ synonym: "skin layer" NARROW []
 is_a: UBERON:0004923 ! organ component layer
 intersection_of: UBERON:0004923 ! organ component layer
 intersection_of: BFO:0000050 UBERON:0002416 ! part of integumental system
+relationship: BFO:0000050 UBERON:0002416 ! part of integumental system
 
 [Term]
 id: UBERON:0013765
@@ -2048,12 +2167,14 @@ synonym: "digestive system organ" EXACT []
 is_a: UBERON:0000062 ! organ
 intersection_of: UBERON:0000062 ! organ
 intersection_of: BFO:0000050 UBERON:0001007 ! part of digestive system
+relationship: BFO:0000050 UBERON:0001007 ! part of digestive system
 
 [Term]
 id: UBERON:0015212
 name: lateral structure
 def: "Any structure that is placed on one side of the left-right axis of a bilaterian." []
 is_a: UBERON:0000061 ! anatomical structure
+relationship: BFO:0000050 UBERON:0000465 ! part of material anatomical entity
 
 [Term]
 id: UBERON:0015833
@@ -2062,6 +2183,24 @@ def: "A epithelium that is part of a foregut." []
 is_a: UBERON:0003929 ! digestive tract epithelium
 intersection_of: UBERON:0000483 ! epithelium
 intersection_of: BFO:0000050 UBERON:0001041 ! part of foregut
+relationship: BFO:0000050 UBERON:0001041 ! part of foregut
+
+[Term]
+id: UBERON:0016879
+name: future central nervous system
+def: "Primordium that develops into the central nervous system" []
+synonym: "future CNS" EXACT []
+synonym: "presumptive central nervous system" EXACT []
+is_a: UBERON:0006598 ! presumptive structure
+relationship: BFO:0000050 UBERON:0016880 ! part of future nervous system
+relationship: RO:0002202 UBERON:0000924 ! develops_from ectoderm
+
+[Term]
+id: UBERON:0016880
+name: future nervous system
+def: "Primordium that develops into the nervous system" []
+synonym: "presumptive nervous system" EXACT []
+is_a: UBERON:0006598 ! presumptive structure
 
 [Term]
 id: UBERON:0017672
@@ -2082,6 +2221,7 @@ def: "Any portion of submucosa that lines the digestive tract." []
 is_a: UBERON:0000009 ! submucosa
 intersection_of: UBERON:0000009 ! submucosa
 intersection_of: BFO:0000050 UBERON:0001555 ! part of digestive tract
+relationship: BFO:0000050 UBERON:0001555 ! part of digestive tract
 
 [Term]
 id: UBERON:0019042
@@ -2110,6 +2250,7 @@ def: "Structures of the dermis, epidermis, glands and pigment cells recognizable
 is_a: UBERON:0003102 ! surface structure
 intersection_of: UBERON:0003102 ! surface structure
 intersection_of: BFO:0000050 UBERON:0002199 ! part of integument
+relationship: BFO:0000050 UBERON:0002199 ! part of integument
 
 [Term]
 id: UBERON:3000977
@@ -2118,6 +2259,7 @@ def: "Dermal, epidermal, glandular and pigment structures of the body integument
 is_a: UBERON:3000961 ! external integument structure
 intersection_of: UBERON:3000961 ! external integument structure
 intersection_of: BFO:0000050 UBERON:0002100 ! part of trunk
+relationship: BFO:0000050 UBERON:0002100 ! part of trunk
 
 [Term]
 id: UBERON:3000981
@@ -2126,6 +2268,7 @@ def: "Dermal, epidermal, glandular and pigment structures of the limb integument
 is_a: UBERON:3000961 ! external integument structure
 intersection_of: UBERON:3000961 ! external integument structure
 intersection_of: BFO:0000050 UBERON:0002101 ! part of limb
+relationship: BFO:0000050 UBERON:0002101 ! part of limb
 
 [Typedef]
 id: BFO:0000050
