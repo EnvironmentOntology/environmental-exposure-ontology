@@ -118,6 +118,11 @@ new-inf-%.tsv: exposure-%.obo
 missing-inf-%.tsv: exposure-%.obo
 	owltools  exposure-ecto.obo  axioms.obo exposure-$*.obo  --spike-and-reason > $(RPT)
 
+ONTDIR=../ontology/
+CORE=$(ONTDIR)/ecto-core.owl
+munged-%.owl: exposure-%.obo
+	owltools --catalog-xml $(ONTDIR)/catalog-v001.xml  $(CORE)  axioms.obo exposure-$*.obo --merge-support-ontologies --merge-imports-closure -o $@
+
 relgaps.tsv: aggregated-exposure.obo
 	blip-findall -i $< -u ontol_gapfiller -goal ix relgap/7 -label -no_pred > $@.tmp && mv $@.tmp $@
 
