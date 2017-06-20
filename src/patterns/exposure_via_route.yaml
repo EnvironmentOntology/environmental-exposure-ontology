@@ -1,14 +1,14 @@
-pattern_name: exo/patterns/exposure_to_chemical
+pattern_name: exo/patterns/exposure_via_route
 classes:
   exposure event: ExO:0000002
   chemical entity: CHEBI:24431
   route: ExO:0000055
 
 relations:
-  stressor: BFO_0000050
-  part of: BFO_0000050
+  stressor: BFO:0000050
+  part of: BFO:0000050
   has exposure stimulus: RO:0002309
-    
+  has exposure route: RO:0002242
 vars: 
   stressor: "'chemical entity'"
   route: "'Thing entity'"
@@ -33,7 +33,7 @@ def:
     - route
     
 equivalentTo: 
-  text: "'exposure event' and 'has exposure stimulus' some %s and 'part of' some %s"
+  text: "'exposure event' and 'has exposure stimulus' some %s and 'has exposure route' some %s"
   vars:
     - stressor
     - route
