@@ -48,7 +48,7 @@ ecto.json: ecto.owl
 	owltools $(USECAT)  $<  -o -f json  $@.tmp && mv $@.tmp $@
 
 ecto.json.gz: ecto.json
-	gzip $<
+	gzip -f $<
 
 oort: ecto-core.owl
 	ontology-release-runner $(USECAT) --ignore-selected-equivalent-pairs 'CL:0000000'  --ignoreLock --skip-release-folder --skip-format owx --skip-format obo --no-subsets --outdir target --allow-overwrite --asserted --simple --reasoner elk $<
@@ -117,7 +117,7 @@ mirror/exo.obo:
 .PRECIOUS: mirror/%.owl
 
 mirror/activity.obo:
-	blip ontol-query -r ncit -query "class(R,'Activity'),subclassRT(ID,R)" -to obo > $@.tmp && mv $@.tmp $@
+	blip ontol-query -r ncit -query "class(R,'Activity'),subclassRT(ID,R)" -to obo > $@.tmp && grep -v ^property $@.tmp $@
 
 mirror/chebi.obo:
 	wget $(OBO)/chebi.obo -O $@.tmp && mv $@.tmp $@ && touch $@
