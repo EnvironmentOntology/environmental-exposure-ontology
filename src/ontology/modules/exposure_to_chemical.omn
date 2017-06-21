@@ -2,27 +2,27 @@ Prefix: : <http://purl.obolibrary.org/obo/>
 Prefix: IAO: <http://purl.obolibrary.org/obo/IAO_>
 Prefix: DOSDP: <http://geneontology.org/foo/>
 Prefix: oio: <http://www.geneontology.org/formats/oboInOwl#>
-Prefix: ExO: <http://purl.obolibrary.org/obo/ExO_>
-Prefix: PATO: <http://purl.obolibrary.org/obo/PATO_>
-Prefix: ECTO: <http://purl.obolibrary.org/obo/ECTO_>
+Prefix: GO: <http://purl.obolibrary.org/obo/GO_>
 Prefix: ZECO: <http://purl.obolibrary.org/obo/ZECO_>
+Prefix: CL: <http://purl.obolibrary.org/obo/CL_>
+Prefix: ExO: <http://purl.obolibrary.org/obo/ExO_>
 Prefix: BFO: <http://purl.obolibrary.org/obo/BFO_>
-Prefix: ENVO: <http://purl.obolibrary.org/obo/ENVO_>
-Prefix: OBA: <http://purl.obolibrary.org/obo/OBA_>
-Prefix: RO: <http://purl.obolibrary.org/obo/RO_>
-Prefix: PR: <http://purl.obolibrary.org/obo/PR_>
 Prefix: NCIT: <http://purl.obolibrary.org/obo/NCIT_>
 Prefix: UBERON: <http://purl.obolibrary.org/obo/UBERON_>
-Prefix: GO: <http://purl.obolibrary.org/obo/GO_>
-Prefix: NBO: <http://purl.obolibrary.org/obo/NBO_>
-Prefix: PO: <http://purl.obolibrary.org/obo/PO_>
 Prefix: XCO: <http://purl.obolibrary.org/obo/XCO_>
-Prefix: NPO: <http://purl.obolibrary.org/obo/NPO_>
-Prefix: CL: <http://purl.obolibrary.org/obo/CL_>
-Prefix: SO: <http://purl.obolibrary.org/obo/SO_>
-Prefix: GOCHE: <http://purl.obolibrary.org/obo/GOCHE_>
-Prefix: NCBITaxon: <http://purl.obolibrary.org/obo/NCBITaxon_>
+Prefix: ECTO: <http://purl.obolibrary.org/obo/ECTO_>
 Prefix: CHEBI: <http://purl.obolibrary.org/obo/CHEBI_>
+Prefix: SO: <http://purl.obolibrary.org/obo/SO_>
+Prefix: PATO: <http://purl.obolibrary.org/obo/PATO_>
+Prefix: PR: <http://purl.obolibrary.org/obo/PR_>
+Prefix: OBA: <http://purl.obolibrary.org/obo/OBA_>
+Prefix: NPO: <http://purl.obolibrary.org/obo/NPO_>
+Prefix: PO: <http://purl.obolibrary.org/obo/PO_>
+Prefix: ENVO: <http://purl.obolibrary.org/obo/ENVO_>
+Prefix: GOCHE: <http://purl.obolibrary.org/obo/GOCHE_>
+Prefix: RO: <http://purl.obolibrary.org/obo/RO_>
+Prefix: NBO: <http://purl.obolibrary.org/obo/NBO_>
+Prefix: NCBITaxon: <http://purl.obolibrary.org/obo/NCBITaxon_>
 
  ## Auto-generated
 
@@ -33,8 +33,8 @@ AnnotationProperty: DOSDP:applies-pattern
 AnnotationProperty: oio:hasRelatedSynonym
 AnnotationProperty: oio:hasExactSynonym
 AnnotationProperty: oio:hasExactSynonym
-Class: CHEBI:24431 ## chemical entity
 Class: ExO:0000002 ## exposure event
+Class: CHEBI:24431 ## chemical entity
 ObjectProperty: BFO_0000050 ## stressor
 ObjectProperty: RO:0002309 ## has exposure stimulus
 ## Auto-generated classes
@@ -751,18 +751,22 @@ Class: ECTO:0000148
  Annotations: oio:hasRelatedSynonym "exposure to ClO3(-)"
  Annotations: oio:hasRelatedSynonym "exposure to trioxidochlorate(1-)"
 
-Class: CHEBI:60270 ## caesium ion
-## {"stressor": "CHEBI:60270"}
+Class: CHEBI:37128 ## caesium molecular entity
+## {"stressor": "CHEBI:37128"}
 Class: ECTO:0000149
- Annotations: rdfs:label "exposure to caesium ion"
- Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to caesium ion. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion."
- Annotations: oio:hasExactSynonym "caesium ion exposure"
- Annotations: oio:hasExactSynonym "caesium ion exposure event"
- EquivalentTo: ExO:0000002 and RO:0002309 some CHEBI:60270 ## 'exposure event' and 'has exposure stimulus' some caesium ion
+ Annotations: rdfs:label "exposure to caesium molecular entity"
+ Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to caesium molecular entity. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion."
+ Annotations: oio:hasExactSynonym "caesium molecular entity exposure"
+ Annotations: oio:hasExactSynonym "caesium molecular entity exposure event"
+ EquivalentTo: ExO:0000002 and RO:0002309 some CHEBI:37128 ## 'exposure event' and 'has exposure stimulus' some caesium molecular entity
   ## Auto-syns
 
- Annotations: oio:hasRelatedSynonym "exposure to cesium ion"
- Annotations: oio:hasRelatedSynonym "exposure to cesium ion"
+ Annotations: oio:hasRelatedSynonym "exposure to caesium compounds"
+ Annotations: oio:hasRelatedSynonym "exposure to caesium molecular entities"
+ Annotations: oio:hasRelatedSynonym "exposure to cesium compounds"
+ Annotations: oio:hasRelatedSynonym "exposure to caesium compounds"
+ Annotations: oio:hasRelatedSynonym "exposure to caesium molecular entities"
+ Annotations: oio:hasRelatedSynonym "exposure to cesium compounds"
 
 Class: CHEBI:17632 ## nitrate
 ## {"stressor": "CHEBI:17632"}

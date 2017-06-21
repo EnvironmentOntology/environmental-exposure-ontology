@@ -5,8 +5,8 @@ classes:
 
 relations:
   stressor: BFO_0000050
-  part of: BFO_0000050
   has exposure stimulus: RO:0002309
+  causally upstream of or within: RO:0002418
     
 vars: 
   activity: "'activity'"
@@ -27,11 +27,11 @@ annotations:
       - activity
 
 def: 
-  text: "A exposure event involving %s."
+  text: "A exposure event arising as a result of %s."
   vars:
     - activity
     
 equivalentTo: 
-  text: "'exposure event' and 'part of' some %s"
+  text: "'exposure event' and 'causally upstream of or within' some %s"
   vars:
     - activity

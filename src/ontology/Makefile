@@ -117,7 +117,7 @@ mirror/exo.obo:
 .PRECIOUS: mirror/%.owl
 
 mirror/activity.obo:
-	blip ontol-query -r ncit -query "class(R,'Activity'),subclassRT(ID,R)" -to obo > $@.tmp && grep -v ^property $@.tmp $@
+	blip ontol-query -r ncit -query "class(R,'Activity'),subclassRT(ID,R)" -to obo > $@.tmp && grep -v ^property $@.tmp | perl -npe 's@(.*)@lc($1)@e if m@^name@' > $@
 
 mirror/chebi.obo:
 	wget $(OBO)/chebi.obo -O $@.tmp && mv $@.tmp $@ && touch $@

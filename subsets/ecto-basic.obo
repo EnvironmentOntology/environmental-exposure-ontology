@@ -1,15 +1,15 @@
 format-version: 1.2
 remark: Includes Ontology(OntologyID(OntologyIRI(<http://purl.obolibrary.org/obo/ecto/modules/activity.rdf>) VersionIRI(<null>))) [Axioms: 372 Logical Axioms: 50]
 remark: Includes Ontology(OntologyID(OntologyIRI(<http://purl.obolibrary.org/obo/ecto/modules/exposure_to_change_in_levels.rdf>) VersionIRI(<null>))) [Axioms: 2844 Logical Axioms: 40]
-remark: Includes Ontology(OntologyID(OntologyIRI(<http://purl.obolibrary.org/obo/ecto/modules/exposure_to_chemical.rdf>) VersionIRI(<null>))) [Axioms: 19024 Logical Axioms: 1470]
-remark: Includes Ontology(OntologyID(OntologyIRI(<http://purl.obolibrary.org/obo/ecto/modules/exposure_to_chemical_with_role.rdf>) VersionIRI(<null>))) [Axioms: 7420 Logical Axioms: 525]
+remark: Includes Ontology(OntologyID(OntologyIRI(<http://purl.obolibrary.org/obo/ecto/modules/exposure_to_chemical.rdf>) VersionIRI(<null>))) [Axioms: 19076 Logical Axioms: 1470]
+remark: Includes Ontology(OntologyID(OntologyIRI(<http://purl.obolibrary.org/obo/ecto/modules/exposure_to_chemical_with_role.rdf>) VersionIRI(<null>))) [Axioms: 7424 Logical Axioms: 525]
 remark: Includes Ontology(OntologyID(OntologyIRI(<http://purl.obolibrary.org/obo/ecto/modules/exposure_to_environmental_condition.rdf>) VersionIRI(<null>))) [Axioms: 123 Logical Axioms: 15]
 remark: Includes Ontology(OntologyID(OntologyIRI(<http://purl.obolibrary.org/obo/ecto/modules/exposure_to_environmental_process.rdf>) VersionIRI(<null>))) [Axioms: 259 Logical Axioms: 35]
 remark: Includes Ontology(OntologyID(OntologyIRI(<http://purl.obolibrary.org/obo/ecto/modules/exposure_to_infection.rdf>) VersionIRI(<null>))) [Axioms: 32 Logical Axioms: 4]
 remark: Includes Ontology(OntologyID(OntologyIRI(<http://purl.obolibrary.org/obo/ecto/modules/exposure_to_levels_in_medium.rdf>) VersionIRI(<null>))) [Axioms: 140 Logical Axioms: 6]
 remark: Includes Ontology(OntologyID(OntologyIRI(<http://purl.obolibrary.org/obo/ecto/modules/exposure_to_material.rdf>) VersionIRI(<null>))) [Axioms: 440 Logical Axioms: 58]
 remark: Includes Ontology(OntologyID(OntologyIRI(<http://purl.obolibrary.org/obo/ecto/modules/exposure_to_radiation.rdf>) VersionIRI(<null>))) [Axioms: 106 Logical Axioms: 14]
-remark: Includes Ontology(OntologyID(OntologyIRI(<http://purl.obolibrary.org/obo/ecto/modules/exposure_via_route.rdf>) VersionIRI(<null>))) [Axioms: 257 Logical Axioms: 22]
+remark: Includes Ontology(OntologyID(OntologyIRI(<http://purl.obolibrary.org/obo/ecto/modules/exposure_via_route.rdf>) VersionIRI(<null>))) [Axioms: 262 Logical Axioms: 22]
 remark: Includes Ontology(OntologyID(OntologyIRI(<http://purl.obolibrary.org/obo/ecto/modules/prenatal.rdf>) VersionIRI(<null>))) [Axioms: 140 Logical Axioms: 9]
 remark: Includes Ontology(OntologyID(OntologyIRI(<http://purl.obolibrary.org/obo/ecto/modules/surgical_procedure.rdf>) VersionIRI(<null>))) [Axioms: 166 Logical Axioms: 16]
 ontology: ecto/subsets/ecto-basic
@@ -28,7 +28,7 @@ name: exposure to electromagnetic radiation
 def: "A radiation exposure event involving the interaction of an exposure receptor to electromagnetic radiation." []
 synonym: "electromagnetic radiation exposure" EXACT []
 synonym: "electromagnetic radiation exposure event" EXACT []
-is_a: ECTO:0000001 ! exposure to radiation
+is_a: ExO:0000002
 
 [Term]
 id: ECTO:0000003
@@ -36,7 +36,7 @@ name: exposure to sound radiation
 def: "A radiation exposure event involving the interaction of an exposure receptor to sound radiation." []
 synonym: "sound radiation exposure" EXACT []
 synonym: "sound radiation exposure event" EXACT []
-is_a: ECTO:0000001 ! exposure to radiation
+is_a: ExO:0000002
 
 [Term]
 id: ECTO:0000004
@@ -44,7 +44,7 @@ name: exposure to gamma radiation
 def: "A radiation exposure event involving the interaction of an exposure receptor to gamma radiation." []
 synonym: "gamma radiation exposure" EXACT []
 synonym: "gamma radiation exposure event" EXACT []
-is_a: ECTO:0000002 ! exposure to electromagnetic radiation
+is_a: ExO:0000002
 
 [Term]
 id: ECTO:0000005
@@ -52,7 +52,7 @@ name: exposure to x-ray radiation
 def: "A radiation exposure event involving the interaction of an exposure receptor to x-ray radiation." []
 synonym: "x-ray radiation exposure" EXACT []
 synonym: "x-ray radiation exposure event" EXACT []
-is_a: ECTO:0000002 ! exposure to electromagnetic radiation
+is_a: ExO:0000002
 
 [Term]
 id: ECTO:0000006
@@ -60,7 +60,7 @@ name: exposure to ultraviolet radiation
 def: "A radiation exposure event involving the interaction of an exposure receptor to ultraviolet radiation." []
 synonym: "ultraviolet radiation exposure" EXACT []
 synonym: "ultraviolet radiation exposure event" EXACT []
-is_a: ECTO:0000002 ! exposure to electromagnetic radiation
+is_a: ExO:0000002
 
 [Term]
 id: ECTO:0000007
@@ -68,7 +68,7 @@ name: exposure to visible light radiation
 def: "A radiation exposure event involving the interaction of an exposure receptor to visible light radiation." []
 synonym: "visible light radiation exposure" EXACT []
 synonym: "visible light radiation exposure event" EXACT []
-is_a: ECTO:0000002 ! exposure to electromagnetic radiation
+is_a: ExO:0000002
 
 [Term]
 id: ECTO:0000008
@@ -76,7 +76,7 @@ name: exposure to infrared radiation
 def: "A radiation exposure event involving the interaction of an exposure receptor to infrared radiation." []
 synonym: "infrared radiation exposure" EXACT []
 synonym: "infrared radiation exposure event" EXACT []
-is_a: ECTO:0000002 ! exposure to electromagnetic radiation
+is_a: ExO:0000002
 
 [Term]
 id: ECTO:0000009
@@ -84,7 +84,7 @@ name: exposure to far-infrared radiation
 def: "A radiation exposure event involving the interaction of an exposure receptor to far-infrared radiation." []
 synonym: "far-infrared radiation exposure" EXACT []
 synonym: "far-infrared radiation exposure event" EXACT []
-is_a: ECTO:0000008 ! exposure to infrared radiation
+is_a: ExO:0000002
 
 [Term]
 id: ECTO:0000010
@@ -92,7 +92,7 @@ name: exposure to mid-infrared radiation
 def: "A radiation exposure event involving the interaction of an exposure receptor to mid-infrared radiation." []
 synonym: "mid-infrared radiation exposure" EXACT []
 synonym: "mid-infrared radiation exposure event" EXACT []
-is_a: ECTO:0000008 ! exposure to infrared radiation
+is_a: ExO:0000002
 
 [Term]
 id: ECTO:0000011
@@ -100,7 +100,7 @@ name: exposure to near-infrared radiation
 def: "A radiation exposure event involving the interaction of an exposure receptor to near-infrared radiation." []
 synonym: "near-infrared radiation exposure" EXACT []
 synonym: "near-infrared radiation exposure event" EXACT []
-is_a: ECTO:0000008 ! exposure to infrared radiation
+is_a: ExO:0000002
 
 [Term]
 id: ECTO:0000012
@@ -108,7 +108,7 @@ name: exposure to microwave radiation
 def: "A radiation exposure event involving the interaction of an exposure receptor to microwave radiation." []
 synonym: "microwave radiation exposure" EXACT []
 synonym: "microwave radiation exposure event" EXACT []
-is_a: ECTO:0000002 ! exposure to electromagnetic radiation
+is_a: ExO:0000002
 
 [Term]
 id: ECTO:0000013
@@ -116,7 +116,7 @@ name: exposure to radiowave radiation
 def: "A radiation exposure event involving the interaction of an exposure receptor to radiowave radiation." []
 synonym: "radiowave radiation exposure" EXACT []
 synonym: "radiowave radiation exposure event" EXACT []
-is_a: ECTO:0000002 ! exposure to electromagnetic radiation
+is_a: ExO:0000002
 
 [Term]
 id: ECTO:0000014
@@ -124,7 +124,7 @@ name: exposure to ultrasound radiation
 def: "A radiation exposure event involving the interaction of an exposure receptor to ultrasound radiation." []
 synonym: "ultrasound radiation exposure" EXACT []
 synonym: "ultrasound radiation exposure event" EXACT []
-is_a: ECTO:0000003 ! exposure to sound radiation
+is_a: ExO:0000002
 
 [Term]
 id: ECTO:0000015
@@ -921,7 +921,7 @@ synonym: "exposure to oxygen radicals" RELATED []
 synonym: "oxygen radical exposure" EXACT []
 synonym: "oxygen radical exposure event" EXACT []
 is_a: ECTO:0000115 ! exposure to reactive oxygen species
-is_a: ECTO:0000137 ! exposure to inorganic
+is_a: ECTO:0000137 ! exposure to inorganic molecular entity
 
 [Term]
 id: ECTO:0000119
@@ -985,7 +985,7 @@ synonym: "exposure to Wasser" RELATED []
 synonym: "exposure to Water" RELATED []
 synonym: "water exposure" EXACT []
 synonym: "water exposure event" EXACT []
-is_a: ECTO:0000137 ! exposure to inorganic
+is_a: ECTO:0000137 ! exposure to inorganic molecular entity
 is_a: ECTO:0000371 ! exposure to oxygen molecular entity
 is_a: ECTO:0000664 ! exposure to amphiprotic solvent
 is_a: ECTO:0000881 ! exposure to mouse metabolite
@@ -1231,16 +1231,15 @@ is_a: ECTO:0000919 ! exposure to human metabolite
 
 [Term]
 id: ECTO:0000137
-name: exposure to inorganic
-def: "A exposure event involving the interaction of an exposure receptor to inorganic. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+name: exposure to inorganic molecular entity
+def: "A exposure event involving the interaction of an exposure receptor to inorganic molecular entity. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "exposure to anorganische Verbindungen" RELATED []
 synonym: "exposure to inorganic compounds" RELATED []
 synonym: "exposure to inorganic entity" RELATED []
 synonym: "exposure to inorganic molecular entities" RELATED []
-synonym: "exposure to inorganic molecular entity" RELATED []
 synonym: "exposure to inorganics" RELATED []
-synonym: "inorganic exposure" EXACT []
-synonym: "inorganic exposure event" EXACT []
+synonym: "inorganic molecular entity exposure" EXACT []
+synonym: "inorganic molecular entity exposure event" EXACT []
 is_a: ECTO:0000231 ! exposure to chemical entity
 
 [Term]
@@ -1286,7 +1285,7 @@ synonym: "exposure to a metal cation" RELATED []
 synonym: "exposure to metal cations" RELATED []
 synonym: "metal cation exposure" EXACT []
 synonym: "metal cation exposure event" EXACT []
-is_a: ECTO:0000137 ! exposure to inorganic
+is_a: ECTO:0000137 ! exposure to inorganic molecular entity
 
 [Term]
 id: ECTO:0000141
@@ -1388,17 +1387,19 @@ synonym: "chlorate exposure event" EXACT []
 synonym: "exposure to [ClO3](-)" RELATED []
 synonym: "exposure to ClO3(-)" RELATED []
 synonym: "exposure to trioxidochlorate(1-)" RELATED []
-is_a: ECTO:0000137 ! exposure to inorganic
+is_a: ECTO:0000137 ! exposure to inorganic molecular entity
 is_a: ECTO:0000371 ! exposure to oxygen molecular entity
 
 [Term]
 id: ECTO:0000149
-name: exposure to caesium ion
-def: "A exposure event involving the interaction of an exposure receptor to caesium ion. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
-synonym: "caesium ion exposure" EXACT []
-synonym: "caesium ion exposure event" EXACT []
-synonym: "exposure to cesium ion" RELATED []
-is_a: ECTO:0000137 ! exposure to inorganic
+name: exposure to caesium molecular entity
+def: "A exposure event involving the interaction of an exposure receptor to caesium molecular entity. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "caesium molecular entity exposure" EXACT []
+synonym: "caesium molecular entity exposure event" EXACT []
+synonym: "exposure to caesium compounds" RELATED []
+synonym: "exposure to caesium molecular entities" RELATED []
+synonym: "exposure to cesium compounds" RELATED []
+is_a: ECTO:0000231 ! exposure to chemical entity
 
 [Term]
 id: ECTO:0000150
@@ -1410,7 +1411,7 @@ synonym: "exposure to trioxonitrate(1-)" RELATED []
 synonym: "exposure to trioxonitrate(V)" RELATED []
 synonym: "nitrate exposure" EXACT []
 synonym: "nitrate exposure event" EXACT []
-is_a: ECTO:0000137 ! exposure to inorganic
+is_a: ECTO:0000137 ! exposure to inorganic molecular entity
 is_a: ECTO:0000370 ! exposure to nitrogen
 is_a: ECTO:0000371 ! exposure to oxygen molecular entity
 
@@ -1426,7 +1427,7 @@ synonym: "exposure to Trisauerstoff" RELATED []
 synonym: "ozone exposure" EXACT []
 synonym: "ozone exposure event" EXACT []
 is_a: ECTO:0000115 ! exposure to reactive oxygen species
-is_a: ECTO:0000137 ! exposure to inorganic
+is_a: ECTO:0000137 ! exposure to inorganic molecular entity
 is_a: ECTO:0000523 ! exposure to mutagen
 is_a: ECTO:0000554 ! exposure to tracer
 is_a: ECTO:0000656 ! exposure to antiseptic drug
@@ -1523,7 +1524,7 @@ name: exposure to selenium ion
 def: "A exposure event involving the interaction of an exposure receptor to selenium ion. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "selenium ion exposure" EXACT []
 synonym: "selenium ion exposure event" EXACT []
-is_a: ECTO:0000137 ! exposure to inorganic
+is_a: ECTO:0000137 ! exposure to inorganic molecular entity
 is_a: ECTO:0001574 ! exposure to selenium
 
 [Term]
@@ -1565,7 +1566,7 @@ synonym: "exposure to sulfurous oxide" RELATED []
 synonym: "exposure to sulphur dioxide" RELATED []
 synonym: "sulfur dioxide exposure" EXACT []
 synonym: "sulfur dioxide exposure event" EXACT []
-is_a: ECTO:0000137 ! exposure to inorganic
+is_a: ECTO:0000137 ! exposure to inorganic molecular entity
 is_a: ECTO:0000371 ! exposure to oxygen molecular entity
 is_a: ECTO:0000900 ! exposure to Escherichia coli metabolite
 is_a: ECTO:0000927 ! exposure to food bleaching agent
@@ -1899,7 +1900,6 @@ synonym: "vitamin K exposure" EXACT []
 synonym: "vitamin K exposure event" EXACT []
 is_a: ECTO:0000511 ! exposure to fat-soluble vitamin
 is_a: ECTO:0000881 ! exposure to mouse metabolite
-is_a: ECTO:0001884 ! exposure to quinone
 
 [Term]
 id: ECTO:0000184
@@ -2197,8 +2197,6 @@ synonym: "triglyceride exposure" EXACT []
 synonym: "triglyceride exposure event" EXACT []
 is_a: ECTO:0000200 ! exposure to lipid
 is_a: ECTO:0000371 ! exposure to oxygen molecular entity
-is_a: ECTO:0000881 ! exposure to mouse metabolite
-is_a: ECTO:0000919 ! exposure to human metabolite
 
 [Term]
 id: ECTO:0000202
@@ -2215,7 +2213,7 @@ synonym: "exposure to Siliziumdioxid" RELATED []
 synonym: "exposure to SiO2" RELATED []
 synonym: "silicon dioxide exposure" EXACT []
 synonym: "silicon dioxide exposure event" EXACT []
-is_a: ECTO:0000137 ! exposure to inorganic
+is_a: ECTO:0000137 ! exposure to inorganic molecular entity
 is_a: ECTO:0000371 ! exposure to oxygen molecular entity
 
 [Term]
@@ -2347,6 +2345,7 @@ def: "A exposure event involving the interaction of an exposure receptor to pros
 synonym: "prostaglandins E exposure" EXACT []
 synonym: "prostaglandins E exposure event" EXACT []
 is_a: ECTO:0000209 ! exposure to prostaglandin
+is_a: ECTO:0000314 ! exposure to alcohol
 is_a: ECTO:0000369 ! exposure to ketone
 
 [Term]
@@ -2443,7 +2442,7 @@ synonym: "exposure to nitryl" RELATED []
 synonym: "exposure to Stickstoffdioxid" RELATED []
 synonym: "nitrogen dioxide exposure" EXACT []
 synonym: "nitrogen dioxide exposure event" EXACT []
-is_a: ECTO:0000137 ! exposure to inorganic
+is_a: ECTO:0000137 ! exposure to inorganic molecular entity
 is_a: ECTO:0000370 ! exposure to nitrogen
 is_a: ECTO:0000371 ! exposure to oxygen molecular entity
 
@@ -2639,6 +2638,7 @@ synonym: "exposure to ethyl 2-[[(1R)-1-cyclohexyl-2- [(2S)-2-[[4-(N'-hydroxycarb
 synonym: "exposure to ethyl N-{(1R)-1-cyclohexyl-2-[(2S)-2-{[4-(N'-hydroxycarbamimidoyl)benzyl]carbamoyl}azetidin-1-yl]-2-oxoethyl}glycinate" RELATED []
 synonym: "exposure to Exanta" RELATED []
 synonym: "exposure to Exarta" RELATED []
+synonym: "exposure to ximelagatran (oxime form)" RELATED []
 synonym: "exposure to ximelagatranum" RELATED []
 synonym: "ximelagatran exposure" EXACT []
 synonym: "ximelagatran exposure event" EXACT []
@@ -2655,12 +2655,12 @@ id: ECTO:0000229
 name: exposure to sterol
 def: "A exposure event involving the interaction of an exposure receptor to sterol. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "exposure to 3-hydroxysteroids" RELATED []
+synonym: "exposure to a sterol" RELATED []
 synonym: "exposure to Sterol" RELATED []
 synonym: "exposure to sterols" RELATED []
 synonym: "sterol exposure" EXACT []
 synonym: "sterol exposure event" EXACT []
 is_a: ECTO:0000371 ! exposure to oxygen molecular entity
-is_a: ECTO:0000881 ! exposure to mouse metabolite
 is_a: ECTO:0002002 ! exposure to steroid
 
 [Term]
@@ -2726,7 +2726,7 @@ synonym: "exposure to perhydrol" RELATED []
 synonym: "hydrogen peroxide exposure" EXACT []
 synonym: "hydrogen peroxide exposure event" EXACT []
 is_a: ECTO:0000115 ! exposure to reactive oxygen species
-is_a: ECTO:0000137 ! exposure to inorganic
+is_a: ECTO:0000137 ! exposure to inorganic molecular entity
 is_a: ECTO:0000505 ! exposure to cofactor
 is_a: ECTO:0000552 ! exposure to reagent
 is_a: ECTO:0000657 ! exposure to disinfectant
@@ -2793,7 +2793,9 @@ synonym: "morphine exposure event" EXACT []
 is_a: ECTO:0000163 ! exposure to organic cyclic compound
 is_a: ECTO:0000165 ! exposure to isoquinoline alkaloid
 is_a: ECTO:0000575 ! exposure to opioid analgesic
+is_a: ECTO:0000590 ! exposure to vasodilator agent
 is_a: ECTO:0000597 ! exposure to xenobiotic
+is_a: ECTO:0000644 ! exposure to anaesthetic
 is_a: ECTO:0000747 ! exposure to mu-opioid receptor agonist
 is_a: ECTO:0000893 ! exposure to plant metabolite
 is_a: ECTO:0000931 ! exposure to environmental contaminant
@@ -3028,7 +3030,7 @@ synonym: "exposure to tetraoxidochromate(2-)" RELATED []
 synonym: "exposure to tetraoxidochromate(VI)" RELATED []
 synonym: "exposure to tetraoxochromate(2-)" RELATED []
 synonym: "exposure to tetraoxochromate(VI)" RELATED []
-is_a: ECTO:0000137 ! exposure to inorganic
+is_a: ECTO:0000137 ! exposure to inorganic molecular entity
 is_a: ECTO:0000371 ! exposure to oxygen molecular entity
 is_a: ECTO:0000786 ! exposure to oxidising agent
 is_a: ECTO:0001671 ! exposure to chromium molecular entity
@@ -3060,7 +3062,7 @@ name: exposure to tellurium ion
 def: "A exposure event involving the interaction of an exposure receptor to tellurium ion. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "tellurium ion exposure" EXACT []
 synonym: "tellurium ion exposure event" EXACT []
-is_a: ECTO:0000137 ! exposure to inorganic
+is_a: ECTO:0000137 ! exposure to inorganic molecular entity
 
 [Term]
 id: ECTO:0000257
@@ -3410,6 +3412,7 @@ synonym: "exposure to Cholesterin" RELATED []
 synonym: "exposure to Cholesterol" RELATED []
 is_a: ECTO:0000229 ! exposure to sterol
 is_a: ECTO:0000314 ! exposure to alcohol
+is_a: ECTO:0000881 ! exposure to mouse metabolite
 is_a: ECTO:0000919 ! exposure to human metabolite
 is_a: ECTO:0000943 ! exposure to Daphnia galeata metabolite
 is_a: ECTO:0000950 ! exposure to algal metabolite
@@ -3546,7 +3549,7 @@ synonym: "exposure to Stickstoffmonoxid" RELATED []
 synonym: "nitric oxide exposure" EXACT []
 synonym: "nitric oxide exposure event" EXACT []
 is_a: ECTO:0000115 ! exposure to reactive oxygen species
-is_a: ECTO:0000137 ! exposure to inorganic
+is_a: ECTO:0000137 ! exposure to inorganic molecular entity
 is_a: ECTO:0000370 ! exposure to nitrogen
 is_a: ECTO:0000526 ! exposure to neurotransmitter
 is_a: ECTO:0000582 ! exposure to bronchodilator agent
@@ -3624,7 +3627,7 @@ name: exposure to bismuth ion
 def: "A exposure event involving the interaction of an exposure receptor to bismuth ion. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "bismuth ion exposure" EXACT []
 synonym: "bismuth ion exposure event" EXACT []
-is_a: ECTO:0000137 ! exposure to inorganic
+is_a: ECTO:0000137 ! exposure to inorganic molecular entity
 
 [Term]
 id: ECTO:0000289
@@ -3991,7 +3994,7 @@ synonym: "exposure to nitrite(1-)" RELATED []
 synonym: "exposure to nitrous acid, ion(1-)" RELATED []
 synonym: "nitrite exposure" EXACT []
 synonym: "nitrite exposure event" EXACT []
-is_a: ECTO:0000137 ! exposure to inorganic
+is_a: ECTO:0000137 ! exposure to inorganic molecular entity
 is_a: ECTO:0000370 ! exposure to nitrogen
 is_a: ECTO:0000371 ! exposure to oxygen molecular entity
 is_a: ECTO:0000919 ! exposure to human metabolite
@@ -4831,7 +4834,7 @@ synonym: "exposure to Hypochlorit" RELATED []
 synonym: "exposure to oxidochlorate(1-)" RELATED []
 synonym: "hypochlorite exposure" EXACT []
 synonym: "hypochlorite exposure event" EXACT []
-is_a: ECTO:0000137 ! exposure to inorganic
+is_a: ECTO:0000137 ! exposure to inorganic molecular entity
 is_a: ECTO:0000371 ! exposure to oxygen molecular entity
 
 [Term]
@@ -4887,6 +4890,7 @@ is_a: ECTO:0000578 ! exposure to antipyretic
 is_a: ECTO:0000597 ! exposure to xenobiotic
 is_a: ECTO:0000709 ! exposure to cyclooxygenase 2 inhibitor
 is_a: ECTO:0000710 ! exposure to cyclooxygenase 1 inhibitor
+is_a: ECTO:0000728 ! exposure to hepatotoxic agent
 is_a: ECTO:0000865 ! exposure to cyclooxygenase 3 inhibitor
 is_a: ECTO:0000931 ! exposure to environmental contaminant
 is_a: ECTO:0000956 ! exposure to human blood serum metabolite
@@ -5378,7 +5382,7 @@ synonym: "exposure to tetraoxovanadate(V)" RELATED []
 synonym: "exposure to vanadate" RELATED []
 synonym: "vanadate(3-) exposure" EXACT []
 synonym: "vanadate(3-) exposure event" EXACT []
-is_a: ECTO:0000137 ! exposure to inorganic
+is_a: ECTO:0000137 ! exposure to inorganic molecular entity
 is_a: ECTO:0000371 ! exposure to oxygen molecular entity
 is_a: ECTO:0000587 ! exposure to EC 3.1.3.48 (protein-tyrosine-phosphatase) inhibitor
 is_a: ECTO:0000612 ! exposure to EC 3.1.3.16 (phosphoprotein phosphatase) inhibitor
@@ -5520,7 +5524,7 @@ synonym: "exposure to fluoride(1-)" RELATED []
 synonym: "exposure to Fluorine anion" RELATED []
 synonym: "fluoride exposure" EXACT []
 synonym: "fluoride exposure event" EXACT []
-is_a: ECTO:0000137 ! exposure to inorganic
+is_a: ECTO:0000137 ! exposure to inorganic molecular entity
 
 [Term]
 id: ECTO:0000390
@@ -5659,6 +5663,7 @@ synonym: "exposure to Morphogen differentiation inducing factor (dictyostelium)"
 is_a: ECTO:0000244 ! exposure to ether
 is_a: ECTO:0000369 ! exposure to ketone
 is_a: ECTO:0000559 ! exposure to effector
+is_a: ECTO:0000776 ! exposure to signalling molecule
 is_a: ECTO:0000877 ! exposure to eukaryotic metabolite
 is_a: ECTO:0001703 ! exposure to dichlorobenzene
 is_a: ECTO:0001997 ! exposure to phenols
@@ -5819,6 +5824,7 @@ synonym: "exposure to 3beta-Hydroxyandrost-5-en-17-one" RELATED []
 synonym: "exposure to 3beta-hydroxyandrost-5-en-17-one" RELATED []
 synonym: "exposure to Dehydroepiandrosterone" RELATED []
 synonym: "exposure to Dehydroisoandrosterone" RELATED []
+synonym: "exposure to Intrarosa" RELATED []
 synonym: "exposure to Prasterone" RELATED []
 is_a: ECTO:0000314 ! exposure to alcohol
 is_a: ECTO:0000369 ! exposure to ketone
@@ -5906,7 +5912,7 @@ synonym: "exposure to Ammoniak" RELATED []
 synonym: "exposure to amoniaco" RELATED []
 synonym: "exposure to azane" RELATED []
 synonym: "exposure to spirit of hartshorn" RELATED []
-is_a: ECTO:0000137 ! exposure to inorganic
+is_a: ECTO:0000137 ! exposure to inorganic molecular entity
 is_a: ECTO:0000370 ! exposure to nitrogen
 is_a: ECTO:0000730 ! exposure to neurotoxin
 is_a: ECTO:0000756 ! exposure to nucleophilic reagent
@@ -5938,7 +5944,7 @@ synonym: "arsenite ion exposure" EXACT []
 synonym: "arsenite ion exposure event" EXACT []
 synonym: "exposure to arsenite anions" RELATED []
 synonym: "exposure to arsenite ions" RELATED []
-is_a: ECTO:0000137 ! exposure to inorganic
+is_a: ECTO:0000137 ! exposure to inorganic molecular entity
 is_a: ECTO:0000251 ! exposure to arsenic
 is_a: ECTO:0000371 ! exposure to oxygen molecular entity
 
@@ -5948,16 +5954,21 @@ name: exposure to bisphenol A
 def: "A exposure event involving the interaction of an exposure receptor to bisphenol A. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "bisphenol A exposure" EXACT []
 synonym: "bisphenol A exposure event" EXACT []
+synonym: "exposure to 2, 2-Bis(4-hydroxyphenyl)propane" RELATED []
+synonym: "exposure to 2,2-Bis(4'-hydroxyphenyl)propane" RELATED []
 synonym: "exposure to 2,2-Bis(4-Hydroxyphenyl)propane" RELATED []
 synonym: "exposure to 2,2-Bis(p-hydroxyphenyl)propane" RELATED []
 synonym: "exposure to 2,2-Di(4-hydroxyphenyl)propane" RELATED []
 synonym: "exposure to 2,2-Di(4-phenylol)propane" RELATED []
+synonym: "exposure to 4,4'-(1-Methylethane-1,1-diyl)diphenol" RELATED []
 synonym: "exposure to 4,4'-(1-Methylethylidene)bisphenol" RELATED []
+synonym: "exposure to 4,4'-(Propane-2,2-diyl)diphenol" RELATED []
 synonym: "exposure to 4,4'-(propane-2,2-diyl)diphenol" RELATED []
 synonym: "exposure to 4,4'-Bisphenol A" RELATED []
 synonym: "exposure to 4,4'-Isopropylidenediphenol" RELATED []
 synonym: "exposure to Bisphenol A" RELATED []
 synonym: "exposure to bisphenol-A" RELATED []
+synonym: "exposure to Dianin's compound" RELATED []
 is_a: ECTO:0000597 ! exposure to xenobiotic
 is_a: ECTO:0000902 ! exposure to xenoestrogen
 is_a: ECTO:0000931 ! exposure to environmental contaminant
@@ -5989,7 +6000,7 @@ synonym: "exposure to sodium meta-arsenite" RELATED []
 synonym: "exposure to sodium metaarsenite" RELATED []
 synonym: "sodium arsenite exposure" EXACT []
 synonym: "sodium arsenite exposure event" EXACT []
-is_a: ECTO:0000137 ! exposure to inorganic
+is_a: ECTO:0000137 ! exposure to inorganic molecular entity
 is_a: ECTO:0000251 ! exposure to arsenic
 is_a: ECTO:0000375 ! exposure to salt
 is_a: ECTO:0000515 ! exposure to herbicide
@@ -6222,7 +6233,7 @@ synonym: "exposure to gold(3+), ion" RELATED []
 synonym: "exposure to gold(III) cation" RELATED []
 synonym: "gold(3+) exposure" EXACT []
 synonym: "gold(3+) exposure event" EXACT []
-is_a: ECTO:0000137 ! exposure to inorganic
+is_a: ECTO:0000137 ! exposure to inorganic molecular entity
 is_a: ECTO:0000482 ! exposure to gold
 
 [Term]
@@ -6331,7 +6342,7 @@ synonym: "exposure to sodium phosphates" RELATED []
 synonym: "exposure to sodium salt of phosphoric acid" RELATED []
 synonym: "sodium phosphate exposure" EXACT []
 synonym: "sodium phosphate exposure event" EXACT []
-is_a: ECTO:0000137 ! exposure to inorganic
+is_a: ECTO:0000137 ! exposure to inorganic molecular entity
 is_a: ECTO:0000375 ! exposure to salt
 is_a: ECTO:0001989 ! exposure to phosphate
 
@@ -7066,7 +7077,7 @@ synonym: "exposure to Sulfide" RELATED []
 synonym: "exposure to sulfure d'hydrogene" RELATED []
 synonym: "hydrogen sulfide exposure" EXACT []
 synonym: "hydrogen sulfide exposure event" EXACT []
-is_a: ECTO:0000137 ! exposure to inorganic
+is_a: ECTO:0000137 ! exposure to inorganic molecular entity
 is_a: ECTO:0000537 ! exposure to toxin
 is_a: ECTO:0000590 ! exposure to vasodilator agent
 is_a: ECTO:0000650 ! exposure to Bronsted acid
@@ -7080,6 +7091,7 @@ name: exposure to palmitoleic acid
 def: "A exposure event involving the interaction of an exposure receptor to palmitoleic acid. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "exposure to (9Z)-hexadec-9-enoic acid" RELATED []
 synonym: "exposure to (9Z)-Hexadecenoic acid" RELATED []
+synonym: "exposure to (9Z)-hexadecenoic acid" RELATED []
 synonym: "exposure to (Z)-9-hexadecenoic acid" RELATED []
 synonym: "exposure to (Z)-hexadec-9-enoic acid" RELATED []
 synonym: "exposure to 16:1Delta9" RELATED []
@@ -7121,6 +7133,7 @@ synonym: "exposure to nitogenin" RELATED []
 is_a: ECTO:0000229 ! exposure to sterol
 is_a: ECTO:0000314 ! exposure to alcohol
 is_a: ECTO:0000498 ! exposure to antiviral agent
+is_a: ECTO:0000521 ! exposure to metabolite
 is_a: ECTO:0000588 ! exposure to antineoplastic agent
 is_a: ECTO:0000842 ! exposure to apoptosis inducer
 
@@ -8520,6 +8533,8 @@ synonym: "exposure to beta-adrenergic blocker" RELATED []
 synonym: "exposure to beta-adrenergic blockers" RELATED []
 synonym: "exposure to beta-adrenergic receptor blockaders" RELATED []
 synonym: "exposure to beta-adrenoceptor antagonists" RELATED []
+synonym: "exposure to beta-blocker" RELATED []
+synonym: "exposure to beta-blockers" RELATED []
 is_a: ECTO:0000618 ! exposure to adrenergic antagonist
 
 [Term]
@@ -10509,6 +10524,8 @@ name: exposure to EC 5.99.1.3 [DNA topoisomerase (ATP-hydrolysing)] inhibitor
 def: "A exposure event involving the interaction of an exposure receptor to a EC 5.99.1.3 [DNA topoisomerase (ATP-hydrolysing)] inhibitor. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "EC 5.99.1.3 [DNA topoisomerase (ATP-hydrolysing)] inhibitor exposure" EXACT []
 synonym: "EC 5.99.1.3 [DNA topoisomerase (ATP-hydrolysing)] inhibitor exposure event" EXACT []
+synonym: "exposure to DNA gyrase inhibitor" RELATED []
+synonym: "exposure to DNA gyrase inhibitors" RELATED []
 synonym: "exposure to DNA topoisomerase (ATP-hydrolysing) (EC 5.99.1.3) inhibitor" RELATED []
 synonym: "exposure to DNA topoisomerase (ATP-hydrolysing) (EC 5.99.1.3) inhibitors" RELATED []
 synonym: "exposure to DNA topoisomerase (ATP-hydrolysing) inhibitor" RELATED []
@@ -17516,7 +17533,7 @@ synonym: "exposure to dioxygene" RELATED []
 synonym: "exposure to Disauerstoff" RELATED []
 synonym: "exposure to molecular oxygen" RELATED []
 synonym: "exposure to Oxygen" RELATED []
-is_a: ECTO:0000137 ! exposure to inorganic
+is_a: ECTO:0000137 ! exposure to inorganic molecular entity
 is_a: ECTO:0000371 ! exposure to oxygen molecular entity
 is_a: ECTO:0000538 ! exposure to micronutrient
 is_a: ECTO:0000552 ! exposure to reagent
@@ -19273,6 +19290,8 @@ name: exposure to organochlorine compound
 def: "A exposure event involving the interaction of an exposure receptor to organochlorine compound. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "exposure to chloroorganic compounds" RELATED []
 synonym: "exposure to chlororganische Verbindungen" RELATED []
+synonym: "exposure to organochloride compound" RELATED []
+synonym: "exposure to organochloride compounds" RELATED []
 synonym: "exposure to organochlorine compounds" RELATED []
 synonym: "organochlorine compound exposure" EXACT []
 synonym: "organochlorine compound exposure event" EXACT []
@@ -19571,6 +19590,7 @@ is_a: ECTO:0000583 ! exposure to sympathomimetic agent
 is_a: ECTO:0000597 ! exposure to xenobiotic
 is_a: ECTO:0000706 ! exposure to vasoconstrictor agent
 is_a: ECTO:0000893 ! exposure to plant metabolite
+is_a: ECTO:0000899 ! exposure to bacterial metabolite
 is_a: ECTO:0000931 ! exposure to environmental contaminant
 
 [Term]
@@ -20651,12 +20671,14 @@ synonym: "exposure to 5H-dibenzo[b,f]azepine-5-carboxamide" RELATED []
 synonym: "exposure to Carbamazepen" RELATED []
 synonym: "exposure to carbamazepina" RELATED []
 synonym: "exposure to carbamazepinum" RELATED []
+synonym: "exposure to Carnexiv" RELATED []
 is_a: ECTO:0000163 ! exposure to organic cyclic compound
 is_a: ECTO:0000370 ! exposure to nitrogen
 is_a: ECTO:0000568 ! exposure to psychotropic drug
 is_a: ECTO:0000574 ! exposure to non-narcotic analgesic
 is_a: ECTO:0000591 ! exposure to anticonvulsant
 is_a: ECTO:0000597 ! exposure to xenobiotic
+is_a: ECTO:0000638 ! exposure to sodium channel blocker
 is_a: ECTO:0000739 ! exposure to mitogen
 is_a: ECTO:0000769 ! exposure to EC 3.5.1.98 (histone deacetylase) inhibitor
 is_a: ECTO:0000931 ! exposure to environmental contaminant
@@ -21657,12 +21679,11 @@ synonym: "exposure to N,N-Dimethyl-N'-(4-chlorophenyl)urea" RELATED []
 synonym: "exposure to N-(4-chlorophenyl)-N',N'-dimethylurea" RELATED []
 synonym: "monuron exposure" EXACT []
 synonym: "monuron exposure event" EXACT []
-is_a: ECTO:0000163 ! exposure to organic cyclic compound
-is_a: ECTO:0000370 ! exposure to nitrogen
 is_a: ECTO:0000515 ! exposure to herbicide
 is_a: ECTO:0000597 ! exposure to xenobiotic
 is_a: ECTO:0000931 ! exposure to environmental contaminant
 is_a: ECTO:0001152 ! exposure to organochlorine compound
+is_a: ECTO:0002310 ! exposure to phenylureas
 
 [Term]
 id: ECTO:0001286
@@ -22638,12 +22659,12 @@ synonym: "exposure to Solubacter" RELATED []
 synonym: "exposure to triclocarbanum" RELATED []
 synonym: "triclocarban exposure" EXACT []
 synonym: "triclocarban exposure event" EXACT []
-is_a: ECTO:0000370 ! exposure to nitrogen
 is_a: ECTO:0000597 ! exposure to xenobiotic
 is_a: ECTO:0000656 ! exposure to antiseptic drug
 is_a: ECTO:0000657 ! exposure to disinfectant
 is_a: ECTO:0000931 ! exposure to environmental contaminant
 is_a: ECTO:0001703 ! exposure to dichlorobenzene
+is_a: ECTO:0002310 ! exposure to phenylureas
 
 [Term]
 id: ECTO:0001343
@@ -23400,12 +23421,12 @@ synonym: "exposure to 3-(3,4-dichlorophenyl)-1-methoxy-1-methylurea" RELATED []
 synonym: "exposure to N'-(3,4-dichlorophenyl)-N-methoxy-N-methyl Urea" RELATED []
 synonym: "linuron exposure" EXACT []
 synonym: "linuron exposure event" EXACT []
-is_a: ECTO:0000370 ! exposure to nitrogen
 is_a: ECTO:0000515 ! exposure to herbicide
 is_a: ECTO:0000547 ! exposure to agrochemical
 is_a: ECTO:0000597 ! exposure to xenobiotic
 is_a: ECTO:0000931 ! exposure to environmental contaminant
 is_a: ECTO:0001703 ! exposure to dichlorobenzene
+is_a: ECTO:0002310 ! exposure to phenylureas
 
 [Term]
 id: ECTO:0001381
@@ -26191,7 +26212,7 @@ synonym: "exposure to tetraoxochlorate(1-)" RELATED []
 synonym: "exposure to tetraoxochlorate(VII)" RELATED []
 synonym: "perchlorate exposure" EXACT []
 synonym: "perchlorate exposure event" EXACT []
-is_a: ECTO:0000137 ! exposure to inorganic
+is_a: ECTO:0000137 ! exposure to inorganic molecular entity
 is_a: ECTO:0000371 ! exposure to oxygen molecular entity
 
 [Term]
@@ -26593,16 +26614,21 @@ id: ECTO:0001588
 name: exposure to bisphenol A via ingestion
 def: "A exposure event involving the interaction of an exposure receptor to bisphenol A via ingestion." []
 synonym: "bisphenol A exposure, via ingestion" EXACT []
+synonym: "exposure to 2, 2-Bis(4-hydroxyphenyl)propane via ingestion" RELATED []
+synonym: "exposure to 2,2-Bis(4'-hydroxyphenyl)propane via ingestion" RELATED []
 synonym: "exposure to 2,2-Bis(4-Hydroxyphenyl)propane via ingestion" RELATED []
 synonym: "exposure to 2,2-Bis(p-hydroxyphenyl)propane via ingestion" RELATED []
 synonym: "exposure to 2,2-Di(4-hydroxyphenyl)propane via ingestion" RELATED []
 synonym: "exposure to 2,2-Di(4-phenylol)propane via ingestion" RELATED []
+synonym: "exposure to 4,4'-(1-Methylethane-1,1-diyl)diphenol via ingestion" RELATED []
 synonym: "exposure to 4,4'-(1-Methylethylidene)bisphenol via ingestion" RELATED []
+synonym: "exposure to 4,4'-(Propane-2,2-diyl)diphenol via ingestion" RELATED []
 synonym: "exposure to 4,4'-(propane-2,2-diyl)diphenol via ingestion" RELATED []
 synonym: "exposure to 4,4'-Bisphenol A via ingestion" RELATED []
 synonym: "exposure to 4,4'-Isopropylidenediphenol via ingestion" RELATED []
 synonym: "exposure to Bisphenol A via ingestion" RELATED []
 synonym: "exposure to bisphenol-A via ingestion" RELATED []
+synonym: "exposure to Dianin's compound via ingestion" RELATED []
 is_a: ECTO:0000414 ! exposure to bisphenol A
 is_a: ECTO:0000971 ! exposure to chemical entity via ingestion
 
@@ -26916,7 +26942,7 @@ synonym: "exposure to Aluminiumoxid" RELATED []
 synonym: "exposure to aluminum oxide" RELATED []
 synonym: "exposure to dialuminium trioxide" RELATED []
 synonym: "exposure to Tonerde" RELATED []
-is_a: ECTO:0000137 ! exposure to inorganic
+is_a: ECTO:0000137 ! exposure to inorganic molecular entity
 is_a: ECTO:0000371 ! exposure to oxygen molecular entity
 
 [Term]
@@ -27163,6 +27189,11 @@ name: exposure to Benzoyl peroxide
 def: "A exposure event involving the interaction of an exposure receptor to Benzoyl peroxide. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "Benzoyl peroxide exposure" EXACT []
 synonym: "Benzoyl peroxide exposure event" EXACT []
+synonym: "exposure to acetoxyl" RELATED []
+synonym: "exposure to benoxyl" RELATED []
+synonym: "exposure to benzoperoxide" RELATED []
+synonym: "exposure to benzoyl superoxide" RELATED []
+synonym: "exposure to diphenylglyoxal peroxide" RELATED []
 is_a: ECTO:0000135 ! exposure to organic
 is_a: ECTO:0000371 ! exposure to oxygen molecular entity
 
@@ -27324,6 +27355,8 @@ name: exposure to Brucine
 def: "A exposure event involving the interaction of an exposure receptor to Brucine. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "Brucine exposure" EXACT []
 synonym: "Brucine exposure event" EXACT []
+synonym: "exposure to brucine" RELATED []
+is_a: ECTO:0000163 ! exposure to organic cyclic compound
 is_a: ECTO:0000236 ! exposure to alkaloid
 
 [Term]
@@ -27694,7 +27727,7 @@ synonym: "chlorine dioxide exposure" EXACT []
 synonym: "chlorine dioxide exposure event" EXACT []
 synonym: "exposure to ClO2(.)" RELATED []
 synonym: "exposure to dioxygen chloride" RELATED []
-is_a: ECTO:0000137 ! exposure to inorganic
+is_a: ECTO:0000137 ! exposure to inorganic molecular entity
 is_a: ECTO:0000371 ! exposure to oxygen molecular entity
 is_a: ECTO:0000552 ! exposure to reagent
 
@@ -27730,6 +27763,7 @@ def: "A exposure event involving the interaction of an exposure receptor to quat
 synonym: "exposure to 1-(3-chloro-2-propenyl)-3,5,7-triaza-1-azoniatricyclo(3.3.1.13,7)decane chloride" RELATED []
 synonym: "exposure to 1-(3-Chloroallyl)-3,5,7-triaza-1-azoniaadamantane chloride" RELATED []
 synonym: "exposure to 1-[3-chloroprop-2-en-1-yl]-3,5,7-triaza-1-azoniatricyclo[3.3.1.1(3),(7)]decane chloride" RELATED []
+synonym: "exposure to 1-[3-chloroprop-2-en-1-yl]-3,5,7-triaza-1-azoniatricyclo[3.3.1.1(3),(7)]decanium chloride" RELATED []
 synonym: "exposure to Hexamethylenetetramine chloroallyl chloride" RELATED []
 synonym: "exposure to Methenamine 3-chloroallylochloride" RELATED []
 synonym: "exposure to N-(3-Chloroallyl)hexaminium chloride" RELATED []
@@ -28704,6 +28738,7 @@ name: exposure to Dimethyl phthalate
 def: "A exposure event involving the interaction of an exposure receptor to Dimethyl phthalate. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "Dimethyl phthalate exposure" EXACT []
 synonym: "Dimethyl phthalate exposure event" EXACT []
+synonym: "exposure to dimethyl phthalate" RELATED []
 is_a: ECTO:0001527 ! exposure to phthalate ester
 
 [Term]
@@ -28897,6 +28932,7 @@ synonym: "exposure to monophenylhydrazine" RELATED []
 synonym: "exposure to Phenyldiazane" RELATED []
 synonym: "exposure to Phenylhydrazin" RELATED []
 synonym: "exposure to Phenylhydrazine" RELATED []
+synonym: "exposure to PhNHNH2" RELATED []
 synonym: "phenylhydrazine exposure" EXACT []
 synonym: "phenylhydrazine exposure event" EXACT []
 is_a: ECTO:0000370 ! exposure to nitrogen
@@ -29445,7 +29481,7 @@ synonym: "exposure to Hydrazine" RELATED []
 synonym: "exposure to nitrogen hydride" RELATED []
 synonym: "hydrazine exposure" EXACT []
 synonym: "hydrazine exposure event" EXACT []
-is_a: ECTO:0000137 ! exposure to inorganic
+is_a: ECTO:0000137 ! exposure to inorganic molecular entity
 is_a: ECTO:0000370 ! exposure to nitrogen
 is_a: ECTO:0000557 ! exposure to inhibitor
 
@@ -30370,6 +30406,7 @@ def: "A exposure event involving the interaction of an exposure receptor to nitr
 synonym: "exposure to MeNO2" RELATED []
 synonym: "nitromethane exposure" EXACT []
 synonym: "nitromethane exposure event" EXACT []
+is_a: ECTO:0000135 ! exposure to organic
 is_a: ECTO:0000370 ! exposure to nitrogen
 is_a: ECTO:0000663 ! exposure to polar aprotic solvent
 is_a: ECTO:0000788 ! exposure to explosive
@@ -30776,7 +30813,10 @@ id: ECTO:0001856
 name: exposure to phenolphthalein
 def: "A exposure event involving the interaction of an exposure receptor to phenolphthalein. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "exposure to 3,3-Bis(4-hydroxyphenyl)phthalide" RELATED []
+synonym: "exposure to euchessina" RELATED []
 synonym: "exposure to Phenolphthalein" RELATED []
+synonym: "exposure to phthalimetten" RELATED []
+synonym: "exposure to phthalin" RELATED []
 synonym: "phenolphthalein exposure" EXACT []
 synonym: "phenolphthalein exposure event" EXACT []
 is_a: ECTO:0001997 ! exposure to phenols
@@ -30835,6 +30875,7 @@ def: "A exposure event involving the interaction of an exposure receptor to 1,4-
 synonym: "1,4-phenylenediamine exposure" EXACT []
 synonym: "1,4-phenylenediamine exposure event" EXACT []
 synonym: "exposure to 1,4-Benzenediamine" RELATED []
+synonym: "exposure to 1,4-diaminobenzene" RELATED []
 synonym: "exposure to 4-Aminoaniline" RELATED []
 synonym: "exposure to 4-phenylenediamine" RELATED []
 synonym: "exposure to benzene-1,4-diamine" RELATED []
@@ -31357,7 +31398,7 @@ synonym: "exposure to Hydrazoic acid, sodium salt" RELATED []
 synonym: "exposure to Natriumazid" RELATED []
 synonym: "sodium azide exposure" EXACT []
 synonym: "sodium azide exposure event" EXACT []
-is_a: ECTO:0000137 ! exposure to inorganic
+is_a: ECTO:0000137 ! exposure to inorganic molecular entity
 is_a: ECTO:0000375 ! exposure to salt
 is_a: ECTO:0000523 ! exposure to mutagen
 is_a: ECTO:0000545 ! exposure to antibacterial agent
@@ -31386,7 +31427,7 @@ synonym: "exposure to Nitrite de sodium" RELATED []
 synonym: "exposure to Nitrito sodico" RELATED []
 synonym: "sodium nitrite exposure" EXACT []
 synonym: "sodium nitrite exposure event" EXACT []
-is_a: ECTO:0000137 ! exposure to inorganic
+is_a: ECTO:0000137 ! exposure to inorganic molecular entity
 is_a: ECTO:0000370 ! exposure to nitrogen
 is_a: ECTO:0000375 ! exposure to salt
 is_a: ECTO:0000595 ! exposure to antihypertensive agent
@@ -31503,10 +31544,15 @@ id: ECTO:0001899
 name: exposure to temephos
 def: "A exposure event involving the interaction of an exposure receptor to temephos. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "exposure to Abate" RELATED []
+synonym: "exposure to O,O'-(thiodi-4,1-phenylene) bis(O,O-dimethyl phosphorothioate)" RELATED []
 synonym: "exposure to O,O'-(Thiodi-p-phenylene) O,O,O',O'-tetramethyl bis(phosphorothioate)" RELATED []
+synonym: "exposure to O,O,O',O'-tetramethyl O,O'-(sulfanediyldi-4,1-phenylene) bis(phosphorothioate)" RELATED []
 synonym: "exposure to O,O,O',O'-tetramethyl O,O'-(sulfanediyldibenzene-4,1-diyl) bis(phosphorothioate)" RELATED []
 synonym: "exposure to O,O,O',O'-tetramethyl O,O'-(sulfanediyldibenzene-4,1-diyl) bis(thiophosphate)" RELATED []
+synonym: "exposure to O,O,O',O'-tetramethyl O,O'-thiodi-p-phenylene bis(phosphorothioate)" RELATED []
+synonym: "exposure to O,O,O',O'-tetramethyl O,O'-thiodi-p-phenylene diphosphorothioate" RELATED []
 synonym: "exposure to Phosphorothioic acid, O,O'-(thiodi-4,1-phenylene) O,O,O',O'-tetramethyl ester" RELATED []
+synonym: "exposure to temefos" RELATED []
 synonym: "temephos exposure" EXACT []
 synonym: "temephos exposure event" EXACT []
 is_a: ECTO:0000250 ! exposure to organophosphorus compound
@@ -32832,7 +32878,7 @@ synonym: "exposure to salt" RELATED []
 synonym: "exposure to table salt" RELATED []
 synonym: "sodium chloride exposure" EXACT []
 synonym: "sodium chloride exposure event" EXACT []
-is_a: ECTO:0000137 ! exposure to inorganic
+is_a: ECTO:0000137 ! exposure to inorganic molecular entity
 is_a: ECTO:0000375 ! exposure to salt
 
 [Term]
@@ -32882,7 +32928,7 @@ synonym: "exposure to muriate of potash" RELATED []
 synonym: "exposure to sylvite" RELATED []
 synonym: "potassium chloride exposure" EXACT []
 synonym: "potassium chloride exposure event" EXACT []
-is_a: ECTO:0000137 ! exposure to inorganic
+is_a: ECTO:0000137 ! exposure to inorganic molecular entity
 is_a: ECTO:0000375 ! exposure to salt
 is_a: ECTO:0000547 ! exposure to agrochemical
 
@@ -33001,6 +33047,7 @@ is_a: ECTO:0000643 ! exposure to ryanodine receptor modulator
 id: ECTO:0002002
 name: exposure to steroid
 def: "A exposure event involving the interaction of an exposure receptor to steroid. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "exposure to a steroid" RELATED []
 synonym: "exposure to Steroid" RELATED []
 synonym: "exposure to steroids" RELATED []
 synonym: "steroid exposure" EXACT []
@@ -33161,7 +33208,7 @@ synonym: "exposure to lithii chloridum" RELATED []
 synonym: "exposure to Lithiumchlorid" RELATED []
 synonym: "lithium chloride exposure" EXACT []
 synonym: "lithium chloride exposure event" EXACT []
-is_a: ECTO:0000137 ! exposure to inorganic
+is_a: ECTO:0000137 ! exposure to inorganic molecular entity
 is_a: ECTO:0000375 ! exposure to salt
 is_a: ECTO:0000568 ! exposure to psychotropic drug
 is_a: ECTO:0000577 ! exposure to central nervous system depressant
@@ -33856,8 +33903,11 @@ name: exposure to acetic anhydride
 def: "A exposure event involving the interaction of an exposure receptor to acetic anhydride. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "acetic anhydride exposure" EXACT []
 synonym: "acetic anhydride exposure event" EXACT []
+synonym: "exposure to (MeCO)2O" RELATED []
+synonym: "exposure to Ac2O" RELATED []
 synonym: "exposure to acetanhydride" RELATED []
 synonym: "exposure to acetic acid anhydride" RELATED []
+synonym: "exposure to acetyl acetate" RELATED []
 synonym: "exposure to acetyl oxide" RELATED []
 synonym: "exposure to anhydride acetique" RELATED []
 synonym: "exposure to Essigsaeureanhydrid" RELATED []
@@ -33866,6 +33916,7 @@ synonym: "exposure to ethanoic anhydride" RELATED []
 is_a: ECTO:0000135 ! exposure to organic
 is_a: ECTO:0000371 ! exposure to oxygen molecular entity
 is_a: ECTO:0000521 ! exposure to metabolite
+is_a: ECTO:0000552 ! exposure to reagent
 
 [Term]
 id: ECTO:0002065
@@ -33959,7 +34010,7 @@ synonym: "exposure to Ammonium chloride" RELATED []
 synonym: "exposure to Ammoniumchlorid" RELATED []
 synonym: "exposure to azanium chloride" RELATED []
 synonym: "exposure to NH4Cl" RELATED []
-is_a: ECTO:0000137 ! exposure to inorganic
+is_a: ECTO:0000137 ! exposure to inorganic molecular entity
 is_a: ECTO:0000370 ! exposure to nitrogen
 is_a: ECTO:0000375 ! exposure to salt
 
@@ -33977,7 +34028,7 @@ synonym: "exposure to arsine" RELATED []
 synonym: "exposure to As" RELATED []
 synonym: "exposure to AsH3" RELATED []
 synonym: "exposure to trihydridoarsenic" RELATED []
-is_a: ECTO:0000137 ! exposure to inorganic
+is_a: ECTO:0000137 ! exposure to inorganic molecular entity
 is_a: ECTO:0000251 ! exposure to arsenic
 
 [Term]
@@ -34001,7 +34052,9 @@ synonym: "diboron trioxide exposure event" EXACT []
 synonym: "exposure to Boric anhydride" RELATED []
 synonym: "exposure to Boric oxide" RELATED []
 synonym: "exposure to Boron oxide" RELATED []
-is_a: ECTO:0000137 ! exposure to inorganic
+synonym: "exposure to boron sesquioxide" RELATED []
+synonym: "exposure to boron trioxide" RELATED []
+is_a: ECTO:0000137 ! exposure to inorganic molecular entity
 is_a: ECTO:0000138 ! exposure to boron
 is_a: ECTO:0000371 ! exposure to oxygen molecular entity
 
@@ -34149,7 +34202,7 @@ synonym: "exposure to hydrated lime" RELATED []
 synonym: "exposure to Kalziumhydroxid" RELATED []
 synonym: "exposure to Loeschkalk" RELATED []
 synonym: "exposure to slaked lime" RELATED []
-is_a: ECTO:0000137 ! exposure to inorganic
+is_a: ECTO:0000137 ! exposure to inorganic molecular entity
 is_a: ECTO:0000371 ! exposure to oxygen molecular entity
 is_a: ECTO:0000872 ! exposure to astringent
 
@@ -34264,7 +34317,8 @@ synonym: "caesium hydroxide exposure event" EXACT []
 synonym: "exposure to cesium hydrate" RELATED []
 synonym: "exposure to cesium hydroxide" RELATED []
 synonym: "exposure to CsOH" RELATED []
-is_a: ECTO:0000137 ! exposure to inorganic
+is_a: ECTO:0000137 ! exposure to inorganic molecular entity
+is_a: ECTO:0000149 ! exposure to caesium molecular entity
 is_a: ECTO:0000371 ! exposure to oxygen molecular entity
 
 [Term]
@@ -34515,7 +34569,7 @@ synonym: "diborane(6) exposure" EXACT []
 synonym: "diborane(6) exposure event" EXACT []
 synonym: "exposure to diborane" RELATED []
 synonym: "exposure to diboron hexahydride" RELATED []
-is_a: ECTO:0000137 ! exposure to inorganic
+is_a: ECTO:0000137 ! exposure to inorganic molecular entity
 is_a: ECTO:0000138 ! exposure to boron
 
 [Term]
@@ -34571,10 +34625,13 @@ synonym: "exposure to beta-(diethylamino)ethyl alcohol" RELATED []
 synonym: "exposure to beta-hydroxytriethylamine" RELATED []
 synonym: "exposure to Diethyl(2-hydroxyethyl)amine" RELATED []
 synonym: "exposure to Diethylaminoethanol" RELATED []
+synonym: "exposure to diethylethanolamine" RELATED []
+synonym: "exposure to diethylmonoethanolamine" RELATED []
 synonym: "exposure to N,N-Diethyl-2-aminoethanol" RELATED []
+synonym: "exposure to N,N-diethyl-N-(beta-hydroxyethyl)amine" RELATED []
 synonym: "exposure to N,N-Diethylethanolamine" RELATED []
 is_a: ECTO:0000155 ! exposure to organonitrogen compound
-is_a: ECTO:0000314 ! exposure to alcohol
+is_a: ECTO:0001978 ! exposure to primary alcohol
 
 [Term]
 id: ECTO:0002134
@@ -34904,7 +34961,7 @@ synonym: "exposure to germanium tetrahydride" RELATED []
 synonym: "exposure to tetrahydridogermanium" RELATED []
 synonym: "germane exposure" EXACT []
 synonym: "germane exposure event" EXACT []
-is_a: ECTO:0000137 ! exposure to inorganic
+is_a: ECTO:0000137 ! exposure to inorganic molecular entity
 
 [Term]
 id: ECTO:0002163
@@ -35034,7 +35091,7 @@ synonym: "exposure to iron(II) sulfate" RELATED []
 synonym: "exposure to iron(II) sulfate (1:1)" RELATED []
 synonym: "iron(2+) sulfate (anhydrous) exposure" EXACT []
 synonym: "iron(2+) sulfate (anhydrous) exposure event" EXACT []
-is_a: ECTO:0000137 ! exposure to inorganic
+is_a: ECTO:0000137 ! exposure to inorganic molecular entity
 is_a: ECTO:0000375 ! exposure to salt
 is_a: ECTO:0000481 ! exposure to transition element
 is_a: ECTO:0000785 ! exposure to reducing agent
@@ -35077,6 +35134,7 @@ synonym: "exposure to 2-methyl-4-butanol" RELATED []
 synonym: "exposure to 3-methyl-1-butanol" RELATED []
 synonym: "exposure to 3-methylbutan-1-ol" RELATED []
 synonym: "exposure to 3-Methylbutanol" RELATED []
+synonym: "exposure to 3-methylbutanol" RELATED []
 synonym: "exposure to alcool isoamylique" RELATED []
 synonym: "exposure to i-amyl alcohol" RELATED []
 synonym: "exposure to Iso-amylalkohol" RELATED []
@@ -35444,7 +35502,7 @@ synonym: "exposure to oxidodinitrogen(N--N)" RELATED []
 synonym: "exposure to oxyde nitreux" RELATED []
 synonym: "exposure to protoxyde d'azote" RELATED []
 synonym: "exposure to Stickstoff(I)-oxid" RELATED []
-is_a: ECTO:0000137 ! exposure to inorganic
+is_a: ECTO:0000137 ! exposure to inorganic molecular entity
 is_a: ECTO:0000370 ! exposure to nitrogen
 is_a: ECTO:0000371 ! exposure to oxygen molecular entity
 is_a: ECTO:0000573 ! exposure to analgesic
@@ -35598,7 +35656,7 @@ synonym: "exposure to Phosphorwasserstoff" RELATED []
 synonym: "exposure to trihydridophosphorus" RELATED []
 synonym: "phosphane exposure" EXACT []
 synonym: "phosphane exposure event" EXACT []
-is_a: ECTO:0000137 ! exposure to inorganic
+is_a: ECTO:0000137 ! exposure to inorganic molecular entity
 is_a: ECTO:0000530 ! exposure to pesticide
 is_a: ECTO:0000725 ! exposure to carcinogenic agent
 is_a: ECTO:0001863 ! exposure to phosphine
@@ -35655,6 +35713,7 @@ name: exposure to phosphorus trichloride
 def: "A exposure event involving the interaction of an exposure receptor to phosphorus trichloride. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "exposure to [PCl3]" RELATED []
 synonym: "exposure to PCl3" RELATED []
+synonym: "exposure to phosphorous trichloride" RELATED []
 synonym: "exposure to phosphorus(III) chloride" RELATED []
 synonym: "exposure to trichloridophosphorus" RELATED []
 synonym: "exposure to trichlorophosphane" RELATED []
@@ -35675,7 +35734,7 @@ synonym: "exposure to potasse caustique" RELATED []
 synonym: "exposure to Potassium hydroxide" RELATED []
 synonym: "potassium hydroxide exposure" EXACT []
 synonym: "potassium hydroxide exposure event" EXACT []
-is_a: ECTO:0000137 ! exposure to inorganic
+is_a: ECTO:0000137 ! exposure to inorganic molecular entity
 is_a: ECTO:0000371 ! exposure to oxygen molecular entity
 
 [Term]
@@ -35795,7 +35854,7 @@ synonym: "exposure to silicon tetrahydride" RELATED []
 synonym: "exposure to tetrahydridosilicon" RELATED []
 synonym: "silane exposure" EXACT []
 synonym: "silane exposure event" EXACT []
-is_a: ECTO:0000137 ! exposure to inorganic
+is_a: ECTO:0000137 ! exposure to inorganic molecular entity
 
 [Term]
 id: ECTO:0002250
@@ -35817,7 +35876,7 @@ synonym: "exposure to trisodium hexafluoridoaluminate" RELATED []
 synonym: "exposure to trisodium hexafluoroaluminate(3-)" RELATED []
 synonym: "trisodium hexafluoroaluminate exposure" EXACT []
 synonym: "trisodium hexafluoroaluminate exposure event" EXACT []
-is_a: ECTO:0000137 ! exposure to inorganic
+is_a: ECTO:0000137 ! exposure to inorganic molecular entity
 is_a: ECTO:0000375 ! exposure to salt
 
 [Term]
@@ -35832,7 +35891,7 @@ synonym: "exposure to stibine" RELATED []
 synonym: "exposure to trihydridoantimony" RELATED []
 synonym: "stibane exposure" EXACT []
 synonym: "stibane exposure event" EXACT []
-is_a: ECTO:0000137 ! exposure to inorganic
+is_a: ECTO:0000137 ! exposure to inorganic molecular entity
 is_a: ECTO:0001563 ! exposure to antimony
 
 [Term]
@@ -35954,6 +36013,7 @@ synonym: "exposure to sulfur dichloride oxide" RELATED []
 synonym: "exposure to Sulfur oxychloride" RELATED []
 synonym: "exposure to sulfurous dichloride" RELATED []
 synonym: "exposure to Sulfurous oxychloride" RELATED []
+synonym: "exposure to thionyl chloride" RELATED []
 synonym: "thionyl dichloride exposure" EXACT []
 synonym: "thionyl dichloride exposure event" EXACT []
 is_a: ECTO:0000231 ! exposure to chemical entity
@@ -35974,7 +36034,7 @@ synonym: "exposure to tin(IV) oxide" RELATED []
 synonym: "exposure to White tin oxide" RELATED []
 synonym: "tin dioxide exposure" EXACT []
 synonym: "tin dioxide exposure event" EXACT []
-is_a: ECTO:0000137 ! exposure to inorganic
+is_a: ECTO:0000137 ! exposure to inorganic molecular entity
 is_a: ECTO:0000371 ! exposure to oxygen molecular entity
 is_a: ECTO:0001576 ! exposure to tin
 
@@ -35983,6 +36043,7 @@ id: ECTO:0002265
 name: exposure to titanium dioxide
 def: "A exposure event involving the interaction of an exposure receptor to titanium dioxide. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "exposure to [TiO2]" RELATED []
+synonym: "exposure to bis(oxido)titanium" RELATED []
 synonym: "exposure to dioxido de titanio" RELATED []
 synonym: "exposure to dioxyde de titane" RELATED []
 synonym: "exposure to oxido de titanio(IV)" RELATED []
@@ -36082,7 +36143,7 @@ def: "A exposure event involving the interaction of an exposure receptor to diva
 synonym: "divanadium pentaoxide exposure" EXACT []
 synonym: "divanadium pentaoxide exposure event" EXACT []
 synonym: "exposure to vanadium(V) oxide" RELATED []
-is_a: ECTO:0000137 ! exposure to inorganic
+is_a: ECTO:0000137 ! exposure to inorganic molecular entity
 is_a: ECTO:0000371 ! exposure to oxygen molecular entity
 is_a: ECTO:0001936 ! exposure to vanadium molecular entity
 
@@ -36111,7 +36172,7 @@ synonym: "exposure to Zinkchlorid" RELATED []
 synonym: "exposure to ZnCl2" RELATED []
 synonym: "zinc dichloride exposure" EXACT []
 synonym: "zinc dichloride exposure event" EXACT []
-is_a: ECTO:0000137 ! exposure to inorganic
+is_a: ECTO:0000137 ! exposure to inorganic molecular entity
 is_a: ECTO:0000375 ! exposure to salt
 is_a: ECTO:0000487 ! exposure to chemical with chemical role
 is_a: ECTO:0000557 ! exposure to inhibitor
@@ -36389,7 +36450,7 @@ synonym: "exposure to sodium bisulphite" RELATED []
 synonym: "exposure to sodium hydrogen sulfite" RELATED []
 synonym: "sodium hydrogensulfite exposure" EXACT []
 synonym: "sodium hydrogensulfite exposure event" EXACT []
-is_a: ECTO:0000137 ! exposure to inorganic
+is_a: ECTO:0000137 ! exposure to inorganic molecular entity
 is_a: ECTO:0000375 ! exposure to salt
 is_a: ECTO:0000523 ! exposure to mutagen
 
@@ -36457,7 +36518,7 @@ synonym: "exposure to Sodium hydroxide" RELATED []
 synonym: "exposure to soude caustique" RELATED []
 synonym: "sodium hydroxide exposure" EXACT []
 synonym: "sodium hydroxide exposure event" EXACT []
-is_a: ECTO:0000137 ! exposure to inorganic
+is_a: ECTO:0000137 ! exposure to inorganic molecular entity
 is_a: ECTO:0000371 ! exposure to oxygen molecular entity
 
 [Term]
@@ -36511,6 +36572,8 @@ id: ECTO:0002303
 name: exposure to organochlorine insecticide
 def: "A exposure event involving the interaction of an exposure receptor to organochlorine insecticide. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
 synonym: "exposure to chlororganische Insektizide" RELATED []
+synonym: "exposure to organochloride insecticide" RELATED []
+synonym: "exposure to organochloride insecticides" RELATED []
 synonym: "exposure to organochlorine insecticides" RELATED []
 synonym: "exposure to Organochlorinsektizid" RELATED []
 synonym: "organochlorine insecticide exposure" EXACT []
@@ -36522,7 +36585,10 @@ is_a: ECTO:0002304 ! exposure to organochlorine pesticide
 id: ECTO:0002304
 name: exposure to organochlorine pesticide
 def: "A exposure event involving the interaction of an exposure receptor to organochlorine pesticide. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion." []
+synonym: "exposure to Chlororganische Pestizide" RELATED []
 synonym: "exposure to chlororganische Pestizide" RELATED []
+synonym: "exposure to organochloride pesticide" RELATED []
+synonym: "exposure to organochloride pesticides" RELATED []
 synonym: "exposure to organochlorine pesticides" RELATED []
 synonym: "exposure to Organochlorpestizid" RELATED []
 synonym: "organochlorine pesticide exposure" EXACT []
@@ -36743,7 +36809,7 @@ synonym: "barium chloride exposure" EXACT []
 synonym: "barium chloride exposure event" EXACT []
 synonym: "exposure to BaCl2" RELATED []
 synonym: "exposure to barium dichloride" RELATED []
-is_a: ECTO:0000137 ! exposure to inorganic
+is_a: ECTO:0000137 ! exposure to inorganic molecular entity
 is_a: ECTO:0000375 ! exposure to salt
 is_a: ECTO:0000704 ! exposure to potassium channel blocker
 is_a: ECTO:0001564 ! exposure to barium
@@ -36821,8 +36887,9 @@ synonym: "copper(II) oxide exposure event" EXACT []
 synonym: "exposure to copper oxide" RELATED []
 synonym: "exposure to Cu(II) oxide" RELATED []
 synonym: "exposure to cupric oxide" RELATED []
-is_a: ECTO:0000137 ! exposure to inorganic
+is_a: ECTO:0000137 ! exposure to inorganic molecular entity
 is_a: ECTO:0000371 ! exposure to oxygen molecular entity
+is_a: ECTO:0001568 ! exposure to copper
 
 [Term]
 id: ECTO:0002326
@@ -37165,7 +37232,7 @@ synonym: "exposure to hydrogen selenide" RELATED []
 synonym: "exposure to hydroselenic acid" RELATED []
 synonym: "selane exposure" EXACT []
 synonym: "selane exposure event" EXACT []
-is_a: ECTO:0000137 ! exposure to inorganic
+is_a: ECTO:0000137 ! exposure to inorganic molecular entity
 is_a: ECTO:0000881 ! exposure to mouse metabolite
 is_a: ECTO:0000900 ! exposure to Escherichia coli metabolite
 is_a: ECTO:0001574 ! exposure to selenium
@@ -37283,8 +37350,11 @@ def: "A exposure event involving the interaction of an exposure receptor to p-me
 synonym: "exposure to 1-Hydroxy-4-methoxybenzene" RELATED []
 synonym: "exposure to 4-Hydroxyanisole" RELATED []
 synonym: "exposure to 4-Methoxyphenol" RELATED []
+synonym: "exposure to hydroquinone methyl ether" RELATED []
 synonym: "exposure to Mequinol" RELATED []
 synonym: "exposure to p-Guaiacol" RELATED []
+synonym: "exposure to p-Hydroxyanisol" RELATED []
+synonym: "exposure to p-Hydroxymethoxybenzene" RELATED []
 synonym: "p-methoxyphenol exposure" EXACT []
 synonym: "p-methoxyphenol exposure event" EXACT []
 is_a: ECTO:0000244 ! exposure to ether
@@ -37620,7 +37690,7 @@ synonym: "exposure to Sodium pyrophosphate" RELATED []
 synonym: "exposure to Tetrasodium pyrophosphate" RELATED []
 synonym: "sodium diphosphate exposure" EXACT []
 synonym: "sodium diphosphate exposure event" EXACT []
-is_a: ECTO:0000137 ! exposure to inorganic
+is_a: ECTO:0000137 ! exposure to inorganic molecular entity
 is_a: ECTO:0000375 ! exposure to salt
 is_a: ECTO:0000631 ! exposure to chelator
 is_a: ECTO:0000781 ! exposure to food emulsifier

@@ -37,6 +37,11 @@ name: C19-steroid
 is_a: CHEBI:35341 ! steroid
 
 [Term]
+id: CHEBI:134179
+name: volatile organic compound
+is_a: CHEBI:72695 ! organic molecule
+
+[Term]
 id: CHEBI:15022
 name: electron donor
 is_a: CHEBI:17891 ! donor
@@ -207,6 +212,12 @@ name: ribonucleoside triphosphate
 is_a: CHEBI:17326 ! nucleoside triphosphate
 
 [Term]
+id: CHEBI:17997
+name: dinitrogen
+is_a: CHEBI:25362 ! elemental molecule
+is_a: CHEBI:33266 ! diatomic nitrogen
+
+[Term]
 id: CHEBI:18059
 name: lipid
 is_a: CHEBI:50860 ! organic molecular entity
@@ -229,12 +240,6 @@ is_a: CHEBI:16646 ! carbohydrate
 is_a: CHEBI:33694 ! biomacromolecule
 
 [Term]
-id: CHEBI:18254
-name: ribonucleoside
-is_a: CHEBI:33838 ! nucleoside
-is_a: CHEBI:47019 ! dihydroxytetrahydrofuran
-
-[Term]
 id: CHEBI:18291
 name: manganese atom
 is_a: CHEBI:33352 ! manganese group element atom
@@ -251,12 +256,6 @@ name: sulfur dioxide
 is_a: CHEBI:48154 ! sulfur oxide
 
 [Term]
-id: CHEBI:21731
-name: N-glycosyl compound
-is_a: CHEBI:35352 ! organonitrogen compound
-is_a: CHEBI:63161 ! glycosyl compound
-
-[Term]
 id: CHEBI:22160
 name: acetamides
 is_a: CHEBI:37622 ! carboxamide
@@ -264,13 +263,7 @@ is_a: CHEBI:37622 ! carboxamide
 [Term]
 id: CHEBI:22256
 name: adenosine phosphate
-is_a: CHEBI:22260 ! adenosines
 is_a: CHEBI:61296 ! adenyl ribonucleotide
-
-[Term]
-id: CHEBI:22260
-name: adenosines
-is_a: CHEBI:26399 ! purine ribonucleoside
 
 [Term]
 id: CHEBI:22315
@@ -574,6 +567,7 @@ is_a: CHEBI:36963 ! organooxygen compound
 id: CHEBI:25701
 name: organic oxide
 is_a: CHEBI:25741 ! oxide
+is_a: CHEBI:72695 ! organic molecule
 
 [Term]
 id: CHEBI:25703
@@ -642,12 +636,6 @@ name: purine nucleoside triphosphate
 is_a: CHEBI:17326 ! nucleoside triphosphate
 
 [Term]
-id: CHEBI:26394
-name: purine nucleoside
-is_a: CHEBI:26401 ! purines
-is_a: CHEBI:33838 ! nucleoside
-
-[Term]
 id: CHEBI:26395
 name: purine nucleotide
 is_a: CHEBI:26401 ! purines
@@ -664,12 +652,6 @@ id: CHEBI:26398
 name: purine ribonucleoside triphosphate
 is_a: CHEBI:17972 ! ribonucleoside triphosphate
 is_a: CHEBI:26393 ! purine nucleoside triphosphate
-
-[Term]
-id: CHEBI:26399
-name: purine ribonucleoside
-is_a: CHEBI:18254 ! ribonucleoside
-is_a: CHEBI:26394 ! purine nucleoside
 
 [Term]
 id: CHEBI:26400
@@ -738,12 +720,6 @@ name: sulfur molecular entity
 is_a: CHEBI:33304 ! chalcogen molecular entity
 
 [Term]
-id: CHEBI:26912
-name: oxolanes
-is_a: CHEBI:25693 ! organic heteromonocyclic compound
-is_a: CHEBI:38104 ! oxacycle
-
-[Term]
 id: CHEBI:27026
 name: toxin
 is_a: CHEBI:25212 ! metabolite
@@ -773,6 +749,7 @@ is_a: CHEBI:33746 ! vanadium group molecular entity
 [Term]
 id: CHEBI:27338
 name: xylene
+is_a: CHEBI:134179 ! volatile organic compound
 is_a: CHEBI:38975 ! methylbenzene
 
 [Term]
@@ -813,6 +790,7 @@ id: CHEBI:27856
 name: acetamide
 is_a: CHEBI:22160 ! acetamides
 is_a: CHEBI:29347 ! monocarboxylic acid amide
+is_a: CHEBI:83628 ! N-acylammonia
 
 [Term]
 id: CHEBI:28112
@@ -937,6 +915,17 @@ is_a: CHEBI:33262 ! elemental oxygen
 id: CHEBI:33265
 name: triatomic oxygen
 is_a: CHEBI:33262 ! elemental oxygen
+
+[Term]
+id: CHEBI:33266
+name: diatomic nitrogen
+is_a: CHEBI:33267 ! elemental nitrogen
+
+[Term]
+id: CHEBI:33267
+name: elemental nitrogen
+is_a: CHEBI:33465 ! elemental pnictogen
+is_a: CHEBI:51143 ! nitrogen molecular entity
 
 [Term]
 id: CHEBI:33273
@@ -1080,6 +1069,13 @@ id: CHEBI:33459
 name: pnictogen oxoanion
 is_a: CHEBI:33302 ! pnictogen molecular entity
 is_a: CHEBI:35406 ! oxoanion
+
+[Term]
+id: CHEBI:33465
+name: elemental pnictogen
+is_a: CHEBI:24835 ! inorganic molecular entity
+is_a: CHEBI:33259 ! elemental molecular entity
+is_a: CHEBI:33302 ! pnictogen molecular entity
 
 [Term]
 id: CHEBI:33497
@@ -1351,13 +1347,6 @@ id: CHEBI:33836
 name: benzenoid aromatic compound
 is_a: CHEBI:33598 ! carbocyclic compound
 is_a: CHEBI:33659 ! organic aromatic compound
-
-[Term]
-id: CHEBI:33838
-name: nucleoside
-is_a: CHEBI:21731 ! N-glycosyl compound
-is_a: CHEBI:26912 ! oxolanes
-is_a: CHEBI:61120 ! nucleobase-containing molecular entity
 
 [Term]
 id: CHEBI:33839
@@ -1935,6 +1924,16 @@ is_a: CHEBI:36683 ! organochlorine compound
 is_a: CHEBI:64708 ! one-carbon compound
 
 [Term]
+id: CHEBI:3992
+name: cyclic ketone
+is_a: CHEBI:17087 ! ketone
+
+[Term]
+id: CHEBI:46662
+name: mineral
+is_a: CHEBI:59999 ! chemical substance
+
+[Term]
 id: CHEBI:46721
 name: carbonate salt
 is_a: CHEBI:23016 ! carbonates
@@ -1958,24 +1957,16 @@ is_a: CHEBI:25693 ! organic heteromonocyclic compound
 is_a: CHEBI:38104 ! oxacycle
 
 [Term]
-id: CHEBI:47017
-name: tetrahydrofuranol
-is_a: CHEBI:26912 ! oxolanes
-
-[Term]
-id: CHEBI:47019
-name: dihydroxytetrahydrofuran
-is_a: CHEBI:47017 ! tetrahydrofuranol
-
-[Term]
 id: CHEBI:47032
 name: 1,4-dioxane
+is_a: CHEBI:134179 ! volatile organic compound
 is_a: CHEBI:46923 ! dioxane
 
 [Term]
 id: CHEBI:47788
 name: 3-oxo steroid
 is_a: CHEBI:35789 ! oxo steroid
+is_a: CHEBI:3992 ! cyclic ketone
 
 [Term]
 id: CHEBI:47867
@@ -2193,6 +2184,11 @@ is_a: CHEBI:33893 ! reagent
 is_a: CHEBI:39144 ! Lewis base
 
 [Term]
+id: CHEBI:59999
+name: chemical substance
+is_a: CHEBI:24431 ! chemical entity
+
+[Term]
 id: CHEBI:60272
 name: aluminium ion
 is_a: CHEBI:33628 ! elemental aluminium
@@ -2245,11 +2241,6 @@ id: CHEBI:63062
 name: aluminium cation
 is_a: CHEBI:25213 ! metal cation
 is_a: CHEBI:60272 ! aluminium ion
-
-[Term]
-id: CHEBI:63161
-name: glycosyl compound
-is_a: CHEBI:63299 ! carbohydrate derivative
 
 [Term]
 id: CHEBI:63248
@@ -2445,6 +2436,11 @@ name: Daphnia metabolite
 is_a: CHEBI:83039 ! crustacean metabolite
 
 [Term]
+id: CHEBI:83628
+name: N-acylammonia
+is_a: CHEBI:37622 ! carboxamide
+
+[Term]
 id: CHEBI:84055
 name: pentose phosphate
 is_a: CHEBI:33447 ! phospho sugar
@@ -2505,6 +2501,7 @@ synonym: "faeces" EXACT []
 synonym: "frass" RELATED []
 synonym: "pellet" RELATED []
 is_a: ENVO:02000022 ! excreta
+relationship: BFO:0000051 UBERON:0001988 ! has part feces
 
 [Term]
 id: ENVO:00002005
@@ -2512,6 +2509,7 @@ name: air
 is_a: ENVO:01000797 ! gaseous environmental material
 relationship: BFO:0000051 CHEBI:15379 ! has part dioxygen
 relationship: BFO:0000051 CHEBI:16526 ! has part carbon dioxide
+relationship: BFO:0000051 CHEBI:17997 ! has part dinitrogen
 relationship: BFO:0000051 CHEBI:36908 ! has part argon molecular entity
 relationship: BFO:0000051 ENVO:01000266 ! has part water vapour
 
@@ -2519,6 +2517,7 @@ relationship: BFO:0000051 ENVO:01000266 ! has part water vapour
 id: ENVO:00002006
 name: water
 is_a: ENVO:01000815 ! liquid environmental material
+relationship: BFO:0000051 CHEBI:15377 ! has part water
 
 [Term]
 id: ENVO:00002007
@@ -2534,6 +2533,7 @@ is_a: ENVO:01000814 ! solid environmental material
 id: ENVO:00002018
 name: sewage
 is_a: ENVO:00002001 ! waste water
+relationship: BFO:0000051 ENVO:00002276 ! has part animal waste material
 
 [Term]
 id: ENVO:00002044
@@ -2809,6 +2809,7 @@ is_a: ENVO:00010483 ! environmental material
 id: ENVO:01000256
 name: mineral material
 is_a: ENVO:01000814 ! solid environmental material
+relationship: BFO:0000051 CHEBI:46662 ! has part mineral
 
 [Term]
 id: ENVO:01000266
@@ -2817,6 +2818,7 @@ synonym: "aqueous vapor" EXACT [https://en.wikipedia.org/wiki/Water_vapor]
 synonym: "aqueous vapour" EXACT [https://en.wikipedia.org/wiki/Water_vapor]
 synonym: "water vapor" EXACT [https://en.wikipedia.org/wiki/Water_vapor]
 is_a: ENVO:01000797 ! gaseous environmental material
+relationship: BFO:0000051 CHEBI:15377 ! has part water
 
 [Term]
 id: ENVO:01000267
@@ -2831,6 +2833,13 @@ is_a: ENVO:01000266 ! water vapour
 intersection_of: ENVO:01000266 ! water vapour
 intersection_of: BFO:0000050 ENVO:01000267 ! part of atmosphere
 relationship: BFO:0000050 ENVO:01000267 ! part of atmosphere
+
+[Term]
+id: ENVO:01000277
+name: water ice
+synonym: "ice" RELATED [http://www.eionet.europa.eu/gemet/concept/4131]
+is_a: ENVO:01000814 ! solid environmental material
+relationship: BFO:0000051 ENVO:00002006 ! has part water
 
 [Term]
 id: ENVO:01000281
@@ -2848,6 +2857,7 @@ id: ENVO:01000373
 name: biological waste material
 synonym: "biological waste" BROAD []
 is_a: ENVO:00002264 ! waste material
+relationship: BFO:0000051 ENVO:00002873 ! has part organic waste material
 
 [Term]
 id: ENVO:01000405
@@ -2860,6 +2870,8 @@ id: ENVO:01000406
 name: snow
 synonym: "snow" RELATED [http://www.eionet.europa.eu/gemet/concept/7769]
 is_a: ENVO:00010483 ! environmental material
+relationship: BFO:0000051 ENVO:00002005 ! has part air
+relationship: BFO:0000051 ENVO:01000277 ! has part water ice
 
 [Term]
 id: ENVO:01000415
@@ -2882,6 +2894,7 @@ id: ENVO:01000451
 name: atmospheric carbon dioxide
 is_a: ENVO:01000797 ! gaseous environmental material
 relationship: BFO:0000050 ENVO:01000267 ! part of atmosphere
+relationship: BFO:0000051 CHEBI:16526 ! has part carbon dioxide
 
 [Term]
 id: ENVO:01000460
@@ -2935,7 +2948,7 @@ id: ENVO:01000690
 name: mass wasting
 synonym: "mass movement" BROAD []
 synonym: "slope movement" EXACT []
-is_a: ENVO:02500000 ! environmental system process
+is_a: ENVO:03000010 ! material transport process
 
 [Term]
 id: ENVO:01000692
@@ -2952,12 +2965,13 @@ is_a: ENVO:01000690 ! mass wasting
 id: ENVO:01000701
 name: volcanic ash
 is_a: ENVO:00010483 ! environmental material
+relationship: BFO:0000051 CHEBI:30563 ! has part silicon dioxide
 
 [Term]
 id: ENVO:01000703
 name: hydrological precipitation process
 synonym: "precipitation" BROAD []
-is_a: ENVO:02500000 ! environmental system process
+is_a: ENVO:01000875 ! precipitation process
 
 [Term]
 id: ENVO:01000705
@@ -3003,7 +3017,7 @@ is_a: ENVO:02500002 ! flooding
 id: ENVO:01000742
 name: carbon-bearing gas emission process
 synonym: "carbon emission process" BROAD []
-is_a: ENVO:02500000 ! environmental system process
+is_a: ENVO:03000093 ! hydrocarbon gas emission process
 
 [Term]
 id: ENVO:01000769
@@ -3032,31 +3046,41 @@ name: liquid environmental material
 is_a: ENVO:00010483 ! environmental material
 
 [Term]
+id: ENVO:01000875
+name: precipitation process
+is_a: ENVO:03000010 ! material transport process
+
+[Term]
 id: ENVO:02000019
 name: bodily fluid
 is_a: ENVO:01000155 ! organic material
+relationship: BFO:0000051 UBERON:0006314 ! has part bodily fluid
 
 [Term]
 id: ENVO:02000020
 name: blood
 is_a: ENVO:02000019 ! bodily fluid
+relationship: BFO:0000051 UBERON:0000178 ! has part blood
 
 [Term]
 id: ENVO:02000021
 name: amniotic fluid
 is_a: ENVO:02000019 ! bodily fluid
+relationship: BFO:0000051 UBERON:0000173 ! has part amniotic fluid
 
 [Term]
 id: ENVO:02000022
 name: excreta
 is_a: ENVO:00002264 ! waste material
 is_a: ENVO:02000019 ! bodily fluid
+relationship: BFO:0000051 UBERON:0000174 ! has part excreta
 
 [Term]
 id: ENVO:02000023
 name: bile
 synonym: "gall" RELATED []
 is_a: ENVO:02000019 ! bodily fluid
+relationship: BFO:0000051 UBERON:0001970 ! has part bile
 
 [Term]
 id: ENVO:02500000
@@ -3158,6 +3182,21 @@ is_a: ENVO:02500036 ! environmental pollution
 id: ENVO:02500044
 name: urban pollution
 is_a: ENVO:02500036 ! environmental pollution
+
+[Term]
+id: ENVO:03000010
+name: material transport process
+is_a: ENVO:02500000 ! environmental system process
+
+[Term]
+id: ENVO:03000092
+name: gas emission process
+is_a: ENVO:03000010 ! material transport process
+
+[Term]
+id: ENVO:03000093
+name: hydrocarbon gas emission process
+is_a: ENVO:03000092 ! gas emission process
 
 [Term]
 id: ENVO:1000745
@@ -3272,6 +3311,37 @@ synonym: "neural fiber bundle" EXACT []
 is_a: UBERON:0005162 ! multi cell part structure
 
 [Term]
+id: UBERON:0000173
+name: amniotic fluid
+synonym: "acqua amnii" RELATED []
+synonym: "liquor amnii" RELATED []
+is_a: UBERON:0000463 ! organism substance
+
+[Term]
+id: UBERON:0000174
+name: excreta
+synonym: "excreted substance" EXACT []
+synonym: "excretion" RELATED []
+synonym: "portion of excreted substance" EXACT []
+synonym: "waste substance" EXACT []
+is_a: UBERON:0000463 ! organism substance
+
+[Term]
+id: UBERON:0000178
+name: blood
+synonym: "portion of blood" EXACT []
+synonym: "vertebrate blood" EXACT []
+synonym: "whole blood" RELATED []
+is_a: UBERON:0000179 ! haemolymphatic fluid
+
+[Term]
+id: UBERON:0000179
+name: haemolymphatic fluid
+synonym: "blood or blood analog" RELATED []
+synonym: "circulating fluid" RELATED []
+is_a: UBERON:0006314 ! bodily fluid
+
+[Term]
 id: UBERON:0000344
 name: mucosa
 synonym: "mucosa of organ" EXACT []
@@ -3282,6 +3352,28 @@ synonym: "organ mucosa" EXACT []
 synonym: "region of mucosa" RELATED []
 synonym: "tunica mucosa" RELATED []
 is_a: UBERON:0004923 ! organ component layer
+
+[Term]
+id: UBERON:0000456
+name: bodily secretion
+synonym: "exocrine gland fluid" RELATED []
+synonym: "exocrine gland fluid or secretion" RELATED []
+synonym: "exocrine gland fluid/secretion" EXACT []
+synonym: "exocrine gland secretion" RELATED []
+synonym: "external secretion" RELATED []
+synonym: "secreted substance" EXACT []
+synonym: "secretion" BROAD []
+is_a: UBERON:0000463 ! organism substance
+
+[Term]
+id: UBERON:0000463
+name: organism substance
+synonym: "body fluid or substance" EXACT []
+synonym: "body substance" EXACT []
+synonym: "organism substance" EXACT []
+synonym: "portion of body substance" EXACT []
+synonym: "portion of organism substance" EXACT []
+is_a: UBERON:0000465 ! material anatomical entity
 
 [Term]
 id: UBERON:0000465
@@ -3366,9 +3458,54 @@ name: pancreas
 is_a: UBERON:0002075 ! viscus
 
 [Term]
+id: UBERON:0001970
+name: bile
+synonym: "fel" RELATED []
+synonym: "gall" RELATED []
+is_a: UBERON:0000456 ! bodily secretion
+is_a: UBERON:0006314 ! bodily fluid
+
+[Term]
+id: UBERON:0001988
+name: feces
+synonym: "cow dung" NARROW []
+synonym: "cow pat" NARROW []
+synonym: "droppings" RELATED []
+synonym: "dung" NARROW []
+synonym: "excrement" RELATED []
+synonym: "excreta" BROAD []
+synonym: "faeces" EXACT []
+synonym: "fecal material" EXACT []
+synonym: "fecal matter" EXACT []
+synonym: "fewmet" NARROW []
+synonym: "frass" NARROW []
+synonym: "guano" NARROW []
+synonym: "mati�res f�cales@fr" EXACT []
+synonym: "merde@fr" EXACT []
+synonym: "ordure" RELATED []
+synonym: "partie de la merde@fr" EXACT []
+synonym: "piece of shit" EXACT []
+synonym: "porci�n de mierda@es" EXACT []
+synonym: "portion of dung" NARROW []
+synonym: "portion of excrement" EXACT []
+synonym: "portion of faeces" EXACT []
+synonym: "portion of fecal material" EXACT []
+synonym: "portion of fecal matter" EXACT []
+synonym: "portion of feces" EXACT []
+synonym: "portion of guano" NARROW []
+synonym: "portion of scat" NARROW []
+synonym: "portionem cacas" EXACT []
+synonym: "scat" NARROW []
+synonym: "spoor" RELATED []
+synonym: "spraint" NARROW []
+synonym: "stool" EXACT []
+synonym: "teil der f�kalien@de" EXACT []
+is_a: UBERON:0000174 ! excreta
+
+[Term]
 id: UBERON:0002075
 name: viscus
-synonym: "Organsystem@ge" RELATED []
+synonym: "Organsystem@de" RELATED []
 synonym: "splanchnic tissue" RELATED []
 synonym: "viscera" RELATED []
 synonym: "visceral organ" EXACT []
@@ -3408,7 +3545,6 @@ synonym: "skin plus hypodermis" EXACT []
 synonym: "tegument" RELATED []
 synonym: "the integument" EXACT []
 synonym: "vertebrate integument" RELATED []
-is_a: UBERON:0003102 ! surface structure
 is_a: UBERON:0011216 ! organ system subdivision
 
 [Term]
@@ -3434,15 +3570,6 @@ synonym: "Druese" RELATED []
 synonym: "glandula" RELATED []
 synonym: "glandular organ" EXACT []
 is_a: UBERON:0000062 ! organ
-
-[Term]
-id: UBERON:0003102
-name: surface structure
-synonym: "anatomical surface feature" EXACT []
-synonym: "surface feature" RELATED []
-synonym: "surface region" RELATED []
-synonym: "surface structures" RELATED []
-is_a: UBERON:0000061 ! anatomical structure
 
 [Term]
 id: UBERON:0003103
@@ -3491,7 +3618,7 @@ id: UBERON:0005156
 name: reproductive structure
 synonym: "reproductive system element" EXACT []
 synonym: "reproductive system structure" EXACT []
-is_a: UBERON:0000061 ! anatomical structure
+is_a: UBERON:0010000 ! multicellular anatomical structure
 
 [Term]
 id: UBERON:0005162
@@ -3518,6 +3645,13 @@ id: UBERON:0005177
 name: trunk region element
 synonym: "trunk organ" EXACT []
 is_a: UBERON:0000062 ! organ
+
+[Term]
+id: UBERON:0006314
+name: bodily fluid
+synonym: "body fluid" EXACT []
+synonym: "fluid" BROAD []
+is_a: UBERON:0000463 ! organism substance
 
 [Term]
 id: UBERON:0006925
