@@ -14,6 +14,7 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX bd: <http://www.bigdata.com/rdf#>
 PREFIX RO: <http://purl.obolibrary.org/obo/RO_>
 PREFIX upstream_positive: <http://purl.obolibrary.org/obo/RO_0002304>
+PREFIX has_exposure_route: <http://purl.obolibrary.org/obo/RO_0002242>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 
 CONSTRUCT {  
@@ -26,7 +27,7 @@ CONSTRUCT {
     rdfs:subClassOf ?exposure ;
     rdfs:subClassOf [
       a owl:Restriction ;
-      owl:onProperty RO:0002233 ;
+      owl:onProperty has_exposure_route: ;
       owl:someValuesFrom ?route
     ] ;
     rdfs:subClassOf [
