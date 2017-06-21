@@ -26,6 +26,7 @@ prenatal\
 dietary_exposure_to_chemical_with_role\
 dietary_exposure_to_chemical
 
+MODS = $(MODS1) $(MODS2)
 MODS_CSV = $(patsubst %,$(MODDIR)/%.csv,$(MODS))
 MODS1_CSV = $(patsubst %,$(MODDIR)/%.csv,$(MODS1))
 MODS2_CSV = $(patsubst %,$(MODDIR)/%.csv,$(MODS2))
@@ -222,14 +223,18 @@ $(MODDIR)/existential-graph.owl: ecto-core.owl
 ecto-edit.csv: ecto-edit.obo
 	owltools $(USECAT) $< --merge-support-ontologies --export-table $@.tmp && cut -f1 $@.tmp  > $@
 
-fill: ecto-edit.csv
-	fill-col1-ids.pl $(MODS1_CSV)
-	fill-col1-ids.pl $(MODS2_CSV)
-#	fill-col1-ids.pl $(MODS_CSV) $<
-testfill: ecto-edit.csv
+checkcsvs:
+	fill-col1-ids.pl --skip-dupes -n $(MODS_CSV)
 	fill-col1-ids.pl -n $(MODS1_CSV)
 	fill-col1-ids.pl -n $(MODS2_CSV)
-#	fill-col1-ids.pl -n $(MODS_CSV) $<
+fill: ecto-edit.csv checkcsvs
+	fill-col1-ids.pl --skip-dupes $(MODS_CSV)
+testfill: ecto-edit.csv checkcsvs
+	fill-col1-ids.pl -n --skip-dupes $(MODS_CSV)
+
+testfill2: ecto-edit.csv
+	fill-col1-ids.pl --skip-dupes -n $(MODS_CSV)
+
 
 radiation-npo.tsv:
 	blip-findall  -i mirror/npo.obo "subclassRT(X,'NPO:1731')"  -label -select "x('',X)" -no_pred -use_tabs > $@

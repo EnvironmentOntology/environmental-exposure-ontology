@@ -38,6 +38,19 @@ name: material entity
 def: "An independent continuant that is spatially extended whose identity is independent of that of other entities and can be maintained through time." []
 is_a: BFO:0000004 ! independent continuant
 
+[Term]
+id: RO:0002310
+name: exposure event or process
+def: "A process occurring within or in the vicinity of an organism that exerts some causal influence on the organism via the interaction between an exposure stimulus and an exposure receptor. The exposure stimulus may be a process, material entity or condition (for example, lack of nutrients). The exposure receptor can be an organism, organism population or a part of an organism." []
+is_a: BFO:0000015 ! process
+property_value: http://purl.org/dc/elements/1.1/creator "Chris Mungall" xsd:string
+property_value: IAO:0000112 "An exposure event in which a human is exposed to particulate matter in the air. Here the exposure stimulus/stress is the particulate matter, the receptor is the airways and lungs of the human," xsd:string
+property_value: IAO:0000112 "An exposure event in which a plant is provided with fertilizer. The exposure receptor is the root system of the plant, the stimulus is the fertilizing chemical, the route is via the soil, possibly mediated by symbotic microbes." xsd:anyURI
+property_value: IAO:0000116 "This class is intended as a grouping for various domain and species-specific exposure classes. The ExO class http://purl.obolibrary.org/obo/ExO_0000002 'exposure event' assumes that all exposures involve stressors, which limits the applicability of this class to 'positive' exposures, e.g. exposing a plant to beneficial growing conditions." xsd:string
+property_value: seeAlso https://github.com/oborel/obo-relations/pull/173 xsd:anyURI
+created_by: cjm
+creation_date: 2017-06-05T17:55:39Z
+
 [Typedef]
 id: BFO:0000050
 name: part of
@@ -304,6 +317,14 @@ is_a: RO:0000057 ! has participant
 inverse_of: RO:0002352 ! input of
 
 [Typedef]
+id: RO:0002244
+name: related via exposure to
+def: "Any relationship between an exposure event or process and any other entity." []
+property_value: IAO:0000232 "Do not use this relation directly. It is intended as a grouping for a diverse set of relations, all involving exposure events or processes." xsd:string
+domain: RO:0002310 ! exposure event or process
+is_a: RO:0002410 ! causally related to
+
+[Typedef]
 id: RO:0002263
 name: acts upstream of
 def: "c involved in regulation of p if c enables  'p' and p' causally upstream of p" []
@@ -331,6 +352,17 @@ name: causally upstream of, negative effect
 comment: holds between x and y if and only if x is causally upstream of y and the progression of x decreases the frequency, rate or extent of y
 property_value: http://purl.org/dc/elements/1.1/creator "cjm" xsd:string
 is_a: RO:0002411 ! causally upstream of
+
+[Typedef]
+id: RO:0002309
+name: has exposure stimulus
+def: "A relationship between an exposure event or process and any agent, stimulus, activity, or event that causally effects an organism and interacts with an exposure receptor during an exposure event." []
+property_value: http://purl.org/dc/elements/1.1/contributor "Austin Meier" xsd:string
+property_value: http://purl.org/dc/elements/1.1/contributor "Chris Mungall" xsd:string
+property_value: http://purl.org/dc/elements/1.1/contributor "Marie Angelique Laporte" xsd:string
+is_a: RO:0002244 ! related via exposure to
+created_by: cjm
+creation_date: 2017-06-05T17:35:04Z
 
 [Typedef]
 id: RO:0002314
