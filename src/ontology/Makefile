@@ -5,7 +5,23 @@ ONTDIR=.
 MODDIR=modules
 DATE=`date +%Y-%m-%d`
 
-MODS = exposure_to_radiation exposure_to_material exposure_to_environmental_process exposure_to_environmental_condition exposure_to_chemical exposure_to_chemical_with_role exposure_to_levels_in_medium exposure_to_change_in_levels exposure_via_route activity prenatal surgical_procedure exposure_to_infection
+MODS =\
+exposure_to_radiation\
+exposure_to_material\
+exposure_to_environmental_process\
+exposure_to_environmental_condition\
+exposure_to_chemical\
+exposure_to_chemical_with_role\
+dietary_exposure_to_chemical_with_role\
+dietary_exposure_to_chemical\
+exposure_to_levels_in_medium\
+exposure_to_change_in_levels\
+exposure_via_route\
+activity\
+prenatal\
+surgical_procedure\
+exposure_to_infection
+
 MODS_CSV = $(patsubst %,$(MODDIR)/%.csv,$(MODS))
 
 all: all_imports all_modules ecto.json.gz ecto.owl ecto.obo all_subsets 
