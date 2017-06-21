@@ -1,0 +1,40 @@
+PREFIX wd: <http://www.wikidata.org/entity/> 
+PREFIX wd_hazard: <http://www.wikidata.org/entity/Q1132455> 
+PREFIX wd_occupational_hazard: <http://www.wikidata.org/entity/Q3433185> 
+PREFIX wd_chemical_hazard: <http://www.wikidata.org/entity/Q21167512> 
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX wdt_subclass_of: <http://www.wikidata.org/prop/direct/P279>
+PREFIX wdt_has_cause: <http://www.wikidata.org/prop/direct/P828>
+PREFIX wdt_symptoms: <http://www.wikidata.org/prop/direct/P780>
+PREFIX wdt_drugs_used_for_treatment: <http://www.wikidata.org/prop/direct/P2176>
+PREFIX wikibase: <http://wikiba.se/ontology#>
+PREFIX p: <http://www.wikidata.org/prop/>
+PREFIX ps: <http://www.wikidata.org/prop/statement/>
+PREFIX pq: <http://www.wikidata.org/prop/qualifier/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX bd: <http://www.bigdata.com/rdf#>
+PREFIX RO: <http://purl.obolibrary.org/obo/RO_>
+PREFIX upstream_positive: <http://purl.obolibrary.org/obo/RO_0002304>
+PREFIX has_exposure_stimulus: <http://purl.obolibrary.org/obo/RO_0002309>
+PREFIX is_substance_that_treats: <http://purl.obolibrary.org/obo/RO_0002606>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+
+CONSTRUCT {  
+  ?exposure rdfs:label ?exposureLabel .
+  ?drug rdfs:label ?drugLabel .
+  
+  ?drug
+    rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:onProperty is_substance_that_treats: ;
+      owl:someValuesFrom ?exposure ] .
+
+}
+WHERE {
+    ?exposure wdt_drugs_used_for_treatment: ?drug ;
+            wdt_subclass_of:* wd_hazard: .
+  
+  SERVICE wikibase:label {
+    bd:serviceParam wikibase:language "en" .
+   }
+}

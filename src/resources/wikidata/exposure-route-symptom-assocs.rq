@@ -1,0 +1,44 @@
+PREFIX wd: <http://www.wikidata.org/entity/> 
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX wdt_cause: <http://www.wikidata.org/prop/direct/P828>
+PREFIX wikibase: <http://wikiba.se/ontology#>
+PREFIX p: <http://www.wikidata.org/prop/>
+PREFIX p_route_of_administration: <http://www.wikidata.org/prop/P636>
+PREFIX ps: <http://www.wikidata.org/prop/statement/>
+PREFIX ps_route: <http://www.wikidata.org/prop/statement/P636>
+PREFIX pq: <http://www.wikidata.org/prop/qualifier/>
+PREFIX pq_symptoms: <http://www.wikidata.org/prop/qualifier/P780>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX bd: <http://www.bigdata.com/rdf#>
+PREFIX RO: <http://purl.obolibrary.org/obo/RO_>
+PREFIX upstream_positive: <http://purl.obolibrary.org/obo/RO_0002304>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+
+CONSTRUCT {  
+  ?cause rdfs:label ?causeLabel .
+  ?exposure rdfs:label ?exposureLabel .
+  ?symptom rdfs:label ?symptomLabel .
+  ?route rdfs:label ?routeLabel .
+  
+  ?statement
+    rdfs:subClassOf ?exposure ;
+    rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:onProperty RO:0002233 ;
+      owl:someValuesFrom ?route
+    ] ;
+    rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:onProperty upstream_positive: ;
+      owl:someValuesFrom ?symptom
+    ] 
+
+}
+WHERE {
+  ?exposure p_route_of_administration: ?statement .
+  ?statement pq_symptoms: ?symptom .
+  ?statement ps_route: ?route .
+  SERVICE wikibase:label {
+    bd:serviceParam wikibase:language "en" .
+   }
+}
