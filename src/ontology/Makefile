@@ -5,24 +5,30 @@ ONTDIR=.
 MODDIR=modules
 DATE=`date +%Y-%m-%d`
 
-MODS =\
+# we stratify into two groups,
+# tuples should unique in each group
+MODS1 =\
 exposure_to_radiation\
 exposure_to_material\
 exposure_to_environmental_process\
 exposure_to_environmental_condition\
 exposure_to_chemical\
 exposure_to_chemical_with_role\
-dietary_exposure_to_chemical_with_role\
-dietary_exposure_to_chemical\
 exposure_to_levels_in_medium\
 exposure_to_change_in_levels\
 exposure_via_route\
 activity\
-prenatal\
 surgical_procedure\
 exposure_to_infection
 
+MODS2 =\
+prenatal\
+dietary_exposure_to_chemical_with_role\
+dietary_exposure_to_chemical
+
 MODS_CSV = $(patsubst %,$(MODDIR)/%.csv,$(MODS))
+MODS1_CSV = $(patsubst %,$(MODDIR)/%.csv,$(MODS1))
+MODS2_CSV = $(patsubst %,$(MODDIR)/%.csv,$(MODS2))
 
 all: all_imports all_modules ecto.json.gz ecto.owl ecto.obo all_subsets 
 all_subsets: subsets/ecto-basic.obo
@@ -217,10 +223,12 @@ ecto-edit.csv: ecto-edit.obo
 	owltools $(USECAT) $< --merge-support-ontologies --export-table $@.tmp && cut -f1 $@.tmp  > $@
 
 fill: ecto-edit.csv
-	fill-col1-ids.pl $(MODS_CSV)
+	fill-col1-ids.pl $(MODS1_CSV)
+	fill-col1-ids.pl $(MODS2_CSV)
 #	fill-col1-ids.pl $(MODS_CSV) $<
 testfill: ecto-edit.csv
-	fill-col1-ids.pl -n $(MODS_CSV)
+	fill-col1-ids.pl -n $(MODS1_CSV)
+	fill-col1-ids.pl -n $(MODS2_CSV)
 #	fill-col1-ids.pl -n $(MODS_CSV) $<
 
 radiation-npo.tsv:
