@@ -24,7 +24,6 @@ CONSTRUCT {
   ?route rdfs:label ?routeLabel .
   
   ?statement
-    rdfs:label ?genLabel ;
     rdfs:subClassOf ?exposure ;
     rdfs:subClassOf [
       a owl:Restriction ;
@@ -41,8 +40,7 @@ CONSTRUCT {
 WHERE {
   ?exposure p_route_of_administration: ?statement .
   ?statement pq_symptoms: ?symptom .
-  ?statement ps_route: ?route .
-  bind(concat(?exposureLabel, " via ", ?routeLabel) AS ?genLabel) .
+  ?statement ps_route: ?route 
   SERVICE wikibase:label {
     bd:serviceParam wikibase:language "en" .
    }
