@@ -5,8 +5,11 @@ BASE=$(OBO)/wikidata
 # Extraction from WD
 # ----------------------------------------
 
+## CONSIDER:
+## curl -i  --data-urlencode query@t2.sparql -H "Accept: text/turtle" https://query.wikidata.org/sparql
 %.rdf: %.rq
-	rsparql --query $< --service=https://query.wikidata.org/sparql > $@
+	curl  --data-urlencode query@$< -H "Accept: text/turtle" https://query.wikidata.org/sparql > $@.tmp && mv $@.tmp $@
+	#rsparql --query $< --service=https://query.wikidata.org/sparql > $@
 .PRECIOUS: %.rdf
 
 
@@ -22,7 +25,10 @@ BASE=$(OBO)/wikidata
 	perl -npe 's@http://www.wikidata.org/entity/@$(OBO)/Wikidata_@g' $< > $@
 
 %.obo: %-tr.owl
-	owltools $< -o -f obo $@
+	owltools $< -o -f obo --no-check $@.tmp && grep -v 'is_a: Error' $@.tmp > $@
+
+%.json: %.owl
+	owltools $< -o -f json $@
 
 combined.obo: hazard-all.obo chebi-hazard.obo
 	owltools $^ --merge-support-ontologies -o -f obo $@
@@ -31,18 +37,31 @@ combined.obo: hazard-all.obo chebi-hazard.obo
 	rsparql --results=CSV --query $< --service=https://query.wikidata.org/sparql  > $@
 
 # ----------------------------------------
-# Mapping
+# Assocs
+# ----------------------------------------
+exposure-all.owl: exposure-route-symptom-assocs.owl exposure-symptom-assocs.owl drug-exposure-assocs.owl
+	owltools $^ --merge-support-ontologies -o $@
+
+# TODO: PM2.5 e.g. https://www.wikidata.org/wiki/Q498957 different pattern
+
+# ----------------------------------------
+# Assocs
+# ----------------------------------------
+# cheat, use obo to avoid URI conversion
+%-ecto.obo: %.obo
+	owltools $< ../../mapping/axioms.obo --rename-entities-via-equivalent-classes -q http://purl.obolibrary.org/obo/ECTO_ -o -f obo --no-check $@
+
+exposure-all-ecto.json: exposure-all-ecto.obo
+	owltools $< -o -f json $@
+
+RDIR = ../../..
+merged.owl: $(RDIR)/ecto.owl exposure-all-ecto.obo
+	owltools --catalog-xml $(RDIR)/catalog-v001.xml $^ --merge-support-ontologies --merge-imports-closure -o $@
+
+
+# ----------------------------------------
+# ipython
 # ----------------------------------------
 
-# requires biomake
-align-$(O1)-with-$(O2).tsv: $(O1).obo $(O2).obo ignore.pro
-	blip-findall  -i ignore.pro -i $(O1).obo -i $(O2).obo -debug index -goal nlp_index_all  -u metadata_nlp entity_pair_label_reciprocal_best_intermatch/2 -no_pred -label -use_tabs > $@.tmp && sort -u $@.tmp > $@
-
-%.pro: %.tsv
-	tbl2p -p m $< > $@
-
-nomapping-$(O1)-with-$(O2).tsv: align-$(O1)-with-$(O2).pro
-	blip-findall -i $< -i $(O1).obo "class(X),\+m(X,_,_,_),\+m(_,_,X,_)" -select X -label > $@.tmp && mv $@.tmp $@
-
-nomapping-$(O1)-with-$(O2).obo: align-$(O1)-with-$(O2).pro
-	blip ontol-query -i $< -i $(O1).obo -query "class(X),\+m(X,_,_,_),\+m(_,_,X,_),ID=X" -to obo > $@.tmp && mv $@.tmp $@
+nb:
+	./init.sh && PYTHONPATH=. jupyter notebook
