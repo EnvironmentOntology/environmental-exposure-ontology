@@ -2,27 +2,27 @@ Prefix: : <http://purl.obolibrary.org/obo/>
 Prefix: IAO: <http://purl.obolibrary.org/obo/IAO_>
 Prefix: DOSDP: <http://geneontology.org/foo/>
 Prefix: oio: <http://www.geneontology.org/formats/oboInOwl#>
-Prefix: NCIT: <http://purl.obolibrary.org/obo/NCIT_>
-Prefix: XCO: <http://purl.obolibrary.org/obo/XCO_>
-Prefix: GOCHE: <http://purl.obolibrary.org/obo/GOCHE_>
-Prefix: SO: <http://purl.obolibrary.org/obo/SO_>
-Prefix: UBERON: <http://purl.obolibrary.org/obo/UBERON_>
-Prefix: NBO: <http://purl.obolibrary.org/obo/NBO_>
-Prefix: GO: <http://purl.obolibrary.org/obo/GO_>
-Prefix: RO: <http://purl.obolibrary.org/obo/RO_>
-Prefix: ENVO: <http://purl.obolibrary.org/obo/ENVO_>
-Prefix: OBA: <http://purl.obolibrary.org/obo/OBA_>
 Prefix: PATO: <http://purl.obolibrary.org/obo/PATO_>
+Prefix: BFO: <http://purl.obolibrary.org/obo/BFO_>
+Prefix: RO: <http://purl.obolibrary.org/obo/RO_>
+Prefix: CHEBI: <http://purl.obolibrary.org/obo/CHEBI_>
+Prefix: XCO: <http://purl.obolibrary.org/obo/XCO_>
+Prefix: GO: <http://purl.obolibrary.org/obo/GO_>
 Prefix: NPO: <http://purl.obolibrary.org/obo/NPO_>
 Prefix: ECTO: <http://purl.obolibrary.org/obo/ECTO_>
-Prefix: CHEBI: <http://purl.obolibrary.org/obo/CHEBI_>
-Prefix: PO: <http://purl.obolibrary.org/obo/PO_>
-Prefix: PR: <http://purl.obolibrary.org/obo/PR_>
+Prefix: GOCHE: <http://purl.obolibrary.org/obo/GOCHE_>
+Prefix: SO: <http://purl.obolibrary.org/obo/SO_>
 Prefix: CL: <http://purl.obolibrary.org/obo/CL_>
-Prefix: BFO: <http://purl.obolibrary.org/obo/BFO_>
+Prefix: ENVO: <http://purl.obolibrary.org/obo/ENVO_>
+Prefix: OBA: <http://purl.obolibrary.org/obo/OBA_>
 Prefix: ZECO: <http://purl.obolibrary.org/obo/ZECO_>
-Prefix: ExO: <http://purl.obolibrary.org/obo/ExO_>
+Prefix: UBERON: <http://purl.obolibrary.org/obo/UBERON_>
+Prefix: NBO: <http://purl.obolibrary.org/obo/NBO_>
+Prefix: PR: <http://purl.obolibrary.org/obo/PR_>
+Prefix: PO: <http://purl.obolibrary.org/obo/PO_>
 Prefix: NCBITaxon: <http://purl.obolibrary.org/obo/NCBITaxon_>
+Prefix: ExO: <http://purl.obolibrary.org/obo/ExO_>
+Prefix: NCIT: <http://purl.obolibrary.org/obo/NCIT_>
 
  ## Auto-generated
 
@@ -34,12 +34,12 @@ AnnotationProperty: oio:hasRelatedSynonym
 AnnotationProperty: oio:hasExactSynonym
 AnnotationProperty: oio:hasExactSynonym
 Class: ExO:0000002 ## exposure event
-Class: CHEBI:24431 ## chemical entity
 Class: CHEBI:50906 ## role
-ObjectProperty: BFO_0000050 ## stressor
+Class: CHEBI:24431 ## chemical entity
+ObjectProperty: BFO_0000050 ## part of
 ObjectProperty: RO:0002309 ## has exposure stimulus
 ObjectProperty: RO:0000087 ## has role
-ObjectProperty: BFO_0000050 ## part of
+ObjectProperty: BFO_0000050 ## stressor
 ## Auto-generated classes
 
 Class: CHEBI:24432 ## biological role
@@ -88,19 +88,6 @@ Class: ECTO:0000487
  Annotations: oio:hasRelatedSynonym "exposure to chemical role"
  Annotations: oio:hasRelatedSynonym "exposure to chemical role"
  Annotations: oio:hasRelatedSynonym "exposure to chemical role"
-
-Class: CHEBI:131604 ## Mycoplasma genitalium metabolite
-## {"stressor": "CHEBI:131604"}
-Class: ECTO:0000488
- Annotations: rdfs:label "exposure to Mycoplasma genitalium metabolite"
- Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to a Mycoplasma genitalium metabolite. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion."
- Annotations: oio:hasExactSynonym "Mycoplasma genitalium metabolite exposure"
- Annotations: oio:hasExactSynonym "Mycoplasma genitalium metabolite exposure event"
- EquivalentTo: ExO:0000002 and RO:0002309 some (CHEBI:24431 and RO:0000087 some CHEBI:131604) ## 'exposure event' and 'has exposure stimulus' some ('chemical entity' and 'has role' some Mycoplasma genitalium metabolite)
-  ## Auto-syns
-
- Annotations: oio:hasRelatedSynonym "exposure to Mycoplasma genitalium metabolites"
- Annotations: oio:hasRelatedSynonym "exposure to Mycoplasma genitalium metabolites"
 
 Class: CHEBI:131699 ## EC 2.7.7.7 (DNA-directed DNA polymerase) inhibitor
 ## {"stressor": "CHEBI:131699"}
@@ -821,23 +808,6 @@ Class: ECTO:0000520
  Annotations: oio:hasExactSynonym "jasmonates exposure"
  Annotations: oio:hasExactSynonym "jasmonates exposure event"
  EquivalentTo: ExO:0000002 and RO:0002309 some (CHEBI:24431 and RO:0000087 some CHEBI:24937) ## 'exposure event' and 'has exposure stimulus' some ('chemical entity' and 'has role' some jasmonates)
-
-Class: CHEBI:25212 ## metabolite
-## {"stressor": "CHEBI:25212"}
-Class: ECTO:0000521
- Annotations: rdfs:label "exposure to metabolite"
- Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to a metabolite. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion."
- Annotations: oio:hasExactSynonym "metabolite exposure"
- Annotations: oio:hasExactSynonym "metabolite exposure event"
- EquivalentTo: ExO:0000002 and RO:0002309 some (CHEBI:24431 and RO:0000087 some CHEBI:25212) ## 'exposure event' and 'has exposure stimulus' some ('chemical entity' and 'has role' some metabolite)
-  ## Auto-syns
-
- Annotations: oio:hasRelatedSynonym "exposure to secondary metabolites"
- Annotations: oio:hasRelatedSynonym "exposure to metabolites"
- Annotations: oio:hasRelatedSynonym "exposure to primary metabolites"
- Annotations: oio:hasRelatedSynonym "exposure to metabolites"
- Annotations: oio:hasRelatedSynonym "exposure to primary metabolites"
- Annotations: oio:hasRelatedSynonym "exposure to secondary metabolites"
 
 Class: CHEBI:25355 ## mitochondrial respiratory-chain inhibitor
 ## {"stressor": "CHEBI:25355"}
@@ -9995,45 +9965,6 @@ Class: ECTO:0000876
  Annotations: oio:hasRelatedSynonym "exposure to optidase inhibitor"
  Annotations: oio:hasRelatedSynonym "exposure to optidase inhibitors"
 
-Class: CHEBI:75763 ## eukaryotic metabolite
-## {"stressor": "CHEBI:75763"}
-Class: ECTO:0000877
- Annotations: rdfs:label "exposure to eukaryotic metabolite"
- Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to a eukaryotic metabolite. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion."
- Annotations: oio:hasExactSynonym "eukaryotic metabolite exposure"
- Annotations: oio:hasExactSynonym "eukaryotic metabolite exposure event"
- EquivalentTo: ExO:0000002 and RO:0002309 some (CHEBI:24431 and RO:0000087 some CHEBI:75763) ## 'exposure event' and 'has exposure stimulus' some ('chemical entity' and 'has role' some eukaryotic metabolite)
-  ## Auto-syns
-
- Annotations: oio:hasRelatedSynonym "exposure to eukaryotic metabolites"
- Annotations: oio:hasRelatedSynonym "exposure to eukaryotic metabolites"
-
-Class: CHEBI:75767 ## animal metabolite
-## {"stressor": "CHEBI:75767"}
-Class: ECTO:0000878
- Annotations: rdfs:label "exposure to animal metabolite"
- Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to a animal metabolite. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion."
- Annotations: oio:hasExactSynonym "animal metabolite exposure"
- Annotations: oio:hasExactSynonym "animal metabolite exposure event"
- EquivalentTo: ExO:0000002 and RO:0002309 some (CHEBI:24431 and RO:0000087 some CHEBI:75767) ## 'exposure event' and 'has exposure stimulus' some ('chemical entity' and 'has role' some animal metabolite)
-  ## Auto-syns
-
- Annotations: oio:hasRelatedSynonym "exposure to animal metabolites"
- Annotations: oio:hasRelatedSynonym "exposure to animal metabolites"
-
-Class: CHEBI:75768 ## mammalian metabolite
-## {"stressor": "CHEBI:75768"}
-Class: ECTO:0000879
- Annotations: rdfs:label "exposure to mammalian metabolite"
- Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to a mammalian metabolite. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion."
- Annotations: oio:hasExactSynonym "mammalian metabolite exposure"
- Annotations: oio:hasExactSynonym "mammalian metabolite exposure event"
- EquivalentTo: ExO:0000002 and RO:0002309 some (CHEBI:24431 and RO:0000087 some CHEBI:75768) ## 'exposure event' and 'has exposure stimulus' some ('chemical entity' and 'has role' some mammalian metabolite)
-  ## Auto-syns
-
- Annotations: oio:hasRelatedSynonym "exposure to mammalian metabolites"
- Annotations: oio:hasRelatedSynonym "exposure to mammalian metabolites"
-
 Class: CHEBI:75769 ## B vitamin
 ## {"stressor": "CHEBI:75769"}
 Class: ECTO:0000880
@@ -10052,54 +9983,6 @@ Class: ECTO:0000880
  Annotations: oio:hasRelatedSynonym "exposure to B-group vitamin"
  Annotations: oio:hasRelatedSynonym "exposure to B-group vitamins"
  Annotations: oio:hasRelatedSynonym "exposure to vitamin B"
-
-Class: CHEBI:75771 ## mouse metabolite
-## {"stressor": "CHEBI:75771"}
-Class: ECTO:0000881
- Annotations: rdfs:label "exposure to mouse metabolite"
- Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to a mouse metabolite. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion."
- Annotations: oio:hasExactSynonym "mouse metabolite exposure"
- Annotations: oio:hasExactSynonym "mouse metabolite exposure event"
- EquivalentTo: ExO:0000002 and RO:0002309 some (CHEBI:24431 and RO:0000087 some CHEBI:75771) ## 'exposure event' and 'has exposure stimulus' some ('chemical entity' and 'has role' some mouse metabolite)
-  ## Auto-syns
-
- Annotations: oio:hasRelatedSynonym "exposure to Mus musculus metabolite"
- Annotations: oio:hasRelatedSynonym "exposure to mouse metabolites"
- Annotations: oio:hasRelatedSynonym "exposure to Mus musculus metabolites"
- Annotations: oio:hasRelatedSynonym "exposure to mouse metabolites"
- Annotations: oio:hasRelatedSynonym "exposure to Mus musculus metabolite"
- Annotations: oio:hasRelatedSynonym "exposure to Mus musculus metabolites"
-
-Class: CHEBI:75772 ## Saccharomyces cerevisiae metabolite
-## {"stressor": "CHEBI:75772"}
-Class: ECTO:0000882
- Annotations: rdfs:label "exposure to Saccharomyces cerevisiae metabolite"
- Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to a Saccharomyces cerevisiae metabolite. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion."
- Annotations: oio:hasExactSynonym "Saccharomyces cerevisiae metabolite exposure"
- Annotations: oio:hasExactSynonym "Saccharomyces cerevisiae metabolite exposure event"
- EquivalentTo: ExO:0000002 and RO:0002309 some (CHEBI:24431 and RO:0000087 some CHEBI:75772) ## 'exposure event' and 'has exposure stimulus' some ('chemical entity' and 'has role' some Saccharomyces cerevisiae metabolite)
-  ## Auto-syns
-
- Annotations: oio:hasRelatedSynonym "exposure to S. cerevisiae metabolites"
- Annotations: oio:hasRelatedSynonym "exposure to baker's yeast metabolites"
- Annotations: oio:hasRelatedSynonym "exposure to S. cerevisiae metabolite"
- Annotations: oio:hasRelatedSynonym "exposure to Saccharomyces cerevisiae metabolites"
- Annotations: oio:hasRelatedSynonym "exposure to baker's yeast metabolite"
- Annotations: oio:hasRelatedSynonym "exposure to S. cerevisiae secondary metabolites"
- Annotations: oio:hasRelatedSynonym "exposure to baker's yeast secondary metabolites"
- Annotations: oio:hasRelatedSynonym "exposure to baker's yeast secondary metabolite"
- Annotations: oio:hasRelatedSynonym "exposure to Saccharomyces cerevisiae secondary metabolites"
- Annotations: oio:hasRelatedSynonym "exposure to S. cerevisiae secondary metabolite"
- Annotations: oio:hasRelatedSynonym "exposure to baker's yeast metabolite"
- Annotations: oio:hasRelatedSynonym "exposure to baker's yeast metabolites"
- Annotations: oio:hasRelatedSynonym "exposure to baker's yeast secondary metabolite"
- Annotations: oio:hasRelatedSynonym "exposure to baker's yeast secondary metabolites"
- Annotations: oio:hasRelatedSynonym "exposure to S. cerevisiae metabolite"
- Annotations: oio:hasRelatedSynonym "exposure to S. cerevisiae metabolites"
- Annotations: oio:hasRelatedSynonym "exposure to S. cerevisiae secondary metabolite"
- Annotations: oio:hasRelatedSynonym "exposure to S. cerevisiae secondary metabolites"
- Annotations: oio:hasRelatedSynonym "exposure to Saccharomyces cerevisiae metabolites"
- Annotations: oio:hasRelatedSynonym "exposure to Saccharomyces cerevisiae secondary metabolites"
 
 Class: CHEBI:76206 ## xenobiotic metabolite
 ## {"stressor": "CHEBI:76206"}
@@ -10126,19 +10009,6 @@ Class: ECTO:0000884
 
  Annotations: oio:hasRelatedSynonym "exposure to greenhouse gases"
  Annotations: oio:hasRelatedSynonym "exposure to greenhouse gases"
-
-Class: CHEBI:76507 ## marine metabolite
-## {"stressor": "CHEBI:76507"}
-Class: ECTO:0000885
- Annotations: rdfs:label "exposure to marine metabolite"
- Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to a marine metabolite. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion."
- Annotations: oio:hasExactSynonym "marine metabolite exposure"
- Annotations: oio:hasExactSynonym "marine metabolite exposure event"
- EquivalentTo: ExO:0000002 and RO:0002309 some (CHEBI:24431 and RO:0000087 some CHEBI:76507) ## 'exposure event' and 'has exposure stimulus' some ('chemical entity' and 'has role' some marine metabolite)
-  ## Auto-syns
-
- Annotations: oio:hasRelatedSynonym "exposure to marine metabolites"
- Annotations: oio:hasRelatedSynonym "exposure to marine metabolites"
 
 Class: CHEBI:76595 ## nephroprotective agent
 ## {"stressor": "CHEBI:76595"}
@@ -10795,125 +10665,6 @@ Class: ECTO:0000892
  Annotations: oio:hasRelatedSynonym "exposure to EC 3.4.14.2 inhibitor"
  Annotations: oio:hasRelatedSynonym "exposure to EC 3.4.14.2 inhibitors"
 
-Class: CHEBI:76924 ## plant metabolite
-## {"stressor": "CHEBI:76924"}
-Class: ECTO:0000893
- Annotations: rdfs:label "exposure to plant metabolite"
- Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to a plant metabolite. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion."
- Annotations: oio:hasExactSynonym "plant metabolite exposure"
- Annotations: oio:hasExactSynonym "plant metabolite exposure event"
- EquivalentTo: ExO:0000002 and RO:0002309 some (CHEBI:24431 and RO:0000087 some CHEBI:76924) ## 'exposure event' and 'has exposure stimulus' some ('chemical entity' and 'has role' some plant metabolite)
-  ## Auto-syns
-
- Annotations: oio:hasRelatedSynonym "exposure to plant metabolites"
- Annotations: oio:hasRelatedSynonym "exposure to plant secondary metabolites"
- Annotations: oio:hasRelatedSynonym "exposure to plant metabolites"
- Annotations: oio:hasRelatedSynonym "exposure to plant secondary metabolites"
-
-Class: CHEBI:76946 ## fungal metabolite
-## {"stressor": "CHEBI:76946"}
-Class: ECTO:0000894
- Annotations: rdfs:label "exposure to fungal metabolite"
- Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to a fungal metabolite. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion."
- Annotations: oio:hasExactSynonym "fungal metabolite exposure"
- Annotations: oio:hasExactSynonym "fungal metabolite exposure event"
- EquivalentTo: ExO:0000002 and RO:0002309 some (CHEBI:24431 and RO:0000087 some CHEBI:76946) ## 'exposure event' and 'has exposure stimulus' some ('chemical entity' and 'has role' some fungal metabolite)
-  ## Auto-syns
-
- Annotations: oio:hasRelatedSynonym "exposure to fungal metabolites"
- Annotations: oio:hasRelatedSynonym "exposure to fungal metabolites"
-
-Class: CHEBI:76956 ## Aspergillus metabolite
-## {"stressor": "CHEBI:76956"}
-Class: ECTO:0000895
- Annotations: rdfs:label "exposure to Aspergillus metabolite"
- Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to a Aspergillus metabolite. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion."
- Annotations: oio:hasExactSynonym "Aspergillus metabolite exposure"
- Annotations: oio:hasExactSynonym "Aspergillus metabolite exposure event"
- EquivalentTo: ExO:0000002 and RO:0002309 some (CHEBI:24431 and RO:0000087 some CHEBI:76956) ## 'exposure event' and 'has exposure stimulus' some ('chemical entity' and 'has role' some Aspergillus metabolite)
-  ## Auto-syns
-
- Annotations: oio:hasRelatedSynonym "exposure to Aspergillus metabolites"
- Annotations: oio:hasRelatedSynonym "exposure to Aspergillus metabolites"
-
-Class: CHEBI:76964 ## Penicillium metabolite
-## {"stressor": "CHEBI:76964"}
-Class: ECTO:0000896
- Annotations: rdfs:label "exposure to Penicillium metabolite"
- Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to a Penicillium metabolite. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion."
- Annotations: oio:hasExactSynonym "Penicillium metabolite exposure"
- Annotations: oio:hasExactSynonym "Penicillium metabolite exposure event"
- EquivalentTo: ExO:0000002 and RO:0002309 some (CHEBI:24431 and RO:0000087 some CHEBI:76964) ## 'exposure event' and 'has exposure stimulus' some ('chemical entity' and 'has role' some Penicillium metabolite)
-  ## Auto-syns
-
- Annotations: oio:hasRelatedSynonym "exposure to Penicillium metabolites"
- Annotations: oio:hasRelatedSynonym "exposure to Penicillium metabolites"
-
-Class: CHEBI:76967 ## human xenobiotic metabolite
-## {"stressor": "CHEBI:76967"}
-Class: ECTO:0000897
- Annotations: rdfs:label "exposure to human xenobiotic metabolite"
- Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to a human xenobiotic metabolite. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion."
- Annotations: oio:hasExactSynonym "human xenobiotic metabolite exposure"
- Annotations: oio:hasExactSynonym "human xenobiotic metabolite exposure event"
- EquivalentTo: ExO:0000002 and RO:0002309 some (CHEBI:24431 and RO:0000087 some CHEBI:76967) ## 'exposure event' and 'has exposure stimulus' some ('chemical entity' and 'has role' some human xenobiotic metabolite)
-  ## Auto-syns
-
- Annotations: oio:hasRelatedSynonym "exposure to human xenobiotic metabolites"
- Annotations: oio:hasRelatedSynonym "exposure to human xenobiotic metabolites"
-
-Class: CHEBI:76968 ## fungal xenobiotic metabolite
-## {"stressor": "CHEBI:76968"}
-Class: ECTO:0000898
- Annotations: rdfs:label "exposure to fungal xenobiotic metabolite"
- Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to a fungal xenobiotic metabolite. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion."
- Annotations: oio:hasExactSynonym "fungal xenobiotic metabolite exposure"
- Annotations: oio:hasExactSynonym "fungal xenobiotic metabolite exposure event"
- EquivalentTo: ExO:0000002 and RO:0002309 some (CHEBI:24431 and RO:0000087 some CHEBI:76968) ## 'exposure event' and 'has exposure stimulus' some ('chemical entity' and 'has role' some fungal xenobiotic metabolite)
-  ## Auto-syns
-
- Annotations: oio:hasRelatedSynonym "exposure to fungal xenobiotic metabolites"
- Annotations: oio:hasRelatedSynonym "exposure to fungal xenobiotic metabolites"
-
-Class: CHEBI:76969 ## bacterial metabolite
-## {"stressor": "CHEBI:76969"}
-Class: ECTO:0000899
- Annotations: rdfs:label "exposure to bacterial metabolite"
- Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to a bacterial metabolite. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion."
- Annotations: oio:hasExactSynonym "bacterial metabolite exposure"
- Annotations: oio:hasExactSynonym "bacterial metabolite exposure event"
- EquivalentTo: ExO:0000002 and RO:0002309 some (CHEBI:24431 and RO:0000087 some CHEBI:76969) ## 'exposure event' and 'has exposure stimulus' some ('chemical entity' and 'has role' some bacterial metabolite)
-
-Class: CHEBI:76971 ## Escherichia coli metabolite
-## {"stressor": "CHEBI:76971"}
-Class: ECTO:0000900
- Annotations: rdfs:label "exposure to Escherichia coli metabolite"
- Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to a Escherichia coli metabolite. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion."
- Annotations: oio:hasExactSynonym "Escherichia coli metabolite exposure"
- Annotations: oio:hasExactSynonym "Escherichia coli metabolite exposure event"
- EquivalentTo: ExO:0000002 and RO:0002309 some (CHEBI:24431 and RO:0000087 some CHEBI:76971) ## 'exposure event' and 'has exposure stimulus' some ('chemical entity' and 'has role' some Escherichia coli metabolite)
-  ## Auto-syns
-
- Annotations: oio:hasRelatedSynonym "exposure to Escherichia coli metabolites"
- Annotations: oio:hasRelatedSynonym "exposure to E.coli metabolite"
- Annotations: oio:hasRelatedSynonym "exposure to E.coli metabolites"
- Annotations: oio:hasRelatedSynonym "exposure to E.coli metabolite"
- Annotations: oio:hasRelatedSynonym "exposure to E.coli metabolites"
- Annotations: oio:hasRelatedSynonym "exposure to Escherichia coli metabolites"
-
-Class: CHEBI:76976 ## bacterial xenobiotic metabolite
-## {"stressor": "CHEBI:76976"}
-Class: ECTO:0000901
- Annotations: rdfs:label "exposure to bacterial xenobiotic metabolite"
- Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to a bacterial xenobiotic metabolite. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion."
- Annotations: oio:hasExactSynonym "bacterial xenobiotic metabolite exposure"
- Annotations: oio:hasExactSynonym "bacterial xenobiotic metabolite exposure event"
- EquivalentTo: ExO:0000002 and RO:0002309 some (CHEBI:24431 and RO:0000087 some CHEBI:76976) ## 'exposure event' and 'has exposure stimulus' some ('chemical entity' and 'has role' some bacterial xenobiotic metabolite)
-  ## Auto-syns
-
- Annotations: oio:hasRelatedSynonym "exposure to bacterial xenobiotic metabolites"
- Annotations: oio:hasRelatedSynonym "exposure to bacterial xenobiotic metabolites"
-
 Class: CHEBI:76988 ## xenoestrogen
 ## {"stressor": "CHEBI:76988"}
 Class: ECTO:0000902
@@ -11545,25 +11296,6 @@ Class: ECTO:0000918
  Annotations: oio:hasRelatedSynonym "exposure to pyrrolidonyl peptidase inhibitor"
  Annotations: oio:hasRelatedSynonym "exposure to pyrrolidonyl peptidase inhibitors5-oxoprolyl-peptidase inhibitor"
 
-Class: CHEBI:77746 ## human metabolite
-## {"stressor": "CHEBI:77746"}
-Class: ECTO:0000919
- Annotations: rdfs:label "exposure to human metabolite"
- Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to a human metabolite. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion."
- Annotations: oio:hasExactSynonym "human metabolite exposure"
- Annotations: oio:hasExactSynonym "human metabolite exposure event"
- EquivalentTo: ExO:0000002 and RO:0002309 some (CHEBI:24431 and RO:0000087 some CHEBI:77746) ## 'exposure event' and 'has exposure stimulus' some ('chemical entity' and 'has role' some human metabolite)
-  ## Auto-syns
-
- Annotations: oio:hasRelatedSynonym "exposure to Homo sapiens metabolite"
- Annotations: oio:hasRelatedSynonym "exposure to Homo sapiens metabolites"
- Annotations: oio:hasRelatedSynonym "exposure to H. sapiens metabolites"
- Annotations: oio:hasRelatedSynonym "exposure to H. sapiens metabolite"
- Annotations: oio:hasRelatedSynonym "exposure to H. sapiens metabolite"
- Annotations: oio:hasRelatedSynonym "exposure to H. sapiens metabolites"
- Annotations: oio:hasRelatedSynonym "exposure to Homo sapiens metabolite"
- Annotations: oio:hasRelatedSynonym "exposure to Homo sapiens metabolites"
-
 Class: CHEBI:77853 ## persistent organic pollutant
 ## {"stressor": "CHEBI:77853"}
 Class: ECTO:0000920
@@ -11814,19 +11546,6 @@ Class: ECTO:0000931
  Annotations: oio:hasRelatedSynonym "exposure to environmental contaminants"
  Annotations: oio:hasRelatedSynonym "exposure to environmental contaminants"
 
-Class: CHEBI:78361 ## lichen metabolite
-## {"stressor": "CHEBI:78361"}
-Class: ECTO:0000932
- Annotations: rdfs:label "exposure to lichen metabolite"
- Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to a lichen metabolite. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion."
- Annotations: oio:hasExactSynonym "lichen metabolite exposure"
- Annotations: oio:hasExactSynonym "lichen metabolite exposure event"
- EquivalentTo: ExO:0000002 and RO:0002309 some (CHEBI:24431 and RO:0000087 some CHEBI:78361) ## 'exposure event' and 'has exposure stimulus' some ('chemical entity' and 'has role' some lichen metabolite)
-  ## Auto-syns
-
- Annotations: oio:hasRelatedSynonym "exposure to lichen metabolites"
- Annotations: oio:hasRelatedSynonym "exposure to lichen metabolites"
-
 Class: CHEBI:78366 ## EC 2.7.1.1 (hexokinase) inhibitor
 ## {"stressor": "CHEBI:78366"}
 Class: ECTO:0000933
@@ -12057,36 +11776,6 @@ Class: ECTO:0000938
  Annotations: oio:hasRelatedSynonym "exposure to essential metabolites"
  Annotations: oio:hasRelatedSynonym "exposure to fundamental metabolites"
 
-Class: CHEBI:78804 ## Caenorhabditis elegans metabolite
-## {"stressor": "CHEBI:78804"}
-Class: ECTO:0000939
- Annotations: rdfs:label "exposure to Caenorhabditis elegans metabolite"
- Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to a Caenorhabditis elegans metabolite. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion."
- Annotations: oio:hasExactSynonym "Caenorhabditis elegans metabolite exposure"
- Annotations: oio:hasExactSynonym "Caenorhabditis elegans metabolite exposure event"
- EquivalentTo: ExO:0000002 and RO:0002309 some (CHEBI:24431 and RO:0000087 some CHEBI:78804) ## 'exposure event' and 'has exposure stimulus' some ('chemical entity' and 'has role' some Caenorhabditis elegans metabolite)
-  ## Auto-syns
-
- Annotations: oio:hasRelatedSynonym "exposure to C. elegans metabolite"
- Annotations: oio:hasRelatedSynonym "exposure to C. elegans metabolites"
- Annotations: oio:hasRelatedSynonym "exposure to Caenorhabditis elegans metabolites"
- Annotations: oio:hasRelatedSynonym "exposure to C. elegans metabolite"
- Annotations: oio:hasRelatedSynonym "exposure to C. elegans metabolites"
- Annotations: oio:hasRelatedSynonym "exposure to Caenorhabditis elegans metabolites"
-
-Class: CHEBI:78947 ## archaeal metabolite
-## {"stressor": "CHEBI:78947"}
-Class: ECTO:0000940
- Annotations: rdfs:label "exposure to archaeal metabolite"
- Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to a archaeal metabolite. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion."
- Annotations: oio:hasExactSynonym "archaeal metabolite exposure"
- Annotations: oio:hasExactSynonym "archaeal metabolite exposure event"
- EquivalentTo: ExO:0000002 and RO:0002309 some (CHEBI:24431 and RO:0000087 some CHEBI:78947) ## 'exposure event' and 'has exposure stimulus' some ('chemical entity' and 'has role' some archaeal metabolite)
-  ## Auto-syns
-
- Annotations: oio:hasRelatedSynonym "exposure to archaeal metabolites"
- Annotations: oio:hasRelatedSynonym "exposure to archaeal metabolites"
-
 Class: CHEBI:79056 ## plasticiser
 ## {"stressor": "CHEBI:79056"}
 Class: ECTO:0000941
@@ -12116,84 +11805,6 @@ Class: ECTO:0000942
 
  Annotations: oio:hasRelatedSynonym "exposure to phytochrome chromophores"
  Annotations: oio:hasRelatedSynonym "exposure to phytochrome chromophores"
-
-Class: CHEBI:83038 ## Daphnia galeata metabolite
-## {"stressor": "CHEBI:83038"}
-Class: ECTO:0000943
- Annotations: rdfs:label "exposure to Daphnia galeata metabolite"
- Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to a Daphnia galeata metabolite. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion."
- Annotations: oio:hasExactSynonym "Daphnia galeata metabolite exposure"
- Annotations: oio:hasExactSynonym "Daphnia galeata metabolite exposure event"
- EquivalentTo: ExO:0000002 and RO:0002309 some (CHEBI:24431 and RO:0000087 some CHEBI:83038) ## 'exposure event' and 'has exposure stimulus' some ('chemical entity' and 'has role' some Daphnia galeata metabolite)
-  ## Auto-syns
-
- Annotations: oio:hasRelatedSynonym "exposure to Daphnia galeata metabolites"
- Annotations: oio:hasRelatedSynonym "exposure to Daphnia galeata metabolites"
-
-Class: CHEBI:83039 ## crustacean metabolite
-## {"stressor": "CHEBI:83039"}
-Class: ECTO:0000944
- Annotations: rdfs:label "exposure to crustacean metabolite"
- Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to a crustacean metabolite. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion."
- Annotations: oio:hasExactSynonym "crustacean metabolite exposure"
- Annotations: oio:hasExactSynonym "crustacean metabolite exposure event"
- EquivalentTo: ExO:0000002 and RO:0002309 some (CHEBI:24431 and RO:0000087 some CHEBI:83039) ## 'exposure event' and 'has exposure stimulus' some ('chemical entity' and 'has role' some crustacean metabolite)
-  ## Auto-syns
-
- Annotations: oio:hasRelatedSynonym "exposure to crustacean metabolites"
- Annotations: oio:hasRelatedSynonym "exposure to crustacean metabolites"
-
-Class: CHEBI:83056 ## Daphnia magna metabolite
-## {"stressor": "CHEBI:83056"}
-Class: ECTO:0000945
- Annotations: rdfs:label "exposure to Daphnia magna metabolite"
- Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to a Daphnia magna metabolite. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion."
- Annotations: oio:hasExactSynonym "Daphnia magna metabolite exposure"
- Annotations: oio:hasExactSynonym "Daphnia magna metabolite exposure event"
- EquivalentTo: ExO:0000002 and RO:0002309 some (CHEBI:24431 and RO:0000087 some CHEBI:83056) ## 'exposure event' and 'has exposure stimulus' some ('chemical entity' and 'has role' some Daphnia magna metabolite)
-  ## Auto-syns
-
- Annotations: oio:hasRelatedSynonym "exposure to Daphnia magna metabolites"
- Annotations: oio:hasRelatedSynonym "exposure to Daphnia magna metabolites"
-
-Class: CHEBI:83146 ## Daphnia tenebrosa metabolite
-## {"stressor": "CHEBI:83146"}
-Class: ECTO:0000946
- Annotations: rdfs:label "exposure to Daphnia tenebrosa metabolite"
- Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to a Daphnia tenebrosa metabolite. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion."
- Annotations: oio:hasExactSynonym "Daphnia tenebrosa metabolite exposure"
- Annotations: oio:hasExactSynonym "Daphnia tenebrosa metabolite exposure event"
- EquivalentTo: ExO:0000002 and RO:0002309 some (CHEBI:24431 and RO:0000087 some CHEBI:83146) ## 'exposure event' and 'has exposure stimulus' some ('chemical entity' and 'has role' some Daphnia tenebrosa metabolite)
-  ## Auto-syns
-
- Annotations: oio:hasRelatedSynonym "exposure to Daphnia tenebrosa metabolites"
- Annotations: oio:hasRelatedSynonym "exposure to Daphnia tenebrosa metabolites"
-
-Class: CHEBI:83399 ## marine xenobiotic metabolite
-## {"stressor": "CHEBI:83399"}
-Class: ECTO:0000947
- Annotations: rdfs:label "exposure to marine xenobiotic metabolite"
- Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to a marine xenobiotic metabolite. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion."
- Annotations: oio:hasExactSynonym "marine xenobiotic metabolite exposure"
- Annotations: oio:hasExactSynonym "marine xenobiotic metabolite exposure event"
- EquivalentTo: ExO:0000002 and RO:0002309 some (CHEBI:24431 and RO:0000087 some CHEBI:83399) ## 'exposure event' and 'has exposure stimulus' some ('chemical entity' and 'has role' some marine xenobiotic metabolite)
-  ## Auto-syns
-
- Annotations: oio:hasRelatedSynonym "exposure to marine xenobiotic metabolites"
- Annotations: oio:hasRelatedSynonym "exposure to marine xenobiotic metabolites"
-
-Class: CHEBI:84087 ## human urinary metabolite
-## {"stressor": "CHEBI:84087"}
-Class: ECTO:0000948
- Annotations: rdfs:label "exposure to human urinary metabolite"
- Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to a human urinary metabolite. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion."
- Annotations: oio:hasExactSynonym "human urinary metabolite exposure"
- Annotations: oio:hasExactSynonym "human urinary metabolite exposure event"
- EquivalentTo: ExO:0000002 and RO:0002309 some (CHEBI:24431 and RO:0000087 some CHEBI:84087) ## 'exposure event' and 'has exposure stimulus' some ('chemical entity' and 'has role' some human urinary metabolite)
-  ## Auto-syns
-
- Annotations: oio:hasRelatedSynonym "exposure to human urinary metabolites"
- Annotations: oio:hasRelatedSynonym "exposure to human urinary metabolites"
 
 Class: CHEBI:84264 ## EC 3.5.1.19 (nicotinamidase) inhibitor
 ## {"stressor": "CHEBI:84264"}
@@ -12235,19 +11846,6 @@ Class: ECTO:0000949
  Annotations: oio:hasRelatedSynonym "exposure to nicotinamide deaminase inhibitors"
  Annotations: oio:hasRelatedSynonym "exposure to YNDase inhibitor"
  Annotations: oio:hasRelatedSynonym "exposure to YNDase inhibitors"
-
-Class: CHEBI:84735 ## algal metabolite
-## {"stressor": "CHEBI:84735"}
-Class: ECTO:0000950
- Annotations: rdfs:label "exposure to algal metabolite"
- Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to a algal metabolite. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion."
- Annotations: oio:hasExactSynonym "algal metabolite exposure"
- Annotations: oio:hasExactSynonym "algal metabolite exposure event"
- EquivalentTo: ExO:0000002 and RO:0002309 some (CHEBI:24431 and RO:0000087 some CHEBI:84735) ## 'exposure event' and 'has exposure stimulus' some ('chemical entity' and 'has role' some algal metabolite)
-  ## Auto-syns
-
- Annotations: oio:hasRelatedSynonym "exposure to algal metabolites"
- Annotations: oio:hasRelatedSynonym "exposure to algal metabolites"
 
 Class: CHEBI:85046 ## skin lightening agent
 ## {"stressor": "CHEBI:85046"}
@@ -12486,23 +12084,6 @@ Class: ECTO:0000956
 
  Annotations: oio:hasRelatedSynonym "exposure to human blood serum metabolites"
  Annotations: oio:hasRelatedSynonym "exposure to human blood serum metabolites"
-
-Class: CHEBI:86264 ## rat metabolite
-## {"stressor": "CHEBI:86264"}
-Class: ECTO:0000957
- Annotations: rdfs:label "exposure to rat metabolite"
- Annotations: IAO:0000115 "A exposure event involving the interaction of an exposure receptor to a rat metabolite. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion."
- Annotations: oio:hasExactSynonym "rat metabolite exposure"
- Annotations: oio:hasExactSynonym "rat metabolite exposure event"
- EquivalentTo: ExO:0000002 and RO:0002309 some (CHEBI:24431 and RO:0000087 some CHEBI:86264) ## 'exposure event' and 'has exposure stimulus' some ('chemical entity' and 'has role' some rat metabolite)
-  ## Auto-syns
-
- Annotations: oio:hasRelatedSynonym "exposure to Rattus norvegicus metabolites"
- Annotations: oio:hasRelatedSynonym "exposure to Rattus norvegicus metabolite"
- Annotations: oio:hasRelatedSynonym "exposure to rat metabolites"
- Annotations: oio:hasRelatedSynonym "exposure to rat metabolites"
- Annotations: oio:hasRelatedSynonym "exposure to Rattus norvegicus metabolite"
- Annotations: oio:hasRelatedSynonym "exposure to Rattus norvegicus metabolites"
 
 Class: CHEBI:86327 ## antifungal drug
 ## {"stressor": "CHEBI:86327"}

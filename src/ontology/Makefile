@@ -129,24 +129,26 @@ imports/%_import.obo: imports/%_import.owl
 
 # MIRRORING: default is to download obo (faster)
 # wget-obo --[convert]--> owl --[gzip] --> owl.gz
-mirror/%.gz: mirror/%
-	gzip -f $<
-.PRECIOUS: mirror/%.gz
+#mirror/%.gz: mirror/%
+#	gzip -f $<
+#.PRECIOUS: mirror/%.gz
 
 # wget from OBO
 mirror/%.obo:
 	wget --no-check-certificate $(OBO)/$*.obo -O $@.tmp && mv $@.tmp $@ && touch $@
 .PRECIOUS: mirror/%.obo
 
+OGZIP =  -o mirror/$*.owl && gzip -f mirror/$*.owl
+
 # convert and trim
 KEEPRELS = BFO:0000050 BFO:0000051 RO:0002202 immediate_transformation_of
-mirror/%.owl: mirror/%.obo
-	owltools $< --remove-annotation-assertions -r -l -s --remove-dangling-annotations --make-subset-by-properties -f $(KEEPRELS)  -o $@
+mirror/%.owl.gz: mirror/%.obo
+	owltools $< --remove-annotation-assertions -r -l -s --remove-dangling-annotations --make-subset-by-properties -f $(KEEPRELS) $(OGZIP)
 .PRECIOUS: mirror/%.owl
 
 # custom mirror: RO
-mirror/ro.owl:
-	owltools $(OBO)/ro.owl --merge-imports-closure -o $@.tmp && mv $@.tmp $@ && touch $@
+mirror/ro.owl.gz:
+	owltools $(OBO)/ro.owl --merge-imports-closure  $(OGZIP)
 .PRECIOUS: mirror/ro.owl
 
 # custom mirror: ExO
@@ -165,27 +167,30 @@ mirror/chebi.obo:
 	wget $(OBO)/chebi.obo -O $@.tmp && mv $@.tmp $@ && touch $@
 .PRECIOUS: mirror/chebi.obo
 
+mirror/npo.obo:
+	cp mirror/npo-orig.obo $@
+
 # CHEBI: need to transform their internal properties
-mirror/chebi.owl: mirror/chebi.obo
-	owltools --use-catalog $<  --rename-entity $(OBO)/chebi#has_part $(OBO)/BFO_0000051 --rename-entity $(OBO)/chebi#has_role $(OBO)/RO_0000087  --remove-annotation-assertions -r -l -s  --set-ontology-id $(OBO)/chebi.owl -o $@
+mirror/chebi.owl.gz: mirror/chebi.obo
+	owltools --use-catalog $<  --rename-entity $(OBO)/chebi#has_part $(OBO)/BFO_0000051 --rename-entity $(OBO)/chebi#has_role $(OBO)/RO_0000087  --remove-annotation-assertions -r -l -s  --set-ontology-id $(OBO)/chebi.owl $(OGZIP)
 .PRECIOUS: mirror/chebi.owl
 
 # UBERON: use basic
 mirror/uberon.owl:
-	owltools $(OBO)/uberon/basic.owl --remove-annotation-assertions -r -l -s -d --remove-axiom-annotations --remove-dangling-annotations --make-subset-by-properties -f $(KEEPRELS) --set-ontology-id $(OBO)/uberon.owl -o $@
+	owltools $(OBO)/uberon/basic.owl --remove-annotation-assertions -r -l -s -d --remove-axiom-annotations --remove-dangling-annotations --make-subset-by-properties -f $(KEEPRELS) --set-ontology-id $(OBO)/uberon.owl $(OGZIP)
 .PRECIOUS: mirror/%.owl
 
 # PO
-mirror/po.owl:
-	owltools $(OBO)/po.owl --remove-annotation-assertions -r -l -s -d --remove-axiom-annotations --remove-dangling-annotations --make-subset-by-properties -f $(KEEPRELS) --set-ontology-id $(OBO)/po.owl -o $@
+mirror/po.owl.gz:
+	owltools $(OBO)/po.owl --remove-annotation-assertions -r -l -s -d --remove-axiom-annotations --remove-dangling-annotations --make-subset-by-properties -f $(KEEPRELS) --set-ontology-id $(OBO)/po.owl $(OGZIP)
 .PRECIOUS: mirror/%.owl
 
 # NCBITaxon
 ncbitaxon.obo:
 	wget -N $(OBO)/ncbitaxon.obo
 .PRECIOUS: ncbitaxon.obo
-mirror/ncbitaxon.owl: ncbitaxon.obo
-	OWLTOOLS_MEMORY=12G owltools $< --remove-annotation-assertions -r -l -s -d --remove-axiom-annotations --remove-dangling-annotations  --set-ontology-id $(OBO)/ncbitaxon.owl -o $@
+mirror/ncbitaxon.owl.gz: ncbitaxon.obo
+	OWLTOOLS_MEMORY=12G owltools $< --remove-annotation-assertions -r -l -s -d --remove-axiom-annotations --remove-dangling-annotations  --set-ontology-id $(OBO)/ncbitaxon.owl $(OGZIP)
 .PRECIOUS: mirror/ncbitaxon.owl
 
 # PCO
