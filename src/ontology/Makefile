@@ -58,7 +58,7 @@ copy-release:
 
 # CORE is the edited source (minimal) plus compiled modules
 ALL_MODS_OWL = $(patsubst %, $(MODDIR)/%.owl, $(MODS))
-ecto-core.owl: ecto-edit.obo $(ALL_MODS_OWL)
+ecto-core.owl: ecto-edit.obo xrefs/ecto-xrefs.owl $(ALL_MODS_OWL)
 	owltools $(USECAT) $^ --merge-support-ontologies -o -f ofn $@
 ecto-core.obo: ecto-core.owl
 	owltools $(USECAT) $< -o -f obo --no-check $@.tmp && grep -v ^owl-axioms $@.tmp > $@
