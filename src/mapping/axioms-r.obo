@@ -2,12 +2,38 @@ format-version: 1.2
 ontology: rad/axioms
 
 [Term]
+id: CHEBI:17489
+equivalent_to: ECTO:0000264 ! exposure to 3',5'-cyclic AMP
+
+[Term]
 id: ECTO:0000001 ! exposure to radiation
-equivalent_to: MRE:0000000 ! Exposure
+equivalent_to: Wikidata:Q1190554 ! event
+equivalent_to: ZECO:0000100 ! conditions
+
+[Term]
+id: ECTO:0000002 ! exposure to electromagnetic radiation
+equivalent_to: ZECO:0000209 ! electromagnetic radiation
+
+[Term]
+id: ECTO:0000005 ! exposure to x-ray radiation
+equivalent_to: ZECO:0000215 ! x-ray
 
 [Term]
 id: ECTO:0000006 ! exposure to ultraviolet radiation
 equivalent_to: NCIT:C44462 ! UV Radiation Exposure
+equivalent_to: ZECO:0000214 ! UV
+
+[Term]
+id: ECTO:0000007 ! exposure to visible light radiation
+equivalent_to: ZECO:0000213 ! visible light
+
+[Term]
+id: ECTO:0000013 ! exposure to radiowave radiation
+equivalent_to: ZECO:0000210 ! radio waves
+
+[Term]
+id: ECTO:0000014 ! exposure to ultrasound radiation
+equivalent_to: ZECO:0000244 ! ultrasound
 
 [Term]
 id: ECTO:0000073 ! exposure to volcanic eruption
@@ -18,12 +44,20 @@ id: ECTO:0000074 ! exposure to earthquake
 equivalent_to: Wikidata:Q7944 ! earthquake
 
 [Term]
+id: ECTO:0000082 ! exposure to environmental pollution
+equivalent_to: http://purl.obolibrary.org/obo/http_//id.nlm.nih.gov/mesh/D004787
+
+[Term]
 id: ECTO:0000087 ! exposure to mudslide
 equivalent_to: Wikidata:Q175768 ! mudslide
 
 [Term]
 id: ECTO:0000105 ! exposure to water pollution
 equivalent_to: MRE:0000082 ! Exposure to water pollution
+
+[Term]
+id: ECTO:0000121 ! exposure to water
+equivalent_to: ZECO:0000182 ! water quality
 
 [Term]
 id: ECTO:0000128 ! exposure to sucrose
@@ -94,11 +128,6 @@ id: ECTO:0000161 ! exposure to sulfur dioxide
 equivalent_to: Wikidata:Q21175322 ! sulfur dioxide exposure
 
 [Term]
-id: ECTO:0000174 ! exposure to cobalt cation
-equivalent_to: MRE:0000114 ! Exposure to cobalt
-equivalent_to: Wikidata:Q5138720 ! cobalt poisoning
-
-[Term]
 id: ECTO:0000197 ! exposure to genistein
 equivalent_to: MRE:0000201 ! Exposure to genistein
 
@@ -126,6 +155,7 @@ equivalent_to: Wikidata:Q21174898 ! Methylamine exposure
 [Term]
 id: ECTO:0000231 ! exposure to chemical entity
 equivalent_to: NCIT:C36290 ! Chemical Exposure
+equivalent_to: ZECO:0000111 ! chemical treatment
 
 [Term]
 id: ECTO:0000232 ! exposure to hydrogen peroxide
@@ -160,6 +190,11 @@ id: ECTO:0000256 ! exposure to tellurium ion
 equivalent_to: Wikidata:Q21175335 ! tellurium exposure
 
 [Term]
+id: ECTO:0000273 ! exposure to platinum cation
+equivalent_to: MRE:0000120 ! Exposure to platinum
+equivalent_to: Wikidata:Q21175066 ! platinum exposure
+
+[Term]
 id: ECTO:0000282 ! exposure to nitric oxide
 equivalent_to: Wikidata:Q21174995 ! Nitric Oxide exposure
 
@@ -168,13 +203,17 @@ id: ECTO:0000298 ! exposure to amitrole
 equivalent_to: Wikidata:Q21167768 ! amitrole exposure
 
 [Term]
+id: ECTO:0000303 ! exposure to tert-butyl hydroperoxide
+equivalent_to: PECO:0000304 ! + TBHP
+
+[Term]
 id: ECTO:0000339 ! exposure to butan-1-ol
 equivalent_to: Wikidata:Q21173329 ! 1-butanol exposure
 
 [Term]
 id: ECTO:0000340 ! exposure to benzene
 equivalent_to: MRE:0000146 ! Exposure to benzene
-equivalent_to: NCIT:C36251 ! Benzene Exposure
+equivalent_to: NCIT:C302 ! Benzene
 equivalent_to: Wikidata:Q21167939 ! benzene exposure
 
 [Term]
@@ -235,6 +274,10 @@ id: ECTO:0000411 ! exposure to ammonia
 equivalent_to: Wikidata:Q21167772 ! ammonia exposure
 
 [Term]
+id: ECTO:0000416 ! exposure to sodium arsenite
+equivalent_to: PECO:0000297 ! + NaAsO2
+
+[Term]
 id: ECTO:0000417 ! exposure to acrylamide
 equivalent_to: NCIT:C44329 ! Acrylamide
 equivalent_to: Wikidata:Q21167634 ! acrylamide exposure
@@ -271,6 +314,7 @@ equivalent_to: Wikidata:Q21174760 ! Hydrogen sulfide exposure
 
 [Term]
 id: ECTO:0000509 ! exposure to drug
+equivalent_to: http://purl.obolibrary.org/obo/http_//id.nlm.nih.gov/mesh/D008511
 equivalent_to: NCIT:C41362 ! Drug Exposure
 
 [Term]
@@ -278,23 +322,27 @@ id: ECTO:0000903 ! exposure to phytoestrogen
 equivalent_to: MRE:0000196 ! Exposure to phytoestrogen
 
 [Term]
-id: ECTO:0001090 ! Tobacco Smoking related exposure
+id: ECTO:0001063 ! exposure to dioxygen
+equivalent_to: PECO:0000134 ! anaerobic environment
+
+[Term]
+id: ECTO:0001090 ! tobacco smoking related exposure
 equivalent_to: MRE:0000045 ! Tobacco smoking
 
 [Term]
-id: ECTO:0001091 ! Cigarette Smoking related exposure
+id: ECTO:0001091 ! cigarette smoking related exposure
 equivalent_to: MRE:0000046 ! Cigarette smoking
 
 [Term]
-id: ECTO:0001092 ! Cigar Smoking related exposure
+id: ECTO:0001092 ! cigar smoking related exposure
 equivalent_to: MRE:0000047 ! Cigar smoking
 
 [Term]
-id: ECTO:0001093 ! Substance Abuse related exposure
+id: ECTO:0001093 ! substance abuse related exposure
 equivalent_to: MRE:0000050 ! Drug use
 
 [Term]
-id: ECTO:0001114 ! Mammography  related exposure
+id: ECTO:0001114 ! mammography  related exposure
 equivalent_to: MRE:0000076 ! Mammography
 
 [Term]
@@ -539,6 +587,7 @@ equivalent_to: Wikidata:Q21174904 ! 1,1,1-Trichloroethane exposure
 
 [Term]
 id: ECTO:0001534 ! exposure to 1,1,2,2-tetrachloroethane
+equivalent_to: MRE:0000133 ! Exposure to 1,1,2,2-tetrachloroethane
 equivalent_to: Wikidata:Q21175345 ! 1,1,1,2-tetrachloroethane exposure
 
 [Term]
@@ -670,18 +719,18 @@ equivalent_to: MRE:0000112 ! Exposure to cadmium
 equivalent_to: NCIT:C44349 ! Cadmium Compound
 
 [Term]
+id: ECTO:0001567 ! exposure to cobalt
+equivalent_to: MRE:0000114 ! Exposure to cobalt
+equivalent_to: Wikidata:Q5138720 ! cobalt poisoning
+
+[Term]
 id: ECTO:0001569 ! exposure to lead
-equivalent_to: NCIT:C44395 ! Lead Compound
+equivalent_to: MRE:0000116 ! Exposure to lead
 
 [Term]
 id: ECTO:0001572 ! exposure to molybdenum
 equivalent_to: MRE:0000119 ! Exposure to molybdenum
 equivalent_to: Wikidata:Q21174934 ! molybdenum exposure
-
-[Term]
-id: ECTO:0001573 ! exposure to platinum
-equivalent_to: MRE:0000120 ! Exposure to platinum
-equivalent_to: Wikidata:Q21175066 ! platinum exposure
 
 [Term]
 id: ECTO:0001575 ! exposure to strontium
@@ -706,7 +755,8 @@ id: ECTO:0001582 ! exposure to methylarsonic acid
 equivalent_to: MRE:0000207 ! Exposure to monomethylarsonic acid
 
 [Term]
-id: ECTO:0001591 ! Occupation related exposure
+id: ECTO:0001591 ! occupation related exposure
+equivalent_to: http://purl.obolibrary.org/obo/http_//id.nlm.nih.gov/mesh/M0024872
 equivalent_to: MRE:0000044 ! Occupational exposure
 equivalent_to: NCIT:C16929 ! Occupational Exposure
 
@@ -1338,7 +1388,6 @@ equivalent_to: Wikidata:Q21175337 ! Temefos exposure
 
 [Term]
 id: ECTO:0001902 ! exposure to 1,1,1,2-tetrachloroethane
-equivalent_to: MRE:0000133 ! Exposure to 1,1,2,2-tetrachloroethane
 equivalent_to: Wikidata:Q21175346 ! 1,1,2,2-tetrachloroethane exposure
 
 [Term]
@@ -1455,11 +1504,11 @@ id: ECTO:0001967 ! exposure to isophorone diisocyanate
 equivalent_to: Wikidata:Q21174787 ! Isophorone diisocyanate exposure
 
 [Term]
-id: ECTO:0001974 ! Behavior related exposure
+id: ECTO:0001974 ! behavior related exposure
 equivalent_to: Wikidata:Q9332 ! behavior
 
 [Term]
-id: ECTO:0002032 ! Activity related exposure
+id: ECTO:0002032 ! activity related exposure
 equivalent_to: Wikidata:Q1914636 ! activity
 
 [Term]
@@ -1580,7 +1629,7 @@ equivalent_to: Wikidata:Q21174109 ! Cyanamide exposure
 
 [Term]
 id: ECTO:0002115 ! exposure to oxalonitrile
-equivalent_to: Wikidata:Q21174350 ! glycolonitrile exposure
+equivalent_to: Wikidata:Q21174110 ! cyanogen exposure
 
 [Term]
 id: ECTO:0002118 ! exposure to cyclohexanone
@@ -2319,8 +2368,7 @@ equivalent_to: MRE:0000026 ! Dietary exposure to disodium guanylate
 
 [Term]
 id: MRE:0000000 ! Exposure
-equivalent_to: NCIT:C17941 ! Exposure
-equivalent_to: Wikidata:Q6671777 ! structure
+equivalent_to: Wikidata:Q114953 ! poisoning
 
 [Term]
 id: MRE:0000035 ! Passive smoking
@@ -2328,16 +2376,16 @@ equivalent_to: NCIT:C17140 ! Passive Smoke Exposure
 
 [Term]
 id: MRE:0000044 ! Occupational exposure
+equivalent_to: http://purl.obolibrary.org/obo/http_//id.nlm.nih.gov/mesh/M0024872
 equivalent_to: NCIT:C16929 ! Occupational Exposure
 
 [Term]
 id: MRE:0000065 ! Poisoning
-equivalent_to: Wikidata:Q35120 ! entity
+equivalent_to: Wikidata:Q6671777 ! structure
 
 [Term]
 id: MRE:0000079 ! Radiation exposure
 equivalent_to: NCIT:C61398 ! Radiation Exposure
-equivalent_to: Wikidata:Q114953 ! poisoning
 
 [Term]
 id: MRE:0000099 ! Carbon monoxide exposure
@@ -2376,10 +2424,6 @@ equivalent_to: Wikidata:Q5138720 ! cobalt poisoning
 id: MRE:0000115 ! Exposure to copper
 is_a: ECTO:0001568 ! exposure to copper
 equivalent_to: Wikidata:Q21174096 ! copper exposure
-
-[Term]
-id: MRE:0000116 ! Exposure to lead
-equivalent_to: NCIT:C44395 ! Lead Compound
 
 [Term]
 id: MRE:0000117 ! Exposure to manganese
@@ -2422,7 +2466,7 @@ equivalent_to: Wikidata:Q21174904 ! 1,1,1-Trichloroethane exposure
 
 [Term]
 id: MRE:0000133 ! Exposure to 1,1,2,2-tetrachloroethane
-equivalent_to: Wikidata:Q21175346 ! 1,1,2,2-tetrachloroethane exposure
+equivalent_to: Wikidata:Q21175345 ! 1,1,1,2-tetrachloroethane exposure
 
 [Term]
 id: MRE:0000134 ! Exposure to 1,1,2-trichloroethane
@@ -2454,7 +2498,7 @@ equivalent_to: Wikidata:Q21175082 ! 1,2-dichloropropane exposure
 
 [Term]
 id: MRE:0000146 ! Exposure to benzene
-equivalent_to: NCIT:C36251 ! Benzene Exposure
+equivalent_to: NCIT:C302 ! Benzene
 equivalent_to: Wikidata:Q21167939 ! benzene exposure
 
 [Term]
@@ -2500,6 +2544,22 @@ id: NCIT:C1072 ! 1,1-Dimethylhydrazine
 equivalent_to: Wikidata:Q21174204 ! 1,1-Dimethylhydrazine exposure
 
 [Term]
+id: NCIT:C15313 ! Radiation Therapy
+equivalent_to: http://purl.obolibrary.org/obo/http_//id.nlm.nih.gov/mesh/M0535011
+
+[Term]
+id: NCIT:C16552 ! Environmental Exposure
+equivalent_to: http://purl.obolibrary.org/obo/http_//id.nlm.nih.gov/mesh/D004781
+
+[Term]
+id: NCIT:C16929 ! Occupational Exposure
+equivalent_to: http://purl.obolibrary.org/obo/http_//id.nlm.nih.gov/mesh/M0024872
+
+[Term]
+id: NCIT:C17941 ! Exposure
+equivalent_to: Wikidata:Q114953 ! poisoning
+
+[Term]
 id: NCIT:C28130 ! Acrylonitrile
 equivalent_to: Wikidata:Q21167650 ! acrylonitrile exposure
 
@@ -2520,8 +2580,12 @@ id: NCIT:C29839 ! Naphthalene
 equivalent_to: Wikidata:Q21174940 ! naphthalene exposure
 
 [Term]
-id: NCIT:C36251 ! Benzene Exposure
+id: NCIT:C302 ! Benzene
 equivalent_to: Wikidata:Q21167939 ! benzene exposure
+
+[Term]
+id: NCIT:C36290 ! Chemical Exposure
+equivalent_to: ZECO:0000111 ! chemical treatment
 
 [Term]
 id: NCIT:C44295 ! 1,2,3-Trichloropropane
@@ -2604,6 +2668,10 @@ id: NCIT:C44390 ! Hexamethylphosphoramide
 equivalent_to: Wikidata:Q21174735 ! Hexamethylphosphoramide exposure
 
 [Term]
+id: NCIT:C44395 ! Lead Compound
+equivalent_to: Wikidata:Q110315 ! lead poisoning
+
+[Term]
 id: NCIT:C44397 ! Lindane
 equivalent_to: Wikidata:Q21174819 ! Lindane exposure
 
@@ -2660,6 +2728,10 @@ id: NCIT:C44459 ! Trichloroethylene
 equivalent_to: Wikidata:Q21175384 ! Trichloroethylene exposure
 
 [Term]
+id: NCIT:C44462 ! UV Radiation Exposure
+equivalent_to: ZECO:0000214 ! UV
+
+[Term]
 id: NCIT:C44463 ! Wood Dust
 equivalent_to: Wikidata:Q21175422 ! exposure to wood dust
 
@@ -2676,8 +2748,32 @@ id: NCIT:C55816 ! Asbestos Exposure
 equivalent_to: Wikidata:Q21167862 ! asbestos exposure
 
 [Term]
+id: NCIT:C61398 ! Radiation Exposure
+equivalent_to: Wikidata:Q35120 ! entity
+
+[Term]
 id: NCIT:C936 ! Vinyl Chloride
 equivalent_to: Wikidata:Q21175413 ! vinyl chloride exposure
+
+[Term]
+id: PECO:0000059 ! chemical added or excluded
+equivalent_to: ZECO:0000111 ! chemical treatment
+
+[Term]
+id: PECO:0000135 ! semi-aerobic environment
+equivalent_to: ZECO:0000189 ! hypoxia
+
+[Term]
+id: PECO:0000202 ! chilled cells
+equivalent_to: ZECO:0000162 ! cold exposure
+
+[Term]
+id: Wikidata:Q114953 ! poisoning
+equivalent_to: ZECO:0000208 ! radiation
+
+[Term]
+id: Wikidata:Q123414 ! stress
+equivalent_to: ZECO:0000131 ! stress
 
 [Term]
 id: Wikidata:Q21174096 ! copper exposure

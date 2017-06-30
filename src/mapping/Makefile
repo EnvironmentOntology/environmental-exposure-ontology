@@ -18,6 +18,9 @@ exposure-xco.obo:
 exposure-zeco.obo:
 	blip ontol-query -r zeco -query "class(ID)" -to obo > $@
 
+exposure-mesh.obo:
+	ogr -t obo -r mesh-obo.json %xposure% > $@
+
 exposure-peco.obo:
 	wget --no-check-certificate https://raw.githubusercontent.com/pombase/fypo/master/peco.obo -O $@
 
@@ -51,7 +54,7 @@ combined-exposure.obo: all_exposure
 	obo-cat.pl exposure-*.obo | grep -v ^namespace: | grep -v ^property_value: | ./add-syns.pl > $@
 .PRECIOUS: combined-exposure.obo
 
-slim-exposure.obo: exposure-ncit.obo exposure-snomed.obo exposure-mre.obo exposure-ecto.obo exposure-wikidata.obo
+slim-exposure.obo: exposure-ncit.obo exposure-snomed.obo exposure-mre.obo exposure-ecto.obo exposure-wikidata.obo exposure-zeco.obo exposure-mesh.obo exposure-peco.obo
 	obo-cat.pl $^ | grep -v ^namespace: | grep -v ^property_value: | ./add-syns.pl > $@
 .PRECIOUS: slim-exposure.obo
 

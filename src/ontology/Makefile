@@ -37,13 +37,17 @@ MODS_CSV = $(patsubst %,$(MODDIR)/%.csv,$(MODS))
 MODS1_CSV = $(patsubst %,$(MODDIR)/%.csv,$(MODS1))
 MODS2_CSV = $(patsubst %,$(MODDIR)/%.csv,$(MODS2))
 
+# Additional includes
+CONSTRUCTS= embedded-definition make-subset
+INCLUDES_OWL = $(patsubst %,include-%.owl,$(CONSTRUCTS))
+
 # ----------------------------------------
 # Top level targets
 # ----------------------------------------
 #
 # Main steps:
 #
-# (ecto-edit + modules) --[merge]--> ecto-core --[reason]--> ecto-core-inferred --[annotate]--> ecto
+# (ecto-edit + modules) --[merge]--> ecto-core --[reason]--> ecto-core-inferred --[add CONSTRUCTS]--> pre --[annotate]--> ecto
 # 
 all: all_imports all_modules ecto.json.gz ecto.owl ecto.obo all_subsets 
 all_subsets: subsets/ecto-basic.obo
@@ -64,17 +68,16 @@ ecto-core.obo: ecto-core.owl
 	owltools $(USECAT) $< -o -f obo --no-check $@.tmp && grep -v ^owl-axioms $@.tmp > $@
 
 # Basic inference
-ecto-core-inferred.owl: ecto-core.owl all_imports
+ecto-core-inferred.owl: ecto-core.owl
 	robot reason --input $< --reasoner elk -e false reduce --reasoner elk -o $@
+.PRECIOUS: ecto-core-inferred.owl
 
-# Simple version (isa/partof)
-subsets/ecto-basic.owl: ecto-core-inferred.owl
-	owltools $(USECAT) $< --remove-imports-declarations --make-subset-by-properties -f BFO:0000050 --remove-dangling --remove-axioms -t EquivalentClasses --set-ontology-id $(OBO)/ecto/$@ -o $@
-subsets/ecto-basic.obo: subsets/ecto-basic.owl
-	robot convert -i $< -o $@.tmp.obo && grep -v ^owl-axioms $@.tmp.obo > $@
+ecto-pre.owl: ecto-core-inferred.owl $(INCLUDES_OWL)
+	owltools $^ --merge-support-ontologies -o $@
+
 
 # Annotate with version info
-ecto.owl: ecto-core-inferred.owl
+ecto.owl: ecto-pre.owl
 	robot annotate -i $< -O $(OBO)/$@ -V $(OBO)/ecto/releases/$(DATE)/ecto.owl -o $@
 
 # convert
@@ -86,6 +89,30 @@ ecto.json: ecto.owl
 	owltools $(USECAT)  $<  -o -f json  $@.tmp && mv $@.tmp $@
 ecto.json.gz: ecto.json
 	gzip -f $<
+
+# ----------------------------------------
+# Subsets
+# ----------------------------------------
+
+# Simple version (isa/partof)
+subsets/ecto-basic.owl: ecto-pre.owl
+	owltools $(USECAT) $< --remove-imports-declarations --make-subset-by-properties -f BFO:0000050 --remove-dangling --remove-axioms -t EquivalentClasses --set-ontology-id $(OBO)/ecto/$@ -o $@
+
+subsets/%.obo: subsets/%.owl
+	robot convert -i $< -o $@.tmp.obo && grep -v ^owl-axioms $@.tmp.obo > $@
+
+subsets/mrex.owl: subsets/ecto-basic.owl
+	owltools $< --extract-ontology-subset -s mrex --fill-gaps --set-ontology-id $(OBO)/ecto/$@ -o $@
+
+# ----------------------------------------
+# SPARQL
+# ----------------------------------------
+
+
+# generate includes from sparql CONSTRUCT queries;
+# these can then be merged in to the main ontology
+include-%.owl: sparql/construct-%.sparql ecto-core.owl
+	robot merge -i ecto-core.owl query -c $< $@.tmp.ttl -f ttl && robot annotate -i $@.tmp.ttl -O $(OBO)/ecto/$@ -o $@
 
 # ----------------------------------------
 # Regenerate imports
@@ -148,7 +175,7 @@ mirror/%.owl.gz: mirror/%.obo
 
 # custom mirror: RO
 mirror/ro.owl.gz:
-	owltools $(OBO)/ro.owl --merge-imports-closure  $(OGZIP)
+	owltools $(OBO)/ro.owl --merge-imports-closure -o mirror/ro.owl && gzip -f mirror/ro.owl
 .PRECIOUS: mirror/ro.owl
 
 # custom mirror: ExO
@@ -172,17 +199,17 @@ mirror/npo.obo:
 
 # CHEBI: need to transform their internal properties
 mirror/chebi.owl.gz: mirror/chebi.obo
-	owltools --use-catalog $<  --rename-entity $(OBO)/chebi#has_part $(OBO)/BFO_0000051 --rename-entity $(OBO)/chebi#has_role $(OBO)/RO_0000087  --remove-annotation-assertions -r -l -s  --set-ontology-id $(OBO)/chebi.owl $(OGZIP)
+	owltools --use-catalog $<  --rename-entity $(OBO)/chebi#has_part $(OBO)/BFO_0000051 --rename-entity $(OBO)/chebi#has_role $(OBO)/RO_0000087  --remove-annotation-assertions -r -l -s -d --set-ontology-id $(OBO)/chebi.owl -o mirror/chebi.owl && gzip -f mirror/chebi.owl
 .PRECIOUS: mirror/chebi.owl
 
 # UBERON: use basic
 mirror/uberon.owl:
-	owltools $(OBO)/uberon/basic.owl --remove-annotation-assertions -r -l -s -d --remove-axiom-annotations --remove-dangling-annotations --make-subset-by-properties -f $(KEEPRELS) --set-ontology-id $(OBO)/uberon.owl $(OGZIP)
+	owltools $(OBO)/uberon/basic.owl --remove-annotation-assertions -r -l -s -d --remove-axiom-annotations --remove-dangling-annotations --make-subset-by-properties -f $(KEEPRELS) --set-ontology-id $(OBO)/uberon.owl -o mirror/uberon.owl && gzip -f mirror/uberon.owl
 .PRECIOUS: mirror/%.owl
 
 # PO
 mirror/po.owl.gz:
-	owltools $(OBO)/po.owl --remove-annotation-assertions -r -l -s -d --remove-axiom-annotations --remove-dangling-annotations --make-subset-by-properties -f $(KEEPRELS) --set-ontology-id $(OBO)/po.owl $(OGZIP)
+	owltools $(OBO)/po.owl --remove-annotation-assertions -r -l -s -d --remove-axiom-annotations --remove-dangling-annotations --make-subset-by-properties -f $(KEEPRELS) --set-ontology-id $(OBO)/po.owl -o mirror/po.owl && gzip -f mirror/po.owl
 .PRECIOUS: mirror/%.owl
 
 # NCBITaxon
@@ -190,7 +217,7 @@ ncbitaxon.obo:
 	wget -N $(OBO)/ncbitaxon.obo
 .PRECIOUS: ncbitaxon.obo
 mirror/ncbitaxon.owl.gz: ncbitaxon.obo
-	OWLTOOLS_MEMORY=12G owltools $< --remove-annotation-assertions -r -l -s -d --remove-axiom-annotations --remove-dangling-annotations  --set-ontology-id $(OBO)/ncbitaxon.owl $(OGZIP)
+	OWLTOOLS_MEMORY=12G owltools $< --remove-annotation-assertions -r -l -s -d --remove-axiom-annotations --remove-dangling-annotations  --set-ontology-id $(OBO)/ncbitaxon.owl -o mirror/ncbitaxon.owl && gzip -f mirror/ncbitaxon.owl
 .PRECIOUS: mirror/ncbitaxon.owl
 
 # PCO
