@@ -60,6 +60,12 @@ merged.owl: $(RDIR)/ecto.owl exposure-all-ecto.obo
 
 
 # ----------------------------------------
+# symptoms
+# ----------------------------------------
+wd-symptoms.obo: exposure-symptom-assocs.obo
+	oq -i $< -query "parent(_,'RO:0002304',ID)" -to obo > $@
+
+# ----------------------------------------
 # ipython
 # ----------------------------------------
 
