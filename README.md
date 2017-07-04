@@ -1,5 +1,6 @@
 [![Build Status](https://travis-ci.org/cmungall/environmental-conditions.svg?branch=master)](https://travis-ci.org/cmungall/environmental-conditions)
 [![DOI](https://zenodo.org/badge/13996/cmungall/environmental-conditions.svg)](https://zenodo.org/badge/latestdoi/13996/cmungall/environmental-conditions)
+[![INCA](https://environmentontology.github.io/exposure-inca-form/INCA.png)](https://environmentontology.github.io/exposure-inca-form/)
 
 ## Environmental conditions, treatments and exposures ontology (ECTO)
 
