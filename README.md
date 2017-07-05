@@ -1,6 +1,12 @@
 [![Build Status](https://travis-ci.org/cmungall/environmental-conditions.svg?branch=master)](https://travis-ci.org/cmungall/environmental-conditions)
 [![DOI](https://zenodo.org/badge/13996/cmungall/environmental-conditions.svg)](https://zenodo.org/badge/latestdoi/13996/cmungall/environmental-conditions)
 
+## Edit this ontology!
+
+You can edit this ontology via its [INCA Form](https://environmentontology.github.io/exposure-inca-form/)
+
+Note: github integration not yet supported, you must save files and make pull requests
+
 ## Environmental conditions, treatments and exposures ontology (ECTO)
 
 The purpose of this ontology is to create compositional classes that
