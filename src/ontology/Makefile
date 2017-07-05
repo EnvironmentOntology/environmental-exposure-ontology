@@ -231,6 +231,7 @@ mirror/ncbitaxon.owl.gz: ncbitaxon.obo
 # avoid circular dependencies with imports;
 # some patterns refer to ECTO classes; we use the previous version for this
 # TODO: use obographs, and don't centralize assumptions about synonyms in central pattern2owl script.
+# Note that this pipeline also introduces a dependency on the perl JSON.pm module..
 SYNFILES = imports/uberon_import.obo ecto.obo
 syns.json: mirror/chebi.obo mirror/envo.obo imports/curated_synonyms.obo
 	extract-obo-syns.pl $^ $(SYNFILES) > $@.tmp && mv $@.tmp $@
