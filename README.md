@@ -1,5 +1,5 @@
-[![Build Status](https://travis-ci.org/cmungall/environmental-conditions.svg?branch=master)](https://travis-ci.org/cmungall/environmental-conditions)
-[![DOI](https://zenodo.org/badge/13996/cmungall/environmental-conditions.svg)](https://zenodo.org/badge/latestdoi/13996/cmungall/environmental-conditions)
+[![Build Status](https://travis-ci.org/EnvironmentOntology/environmental-exposure-ontology.svg?branch=master)](https://travis-ci.org/EnvironmentOntology/environmental-exposure-ontology)
+[![DOI](https://zenodo.org/badge/13996/EnvironmentOntology/environmental-exposure-ontology.svg)](https://zenodo.org/badge/latestdoi/13996/EnvironmentOntology/environmental-exposure-ontology)
 
 ## Edit this ontology!
 
