@@ -57,14 +57,14 @@ Ontologies used in composition (largely orthogonal):
 
 Similar ontologies (overlapping/non-orthogonal)
 
- * ZECO - zebrafish specific conditions
- * PECO - pombase specific conditions
+ * ZECO - zebrafish-specific conditions
+ * PECO - pombase-specific conditions
  * EO - plant-specific environmental conditions and treatments
- * GO - `response to X` subset shadows many classes here
- * SNOMED - has an exposure subset
- * NCIT - has an exposure subset?
- * XCO - experimental conditions (mammal-centric?)
- * Wikidata - subclasses of hazard (Q1132455)
+ * GO - subset shadows many classes here eg. gene expression in `response to X`
+ * SNOMED - has an exposure subset, but closed
+ * NCIT - very broad, but contains some exposure terms.
+ * XCO - experimental conditions (mammal-centric? rat in particular)
+ * Wikidata - subclasses of hazard (wikidata:Q1132455)[https://www.wikidata.org/wiki/Q1132455]
 
 See below for the merge experiment with these ontologies.
 
