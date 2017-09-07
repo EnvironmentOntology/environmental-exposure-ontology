@@ -1,19 +1,31 @@
-all: all_exposure probs.tsv m.tsv  rpt.html merged-exposure.obo axioms-r.obo  hier all_ecto unmapped.tsv
+# ----------------------------------------
+# PARAMETERS
+# ----------------------------------------
 
 OBO = http://purl.obolibrary.org/obo
 
 #wd causig loops?
-MOD = eo xco zeco snomed ncit go exo mre wikidata ecto
+MOD = eo xco zeco snomed ncit go exo mre wikidata
 #MOD = eo xco zeco snomed ncit go exo mre ecto
 
+# ----------------------------------------
+# TOP LEVEL TARGETS
+# ----------------------------------------
+
+all: all_exposure probs.tsv m.tsv  rpt.html merged-exposure.obo axioms-r.obo  hier all_ecto unmapped.tsv
+
+all_align: $(patsubst %,mappings-%.tsv,$(MOD))
 all_exposure: $(patsubst %, exposure-%.obo,$(MOD))
 
+# ----------------------------------------
+# ONTOLOGIES
+# ----------------------------------------
 
 exposure-eo.obo:
 	blip ontol-query -r eo -query "class(ID)" -to obo > $@
 
 exposure-xco.obo:
-	blip ontol-query -r obo/xco -query "class(ID)" -to obo > $@
+	blip ontol-query -r obo/xco -query "class(ID)" -to obo | grep -v ^namespace: > $@
 
 exposure-zeco.obo:
 	blip ontol-query -r zeco -query "class(ID)" -to obo > $@
@@ -28,7 +40,7 @@ exposure-snomed.obo:
 	blip ontol-query -r snomed_tidy -query "class(R,'Exposureure to potentially harmful entity'),subclassRT(ID,R)" -to obo | perl -npe 's@SCTID_@SCTID:@g' > $@
 
 exposure-ncit.obo:
-	blip ontol-query -r ncit -n %xposure% -to obo > $@
+	blip ontol-query -r ncit -n %xposure% -to obo | egrep -v '^(property_value|def)' > $@
 
 exposure-go.obo:
 	blip ontol-query -r go -query "class(R,'response to stimulus'),subclassRT(ID,R)" -to obo | obo-grep.pl -r 'name: response to' - > $@
@@ -46,8 +58,18 @@ exposure-wikidata.obo:
 	#cp ../resources/wikidata/combined.obo $@
 	grep -v ^is_a: ../resources/wikidata/combined.obo > $@
 
+# Get ecto from this repo
 exposure-ecto.obo: ../../subsets/ecto-basic.obo
 	cp $< $@
+
+# GENERIC RULE
+exposure-%.json: exposure-%.obo
+	owltools $< -o -f json $@
+.PRECIOUS: exposure-%.json
+
+# GENERIC RULE
+%-exposure.owl: %-exposure.obo
+	owltools $< --set-ontology-id $(OBO)/rad.owl -o $@
 
 #combined-exposure.obo:
 combined-exposure.obo: all_exposure
@@ -58,6 +80,17 @@ slim-exposure.obo: exposure-ncit.obo exposure-snomed.obo exposure-mre.obo exposu
 	obo-cat.pl $^ | grep -v ^namespace: | grep -v ^property_value: | ./add-syns.pl > $@
 .PRECIOUS: slim-exposure.obo
 
+# ----------------------------------------
+# ALIGNMENT: ontobio
+# ----------------------------------------
+
+mappings-%.tsv notfound-%.tsv: exposure-ecto.json exposure-%.json
+	ontobio-lexmap.py -c conf.yaml -u notfound-$*.tsv $^ > $@.tmp && mv $@.tmp $@
+
+# ----------------------------------------
+# ALIGNMENT: ontobio
+# ----------------------------------------
+
 probs.tsv: slim-exposure.obo ignore.pro
 	blip-findall  -i ignore.pro -debug index -goal nlp_index_all -i $< -u metadata_nlp entity_pair_mprobs/6 -no_pred > $@.tmp && mv $@.tmp $@
 probs-debug.tsv: slim-exposure.obo ignore.pro
@@ -65,6 +98,10 @@ probs-debug.tsv: slim-exposure.obo ignore.pro
 
 #probs-debug.tsv: slim-exposure.obo ignore.pro
 #	blip-findall  -i ignore.pro -debug index -goal nlp_index_all -i $< -u metadata_nlp "normalized_xref(A,B),pair_relationship_scores(A,B,S)" -select "x(A,B,S)" -no_pred -label -no_pred > $@.tmp && mv $@.tmp $@
+
+# ----------------------------------------
+# ALIGNMENT: blipkit (legacy)
+# ----------------------------------------
 
 m.tsv: combined-exposure.obo ignore.pro
 	blip-findall  -i ignore.pro -debug index -goal nlp_index_all -i $< -u metadata_nlp entity_pair_label_match/6 -label -no_pred > $@
@@ -87,9 +124,9 @@ unmapped-%.tsv: unmapped.tsv
 obol-%.obo: mxrefs.obo
 	blip-findall -r $* -i ../ontology/ecto.obo -r envo -r chebi -u odputil -i $< -i ../patterns/ecto_patterns.pro "write_suggestion('MRE')" > $@.tmp && mv $@.tmp $@
 
-OBO=http://purl.obolibrary.org/obo
-%-exposure.owl: %-exposure.obo
-	owltools $< --set-ontology-id $(OBO)/rad.owl -o $@
+# ----------------------------------------
+# kBOOM
+# ----------------------------------------
 
 MAX_E=8
 axioms.owl: slim-exposure.owl probs.tsv
