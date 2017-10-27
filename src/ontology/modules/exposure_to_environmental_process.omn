@@ -2,27 +2,27 @@ Prefix: : <http://purl.obolibrary.org/obo/>
 Prefix: IAO: <http://purl.obolibrary.org/obo/IAO_>
 Prefix: DOSDP: <http://geneontology.org/foo/>
 Prefix: oio: <http://www.geneontology.org/formats/oboInOwl#>
-Prefix: UBERON: <http://purl.obolibrary.org/obo/UBERON_>
-Prefix: CHEBI: <http://purl.obolibrary.org/obo/CHEBI_>
-Prefix: XCO: <http://purl.obolibrary.org/obo/XCO_>
+Prefix: RO: <http://purl.obolibrary.org/obo/RO_>
+Prefix: NPO: <http://purl.obolibrary.org/obo/NPO_>
+Prefix: GOCHE: <http://purl.obolibrary.org/obo/GOCHE_>
 Prefix: PR: <http://purl.obolibrary.org/obo/PR_>
+Prefix: UBERON: <http://purl.obolibrary.org/obo/UBERON_>
+Prefix: ENVO: <http://purl.obolibrary.org/obo/ENVO_>
+Prefix: CHEBI: <http://purl.obolibrary.org/obo/CHEBI_>
+Prefix: BFO: <http://purl.obolibrary.org/obo/BFO_>
 Prefix: GO: <http://purl.obolibrary.org/obo/GO_>
 Prefix: PATO: <http://purl.obolibrary.org/obo/PATO_>
-Prefix: SO: <http://purl.obolibrary.org/obo/SO_>
-Prefix: GOCHE: <http://purl.obolibrary.org/obo/GOCHE_>
-Prefix: ENVO: <http://purl.obolibrary.org/obo/ENVO_>
-Prefix: ECTO: <http://purl.obolibrary.org/obo/ECTO_>
-Prefix: OBA: <http://purl.obolibrary.org/obo/OBA_>
-Prefix: NCIT: <http://purl.obolibrary.org/obo/NCIT_>
+Prefix: NCBITaxon: <http://purl.obolibrary.org/obo/NCBITaxon_>
+Prefix: XCO: <http://purl.obolibrary.org/obo/XCO_>
+Prefix: CL: <http://purl.obolibrary.org/obo/CL_>
+Prefix: NBO: <http://purl.obolibrary.org/obo/NBO_>
+Prefix: ZECO: <http://purl.obolibrary.org/obo/ZECO_>
 Prefix: ExO: <http://purl.obolibrary.org/obo/ExO_>
 Prefix: PO: <http://purl.obolibrary.org/obo/PO_>
-Prefix: CL: <http://purl.obolibrary.org/obo/CL_>
-Prefix: BFO: <http://purl.obolibrary.org/obo/BFO_>
-Prefix: NPO: <http://purl.obolibrary.org/obo/NPO_>
-Prefix: NCBITaxon: <http://purl.obolibrary.org/obo/NCBITaxon_>
-Prefix: NBO: <http://purl.obolibrary.org/obo/NBO_>
-Prefix: RO: <http://purl.obolibrary.org/obo/RO_>
-Prefix: ZECO: <http://purl.obolibrary.org/obo/ZECO_>
+Prefix: SO: <http://purl.obolibrary.org/obo/SO_>
+Prefix: NCIT: <http://purl.obolibrary.org/obo/NCIT_>
+Prefix: ECTO: <http://purl.obolibrary.org/obo/ECTO_>
+Prefix: OBA: <http://purl.obolibrary.org/obo/OBA_>
 
  ## Auto-generated
 
@@ -35,9 +35,9 @@ AnnotationProperty: oio:hasExactSynonym
 AnnotationProperty: oio:hasExactSynonym
 Class: ExO:0000002 ## exposure event
 Class: ENVO:02500000 ## environmental process
-ObjectProperty: BFO_0000050 ## part of
 ObjectProperty: BFO_0000050 ## stressor
 ObjectProperty: RO:0002309 ## has exposure stimulus
+ObjectProperty: BFO_0000050 ## part of
 ## Auto-generated classes
 
 Class: ENVO:02500000 ## environmental system process
@@ -95,8 +95,6 @@ Class: ECTO:0000075
  EquivalentTo: ExO:0000002 and RO:0002309 some ENVO:01000689 ## 'exposure event' and 'has exposure stimulus' some tsunami
   ## Auto-syns
 
- Annotations: oio:hasRelatedSynonym "exposure to seismic sea wave"
- Annotations: oio:hasRelatedSynonym "exposure to tidal wave"
  Annotations: oio:hasRelatedSynonym "exposure to seismic sea wave"
  Annotations: oio:hasRelatedSynonym "exposure to tidal wave"
 
@@ -157,8 +155,6 @@ Class: ECTO:0000081
 
  Annotations: oio:hasRelatedSynonym "exposure to clearance"
  Annotations: oio:hasRelatedSynonym "exposure to clearing"
- Annotations: oio:hasRelatedSynonym "exposure to clearance"
- Annotations: oio:hasRelatedSynonym "exposure to clearing"
 
 Class: ENVO:02500036 ## environmental pollution
 ## {"stressor": "ENVO:02500036"}
@@ -170,7 +166,6 @@ Class: ECTO:0000082
  EquivalentTo: ExO:0000002 and RO:0002309 some ENVO:02500036 ## 'exposure event' and 'has exposure stimulus' some environmental pollution
   ## Auto-syns
 
- Annotations: oio:hasRelatedSynonym "exposure to pollution"
  Annotations: oio:hasRelatedSynonym "exposure to pollution"
 
 Class: ENVO:01000631 ## ocean acidification
@@ -201,7 +196,6 @@ Class: ECTO:0000086
  EquivalentTo: ExO:0000002 and RO:0002309 some ENVO:01000692 ## 'exposure event' and 'has exposure stimulus' some landslide process
   ## Auto-syns
 
- Annotations: oio:hasRelatedSynonym "exposure to landslip"
  Annotations: oio:hasRelatedSynonym "exposure to landslip"
 
 Class: ENVO:01000695 ## mudslide
