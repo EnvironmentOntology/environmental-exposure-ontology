@@ -72,6 +72,7 @@ ecto-core-inferred.owl: ecto-core.owl
 	robot reason --input $< --reasoner elk -e false reduce --reasoner elk -o $@
 .PRECIOUS: ecto-core-inferred.owl
 
+# Inferences merged with additional metadata (subsets, ext defs, ...)
 ecto-pre.owl: ecto-core-inferred.owl $(INCLUDES_OWL)
 	owltools $^ --merge-support-ontologies -o $@
 
