@@ -22,6 +22,7 @@ exposure_to_chemical\
 exposure_to_chemical_with_role\
 exposure_to_levels_in_medium\
 exposure_to_change_in_levels\
+exposure_to_infection\
 exposure_via_route\
 activity\
 surgical_procedure\
