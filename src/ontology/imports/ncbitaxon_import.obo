@@ -1,0 +1,130 @@
+format-version: 1.2
+ontology: ecto/imports/ncbitaxon_import
+
+[Term]
+id: NCBITaxon:1
+name: root
+synonym: "all" RELATED []
+
+[Term]
+id: NCBITaxon:10239
+name: Viruses
+synonym: "Vira" RELATED []
+synonym: "Viridae" RELATED []
+synonym: "viruses" RELATED []
+is_a: NCBITaxon:1 ! root
+
+[Term]
+id: NCBITaxon:12058
+name: Picornaviridae
+synonym: "Picormavirus" RELATED []
+synonym: "Picornavirus" RELATED []
+is_a: NCBITaxon:464095 ! Picornavirales
+
+[Term]
+id: NCBITaxon:12059
+name: Enterovirus
+synonym: "Enteroviruses" RELATED []
+is_a: NCBITaxon:12058 ! Picornaviridae
+
+[Term]
+id: NCBITaxon:1224
+name: Proteobacteria
+synonym: "Alphaproteobacteraeota" RELATED []
+synonym: "proteobacteria" RELATED []
+synonym: "purple bacteria" EXACT []
+synonym: "purple bacteria and relatives" EXACT []
+synonym: "purple non-sulfur bacteria" EXACT []
+synonym: "purple photosynthetic bacteria" EXACT []
+synonym: "purple photosynthetic bacteria and relatives" EXACT []
+is_a: NCBITaxon:2 ! Bacteria
+
+[Term]
+id: NCBITaxon:131567
+name: cellular organisms
+synonym: "biota" RELATED []
+is_a: NCBITaxon:1 ! root
+
+[Term]
+id: NCBITaxon:151340
+name: Papillomaviridae
+synonym: "Papillomavirus" EXACT []
+is_a: NCBITaxon:35237 ! dsDNA viruses, no RNA stage
+
+[Term]
+id: NCBITaxon:2
+name: Bacteria
+synonym: "bacteria" RELATED []
+synonym: "eubacteria" EXACT []
+synonym: "Monera" RELATED []
+synonym: "not Bacteria Haeckel 1894" RELATED []
+synonym: "Procaryotae" RELATED []
+synonym: "Prokaryota" RELATED []
+synonym: "Prokaryotae" RELATED []
+synonym: "prokaryote" RELATED []
+synonym: "prokaryotes" RELATED []
+is_a: NCBITaxon:131567 ! cellular organisms
+
+[Term]
+id: NCBITaxon:209
+name: Helicobacter
+is_a: NCBITaxon:72293 ! Helicobacteraceae
+
+[Term]
+id: NCBITaxon:210
+name: Helicobacter pylori
+synonym: "Campylobacter pylori" RELATED []
+synonym: "Campylobacter pylori subsp. pylori" RELATED []
+synonym: "Campylobacter pyloridis" RELATED []
+synonym: "Helicobacter nemestrinae" RELATED []
+is_a: NCBITaxon:209 ! Helicobacter
+
+[Term]
+id: NCBITaxon:213849
+name: Campylobacterales
+is_a: NCBITaxon:29547 ! Epsilonproteobacteria
+
+[Term]
+id: NCBITaxon:29547
+name: Epsilonproteobacteria
+synonym: "e-proteobacteria" RELATED []
+synonym: "epsilon proteobacteria" RELATED []
+synonym: "epsilon subdivision" RELATED []
+synonym: "epsilon subgroup" RELATED []
+synonym: "not Epsilobacteria" RELATED []
+synonym: "Proteobacteria epsilon subdivision" RELATED []
+synonym: "Purple bacteria, epsilon subdivision" RELATED []
+is_a: NCBITaxon:68525 ! delta/epsilon subdivisions
+
+[Term]
+id: NCBITaxon:35237
+name: dsDNA viruses, no RNA stage
+is_a: NCBITaxon:10239 ! Viruses
+
+[Term]
+id: NCBITaxon:35278
+name: ssRNA positive-strand viruses, no DNA stage
+is_a: NCBITaxon:439488 ! ssRNA viruses
+
+[Term]
+id: NCBITaxon:439488
+name: ssRNA viruses
+is_a: NCBITaxon:10239 ! Viruses
+
+[Term]
+id: NCBITaxon:464095
+name: Picornavirales
+is_a: NCBITaxon:35278 ! ssRNA positive-strand viruses, no DNA stage
+
+[Term]
+id: NCBITaxon:68525
+name: delta/epsilon subdivisions
+synonym: "not Thiobacteria" RELATED []
+is_a: NCBITaxon:1224 ! Proteobacteria
+
+[Term]
+id: NCBITaxon:72293
+name: Helicobacteraceae
+synonym: "Helicobacter group" RELATED []
+is_a: NCBITaxon:213849 ! Campylobacterales
+
