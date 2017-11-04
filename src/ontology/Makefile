@@ -237,6 +237,7 @@ SYNFILES = imports/uberon_import.obo
 syns.json: mirror/chebi.obo last-ecto.obo mirror/envo.obo imports/curated_synonyms.obo
 	extract-obo-syns.pl $^ $(SYNFILES) > $@.tmp && mv $@.tmp $@
 
+# temp hack: use last version to avoid cycle dependencies
 last-ecto.obo:
 	wget --no-check-certificate https://raw.githubusercontent.com/EnvironmentOntology/environmental-exposure-ontology/master/ecto.obo -O $@
 
