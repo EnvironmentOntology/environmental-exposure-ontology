@@ -188,7 +188,8 @@ mirror/exo.obo:
 # custom mirror: NCIT activity subset
 # (not yet in OBO Lib)
 mirror/activity.obo:
-	blip ontol-query -r ncit -query "class(R,'Activity'),subclassRT(ID,R)" -to obo > $@.tmp && grep -v ^property $@.tmp | perl -npe 's@(.*)@lc($1)@e if m@^name@' > $@
+	wget --no-check-certificate $(OBO)/ncit.obo -O $@
+#	blip ontol-query -r ncit -query "class(R,'Activity'),subclassRT(ID,R)" -to obo > $@.tmp && grep -v ^property $@.tmp | perl -npe 's@(.*)@lc($1)@e if m@^name@' > $@
 
 # TODO: why is this different from generic?
 mirror/chebi.obo:
