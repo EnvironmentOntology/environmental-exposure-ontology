@@ -50,9 +50,9 @@ Ontologies used in composition (largely orthogonal):
  * [NanoParticle Ontology (NPO)](https://bioportal.bioontology.org/ontologies/NPO) - radiation
  * [Relations Ontology (RO)](http://obofoundry.org/ontology/ro.html) - relations
  * [Phenotypic Quality Ontology (PATO)](http://www.obofoundry.org/ontology/pato.html) - qualities
- * UBERON - tissue types (not used yet)
- * NCIT - activities such as smoking
- * SDGIO - social entities
+ * [UBERON Anatomy Ontology](http://uberon.github.io/) - tissue types (not used yet)
+ * [NCI Thesaurus (NCIT)](https://www.google.com/search?q=NCIT&oq=NCIT&aqs=chrome..69i57.438j0j4&sourceid=chrome&ie=UTF-8) - activities such as smoking
+ * [Sustainable Development Goals Interface Ontology (SDGIO)](https://github.com/SDG-InterfaceOntology/sdgio) - social entities
  * PCO - population attributes (e.g. overcrowding)
 
 Similar ontologies (overlapping/non-orthogonal)
