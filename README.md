@@ -48,8 +48,8 @@ Ontologies used in composition (largely orthogonal):
  * [Chemical Entities of Biological Interest (CHEBI)](http://www.ebi.ac.uk/chebi/) - use for both entities and roles
  * [Environment Ontology (ENVO)](http://obofoundry.org/ontology/envo.html) - environmental materials, processes
  * [NanoParticle Ontology (NPO)](https://bioportal.bioontology.org/ontologies/NPO) - radiation
- * RO - relations
- * PATO - qualities
+ * [Relations Ontology (RO)](http://obofoundry.org/ontology/ro.html) - relations
+ * [Phenotypic Quality Ontology (PATO)](http://www.obofoundry.org/ontology/pato.html) - qualities
  * UBERON - tissue types (not used yet)
  * NCIT - activities such as smoking
  * SDGIO - social entities
