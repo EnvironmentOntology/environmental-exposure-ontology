@@ -44,10 +44,10 @@ that the catalog can be used.
 
 Ontologies used in composition (largely orthogonal):
 
- * ExO - used as the upper ontology, for based classes such as 'exposure', different routes such as 'ingestion'
- * CHEBI - use for both entities and roles
- * ENVO - environmental materials, processes
- * NPO - radiation
+ * [Exposure Ontology (ExO)](https://bioportal.bioontology.org/ontologies/EXO) - used as the upper ontology, for based classes such as 'exposure', different routes such as 'ingestion'
+ * [Chemical Entities of Biological Interest (CHEBI)](http://www.ebi.ac.uk/chebi/) - use for both entities and roles
+ * [Environment Ontology (ENVO)](http://obofoundry.org/ontology/envo.html) - environmental materials, processes
+ * [NanoParticle Ontology (NPO)](https://bioportal.bioontology.org/ontologies/NPO) - radiation
  * RO - relations
  * PATO - qualities
  * UBERON - tissue types (not used yet)
