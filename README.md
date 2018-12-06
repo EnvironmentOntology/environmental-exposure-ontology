@@ -58,8 +58,8 @@ Ontologies used in composition (largely orthogonal):
 Similar ontologies (overlapping/non-orthogonal)
 
  * [Zebrafish Experimental Conditions Ontology (ZECO)](http://www.obofoundry.org/ontology/zeco.html) - zebrafish-specific conditions
- * [Plant Experimental Conditions Ontology (PECO)](http://www.obofoundry.org/ontology/peco.html) - pombase-specific conditions
- * [Plant Environment Ontology (EO)](http://www.obofoundry.org/ontology/eo.html) - plant-specific environmental conditions and treatments
+ * [S Pombe Experimental Conditions Ontology (SPECO)](http://www.obofoundry.org/ontology/peco.html) - pombase-specific conditions
+ * [Plant Environment Conditions Ontology (PECO)](http://www.obofoundry.org/ontology/peco.html) - plant-specific environmental conditions and treatments
  * [Gene Ontology (GO)](http://www.geneontology.org/) - subset shadows many classes here eg. gene expression in `response to X`
  * [SNOMED](https://www.nlm.nih.gov/healthit/snomedct/) - has an exposure subset, but closed
  * [NCI Thesaurus (NCIT)](https://www.google.com/search?q=NCIT&oq=NCIT&aqs=chrome..69i57.438j0j4&sourceid=chrome&ie=UTF-8) - very broad, but contains some exposure terms.
