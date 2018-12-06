@@ -209,3 +209,6 @@ epa-trichem-obol.obo: epa-trichem.obo
 epa-trichem-unparsed.txt: epa-trichem.obo epa-trichem-obol.obo
 	blip ontol-query -i epa-trichem.obo -i epa-trichem-obol.obo -query "class(X),id_idspace(X,'EPATRICHEM'),\+genus(X,_),ID=X" -showdefs > $@
 
+
+chear.owl:
+	wget --no-check-certificate https://raw.githubusercontent.com/tetherless-world/chear-ontology/master/chear.owl -O $@
