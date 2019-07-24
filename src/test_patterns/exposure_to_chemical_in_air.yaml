@@ -1,0 +1,35 @@
+pattern_name: exo/patterns/exposure_to_chemical_in_air
+classes:
+  exposure event: ExO:0000002
+  chemical entity: CHEBI:24431
+  air: ENVO:00002005
+
+relations:
+  has exposure stimulus: RO:0002309
+  part of: BFO:0000050
+  has exposure medium: BFO:0000050 *request relationship at RO - has receptor, has route etc.
+                        has exposure transport path?
+    
+vars: 
+  stressor: "'chemical entity'"
+
+name:
+  text: "exposure to %s in air"
+  vars:
+    - stressor
+
+annotations: 
+  - property: oio:hasExactSynonym
+    text: "%s exposure in air"
+    vars:
+      - stressor
+
+def: 
+  text: "An exposure to %s in air."
+  vars:
+    - stressor
+    
+equivalentTo: 
+  text: "'exposure event' and ('has exposure stimulus' some %s) and ('has exposure medium' some air)"
+  vars:
+    - stressor

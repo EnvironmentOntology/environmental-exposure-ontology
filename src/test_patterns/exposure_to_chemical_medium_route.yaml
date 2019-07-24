@@ -1,0 +1,49 @@
+pattern_name: exposure_to_chemical_medium_route
+iri: http://purl.obolibrary.org/obo/ecto/patterns/exposure_to_chemical_medium_route.yaml
+description: "exposures to a chemical substance where the medium and route are known"
+contributors:
+  - 
+classes:
+  exposure event: ExO:0000002
+  chemical entity: CHEBI:24431
+  medium: ENVO:00010483
+  route: ExO:0000055
+
+relations:
+  has exposure stimulus: RO:0002309
+  has exposure route: RO:0002242
+  has exposure medium: RO:0002243
+    
+vars:
+  stressor: "'chemical entity'"
+  medium: "'medium'"
+  route: "'route'"
+
+name:
+  text: "exposure to %s in %s via %s"
+  vars:
+    - stressor
+    - medium
+    - route
+
+annotations:
+  - property: oio:hasExactSynonym
+    text: "%s exposure in %s via %s"
+    vars:
+      - stressor
+      - medium
+      - route
+
+def:
+  text: "An exposure to %s mixed in %s via %s."
+  vars:
+    - stressor
+    - medium
+    - route
+    
+equivalentTo: 
+  text: "'exposure event' and ('has exposure stimulus' some %s) and ('has exposure medium' some %s) and ('has exposure route' some %s)"
+  vars:
+    - stressor
+    - medium
+    - route

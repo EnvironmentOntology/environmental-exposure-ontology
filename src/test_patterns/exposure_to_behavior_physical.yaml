@@ -1,0 +1,33 @@
+pattern_name: exo/patterns/exposure_to_behavior_physical
+classes:
+  exposure event: ExO:0000002
+  behavior: GO:0007610
+  physical: NCIT:C49147
+
+relations:
+  has exposure stimulus: RO:0002309
+  has exposure route: RO:0002242
+    
+vars: 
+  behavior: "'behavior'"
+
+name:
+  text: "%s contact"
+  vars:
+    - behavior
+
+annotations: 
+  - property: oio:hasExactSynonym
+    text: "physical contact with %s"
+    vars:
+    - behavior
+
+def: 
+  text: "An exposure event involving being in physical contact of %s"
+  vars:
+    - behavior
+    
+equivalentTo: 
+  text: "'exposure event' and ('has exposure stimulus' some %s) and ('has exposure route' some physical)"
+  vars:
+    - behavior

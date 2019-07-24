@@ -1,0 +1,34 @@
+pattern_name: exo/patterns/exposure_to_chemical_in_food
+classes:
+  exposure event: ExO:0000002
+  chemical entity: CHEBI:24431
+  food: CHEBI:33290
+
+relations:
+  has exposure stimulus: RO:0002309
+  has exposure medium: BFO:0000050 *request relationship at RO - has receptor, has route etc.
+                        has exposure transport path? RO:0002243
+    
+vars: 
+  stressor: "'chemical entity'"
+
+name:
+  text: "exposure to %s in food"
+  vars:
+    - stressor
+
+annotations: 
+  - property: oio:hasExactSynonym
+    text: "%s exposure in food"
+    vars:
+      - stressor
+
+def: 
+  text: "An exposure to %s mixed in food."
+  vars:
+    - stressor
+    
+equivalentTo: 
+  text: "'exposure event' and ('has exposure stimulus' some %s) and ('has exposure medium' some food)"
+  vars:
+    - stressor

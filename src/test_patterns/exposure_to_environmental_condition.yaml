@@ -1,0 +1,31 @@
+pattern_name: exo/patterns/exposure_to_environmental_condition
+classes:
+  exposure event: ExO:0000002
+  environmental condition: ENVO:01000203
+
+relations:
+  has exposure stimulus: RO:0002309
+    
+vars: 
+  condition: "'environmental condition'"
+
+name:
+  text: "exposure to %s in surroundings"
+  vars:
+    - condition
+
+annotations: 
+  - property: oio:hasExactSynonym
+    text: "%s exposure"
+    vars:
+      - condition
+
+def: 
+  text: "A exposure event involving the interaction of an exposure receptor to the condition of %s."
+  vars:
+    - condition
+    
+equivalentTo: 
+  text: "'exposure event' and 'has exposure stimulus' some %s"
+  vars:
+    - condition

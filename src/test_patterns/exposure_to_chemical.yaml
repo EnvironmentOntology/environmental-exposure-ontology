@@ -1,0 +1,31 @@
+pattern_name: exo/patterns/exposure_to_chemical
+classes:
+  exposure event: ExO:0000002
+  chemical entity: CHEBI:24431
+
+relations:
+  has exposure stimulus: RO:0002309
+    
+vars: 
+  stressor: "'chemical entity'"
+
+name:
+  text: " %s exposure"
+  vars:
+    - stressor
+
+annotations: 
+  - property: oio:hasExactSynonym
+    text: "exposure to %s"
+    vars:
+      - stressor
+
+def: 
+  text: "An exposure to %s."
+  vars:
+    - stressor
+    
+equivalentTo: 
+  text: "'exposure event' and 'has exposure stimulus' some %s"
+  vars:
+    - stressor
