@@ -1,0 +1,35 @@
+pattern_name: exo/patterns/exposure_to_chemical_in_water_inhalation
+classes:
+  exposure event: ExO:0000002
+  chemical entity: CHEBI:24431
+  water: CHEBI:15377
+  inhalation: ExO:0000057
+
+relations:
+  has exposure stimulus: RO:0002309
+  has exposure route: RO:0002242
+  has exposure medium: RO:0002243 *I'm having my doubts
+    
+vars: 
+  stressor: "'chemical entity'"
+
+name:
+  text: "exposure to %s in water via inhalation"
+  vars:
+    - stressor
+
+annotations: 
+  - property: oio:hasExactSynonym
+    text: "%s exposure in water via inhalation"
+    vars:
+      - stressor
+
+def: 
+  text: "An exposure to %s diluted in water via inhalation."
+  vars:
+    - stressor
+    
+equivalentTo: 
+  text: "'exposure event' and ('has exposure stimulus' some %s) and ('has exposure medium' some water) and ('has exposure route' some inhalation)"
+  vars:
+    - stressor

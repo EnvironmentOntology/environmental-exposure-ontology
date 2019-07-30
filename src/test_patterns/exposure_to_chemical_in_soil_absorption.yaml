@@ -1,0 +1,35 @@
+pattern_name: exo/patterns/exposure_to_chemical_in_soil_absorption
+classes:
+  exposure event: ExO:0000002
+  chemical entity: CHEBI:24431
+  soil: ENVO:00001998
+  absorption: ExO:0000058
+
+relations:
+  has exposure stimulus: RO:0002309
+  has exposure route: RO:0002242
+  has exposure medium: RO:0002243
+    
+vars: 
+  stressor: "'chemical entity'"
+
+name:
+  text: "exposure to %s in soil via absorption"
+  vars:
+    - stressor
+
+annotations: 
+  - property: oio:hasExactSynonym
+    text: "%s exposure in soil via absorption"
+    vars:
+      - stressor
+
+def: 
+  text: "An exposure to %s mixed in soil via absorption."
+  vars:
+    - stressor
+    
+equivalentTo: 
+  text: "'exposure event' and ('has exposure stimulus' some %s) and ('has exposure medium' some soil) and ('has exposure route' some absorption)"
+  vars:
+    - stressor

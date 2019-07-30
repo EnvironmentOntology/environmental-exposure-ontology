@@ -1,0 +1,34 @@
+pattern_name: exo/patterns/exposure_to_chemical_in_soil
+classes:
+  exposure event: ExO:0000002
+  chemical entity: CHEBI:24431
+  soil: ENVO:00001998 *should this be environmental material?
+
+relations:
+  has exposure stimulus: RO:0002309
+  has exposure medium: BFO:0000050 *request relationship at RO - has receptor, has route etc.
+                        has exposure transport path? RO:0002243
+    
+vars: 
+  stressor: "'chemical entity'"
+
+name:
+  text: "exposure to %s in soil"
+  vars:
+    - stressor
+
+annotations: 
+  - property: oio:hasExactSynonym
+    text: "%s exposure in soil"
+    vars:
+      - stressor
+
+def: 
+  text: "An exposure to %s mixed in soil."
+  vars:
+    - stressor
+    
+equivalentTo: 
+  text: "'exposure event' and ('has exposure stimulus' some %s) and ('has exposure medium' some soil)"
+  vars:
+    - stressor

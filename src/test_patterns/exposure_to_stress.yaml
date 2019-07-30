@@ -1,0 +1,31 @@
+pattern_name: exo/patterns/exposure_to_stress
+classes:
+  exposure event: ExO:0000002
+  stress: HP:0000739
+
+relations:
+  has exposure stimulus: RO:0002309
+    
+vars: 
+  condition: "'stress'"
+
+name:
+  text: "exposure to %s"
+  vars:
+    - stress
+
+annotations: 
+  - property: oio:hasExactSynonym
+    text: "%s exposure"
+    vars:
+      - stress
+
+def: 
+  text: "A exposure event involving the interaction of an exposure receptor to %s."
+  vars:
+    - stress
+    
+equivalentTo: 
+  text: "'exposure event' and 'has exposure stimulus' some %s"
+  vars:
+    - stress

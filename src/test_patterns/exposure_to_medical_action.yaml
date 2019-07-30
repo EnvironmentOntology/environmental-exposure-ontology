@@ -1,0 +1,27 @@
+pattern_name: exo/patterns/exposure_to_medical_action
+classes:
+  exposure event: ExO:0000002
+  procedure: NCIT:C25218 *align with MAXO*
+
+relations:
+  has exposure stimulus: RO:0002309
+
+vars: 
+  stressor: "'procedure'"
+
+
+name:
+  text: "exposure to %s"
+  vars:
+    - stressor
+
+def: 
+  text: "A exposure event involving the interaction of an exposure receptor to %s."
+  vars:
+    - stressor
+    
+equivalentTo: 
+  text: "'exposure event' and 'has exposure stimulus' some %s"
+  vars:
+    - stressor
+
