@@ -1,0 +1,68 @@
+Prefix(:=<http://purl.obolibrary.org/obo/ecto.owl#>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+
+
+Ontology(<http://purl.obolibrary.org/obo/ecto.owl>
+Import(<http://purl.obolibrary.org/obo/ecto/imports/npo_import.owl>)
+Import(<http://purl.obolibrary.org/obo/ecto/imports/exo_import.owl>)
+Import(<http://purl.obolibrary.org/obo/ecto/imports/envo_import.owl>)
+Import(<http://purl.obolibrary.org/obo/ecto/imports/ro_import.owl>)
+Import(<http://purl.obolibrary.org/obo/ecto/imports/uberon_import.owl>)
+Import(<http://purl.obolibrary.org/obo/ecto/imports/xco_import.owl>)
+Import(<http://purl.obolibrary.org/obo/ecto/imports/ncbitaxon_import.owl>)
+Import(<http://purl.obolibrary.org/obo/ecto/imports/pato_import.owl>)
+Import(<http://purl.obolibrary.org/obo/ecto/imports/ncit_import.owl>)
+Import(<http://purl.obolibrary.org/obo/ecto/imports/bridge.owl>)
+Import(<http://purl.obolibrary.org/obo/ecto/imports/chebi_import.owl>)
+Annotation(<http://purl.org/dc/elements/1.1/rights> <https://creativecommons.org/publicdomain/zero/1.0/>)
+Annotation(<http://purl.org/dc/elements/1.1/title> "Environment Exposure Ontology"^^xsd:string)
+
+Declaration(Class(<http://purl.obolibrary.org/obo/RO_0002310>))
+Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000115>))
+Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/ecto#mrex>))
+Declaration(AnnotationProperty(<http://purl.org/dc/elements/1.1/rights>))
+Declaration(AnnotationProperty(<http://purl.org/dc/elements/1.1/title>))
+Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#SubsetProperty>))
+Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#hasDbXref>))
+Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#id>))
+Declaration(AnnotationProperty(rdfs:comment))
+Declaration(AnnotationProperty(rdfs:label))
+############################
+#   Annotation Properties
+############################
+
+# Annotation Property: <http://purl.obolibrary.org/obo/IAO_0000115> (definition)
+
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0000115> "definition"^^xsd:string)
+
+# Annotation Property: <http://purl.obolibrary.org/obo/ecto#mrex> (<http://purl.obolibrary.org/obo/ecto#mrex>)
+
+AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/ecto#mrex> "medically relevant exposure"^^xsd:string)
+SubAnnotationPropertyOf(<http://purl.obolibrary.org/obo/ecto#mrex> <http://www.geneontology.org/formats/oboInOwl#SubsetProperty>)
+
+# Annotation Property: <http://www.geneontology.org/formats/oboInOwl#SubsetProperty> (subset_property)
+
+AnnotationAssertion(rdfs:label <http://www.geneontology.org/formats/oboInOwl#SubsetProperty> "subset_property"^^xsd:string)
+
+# Annotation Property: <http://www.geneontology.org/formats/oboInOwl#hasDbXref> (database_cross_reference)
+
+AnnotationAssertion(rdfs:label <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "database_cross_reference"^^xsd:string)
+
+
+
+############################
+#   Classes
+############################
+
+# Class: <http://purl.obolibrary.org/obo/RO_0002310> (exposure event or process)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "CTD:curators"^^xsd:string) <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/RO_0002310> "An interaction between an exposure stressor and an exposure receptor."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/RO_0002310> "RO:0002310"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/RO_0002310> "exposure event or process"^^xsd:string)
+
+
+)

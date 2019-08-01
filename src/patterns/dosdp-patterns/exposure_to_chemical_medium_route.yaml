@@ -1,5 +1,5 @@
 pattern_name: exposure_to_chemical_medium_route
-iri: http://purl.obolibrary.org/obo/ecto/patterns/exposure_to_chemical_medium_route.yaml
+pattern_iri: http://purl.obolibrary.org/obo/ecto/patterns/exposure_to_chemical_medium_route.yaml
 
 description: "exposures to a chemical substance where the medium and route are known"
 
@@ -16,7 +16,10 @@ relations:
   has exposure stimulus: RO:0002309
   has exposure route: RO:0002242
   has exposure medium: RO:0002243
-    
+
+annotationProperties:
+  exact_synonym: oio:hasExactSynonym
+
 vars:
   stressor: "'chemical entity'"
   medium: "'medium'"
@@ -30,7 +33,7 @@ name:
     - route
 
 annotations:
-  - property: oio:hasExactSynonym
+  - annotationProperty: exact_synonym
     text: "%s exposure in %s via %s"
     vars:
       - stressor
@@ -43,7 +46,7 @@ def:
     - stressor
     - medium
     - route
-    
+
 equivalentTo:
   text: "'exposure event' and ('has exposure stimulus' some %s) and ('has exposure medium' some %s) and ('has exposure route' some %s)"
   vars:
