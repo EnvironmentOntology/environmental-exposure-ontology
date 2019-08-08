@@ -1,4 +1,4 @@
-Prefix(:=<http://purl.obolibrary.org/obo/ecto/patterns/definitions.owl#>)
+Prefix(:=<urn:unnamed:ontology#ont1#>)
 Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
 Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
 Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
@@ -7,6 +7,27 @@ Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 
 
 Ontology(<http://purl.obolibrary.org/obo/ecto/patterns/definitions.owl>
-<http://purl.obolibrary.org/obo/ecto/releases/2019-07-31/patterns/definitions.owl>
+<http://purl.obolibrary.org/obo/ecto/releases/2019-08-02/patterns/definitions.owl>
+
+Declaration(Class(<http://purl.obolibrary.org/obo/CHEBI_1206>))
+Declaration(Class(<http://purl.obolibrary.org/obo/ECTO_9000001>))
+Declaration(Class(<http://purl.obolibrary.org/obo/ExO_0000002>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002309>))
+Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000115>))
+Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym>))
+
+
+
+############################
+#   Classes
+############################
+
+# Class: <http://purl.obolibrary.org/obo/ECTO_9000001> ( http://purl.obolibrary.org/obo/CHEBI_1206 exposure)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_9000001> "An exposure to http://purl.obolibrary.org/obo/CHEBI_1206."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_9000001> "exposure to http://purl.obolibrary.org/obo/CHEBI_1206"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_9000001> " http://purl.obolibrary.org/obo/CHEBI_1206 exposure"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_9000001> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/CHEBI_1206>)))
+
 
 )

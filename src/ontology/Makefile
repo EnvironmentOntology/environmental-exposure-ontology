@@ -177,7 +177,7 @@ ANNOTATE_VERSION_IRI = annotate -V $(ONTBASE)/releases/$(TODAY)/$@.owl
 # by default we use ELK to perform a reason-relax-reduce chain
 # after that we annotate the ontology with the release versionInfo
 
-OTHER_SRC = $(PATTERNDIR)/definitions.owl 
+OTHER_SRC = $(PATTERNDIR)/definitions.owl  components/ecto-xrefs.owl
 
 
 $(ONTOLOGYTERMS): $(SRC) $(OTHER_SRC)
