@@ -1,0 +1,31 @@
+pattern_name: exo/patterns/exposure_to_condition
+classes:
+  exposure event: ExO:0000002
+  condition: BFO:0000016 *I think this can cover stress and deficiency
+
+relations:
+  has exposure stimulus: RO:0002309
+    
+vars: 
+  stressor: "'condition'"
+
+name:
+  text: "exposure to %s"
+  vars:
+    - condition
+
+annotations: 
+  - property: oio:hasExactSynonym
+    text: "%s exposure"
+    vars:
+      - condition
+
+def: 
+  text: "A exposure event involving the interaction of an exposure receptor to %s."
+  vars:
+    - condition
+    
+equivalentTo: 
+  text: "'exposure event' and 'has exposure stimulus' some %s"
+  vars:
+    - condition

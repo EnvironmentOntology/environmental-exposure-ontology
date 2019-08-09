@@ -1,0 +1,33 @@
+pattern_name: exo/patterns/exposure_to_environmental_process_proximity
+classes:
+  exposure event: ExO:0000002
+  environmental process: ENVO:02500000
+  proximity: NCIT:C25633 *ask ExO for new route term
+
+relations:
+  has exposure stimulus: RO:0002309
+  has exposure route: RO:0002242
+    
+vars: 
+  stressor: "'environmental process'"
+
+name:
+  text: "exposure to %s in proximity"
+  vars:
+    - stressor
+
+annotations: 
+  - property: oio:hasExactSynonym
+    text: "%s exposure in proximity"
+    vars:
+      - stressor
+
+def: 
+  text: "A exposure event involving the interaction of an exposure receptor to %s happening in proximity of the receptor."
+  vars:
+    - stressor
+    
+equivalentTo: 
+  text: "'exposure event' and ('has exposure stimulus' some %s) and ('has exposure route' some proximity)"
+  vars:
+    - stressor

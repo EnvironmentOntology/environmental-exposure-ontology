@@ -1,0 +1,33 @@
+pattern_name: exo/patterns/exposure_to_behavior_proximity
+classes:
+  exposure event: ExO:0000002
+  behavior: GO:0007610
+  proximity: NCIT:C25633 *maybe request a new route in ExO
+
+relations:
+  has exposure stimulus: RO:0002309
+  has exposure route: RO:0002242
+    
+vars: 
+  behavior: "'behavior'"
+
+name:
+  text: "exposure to %s in proximity"
+  vars:
+    - behavior
+
+annotations: 
+  - property: oio:hasExactSynonym
+    text: "%s exposure in proximity"
+    vars:
+    - behavior
+
+def: 
+  text: "An exposure event involving being in the proximity of %s"
+  vars:
+    - behavior
+    
+equivalentTo: 
+  text: "'exposure event' and ('has exposure stimulus' some %s) and ('has exposure route' some proximity)"
+  vars:
+    - behavior

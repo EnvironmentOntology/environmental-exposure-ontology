@@ -1,0 +1,41 @@
+pattern_name: exposure_to_chemical
+pattern_iri: http://purl.obolibrary.org/obo/ecto/patterns/exposure_to_chemical.yaml
+
+description: "exposures to a chemical substance"
+
+contributors:
+  - https://orcid.org/0000-0002-2908-3327
+
+classes:
+  exposure event: ExO:0000002
+  chemical entity: CHEBI:24431
+
+relations:
+  has exposure stimulus: RO:0002309
+
+vars:
+  stressor: "'chemical entity'"
+
+name:
+  text: " %s exposure"
+  vars:
+    - stressor
+
+annotationProperties:
+  exact_synonym: oio:hasExactSynonym
+
+annotations:
+  - annotationProperty: exact_synonym
+    text: "exposure to %s"
+    vars:
+      - stressor
+
+def:
+  text: "An exposure to %s."
+  vars:
+    - stressor
+
+equivalentTo:
+  text: "'exposure event' and 'has exposure stimulus' some %s"
+  vars:
+    - stressor

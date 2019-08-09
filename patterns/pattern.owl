@@ -1,0 +1,86 @@
+Prefix(:=<urn:unnamed:ontology#ont1#>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+
+
+Ontology(<urn:unnamed:ontology#ont1>
+
+Declaration(Class(<http://purl.obolibrary.org/obo/CHEBI_24431>))
+Declaration(Class(<http://purl.obolibrary.org/obo/ENVO_00010483>))
+Declaration(Class(<http://purl.obolibrary.org/obo/ENVO_01000203>))
+Declaration(Class(<http://purl.obolibrary.org/obo/ENVO_02500000>))
+Declaration(Class(<http://purl.obolibrary.org/obo/ExO_0000002>))
+Declaration(Class(<http://purl.obolibrary.org/obo/ExO_0000055>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0007610>))
+Declaration(Class(<http://purl.obolibrary.org/obo/ecto/patterns/exposure_to_behavior.yaml>))
+Declaration(Class(<http://purl.obolibrary.org/obo/ecto/patterns/exposure_to_chemical.yaml>))
+Declaration(Class(<http://purl.obolibrary.org/obo/ecto/patterns/exposure_to_chemical_medium.yaml>))
+Declaration(Class(<http://purl.obolibrary.org/obo/ecto/patterns/exposure_to_chemical_medium_route.yaml>))
+Declaration(Class(<http://purl.obolibrary.org/obo/ecto/patterns/exposure_to_environmental_condition.yaml>))
+Declaration(Class(<http://purl.obolibrary.org/obo/ecto/patterns/exposure_to_environmentalprocess_route.yaml>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002242>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002243>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002309>))
+Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000115>))
+Declaration(AnnotationProperty(<http://purl.org/dc/terms/title>))
+Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym>))
+
+
+
+############################
+#   Classes
+############################
+
+# Class: <http://purl.obolibrary.org/obo/ecto/patterns/exposure_to_behavior.yaml> (exposure to 'behavior')
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ecto/patterns/exposure_to_behavior.yaml> "An exposure event involving 'behavior'"^^xsd:string)
+AnnotationAssertion(<http://purl.org/dc/terms/title> <http://purl.obolibrary.org/obo/ecto/patterns/exposure_to_behavior.yaml> "exposure_to_behavior"^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ecto/patterns/exposure_to_behavior.yaml> "'behavior' exposure"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ecto/patterns/exposure_to_behavior.yaml> "exposure to 'behavior'"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/ecto/patterns/exposure_to_behavior.yaml> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/GO_0007610>)))
+
+# Class: <http://purl.obolibrary.org/obo/ecto/patterns/exposure_to_chemical.yaml> ( 'chemical entity' exposure)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ecto/patterns/exposure_to_chemical.yaml> "An exposure to 'chemical entity'."^^xsd:string)
+AnnotationAssertion(<http://purl.org/dc/terms/title> <http://purl.obolibrary.org/obo/ecto/patterns/exposure_to_chemical.yaml> "exposure_to_chemical"^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ecto/patterns/exposure_to_chemical.yaml> "exposure to 'chemical entity'"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ecto/patterns/exposure_to_chemical.yaml> " 'chemical entity' exposure"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/ecto/patterns/exposure_to_chemical.yaml> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/CHEBI_24431>)))
+
+# Class: <http://purl.obolibrary.org/obo/ecto/patterns/exposure_to_chemical_medium.yaml> (exposure to 'chemical entity' in 'medium')
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ecto/patterns/exposure_to_chemical_medium.yaml> "An exposure to 'chemical entity' mixed in 'medium'."^^xsd:string)
+AnnotationAssertion(<http://purl.org/dc/terms/title> <http://purl.obolibrary.org/obo/ecto/patterns/exposure_to_chemical_medium.yaml> "exposure_to_chemical_medium"^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ecto/patterns/exposure_to_chemical_medium.yaml> "'chemical entity' exposure in 'medium'"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ecto/patterns/exposure_to_chemical_medium.yaml> "exposure to 'chemical entity' in 'medium'"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/ecto/patterns/exposure_to_chemical_medium.yaml> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002243> <http://purl.obolibrary.org/obo/ENVO_00010483>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/CHEBI_24431>)))
+
+# Class: <http://purl.obolibrary.org/obo/ecto/patterns/exposure_to_chemical_medium_route.yaml> (exposure to 'chemical entity' in 'medium' via 'route')
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ecto/patterns/exposure_to_chemical_medium_route.yaml> "An exposure to 'chemical entity' mixed in 'medium' via 'route'."^^xsd:string)
+AnnotationAssertion(<http://purl.org/dc/terms/title> <http://purl.obolibrary.org/obo/ecto/patterns/exposure_to_chemical_medium_route.yaml> "exposure_to_chemical_medium_route"^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ecto/patterns/exposure_to_chemical_medium_route.yaml> "'chemical entity' exposure in 'medium' via 'route'"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ecto/patterns/exposure_to_chemical_medium_route.yaml> "exposure to 'chemical entity' in 'medium' via 'route'"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/ecto/patterns/exposure_to_chemical_medium_route.yaml> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002242> <http://purl.obolibrary.org/obo/ExO_0000055>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002243> <http://purl.obolibrary.org/obo/ENVO_00010483>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/CHEBI_24431>)))
+
+# Class: <http://purl.obolibrary.org/obo/ecto/patterns/exposure_to_environmental_condition.yaml> (exposure to 'environmental condition' in surroundings)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ecto/patterns/exposure_to_environmental_condition.yaml> "A exposure event involving the interaction of an exposure receptor to the condition of 'environmental condition'."^^xsd:string)
+AnnotationAssertion(<http://purl.org/dc/terms/title> <http://purl.obolibrary.org/obo/ecto/patterns/exposure_to_environmental_condition.yaml> "exposure_to_environmental_condition"^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ecto/patterns/exposure_to_environmental_condition.yaml> "'environmental condition' exposure"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ecto/patterns/exposure_to_environmental_condition.yaml> "exposure to 'environmental condition' in surroundings"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/ecto/patterns/exposure_to_environmental_condition.yaml> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/ENVO_01000203>)))
+
+# Class: <http://purl.obolibrary.org/obo/ecto/patterns/exposure_to_environmentalprocess_route.yaml> (exposure to 'environmental process' in 'route')
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ecto/patterns/exposure_to_environmentalprocess_route.yaml> "A exposure event involving the interaction of an exposure receptor to 'environmental process' happening in 'route' of the receptor."^^xsd:string)
+AnnotationAssertion(<http://purl.org/dc/terms/title> <http://purl.obolibrary.org/obo/ecto/patterns/exposure_to_environmentalprocess_route.yaml> "exposure_to_environmentalprocess_route"^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ecto/patterns/exposure_to_environmentalprocess_route.yaml> "'environmental process' exposure in 'route'"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ecto/patterns/exposure_to_environmentalprocess_route.yaml> "exposure to 'environmental process' in 'route'"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/ecto/patterns/exposure_to_environmentalprocess_route.yaml> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002242> <http://purl.obolibrary.org/obo/ExO_0000055>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/ENVO_02500000>)))
+
+
+)

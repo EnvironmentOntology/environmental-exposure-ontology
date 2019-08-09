@@ -1,0 +1,48 @@
+pattern_name: exposure_to_chemical_medium
+pattern_iri: http://purl.obolibrary.org/obo/ecto/patterns/exposure_to_chemical_medium.yaml
+
+description: "exposures to a chemical substance where the medium is known"
+
+contributors:
+  - https://orcid.org/0000-0002-2908-3327
+
+classes:
+  exposure event: ExO:0000002
+  chemical entity: CHEBI:24431
+  medium: ENVO:00010483
+
+relations:
+  has exposure stimulus: RO:0002309
+  has exposure medium: RO:0002243
+
+annotationProperties:
+  exact_synonym: oio:hasExactSynonym
+
+vars:
+  stressor: "'chemical entity'"
+  medium: "'medium'"
+
+name:
+  text: "exposure to %s in %s"
+  vars:
+    - stressor
+    - medium
+
+annotations:
+  - annotationProperty: exact_synonym
+    text: "%s exposure in %s"
+    vars:
+      - stressor
+      - medium
+
+def:
+  text: "An exposure to %s mixed in %s."
+  vars:
+    - stressor
+    - medium
+
+equivalentTo:
+  text: "'exposure event' and ('has exposure stimulus' some %s) and ('has exposure medium' some %s)"
+  vars:
+    - stressor
+    - medium

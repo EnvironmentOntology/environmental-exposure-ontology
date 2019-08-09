@@ -1,0 +1,34 @@
+pattern_name: exo/patterns/exposure_to_environmental_process_
+classes:
+  exposure event: ExO:0000002
+  environmental process: ENVO:02500000
+  physical: NCIT:C49147 *maybe request a new route in ExO
+
+relations:
+  has exposure stimulus: RO:0002309
+  has exposure route: RO:0002242
+    
+vars: 
+  stressor: "'environmental process'"
+  
+
+name:
+  text: "%s contact"
+  vars:
+    - stressor
+
+annotations: 
+  - property: oio:hasExactSynonym
+    text: "physical contact with %s"
+    vars:
+      - stressor
+
+def: 
+  text: "A exposure event involving the interaction of an exposure receptor to %s happening in direct physical contact of the receptor."
+  vars:
+    - stressor
+    
+equivalentTo: 
+  text: "'exposure event' and ('has exposure stimulus' some %s) and ('has exposure route' some physical)"
+  vars:
+    - stressor
