@@ -1,0 +1,37 @@
+pattern_name: exo/patterns/exposure_to_organism
+pattern_iri: http://purl.obolibrary.org/obo/ecto/patterns/exposure_to_organism.yaml
+
+description: "exposures to an organism"
+
+classes:
+  exposure event: ExO:0000002
+
+annotationProperties:
+  exact_synonym: oio:hasExactSynonym
+
+relations:
+  has exposure stimulus: RO:0002309
+    
+vars: 
+  stressor: "'organism'"
+
+name:
+  text: "exposure to %s"
+  vars:
+    - stressor
+
+annotations:
+  - annotationProperty: exact_synonym
+    text: "%s exposure"
+    vars:
+      - stressor
+
+def: 
+  text: "A history of exposure to %s."
+  vars:
+    - stressor
+    
+equivalentTo: 
+  text: "'exposure event' and 'has exposure stimulus' some %s"
+  vars:
+    - stressor
