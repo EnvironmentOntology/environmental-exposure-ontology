@@ -1,4 +1,4 @@
-pattern_name: exo/patterns/exposure_to_change
+pattern_name: exposure_to_change
 pattern_iri: http://purl.obolibrary.org/obo/ecto/patterns/exposure_to_change.yaml
 
 description: "exposures to a change in levels"
@@ -8,17 +8,17 @@ contributors:
 
 classes:
   exposure event: ExO:0000002
-  attribute: PATO:0001018 temp
-  degree: PATO:0000069 increased
+  attribute: PATO:0001018
+  degree: PATO:0000069
 
 relations:
-  part of: BFO_0000050
+  part of: BFO:0000050
   has exposure stimulus: RO:0002309
   inheres in: RO:0000052
-    
+
 vars:
+  degree: "'deviation(from_normal)'"
   attribute: "'quality'"
-  degree: "'deviation from normal'"
 
 name:
   text: "exposure to %s of %s"
@@ -26,9 +26,12 @@ name:
     - degree
     - attribute
 
+annotationProperties:
+  exact_synonym: oio:hasExactSynonym
+
 annotations:
-  - property: oio:hasExactSynonym
-    text: "%s %s exposure"
+  - annotationProperty: exact_synonym
+    text: "exposure to %s in %s"
     vars:
       - degree
       - attribute

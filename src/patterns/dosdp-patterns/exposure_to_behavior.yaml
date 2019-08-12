@@ -10,32 +10,32 @@ classes:
   exposure event: ExO:0000002
   behavior: GO:0007610
 
-relations:
-  has exposure stimulus: RO:0002309
-
 annotationProperties:
   exact_synonym: oio:hasExactSynonym
 
+relations:
+  has exposure stimulus: RO:0002309
+
 vars:
-  behavior: "'behavior'"
+  stressor: "'behavior'"
 
 name:
   text: "exposure to %s"
   vars:
-    - behavior
+    - stressor
 
 annotations:
   - annotationProperty: exact_synonym
     text: "%s exposure"
     vars:
-    - behavior
+      - stressor
 
 def:
   text: "An exposure event involving %s"
   vars:
-    - behavior
+    - stressor
 
 equivalentTo:
   text: "'exposure event' and ('has exposure stimulus' some %s)"
   vars:
-    - behavior
+    - stressor
