@@ -1,0 +1,49 @@
+pattern_name: exposure_to_change
+pattern_iri: http://purl.obolibrary.org/obo/ecto/patterns/exposure_to_change.yaml
+
+description: "exposures to a change in levels"
+
+contributors:
+  - https://orcid.org/0000-0002-2908-3327
+
+classes:
+  exposure event: ExO:0000002
+  attribute: PATO:0001018
+  degree: PATO:0000069
+
+relations:
+  part of: BFO:0000050
+  has exposure stimulus: RO:0002309
+  inheres in: RO:0000052
+
+vars:
+  degree: "'deviation(from_normal)'"
+  attribute: "'quality'"
+
+name:
+  text: "exposure to %s of %s"
+  vars:
+    - degree
+    - attribute
+
+annotationProperties:
+  exact_synonym: oio:hasExactSynonym
+
+annotations:
+  - annotationProperty: exact_synonym
+    text: "exposure to %s in %s"
+    vars:
+      - degree
+      - attribute
+
+def:
+  text: "A exposure event involving the interaction of an exposure receptor to %s of %s."
+  vars:
+    - degree
+    - attribute
+
+equivalentTo:
+  text: "'exposure event' and 'has exposure stimulus' some (%s and 'inheres in' some %s)"
+  vars:
+    - degree
+    - attribute
