@@ -1,0 +1,31 @@
+pattern_name: exo/patterns/infection_exposure
+classes:
+  exposure event: ExO:0000002
+
+relations:
+  part of: BFO_0000050
+  has exposure stimulus: RO:0002309
+    
+vars: 
+  stressor: "'infection'"
+
+name:
+  text: "exposure to %s infection"
+  vars:
+    - stressor
+
+annotations: 
+  - property: oio:hasExactSynonym
+    text: "%s exposure"
+    vars:
+      - stressor
+
+def: 
+  text: "A history of infection with %s."
+  vars:
+    - stressor
+    
+equivalentTo: 
+  text: "'exposure event' and 'has exposure stimulus' some %s"
+  vars:
+    - stressor

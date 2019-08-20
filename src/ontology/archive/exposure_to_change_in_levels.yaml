@@ -1,0 +1,44 @@
+pattern_name: exo/patterns/exposure_to_levels_in_medium
+classes:
+  exposure event: ExO:0000002
+  chemical entity: CHEBI:24431
+  environmental material: ENVO:00010483
+
+relations:
+  part of: BFO_0000050
+  has exposure stimulus: RO:0002309
+  inheres in: RO:0000052
+    
+vars: 
+  attribute: "'quality'"
+  entity: "'chemical entity'"
+  location: "'environmental material'"
+
+name:
+  text: "exposure to %s of %s in %s"
+  vars:
+    - attribute
+    - entity
+    - location
+
+annotations: 
+  - property: oio:hasExactSynonym
+    text: "%s %s exposure in %s"
+    vars:
+      - attribute
+      - entity
+      - location
+
+def: 
+  text: "A exposure event involving the interaction of an exposure receptor to %s of %s in %s."
+  vars:
+    - attribute
+    - entity
+    - location
+    
+equivalentTo: 
+  text: "'exposure event' and 'has exposure stimulus' some (%s and 'inheres in' some (%s and 'part of' some %s))"
+  vars:
+    - attribute
+    - entity
+    - location

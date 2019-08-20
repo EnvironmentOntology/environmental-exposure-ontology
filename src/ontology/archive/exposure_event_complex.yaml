@@ -1,0 +1,38 @@
+pattern_name: exo/patterns/exposure_event_complex
+classes:
+  exposure event: ExO:0000002
+  environmental material: ENVO:00010483
+
+relations:
+  part of: BFO_0000050
+  causally downstream of: RO:0002404
+    
+vars: 
+  stage: "occurrent"
+  receptor: "'material entity'"
+  stressor: "'Thing'"
+  path: "'transport path'"
+
+name:
+  text: "exposure to %s during %s in %s via %d"
+  vars:
+    - stressor
+    - stage
+    - receptor
+    - path
+
+def: 
+  text: "An exposure event involving the interaction of an %s during %s with %s as an exposure stressor via %s."
+  vars:
+    - receptor
+    - stage
+    - stressor
+    - path
+    
+equivalentTo: 
+  text: "'exposure event' and 'has receptor' some (%s and during some %s) and 'causally downstream of' some %s and 'has path' some %s"
+  vars:
+    - receptor
+    - stage
+    - stressor
+    - path

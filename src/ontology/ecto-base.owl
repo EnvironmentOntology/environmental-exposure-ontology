@@ -11,7 +11,7 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/ecto/ecto-base.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/ecto/releases/2019-08-14/ecto-base.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/ecto/releases/2019-08-20/ecto-base.owl"/>
         <dc:rights rdf:resource="https://creativecommons.org/publicdomain/zero/1.0/"/>
         <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Environment Exposure Ontology</dc:title>
     </owl:Ontology>
@@ -3969,6 +3969,27 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/ECTO_2000001 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECTO_2000001">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ExO_0000002"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002309"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/MAXO_0000066"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An exposure to http://purl.obolibrary.org/obo/MAXO_0000066.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exposure to http://purl.obolibrary.org/obo/MAXO_0000066</oboInOwl:hasExactSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> http://purl.obolibrary.org/obo/MAXO_0000066 exposure</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/ECTO_5000001 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECTO_5000001">
@@ -4074,6 +4095,12 @@
     <!-- http://purl.obolibrary.org/obo/ExO_0000060 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ExO_0000060"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/MAXO_0000066 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/MAXO_0000066"/>
     
 
 

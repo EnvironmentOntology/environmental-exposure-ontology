@@ -1,0 +1,40 @@
+## TODO: include axiom for explicitly deciding ambient vs non-ambient
+pattern_name: exo/patterns/exposure_to_environmental_condition
+classes:
+  exposure event: ExO:0000002
+  chemical entity: CHEBI:24431
+  environmental material: ENVO:00010483
+
+relations:
+  part of: BFO_0000050
+  has exposure stimulus: RO:0002309
+  inheres in: RO:0000052
+    
+vars: 
+  attribute: "'quality'"
+  entity: "'Thing'"
+
+name:
+  text: "exposure to %s of %s in surroundings"
+  vars:
+    - attribute
+    - entity
+
+annotations: 
+  - property: oio:hasExactSynonym
+    text: "%s %s exposure"
+    vars:
+      - entity
+      - attribute
+
+def: 
+  text: "A exposure event involving the interaction of an exposure receptor to the condition of %s in the surrounding %s."
+  vars:
+    - attribute
+    - entity
+    
+equivalentTo: 
+  text: "'exposure event' and 'has exposure stimulus' some (%s and 'inheres in' some %s)"
+  vars:
+    - attribute
+    - entity
