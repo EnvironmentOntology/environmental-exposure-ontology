@@ -1,0 +1,48 @@
+pattern_name: exposure_to_medical_action_route
+pattern_iri: http://purl.obolibrary.org/obo/ecto/patterns/exposure_to_medical_action_route.yaml
+
+description: "exposures to a medical action wherein the route is specified"
+
+contributors:
+  - https://orcid.org/0000-0002-2908-3327
+
+classes:
+  exposure event: ExO:0000002
+  medical action: MAXO:0000001
+  route: ExO:0000055
+
+relations:
+  has exposure stimulus: RO:0002309
+  has exposure route: RO:0002242
+
+vars:
+  stressor: "'medical action'"
+  route: "'route'"
+
+name:
+  text: " %s exposure via %s"
+  vars:
+    - stressor
+    - route
+
+annotationProperties:
+  exact_synonym: oio:hasExactSynonym
+
+annotations:
+  - annotationProperty: exact_synonym
+    text: "exposure to %s via %s"
+    vars:
+      - stressor
+      - route
+
+def:
+  text: "An exposure to %s via %s."
+  vars:
+    - stressor
+    - route
+
+equivalentTo:
+  text:  "'exposure event' and ('has exposure stimulus' some %s) and ('has exposure route' some %s)"
+  vars:
+    - stressor
+    - route

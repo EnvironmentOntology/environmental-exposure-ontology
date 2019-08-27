@@ -5,14 +5,15 @@ description: "exposures to an organism"
 
 classes:
   exposure event: ExO:0000002
+  organism: OBI:0100026
 
 annotationProperties:
   exact_synonym: oio:hasExactSynonym
 
 relations:
   has exposure stimulus: RO:0002309
-    
-vars: 
+
+vars:
   stressor: "'organism'"
 
 name:
@@ -30,7 +31,7 @@ def:
   text: "A history of exposure to %s."
   vars:
     - stressor
-    
+
 equivalentTo: 
   text: "'exposure event' and 'has exposure stimulus' some %s"
   vars:
