@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: ecto/releases/2019-09-04/ecto-base.owl
+data-version: ecto/releases/2019-09-06/ecto-base.owl
 subsetdef: mrex "medically relevant exposure"
 ontology: ecto/ecto-base
 property_value: http://purl.org/dc/elements/1.1/rights https://creativecommons.org/publicdomain/zero/1.0/
@@ -1810,6 +1810,18 @@ id: ECTO:0002402
 xref: MRE:0000025
 
 [Term]
+id: ECTO:0100000
+name: exposure to nicotine via http://purl.obolibrary.org/obo/NBO_0001884
+def: "An exposure event involving nicotine http://purl.obolibrary.org/obo/NBO_0001884" []
+synonym: "nicotine http://purl.obolibrary.org/obo/NBO_0001884 exposure" EXACT []
+
+[Term]
+id: ECTO:0100001
+name: exposure to ethanol via http://purl.obolibrary.org/obo/NBO_0001884
+def: "An exposure event involving ethanol http://purl.obolibrary.org/obo/NBO_0001884" []
+synonym: "ethanol http://purl.obolibrary.org/obo/NBO_0001884 exposure" EXACT []
+
+[Term]
 id: ECTO:0200001
 name:  http://purl.obolibrary.org/obo/MAXO_0000314 exposure via inhalation
 def: "An exposure to http://purl.obolibrary.org/obo/MAXO_0000314 via inhalation." []
@@ -2157,6 +2169,14 @@ def: "A history of exposure to organism." []
 synonym: "organism exposure" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002309 OBI:0100026
+
+[Term]
+id: ECTO:3000001
+name: exposure to Helicobacter pylori
+def: "A history of exposure to Helicobacter pylori." []
+synonym: "Helicobacter pylori exposure" EXACT []
+intersection_of: ExO:0000002
+intersection_of: RO:0002309 NCBITaxon:210
 
 [Term]
 id: ECTO:4000000
