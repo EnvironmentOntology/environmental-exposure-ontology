@@ -8,8 +8,10 @@ Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 
 Ontology(<urn:unnamed:ontology#ont1>
 
+Declaration(Class(<http://purl.obolibrary.org/obo/ECTO_5000000>))
 Declaration(Class(<http://purl.obolibrary.org/obo/ECTO_5000001>))
 Declaration(Class(<http://purl.obolibrary.org/obo/ECTO_5000002>))
+Declaration(Class(<http://purl.obolibrary.org/obo/ENVO_00000000>))
 Declaration(Class(<http://purl.obolibrary.org/obo/ENVO_01000967>))
 Declaration(Class(<http://purl.obolibrary.org/obo/ENVO_01001279>))
 Declaration(Class(<http://purl.obolibrary.org/obo/ExO_0000002>))
@@ -22,6 +24,13 @@ Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#has
 ############################
 #   Classes
 ############################
+
+# Class: <http://purl.obolibrary.org/obo/ECTO_5000000> (exposure to geographic feature)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_5000000> "A exposure event involving the interaction of an exposure receptor to geographic feature."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_5000000> "geographic feature exposure"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_5000000> "exposure to geographic feature"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_5000000> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/ENVO_00000000>)))
 
 # Class: <http://purl.obolibrary.org/obo/ECTO_5000001> (exposure to http://purl.obolibrary.org/obo/ENVO_01001279)
 

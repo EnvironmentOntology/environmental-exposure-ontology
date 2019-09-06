@@ -8,6 +8,7 @@ Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 
 Ontology(<urn:unnamed:ontology#ont1>
 
+Declaration(Class(<http://purl.obolibrary.org/obo/ECTO_2000000>))
 Declaration(Class(<http://purl.obolibrary.org/obo/ECTO_2000001>))
 Declaration(Class(<http://purl.obolibrary.org/obo/ECTO_2000002>))
 Declaration(Class(<http://purl.obolibrary.org/obo/ECTO_2000003>))
@@ -44,6 +45,7 @@ Declaration(Class(<http://purl.obolibrary.org/obo/ECTO_2000034>))
 Declaration(Class(<http://purl.obolibrary.org/obo/ECTO_2000035>))
 Declaration(Class(<http://purl.obolibrary.org/obo/ECTO_2000036>))
 Declaration(Class(<http://purl.obolibrary.org/obo/ExO_0000002>))
+Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0000001>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0000157>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0000160>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0000164>))
@@ -87,6 +89,13 @@ Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#has
 ############################
 #   Classes
 ############################
+
+# Class: <http://purl.obolibrary.org/obo/ECTO_2000000> ( http://purl.obolibrary.org/obo/MAXO_0000001 exposure)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_2000000> "An exposure to http://purl.obolibrary.org/obo/MAXO_0000001."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_2000000> "exposure to http://purl.obolibrary.org/obo/MAXO_0000001"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_2000000> " http://purl.obolibrary.org/obo/MAXO_0000001 exposure"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_2000000> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/MAXO_0000001>)))
 
 # Class: <http://purl.obolibrary.org/obo/ECTO_2000001> ( http://purl.obolibrary.org/obo/MAXO_0000321 exposure)
 
