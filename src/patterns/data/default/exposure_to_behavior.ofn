@@ -8,10 +8,12 @@ Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 
 Ontology(<urn:unnamed:ontology#ont1>
 
+Declaration(Class(<http://purl.obolibrary.org/obo/ECTO_6000000>))
 Declaration(Class(<http://purl.obolibrary.org/obo/ECTO_6000001>))
 Declaration(Class(<http://purl.obolibrary.org/obo/ECTO_6000002>))
 Declaration(Class(<http://purl.obolibrary.org/obo/ECTO_6000003>))
 Declaration(Class(<http://purl.obolibrary.org/obo/ExO_0000002>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0007610>))
 Declaration(Class(<http://purl.obolibrary.org/obo/NBO_0000056>))
 Declaration(Class(<http://purl.obolibrary.org/obo/NBO_0000076>))
 Declaration(Class(<http://purl.obolibrary.org/obo/NBO_0000120>))
@@ -24,6 +26,13 @@ Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#has
 ############################
 #   Classes
 ############################
+
+# Class: <http://purl.obolibrary.org/obo/ECTO_6000000> (exposure to http://purl.obolibrary.org/obo/GO_0007610)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_6000000> "An exposure event involving http://purl.obolibrary.org/obo/GO_0007610"^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_6000000> "http://purl.obolibrary.org/obo/GO_0007610 exposure"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_6000000> "exposure to http://purl.obolibrary.org/obo/GO_0007610"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_6000000> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/GO_0007610>)))
 
 # Class: <http://purl.obolibrary.org/obo/ECTO_6000001> (exposure to http://purl.obolibrary.org/obo/NBO_0000120)
 
