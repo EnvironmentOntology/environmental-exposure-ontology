@@ -55,3 +55,9 @@ $(MODDIR)/%.owl: $(MODDIR)/%.rdf
 
 touch:
 	echo $(all_modules_omn)
+
+imports/ncit_import.owl:
+	echo "currently skipped for performance reasons"
+	
+mirror/ncit.owl:
+	echo "currently skipped for performance reasons"

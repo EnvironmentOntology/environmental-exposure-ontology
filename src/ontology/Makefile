@@ -1,6 +1,7 @@
 # ----------------------------------------
 # Makefile for ecto
 # Generated using ontology-starter-kit
+# ODK Version: v1.2.18
 # ----------------------------------------
 # <do not edit above this line>
 
@@ -18,14 +19,17 @@ CATALOG=                    catalog-v001.xml
 ROBOT=                      robot --catalog $(CATALOG)
 RELEASEDIR=                 ../..
 PATTERNDIR=                 ../patterns
-REPORTDIR=                 reports
+REPORTDIR=                  reports
+TMPDIR=                     tmp
 SPARQLDIR =                 ../sparql
 REPORT_FAIL_ON =            none
 OBO_FORMAT_OPTIONS =        
 SPARQL_VALIDATION_CHECKS =  equivalent-classes trailing-whitespace owldef-self-reference xref-syntax nolabels
 SPARQL_EXPORTS =            basic-report class-count-by-prefix edges xrefs obsoletes synonyms
+ODK_VERSION =               v1.2.18
 
-TODAY   ?= $(shell date +%Y-%m-%d)
+TODAY ?= $(shell date +%Y-%m-%d)
+OBODATE ?= $(shell date +'%d:%m:%Y %H:%M')
 DOSDP_SCHEMA=                http:// # change to PURL when ready.
 PATTERN_TESTER=              simple_pattern_tester.py
 DOSDPT=                      dosdp-tools
@@ -42,9 +46,16 @@ RELEASE_ARTEFACTS = $(sort  full base base full)
 # ----------------------------------------
 
 .PHONY: .FORCE
-all: all_imports patterns all_main all_subsets sparql_test all_reports all_assets
-test: sparql_test all_reports
-	$(ROBOT) reason --input $(SRC) --reasoner ELK  --equivalent-classes-allowed all --output test.owl && rm test.owl && echo "Success"
+all: odkversion all_imports patterns all_main all_subsets sparql_test all_reports all_assets
+test: odkversion sparql_test all_reports
+	$(ROBOT) reason --input $(SRC) --reasoner ELK  --equivalent-classes-allowed none --output test.owl && rm test.owl && echo "Success"
+
+odkversion:
+	echo "ODK Makefile version: $(ODK_VERSION) (this is the version of the ODK with which this Makefile was generated, not the version of the ODK you are running)" &&\
+	echo "ROBOT version (ODK): " && $(ROBOT) --version
+
+$TMPDIR:
+	mkdir -p $@
 
 ## -- main targets --
 ##
@@ -61,7 +72,7 @@ all_main: $(MAIN_FILES)
 ## By default this is the cross-product of IMPORT_MODULES x FORMATS
 
 
-IMPORTS =  nbo go uberon ro chebi envo pato iao npo exo xco activity ncbitaxon
+IMPORTS =  chebi envo exo go iao maxo nbo ncit ncbitaxon npo pato ro uberon xco
 
 IMPORT_ROOTS = $(patsubst %, imports/%_import, $(IMPORTS))
 IMPORT_FILES = $(foreach n,$(IMPORT_ROOTS), $(foreach f,$(FORMATS), $(n).$(f)))
@@ -138,7 +149,7 @@ prepare_release: $(ASSETS) $(PATTERN_RELEASE_FILES)
 	rsync -R $(ASSETS) $(RELEASEDIR) &&\
   mkdir -p $(RELEASEDIR)/patterns &&\
   cp $(PATTERN_RELEASE_FILES) $(RELEASEDIR)/patterns &&\
-  echo "Release files are now in $(RELEASEDIR) - now you should commit, push and make a release on github"
+  echo "Release files are now in $(RELEASEDIR) - now you should commit, push and make a release on your git hosting site such as GitHub or GitLab"
 
 prepare_initial_release: prepare_release
 	cd $(RELEASEDIR) && git add $(ASSETS)
@@ -160,7 +171,7 @@ $(ONT)-base.json: $(ONT)-base.owl
 		convert --check false -f json -o $@.tmp.json && mv $@.tmp.json $@
 # Main release artefacts
 $(ONT).owl: $(ONT)-full.owl
-	$(ROBOT) annotate --input $< --ontology-iri $(URIBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY) \
+	$(ROBOT) annotate --input $< --ontology-iri $(URIBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY)/$@ \
 		convert -o $@.tmp.owl && mv $@.tmp.owl $@
 
 $(ONT).obo: $(ONT).owl
@@ -177,7 +188,7 @@ ANNOTATE_VERSION_IRI = annotate -V $(ONTBASE)/releases/$(TODAY)/$@.owl
 # by default we use ELK to perform a reason-relax-reduce chain
 # after that we annotate the ontology with the release versionInfo
 
-OTHER_SRC = $(PATTERNDIR)/definitions.owl  components/ecto-xrefs.owl
+OTHER_SRC = $(PATTERNDIR)/definitions.owl  components/ecto-xrefs.owl components/bridge.owl
 
 
 $(ONTOLOGYTERMS): $(SRC) $(OTHER_SRC)
@@ -202,7 +213,7 @@ $(ONT)-base.owl: $(SRC) $(OTHER_SRC)
 # Full: The full artefacts with imports merged, reasoned
 $(ONT)-full.owl: $(SRC) $(OTHER_SRC)
 	$(ROBOT) merge --input $< \
-		reason --reasoner ELK --equivalent-classes-allowed all \
+		reason --reasoner ELK --equivalent-classes-allowed none \
 		relax \
 		reduce -r ELK \
 		annotate --ontology-iri $(ONTBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY)/$@ --output $@.tmp.owl && mv $@.tmp.owl $@
@@ -232,6 +243,7 @@ imports/%_terms_combined.txt: seed.txt imports/%_terms.txt
 # This pattern uses ROBOT to generate an import module
 imports/%_import.owl: mirror/%.owl imports/%_terms_combined.txt
 	@if [ $(IMP) = true ]; then $(ROBOT) extract -i $< -T imports/$*_terms_combined.txt --force true --method BOT \
+		query --update ../sparql/inject-subset-declaration.ru \
 		annotate --ontology-iri $(ONTBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY)/$@ --output $@.tmp.owl && mv $@.tmp.owl $@; fi
 .PRECIOUS: imports/%_import.owl
 
@@ -242,6 +254,26 @@ imports/%_import.obo: imports/%_import.owl
 	@if [ $(IMP) = true ]; then $(ROBOT) convert --check false -i $< -f obo -o $@.tmp.obo && mv $@.tmp.obo $@; fi
 imports/%_import.json: imports/%_import.owl
 	@if [ $(IMP) = true ]; then $(ROBOT) convert --check false -i $< -f json -o $@.tmp.json && mv $@.tmp.json $@; fi
+
+# ----------------------------------------
+# Components
+# ----------------------------------------
+# Some ontologies contain external and internal components. A component is included in the ontology in its entirety.
+
+components/%: .FORCE
+	@if [ $(IMP) = true ]; then $(ROBOT) merge -I $(URIBASE)/$* \
+	annotate --ontology-iri $(ONTBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY)/$@ -o $@; fi
+.PRECIOUS: components/%
+
+
+
+
+
+
+
+
+
+
 # ----------------------------------------
 # Mirroring upstream ontologies
 # ----------------------------------------
@@ -250,46 +282,6 @@ imports/%_import.json: imports/%_import.owl
 IMP=true # Global parameter to bypass import generation
 MIR=true # Global parameter to bypass mirror generation
 
-
-
-## ONTOLOGY: nbo
-## Copy of nbo is re-downloaded whenever source changes
-mirror/nbo.trigger: $(SRC)
-
-mirror/nbo.owl: mirror/nbo.trigger
-	@if [ $(MIR) = true ] && [ $(IMP) = true ]; then $(ROBOT) convert -I $(URIBASE)/nbo.owl -o $@.tmp.owl && mv $@.tmp.owl $@; fi
-
-.PRECIOUS: mirror/%.owl
-
-
-## ONTOLOGY: go
-## Copy of go is re-downloaded whenever source changes
-mirror/go.trigger: $(SRC)
-
-mirror/go.owl: mirror/go.trigger
-	@if [ $(MIR) = true ] && [ $(IMP) = true ]; then $(ROBOT) convert -I $(URIBASE)/go.owl -o $@.tmp.owl && mv $@.tmp.owl $@; fi
-
-.PRECIOUS: mirror/%.owl
-
-
-## ONTOLOGY: uberon
-## Copy of uberon is re-downloaded whenever source changes
-mirror/uberon.trigger: $(SRC)
-
-mirror/uberon.owl: mirror/uberon.trigger
-	@if [ $(MIR) = true ] && [ $(IMP) = true ]; then $(ROBOT) convert -I $(URIBASE)/uberon.owl -o $@.tmp.owl && mv $@.tmp.owl $@; fi
-
-.PRECIOUS: mirror/%.owl
-
-
-## ONTOLOGY: ro
-## Copy of ro is re-downloaded whenever source changes
-mirror/ro.trigger: $(SRC)
-
-mirror/ro.owl: mirror/ro.trigger
-	@if [ $(MIR) = true ] && [ $(IMP) = true ]; then $(ROBOT) convert -I $(URIBASE)/ro.owl -o $@.tmp.owl && mv $@.tmp.owl $@; fi
-
-.PRECIOUS: mirror/%.owl
 
 
 ## ONTOLOGY: chebi
@@ -312,12 +304,22 @@ mirror/envo.owl: mirror/envo.trigger
 .PRECIOUS: mirror/%.owl
 
 
-## ONTOLOGY: pato
-## Copy of pato is re-downloaded whenever source changes
-mirror/pato.trigger: $(SRC)
+## ONTOLOGY: exo
+## Copy of exo is re-downloaded whenever source changes
+mirror/exo.trigger: $(SRC)
 
-mirror/pato.owl: mirror/pato.trigger
-	@if [ $(MIR) = true ] && [ $(IMP) = true ]; then $(ROBOT) convert -I $(URIBASE)/pato.owl -o $@.tmp.owl && mv $@.tmp.owl $@; fi
+mirror/exo.owl: mirror/exo.trigger
+	@if [ $(MIR) = true ] && [ $(IMP) = true ]; then $(ROBOT) convert -I $(URIBASE)/exo.owl -o $@.tmp.owl && mv $@.tmp.owl $@; fi
+
+.PRECIOUS: mirror/%.owl
+
+
+## ONTOLOGY: go
+## Copy of go is re-downloaded whenever source changes
+mirror/go.trigger: $(SRC)
+
+mirror/go.owl: mirror/go.trigger
+	@if [ $(MIR) = true ] && [ $(IMP) = true ]; then $(ROBOT) convert -I $(URIBASE)/go.owl -o $@.tmp.owl && mv $@.tmp.owl $@; fi
 
 .PRECIOUS: mirror/%.owl
 
@@ -332,42 +334,32 @@ mirror/iao.owl: mirror/iao.trigger
 .PRECIOUS: mirror/%.owl
 
 
-## ONTOLOGY: npo
-## Copy of npo is re-downloaded whenever source changes
-mirror/npo.trigger: $(SRC)
+## ONTOLOGY: maxo
+## Copy of maxo is re-downloaded whenever source changes
+mirror/maxo.trigger: $(SRC)
 
-mirror/npo.owl: mirror/npo.trigger
-	@if [ $(MIR) = true ] && [ $(IMP) = true ]; then $(ROBOT) convert -I $(URIBASE)/npo.owl -o $@.tmp.owl && mv $@.tmp.owl $@; fi
-
-.PRECIOUS: mirror/%.owl
-
-
-## ONTOLOGY: exo
-## Copy of exo is re-downloaded whenever source changes
-mirror/exo.trigger: $(SRC)
-
-mirror/exo.owl: mirror/exo.trigger
-	@if [ $(MIR) = true ] && [ $(IMP) = true ]; then $(ROBOT) convert -I $(URIBASE)/exo.owl -o $@.tmp.owl && mv $@.tmp.owl $@; fi
+mirror/maxo.owl: mirror/maxo.trigger
+	@if [ $(MIR) = true ] && [ $(IMP) = true ]; then $(ROBOT) convert -I $(URIBASE)/maxo.owl -o $@.tmp.owl && mv $@.tmp.owl $@; fi
 
 .PRECIOUS: mirror/%.owl
 
 
-## ONTOLOGY: xco
-## Copy of xco is re-downloaded whenever source changes
-mirror/xco.trigger: $(SRC)
+## ONTOLOGY: nbo
+## Copy of nbo is re-downloaded whenever source changes
+mirror/nbo.trigger: $(SRC)
 
-mirror/xco.owl: mirror/xco.trigger
-	@if [ $(MIR) = true ] && [ $(IMP) = true ]; then $(ROBOT) convert -I $(URIBASE)/xco.owl -o $@.tmp.owl && mv $@.tmp.owl $@; fi
+mirror/nbo.owl: mirror/nbo.trigger
+	@if [ $(MIR) = true ] && [ $(IMP) = true ]; then $(ROBOT) convert -I $(URIBASE)/nbo.owl -o $@.tmp.owl && mv $@.tmp.owl $@; fi
 
 .PRECIOUS: mirror/%.owl
 
 
-## ONTOLOGY: activity
-## Copy of activity is re-downloaded whenever source changes
-mirror/activity.trigger: $(SRC)
+## ONTOLOGY: ncit
+## Copy of ncit is re-downloaded whenever source changes
+mirror/ncit.trigger: $(SRC)
 
-mirror/activity.owl: mirror/activity.trigger
-	@if [ $(MIR) = true ] && [ $(IMP) = true ]; then $(ROBOT) convert -I $(URIBASE)/activity.owl -o $@.tmp.owl && mv $@.tmp.owl $@; fi
+mirror/ncit.owl: mirror/ncit.trigger
+	@if [ $(MIR) = true ] && [ $(IMP) = true ]; then $(ROBOT) convert -I $(URIBASE)/ncit.owl -o $@.tmp.owl && mv $@.tmp.owl $@; fi
 
 .PRECIOUS: mirror/%.owl
 
@@ -378,6 +370,56 @@ mirror/ncbitaxon.trigger: $(SRC)
 
 mirror/ncbitaxon.owl: mirror/ncbitaxon.trigger
 	@if [ $(MIR) = true ] && [ $(IMP) = true ]; then $(ROBOT) convert -I $(URIBASE)/ncbitaxon.owl -o $@.tmp.owl && mv $@.tmp.owl $@; fi
+
+.PRECIOUS: mirror/%.owl
+
+
+## ONTOLOGY: npo
+## Copy of npo is re-downloaded whenever source changes
+mirror/npo.trigger: $(SRC)
+
+mirror/npo.owl: mirror/npo.trigger
+	@if [ $(MIR) = true ] && [ $(IMP) = true ]; then $(ROBOT) convert -I $(URIBASE)/npo.owl -o $@.tmp.owl && mv $@.tmp.owl $@; fi
+
+.PRECIOUS: mirror/%.owl
+
+
+## ONTOLOGY: pato
+## Copy of pato is re-downloaded whenever source changes
+mirror/pato.trigger: $(SRC)
+
+mirror/pato.owl: mirror/pato.trigger
+	@if [ $(MIR) = true ] && [ $(IMP) = true ]; then $(ROBOT) convert -I $(URIBASE)/pato.owl -o $@.tmp.owl && mv $@.tmp.owl $@; fi
+
+.PRECIOUS: mirror/%.owl
+
+
+## ONTOLOGY: ro
+## Copy of ro is re-downloaded whenever source changes
+mirror/ro.trigger: $(SRC)
+
+mirror/ro.owl: mirror/ro.trigger
+	@if [ $(MIR) = true ] && [ $(IMP) = true ]; then $(ROBOT) convert -I $(URIBASE)/ro.owl -o $@.tmp.owl && mv $@.tmp.owl $@; fi
+
+.PRECIOUS: mirror/%.owl
+
+
+## ONTOLOGY: uberon
+## Copy of uberon is re-downloaded whenever source changes
+mirror/uberon.trigger: $(SRC)
+
+mirror/uberon.owl: mirror/uberon.trigger
+	@if [ $(MIR) = true ] && [ $(IMP) = true ]; then $(ROBOT) convert -I $(URIBASE)/uberon.owl -o $@.tmp.owl && mv $@.tmp.owl $@; fi
+
+.PRECIOUS: mirror/%.owl
+
+
+## ONTOLOGY: xco
+## Copy of xco is re-downloaded whenever source changes
+mirror/xco.trigger: $(SRC)
+
+mirror/xco.owl: mirror/xco.trigger
+	@if [ $(MIR) = true ] && [ $(IMP) = true ]; then $(ROBOT) convert -I $(URIBASE)/xco.owl -o $@.tmp.owl && mv $@.tmp.owl $@; fi
 
 .PRECIOUS: mirror/%.owl
 
@@ -494,6 +536,12 @@ $(PATTERNDIR)/data/default/%.txt: $(PATTERNDIR)/dosdp-patterns/%.yaml $(PATTERND
 prepare_patterns:
 	touch $(pattern_term_lists_default)   &&\
   touch $(individual_patterns_default)  
+
+
+
+
+
+
 
 
 
