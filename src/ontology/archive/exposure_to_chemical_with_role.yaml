@@ -1,0 +1,38 @@
+pattern_name: exo/patterns/exposure_to_chemical_with_role
+classes:
+  role: CHEBI:50906
+  exposure event: ExO:0000002
+  chemical entity: CHEBI:24431
+
+relations:
+  part of: BFO_0000050
+  has exposure stimulus: RO:0002309
+  has role: RO:0000087
+    
+vars: 
+  stressor: "'role'"
+
+name:
+  text: "exposure to %s"
+  vars:
+    - stressor
+
+annotations: 
+  - property: oio:hasExactSynonym
+    text: "%s exposure"
+    vars:
+      - stressor
+  - property: oio:hasExactSynonym
+    text: "%s exposure event"
+    vars:
+      - stressor
+
+def: 
+  text: "A exposure event involving the interaction of an exposure receptor to a %s. Exposure may be through a variety of means, including through the air or surrounding medium, or through ingestion."
+  vars:
+    - stressor
+    
+equivalentTo: 
+  text: "'exposure event' and 'has exposure stimulus' some ('chemical entity' and 'has role' some %s)"
+  vars:
+    - stressor

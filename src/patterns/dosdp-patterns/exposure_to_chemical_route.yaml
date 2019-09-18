@@ -1,0 +1,48 @@
+pattern_name: exposure_to_chemical_route
+pattern_iri: http://purl.obolibrary.org/obo/ecto/patterns/exposure_to_chemical_route.yaml
+
+description: "exposures to a chemical substance where the route is known"
+
+contributors:
+  - https://orcid.org/0000-0002-2908-3327
+
+classes:
+  exposure event: ExO:0000002
+  chemical entity: CHEBI:24431
+  route: ExO:0000055
+
+relations:
+  has exposure stimulus: RO:0002309
+  has exposure route: RO:0002242
+
+annotationProperties:
+  exact_synonym: oio:hasExactSynonym
+
+vars:
+  stressor: "'chemical entity'"
+  route: "'route'"
+
+name:
+  text: "exposure to %s via %s"
+  vars:
+    - stressor
+    - route
+
+annotations:
+  - annotationProperty: exact_synonym
+    text: "%s exposure via %s"
+    vars:
+      - stressor
+      - route
+
+def:
+  text: "An exposure to %s via %s."
+  vars:
+    - stressor
+    - route
+
+equivalentTo:
+  text: "'exposure event' and ('has exposure stimulus' some %s) and ('has exposure route' some %s)"
+  vars:
+    - stressor
+    - route

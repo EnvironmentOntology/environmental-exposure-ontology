@@ -1,0 +1,77 @@
+Prefix(:=<urn:unnamed:ontology#ont1#>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+
+
+Ontology(<urn:unnamed:ontology#ont1>
+
+Declaration(Class(<http://purl.obolibrary.org/obo/CHEBI_16130>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CHEBI_34905>))
+Declaration(Class(<http://purl.obolibrary.org/obo/ECTO_0000965>))
+Declaration(Class(<http://purl.obolibrary.org/obo/ECTO_0000966>))
+Declaration(Class(<http://purl.obolibrary.org/obo/ECTO_0000967>))
+Declaration(Class(<http://purl.obolibrary.org/obo/ECTO_0000968>))
+Declaration(Class(<http://purl.obolibrary.org/obo/ECTO_0000969>))
+Declaration(Class(<http://purl.obolibrary.org/obo/ECTO_0000970>))
+Declaration(Class(<http://purl.obolibrary.org/obo/ENVO_00001998>))
+Declaration(Class(<http://purl.obolibrary.org/obo/ENVO_00002005>))
+Declaration(Class(<http://purl.obolibrary.org/obo/ENVO_00002006>))
+Declaration(Class(<http://purl.obolibrary.org/obo/ExO_0000002>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000050>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002309>))
+Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000115>))
+Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym>))
+
+
+
+############################
+#   Classes
+############################
+
+# Class: <http://purl.obolibrary.org/obo/ECTO_0000965> (exposure to paraquat in air)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0000965> "A exposure event involving the interaction of an exposure receptor to paraquat in air."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0000965> "exposure to paraquat in air"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_0000965> "exposure to paraquat in air"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_0000965> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/CHEBI_34905> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/ENVO_00002005>)))))
+
+# Class: <http://purl.obolibrary.org/obo/ECTO_0000966> (exposure to paraquat in soil)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0000966> "A exposure event involving the interaction of an exposure receptor to paraquat in soil."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0000966> "exposure to paraquat in soil"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_0000966> "exposure to paraquat in soil"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_0000966> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/CHEBI_34905> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/ENVO_00001998>)))))
+
+# Class: <http://purl.obolibrary.org/obo/ECTO_0000967> (exposure to paraquat in water)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0000967> "A exposure event involving the interaction of an exposure receptor to paraquat in water."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0000967> "exposure to paraquat in water"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_0000967> "exposure to paraquat in water"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_0000967> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/CHEBI_34905> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/ENVO_00002006>)))))
+
+# Class: <http://purl.obolibrary.org/obo/ECTO_0000968> (exposure to DDT in air)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0000968> "A exposure event involving the interaction of an exposure receptor to DDT in air."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0000968> "exposure to DDT in air"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_0000968> "exposure to DDT in air"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_0000968> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/CHEBI_16130> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/ENVO_00002005>)))))
+
+# Class: <http://purl.obolibrary.org/obo/ECTO_0000969> (exposure to DDT in soil)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0000969> "A exposure event involving the interaction of an exposure receptor to DDT in soil."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0000969> "exposure to DDT in soil"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_0000969> "exposure to DDT in soil"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_0000969> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/CHEBI_16130> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/ENVO_00001998>)))))
+
+# Class: <http://purl.obolibrary.org/obo/ECTO_0000970> (exposure to DDT in water)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0000970> "A exposure event involving the interaction of an exposure receptor to DDT in water."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0000970> "exposure to DDT in water"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_0000970> "exposure to DDT in water"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_0000970> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/CHEBI_16130> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/ENVO_00002006>)))))
+
+
+)

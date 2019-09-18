@@ -1,0 +1,41 @@
+pattern_name: exposure_to_geographic_feature
+pattern_iri: http://purl.obolibrary.org/obo/ecto/patterns/exposure_to_geographic_feature.yaml
+
+description: "exposures to a geographic feature"
+
+contributors:
+  - https://orcid.org/0000-0002-2908-3327
+
+classes:
+  exposure event: ExO:0000002
+  geographic feature: ENVO:00000000
+
+relations:
+  has exposure stimulus: RO:0002309
+
+annotationProperties:
+  exact_synonym: oio:hasExactSynonym
+
+vars:
+  stressor: "'geographic feature'"
+
+name:
+  text: "exposure to %s"
+  vars:
+    - stressor
+
+annotations:
+  - annotationProperty: exact_synonym
+    text: "%s exposure"
+    vars:
+      - stressor
+
+def:
+  text: "A exposure event involving the interaction of an exposure receptor to %s."
+  vars:
+    - stressor
+
+equivalentTo:
+  text: "'exposure event' and 'has exposure stimulus' some %s"
+  vars:
+    - stressor

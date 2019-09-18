@@ -1,0 +1,36 @@
+pattern_name: exo/patterns/exposure_to_material
+classes:
+  exposure event: ExO:0000002
+  environmental process: ENVO:02500000
+
+relations:
+  part of: BFO_0000050
+  has exposure stimulus: RO:0002309
+    
+vars: 
+  stressor: "'environmental process'"
+
+name:
+  text: "exposure to %s"
+  vars:
+    - stressor
+
+annotations: 
+  - property: oio:hasExactSynonym
+    text: "%s exposure"
+    vars:
+      - stressor
+  - property: oio:hasExactSynonym
+    text: "%s exposure event"
+    vars:
+      - stressor
+
+def: 
+  text: "A exposure event involving the interaction of an exposure receptor to %s."
+  vars:
+    - stressor
+    
+equivalentTo: 
+  text: "'exposure event' and 'has exposure stimulus' some %s"
+  vars:
+    - stressor

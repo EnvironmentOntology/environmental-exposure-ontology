@@ -1,0 +1,34 @@
+pattern_name: exo/patterns/exposure_via_procedure_in_anatomy
+classes:
+  exposure event: ExO:0000002
+  procedure: NCIT:C25218
+  anatomical entity: UBERON:0001062
+
+relations:
+  part of: BFO:0000050
+  has exposure stimulus: RO:0002309
+  has exposure route: RO:0002242
+
+vars: 
+  stressor: "'procedure'"
+  anatomy: "'anatomical entity'"
+
+name:
+  text: "exposure to %s %s"
+  vars:
+    - anatomy
+    - stressor
+
+
+def: 
+  text: "A exposure event involving the interaction of an exposure receptor to %s %s."
+  vars:
+    - anatomy
+    - stressor
+
+    
+equivalentTo: 
+  text: "'exposure event' and 'has exposure stimulus' some %s and 'has exposure route' some %s"
+  vars:
+    - stressor
+    - anatomy

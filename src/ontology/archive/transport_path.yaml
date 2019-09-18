@@ -1,0 +1,33 @@
+pattern_name: exo/patterns/transport_path
+classes:
+  'environmental material': ENVO:00010483
+  'transport path': ExO:0000004
+
+relations:
+  part of: BFO_0000050
+  inheres in: RO_0000052
+  inheres in part of: RO_0002314
+    
+vars: 
+  material: "'environmental material'"
+
+name:
+  text: "%s transport path"
+  vars:
+    - material
+
+annotations: 
+  - property: oio:hasExactSynonym
+    text: "%s transport path"
+    vars:
+      - material
+
+def: 
+  text: "An exposure transport path involving the interaction of an exposure receptor with an exposure stressor via %s."
+  vars:
+    - material
+    
+equivalentTo: 
+  text: "'transport path' and 'occurs in' some %s"
+  vars:
+    - material
