@@ -57,7 +57,13 @@ touch:
 	echo $(all_modules_omn)
 
 imports/ncit_import.owl:
-	echo "currently skipped for performance reasons"
+	echo "!!!!!NCIT currently skipped for performance reasons"
 	
 mirror/ncit.owl:
-	echo "currently skipped for performance reasons"
+	echo "!!!!!NCIT currently skipped for performance reasons"
+	
+imports/npo_import.owl:
+	echo "!!!!!NPO currently skipped!"
+	
+mirror/npo.owl:
+	echo "!!!!!NPO currently skipped!"

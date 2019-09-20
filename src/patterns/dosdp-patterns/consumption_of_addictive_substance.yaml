@@ -15,8 +15,8 @@ annotationProperties:
   exact_synonym: oio:hasExactSynonym
 
 relations:
-  has input: RO:0002233
-  has exposure stimulus: RO:0002309
+  has_input: RO:0002233
+  has_exposure_stimulus: RO:0002309
 
 vars:
   stressor: "'substance'"
@@ -42,7 +42,7 @@ def:
     - behavior
 
 equivalentTo:
-  text: "'exposure event' and 'has exposure stimulus' some (%s and (has input some %s))"
+  text: "'exposure event' and 'has_exposure_stimulus' some (%s and ('has_input' some %s))"
   vars:
     - behavior
     - stressor

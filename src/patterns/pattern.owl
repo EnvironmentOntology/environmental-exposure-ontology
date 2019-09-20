@@ -20,6 +20,7 @@ Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0000001>))
 Declaration(Class(<http://purl.obolibrary.org/obo/OBI_0100026>))
 Declaration(Class(<http://purl.obolibrary.org/obo/PATO_0000069>))
 Declaration(Class(<http://purl.obolibrary.org/obo/PATO_0001018>))
+Declaration(Class(<http://purl.obolibrary.org/obo/ecto/patterns/consumption_of_addictive_substance.yaml>))
 Declaration(Class(<http://purl.obolibrary.org/obo/ecto/patterns/exposure_to_behavior.yaml>))
 Declaration(Class(<http://purl.obolibrary.org/obo/ecto/patterns/exposure_to_change.yaml>))
 Declaration(Class(<http://purl.obolibrary.org/obo/ecto/patterns/exposure_to_chemical.yaml>))
@@ -35,6 +36,7 @@ Declaration(Class(<http://purl.obolibrary.org/obo/ecto/patterns/exposure_to_medi
 Declaration(Class(<http://purl.obolibrary.org/obo/ecto/patterns/exposure_to_medical_action_route.yaml>))
 Declaration(Class(<http://purl.obolibrary.org/obo/ecto/patterns/exposure_to_organism.yaml>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0000052>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002233>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002242>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002243>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002309>))
@@ -47,6 +49,14 @@ Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#has
 ############################
 #   Classes
 ############################
+
+# Class: <http://purl.obolibrary.org/obo/ecto/patterns/consumption_of_addictive_substance.yaml> (exposure to 'substance' via 'behavior')
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ecto/patterns/consumption_of_addictive_substance.yaml> "An exposure event involving 'substance' 'behavior'"^^xsd:string)
+AnnotationAssertion(<http://purl.org/dc/terms/title> <http://purl.obolibrary.org/obo/ecto/patterns/consumption_of_addictive_substance.yaml> "consumption_of_addictive_substance"^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ecto/patterns/consumption_of_addictive_substance.yaml> "'substance' 'behavior' exposure"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ecto/patterns/consumption_of_addictive_substance.yaml> "exposure to 'substance' via 'behavior'"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/ecto/patterns/consumption_of_addictive_substance.yaml> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/GO_0007610> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002233> <http://purl.obolibrary.org/obo/CHEBI_24431>)))))
 
 # Class: <http://purl.obolibrary.org/obo/ecto/patterns/exposure_to_behavior.yaml> (exposure to 'behavior')
 
