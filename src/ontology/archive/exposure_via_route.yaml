@@ -1,0 +1,38 @@
+pattern_name: exo/patterns/exposure_via_route
+classes:
+  exposure event: ExO:0000002
+  chemical entity: CHEBI:24431
+  route: ExO:0000055
+
+relations:
+  part of: BFO:0000050
+  has exposure stimulus: RO:0002309
+  has exposure route: RO:0002242
+vars: 
+  stressor: "'chemical entity'"
+  route: "'Thing entity'"
+
+name:
+  text: "exposure to %s via %s"
+  vars:
+    - stressor
+    - route
+
+annotations: 
+  - property: oio:hasExactSynonym
+    text: "%s exposure, via %s"
+    vars:
+      - stressor
+      - route
+
+def: 
+  text: "A exposure event involving the interaction of an exposure receptor to %s via %s."
+  vars:
+    - stressor
+    - route
+    
+equivalentTo: 
+  text: "'exposure event' and 'has exposure stimulus' some %s and 'has exposure route' some %s"
+  vars:
+    - stressor
+    - route

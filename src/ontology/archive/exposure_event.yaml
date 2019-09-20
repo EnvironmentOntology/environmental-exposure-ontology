@@ -1,0 +1,36 @@
+pattern_name: exo/patterns/exposure_event
+classes:
+  exposure event: ExO:0000002
+  environmental material: ENVO:00010483
+
+relations:
+  part of: BFO_0000050
+  causally downstream of: RO:0002404
+    
+vars: 
+  stressor: "'Thing'"
+
+name:
+  text: "exposure to %s"
+  vars:
+    - stressor
+
+annotations: 
+  - property: oio:hasExactSynonym
+    text: "%s exposure"
+    vars:
+      - stressor
+  - property: oio:hasExactSynonym
+    text: "%s exposure event"
+    vars:
+      - stressor
+
+def: 
+  text: "An exposure event involving the interaction of an exposure receptor with %s as an exposure stressor."
+  vars:
+    - stressor
+    
+equivalentTo: 
+  text: "'exposure event' and 'causally downstream of' some %s"
+  vars:
+    - stressor

@@ -1,37 +1,77 @@
 format-version: 1.2
+data-version: ecto/releases/2019-09-20/imports/xco_import.owl
 ontology: ecto/imports/xco_import
 
 [Term]
 id: XCO:0000000
 name: experimental condition
+namespace: experimental_condition_ontology
+def: "A state of being, an external or environmental factor or a treatment observed or administered prior to or concurrent with an investigative procedure such as an assessment of a morphological or physiological state or property in a single individual or sample or in a group of individuals or samples, especially a state, factor or treatment which has the potential to influence the outcome of such an assessment." [Multiple_Dictionaries:http\://www.thefreedictionary.com/, PMID:22654893]
 
 [Term]
 id: XCO:0000026
 name: surgical removal
+namespace: experimental_condition_ontology
+def: "The process of ablating or extracting an organ, gland or other body part from an organism prior to, or in the process of, an experiment being performed on the organism." [Multiple_Dictionaries:http\://www.thefreedictionary.com/]
 is_a: XCO:0000165 ! surgical manipulation
 
 [Term]
 id: XCO:0000027
 name: surgical implantation
+namespace: experimental_condition_ontology
+def: "Any insertion of a tissue, material or device into the body using a procedure involving incision into the body." [Collins:Collins_Online_English_Dictionary, Dorland:Dorlands_Illustrated_Medical_Dictionary--31st_Ed, ISBN:978-1416049982]
 is_a: XCO:0000165 ! surgical manipulation
 
 [Term]
 id: XCO:0000165
 name: surgical manipulation
+namespace: experimental_condition_ontology
+def: "Any process involving manual and instrumental techniques for incision or excision of a part of an organism to investigate and/or treat a pathological condition." [Wikipedia:http\://en.wikipedia.org/wiki/Surgery]
 is_a: XCO:0000000 ! experimental condition
+created_by: JSmith
+creation_date: 2012-07-11T01:38:55Z
 
 [Term]
 id: XCO:0000373
 name: surgical denervation
+namespace: experimental_condition_ontology
+def: "The resection or complete surgical removal of a nerve, any of the cordlike structures that convey impulses between the central nervous system and one or more parts of the body, and that each consist of an outer connective tissue sheath surrounding a bundle of conductive fibers." [Dorland:Dorlands_Illustrated_Medical_Dictionary--31st_Ed, ISBN:978-1416049982, Mosby:Mosbys_Dental_Dictionary--2nd_Ed]
+xref: MESH:D003714
 is_a: XCO:0000026 ! surgical removal
+created_by: JSmith
+creation_date: 2014-01-09T14:52:48Z
 
 [Term]
 id: XCO:0000374
 name: axotomy
+namespace: experimental_condition_ontology
+def: "Surgical transection or severing of an axon, the process of a neuron capable of conducting action potentials or self-propagating nerve impulses away from the cell body." [Dorland:Dorlands_Illustrated_Medical_Dictionary--31st_Ed, ISBN:978-1416049982, Mosby:Mosbys_Medical_Dictionary--8th_Ed]
+xref: MESH:D019771
 is_a: XCO:0000373 ! surgical denervation
+created_by: JSmith
+creation_date: 2014-01-09T14:56:20Z
 
 [Typedef]
-id: BFO:0000050
+id: has_component
+name: has_component
+namespace: experimental_condition_ontology
+xref: RO:0002211
+created_by: JSmith
+creation_date: 2014-03-07T11:34:22Z
+
+[Typedef]
+id: has_part
+name: has_part
+namespace: experimental_condition_ontology
+xref: BFO:0000051
+is_transitive: true
+created_by: JSmith
+creation_date: 2014-03-07T11:32:23Z
+
+[Typedef]
+id: part_of
 name: part_of
+namespace: experimental_condition_ontology
+xref: BFO:0000050
 is_transitive: true
 

@@ -1,46 +1,307 @@
 format-version: 1.2
+data-version: ecto/releases/2019-09-20/imports/pato_import.owl
+subsetdef: abnormal_slim "Abnormal/normal slim"
+subsetdef: absent_slim "Absent/present slim"
+subsetdef: attribute_slim "Attribute slim"
+subsetdef: cell_quality "cell_quality"
+subsetdef: disposition_slim "Disposition slim"
+subsetdef: mpath_slim "Pathology slim"
+subsetdef: relational_slim "Relational slim: types of quality that require an additional entity in order to exist"
+subsetdef: scalar_slim "Scalar slim"
+subsetdef: value_slim "Value slim"
 ontology: ecto/imports/pato_import
 
 [Term]
 id: PATO:0000001
 name: quality
-synonym: "trait" EXACT []
+namespace: quality
+alt_id: PATO:0000072
+def: "A dependent entity that inheres in a bearer by virtue of how the bearer is related to other entities" [PATOC:GVG]
+
+[Term]
+id: PATO:0000025
+name: composition
+namespace: quality
+alt_id: PATO:0002015
+def: "A single physical entity inhering in an bearer by virtue of the bearer's quantities or relative ratios of subparts." [PATOC:GVG]
+comment: For example calcium composition (which may inhere in bone), haemoglobin composition (which may inhere in blood).
+subset: attribute_slim
+subset: scalar_slim
+synonym: "composed of" EXACT []
+synonym: "compositionality" EXACT []
+synonym: "content" EXACT []
+synonym: "structure, composition" EXACT []
+is_a: PATO:0000141 ! structure
+
+[Term]
+id: PATO:0000033
+name: concentration of
+namespace: quality
+def: "A quality inhering in a substance by virtue of the amount of the bearer's there is mixed with another substance." [Wikipedia:http\://en.wikipedia.org/wiki/concentration]
+subset: attribute_slim
+subset: relational_slim
+subset: scalar_slim
+synonym: "concentration" EXACT []
+is_a: PATO:0002182 ! molecular quality
+
+[Term]
+id: PATO:0000048
+name: hardness
+namespace: quality
+def: "A physical quality inhering in a bearer by virtue of the bearer's resistance to pressure, being broken, or pierced" [merriam-webster:merriam-webster]
+subset: attribute_slim
+subset: disposition_slim
+synonym: "impenetrability" RELATED []
+synonym: "toughness" RELATED []
+is_a: PATO:0001546 ! quality of a solid
+
+[Term]
+id: PATO:0000051
+name: morphology
+namespace: quality
+def: "A quality of a single physical entity inhering in the bearer by virtue of the bearer's size or shape or structure." [PATOC:GVG]
+subset: attribute_slim
+is_a: PATO:0001241 ! physical object quality
+
+[Term]
+id: PATO:0000052
+name: shape
+namespace: quality
+alt_id: PATO:0001647
+def: "A morphological quality inhering in a bearer by virtue of the bearer's ratios of distances between its features (points, edges, surfaces and also holes etc)." [PATOC:GVG]
+comment: Shapes are invariant on size transformations. Shapes can be subdivided into 2D and 3D shapes, We can also make a distinction between shapes of complete self-connected objects, and shapes of parts of objects.
+subset: attribute_slim
+synonym: "relational shape quality" EXACT []
+is_a: PATO:0000051 ! morphology
 
 [Term]
 id: PATO:0000068
 name: qualitative
+namespace: quality
+comment: TODO: define this or obsolete it and move children somewhere else.
 is_a: PATO:0000001 ! quality
 
 [Term]
 id: PATO:0000069
 name: deviation(from_normal)
+namespace: quality
+def: "A quality inhering in a bearer by virtue of the whether the bearer differs from normal or average." [PATOC:GVG]
+subset: attribute_slim
 is_a: PATO:0000068 ! qualitative
 
 [Term]
 id: PATO:0000070
 name: amount
-synonym: "count" EXACT []
+namespace: quality
+alt_id: PATO:0000053
+alt_id: PATO:0000071
+alt_id: PATO:0001169
+alt_id: PATO:0001226
+def: "The number of entities of this type that are part of the whole organism." [PATOC:GVG]
+comment: This term was originally named "presence". It has been renamed to reduce ambiguity. Consider annotating with the reciprocal relation,PATO:0001555, has_number_of. For example, rather than E=fin ray Q=count in organism C=10, say E=organism Q=has number of E2= fin ray C=10.
+subset: attribute_slim
 synonym: "count in organism" RELATED []
 synonym: "number" RELATED []
 synonym: "presence" RELATED []
 synonym: "presence or absence in organism" EXACT []
 synonym: "quantitative" EXACT []
 is_a: PATO:0000068 ! qualitative
+relationship: reciprocal_of PATO:0001555 ! has number of
+
+[Term]
+id: PATO:0000117
+name: size
+namespace: quality
+def: "A morphology quality inhering in a bearer by virtue of the bearer's physical magnitude." [WordNet:WordNet]
+subset: attribute_slim
+subset: scalar_slim
+is_a: PATO:0000051 ! morphology
+
+[Term]
+id: PATO:0000125
+name: mass
+namespace: quality
+def: "A physical quality that inheres in a bearer by virtue of the proportion of the bearer's amount of matter." [PATOC:GVG]
+subset: attribute_slim
+subset: relational_slim
+subset: scalar_slim
+is_a: PATO:0001018 ! physical quality
+
+[Term]
+id: PATO:0000140
+name: position
+namespace: quality
+alt_id: PATO:0001032
+alt_id: PATO:0001631
+def: "A spatial quality inhering in a bearer by virtue of the bearer's spatial location relative to other objects in the vicinity." [PATOC:GVG]
+subset: attribute_slim
+synonym: "location" EXACT []
+synonym: "placement" EXACT []
+synonym: "relational spatial quality" EXACT []
+is_a: PATO:0001018 ! physical quality
+
+[Term]
+id: PATO:0000141
+name: structure
+namespace: quality
+alt_id: PATO:0001452
+def: "A morphology quality inhering in a bearer by virtue of the bearer's relative position, shape, arrangements and connectivity of an organism's various parts; the pattern underlying its form." [PATOC:GVG]
+subset: attribute_slim
+synonym: "conformation" BROAD [VT:1000738]
+synonym: "relational structural quality" EXACT []
+is_a: PATO:0000051 ! morphology
 
 [Term]
 id: PATO:0000146
 name: temperature
+namespace: quality
+def: "A physical quality of the thermal energy of a system." [PATOC:GVG]
+subset: attribute_slim
+subset: scalar_slim
 is_a: PATO:0001018 ! physical quality
+
+[Term]
+id: PATO:0000386
+name: hard
+namespace: quality
+def: "A hardness quality of being rigid and resistant to pressure." [PATOC:GVG]
+subset: disposition_slim
+subset: mpath_slim
+subset: value_slim
+synonym: "firm" RELATED []
+synonym: "impenetrable" RELATED []
+synonym: "tough" RELATED []
+is_a: PATO:0000048 ! hardness
+is_a: PATO:0002305 ! increased object quality
+intersection_of: PATO:0000048 ! hardness
+intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
+relationship: is_opposite_of PATO:0000387 ! soft
+
+[Term]
+id: PATO:0000387
+name: soft
+namespace: quality
+def: "A hardness quality of giving little resistance to pressure." [PATOC:GVG]
+subset: disposition_slim
+subset: mpath_slim
+subset: value_slim
+is_a: PATO:0000048 ! hardness
+is_a: PATO:0002303 ! decreased object quality
+intersection_of: PATO:0000048 ! hardness
+intersection_of: decreased_in_magnitude_relative_to PATO:0000461 ! normal
+relationship: is_opposite_of PATO:0000386 ! hard
+
+[Term]
+id: PATO:0000402
+name: branched
+namespace: quality
+def: "A branchiness quality inhering in a bearer by virtue of the bearer's having branches." [WordNet:WordNet]
+subset: cell_quality
+subset: mpath_slim
+subset: value_slim
+synonym: "ramified" EXACT []
+synonym: "ramiform" EXACT []
+is_a: PATO:0002009 ! branchiness
+disjoint_from: PATO:0000414 ! unbranched
+relationship: is_opposite_of PATO:0000414 ! unbranched
+
+[Term]
+id: PATO:0000407
+name: flat
+namespace: quality
+def: "A quality inhering in a bearer by virtue of the bearer's having a horizontal surface without a slope, tilt, or curvature." [web:http\://www.merriam-webster.com/]
+subset: cell_quality
+subset: mpath_slim
+subset: value_slim
+synonym: "plate-like" RELATED []
+is_a: PATO:0002254 ! flattened
+
+[Term]
+id: PATO:0000414
+name: unbranched
+namespace: quality
+def: "A branchiness quality inhering in a bearer by virtue of the bearer's lacking branches." [PATOC:GVG]
+subset: cell_quality
+subset: mpath_slim
+subset: value_slim
+is_a: PATO:0002009 ! branchiness
+relationship: is_opposite_of PATO:0000402 ! branched
+
+[Term]
+id: PATO:0000438
+name: invariant
+namespace: quality
+def: "A variability quality inhering in a bearer by virtue of the bearer's lacking or not exhibiting variation." [Dictionary:http\://dictionary.reference.com/]
+subset: value_slim
+synonym: "constant" RELATED []
+synonym: "uniform" EXACT []
+is_a: PATO:0001303 ! variability
+relationship: is_opposite_of PATO:0001227 ! variant
+
+[Term]
+id: PATO:0000460
+name: abnormal
+namespace: quality
+def: "A quality inhering in a bearer by virtue of the bearer's deviation from normal or average." [PATOC:GVG]
+subset: abnormal_slim
+subset: mpath_slim
+subset: value_slim
+synonym: "aberrant" RELATED []
+synonym: "atypia" RELATED []
+synonym: "atypical" RELATED []
+synonym: "defective" RELATED []
+is_a: PATO:0000069 ! deviation(from_normal)
+relationship: is_opposite_of PATO:0000461 ! normal
+
+[Term]
+id: PATO:0000461
+name: normal
+namespace: quality
+def: "A quality inhering in a bearer by virtue of the bearer's exhibiting no deviation from normal or average." [PATOC:GVG]
+subset: abnormal_slim
+subset: mpath_slim
+subset: value_slim
+synonym: "average" RELATED []
+is_a: PATO:0000068 ! qualitative
+relationship: is_opposite_of PATO:0000460 ! abnormal
+
+[Term]
+id: PATO:0000462
+name: absent
+namespace: quality
+alt_id: PATO:0001996
+def: "A quality denoting the lack of an entity." [thefreedictionary.:thefreedictionary.]
+comment: See documentation here: http://code.google.com/p/phenotype-ontologies/wiki/ModelingOfAbsence
+subset: absent_slim
+subset: mpath_slim
+subset: value_slim
+synonym: "absence" EXACT []
+synonym: "absent from organism" EXACT []
+is_a: PATO:0000070 ! amount
+disjoint_from: PATO:0000467 ! present
+relationship: is_opposite_of PATO:0000467 ! present
+relationship: reciprocal_of PATO:0001558 ! lacking processual parts
+relationship: reciprocal_of PATO:0002000 ! lacks all parts of type
 
 [Term]
 id: PATO:0000467
 name: present
+namespace: quality
+def: "A quality inhering in a bearer by virtue of the bearer's existence." [PATOC:GVG]
+subset: absent_slim
+subset: value_slim
 synonym: "present in organism" RELATED []
 is_a: PATO:0000070 ! amount
+relationship: is_opposite_of PATO:0000462 ! absent
 
 [Term]
 id: PATO:0000470
 name: increased amount
+namespace: quality
+alt_id: PATO:0000420
+alt_id: PATO:0000650
+def: "An amount which is relatively high." [PATOC:GVG]
+subset: value_slim
 synonym: "accessory" RELATED []
 synonym: "increased" RELATED []
 synonym: "increased number" EXACT []
@@ -48,21 +309,209 @@ synonym: "present in greater numbers in organism" EXACT []
 synonym: "supernumerary" EXACT []
 is_a: PATO:0000467 ! present
 is_a: PATO:0002300 ! increased quality
+intersection_of: PATO:0000070 ! amount
+intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
+relationship: is_opposite_of PATO:0001997 ! decreased amount
+
+[Term]
+id: PATO:0000586
+name: increased size
+namespace: quality
+alt_id: PATO:0001202
+def: "A size quality which is relatively high." [PATOC:GVG]
+subset: value_slim
+synonym: "big" RELATED []
+synonym: "enlarged" RELATED []
+synonym: "expanded" RELATED []
+synonym: "great" RELATED []
+synonym: "large" RELATED []
+is_a: PATO:0000117 ! size
+is_a: PATO:0002305 ! increased object quality
+intersection_of: PATO:0000117 ! size
+intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
+relationship: is_opposite_of PATO:0000587 ! decreased size
+
+[Term]
+id: PATO:0000587
+name: decreased size
+namespace: quality
+def: "A size quality which is relatively low." [PATOC:GVG]
+subset: value_slim
+synonym: "hypoplasia" NARROW []
+synonym: "reduced" RELATED []
+synonym: "small" RELATED []
+synonym: "tiny" RELATED []
+synonym: "underdeveloped" NARROW []
+is_a: PATO:0000117 ! size
+is_a: PATO:0002303 ! decreased object quality
+intersection_of: PATO:0000117 ! size
+intersection_of: decreased_in_magnitude_relative_to PATO:0000461 ! normal
+relationship: is_opposite_of PATO:0000586 ! increased size
+
+[Term]
+id: PATO:0000957
+name: opacity
+namespace: quality
+def: "An optical quality which obtains by virtue of the ability of the bearer to absorb visible light." [PATOC:GVG]
+subset: attribute_slim
+is_a: PATO:0001300 ! optical quality
+
+[Term]
+id: PATO:0000963
+name: opaque
+namespace: quality
+def: "A optical quality inhering in a bearer by virtue of the bearer's not being clear; not transmitting or reflecting light or radiant energy." [PATOC:GVG]
+subset: mpath_slim
+subset: value_slim
+synonym: "clouding" RELATED []
+synonym: "cloudy" RELATED []
+synonym: "non-transparent" EXACT []
+is_a: PATO:0000957 ! opacity
+relationship: is_opposite_of PATO:0000964 ! transparent
+
+[Term]
+id: PATO:0000964
+name: transparent
+namespace: quality
+def: "A optical quality inhering in a bearer by virtue of the bearer's lacking opacity." [PATOC:GVG]
+subset: mpath_slim
+subset: value_slim
+synonym: "clear" EXACT []
+synonym: "hyaline" EXACT []
+is_a: PATO:0000957 ! opacity
+relationship: is_opposite_of PATO:0000963 ! opaque
+
+[Term]
+id: PATO:0000970
+name: permeability
+namespace: quality
+def: "A structural quality inhering in a bearer by virtue of the bearer's disposition to being permeated or pervaded by a gas or liquid (as by osmosis or diffusion)." [Biology-online:Biology-online]
+subset: attribute_slim
+subset: disposition_slim
+subset: scalar_slim
+is_a: PATO:0000141 ! structure
+
+[Term]
+id: PATO:0000973
+name: porosity
+namespace: quality
+def: "A permeability quality inhering in a bearer by virtue of the bearer's disposition to admit the passage of gas or liquid through pores or interstices." [PATOC:GVG]
+subset: attribute_slim
+subset: disposition_slim
+subset: scalar_slim
+is_a: PATO:0000970 ! permeability
+
+[Term]
+id: PATO:0000984
+name: porous
+namespace: quality
+def: "A porosity quality inhering in a bearer by virtue of the bearer's being capable of admitting the passage of gas or liquid through pores or interstices." [PATOC:GVG]
+subset: disposition_slim
+subset: value_slim
+is_a: PATO:0000973 ! porosity
+disjoint_from: PATO:0000985 ! non-porous
+relationship: is_opposite_of PATO:0000985 ! non-porous
+
+[Term]
+id: PATO:0000985
+name: non-porous
+namespace: quality
+def: "A porosity quality inhering in a bearer by virtue of the bearer's being incapable of admitting the passage of gas or liquid through pores or interstices." [PATOC:GVG]
+subset: disposition_slim
+subset: value_slim
+is_a: PATO:0000973 ! porosity
+relationship: is_opposite_of PATO:0000984 ! porous
+
+[Term]
+id: PATO:0000992
+name: viscosity
+namespace: quality
+def: "A physical quality of a liquid inhering in a bearer by virtue of the bearer's disposition to internal resistance to flow." [PATOC:GVG]
+subset: attribute_slim
+subset: disposition_slim
+is_a: PATO:0001548 ! quality of a liquid
+
+[Term]
+id: PATO:0000998
+name: viscous
+namespace: quality
+def: "A viscosity quality inhering in a bearer by virtue of the bearer's having viscosity." [PATOC:GVG]
+subset: disposition_slim
+subset: mpath_slim
+subset: value_slim
+is_a: PATO:0000992 ! viscosity
 
 [Term]
 id: PATO:0001018
 name: physical quality
+namespace: quality
+alt_id: PATO:0002079
+def: "A quality of a physical entity that exists through action of continuants at the physical level of organisation in relation to other entities." [PATOC:GVG]
+subset: attribute_slim
 synonym: "relational physical quality" EXACT []
+xref: Wikipedia:Physical_property
 is_a: PATO:0001241 ! physical object quality
 
 [Term]
 id: PATO:0001025
 name: pressure
+namespace: quality
+def: "A physical quality that inheres in a bearer by virtue of the bearer's amount of force per unit area it exerts." [PATOC:GVG]
+subset: attribute_slim
 is_a: PATO:0001018 ! physical quality
+
+[Term]
+id: PATO:0001154
+name: elongated
+namespace: quality
+def: "A quality inhering in a bearer by virtue of the bearer's length being notably higher than its width." [WordNet:WordNet]
+subset: value_slim
+is_a: PATO:0000052 ! shape
+relationship: is_opposite_of PATO:0002364 ! shortened
+
+[Term]
+id: PATO:0001199
+name: linear
+namespace: quality
+def: "A shape quality inhering in a bearer by virtue of the bearer's being narrow, with the two opposite margins parallel." [ISBN:0881923214]
+subset: cell_quality
+subset: mpath_slim
+subset: value_slim
+is_a: PATO:0000052 ! shape
+
+[Term]
+id: PATO:0001227
+name: variant
+namespace: quality
+def: "A variability quality inhering in a bearer by virtue of whether the bearer exhibits variation or change." [Dictionary:http\://dictionary.reference.com/]
+subset: relational_slim
+subset: value_slim
+synonym: "variable" EXACT []
+is_a: PATO:0001303 ! variability
+relationship: is_opposite_of PATO:0000438 ! invariant
+
+[Term]
+id: PATO:0001236
+name: process quality
+namespace: quality
+alt_id: PATO:0001239
+alt_id: PATO:0001240
+def: "A quality which inheres in an process." [PATOC:GVG]
+comment: See comments of relational quality of a physical entity.
+synonym: "quality of a process" EXACT []
+synonym: "quality of occurrent" EXACT []
+synonym: "quality of process" EXACT []
+synonym: "relational quality of occurrent" EXACT []
+is_a: PATO:0000001 ! quality
 
 [Term]
 id: PATO:0001241
 name: physical object quality
+namespace: quality
+alt_id: PATO:0001237
+alt_id: PATO:0001238
+def: "A quality which inheres in a continuant." [PATOC:GVG]
+comment: Relational qualities are qualities that hold between multiple entities. Normal (monadic) qualities such as the shape of a eyeball exist purely as a quality of that eyeball. A relational quality such as sensitivity to light is a quality of that eyeball (and connecting nervous system) as it relates to incoming light waves/particles.
 synonym: "monadic quality of a continuant" EXACT []
 synonym: "monadic quality of an object" NARROW []
 synonym: "monadic quality of continuant" NARROW []
@@ -71,46 +520,589 @@ synonym: "quality of a continuant" EXACT []
 synonym: "quality of a single physical entity" EXACT []
 synonym: "quality of an object" EXACT []
 synonym: "quality of continuant" EXACT []
+xref: snap:Quality
 is_a: PATO:0000001 ! quality
+
+[Term]
+id: PATO:0001291
+name: electromagnetic (EM) radiation quality
+namespace: quality
+def: "A physical quality that inheres in an bearer by virtue of how that bearer interacts with electromagnetic radiation." [Wikipedia:http\://en.wikipedia.org/wiki/Electromagnetic_radiation]
+subset: attribute_slim
+is_a: PATO:0001739 ! radiation quality
+
+[Term]
+id: PATO:0001300
+name: optical quality
+namespace: quality
+def: "An EM radiation quality in which the EM radiation is within the fiat range of the spectrum visible deemed to be light." [PATOC:GVG]
+subset: attribute_slim
+is_a: PATO:0001291 ! electromagnetic (EM) radiation quality
+
+[Term]
+id: PATO:0001303
+name: variability
+namespace: quality
+def: "A quality inhering in a bearer by virtue of the bearer's disposition to varying or changing." [Dictionary:http\://dictionary.reference.com/]
+subset: attribute_slim
+synonym: "variability of a physical quality" RELATED []
+is_a: PATO:0001236 ! process quality
 
 [Term]
 id: PATO:0001305
 name: increased temperature
+namespace: quality
+alt_id: PATO:0000678
+def: "A temperature which is relatively high." [PATOC:GVG]
+subset: value_slim
 synonym: "high temperature" EXACT []
 synonym: "hot" EXACT []
 is_a: PATO:0000146 ! temperature
 is_a: PATO:0002305 ! increased object quality
+intersection_of: PATO:0000146 ! temperature
+intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
+relationship: is_opposite_of PATO:0001306 ! decreased temperature
 
 [Term]
 id: PATO:0001306
 name: decreased temperature
+namespace: quality
+alt_id: PATO:0000677
+def: "A temperature which is relatively low." [PATOC:GVG]
+subset: value_slim
 synonym: "cold" EXACT []
 synonym: "low temperature" EXACT []
 is_a: PATO:0000146 ! temperature
 is_a: PATO:0002303 ! decreased object quality
+intersection_of: PATO:0000146 ! temperature
+intersection_of: decreased_in_magnitude_relative_to PATO:0000461 ! normal
+relationship: is_opposite_of PATO:0001305 ! increased temperature
+
+[Term]
+id: PATO:0001332
+name: amorphous
+namespace: quality
+def: "A morphology quality inhering in a bearer by virtue of the bearer's lack of distinct morphology." [PATOC:GVG]
+subset: cell_quality
+subset: mpath_slim
+subset: value_slim
+is_a: PATO:0000051 ! morphology
+
+[Term]
+id: PATO:0001475
+name: increased position
+namespace: quality
+def: "A position which is relatively high." [PATOC:GVG]
+subset: value_slim
+synonym: "high position" RELATED []
+is_a: PATO:0000140 ! position
+is_a: PATO:0002305 ! increased object quality
+intersection_of: PATO:0000140 ! position
+intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
+relationship: is_opposite_of PATO:0001476 ! decreased position
+
+[Term]
+id: PATO:0001476
+name: decreased position
+namespace: quality
+def: "A positional which is relatively low." [PATOC:GVG]
+subset: value_slim
+synonym: "low position" RELATED []
+is_a: PATO:0000140 ! position
+is_a: PATO:0002303 ! decreased object quality
+intersection_of: PATO:0000140 ! position
+intersection_of: decreased_in_magnitude_relative_to PATO:0000461 ! normal
+relationship: is_opposite_of PATO:0001475 ! increased position
+
+[Term]
+id: PATO:0001481
+name: sloped
+namespace: quality
+def: "A shape quality inhering in a bearer by virtue of the bearer's having an oblique or slanted direction." [WordNet:WordNet]
+subset: value_slim
+is_a: PATO:0000052 ! shape
+
+[Term]
+id: PATO:0001543
+name: flexibility
+namespace: quality
+def: "A physical quality inhering in a bearer by virtue of the bearer's disposition to being turned, bowed, or twisted without breaking." [merriam-webster:merriam-webster]
+subset: attribute_slim
+subset: disposition_slim
+is_a: PATO:0001546 ! quality of a solid
+
+[Term]
+id: PATO:0001544
+name: flexible
+namespace: quality
+def: "A physical quality inhering in a bearer by virtue of the bearer's ability of being turned, bowed, or twisted without breaking." [merriam-webster:merriam-webster]
+subset: disposition_slim
+subset: value_slim
+synonym: "bendy" EXACT []
+is_a: PATO:0001543 ! flexibility
+relationship: is_opposite_of PATO:0001545 ! inflexible
+
+[Term]
+id: PATO:0001545
+name: inflexible
+namespace: quality
+def: "A physical quality inhering in a bearer by virtue of the bearer's inability of being turned, bowed, or twisted without breaking." [merriam-webster:merriam-webster]
+subset: disposition_slim
+subset: value_slim
+synonym: "stiff" EXACT []
+synonym: "stiffness" RELATED []
+is_a: PATO:0001543 ! flexibility
+relationship: is_opposite_of PATO:0001544 ! flexible
+
+[Term]
+id: PATO:0001546
+name: quality of a solid
+namespace: quality
+def: "A physical quality inhering in a bearer by virtue of the bearer's exhibiting the physical characteristics of an entity characterized by particles arranged such that their shape and volume are relatively stable." [Chemistry:http\://chemistry.about.com/od/chemistryglossary/a/soliddefinition.htm]
+subset: attribute_slim
+synonym: "solidity" EXACT []
+is_a: PATO:0002198 ! quality of a substance
+
+[Term]
+id: PATO:0001547
+name: quality of a gas
+namespace: quality
+def: "A physical quality inhering in a bearer by virtue of the bearer's exhibiting the physical characteristics of an entity consisting of particles that have neither a defined volume nor defined shape." [Chemistry:http\://chemistry.about.com/od/chemistryglossary/a/gasdefinition.htm, PATOC:GVG]
+subset: attribute_slim
+synonym: "gaseous" EXACT []
+is_a: PATO:0002198 ! quality of a substance
+
+[Term]
+id: PATO:0001548
+name: quality of a liquid
+namespace: quality
+def: "A physical quality inhering in an entity exhibiting the physical characteristics of an amorphous (non-crystalline) form of matter between a gas and a solid that has a definite volume, but no definite shape." [url:http\://www.chemistry-dictionary.com/definition/liquid.php]
+subset: attribute_slim
+synonym: "liquidity" EXACT []
+is_a: PATO:0002198 ! quality of a substance
+
+[Term]
+id: PATO:0001555
+name: has number of
+namespace: quality
+def: "The number of parts of a particular type that the bearer entity has. This is a relational quality, and thus holds between two entities: the bearer of the quality, and the type of parts." [PATOC:CJM]
+subset: attribute_slim
+subset: relational_slim
+synonym: "cardinality" RELATED []
+synonym: "extra or missing physical or functional parts" EXACT []
+synonym: "has or lacks parts of type" EXACT []
+synonym: "mereological quality" EXACT []
+synonym: "number" RELATED []
+synonym: "number of" EXACT []
+xref: OBO_REL:has_part
+is_a: PATO:0001241 ! physical object quality
+relationship: reciprocal_of PATO:0000070 ! amount
+
+[Term]
+id: PATO:0001558
+name: lacking processual parts
+namespace: quality
+def: "A quality of a process inhering in a bearer by virtue of the bearer's lacking a processual part as specified by the additional entity." [PATOC:GVG]
+subset: relational_slim
+subset: value_slim
+is_a: PATO:0001564 ! extra or missing processual parts
+relationship: reciprocal_of PATO:0000462 ! absent
+
+[Term]
+id: PATO:0001562
+name: decreased mass
+namespace: quality
+alt_id: PATO:0000579
+def: "A mass which is lower than normal or average." [PATO:GVG]
+subset: value_slim
+synonym: "low mass" EXACT []
+synonym: "small mass" EXACT []
+is_a: PATO:0000125 ! mass
+is_a: PATO:0002303 ! decreased object quality
+intersection_of: PATO:0000125 ! mass
+intersection_of: decreased_in_magnitude_relative_to PATO:0000461 ! normal
+relationship: is_opposite_of PATO:0001563 ! increased mass
+
+[Term]
+id: PATO:0001563
+name: increased mass
+namespace: quality
+alt_id: PATO:0000578
+def: "A mass which is higher than normal or average." [PATO:GVG]
+subset: value_slim
+synonym: "high mass" EXACT []
+synonym: "large mass" EXACT []
+is_a: PATO:0000125 ! mass
+is_a: PATO:0002305 ! increased object quality
+intersection_of: PATO:0000125 ! mass
+intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
+relationship: is_opposite_of PATO:0001562 ! decreased mass
+
+[Term]
+id: PATO:0001564
+name: extra or missing processual parts
+namespace: quality
+def: "A quality of a process inhering in a bearer by virtue of the bearer's processual parts." [PATOC:GVG]
+subset: relational_slim
+is_a: PATO:0001236 ! process quality
 
 [Term]
 id: PATO:0001575
 name: decreased pressure
+namespace: quality
+def: "A pressure which is relatively low." [PATO:GVG]
+subset: value_slim
 synonym: "low pressure" EXACT []
 is_a: PATO:0001025 ! pressure
 is_a: PATO:0002303 ! decreased object quality
+intersection_of: PATO:0001025 ! pressure
+intersection_of: decreased_in_magnitude_relative_to PATO:0000461 ! normal
+relationship: is_opposite_of PATO:0001576 ! increased pressure
 
 [Term]
 id: PATO:0001576
 name: increased pressure
+namespace: quality
+def: "A pressure which is relatively high." [PATO:GVG]
+subset: value_slim
 synonym: "high pressure" EXACT []
 is_a: PATO:0001025 ! pressure
 is_a: PATO:0002305 ! increased object quality
+intersection_of: PATO:0001025 ! pressure
+intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
+relationship: is_opposite_of PATO:0001575 ! decreased pressure
+
+[Term]
+id: PATO:0001583
+name: decreased variability
+namespace: quality
+def: "A variability which is relatively low." [PATO:GVG]
+subset: value_slim
+synonym: "low variability" EXACT []
+is_a: PATO:0001227 ! variant
+is_a: PATO:0002302 ! decreased process quality
+is_a: PATO:0002303 ! decreased object quality
+intersection_of: PATO:0001227 ! variant
+intersection_of: decreased_in_magnitude_relative_to PATO:0000461 ! normal
+relationship: is_opposite_of PATO:0001584 ! increased variability
+
+[Term]
+id: PATO:0001584
+name: increased variability
+namespace: quality
+def: "A variability which is relatively high." [PATO:GVG]
+subset: value_slim
+synonym: "high variability" EXACT []
+is_a: PATO:0001227 ! variant
+is_a: PATO:0002304 ! increased process quality
+is_a: PATO:0002305 ! increased object quality
+intersection_of: PATO:0001227 ! variant
+intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
+relationship: is_opposite_of PATO:0001583 ! decreased variability
+
+[Term]
+id: PATO:0001591
+name: curvature
+namespace: quality
+def: "A surface shape quality inhering in a bearer by virtue of the bearer's exhibiting a degree of bending." [WordNet:WordNet]
+subset: attribute_slim
+is_a: PATO:0000052 ! shape
+
+[Term]
+id: PATO:0001655
+name: osmolarity
+namespace: quality
+def: "A concentration quality inhering in a bearer by virtue of the bearer's amount of osmoles of solute per liter of solution." [Wikipedia:http\://en.wikipedia.org/wiki/Osmolarity]
+subset: attribute_slim
+subset: relational_slim
+subset: scalar_slim
+is_a: PATO:0000033 ! concentration of
+
+[Term]
+id: PATO:0001656
+name: decreased osmolarity
+namespace: quality
+def: "A osmolarity which is relatively low." [PATOC:GVG]
+subset: relational_slim
+subset: value_slim
+synonym: "low osmolarity" EXACT []
+is_a: PATO:0001655 ! osmolarity
+is_a: PATO:0002303 ! decreased object quality
+intersection_of: PATO:0001655 ! osmolarity
+intersection_of: decreased_in_magnitude_relative_to PATO:0000461 ! normal
+relationship: is_opposite_of PATO:0001657 ! increased osmolarity
+
+[Term]
+id: PATO:0001657
+name: increased osmolarity
+namespace: quality
+def: "A osmolarity which is relatively high." [PATOC:GVG]
+subset: relational_slim
+subset: value_slim
+synonym: "high osmolarity" EXACT []
+is_a: PATO:0001655 ! osmolarity
+is_a: PATO:0002305 ! increased object quality
+intersection_of: PATO:0001655 ! osmolarity
+intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
+relationship: is_opposite_of PATO:0001656 ! decreased osmolarity
+
+[Term]
+id: PATO:0001687
+name: elevation
+namespace: quality
+def: "A positional quality inhering in a bearer by virtue of the bearer's vertical distance of a point above or below a reference surface." [Trailillustrated:Trailillustrated]
+subset: attribute_slim
+is_a: PATO:0000140 ! position
+
+[Term]
+id: PATO:0001688
+name: increased elevation
+namespace: quality
+def: "An elevation which is relatively high." [PATOC:GVG]
+subset: value_slim
+synonym: "elevated" RELATED []
+synonym: "high elevation" EXACT []
+is_a: PATO:0001475 ! increased position
+is_a: PATO:0001687 ! elevation
+intersection_of: PATO:0001687 ! elevation
+intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
+relationship: is_opposite_of PATO:0001689 ! decreased elevation
+
+[Term]
+id: PATO:0001689
+name: decreased elevation
+namespace: quality
+def: "An elevation which is relatively low." [PATOC:GVG]
+subset: value_slim
+synonym: "low elevation" EXACT []
+is_a: PATO:0001476 ! decreased position
+is_a: PATO:0001687 ! elevation
+intersection_of: PATO:0001687 ! elevation
+intersection_of: decreased_in_magnitude_relative_to PATO:0000461 ! normal
+relationship: is_opposite_of PATO:0001688 ! increased elevation
+
+[Term]
+id: PATO:0001693
+name: increased viscosity
+namespace: quality
+def: "A viscosity which relatively high." [PATOC:GVG]
+subset: disposition_slim
+subset: value_slim
+synonym: "high viscosity" EXACT []
+is_a: PATO:0000998 ! viscous
+is_a: PATO:0002305 ! increased object quality
+intersection_of: PATO:0000998 ! viscous
+intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
+relationship: is_opposite_of PATO:0001694 ! decreased viscosity
+
+[Term]
+id: PATO:0001694
+name: decreased viscosity
+namespace: quality
+def: "A viscosity which relatively low." [PATOC:GVG]
+subset: disposition_slim
+subset: value_slim
+synonym: "low viscosity" EXACT []
+is_a: PATO:0000998 ! viscous
+is_a: PATO:0002303 ! decreased object quality
+intersection_of: PATO:0000998 ! viscous
+intersection_of: decreased_in_magnitude_relative_to PATO:0000461 ! normal
+relationship: is_opposite_of PATO:0001693 ! increased viscosity
+
+[Term]
+id: PATO:0001739
+name: radiation quality
+namespace: quality
+def: "A quality that inheres in an bearer by virtue of how that bearer interacts with radiation." [PATOC:GVG]
+subset: attribute_slim
+is_a: PATO:0001018 ! physical quality
+
+[Term]
+id: PATO:0001759
+name: granular
+namespace: quality
+def: "A composition quality inhering in a bearer by virtue of the bearer's containing granules." [thefreedictionary.com:thefreedictionary.com]
+subset: mpath_slim
+subset: value_slim
+is_a: PATO:0000025 ! composition
+
+[Term]
+id: PATO:0001776
+name: increased flexibility
+namespace: quality
+def: "A flexibility which is relatively high." [PATOC:GVG]
+subset: disposition_slim
+subset: value_slim
+synonym: "high flexibility" EXACT []
+is_a: PATO:0001544 ! flexible
+is_a: PATO:0002305 ! increased object quality
+intersection_of: PATO:0001544 ! flexible
+intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
+relationship: is_opposite_of PATO:0001777 ! decreased flexibility
+
+[Term]
+id: PATO:0001777
+name: decreased flexibility
+namespace: quality
+def: "A flexibility which is relatively low." [PATOC:GVG]
+subset: disposition_slim
+subset: value_slim
+synonym: "low flexibility" EXACT []
+is_a: PATO:0001544 ! flexible
+is_a: PATO:0002303 ! decreased object quality
+intersection_of: PATO:0001544 ! flexible
+intersection_of: decreased_in_magnitude_relative_to PATO:0000461 ! normal
+relationship: is_opposite_of PATO:0001776 ! increased flexibility
+
+[Term]
+id: PATO:0001822
+name: wetness
+namespace: quality
+def: "A quality inhering in a bearer by virtue of whether the bearer's being covered by a liquid." [wordreference.com:wordreference.com]
+subset: attribute_slim
+subset: mpath_slim
+subset: scalar_slim
+is_a: PATO:0001018 ! physical quality
+
+[Term]
+id: PATO:0001823
+name: wet
+namespace: quality
+def: "A wetness quality inhering in a bearer by virtue of the bearer's being covered by a liquid." [PATOC:GVG]
+subset: mpath_slim
+subset: value_slim
+is_a: PATO:0001822 ! wetness
+disjoint_from: PATO:0001824 ! dry
+relationship: is_opposite_of PATO:0001824 ! dry
+
+[Term]
+id: PATO:0001824
+name: dry
+namespace: quality
+def: "A wetness quality inhering in a bearer by virtue of the bearer's not being covered by a liquid." [PATOC:GVG]
+subset: mpath_slim
+subset: value_slim
+is_a: PATO:0001822 ! wetness
+relationship: is_opposite_of PATO:0001823 ! wet
+
+[Term]
+id: PATO:0001825
+name: increased wetness
+namespace: quality
+def: "A wetness quality that is relatively high." [PATOC:GVG]
+subset: value_slim
+is_a: PATO:0001823 ! wet
+is_a: PATO:0002305 ! increased object quality
+intersection_of: PATO:0001823 ! wet
+intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
+relationship: is_opposite_of PATO:0001826 ! decreased wetness
+
+[Term]
+id: PATO:0001826
+name: decreased wetness
+namespace: quality
+def: "A wetness quality that is relatively low." [PATOC:GVG]
+subset: value_slim
+synonym: "low wetness" EXACT []
+is_a: PATO:0001823 ! wet
+is_a: PATO:0002303 ! decreased object quality
+intersection_of: PATO:0001823 ! wet
+intersection_of: decreased_in_magnitude_relative_to PATO:0000461 ! normal
+relationship: is_opposite_of PATO:0001825 ! increased wetness
+
+[Term]
+id: PATO:0001842
+name: acidity
+namespace: quality
+def: "A concentration quality inhering in a bearer by virtue of the bearer's containing acid (hydrogen ions)." [biology-online:biology-online]
+subset: attribute_slim
+subset: scalar_slim
+synonym: "pH" EXACT []
+is_a: PATO:0000033 ! concentration of
+
+[Term]
+id: PATO:0001843
+name: decreased acidity
+namespace: quality
+def: "An acidity which is relatively low." [PATOC:GVG]
+subset: value_slim
+synonym: "low acidity" EXACT []
+is_a: PATO:0001842 ! acidity
+is_a: PATO:0002303 ! decreased object quality
+intersection_of: PATO:0001842 ! acidity
+intersection_of: decreased_in_magnitude_relative_to PATO:0000461 ! normal
+relationship: is_opposite_of PATO:0001844 ! increased acidity
+
+[Term]
+id: PATO:0001844
+name: increased acidity
+namespace: quality
+def: "An acidity which is relatively high." [PATOC:GVG]
+subset: value_slim
+synonym: "high acidity" EXACT []
+is_a: PATO:0001842 ! acidity
+is_a: PATO:0002305 ! increased object quality
+intersection_of: PATO:0001842 ! acidity
+intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
+relationship: is_opposite_of PATO:0001843 ! decreased acidity
+
+[Term]
+id: PATO:0001884
+name: hydrophobicity
+namespace: quality
+def: "A physical quality inhering in a bearer by virtue the bearer's disposition to being water-repellent; tending to repel and not absorb water." [WordNet:WordNet]
+subset: attribute_slim
+subset: disposition_slim
+is_a: PATO:0001018 ! physical quality
+disjoint_from: PATO:0001886 ! hydrophilicity
+relationship: is_opposite_of PATO:0001886 ! hydrophilicity
+
+[Term]
+id: PATO:0001885
+name: hydrophobic
+namespace: quality
+def: "A quality inhering in a bearer by virtue of the bearer's lacking affinity for water; tending to repel and not absorb water; tending not to dissolve in or mix with or be wetted by water." [WordNet:WordNet]
+subset: disposition_slim
+subset: value_slim
+is_a: PATO:0001884 ! hydrophobicity
+relationship: is_opposite_of PATO:0001887 ! hydrophilic
+
+[Term]
+id: PATO:0001886
+name: hydrophilicity
+namespace: quality
+def: "A physical quality inhering in a bearer by virtue the bearer's disposition to having an affinity for water; it is readily absorbing or dissolving in water." [answers.com:answers.com]
+subset: attribute_slim
+subset: disposition_slim
+is_a: PATO:0001018 ! physical quality
+relationship: is_opposite_of PATO:0001884 ! hydrophobicity
+
+[Term]
+id: PATO:0001887
+name: hydrophilic
+namespace: quality
+def: "A quality inhering in a bearer by virtue of the bearer's disposition to having a strong affinity for water; tending to dissolve in, mix with, or be wetted by water." [WordNet:WordNet]
+subset: disposition_slim
+subset: value_slim
+is_a: PATO:0001886 ! hydrophilicity
+relationship: is_opposite_of PATO:0001885 ! hydrophobic
 
 [Term]
 id: PATO:0001985
 name: frozen
+namespace: quality
+def: "A quality inhering in a bearer by virtue of the bearer's being kept below its freezing point." [OBI:OBI]
+subset: value_slim
 is_a: PATO:0000146 ! temperature
 
 [Term]
 id: PATO:0001997
 name: decreased amount
+namespace: quality
+alt_id: PATO:0000419
+alt_id: PATO:0000468
+def: "An amount which is relatively low." [PATOC:GVG]
+subset: value_slim
 synonym: "decreased" RELATED []
 synonym: "decreased number" EXACT []
 synonym: "present in fewer numbers in organism" EXACT []
@@ -118,31 +1110,375 @@ synonym: "reduced" RELATED []
 synonym: "subnumerary" RELATED []
 is_a: PATO:0000467 ! present
 is_a: PATO:0002301 ! decreased quality
+intersection_of: PATO:0000070 ! amount
+intersection_of: decreased_in_magnitude_relative_to PATO:0000461 ! normal
+relationship: is_opposite_of PATO:0000470 ! increased amount
+
+[Term]
+id: PATO:0001999
+name: lacks parts or has fewer parts of type
+namespace: quality
+def: "The bearer of this quality has_part < n of the indicated entity type, where n is the normal amount for a comparable organism. Note that the bearer of the quality is the whole, not the part. Formally: If a bearer entity e has fewer parts of type X at time t, then the number of instances x of X at t such that x part_of e is < n, where n is either the normal number for comparable entities, or n is stated explicitly. This case includes the limit case, where the bearer lacks all parts of the specified type." [PATOC:CJM]
+subset: relational_slim
+synonym: "loss of" EXACT []
+is_a: PATO:0002083 ! altered number of
+
+[Term]
+id: PATO:0002000
+name: lacks all parts of type
+namespace: quality
+alt_id: PATO:0001557
+def: "A quality of physical entities inhering in a bearer by virtue of the bearer's lacking a physical part as specified by the additional entity." [PATOC:CJM]
+comment: Example: [E=organism Q=lacks_all_parts_of_type E2=Wing] - applies to an organism. A relational quality in which the bearer entity has no parts of the specified type. The bearer of this quality has_part = 0 of the indicated entity type, where a comparable organism usually has at least 1 part of the same type. Note that the bearer of the quality is the whole, not the part. Formally: If a bearer entity e lacks all parts of type X at time t, then there exists no instances x of X at t such that x part_of e that has no wings, where wings are normally present in that organism type. In OWL this is equivalent to a restriction on the OBO_REL:has_part relation with cardinality=0, i.e has_part 0 E2.
+subset: relational_slim
+synonym: "lacks all physical parts of type" EXACT []
+xref: OBO_REL:lacks_part
+is_a: PATO:0001999 ! lacks parts or has fewer parts of type
+relationship: reciprocal_of PATO:0000462 ! absent
+
+[Term]
+id: PATO:0002001
+name: has fewer parts of type
+namespace: quality
+alt_id: PATO:0001569
+def: "The bearer of this quality has_part < n AND has_part > 0 of the indicated entity type, where n is the normal amount for a comparable organism. Note that the bearer of the quality is the whole, not the part. Formally: If a bearer entity e has fewer parts of type X at time t, then the number of instances x of X at t such that x part_of e is < n, where n is either the normal number for comparable entities, or n is stated explicitly." [PATOC:CJM]
+comment: Example: [E=hand Q=has_fewer_parts_of_type E2=digit] - applies to an organism that has no less fingers than is normal for organisms of that type.
+subset: relational_slim
+synonym: "decreased number of" EXACT []
+synonym: "has decreased number of" EXACT []
+synonym: "has fewer physical parts of type" EXACT []
+is_a: PATO:0001999 ! lacks parts or has fewer parts of type
+is_a: PATO:0002303 ! decreased object quality
+intersection_of: PATO:0001999 ! lacks parts or has fewer parts of type
+intersection_of: decreased_in_magnitude_relative_to PATO:0000461 ! normal
+relationship: is_opposite_of PATO:0002002 ! has extra parts of type
+
+[Term]
+id: PATO:0002002
+name: has extra parts of type
+namespace: quality
+alt_id: PATO:0001560
+def: "The bearer of this quality has_part > n of the indicated entity type, where n is the normal amount for a comparable organism. Note that the bearer of the quality is the whole, not the part." [PATOC:CJM]
+comment: In polydactyly, the bearer of the quality is the hand, and the entity type being counted is 'finger'. In EQ syntax, E=hand, Q=<this> E2=finger.
+subset: relational_slim
+synonym: "has extra parts of" EXACT []
+synonym: "has increased number of" EXACT []
+synonym: "having extra physical parts" EXACT []
+synonym: "having supernumerary physical parts" EXACT []
+synonym: "increased number of" EXACT []
+is_a: PATO:0002083 ! altered number of
+is_a: PATO:0002305 ! increased object quality
+intersection_of: PATO:0002083 ! altered number of
+intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
+relationship: is_opposite_of PATO:0002001 ! has fewer parts of type
+
+[Term]
+id: PATO:0002009
+name: branchiness
+namespace: quality
+def: "A shape quality inhering in a bearer by virtue of the degree to which there are subdivisions or offshoots in a bearer entity." [PATOC:MAH]
+subset: attribute_slim
+subset: cell_quality
+is_a: PATO:0000052 ! shape
+
+[Term]
+id: PATO:0002083
+name: altered number of
+namespace: quality
+def: "Having extra or fewer parts." [PATOC:GVG]
+subset: attribute_slim
+subset: relational_slim
+is_a: PATO:0001555 ! has number of
+created_by: George Gkoutos
+creation_date: 2009-09-21T10:41:58Z
+
+[Term]
+id: PATO:0002124
+name: laminar
+namespace: quality
+def: "A quality inhering in a bearer by virtue of the bearer's processing the form of a thin plate sheet or layer." [PATOC:GVG]
+subset: mpath_slim
+subset: value_slim
+is_a: PATO:0000141 ! structure
+created_by: george
+creation_date: 2009-10-06T04:37:14Z
+
+[Term]
+id: PATO:0002143
+name: sloped downward
+namespace: quality
+subset: value_slim
+is_a: PATO:0001481 ! sloped
+created_by: george
+creation_date: 2009-10-30T02:18:39Z
+
+[Term]
+id: PATO:0002181
+name: displaced
+namespace: quality
+def: "A positional quality inhering in a bearer by virtue the bearer's being changed in position." [PATOC:GVG]
+subset: attribute_slim
+is_a: PATO:0000140 ! position
+created_by: George Gkoutos
+creation_date: 2010-03-01T02:56:33Z
+
+[Term]
+id: PATO:0002182
+name: molecular quality
+namespace: quality
+alt_id: PATO:0002061
+def: "A quality which inheres in a molecular entity, a single molecule, atom, ion, radical etc." [PATOC:GVG]
+synonym: "relational molecular quality" EXACT []
+is_a: PATO:0001241 ! physical object quality
+created_by: George Gkoutos
+creation_date: 2010-03-10T03:18:15Z
+
+[Term]
+id: PATO:0002198
+name: quality of a substance
+namespace: quality
+def: "A quality inhering in a bearer by virtue of its constitution." [PATOC:GVG]
+subset: attribute_slim
+is_a: PATO:0001018 ! physical quality
+created_by: George Gkoutos
+creation_date: 2010-03-15T04:35:27Z
+
+[Term]
+id: PATO:0002253
+name: platelike
+namespace: quality
+def: "A quality inhering in a bearer by virtue of the bearer's being roundish, flattish shape, possibly with a slightly angled edge." [PATOC:CVC]
+subset: value_slim
+synonym: "plate-like" EXACT []
+is_a: PATO:0000407 ! flat
+created_by: george
+creation_date: 2010-08-16T03:57:48Z
+
+[Term]
+id: PATO:0002254
+name: flattened
+namespace: quality
+def: "A quality inhering in a bearer by virtue of the bearer's surface becoming more extended in a plane." [PATOC:CVS]
+comment: Becoming flat but not necessarily completely flat.
+subset: value_slim
+synonym: "compressed" RELATED []
+is_a: PATO:0001591 ! curvature
+created_by: george
+creation_date: 2010-08-16T03:59:34Z
 
 [Term]
 id: PATO:0002300
 name: increased quality
+namespace: quality
+def: "A quality that has a value that is increased compared to normal or average." [PATOC:GVG]
 is_a: PATO:0000069 ! deviation(from_normal)
+intersection_of: PATO:0000001 ! quality
+intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
+relationship: increased_in_magnitude_relative_to PATO:0000461 ! normal
+relationship: is_opposite_of PATO:0002301 ! decreased quality
+created_by: George Gkoutos
+creation_date: 2011-06-16T06:39:43Z
 
 [Term]
 id: PATO:0002301
 name: decreased quality
+namespace: quality
+def: "A quality that has a value that is decreased compared to normal or average." [PATOC:GVG]
 is_a: PATO:0000069 ! deviation(from_normal)
+intersection_of: PATO:0000001 ! quality
+intersection_of: decreased_in_magnitude_relative_to PATO:0000461 ! normal
+relationship: decreased_in_magnitude_relative_to PATO:0000461 ! normal
+relationship: is_opposite_of PATO:0002300 ! increased quality
+created_by: George Gkoutos
+creation_date: 2011-06-16T06:40:15Z
+
+[Term]
+id: PATO:0002302
+name: decreased process quality
+namespace: quality
+def: "A quality of a process that has a value that is decreased compared to normal or average." [PATOC:GVG]
+is_a: PATO:0001236 ! process quality
+is_a: PATO:0002301 ! decreased quality
+intersection_of: PATO:0001236 ! process quality
+intersection_of: decreased_in_magnitude_relative_to PATO:0000461 ! normal
+relationship: is_opposite_of PATO:0002304 ! increased process quality
+created_by: George Gkoutos
+creation_date: 2011-06-16T06:50:59Z
 
 [Term]
 id: PATO:0002303
 name: decreased object quality
+namespace: quality
+def: "A quality of an object that has a value that is decreased compared to normal or average." [PATOC:GVG]
 is_a: PATO:0001241 ! physical object quality
 is_a: PATO:0002301 ! decreased quality
+intersection_of: PATO:0001241 ! physical object quality
+intersection_of: decreased_in_magnitude_relative_to PATO:0000461 ! normal
+relationship: is_opposite_of PATO:0002305 ! increased object quality
+created_by: George Gkoutos
+creation_date: 2011-06-16T06:51:54Z
+
+[Term]
+id: PATO:0002304
+name: increased process quality
+namespace: quality
+def: "A quality of a process that has a value that is increased compared to normal or average." [PATOC:GVG]
+is_a: PATO:0001236 ! process quality
+is_a: PATO:0002300 ! increased quality
+intersection_of: PATO:0001236 ! process quality
+intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
+relationship: is_opposite_of PATO:0002302 ! decreased process quality
+created_by: George Gkoutos
+creation_date: 2011-06-16T06:53:08Z
 
 [Term]
 id: PATO:0002305
 name: increased object quality
+namespace: quality
+def: "A quality of an object that has a value that is increased compared to normal or average." [PATOC:GVG]
 is_a: PATO:0001241 ! physical object quality
 is_a: PATO:0002300 ! increased quality
+intersection_of: PATO:0001241 ! physical object quality
+intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
+relationship: is_opposite_of PATO:0002303 ! decreased object quality
+created_by: George Gkoutos
+creation_date: 2011-06-16T06:54:01Z
+
+[Term]
+id: PATO:0002364
+name: shortened
+namespace: quality
+def: "A quality inhering in a bearer by virtue of the bearer's length being notably lower than its width." [PATOC:GVG]
+subset: value_slim
+is_a: PATO:0000052 ! shape
+relationship: is_opposite_of PATO:0001154 ! elongated
+created_by: gkoutos
+creation_date: 2012-04-18T06:31:29Z
+
+[Term]
+id: PATO:0002374
+name: fluctuating
+namespace: quality
+def: "Recurrent and often more or less cyclic alteration." [PATOC:DS]
+subset: value_slim
+is_a: PATO:0001227 ! variant
+created_by: gkoutos
+creation_date: 2012-07-05T01:52:36Z
+
+[Term]
+id: PATO:0015021
+name: combustibility
+namespace: quality
+def: "The propensity of a material to undergo combustion. Combustion encompasses smouldering and flaming combustion. Combustibility is usually applied to solids." [https://en.wikipedia.org/wiki/Combustibility, https://github.com/EnvironmentOntology/envo/issues/384]
+subset: attribute_slim
+is_a: PATO:0001018 ! physical quality
+
+[Term]
+id: PATO:0015022
+name: increased combustibility
+namespace: quality
+def: "An increase in combustibility." []
+subset: value_slim
+synonym: "combustible" EXACT []
+is_a: PATO:0002305 ! increased object quality
+is_a: PATO:0015021 ! combustibility
+intersection_of: PATO:0015021 ! combustibility
+intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
+relationship: is_opposite_of PATO:0015023 ! decreased combustibility
+
+[Term]
+id: PATO:0015023
+name: decreased combustibility
+namespace: quality
+def: "An decrease in combustibility." []
+subset: value_slim
+synonym: "noncombustible" RELATED []
+is_a: PATO:0002303 ! decreased object quality
+is_a: PATO:0015021 ! combustibility
+intersection_of: PATO:0015021 ! combustibility
+intersection_of: decreased_in_magnitude_relative_to PATO:0000461 ! normal
+relationship: is_opposite_of PATO:0015022 ! increased combustibility
+
+[Term]
+id: PATO:0015024
+name: increased porosity
+namespace: quality
+def: "An increase in porosity." [https://github.com/pato-ontology/pato/issues/110]
+subset: value_slim
+is_a: PATO:0000973 ! porosity
+is_a: PATO:0002305 ! increased object quality
+intersection_of: PATO:0000973 ! porosity
+intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
+
+[Term]
+id: PATO:0015025
+name: decreased porosity
+namespace: quality
+def: "An decrease in porosity." [https://github.com/pato-ontology/pato/issues/110]
+subset: value_slim
+is_a: PATO:0000973 ! porosity
+is_a: PATO:0002303 ! decreased object quality
+intersection_of: PATO:0000973 ! porosity
+intersection_of: decreased_in_magnitude_relative_to PATO:0000461 ! normal
+relationship: is_opposite_of PATO:0015024 ! increased porosity
 
 [Typedef]
-id: BFO:0000050
-name: part_of
+id: decreased_in_magnitude_relative_to
+name: decreased_in_magnitude_relative_to
+namespace: quality
+def: "q1 decreased_in_magnitude_relative_to q2 if and only if magnitude(q1) < magnitude(q2). Here, magnitude(q) is a function that maps a quality to a unit-invariant scale." [PATOC:CJM]
+comment: This relation is used to determine the 'directionality' of relative qualities such as 'decreased strength', relative to the parent type, 'strength'.
+domain: PATO:0000001 ! quality
+range: PATO:0000001 ! quality
 is_transitive: true
+is_a: different_in_magnitude_relative_to ! different_in_magnitude_relative_to
+
+[Typedef]
+id: different_in_magnitude_relative_to
+name: different_in_magnitude_relative_to
+namespace: quality
+def: "q1 different_in_magnitude_relative_to q2 if and only if magnitude(q1) NOT =~ magnitude(q2). Here, magnitude(q) is a function that maps a quality to a unit-invariant scale." [PATOC:CJM]
+domain: PATO:0000001 ! quality
+range: PATO:0000001 ! quality
+
+[Typedef]
+id: has_part
+name: has_part
+namespace: quality
+def: "Q1 has_part Q2 if and only if: every instance of Q1 is a quality_of an entity that has_quality some Q2." [PATOC:CJM]
+comment: We use the has_part relation to relate complex qualities to more primitive ones. A complex quality is a collection of qualities. The complex quality cannot exist without the sub-qualities. For example, the quality 'swollen' necessarily comes with the qualities of 'protruding' and 'increased size'.
+xref: BFO:0000051
+
+[Typedef]
+id: increased_in_magnitude_relative_to
+name: increased_in_magnitude_relative_to
+namespace: quality
+def: "q1 increased_in_magnitude_relative_to q2 if and only if magnitude(q1) > magnitude(q2). Here, magnitude(q) is a function that maps a quality to a unit-invariant scale." [PATOC:CJM]
+comment: This relation is used to determine the 'directionality' of relative qualities such as 'increased strength', relative to the parent type, 'strength'.
+domain: PATO:0000001 ! quality
+range: PATO:0000001 ! quality
+is_transitive: true
+is_a: different_in_magnitude_relative_to ! different_in_magnitude_relative_to
+
+[Typedef]
+id: is_opposite_of
+name: is opposite of
+namespace: quality
+xref: RO:0002604
+is_metadata_tag: true
+is_class_level: true
+
+[Typedef]
+id: part_of
+name: part_of
+namespace: quality
+xref: BFO:0000050
+is_transitive: true
+
+[Typedef]
+id: reciprocal_of
+name: reciprocal_of
+namespace: quality
+def: "q1 reciprocal_of q2 if and only if : q1 and q2 are relational qualities and a phenotype e q1 e2 mutually implies a phenotype e2 q2 e." [PATOC:CJM]
+comment: There are frequently two ways to state the same thing: we can say 'spermatocyte lacks asters' or 'asters absent from spermatocyte'. In this case the quality is 'lacking all parts of type' - it is a (relational) quality of the spermatocyte, and it is with respect to instances of 'aster'. One of the popular requirements of PATO is that it continue to support 'absent', so we need to relate statements which use this quality to the 'lacking all parts of type' quality.
 
