@@ -67,3 +67,23 @@ imports/npo_import.owl:
 	
 mirror/npo.owl:
 	echo "!!!!!NPO currently skipped!"
+	
+imports/exo_import.owl:
+	echo "!!!!!EXO mirror currently skipped, see: https://github.com/CTDbase/exposure-ontology/issues/11"
+	
+mirror/exo.owl:
+	echo "!!!!!EXO currently skipped, see: https://github.com/CTDbase/exposure-ontology/issues/11"
+
+
+$(ONT)-full.owl: $(SRC) $(OTHER_SRC)
+	echo "!!!!!! FULL RELEASE IS OVERWRITTEN, REMOVING DISJOINTS - ecto.Makefile. See https://github.com/EnvironmentOntology/environmental-exposure-ontology/issues/79 !!!!!!"
+	$(ROBOT) merge --input $< \
+		remove --axioms disjoint --preserve-structure false \
+		reason --reasoner ELK --equivalent-classes-allowed all --exclude-tautologies structural \
+		relax \
+		reduce -r ELK \
+		annotate --ontology-iri $(ONTBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY)/$@ --output $@.tmp.owl && mv $@.tmp.owl $@
+
+test: odkversion sparql_test all_reports
+	echo "!!!!!! FULL TEST RUN IS OVERWRITTEN, REMOVING DISJOINTS - ecto.Makefile. See https://github.com/EnvironmentOntology/environmental-exposure-ontology/issues/79 !!!!!!"
+	$(ROBOT) remove  --input $(SRC) --axioms disjoint --preserve-structure false reason --reasoner ELK  --equivalent-classes-allowed all --exclude-tautologies structural --output test.owl && rm test.owl && echo "Success"
