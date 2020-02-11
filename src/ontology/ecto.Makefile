@@ -68,7 +68,12 @@ imports/npo_import.owl:
 mirror/npo.owl:
 	echo "!!!!!NPO currently skipped!"
 	
+imports/exo_import.owl:
+	echo "!!!!!EXO mirror currently skipped, see: https://github.com/CTDbase/exposure-ontology/issues/11"
 	
+mirror/exo.owl:
+	echo "!!!!!EXO currently skipped, see: https://github.com/CTDbase/exposure-ontology/issues/11"
+
 $(ONT)-full.owl: $(SRC) $(OTHER_SRC)
 	echo "!!!!!! FULL RELEASE IS OVERWRITTEN, REMOVING DISJOINTS - ecto.Makefile. Change see ticket 12 !!!!!!"
 	$(ROBOT) merge --input $< \
