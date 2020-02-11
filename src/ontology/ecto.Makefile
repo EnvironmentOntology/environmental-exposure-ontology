@@ -67,3 +67,13 @@ imports/npo_import.owl:
 	
 mirror/npo.owl:
 	echo "!!!!!NPO currently skipped!"
+	
+	
+$(ONT)-full.owl: $(SRC) $(OTHER_SRC)
+	echo "!!!!!! FULL RELEASE IS OVERWRITTEN, REMOVING DISJOINTS - ecto.Makefile. Change see ticket 12 !!!!!!"
+	$(ROBOT) merge --input $< \
+		remove --axioms disjoint --preserve-structure false \
+		reason --reasoner ELK --equivalent-classes-allowed all --exclude-tautologies structural \
+		relax \
+		reduce -r ELK \
+		annotate --ontology-iri $(ONTBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY)/$@ --output $@.tmp.owl && mv $@.tmp.owl $@

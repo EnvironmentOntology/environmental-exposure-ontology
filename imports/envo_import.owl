@@ -18,7 +18,7 @@
      xmlns:taxslim="http://purl.obolibrary.org/obo/ncbitaxon/subsets/taxslim#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/ecto/imports/envo_import.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/ecto/releases/2019-09-20/imports/envo_import.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/ecto/releases/2020-02-10/imports/envo_import.owl"/>
     </owl:Ontology>
     
 
@@ -264,6 +264,14 @@
 
     <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#SubsetProperty">
         <rdfs:label>subset_property</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#consider -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#consider">
+        <rdfs:label>consider</rdfs:label>
     </owl:AnnotationProperty>
     
 
@@ -2727,6 +2735,12 @@ Each of these 3 primitives can be composed to yield a cross-product of different
     <!-- http://purl.obolibrary.org/obo/envo#has_increased_levels_of -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/envo#has_increased_levels_of"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#topObjectProperty -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2002/07/owl#topObjectProperty"/>
     
 
 
@@ -13501,14 +13515,14 @@ The lower boundary that separates soil from the nonsoil underneath is most diffi
         <obo:IAO_0000115>A group of hydrous aluminium phyllosilicate (phyllosilicates being a subgroup of silicate minerals) minerals (see clay minerals), that are typically less than 2 micrometres in diameter. Clay consists of a variety of phyllosilicate minerals rich in silicon and aluminium oxides and hydroxides which include variable amounts of structural water.</obo:IAO_0000115>
         <oboInOwl:hasDbXref>EcoLexicon:clay</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>SWEETRealm:Clay</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://en.wikipedia.org/wiki/Clay</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Clay</oboInOwl:hasDbXref>
         <rdfs:label>clay</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00002982"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A group of hydrous aluminium phyllosilicate (phyllosilicates being a subgroup of silicate minerals) minerals (see clay minerals), that are typically less than 2 micrometres in diameter. Clay consists of a variety of phyllosilicate minerals rich in silicon and aluminium oxides and hydroxides which include variable amounts of structural water.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://en.wikipedia.org/wiki/Clay</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Clay</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -14388,7 +14402,7 @@ The lower boundary that separates soil from the nonsoil underneath is most diffi
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>The oceanic sea surface microlayer (SML) biome comprises the top 1000 micrometers of the marine surface waters occurring offshore, away from a continental shelf. It is the boundary layer where all exchange occurs between the atmosphere and the ocean. The chemical, physical, and biological properties of the SML differ greatly from the sub-surface water just a few centimeters beneath.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ORCID:0000-0002-4366-3088</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://en.wikipedia.org/wiki/Sea_surface_microlayer</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Sea_surface_microlayer</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -14409,7 +14423,7 @@ The lower boundary that separates soil from the nonsoil underneath is most diffi
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>The neritic sea surface microlayer (SML) biome comprises the top 1000 micrometers of marine surface waters occurring above a continental shelf. It is the boundary layer where all exchange occurs between the atmosphere and the ocean. The chemical, physical, and biological properties of the SML differ greatly from the sub-surface water just a few centimeters beneath.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ORCID:0000-0002-4366-3088</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://en.wikipedia.org/wiki/Sea_surface_microlayer</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Sea_surface_microlayer</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -17888,6 +17902,7 @@ https://en.wikipedia.org/wiki/  Ecozones correspond to the floristic kingdoms of
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000817">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000813"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001110"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001784"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
@@ -22408,6 +22423,12 @@ https://en.wikipedia.org/wiki/  Ecozones correspond to the floristic kingdoms of
     
 
 
+    <!-- http://purl.obolibrary.org/obo/ENVO_01001784 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01001784"/>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/ENVO_02000019 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_02000019">
@@ -25257,7 +25278,7 @@ https://en.wikipedia.org/wiki/  Ecozones correspond to the floristic kingdoms of
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_2000000"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A manufactured product that is some mixture of chemicals created through some chemical engineering process</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>ENVO:cjm</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ENVO:cjm</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -26176,6 +26197,16 @@ https://en.wikipedia.org/wiki/  Ecozones correspond to the floristic kingdoms of
     
 
 
+    <!-- http://purl.obolibrary.org/obo/FOODON_00001147 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00001147">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001015"/>
+        <obo:IAO_0000115 xml:lang="en">A food product derived from or produced by a plant.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">plant root food product</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/FOODON_00001176 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00001176">
@@ -26592,6 +26623,15 @@ https://en.wikipedia.org/wiki/  Ecozones correspond to the floristic kingdoms of
     
 
 
+    <!-- http://purl.obolibrary.org/obo/FOODON_03311737 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03311737">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001002"/>
+        <rdfs:label xml:lang="en">processed food product</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/FOODON_03317197 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03317197">
@@ -26617,6 +26657,16 @@ https://en.wikipedia.org/wiki/  Ecozones correspond to the floristic kingdoms of
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03400257"/>
         <obo:IAO_0000115 xml:lang="en">Vegetables in all forms except where a use-related product type descriptior (such as *PREPARED FOOD PRODUCT* or *SNACK FOOD*) takes precedence.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">vegetable or vegetable product (us cfr)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FOODON_03400172 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03400172">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03401270"/>
+        <obo:IAO_0000115 xml:lang="en">Food product that is 1) ready or nearly ready for consumption; 2) usually a composite of several foods or ingredients that often belong to distinct product types; 3) usually formulated, mixed and partially or fully cooked. Prepared foods often undergo several of the processes listed in *F. EXTENT OF HEAT TREATMENT* and *H. TREATMENT APPLIED*; these factors should be carefully considered in indexing. The classification of prepared food products emphasizes consumption characteristics. [FDA CFSAN 1995]</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">prepared food product (us cfr)</rdfs:label>
     </owl:Class>
     
 
@@ -26715,6 +26765,15 @@ https://en.wikipedia.org/wiki/  Ecozones correspond to the floristic kingdoms of
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03411041">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001714"/>
         <rdfs:label xml:lang="en">chemical food product</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FOODON_03411134 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03411134">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03411297"/>
+        <rdfs:label xml:lang="en">animal (mammal) (food source)</rdfs:label>
     </owl:Class>
     
 
@@ -26925,6 +26984,16 @@ DIRECTIVE 2002/46/EC OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 10 June 20
     
 
 
+    <!-- http://purl.obolibrary.org/obo/FOODON_03420148 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03420148">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03420174"/>
+        <obo:IAO_0000115 xml:lang="en">The parts of a plant that are not fruit or seed.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">root, stem, leaf or flower</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/FOODON_03420152 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03420152">
@@ -26959,6 +27028,16 @@ DIRECTIVE 2002/46/EC OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 10 June 20
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03420122"/>
         <obo:IAO_0000115 xml:lang="en">Bone (endoskeleton) or shell (exoskeleton) of animals, or any part thereof.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">bone or shell</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FOODON_03420174 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03420174">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03420116"/>
+        <obo:IAO_0000115 xml:lang="en">Anatomical part of a plant, such as fruit, seed, pod, leaf, stem or flower as well as the whole plant.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">part of plant</rdfs:label>
     </owl:Class>
     
 
@@ -27109,6 +27188,15 @@ DIRECTIVE 2002/46/EC OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 10 June 20
         </rdfs:subClassOf>
         <obo:IAO_0000115 xml:lang="en">A solid product is a hard or soft product capable of retaining its own shape at room temperature (20 degrees C.). A soft product that is spreadable or formable is considered semisolid.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">food (solid)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FOODON_03450002 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03450002">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00002451"/>
+        <rdfs:label xml:lang="en">food cooking process</rdfs:label>
     </owl:Class>
     
 
@@ -27949,6 +28037,18 @@ DIRECTIVE 2002/46/EC OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 10 June 20
     
 
 
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_32561 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_32561">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_32524"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_8457"/>
+        <oboInOwl:hasExactSynonym>diapsids</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasRelatedSynonym>Diapsida</oboInOwl:hasRelatedSynonym>
+        <rdfs:label>Sauria</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/NCBITaxon_33090 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_33090">
@@ -28294,6 +28394,16 @@ DIRECTIVE 2002/46/EC OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 10 June 20
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_8287">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_117571"/>
         <rdfs:label>Sarcopterygii</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_8457 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_8457">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_32524"/>
+        <oboInOwl:hasExactSynonym>sauropsids</oboInOwl:hasExactSynonym>
+        <rdfs:label>Sauropsida</rdfs:label>
     </owl:Class>
     
 
@@ -29419,6 +29529,30 @@ DIRECTIVE 2002/46/EC OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 10 June 20
     
 
 
+    <!-- http://purl.obolibrary.org/obo/PATO_0001776 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0001776">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0001544"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0002305"/>
+        <obo:IAO_0000115>A flexibility which is relatively high.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym>high flexibility</oboInOwl:hasExactSynonym>
+        <rdfs:label>increased flexibility</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PATO_0001777 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0001777">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0001544"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0002303"/>
+        <obo:IAO_0000115>A flexibility which is relatively low.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym>low flexibility</oboInOwl:hasExactSynonym>
+        <rdfs:label>decreased flexibility</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/PATO_0001822 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0001822">
@@ -29556,6 +29690,17 @@ DIRECTIVE 2002/46/EC OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 10 June 20
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0001237"/>
         <obo:IAO_0000115>A quality inhering in a bearer by virtue of the bearer&apos;s being kept below its freezing point.</obo:IAO_0000115>
         <rdfs:label>frozen</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PATO_0001995 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0001995">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0001241"/>
+        <obo:IAO_0000115>A quality that inheres in an entire organism or part of an organism.</obo:IAO_0000115>
+        <rdfs:label>organismal quality</rdfs:label>
     </owl:Class>
     
 

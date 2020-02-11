@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: ecto/releases/2019-09-20/imports/envo_import.owl
+data-version: ecto/releases/2020-02-10/imports/envo_import.owl
 subsetdef: EnvO-Lite-GSC "EnvO-Lite-GSC"
 subsetdef: ro-eco ""
 subsetdef: RO:0002259 ""
@@ -6748,6 +6748,7 @@ subset: envoAstro
 subset: envoPolar
 is_a: ENVO:01000813 ! astronomical body part
 is_a: ENVO:01001110 ! ecosystem
+is_a: ENVO:01001784
 relationship: BFO:0000051 PCO:0000000 ! has part collection of organisms
 property_value: IAO:0000116 "Whether this class should be grouped with classes such as \"hydrosphere\" and \"cryosphere\" requires some discussion." xsd:string
 
@@ -8862,6 +8863,12 @@ intersection_of: FOODON:00001180 ! prepared food product
 intersection_of: FOODON:00001258 ! food (fermented)
 
 [Term]
+id: FOODON:00001147
+name: plant root food product
+def: "A food product derived from or produced by a plant." []
+is_a: FOODON:00001015 ! plant food product
+
+[Term]
 id: FOODON:00001176
 name: invertebrate animal food product
 is_a: FOODON:00002381 ! food product by organism
@@ -9029,6 +9036,11 @@ is_a: FOODON:03430130 ! food (liquid)
 relationship: RO:0002350 FOODON:03400286 ! member of gravy or sauce (us cfr)
 
 [Term]
+id: FOODON:03311737
+name: processed food product
+is_a: FOODON:00001002 ! foodon product type
+
+[Term]
 id: FOODON:03317197
 name: fish sauce
 is_a: FOODON:03311146 ! sauce
@@ -9044,6 +9056,12 @@ id: FOODON:03400152
 name: vegetable or vegetable product (us cfr)
 def: "Vegetables in all forms except where a use-related product type descriptior (such as *PREPARED FOOD PRODUCT* or *SNACK FOOD*) takes precedence." []
 is_a: FOODON:03400257 ! fruit or vegetable product (us cfr)
+
+[Term]
+id: FOODON:03400172
+name: prepared food product (us cfr)
+def: "Food product that is 1) ready or nearly ready for consumption; 2) usually a composite of several foods or ingredients that often belong to distinct product types; 3) usually formulated, mixed and partially or fully cooked. Prepared foods often undergo several of the processes listed in *F. EXTENT OF HEAT TREATMENT* and *H. TREATMENT APPLIED*; these factors should be carefully considered in indexing. The classification of prepared food products emphasizes consumption characteristics. [FDA CFSAN 1995]" []
+is_a: FOODON:03401270 ! product type,  u.s. code of federal regulations, title 21
 
 [Term]
 id: FOODON:03400217
@@ -9102,6 +9120,11 @@ is_a: FOODON:03411579 ! vegetable-producing plant (food source)
 id: FOODON:03411041
 name: chemical food product
 is_a: FOODON:00001714 ! food component product
+
+[Term]
+id: FOODON:03411134
+name: animal (mammal) (food source)
+is_a: FOODON:03411297 ! vertebrate animal (food source)
 
 [Term]
 id: FOODON:03411215
@@ -9222,6 +9245,12 @@ name: organ meat, urogenital system
 is_a: FOODON:03420218 ! organ meat
 
 [Term]
+id: FOODON:03420148
+name: root, stem, leaf or flower
+def: "The parts of a plant that are not fruit or seed." []
+is_a: FOODON:03420174 ! part of plant
+
+[Term]
 id: FOODON:03420152
 name: carbohydrate extract, concentrate, or isolate
 def: "Extract, concentrate or isolate high in sugar, oligosaccharide or polysaccharide." []
@@ -9240,6 +9269,12 @@ def: "Bone (endoskeleton) or shell (exoskeleton) of animals, or any part thereof
 is_a: FOODON:03420122 ! nonmeat part of animal
 union_of: UBERON:0001474 ! bone element
 union_of: UBERON:0006611 ! exoskeleton
+
+[Term]
+id: FOODON:03420174
+name: part of plant
+def: "Anatomical part of a plant, such as fruit, seed, pod, leaf, stem or flower as well as the whole plant." []
+is_a: FOODON:03420116 ! part of plant or animal
 
 [Term]
 id: FOODON:03420175
@@ -9302,6 +9337,11 @@ is_a: FOODON:00002454 ! food product by quality
 intersection_of: FOODON:00002454 ! food product by quality
 intersection_of: RO:0000086 PATO:0001546 ! has quality quality of a solid
 relationship: RO:0000086 PATO:0001546 ! has quality quality of a solid
+
+[Term]
+id: FOODON:03450002
+name: food cooking process
+is_a: FOODON:00002451 ! food transformation process
 
 [Term]
 id: FOODON:03460111
@@ -9621,6 +9661,14 @@ synonym: "Theria" EXACT scientific_name []
 is_a: NCBITaxon:40674 ! Mammalia
 
 [Term]
+id: NCBITaxon:32561
+name: Sauria
+synonym: "Diapsida" RELATED []
+synonym: "diapsids" EXACT []
+is_a: NCBITaxon:32524 ! Amniota
+is_a: NCBITaxon:8457 ! Sauropsida
+
+[Term]
 id: NCBITaxon:33090
 name: Viridiplantae
 synonym: "Chlorobionta" RELATED synonym []
@@ -9735,6 +9783,12 @@ is_a: NCBITaxon:7742 ! Vertebrata <Metazoa>
 id: NCBITaxon:8287
 name: Sarcopterygii
 is_a: NCBITaxon:117571 ! Euteleostomi
+
+[Term]
+id: NCBITaxon:8457
+name: Sauropsida
+synonym: "sauropsids" EXACT []
+is_a: NCBITaxon:32524 ! Amniota
 
 [Term]
 id: NCBITaxon:89593
@@ -10378,6 +10432,22 @@ def: "A composition quality inhering in a bearer by virtue of the bearer's conta
 is_a: PATO:0000025 ! composition
 
 [Term]
+id: PATO:0001776
+name: increased flexibility
+def: "A flexibility which is relatively high." []
+synonym: "high flexibility" EXACT []
+is_a: PATO:0001544 ! flexible
+is_a: PATO:0002305 ! increased object quality
+
+[Term]
+id: PATO:0001777
+name: decreased flexibility
+def: "A flexibility which is relatively low." []
+synonym: "low flexibility" EXACT []
+is_a: PATO:0001544 ! flexible
+is_a: PATO:0002303 ! decreased object quality
+
+[Term]
 id: PATO:0001822
 name: wetness
 def: "A quality inhering in a bearer by virtue of whether the bearer's being covered by a liquid." []
@@ -10465,6 +10535,13 @@ name: frozen
 def: "A quality inhering in a bearer by virtue of the bearer's being kept below its freezing point." []
 is_a: PATO:0000146 ! temperature
 is_a: PATO:0001237 ! quality of a single physical entity
+
+[Term]
+id: PATO:0001995
+name: organismal quality
+def: "A quality that inheres in an entire organism or part of an organism." []
+is_a: BFO:0000019 ! quality
+is_a: PATO:0001241 ! physical object quality
 
 [Term]
 id: PATO:0001997

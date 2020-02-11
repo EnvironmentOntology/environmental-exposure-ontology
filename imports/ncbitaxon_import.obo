@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: ecto/releases/2019-09-20/imports/ncbitaxon_import.owl
+data-version: ecto/releases/2020-02-11/imports/ncbitaxon_import.owl
 ontology: ecto/imports/ncbitaxon_import
 
 [Term]
@@ -66,7 +66,7 @@ id: NCBITaxon:117570
 name: Teleostomi
 namespace: ncbi_taxonomy
 xref: GC_ID:1
-is_a: NCBITaxon:7776 ! Gnathostomata <vertebrate>
+is_a: NCBITaxon:7776 ! Gnathostomata <vertebrates>
 
 [Term]
 id: NCBITaxon:117571
@@ -129,6 +129,7 @@ id: NCBITaxon:1224
 name: Proteobacteria
 namespace: ncbi_taxonomy
 synonym: "Alphaproteobacteraeota" RELATED synonym []
+synonym: "Alphaproteobacteriota" RELATED synonym []
 synonym: "proteobacteria" RELATED blast_name []
 synonym: "purple bacteria" EXACT common_name []
 synonym: "purple bacteria and relatives" EXACT common_name []
@@ -141,6 +142,7 @@ xref: PMID:11542017
 xref: PMID:11837318
 xref: PMID:16280474
 xref: PMID:26654112
+xref: PMID:29458499
 is_a: NCBITaxon:2 ! Bacteria
 property_value: has_rank NCBITaxon:phylum
 
@@ -219,7 +221,7 @@ namespace: ncbi_taxonomy
 synonym: "Agnatha" RELATED synonym []
 synonym: "jawless vertebrates" EXACT genbank_common_name []
 xref: GC_ID:1
-is_a: NCBITaxon:7742 ! Vertebrata <Metazoa>
+is_a: NCBITaxon:7742 ! Vertebrata <vertebrates>
 
 [Term]
 id: NCBITaxon:1489341
@@ -235,7 +237,7 @@ namespace: ncbi_taxonomy
 synonym: "Papillomavirus" EXACT equivalent_name []
 xref: GC_ID:1
 xref: PMID:20206957
-is_a: NCBITaxon:35237 ! dsDNA viruses, no RNA stage
+is_a: NCBITaxon:10239 ! Viruses
 property_value: has_rank NCBITaxon:family
 
 [Term]
@@ -278,6 +280,7 @@ synonym: "Ostarioclupeomorpha" RELATED synonym []
 synonym: "Otocephala" RELATED synonym []
 xref: GC_ID:1
 is_a: NCBITaxon:186625 ! Clupeocephala
+property_value: has_rank NCBITaxon:cohort
 
 [Term]
 id: NCBITaxon:2
@@ -411,6 +414,24 @@ is_a: NCBITaxon:131567 ! cellular organisms
 property_value: has_rank NCBITaxon:superkingdom
 
 [Term]
+id: NCBITaxon:2559587
+name: Riboviria
+namespace: ncbi_taxonomy
+synonym: "RNA viruses" EXACT common_name []
+synonym: "RNA viruses and viroids" EXACT common_name []
+xref: GC_ID:1
+is_a: NCBITaxon:10239 ! Viruses
+
+[Term]
+id: NCBITaxon:2585030
+name: unclassified Riboviria
+namespace: ncbi_taxonomy
+alt_id: NCBITaxon:1922347
+synonym: "unclassified RNA viruses" RELATED synonym []
+xref: GC_ID:1
+is_a: NCBITaxon:2559587 ! Riboviria
+
+[Term]
 id: NCBITaxon:2759
 name: Eukaryota
 namespace: ncbi_taxonomy
@@ -423,6 +444,7 @@ synonym: "eukaryotes" EXACT common_name []
 synonym: "eukaryotes" RELATED blast_name []
 xref: GC_ID:1
 xref: PMID:23020233
+xref: PMID:30257078
 is_a: NCBITaxon:131567 ! cellular organisms
 property_value: has_rank NCBITaxon:superkingdom
 
@@ -434,7 +456,6 @@ synonym: "e-proteobacteria" RELATED blast_name []
 synonym: "epsilon proteobacteria" RELATED synonym []
 synonym: "epsilon subdivision" RELATED synonym []
 synonym: "epsilon subgroup" RELATED synonym []
-synonym: "not Epsilobacteria" RELATED synonym []
 synonym: "Proteobacteria epsilon subdivision" RELATED synonym []
 synonym: "Purple bacteria, epsilon subdivision" RELATED synonym []
 xref: GC_ID:11
@@ -445,12 +466,12 @@ property_value: has_rank NCBITaxon:class
 
 [Term]
 id: NCBITaxon:30727
-name: Cyprinoidea
+name: Cyprinoidei
 namespace: ncbi_taxonomy
-synonym: "Cyprinoidei" RELATED synonym []
+synonym: "Cyprinoidea" RELATED synonym []
 xref: GC_ID:1
 is_a: NCBITaxon:7952 ! Cypriniformes
-property_value: has_rank NCBITaxon:superfamily
+property_value: has_rank NCBITaxon:suborder
 
 [Term]
 id: NCBITaxon:311790
@@ -513,6 +534,7 @@ name: Ostariophysi
 namespace: ncbi_taxonomy
 xref: GC_ID:1
 is_a: NCBITaxon:186634 ! Otomorpha
+property_value: has_rank NCBITaxon:subcohort
 
 [Term]
 id: NCBITaxon:32523
@@ -532,7 +554,7 @@ is_a: NCBITaxon:32523 ! Tetrapoda
 
 [Term]
 id: NCBITaxon:32525
-name: Theria <Mammalia>
+name: Theria <mammals>
 namespace: ncbi_taxonomy
 synonym: "Theria" EXACT scientific_name []
 xref: GC_ID:1
@@ -553,7 +575,7 @@ name: Viridiplantae
 namespace: ncbi_taxonomy
 synonym: "Chlorobionta" RELATED synonym []
 synonym: "Chlorophyta/Embryophyta group" RELATED synonym []
-synonym: "chlorophyte/embryophyte group" RELATED synonym []
+synonym: "chlorophyte/embryophyte group" EXACT equivalent_name []
 synonym: "green plants" EXACT common_name []
 synonym: "green plants" RELATED blast_name []
 xref: GC_ID:1
@@ -604,19 +626,15 @@ xref: GC_ID:1
 is_a: NCBITaxon:33213 ! Bilateria
 
 [Term]
-id: NCBITaxon:35237
-name: dsDNA viruses, no RNA stage
-namespace: ncbi_taxonomy
-synonym: "dsDNA viruses" RELATED synonym []
-xref: GC_ID:1
-is_a: NCBITaxon:10239 ! Viruses
-
-[Term]
 id: NCBITaxon:35278
-name: ssRNA positive-strand viruses, no DNA stage
+name: unclassified ssRNA positive-strand viruses
 namespace: ncbi_taxonomy
+alt_id: NCBITaxon:38173
+synonym: "ssRNA positive-strand viruses" RELATED synonym []
+synonym: "ssRNA positive-strand viruses, no DNA stage" RELATED synonym []
+synonym: "unclassified ssRNA positive-strand viruses, no DNA stage" RELATED synonym []
 xref: GC_ID:1
-is_a: NCBITaxon:439488 ! ssRNA viruses
+is_a: NCBITaxon:439490 ! unclassified ssRNA viruses
 
 [Term]
 id: NCBITaxon:376913
@@ -650,14 +668,22 @@ id: NCBITaxon:439488
 name: ssRNA viruses
 namespace: ncbi_taxonomy
 xref: GC_ID:1
-is_a: NCBITaxon:10239 ! Viruses
+is_a: NCBITaxon:2585030 ! unclassified Riboviria
+
+[Term]
+id: NCBITaxon:439490
+name: unclassified ssRNA viruses
+namespace: ncbi_taxonomy
+synonym: "unassigned ssRNA viruses" RELATED synonym []
+xref: GC_ID:1
+is_a: NCBITaxon:2585030 ! unclassified Riboviria
 
 [Term]
 id: NCBITaxon:464095
 name: Picornavirales
 namespace: ncbi_taxonomy
 xref: GC_ID:1
-is_a: NCBITaxon:35278 ! ssRNA positive-strand viruses, no DNA stage
+is_a: NCBITaxon:2559587 ! Riboviria
 property_value: has_rank NCBITaxon:order
 
 [Term]
@@ -762,7 +788,6 @@ property_value: has_rank NCBITaxon:class
 id: NCBITaxon:68525
 name: delta/epsilon subdivisions
 namespace: ncbi_taxonomy
-synonym: "not Thiobacteria" RELATED synonym []
 xref: GC_ID:11
 xref: PMID:11837318
 is_a: NCBITaxon:1224 ! Proteobacteria
@@ -775,6 +800,7 @@ namespace: ncbi_taxonomy
 synonym: "Helicobacter group" RELATED synonym []
 xref: GC_ID:11
 xref: PMID:16403855
+xref: PMID:29034857
 is_a: NCBITaxon:213849 ! Campylobacterales
 property_value: has_rank NCBITaxon:family
 
@@ -849,13 +875,13 @@ property_value: has_rank NCBITaxon:genus
 
 [Term]
 id: NCBITaxon:7742
-name: Vertebrata <Metazoa>
+name: Vertebrata <vertebrates>
 namespace: ncbi_taxonomy
 synonym: "Vertebrata" EXACT scientific_name []
 synonym: "vertebrates" EXACT genbank_common_name []
 synonym: "vertebrates" RELATED blast_name []
 xref: GC_ID:1
-is_a: NCBITaxon:89593 ! Craniata <chordata>
+is_a: NCBITaxon:89593 ! Craniata <chordates>
 
 [Term]
 id: NCBITaxon:7745
@@ -898,12 +924,12 @@ property_value: has_rank NCBITaxon:family
 
 [Term]
 id: NCBITaxon:7776
-name: Gnathostomata <vertebrate>
+name: Gnathostomata <vertebrates>
 namespace: ncbi_taxonomy
 synonym: "Gnathostomata" EXACT scientific_name []
 synonym: "jawed vertebrates" EXACT genbank_common_name []
 xref: GC_ID:1
-is_a: NCBITaxon:7742 ! Vertebrata <Metazoa>
+is_a: NCBITaxon:7742 ! Vertebrata <vertebrates>
 
 [Term]
 id: NCBITaxon:7777
@@ -914,7 +940,7 @@ synonym: "cartilaginous fishes" RELATED blast_name []
 synonym: "fish" EXACT common_name []
 synonym: "fishes" EXACT common_name []
 xref: GC_ID:1
-is_a: NCBITaxon:7776 ! Gnathostomata <vertebrate>
+is_a: NCBITaxon:7776 ! Gnathostomata <vertebrates>
 property_value: has_rank NCBITaxon:class
 
 [Term]
@@ -961,6 +987,7 @@ property_value: has_rank NCBITaxon:superclass
 id: NCBITaxon:7952
 name: Cypriniformes
 namespace: ncbi_taxonomy
+synonym: "carps and others" EXACT genbank_common_name []
 xref: GC_ID:1
 is_a: NCBITaxon:186627 ! Cypriniphysae
 property_value: has_rank NCBITaxon:order
@@ -970,7 +997,7 @@ id: NCBITaxon:7953
 name: Cyprinidae
 namespace: ncbi_taxonomy
 xref: GC_ID:1
-is_a: NCBITaxon:30727 ! Cyprinoidea
+is_a: NCBITaxon:30727 ! Cyprinoidei
 property_value: has_rank NCBITaxon:family
 
 [Term]
@@ -1078,7 +1105,7 @@ property_value: has_rank NCBITaxon:infraorder
 
 [Term]
 id: NCBITaxon:89593
-name: Craniata <chordata>
+name: Craniata <chordates>
 namespace: ncbi_taxonomy
 synonym: "Craniata" EXACT scientific_name []
 xref: GC_ID:1
@@ -1095,7 +1122,7 @@ synonym: "Placentalia" RELATED synonym []
 synonym: "placentals" EXACT genbank_common_name []
 synonym: "placentals" RELATED blast_name []
 xref: GC_ID:1
-is_a: NCBITaxon:32525 ! Theria <Mammalia>
+is_a: NCBITaxon:32525 ! Theria <mammals>
 
 [Term]
 id: NCBITaxon:9369
