@@ -121,7 +121,7 @@ There are three major steps involved in creating a new release:
    1. If everything went well, you should see the following output on your machine: `Release files are now in ../.. - now you should commit, push and make a release on your git hosting site such as GitHub or GitLab`.
    1. Open the file `myectordir/ecto.owl` in Protege and sanity check for classes with missing labels (on the top level of the hierarchy) and general weirdnesses. In particular, you want to know whether your latest changes to pattern are what you expected.
    1. If it looks sane, commit everything to the new branch you have created, push and create a pull request. Wait for travis to run one last time, but that should not reveal surprises.
-   1. In an ideal world, let at least one other person sanity check the ecto release. A good file to sanity check is `ecto-base.obo`, and perhaps even `ecto.obo`: they are easy to review.
+   1. In an ideal world, let at least one other person sanity check the ecto release. A good file to sanity check is `ecto-base.obo`, and perhaps even `ecto.obo`: their diffs are easy to review.
    1. Merge the changes into master. 
 3. Creating a GitHub release
    1. Go to [ECTO releases](https://github.com/EnvironmentOntology/environmental-exposure-ontology/releases) on GitHub, click "Draft new release"
