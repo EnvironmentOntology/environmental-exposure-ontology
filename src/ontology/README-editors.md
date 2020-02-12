@@ -118,8 +118,8 @@ There are three major steps involved in creating a new release:
    1. Create a new branch (ecto-release-20200131 or similar)
    1. If you have recently modified your patterns, run `sh run.sh make IMP=false patterns` once. This will be run again in the next step, but there is a bit of a bug in the ODK (as of January 2020) that it does not understand to look for imported terms in pattern that have just been added. 
    1. Run the build script: `sh run.sh make prepare_release -B`. This command will compile the patterns, refresh the imports and build the ontology release files. Note that this step can take between 45 and 90 minutes - so make sure you do it over night or befor you go to the gym.
-   1. If everything went well, you should see the following output on your machine.
-   1. Open the file `myectordir/ecto.owl` in Protege and sanity check for classes with missing labels (on the top level of the hierarchy) and general weirdnesses. In particular, you want to know wether your latest changes to pattern are what you expected.
+   1. If everything went well, you should see the following output on your machine: `Release files are now in ../.. - now you should commit, push and make a release on your git hosting site such as GitHub or GitLab`.
+   1. Open the file `myectordir/ecto.owl` in Protege and sanity check for classes with missing labels (on the top level of the hierarchy) and general weirdnesses. In particular, you want to know whether your latest changes to pattern are what you expected.
    1. If it looks sane, commit everything to the new branch you have created, push and create a pull request. Wait for travis to run one last time, but that should not reveal surprises.
    1. In an ideal world, let at least one other person sanity check the ecto release. A good file to sanity check is `ecto-base.obo`, and perhaps even `ecto.obo`: they are easy to review.
    1. Merge the changes into master. 
