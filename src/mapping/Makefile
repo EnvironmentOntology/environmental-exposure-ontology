@@ -8,19 +8,36 @@ MOD = eo xco zeco snomed ncit go exo mre wikidata ecto
 
 all_exposure: $(patsubst %, exposure-%.obo,$(MOD))
 
+# ----------------------------------------
+# creation of source ontology subsets
+# ----------------------------------------
+#
+# we create a set of ontology subsets that feed into the alignment pipeline.
+#
+# in some cases these are the entire ontology. In some cases it is a subset of
+# an existing ontology (ie those matching a string match or subclasses of a root
+# of a branch)
+#
+# these are all named exposure-X, where X is the source ontology
 
+# EO is now named PECO in OBO
+# copy whole ontology
 exposure-eo.obo:
 	blip ontol-query -r eo -query "class(ID)" -to obo > $@
 
+# XCO in OBO copy all ontology
 exposure-xco.obo:
 	blip ontol-query -r obo/xco -query "class(ID)" -to obo > $@
 
+# copy all ontology
 exposure-zeco.obo:
 	blip ontol-query -r zeco -query "class(ID)" -to obo > $@
 
+# just strings matching name
 exposure-mesh.obo:
 	ogr -t obo -r mesh-obo.json %xposure% > $@
 
+# now called pheco
 exposure-peco.obo:
 	wget --no-check-certificate https://raw.githubusercontent.com/pombase/fypo/master/peco.obo -O $@
 
@@ -49,6 +66,7 @@ exposure-wikidata.obo:
 exposure-ecto.obo: ../../subsets/ecto-basic.obo
 	cp $< $@
 
+# MERGE ALL SUB ONTOLOGIES TOGETHER
 #combined-exposure.obo:
 combined-exposure.obo: all_exposure
 	obo-cat.pl exposure-*.obo | grep -v ^namespace: | grep -v ^property_value: | ./add-syns.pl > $@
