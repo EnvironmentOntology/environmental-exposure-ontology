@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: ecto/releases/2020-02-10/imports/go_import.owl
+data-version: ecto/releases/2020-03-13/imports/go_import.owl
 subsetdef: gocheck_do_not_annotate "Term not to be used for direct annotation"
 subsetdef: gocheck_do_not_manually_annotate "Term not to be used for direct manual annotation"
 subsetdef: goslim_agr "AGR slim"
@@ -219,7 +219,9 @@ relationship: part_of GO:0051716 ! cellular response to stimulus
 id: GO:0007610
 name: behavior
 namespace: biological_process
+alt_id: GO:0023032
 alt_id: GO:0044708
+alt_id: GO:0044709
 def: "The internally coordinated responses (actions or inactions) of animals (individuals or groups) to internal or external stimuli, via a mechanism that involves nervous system activity." [GOC:ems, GOC:jl, ISBN:0395448956, PMID:20160973]
 comment: 1. Note that this term is in the subset of terms that should not be used for direct gene product annotation. Instead, select a child term or, if no appropriate child term exists, please request a new term. Direct annotations to this term may be amended during annotation reviews.\n2. While a broader definition of behavior encompassing plants and single cell organisms would be justified on the basis of some usage (see PMID:20160973 for discussion), GO uses a tight definition that limits behavior to animals and to responses involving the nervous system, excluding plant responses that GO classifies under development, and responses of unicellular organisms that has general classifications for covering the responses of cells in multicellular organisms (e.g. cell chemotaxis).
 subset: gocheck_do_not_manually_annotate
@@ -797,6 +799,7 @@ subset: goslim_generic
 subset: goslim_pir
 xref: MIPS_funcat:02.45.11
 is_a: GO:0008150 ! biological_process
+property_value: RO:0002161 NCBITaxon:451864
 
 [Term]
 id: GO:0040012
