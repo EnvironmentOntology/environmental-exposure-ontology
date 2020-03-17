@@ -9,12 +9,14 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:ecto="http://purl.obolibrary.org/obo/ecto#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:terms="http://purl.org/dc/terms/"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/ecto/ecto-base.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/ecto/releases/2020-03-13/ecto-base.owl"/>
-        <dc:rights rdf:resource="https://creativecommons.org/publicdomain/zero/1.0/"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/ecto/releases/2020-03-17/ecto-base.owl"/>
+        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ECTO describes exposures to experimental treatments of plants and model organisms (e.g. exposures to modification of diet, lighting levels, temperature); exposures of humans or any other organisms to stressors through a variety of routes, for purposes of public health, environmental monitoring etc, stimuli, natural and experimental, any kind of environmental condition or change in condition that can be experienced by an organism or population of organisms on earth. The scope is very general and can include for example plant treatment regimens, as well as human clinical exposures (although these may better be handled by a more specialized ontology).</dc:description>
         <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Environment Exposure Ontology</dc:title>
         <dc:type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://purl.obolibrary.org/obo/IAO_8000001</dc:type>
+        <terms:license rdf:resource="https://creativecommons.org/publicdomain/zero/1.0/"/>
     </owl:Ontology>
     
 
@@ -47,15 +49,15 @@
     
 
 
-    <!-- http://purl.org/dc/elements/1.1/rights -->
+    <!-- http://purl.org/dc/elements/1.1/description -->
 
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/rights"/>
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
     
 
 
-    <!-- http://purl.org/dc/elements/1.1/title -->
+    <!-- http://purl.org/dc/terms/license -->
 
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
     
 
 
@@ -2919,14 +2921,14 @@
                     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ExO_0000002"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002309"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_ 01000842"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000842"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A exposure event involving the interaction of an exposure receptor to http://purl.obolibrary.org/obo/ENVO_ 01000842.</obo:IAO_0000115>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://purl.obolibrary.org/obo/ENVO_ 01000842 exposure</oboInOwl:hasExactSynonym>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exposure to http://purl.obolibrary.org/obo/ENVO_ 01000842</rdfs:label>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A exposure event involving the interaction of an exposure receptor to smog.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">smog exposure</oboInOwl:hasExactSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exposure to smog</rdfs:label>
     </owl:Class>
     
 
@@ -7757,6 +7759,12 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/ENVO_01000842 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000842"/>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/ENVO_01000878 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000878"/>
@@ -8407,23 +8415,7 @@
 
     <!-- http://purl.obolibrary.org/obo/RO_0002310 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/RO_0002310">
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An interaction between an exposure stressor and an exposure receptor.</obo:IAO_0000115>
-        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RO:0002310</oboInOwl:id>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exposure event or process</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RO_0002310"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An interaction between an exposure stressor and an exposure receptor.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CTD:curators</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/ENVO_ 01000842 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_ 01000842"/>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/RO_0002310"/>
 </rdf:RDF>
 
 
