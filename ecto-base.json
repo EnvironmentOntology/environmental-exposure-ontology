@@ -16,21 +16,6 @@
       "type" : "CLASS",
       "lbl" : "exposure to kaolin dust"
     }, {
-      "id" : "http://purl.obolibrary.org/obo/ECTO_7000025",
-      "meta" : {
-        "definition" : {
-          "val" : "A exposure event involving the interaction of an exposure receptor to asbestos dust.",
-          "xrefs" : [ ]
-        },
-        "synonyms" : [ {
-          "pred" : "hasExactSynonym",
-          "val" : "asbestos dust exposure",
-          "xrefs" : [ ]
-        } ]
-      },
-      "type" : "CLASS",
-      "lbl" : "exposure to asbestos dust"
-    }, {
       "id" : "http://purl.obolibrary.org/obo/ECTO_2000009",
       "meta" : {
         "definition" : {
@@ -45,6 +30,21 @@
       },
       "type" : "CLASS",
       "lbl" : "antipsychotic agent therapy exposure"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/ECTO_7000025",
+      "meta" : {
+        "definition" : {
+          "val" : "A exposure event involving the interaction of an exposure receptor to asbestos dust.",
+          "xrefs" : [ ]
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "asbestos dust exposure",
+          "xrefs" : [ ]
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "exposure to asbestos dust"
     }, {
       "id" : "http://purl.obolibrary.org/obo/ECTO_2000008",
       "meta" : {
@@ -2703,16 +2703,6 @@
       "type" : "CLASS",
       "lbl" : "dichlorobenzene exposure"
     }, {
-      "id" : "http://purl.obolibrary.org/obo/RO_0002310",
-      "meta" : {
-        "definition" : {
-          "val" : "An interaction between an exposure stressor and an exposure receptor.",
-          "xrefs" : [ "CTD:curators" ]
-        }
-      },
-      "type" : "CLASS",
-      "lbl" : "exposure event or process"
-    }, {
       "id" : "http://purl.obolibrary.org/obo/ECTO_9000028",
       "meta" : {
         "definition" : {
@@ -3905,17 +3895,17 @@
       "id" : "http://purl.obolibrary.org/obo/ECTO_7000003",
       "meta" : {
         "definition" : {
-          "val" : "A exposure event involving the interaction of an exposure receptor to http://purl.obolibrary.org/obo/ENVO_ 01000842.",
+          "val" : "A exposure event involving the interaction of an exposure receptor to smog.",
           "xrefs" : [ ]
         },
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
-          "val" : "http://purl.obolibrary.org/obo/ENVO_ 01000842 exposure",
+          "val" : "smog exposure",
           "xrefs" : [ ]
         } ]
       },
       "type" : "CLASS",
-      "lbl" : "exposure to http://purl.obolibrary.org/obo/ENVO_ 01000842"
+      "lbl" : "exposure to smog"
     }, {
       "id" : "http://purl.obolibrary.org/obo/ECTO_7000004",
       "meta" : {
@@ -4602,16 +4592,19 @@
       "subsets" : [ ],
       "xrefs" : [ ],
       "basicPropertyValues" : [ {
-        "pred" : "http://purl.org/dc/elements/1.1/rights",
-        "val" : "https://creativecommons.org/publicdomain/zero/1.0/"
+        "pred" : "http://purl.org/dc/elements/1.1/description",
+        "val" : "ECTO describes exposures to experimental treatments of plants and model organisms (e.g. exposures to modification of diet, lighting levels, temperature); exposures of humans or any other organisms to stressors through a variety of routes, for purposes of public health, environmental monitoring etc, stimuli, natural and experimental, any kind of environmental condition or change in condition that can be experienced by an organism or population of organisms on earth. The scope is very general and can include for example plant treatment regimens, as well as human clinical exposures (although these may better be handled by a more specialized ontology)."
       }, {
         "pred" : "http://purl.org/dc/elements/1.1/title",
         "val" : "Environment Exposure Ontology"
       }, {
         "pred" : "http://purl.org/dc/elements/1.1/type",
         "val" : "http://purl.obolibrary.org/obo/IAO_8000001"
+      }, {
+        "pred" : "http://purl.org/dc/terms/license",
+        "val" : "https://creativecommons.org/publicdomain/zero/1.0/"
       } ],
-      "version" : "http://purl.obolibrary.org/obo/ecto/releases/2020-03-13/ecto-base.json"
+      "version" : "http://purl.obolibrary.org/obo/ecto/releases/2020-03-17/ecto-base.json"
     },
     "equivalentNodesSets" : [ ],
     "logicalDefinitionAxioms" : [ {
@@ -4751,18 +4744,18 @@
         "fillerId" : "http://purl.obolibrary.org/obo/ENVO_00002215"
       } ]
     }, {
-      "definedClassId" : "http://purl.obolibrary.org/obo/ECTO_9000148",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/ExO_0000002" ],
-      "restrictions" : [ {
-        "propertyId" : "http://purl.obolibrary.org/obo/RO_0002309",
-        "fillerId" : "http://purl.obolibrary.org/obo/CHEBI_49105"
-      } ]
-    }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/ECTO_9000120",
       "genusIds" : [ "http://purl.obolibrary.org/obo/ExO_0000002" ],
       "restrictions" : [ {
         "propertyId" : "http://purl.obolibrary.org/obo/RO_0002309",
         "fillerId" : "http://purl.obolibrary.org/obo/CHEBI_17447"
+      } ]
+    }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/ECTO_9000148",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/ExO_0000002" ],
+      "restrictions" : [ {
+        "propertyId" : "http://purl.obolibrary.org/obo/RO_0002309",
+        "fillerId" : "http://purl.obolibrary.org/obo/CHEBI_49105"
       } ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/ECTO_2000034",
@@ -4919,6 +4912,13 @@
         "fillerId" : "http://purl.obolibrary.org/obo/CHEBI_35341"
       } ]
     }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/ECTO_7000003",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/ExO_0000002" ],
+      "restrictions" : [ {
+        "propertyId" : "http://purl.obolibrary.org/obo/RO_0002309",
+        "fillerId" : "http://purl.obolibrary.org/obo/ENVO_01000842"
+      } ]
+    }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/ECTO_9000050",
       "genusIds" : [ "http://purl.obolibrary.org/obo/ExO_0000002" ],
       "restrictions" : [ {
@@ -5008,13 +5008,6 @@
       "restrictions" : [ {
         "propertyId" : "http://purl.obolibrary.org/obo/RO_0002309",
         "fillerId" : "http://purl.obolibrary.org/obo/CHEBI_27789"
-      } ]
-    }, {
-      "definedClassId" : "http://purl.obolibrary.org/obo/ECTO_7000003",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/ExO_0000002" ],
-      "restrictions" : [ {
-        "propertyId" : "http://purl.obolibrary.org/obo/RO_0002309",
-        "fillerId" : "http://purl.obolibrary.org/obo/ENVO_%2001000842"
       } ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/ECTO_2000035",
@@ -5342,18 +5335,18 @@
         "fillerId" : "http://purl.obolibrary.org/obo/ENVO_02000104"
       } ]
     }, {
-      "definedClassId" : "http://purl.obolibrary.org/obo/ECTO_9000087",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/ExO_0000002" ],
-      "restrictions" : [ {
-        "propertyId" : "http://purl.obolibrary.org/obo/RO_0002309",
-        "fillerId" : "http://purl.obolibrary.org/obo/CHEBI_18248"
-      } ]
-    }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/ECTO_7000057",
       "genusIds" : [ "http://purl.obolibrary.org/obo/ExO_0000002" ],
       "restrictions" : [ {
         "propertyId" : "http://purl.obolibrary.org/obo/RO_0002309",
         "fillerId" : "http://purl.obolibrary.org/obo/ENVO_01000553"
+      } ]
+    }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/ECTO_9000087",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/ExO_0000002" ],
+      "restrictions" : [ {
+        "propertyId" : "http://purl.obolibrary.org/obo/RO_0002309",
+        "fillerId" : "http://purl.obolibrary.org/obo/CHEBI_18248"
       } ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/ECTO_7000052",
@@ -5471,16 +5464,16 @@
         "fillerId" : "http://purl.obolibrary.org/obo/CHEBI_28798"
       } ]
     }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/ECTO_4000000",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/ExO_0000002" ],
+      "restrictions" : [ null ]
+    }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/ECTO_8000005",
       "genusIds" : [ "http://purl.obolibrary.org/obo/ExO_0000002" ],
       "restrictions" : [ {
         "propertyId" : "http://purl.obolibrary.org/obo/RO_0002309",
         "fillerId" : "http://purl.obolibrary.org/obo/ENVO_02500004"
       } ]
-    }, {
-      "definedClassId" : "http://purl.obolibrary.org/obo/ECTO_4000000",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/ExO_0000002" ],
-      "restrictions" : [ null ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/ECTO_2000032",
       "genusIds" : [ "http://purl.obolibrary.org/obo/ExO_0000002" ],
@@ -5773,18 +5766,18 @@
         "fillerId" : "http://purl.obolibrary.org/obo/CHEBI_3095"
       } ]
     }, {
-      "definedClassId" : "http://purl.obolibrary.org/obo/ECTO_1000019",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/ExO_0000002" ],
-      "restrictions" : [ {
-        "propertyId" : "http://purl.obolibrary.org/obo/RO_0002309",
-        "fillerId" : "http://purl.obolibrary.org/obo/ENVO_01000304"
-      } ]
-    }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/ECTO_9000084",
       "genusIds" : [ "http://purl.obolibrary.org/obo/ExO_0000002" ],
       "restrictions" : [ {
         "propertyId" : "http://purl.obolibrary.org/obo/RO_0002309",
         "fillerId" : "http://purl.obolibrary.org/obo/CHEBI_24859"
+      } ]
+    }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/ECTO_1000019",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/ExO_0000002" ],
+      "restrictions" : [ {
+        "propertyId" : "http://purl.obolibrary.org/obo/RO_0002309",
+        "fillerId" : "http://purl.obolibrary.org/obo/ENVO_01000304"
       } ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/ECTO_1000011",
@@ -5871,18 +5864,18 @@
         "fillerId" : "http://purl.obolibrary.org/obo/ENVO_01000882"
       } ]
     }, {
-      "definedClassId" : "http://purl.obolibrary.org/obo/ECTO_9000058",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/ExO_0000002" ],
-      "restrictions" : [ {
-        "propertyId" : "http://purl.obolibrary.org/obo/RO_0002309",
-        "fillerId" : "http://purl.obolibrary.org/obo/CHEBI_23697"
-      } ]
-    }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/ECTO_9000091",
       "genusIds" : [ "http://purl.obolibrary.org/obo/ExO_0000002" ],
       "restrictions" : [ {
         "propertyId" : "http://purl.obolibrary.org/obo/RO_0002309",
         "fillerId" : "http://purl.obolibrary.org/obo/CHEBI_24527"
+      } ]
+    }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/ECTO_9000058",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/ExO_0000002" ],
+      "restrictions" : [ {
+        "propertyId" : "http://purl.obolibrary.org/obo/RO_0002309",
+        "fillerId" : "http://purl.obolibrary.org/obo/CHEBI_23697"
       } ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/ECTO_7000051",
@@ -6207,18 +6200,18 @@
         "fillerId" : "http://purl.obolibrary.org/obo/CHEBI_24127"
       } ]
     }, {
-      "definedClassId" : "http://purl.obolibrary.org/obo/ECTO_2000021",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/ExO_0000002" ],
-      "restrictions" : [ {
-        "propertyId" : "http://purl.obolibrary.org/obo/RO_0002309",
-        "fillerId" : "http://purl.obolibrary.org/obo/MAXO_0000157"
-      } ]
-    }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/ECTO_9000052",
       "genusIds" : [ "http://purl.obolibrary.org/obo/ExO_0000002" ],
       "restrictions" : [ {
         "propertyId" : "http://purl.obolibrary.org/obo/RO_0002309",
         "fillerId" : "http://purl.obolibrary.org/obo/CHEBI_25812"
+      } ]
+    }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/ECTO_2000021",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/ExO_0000002" ],
+      "restrictions" : [ {
+        "propertyId" : "http://purl.obolibrary.org/obo/RO_0002309",
+        "fillerId" : "http://purl.obolibrary.org/obo/MAXO_0000157"
       } ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/ECTO_0900001",
@@ -6728,18 +6721,18 @@
         "fillerId" : "http://purl.obolibrary.org/obo/CHEBI_15365"
       } ]
     }, {
-      "definedClassId" : "http://purl.obolibrary.org/obo/ECTO_7000046",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/ExO_0000002" ],
-      "restrictions" : [ {
-        "propertyId" : "http://purl.obolibrary.org/obo/RO_0002309",
-        "fillerId" : "http://purl.obolibrary.org/obo/ENVO_21001212"
-      } ]
-    }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/ECTO_2000000",
       "genusIds" : [ "http://purl.obolibrary.org/obo/ExO_0000002" ],
       "restrictions" : [ {
         "propertyId" : "http://purl.obolibrary.org/obo/RO_0002309",
         "fillerId" : "http://purl.obolibrary.org/obo/MAXO_0000001"
+      } ]
+    }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/ECTO_7000046",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/ExO_0000002" ],
+      "restrictions" : [ {
+        "propertyId" : "http://purl.obolibrary.org/obo/RO_0002309",
+        "fillerId" : "http://purl.obolibrary.org/obo/ENVO_21001212"
       } ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/ECTO_2000031",
