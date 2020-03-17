@@ -86,4 +86,6 @@ $(ONT)-full.owl: $(SRC) $(OTHER_SRC)
 
 test: odkversion sparql_test all_reports
 	echo "!!!!!! FULL TEST RUN IS OVERWRITTEN, REMOVING DISJOINTS - ecto.Makefile. See https://github.com/EnvironmentOntology/environmental-exposure-ontology/issues/79 !!!!!!"
-	$(ROBOT) remove  --input $(SRC) --axioms disjoint --preserve-structure false reason --reasoner ELK  --equivalent-classes-allowed all --exclude-tautologies structural --output test.owl && rm test.owl && echo "Success"
+	$(ROBOT) merge --input $(SRC) \
+		remove --axioms disjoint --preserve-structure false \
+		reason --reasoner ELK  --equivalent-classes-allowed all --exclude-tautologies structural --output test.owl && rm test.owl && echo "Success"
