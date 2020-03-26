@@ -39,7 +39,8 @@ exposure-mesh.obo:
 
 # now called pheco
 exposure-peco.obo:
-	wget --no-check-certificate https://raw.githubusercontent.com/pombase/fypo/master/peco.obo -O $@
+	#wget --no-check-certificate https://raw.githubusercontent.com/pombase/fypo/master/peco.obo -O $@
+	wget --no-check-certificate https://raw.githubusercontent.com/Planteome/plant-experimental-conditions-ontology/master/peco.obo -O $@ > $@
 
 exposure-snomed.obo:
 	blip ontol-query -r snomed_tidy -query "class(R,'Exposureure to potentially harmful entity'),subclassRT(ID,R)" -to obo | perl -npe 's@SCTID_@SCTID:@g' > $@
