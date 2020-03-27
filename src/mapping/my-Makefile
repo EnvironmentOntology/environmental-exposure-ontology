@@ -1,0 +1,115 @@
+all: all_exposure probs.tsv m.tsv  rpt.html merged-exposure.obo axioms-r.obo  hier all_ecto unmapped.tsv
+
+OBO = http://purl.obolibrary.org/obo
+
+MOD = peco xco zeco exo ecto ncit
+
+## define variables for ontologies
+OBO=http://purl.obolibrary.org/obo
+EO_OBO = "http://purl.obolibrary.org/obo/peco.obo"
+XCO_OBO = "http://purl.obolibrary.org/obo/xco.obo"
+NCIT_OBO = "http://purl.obolibrary.org/obo/ncit.obo"
+NCIT_OWL = "http://purl.obolibrary.org/obo/ncit.owl"
+ZECO_OBO = "http://purl.obolibrary.org/obo/zeco.obo"
+PECO_OBO = "http://purl.obolibrary.org/obo/peco.obo"
+GO_OBO = "http://purl.obolibrary.org/obo/go.obo"
+EXO_OBO = 'http://purl.obolibrary.org/obo/exo.obo'
+MRE_OBO = ""
+
+.PHONY: all clean all_exposure 
+
+all_exposure: $(patsubst %, exposure-%.obo,$(MOD))
+
+clean:
+	rm $(patsubst %, exposure-%.obo,$(MOD))
+	
+# ----------------------------------------
+# creation of source ontology subsets
+# ----------------------------------------
+#
+# we create a set of ontology subsets that feed into the alignment pipeline.
+#
+# in some cases these are the entire ontology. In some cases it is a subset of
+# an existing ontology (ie those matching a string match or subclasses of a root
+# of a branch)
+#
+# these are all named exposure-X, where X is the source ontology
+
+
+# XCO in OBO copy all ontology
+exposure-xco.obo:
+	wget --no-check-certificate $(XCO_OBO) -O $@
+
+# copy all ontology
+exposure-zeco.obo:
+	wget --no-check-certificate $(ZECO_OBO) -O $@
+
+# now called pheco <----  CAN'T FIND PHECO, SO I'LL USE PECO
+exposure-peco.obo:
+	#robot merge -i $(PECO_OBO) > $@
+	wget --no-check-certificate $(PECO_OBO) -O $@
+
+exposure-ncit.obo:
+	wget --no-check-certificate $(NCIT_OBO) -O tmp-in.obo
+	
+	## WORKS BUT IS QUITE SLOW
+	#export ROBOT_JAVA_ARGS=-Xmx16G && robot query \
+	#  -i tmp-in.obo \
+	#  -q xposure.sparql tmp-out.obo
+	
+	## MUCH FASTER
+	obo-grep.pl -r ".*xposure.*" tmp-in.obo > tmp-xposure.obo # find obo stanzas containing *xposure*
+	
+	## steps in this pipeline
+	## obo-strip: keep only the id lines from the obo stanzas
+	## grep: return only the id lines
+	## cut: return only the NCIT identifier in the line
+	## sed: replace "NCIT:" with full IRI
+	obo-strip.pl -t id tmp-xposure.obo | grep id: | cut -f2 -d' ' | sed 's/NCIT:/http:\/\/purl\.obolibrary\.org\/obo\/NCIT_/g' > tmp-ids
+	
+	## run robot filter to get any subclasses of the NCIT classes
+	robot filter -i tmp-xposure.obo --term-file tmp-ids --trim false --select "self children" -o tmp-out.obo
+	
+	rm tmp-in.obo
+	rm tmp-ids
+	mv tmp-out.obo $@
+
+exposure-go.obo:
+	#blip ontol-query -r go -query "class(R,'response to stimulus'),subclassRT(ID,R)" -to obo | obo-grep.pl -r 'name: response to' - > $@
+	wget --no-check-certificate $(GO_OBO) -O $@
+
+exposure-exo.obo:
+	wget --no-check-certificate $(EXO_OBO) -O $@
+
+exposure-ecto.obo: ../../subsets/ecto-basic.obo
+	cp $< $@
+
+# MOD = peco xco zeco exo ecto ncit
+slim-exposure.obo: $(patsubst %, exposure-%.obo,$(MOD))
+	obo-cat.pl $^ | grep -v ^namespace: | grep -v ^property_value: | ./add-syns.pl > $@
+	
+  #############################
+  # The robot merge command below throws error:
+  # OBO STRUCTURE ERROR Ontology does not conform to OBO structure rules:
+  # multiple def tags not allowed. in frame:Frame(ENVO:00010483 id( ENVO:00010483)synonym( portion of environmental material EXACT)name( environmental material)namespace( plant_experimental_conditions_ontology)def( A portion of environmental material is a fiat object part which forms the medium or part of the medium of an environmental system.[DOI:10.1186/2041-1480-4-43 MA:ma ORCID:0000-0002-4366-3088 URL:http://ontology.buffalo.edu/smith/articles/niches.html ])def( A portion of environmental material is a fiat object which forms the medium or part of the medium of an environmental system.[DOI:10.1186/2041-1480-4-43 MA:ma ORCID:0000-0002-4366-3088 URL:http://ontology.buffalo.edu/smith/articles/niches.html ])is_a( BFO:0000040)is_a( BFO:0000024))
+  # 
+  # So, using obo-cat.
+  #############################
+	
+	#robot merge \
+	#  -i exposure-zeco.obo \
+	#  -i exposure-peco.obo \
+	#  -i exposure-exo.obo \
+	#  -i exposure-xco.obo \
+	#  -i exposure-ecto.obo \
+	E  -o tmp.obo
+	#grep -v ^namespace: tmp.obo | grep -v ^property_value: | ./add-syns.pl > $@
+	  
+.PRECIOUS: slim-exposure.obo
+
+probs.tsv: slim-exposure.obo ignore.pro
+	blip-findall  -i ignore.pro -debug index -goal nlp_index_all -i $< -u metadata_nlp entity_pair_mprobs/6 -no_pred > $@.tmp && mv $@.tmp $@
+
+MAX_E=8
+axioms.owl: slim-exposure.owl #probs.tsv
+	kboom --experimental  --splitSize 50 --max $(MAX_E) -m rpt.md -j rpt.json -n -o $@ -t probs.tsv $<
