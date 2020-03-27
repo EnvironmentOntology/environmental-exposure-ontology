@@ -6,6 +6,17 @@ OBO = http://purl.obolibrary.org/obo
 MOD = eo xco zeco snomed ncit go exo mre wikidata ecto
 #MOD = eo xco zeco snomed ncit go exo mre ecto
 
+## define variables for ontologies
+EO_OBO = "http://purl.obolibrary.org/obo/peco.obo"
+XCO_OBO = "http://purl.obolibrary.org/obo/xco.obo"
+NCIT_OBO = "http://purl.obolibrary.org/obo/ncit.obo"
+ZECO_OBO = "http://purl.obolibrary.org/obo/zeco.obo"
+PECO_OBO = "http://purl.obolibrary.org/obo/peco.obo"
+GO_OBO = "http://purl.obolibrary.org/obo/go.obo"
+EXO_OBO = 'http://purl.obolibrary.org/obo/exo.obo'
+MRE_OBO = ""
+
+
 all_exposure: $(patsubst %, exposure-%.obo,$(MOD))
 
 # ----------------------------------------
@@ -23,15 +34,18 @@ all_exposure: $(patsubst %, exposure-%.obo,$(MOD))
 # EO is now named PECO in OBO
 # copy whole ontology
 exposure-eo.obo:
-	blip ontol-query -r eo -query "class(ID)" -to obo > $@
+	#blip ontol-query -r eo -query "class(ID)" -to obo > $@
+	wget --no-check-certificate $(EO_OBO) -O $@
 
 # XCO in OBO copy all ontology
 exposure-xco.obo:
-	blip ontol-query -r obo/xco -query "class(ID)" -to obo > $@
+	# blip ontol-query -r obo/xco -query "class(ID)" -to obo > $@
+	wget --no-check-certificate $(XCO_OBO) -O $@
 
 # copy all ontology
 exposure-zeco.obo:
-	blip ontol-query -r zeco -query "class(ID)" -to obo > $@
+	#sblip ontol-query -r zeco -query "class(ID)" -to obo > $@
+	rwget --no-check-certificate $(ZECO_OBO) -O $@
 
 # just strings matching name
 exposure-mesh.obo:
@@ -40,25 +54,32 @@ exposure-mesh.obo:
 # now called pheco
 exposure-peco.obo:
 	#wget --no-check-certificate https://raw.githubusercontent.com/pombase/fypo/master/peco.obo -O $@
-	wget --no-check-certificate https://raw.githubusercontent.com/Planteome/plant-experimental-conditions-ontology/master/peco.obo -O $@ > $@
+	#wget --no-check-certificate https://raw.githubusercontent.com/Planteome/plant-experimental-conditions-ontology/master/peco.obo -O $@ > $@
+	#robot merge -i $(PECO_OBO) > $@
+	wget --no-check-certificate $(PECO_OBO) -O $@
 
 exposure-snomed.obo:
 	blip ontol-query -r snomed_tidy -query "class(R,'Exposureure to potentially harmful entity'),subclassRT(ID,R)" -to obo | perl -npe 's@SCTID_@SCTID:@g' > $@
 
 exposure-ncit.obo:
-	blip ontol-query -r ncit -n %xposure% -to obo > $@
+	#blip ontol-query -r ncit -n %xposure% -to obo > $@
+	#robot merge -i $(NCIT_OBO) > $@
+	#robot query ``
 
 exposure-go.obo:
-	blip ontol-query -r go -query "class(R,'response to stimulus'),subclassRT(ID,R)" -to obo | obo-grep.pl -r 'name: response to' - > $@
+	#blip ontol-query -r go -query "class(R,'response to stimulus'),subclassRT(ID,R)" -to obo | obo-grep.pl -r 'name: response to' - > $@
+	wget --no-check-certificate $(GO_OBO) -O $@
 
 exposure-exo.obo:
-	blip ontol-query -r exo -query "class(ID)" -to obo  > $@
+	#blip ontol-query -r exo -query "class(ID)" -to obo  > $@
+	wget --no-check-certificate $(EXO_OBO) -O $@
 
 exposure-mre.obo:
 	blip ontol-query -r mre -query "class(ID)" -to obo  > $@
 
 access-ncit.obo:
-	blip ontol-query -r ncit -n 'Access to%' -to obo > $@
+	#blip ontol-query -r ncit -n 'Access to%' -to obo > $@
+	robot merge -i $(NCIT_OBO) > $@
 
 exposure-wikidata.obo:
 	#cp ../resources/wikidata/combined.obo $@
@@ -73,8 +94,23 @@ combined-exposure.obo: all_exposure
 	obo-cat.pl exposure-*.obo | grep -v ^namespace: | grep -v ^property_value: | ./add-syns.pl > $@
 .PRECIOUS: combined-exposure.obo
 
-slim-exposure.obo: exposure-ncit.obo exposure-snomed.obo exposure-mre.obo exposure-ecto.obo exposure-wikidata.obo exposure-zeco.obo exposure-mesh.obo exposure-peco.obo
+#slim-exposure.obo: exposure-ncit.obo exposure-snomed.obo exposure-mre.obo exposure-ecto.obo exposure-wikidata.obo exposure-zeco.obo exposure-mesh.obo exposure-peco.obo
+# slim-exposure.obo: exposure-ncit.obo exposure-ecto.obo exposure-zeco.obo exposure-peco.obo
+slim-exposure.obo: exposure-ecto.obo exposure-zeco.obo exposure-peco.obo
 	obo-cat.pl $^ | grep -v ^namespace: | grep -v ^property_value: | ./add-syns.pl > $@
+	#robot merge \
+	#  -i exposure-ncit.obo \
+	#  -i exposure-ecto.obo \
+	#  -i exposure-zeco.obo \
+	#  -i exposure-peco.obo \
+	#  -o tmp.obo
+	#robot merge \
+	#  -i exposure-ecto.obo \
+	#  -i exposure-zeco.obo \
+	#  -i exposure-peco.obo \
+	#  -o tmp.obo
+	#grep -v ^namespace: tmp.obo | grep -v ^property_value: | ./add-syns.pl > $@
+	  
 .PRECIOUS: slim-exposure.obo
 
 probs.tsv: slim-exposure.obo ignore.pro
