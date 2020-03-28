@@ -45,6 +45,19 @@
  * ECTO_0002266 exposure to tributyl phosphate EquivalentTo Wikidata_Q21175380 Pr= 0.85
 
 
+## http://purl.obolibrary.org/obo/ECTO_0000339
+
+ * __Pr(G)__=0.24343094436886947 CONFIDENCE=0.6460905349794233 Success:true
+ * __SIZE__=4 (2 new axioms) 
+[img](target/img-ECTO_0000339.png)
+ * MEMBER: ECTO_0000339 exposure to butan-1-ol
+ * MEMBER: ECTO_0000390 exposure to isobutanol
+ * MEMBER: Wikidata_Q21173329
+ * MEMBER: Wikidata_Q21174781
+ * ECTO_0000390 exposure to isobutanol EquivalentTo Wikidata_Q21174781 Pr= 0.85
+ * ECTO_0000339 exposure to butan-1-ol EquivalentTo Wikidata_Q21173329 Pr= 0.5
+
+
 ## http://purl.obolibrary.org/obo/ECTO_0001761
 
  * __Pr(G)__=0.5000000000000001 CONFIDENCE=1.5000000000000004 Success:true
@@ -75,16 +88,6 @@
  * ECTO_0002151 exposure to 2-chloroethanol EquivalentTo Wikidata_Q21174282 Pr= 0.85
 
 
-## http://purl.obolibrary.org/obo/ECTO_0002177
-
- * __Pr(G)__=0.8500000000000001 CONFIDENCE=16.0 Success:true
- * __SIZE__=2 (1 new axioms) 
-[img](target/img-ECTO_0002177.png)
- * MEMBER: ECTO_0002177 exposure to iodoform
- * MEMBER: Wikidata_Q21174768
- * ECTO_0002177 exposure to iodoform EquivalentTo Wikidata_Q21174768 Pr= 0.85
-
-
 ## http://purl.obolibrary.org/obo/Wikidata_Q21175411
 
  * __Pr(G)__=0.8500000000000001 CONFIDENCE=16.0 Success:true
@@ -107,7 +110,7 @@
 
 ## http://purl.obolibrary.org/obo/Wikidata_Q21175345
 
- * __Pr(G)__=0.010969343284010837 CONFIDENCE=0.0 Success:true
+ * __Pr(G)__=0.010857778262824337 CONFIDENCE=0.0 Success:true
  * __SIZE__=5 (4 new axioms) 
 [img](target/img-Wikidata_Q21175345.png)
  * MEMBER: Wikidata_Q21175345
@@ -121,24 +124,29 @@
  * ECTO_0001902 exposure to 1,1,1,2-tetrachloroethane EquivalentTo Wikidata_Q21175345 Pr= 0.85
 
 
-## http://purl.obolibrary.org/obo/Wikidata_Q21175301
+## http://purl.obolibrary.org/obo/ECTO_0002337
 
  * __Pr(G)__=0.8500000000000001 CONFIDENCE=16.0 Success:true
  * __SIZE__=2 (1 new axioms) 
-[img](target/img-Wikidata_Q21175301.png)
- * MEMBER: Wikidata_Q21175301
- * MEMBER: ECTO_0002248 exposure to silicon carbide
- * ECTO_0002248 exposure to silicon carbide EquivalentTo Wikidata_Q21175301 Pr= 0.85
+[img](target/img-ECTO_0002337.png)
+ * MEMBER: ECTO_0002337 exposure to 4-Heptanone
+ * MEMBER: Wikidata_Q21174232
+ * ECTO_0002337 exposure to 4-Heptanone EquivalentTo Wikidata_Q21174232 Pr= 0.85
 
 
-## http://purl.obolibrary.org/obo/Wikidata_Q21174920
+## http://purl.obolibrary.org/obo/NCIT_C44400
 
- * __Pr(G)__=0.5000000000000001 CONFIDENCE=1.5000000000000004 Success:true
- * __SIZE__=2 (1 new axioms) 
-[img](target/img-Wikidata_Q21174920.png)
- * MEMBER: Wikidata_Q21174920
- * MEMBER: ECTO_0001800 exposure to iodomethane
- * ECTO_0001800 exposure to iodomethane EquivalentTo Wikidata_Q21174920 Pr= 0.5
+ * __Pr(G)__=0.4185658178348399 CONFIDENCE=1.5000000000000004 Success:true
+ * __SIZE__=4 (4 new axioms) 
+[img](target/img-NCIT_C44400.png)
+ * MEMBER: NCIT_C44400
+ * MEMBER: MRE_0000149
+ * MEMBER: Wikidata_Q21174914
+ * MEMBER: ECTO_0001140 exposure to dichloromethane
+ * ECTO_0001140 exposure to dichloromethane EquivalentTo Wikidata_Q21174914 Pr= 0.85
+ * ECTO_0001140 exposure to dichloromethane EquivalentTo MRE_0000149 Pr= 0.85
+ * ECTO_0001140 exposure to dichloromethane EquivalentTo NCIT_C44400 Pr= 0.5
+ * MRE_0000149 EquivalentTo Wikidata_Q21174914 Pr= 0.85
 
 
 ## http://purl.obolibrary.org/obo/Wikidata_Q21175018
@@ -179,6 +187,58 @@
  * MEMBER: Wikidata_Q21174938
  * MEMBER: ECTO_0002209 exposure to morpholine
  * ECTO_0002209 exposure to morpholine EquivalentTo Wikidata_Q21174938 Pr= 0.85
+
+
+## http://purl.obolibrary.org/obo/Wikidata_Q21174774
+
+ * __Pr(G)__=0.8500000000000001 CONFIDENCE=16.0 Success:true
+ * __SIZE__=2 (1 new axioms) 
+[img](target/img-Wikidata_Q21174774.png)
+ * MEMBER: Wikidata_Q21174774
+ * MEMBER: ECTO_0002181 exposure to isoamyl acetate
+ * ECTO_0002181 exposure to isoamyl acetate EquivalentTo Wikidata_Q21174774 Pr= 0.85
+
+
+## http://purl.obolibrary.org/obo/NCIT_C17941
+
+ * __Pr(G)__=0.008833029126020419 CONFIDENCE=0.11111111111111183 Success:true
+ * __SIZE__=13 (9 new axioms) 
+[img](target/img-NCIT_C17941.png)
+ * MEMBER: NCIT_C17941
+ * MEMBER: Wikidata_Q35120
+ * MEMBER: Wikidata_Q6671777
+ * MEMBER: MRE_0000000
+ * MEMBER: NCIT_C61398
+ * MEMBER: MRE_0000079
+ * MEMBER: MRE_0000065
+ * MEMBER: ECTO_0000001 exposure to radiation
+ * MEMBER: Wikidata_Q114953
+ * MEMBER: Wikidata_Q1190554
+ * MEMBER: ZECO_0000100 conditions
+ * MEMBER: ZECO_0000104 experimental conditions
+ * MEMBER: ZECO_0000208 radiation
+ * MESSAGE: Used heuristic to estimate 9 probabilistic edges - confidence may be negative. |Reduced| = 9
+ * MESSAGE: ELIMINATED_UNSATISFIABLE: MRE_0000079 EquivalentTo Wikidata_Q35120
+ * MESSAGE: ELIMINATED_UNSATISFIABLE: MRE_0000000 EquivalentTo Wikidata_Q114953
+ * MESSAGE: ELIMINATED_UNSATISFIABLE: MRE_0000000 EquivalentTo Wikidata_Q35120
+ * MESSAGE: ELIMINATED_UNSATISFIABLE: ECTO_0000001 exposure to radiation EquivalentTo MRE_0000079
+ * MESSAGE: ELIMINATED_UNSATISFIABLE: MRE_0000065 EquivalentTo ZECO_0000104 experimental conditions
+ * MESSAGE: ELIMINATED_UNSATISFIABLE: MRE_0000065 EquivalentTo Wikidata_Q114953
+ * MESSAGE: ELIMINATED_UNSATISFIABLE: NCIT_C17941 EquivalentTo Wikidata_Q35120
+ * MESSAGE: ELIMINATED_UNSATISFIABLE: ECTO_0000001 exposure to radiation EquivalentTo ZECO_0000104 experimental conditions
+ * MESSAGE: ELIMINATED_UNSATISFIABLE: Wikidata_Q6671777 EquivalentTo ZECO_0000104 experimental conditions
+ * MESSAGE: ELIMINATED_UNSATISFIABLE: ECTO_0000001 exposure to radiation EquivalentTo Wikidata_Q114953
+ * MESSAGE: ELIMINATED_UNSATISFIABLE: MRE_0000065 EquivalentTo NCIT_C61398
+ * MESSAGE: ELIMINATED_UNSATISFIABLE: Wikidata_Q35120 EquivalentTo ZECO_0000104 experimental conditions
+ * NCIT_C61398 EquivalentTo Wikidata_Q6671777 Pr= 0.85
+ * MRE_0000065 EquivalentTo ZECO_0000208 radiation Pr= 0.85
+ * ECTO_0000001 exposure to radiation EquivalentTo NCIT_C61398 Pr= 0.85
+ * NCIT_C17941 EquivalentTo Wikidata_Q114953 Pr= 0.85
+ * MRE_0000079 EquivalentTo NCIT_C17941 Pr= 0.85
+ * Wikidata_Q114953 EquivalentTo ZECO_0000104 experimental conditions Pr= 0.85
+ * Wikidata_Q35120 EquivalentTo ZECO_0000208 radiation Pr= 0.85
+ * MRE_0000000 EquivalentTo NCIT_C61398 Pr= 0.85
+ * ECTO_0000001 exposure to radiation EquivalentTo ZECO_0000100 conditions Pr= 0.85
 
 
 ## http://purl.obolibrary.org/obo/NCIT_C251
@@ -368,16 +428,6 @@
  * ECTO_0002268 exposure to trimethylamine EquivalentTo Wikidata_Q21175391 Pr= 0.85
 
 
-## http://purl.obolibrary.org/obo/Wikidata_Q21175010
-
- * __Pr(G)__=0.8500000000000001 CONFIDENCE=16.0 Success:true
- * __SIZE__=2 (1 new axioms) 
-[img](target/img-Wikidata_Q21175010.png)
- * MEMBER: Wikidata_Q21175010
- * MEMBER: ECTO_0001220 exposure to 2-nitrotoluene
- * ECTO_0001220 exposure to 2-nitrotoluene EquivalentTo Wikidata_Q21175010 Pr= 0.85
-
-
 ## http://purl.obolibrary.org/obo/MRE_0000170
 
  * __Pr(G)__=0.8500000000000001 CONFIDENCE=16.0 Success:true
@@ -399,19 +449,6 @@
  * ECTO_0001728 exposure to dimethyl sulfate EquivalentTo Wikidata_Q21174208 Pr= 0.85
  * NCIT_C44377 EquivalentTo Wikidata_Q21174208 Pr= 0.85
  * ECTO_0001728 exposure to dimethyl sulfate EquivalentTo NCIT_C44377 Pr= 0.85
-
-
-## http://purl.obolibrary.org/obo/MRE_0000147
-
- * __Pr(G)__=0.8348343245539509 CONFIDENCE=16.00000000000002 Success:true
- * __SIZE__=3 (3 new axioms) 
-[img](target/img-MRE_0000147.png)
- * MEMBER: MRE_0000147
- * MEMBER: ECTO_0001139 exposure to chlorobenzene
- * MEMBER: Wikidata_Q21173557
- * ECTO_0001139 exposure to chlorobenzene EquivalentTo Wikidata_Q21173557 Pr= 0.85
- * MRE_0000147 EquivalentTo Wikidata_Q21173557 Pr= 0.85
- * ECTO_0001139 exposure to chlorobenzene EquivalentTo MRE_0000147 Pr= 0.85
 
 
 ## http://purl.obolibrary.org/obo/ECTO_0001681
@@ -540,16 +577,6 @@
  * ECTO_0001604 exposure to allyl alcohol EquivalentTo Wikidata_Q21167678 Pr= 0.85
 
 
-## http://purl.obolibrary.org/obo/Wikidata_Q21174301
-
- * __Pr(G)__=0.8500000000000001 CONFIDENCE=16.0 Success:true
- * __SIZE__=2 (1 new axioms) 
-[img](target/img-Wikidata_Q21174301.png)
- * MEMBER: Wikidata_Q21174301
- * MEMBER: ECTO_0002155 exposure to diethyl ether
- * ECTO_0002155 exposure to diethyl ether EquivalentTo Wikidata_Q21174301 Pr= 0.85
-
-
 ## http://purl.obolibrary.org/obo/ECTO_0001804
 
  * __Pr(G)__=0.5000000000000001 CONFIDENCE=1.5000000000000004 Success:true
@@ -588,16 +615,6 @@
  * MEMBER: MRE_0000145
  * MEMBER: ECTO_0001544 exposure to 2,5-Dimethylfuran
  * ECTO_0001544 exposure to 2,5-Dimethylfuran EquivalentTo MRE_0000145 Pr= 0.85
-
-
-## http://purl.obolibrary.org/obo/ZECO_0000215
-
- * __Pr(G)__=0.8500000000000001 CONFIDENCE=16.0 Success:true
- * __SIZE__=2 (1 new axioms) 
-[img](target/img-ZECO_0000215.png)
- * MEMBER: ZECO_0000215 x-ray
- * MEMBER: ECTO_0000005 exposure to x-ray radiation
- * ECTO_0000005 exposure to x-ray radiation EquivalentTo ZECO_0000215 x-ray Pr= 0.85
 
 
 ## http://purl.obolibrary.org/obo/ECTO_0001552
@@ -647,17 +664,14 @@
  * MRE_0000151 EquivalentTo NCIT_C44389 Pr= 0.85
 
 
-## http://purl.obolibrary.org/obo/ECTO_0001535
+## http://purl.obolibrary.org/obo/Wikidata_Q21175301
 
- * __Pr(G)__=0.8348343245539509 CONFIDENCE=16.00000000000002 Success:true
- * __SIZE__=3 (3 new axioms) 
-[img](target/img-ECTO_0001535.png)
- * MEMBER: ECTO_0001535 exposure to 1,1,2-trichloroethane
- * MEMBER: MRE_0000134
- * MEMBER: Wikidata_Q21175383
- * MRE_0000134 EquivalentTo Wikidata_Q21175383 Pr= 0.85
- * ECTO_0001535 exposure to 1,1,2-trichloroethane EquivalentTo MRE_0000134 Pr= 0.85
- * ECTO_0001535 exposure to 1,1,2-trichloroethane EquivalentTo Wikidata_Q21175383 Pr= 0.85
+ * __Pr(G)__=0.8500000000000001 CONFIDENCE=16.0 Success:true
+ * __SIZE__=2 (1 new axioms) 
+[img](target/img-Wikidata_Q21175301.png)
+ * MEMBER: Wikidata_Q21175301
+ * MEMBER: ECTO_0002248 exposure to silicon carbide
+ * ECTO_0002248 exposure to silicon carbide EquivalentTo Wikidata_Q21175301 Pr= 0.85
 
 
 ## http://purl.obolibrary.org/obo/ECTO_0002370
@@ -762,19 +776,6 @@
  * ECTO_0002316 exposure to Ammonium sulfamate EquivalentTo Wikidata_Q21167787 Pr= 0.85
 
 
-## http://purl.obolibrary.org/obo/NCIT_C44437
-
- * __Pr(G)__=0.38777372262773724 CONFIDENCE=1.5000000000000009 Success:true
- * __SIZE__=3 (3 new axioms) 
-[img](target/img-NCIT_C44437.png)
- * MEMBER: NCIT_C44437
- * MEMBER: Wikidata_Q21175072
- * MEMBER: ECTO_0002369 exposure to 1,3-Propane sultone
- * ECTO_0002369 exposure to 1,3-Propane sultone EquivalentTo Wikidata_Q21175072 Pr= 0.85
- * NCIT_C44437 EquivalentTo Wikidata_Q21175072 Pr= 0.5
- * ECTO_0002369 exposure to 1,3-Propane sultone EquivalentTo NCIT_C44437 Pr= 0.5
-
-
 ## http://purl.obolibrary.org/obo/NCIT_C44407
 
  * __Pr(G)__=0.08434507094412788 CONFIDENCE=0.4814814814814812 Success:true
@@ -788,6 +789,16 @@
  * NCIT_C44407 EquivalentTo Wikidata_Q21174946 Pr= 0.85
  * ECTO_0000147 exposure to nickel cation EquivalentTo NCIT_C44407 Pr= 0.85
  * ECTO_0000147 exposure to nickel cation EquivalentTo Wikidata_Q21174946 Pr= 0.85
+
+
+## http://purl.obolibrary.org/obo/ECTO_0002182
+
+ * __Pr(G)__=0.5000000000000001 CONFIDENCE=1.5000000000000004 Success:true
+ * __SIZE__=2 (1 new axioms) 
+[img](target/img-ECTO_0002182.png)
+ * MEMBER: ECTO_0002182 exposure to isoamylol
+ * MEMBER: Wikidata_Q21174775
+ * ECTO_0002182 exposure to isoamylol EquivalentTo Wikidata_Q21174775 Pr= 0.5
 
 
 ## http://purl.obolibrary.org/obo/ECTO_0001356
@@ -878,16 +889,6 @@
  * ECTO_0001688 exposure to cyclohexanol EquivalentTo Wikidata_Q21174118 Pr= 0.85
 
 
-## http://purl.obolibrary.org/obo/Wikidata_Q21175322
-
- * __Pr(G)__=0.8500000000000001 CONFIDENCE=16.0 Success:true
- * __SIZE__=2 (1 new axioms) 
-[img](target/img-Wikidata_Q21175322.png)
- * MEMBER: Wikidata_Q21175322
- * MEMBER: ECTO_0000161 exposure to sulfur dioxide
- * ECTO_0000161 exposure to sulfur dioxide EquivalentTo Wikidata_Q21175322 Pr= 0.85
-
-
 ## http://purl.obolibrary.org/obo/Wikidata_Q21167823
 
  * __Pr(G)__=0.8500000000000001 CONFIDENCE=16.0 Success:true
@@ -918,16 +919,6 @@
  * ECTO_0002233 exposure to phosphoric acid EquivalentTo Wikidata_Q21175053 Pr= 0.85
 
 
-## http://purl.obolibrary.org/obo/Wikidata_Q21174273
-
- * __Pr(G)__=0.5000000000000001 CONFIDENCE=1.5000000000000004 Success:true
- * __SIZE__=2 (1 new axioms) 
-[img](target/img-Wikidata_Q21174273.png)
- * MEMBER: Wikidata_Q21174273
- * MEMBER: ECTO_0002149 exposure to ethylamine
- * ECTO_0002149 exposure to ethylamine EquivalentTo Wikidata_Q21174273 Pr= 0.5
-
-
 ## http://purl.obolibrary.org/obo/ECTO_0002342
 
  * __Pr(G)__=0.8500000000000001 CONFIDENCE=16.0 Success:true
@@ -956,6 +947,16 @@
  * MEMBER: ECTO_0002282 exposure to strychnine
  * MEMBER: Wikidata_Q7625508
  * ECTO_0002282 exposure to strychnine EquivalentTo Wikidata_Q7625508 Pr= 0.85
+
+
+## http://purl.obolibrary.org/obo/ZECO_0000215
+
+ * __Pr(G)__=0.8500000000000001 CONFIDENCE=16.0 Success:true
+ * __SIZE__=2 (1 new axioms) 
+[img](target/img-ZECO_0000215.png)
+ * MEMBER: ZECO_0000215 x-ray
+ * MEMBER: ECTO_0000005 exposure to x-ray radiation
+ * ECTO_0000005 exposure to x-ray radiation EquivalentTo ZECO_0000215 x-ray Pr= 0.85
 
 
 ## http://purl.obolibrary.org/obo/Wikidata_Q21174201
@@ -1038,16 +1039,6 @@
  * PECO_0000135 EquivalentTo ZECO_0000189 hypoxia Pr= 0.5
 
 
-## http://purl.obolibrary.org/obo/ECTO_0001875
-
- * __Pr(G)__=0.5000000000000001 CONFIDENCE=1.5000000000000004 Success:true
- * __SIZE__=2 (1 new axioms) 
-[img](target/img-ECTO_0001875.png)
- * MEMBER: ECTO_0001875 exposure to prop-2-yn-1-ol
- * MEMBER: Wikidata_Q21175074
- * ECTO_0001875 exposure to prop-2-yn-1-ol EquivalentTo Wikidata_Q21175074 Pr= 0.5
-
-
 ## http://purl.obolibrary.org/obo/Wikidata_Q21175396
 
  * __Pr(G)__=0.5000000000000001 CONFIDENCE=1.5000000000000004 Success:true
@@ -1106,6 +1097,19 @@
  * MEMBER: ECTO_0002277 exposure to zinc oxide
  * MEMBER: Wikidata_Q21175430
  * ECTO_0002277 exposure to zinc oxide EquivalentTo Wikidata_Q21175430 Pr= 0.85
+
+
+## http://purl.obolibrary.org/obo/NCIT_C44437
+
+ * __Pr(G)__=0.35804549283909015 CONFIDENCE=1.5000000000000009 Success:true
+ * __SIZE__=3 (3 new axioms) 
+[img](target/img-NCIT_C44437.png)
+ * MEMBER: NCIT_C44437
+ * MEMBER: Wikidata_Q21175072
+ * MEMBER: ECTO_0002369 exposure to 1,3-Propane sultone
+ * ECTO_0002369 exposure to 1,3-Propane sultone EquivalentTo Wikidata_Q21175072 Pr= 0.85
+ * NCIT_C44437 EquivalentTo Wikidata_Q21175072 Pr= 0.5
+ * ECTO_0002369 exposure to 1,3-Propane sultone EquivalentTo NCIT_C44437 Pr= 0.5
 
 
 ## http://purl.obolibrary.org/obo/NCIT_C44355
@@ -1233,19 +1237,6 @@
  * ECTO_0002144 exposure to enflurane EquivalentTo Wikidata_Q21174250 Pr= 0.85
 
 
-## http://purl.obolibrary.org/obo/ECTO_0000339
-
- * __Pr(G)__=0.24343094436886947 CONFIDENCE=0.6460905349794233 Success:true
- * __SIZE__=4 (2 new axioms) 
-[img](target/img-ECTO_0000339.png)
- * MEMBER: ECTO_0000339 exposure to butan-1-ol
- * MEMBER: ECTO_0000390 exposure to isobutanol
- * MEMBER: Wikidata_Q21173329
- * MEMBER: Wikidata_Q21174781
- * ECTO_0000390 exposure to isobutanol EquivalentTo Wikidata_Q21174781 Pr= 0.85
- * ECTO_0000339 exposure to butan-1-ol EquivalentTo Wikidata_Q21173329 Pr= 0.5
-
-
 ## http://purl.obolibrary.org/obo/ECTO_0001769
 
  * __Pr(G)__=0.35804549283909015 CONFIDENCE=1.5000000000000009 Success:true
@@ -1287,19 +1278,6 @@
  * MEMBER: ECTO_0002032 activity related exposure
  * MEMBER: Wikidata_Q1914636
  * ECTO_0002032 activity related exposure EquivalentTo Wikidata_Q1914636 Pr= 0.7
-
-
-## http://purl.obolibrary.org/obo/MRE_0000154
-
- * __Pr(G)__=0.8348343245539509 CONFIDENCE=16.00000000000002 Success:true
- * __SIZE__=3 (3 new axioms) 
-[img](target/img-MRE_0000154.png)
- * MEMBER: MRE_0000154
- * MEMBER: ECTO_0001143 exposure to styrene
- * MEMBER: Wikidata_Q21175318
- * MRE_0000154 EquivalentTo Wikidata_Q21175318 Pr= 0.85
- * ECTO_0001143 exposure to styrene EquivalentTo MRE_0000154 Pr= 0.85
- * ECTO_0001143 exposure to styrene EquivalentTo Wikidata_Q21175318 Pr= 0.85
 
 
 ## http://purl.obolibrary.org/obo/Wikidata_Q21175350
@@ -1416,18 +1394,6 @@
  * ECTO_0001715 exposure to diethanolamine EquivalentTo Wikidata_Q21174180 Pr= 0.85
 
 
-## http://purl.obolibrary.org/obo/ECTO_0000247
-
- * __Pr(G)__=0.4829545454545454 CONFIDENCE=1.5000000000000009 Success:true
- * __SIZE__=3 (2 new axioms) 
-[img](target/img-ECTO_0000247.png)
- * MEMBER: ECTO_0000247 exposure to DDT
- * MEMBER: Wikidata_Q21174131
- * MEMBER: MRE_0000101
- * ECTO_0000247 exposure to DDT EquivalentTo Wikidata_Q21174131 Pr= 0.85
- * ECTO_0000247 exposure to DDT EquivalentTo MRE_0000101 Pr= 0.5
-
-
 ## http://purl.obolibrary.org/obo/ECTO_0002341
 
  * __Pr(G)__=0.8500000000000001 CONFIDENCE=16.0 Success:true
@@ -1459,16 +1425,6 @@
  * NCIT_C44313 EquivalentTo Wikidata_Q21175008 Pr= 0.85
  * ECTO_0001830 exposure to 2-nitropropane EquivalentTo Wikidata_Q21175008 Pr= 0.85
  * ECTO_0001830 exposure to 2-nitropropane EquivalentTo NCIT_C44313 Pr= 0.85
-
-
-## http://purl.obolibrary.org/obo/Wikidata_Q21175408
-
- * __Pr(G)__=0.5000000000000001 CONFIDENCE=1.5000000000000004 Success:true
- * __SIZE__=2 (1 new axioms) 
-[img](target/img-Wikidata_Q21175408.png)
- * MEMBER: Wikidata_Q21175408
- * MEMBER: ECTO_0002272 exposure to divanadium pentaoxide
- * ECTO_0002272 exposure to divanadium pentaoxide EquivalentTo Wikidata_Q21175408 Pr= 0.5
 
 
 ## http://purl.obolibrary.org/obo/MRE_0000180
@@ -1589,6 +1545,16 @@
  * ECTO_0001664 exposure to chloroethane EquivalentTo Wikidata_Q21174280 Pr= 0.85
 
 
+## http://purl.obolibrary.org/obo/Wikidata_Q21167876
+
+ * __Pr(G)__=0.8500000000000001 CONFIDENCE=16.0 Success:true
+ * __SIZE__=2 (1 new axioms) 
+[img](target/img-Wikidata_Q21167876.png)
+ * MEMBER: Wikidata_Q21167876
+ * MEMBER: ECTO_0002314 exposure to asphalt
+ * ECTO_0002314 exposure to asphalt EquivalentTo Wikidata_Q21167876 Pr= 0.85
+
+
 ## http://purl.obolibrary.org/obo/ECTO_0000360
 
  * __Pr(G)__=0.8500000000000001 CONFIDENCE=16.0 Success:true
@@ -1640,16 +1606,6 @@
  * ECTO_0001559 exposure to O-Desmethylangolensin EquivalentTo MRE_0000202 Pr= 0.85
 
 
-## http://purl.obolibrary.org/obo/Wikidata_Q21173354
-
- * __Pr(G)__=0.8500000000000001 CONFIDENCE=16.0 Success:true
- * __SIZE__=2 (1 new axioms) 
-[img](target/img-Wikidata_Q21173354.png)
- * MEMBER: Wikidata_Q21173354
- * MEMBER: ECTO_0002093 exposure to calcium sulfate
- * ECTO_0002093 exposure to calcium sulfate EquivalentTo Wikidata_Q21173354 Pr= 0.85
-
-
 ## http://purl.obolibrary.org/obo/NCIT_C44312
 
  * __Pr(G)__=0.8500000000000001 CONFIDENCE=16.0 Success:true
@@ -1658,6 +1614,26 @@
  * MEMBER: NCIT_C44312
  * MEMBER: ECTO_0001822 exposure to 2-nitroanisole
  * ECTO_0001822 exposure to 2-nitroanisole EquivalentTo NCIT_C44312 Pr= 0.85
+
+
+## http://purl.obolibrary.org/obo/Wikidata_Q21174233
+
+ * __Pr(G)__=0.8500000000000001 CONFIDENCE=16.0 Success:true
+ * __SIZE__=2 (1 new axioms) 
+[img](target/img-Wikidata_Q21174233.png)
+ * MEMBER: Wikidata_Q21174233
+ * MEMBER: ECTO_0002338 exposure to diquat
+ * ECTO_0002338 exposure to diquat EquivalentTo Wikidata_Q21174233 Pr= 0.85
+
+
+## http://purl.obolibrary.org/obo/Wikidata_Q21175026
+
+ * __Pr(G)__=0.8500000000000001 CONFIDENCE=16.0 Success:true
+ * __SIZE__=2 (1 new axioms) 
+[img](target/img-Wikidata_Q21175026.png)
+ * MEMBER: Wikidata_Q21175026
+ * MEMBER: ECTO_0000361 exposure to paraquat
+ * ECTO_0000361 exposure to paraquat EquivalentTo Wikidata_Q21175026 Pr= 0.85
 
 
 ## http://purl.obolibrary.org/obo/ECTO_0000074
@@ -1678,16 +1654,6 @@
  * MEMBER: ECTO_0002230 exposure to phorate
  * MEMBER: Wikidata_Q21175049
  * ECTO_0002230 exposure to phorate EquivalentTo Wikidata_Q21175049 Pr= 0.85
-
-
-## http://purl.obolibrary.org/obo/ECTO_0002182
-
- * __Pr(G)__=0.5000000000000001 CONFIDENCE=1.5000000000000004 Success:true
- * __SIZE__=2 (1 new axioms) 
-[img](target/img-ECTO_0002182.png)
- * MEMBER: ECTO_0002182 exposure to isoamylol
- * MEMBER: Wikidata_Q21174775
- * ECTO_0002182 exposure to isoamylol EquivalentTo Wikidata_Q21174775 Pr= 0.5
 
 
 ## http://purl.obolibrary.org/obo/Wikidata_Q21174259
@@ -1731,6 +1697,16 @@
  * ECTO_0000007 exposure to visible light radiation EquivalentTo ZECO_0000213 visible light Pr= 0.85
 
 
+## http://purl.obolibrary.org/obo/ECTO_0002345
+
+ * __Pr(G)__=0.8500000000000001 CONFIDENCE=16.0 Success:true
+ * __SIZE__=2 (1 new axioms) 
+[img](target/img-ECTO_0002345.png)
+ * MEMBER: ECTO_0002345 exposure to glutaraldehyde
+ * MEMBER: Wikidata_Q21174343
+ * ECTO_0002345 exposure to glutaraldehyde EquivalentTo Wikidata_Q21174343 Pr= 0.85
+
+
 ## http://purl.obolibrary.org/obo/ECTO_0000221
 
  * __Pr(G)__=0.8500000000000001 CONFIDENCE=16.0 Success:true
@@ -1741,6 +1717,16 @@
  * ECTO_0000221 exposure to methylamine EquivalentTo Wikidata_Q21174898 Pr= 0.85
 
 
+## http://purl.obolibrary.org/obo/Wikidata_Q21167626
+
+ * __Pr(G)__=0.8500000000000001 CONFIDENCE=16.0 Success:true
+ * __SIZE__=2 (1 new axioms) 
+[img](target/img-Wikidata_Q21167626.png)
+ * MEMBER: Wikidata_Q21167626
+ * MEMBER: ECTO_0001599 exposure to acrolein
+ * ECTO_0001599 exposure to acrolein EquivalentTo Wikidata_Q21167626 Pr= 0.85
+
+
 ## http://purl.obolibrary.org/obo/ECTO_0002206
 
  * __Pr(G)__=0.8500000000000001 CONFIDENCE=16.0 Success:true
@@ -1749,16 +1735,6 @@
  * MEMBER: ECTO_0002206 exposure to methanethiol
  * MEMBER: Wikidata_Q21174925
  * ECTO_0002206 exposure to methanethiol EquivalentTo Wikidata_Q21174925 Pr= 0.85
-
-
-## http://purl.obolibrary.org/obo/ECTO_0001765
-
- * __Pr(G)__=0.8500000000000001 CONFIDENCE=16.0 Success:true
- * __SIZE__=2 (1 new axioms) 
-[img](target/img-ECTO_0001765.png)
- * MEMBER: ECTO_0001765 exposure to furan
- * MEMBER: NCIT_C44385
- * ECTO_0001765 exposure to furan EquivalentTo NCIT_C44385 Pr= 0.85
 
 
 ## http://purl.obolibrary.org/obo/Wikidata_Q21175073
@@ -1829,6 +1805,16 @@
  * ECTO_0001730 exposure to 1,2-dinitrobenzene EquivalentTo Wikidata_Q21174214 Pr= 0.85
 
 
+## http://purl.obolibrary.org/obo/Wikidata_Q21174773
+
+ * __Pr(G)__=0.5000000000000001 CONFIDENCE=1.5000000000000004 Success:true
+ * __SIZE__=2 (1 new axioms) 
+[img](target/img-Wikidata_Q21174773.png)
+ * MEMBER: Wikidata_Q21174773
+ * MEMBER: ECTO_0002180 exposure to iron(2+) sulfate (anhydrous)
+ * ECTO_0002180 exposure to iron(2+) sulfate (anhydrous) EquivalentTo Wikidata_Q21174773 Pr= 0.5
+
+
 ## http://purl.obolibrary.org/obo/ECTO_0001114
 
  * __Pr(G)__=0.6999999999999998 CONFIDENCE=5.999999999999994 Success:true
@@ -1849,16 +1835,6 @@
  * ECTO_0001169 exposure to pyridine EquivalentTo Wikidata_Q21175088 Pr= 0.85
 
 
-## http://purl.obolibrary.org/obo/Wikidata_Q21167876
-
- * __Pr(G)__=0.8500000000000001 CONFIDENCE=16.0 Success:true
- * __SIZE__=2 (1 new axioms) 
-[img](target/img-Wikidata_Q21167876.png)
- * MEMBER: Wikidata_Q21167876
- * MEMBER: ECTO_0002314 exposure to asphalt
- * ECTO_0002314 exposure to asphalt EquivalentTo Wikidata_Q21167876 Pr= 0.85
-
-
 ## http://purl.obolibrary.org/obo/ECTO_0002372
 
  * __Pr(G)__=0.5000000000000001 CONFIDENCE=1.5000000000000004 Success:true
@@ -1867,19 +1843,6 @@
  * MEMBER: ECTO_0002372 exposure to Fenchlorphos
  * MEMBER: Wikidata_Q21175093
  * ECTO_0002372 exposure to Fenchlorphos EquivalentTo Wikidata_Q21175093 Pr= 0.5
-
-
-## http://purl.obolibrary.org/obo/Wikidata_Q21167862
-
- * __Pr(G)__=0.8348343245539509 CONFIDENCE=16.00000000000002 Success:true
- * __SIZE__=3 (3 new axioms) 
-[img](target/img-Wikidata_Q21167862.png)
- * MEMBER: Wikidata_Q21167862
- * MEMBER: NCIT_C55816
- * MEMBER: ECTO_0001618 exposure to asbestos
- * ECTO_0001618 exposure to asbestos EquivalentTo Wikidata_Q21167862 Pr= 0.85
- * ECTO_0001618 exposure to asbestos EquivalentTo NCIT_C55816 Pr= 0.85
- * NCIT_C55816 EquivalentTo Wikidata_Q21167862 Pr= 0.85
 
 
 ## http://purl.obolibrary.org/obo/ECTO_0001480
@@ -2044,16 +2007,6 @@
  * ECTO_0001836 exposure to N-methyl-N-nitrosourea EquivalentTo NCIT_C645 Pr= 0.5
 
 
-## http://purl.obolibrary.org/obo/Wikidata_Q21174130
-
- * __Pr(G)__=0.5000000000000001 CONFIDENCE=1.5000000000000004 Success:true
- * __SIZE__=2 (1 new axioms) 
-[img](target/img-Wikidata_Q21174130.png)
- * MEMBER: Wikidata_Q21174130
- * MEMBER: ECTO_0001198 exposure to 2,4-D
- * ECTO_0001198 exposure to 2,4-D EquivalentTo Wikidata_Q21174130 Pr= 0.5
-
-
 ## http://purl.obolibrary.org/obo/ECTO_0001860
 
  * __Pr(G)__=0.5000000000000001 CONFIDENCE=1.5000000000000004 Success:true
@@ -2198,6 +2151,19 @@
  * ECTO_0002389 dietary food additive exposure EquivalentTo MRE_0000017 Pr= 0.85
 
 
+## http://purl.obolibrary.org/obo/ECTO_0001538
+
+ * __Pr(G)__=0.8348343245539509 CONFIDENCE=16.00000000000002 Success:true
+ * __SIZE__=3 (3 new axioms) 
+[img](target/img-ECTO_0001538.png)
+ * MEMBER: ECTO_0001538 exposure to 1,2-Dibromo-3-chloropropane
+ * MEMBER: MRE_0000137
+ * MEMBER: Wikidata_Q21174147
+ * ECTO_0001538 exposure to 1,2-Dibromo-3-chloropropane EquivalentTo Wikidata_Q21174147 Pr= 0.85
+ * ECTO_0001538 exposure to 1,2-Dibromo-3-chloropropane EquivalentTo MRE_0000137 Pr= 0.85
+ * MRE_0000137 EquivalentTo Wikidata_Q21174147 Pr= 0.85
+
+
 ## http://purl.obolibrary.org/obo/ECTO_0002134
 
  * __Pr(G)__=0.8500000000000001 CONFIDENCE=16.0 Success:true
@@ -2307,21 +2273,6 @@
  * ECTO_0002077 exposure to arsane EquivalentTo Wikidata_Q21167853 Pr= 0.5
 
 
-## http://purl.obolibrary.org/obo/NCIT_C44400
-
- * __Pr(G)__=0.43829677143086554 CONFIDENCE=1.5000000000000004 Success:true
- * __SIZE__=4 (4 new axioms) 
-[img](target/img-NCIT_C44400.png)
- * MEMBER: NCIT_C44400
- * MEMBER: MRE_0000149
- * MEMBER: Wikidata_Q21174914
- * MEMBER: ECTO_0001140 exposure to dichloromethane
- * ECTO_0001140 exposure to dichloromethane EquivalentTo Wikidata_Q21174914 Pr= 0.85
- * ECTO_0001140 exposure to dichloromethane EquivalentTo MRE_0000149 Pr= 0.85
- * ECTO_0001140 exposure to dichloromethane EquivalentTo NCIT_C44400 Pr= 0.5
- * MRE_0000149 EquivalentTo Wikidata_Q21174914 Pr= 0.85
-
-
 ## http://purl.obolibrary.org/obo/ECTO_0001699
 
  * __Pr(G)__=0.4829545454545454 CONFIDENCE=1.5000000000000009 Success:true
@@ -2362,16 +2313,6 @@
  * MEMBER: Wikidata_Q21174145
  * MEMBER: ECTO_0002127 exposure to diborane(6)
  * ECTO_0002127 exposure to diborane(6) EquivalentTo Wikidata_Q21174145 Pr= 0.5
-
-
-## http://purl.obolibrary.org/obo/Wikidata_Q21174774
-
- * __Pr(G)__=0.8500000000000001 CONFIDENCE=16.0 Success:true
- * __SIZE__=2 (1 new axioms) 
-[img](target/img-Wikidata_Q21174774.png)
- * MEMBER: Wikidata_Q21174774
- * MEMBER: ECTO_0002181 exposure to isoamyl acetate
- * ECTO_0002181 exposure to isoamyl acetate EquivalentTo Wikidata_Q21174774 Pr= 0.85
 
 
 ## http://purl.obolibrary.org/obo/ECTO_0002396
@@ -2437,6 +2378,26 @@
  * ECTO_0001615 exposure to aniline EquivalentTo Wikidata_Q21167800 Pr= 0.85
 
 
+## http://purl.obolibrary.org/obo/Wikidata_Q21174273
+
+ * __Pr(G)__=0.5000000000000001 CONFIDENCE=1.5000000000000004 Success:true
+ * __SIZE__=2 (1 new axioms) 
+[img](target/img-Wikidata_Q21174273.png)
+ * MEMBER: Wikidata_Q21174273
+ * MEMBER: ECTO_0002149 exposure to ethylamine
+ * ECTO_0002149 exposure to ethylamine EquivalentTo Wikidata_Q21174273 Pr= 0.5
+
+
+## http://purl.obolibrary.org/obo/Wikidata_Q21174255
+
+ * __Pr(G)__=0.8500000000000001 CONFIDENCE=16.0 Success:true
+ * __SIZE__=2 (1 new axioms) 
+[img](target/img-Wikidata_Q21174255.png)
+ * MEMBER: Wikidata_Q21174255
+ * MEMBER: ECTO_0002339 exposure to EPN
+ * ECTO_0002339 exposure to EPN EquivalentTo Wikidata_Q21174255 Pr= 0.85
+
+
 ## http://purl.obolibrary.org/obo/Wikidata_Q21174336
 
  * __Pr(G)__=0.8500000000000001 CONFIDENCE=16.0 Success:true
@@ -2445,6 +2406,17 @@
  * MEMBER: Wikidata_Q21174336
  * MEMBER: ECTO_0000343 exposure to furfural
  * ECTO_0000343 exposure to furfural EquivalentTo Wikidata_Q21174336 Pr= 0.85
+
+
+## http://purl.obolibrary.org/obo/ECTO_0002183
+
+ * __Pr(G)__=0.3958090803259604 CONFIDENCE=0.4814814814814812 Success:true
+ * __SIZE__=3 (1 new axioms) 
+[img](target/img-ECTO_0002183.png)
+ * MEMBER: ECTO_0002183 exposure to isobutane
+ * MEMBER: Wikidata_Q21174778
+ * MEMBER: ECTO_0001779 exposure to isobutyraldehyde
+ * ECTO_0002183 exposure to isobutane EquivalentTo Wikidata_Q21174778 Pr= 0.85
 
 
 ## http://purl.obolibrary.org/obo/ECTO_0001640
@@ -2498,19 +2470,6 @@
  * MEMBER: Wikidata_Q21173347
  * MEMBER: ECTO_0001645 exposure to calcium cyanamide
  * ECTO_0001645 exposure to calcium cyanamide EquivalentTo Wikidata_Q21173347 Pr= 0.85
-
-
-## http://purl.obolibrary.org/obo/ECTO_0002235
-
- * __Pr(G)__=0.13486176668914365 CONFIDENCE=0.6460905349794233 Success:true
- * __SIZE__=4 (2 new axioms) 
-[img](target/img-ECTO_0002235.png)
- * MEMBER: ECTO_0002235 exposure to phosphorus trichloride
- * MEMBER: Wikidata_Q21175058
- * MEMBER: ECTO_0002234 exposure to phosphoryl trichloride
- * MEMBER: Wikidata_Q21175055
- * ECTO_0002235 exposure to phosphorus trichloride EquivalentTo Wikidata_Q21175058 Pr= 0.5
- * ECTO_0002234 exposure to phosphoryl trichloride EquivalentTo Wikidata_Q21175055 Pr= 0.5
 
 
 ## http://purl.obolibrary.org/obo/Wikidata_Q21175376
@@ -2625,6 +2584,19 @@
  * ECTO_0000139 exposure to carbon dioxide EquivalentTo Wikidata_Q21173362 Pr= 0.85
 
 
+## http://purl.obolibrary.org/obo/NCIT_C44378
+
+ * __Pr(G)__=0.8348343245539509 CONFIDENCE=16.00000000000002 Success:true
+ * __SIZE__=3 (3 new axioms) 
+[img](target/img-NCIT_C44378.png)
+ * MEMBER: NCIT_C44378
+ * MEMBER: Wikidata_Q21174199
+ * MEMBER: ECTO_0002335 exposure to Dimethylcarbamoyl chloride
+ * ECTO_0002335 exposure to Dimethylcarbamoyl chloride EquivalentTo NCIT_C44378 Pr= 0.85
+ * NCIT_C44378 EquivalentTo Wikidata_Q21174199 Pr= 0.85
+ * ECTO_0002335 exposure to Dimethylcarbamoyl chloride EquivalentTo Wikidata_Q21174199 Pr= 0.85
+
+
 ## http://purl.obolibrary.org/obo/Wikidata_Q21174927
 
  * __Pr(G)__=0.8500000000000001 CONFIDENCE=16.0 Success:true
@@ -2665,16 +2637,6 @@
  * ECTO_0002281 exposure to sarin EquivalentTo Wikidata_Q21733383 Pr= 0.85
 
 
-## http://purl.obolibrary.org/obo/Wikidata_Q21167626
-
- * __Pr(G)__=0.8500000000000001 CONFIDENCE=16.0 Success:true
- * __SIZE__=2 (1 new axioms) 
-[img](target/img-Wikidata_Q21167626.png)
- * MEMBER: Wikidata_Q21167626
- * MEMBER: ECTO_0001599 exposure to acrolein
- * ECTO_0001599 exposure to acrolein EquivalentTo Wikidata_Q21167626 Pr= 0.85
-
-
 ## http://purl.obolibrary.org/obo/ECTO_0001729
 
  * __Pr(G)__=0.8500000000000001 CONFIDENCE=16.0 Success:true
@@ -2693,16 +2655,6 @@
  * MEMBER: ECTO_0001479 exposure to N-methylperfluorooctane sulfonamidoacetic acid
  * MEMBER: MRE_0000194
  * ECTO_0001479 exposure to N-methylperfluorooctane sulfonamidoacetic acid EquivalentTo MRE_0000194 Pr= 0.5
-
-
-## http://purl.obolibrary.org/obo/Wikidata_Q21174345
-
- * __Pr(G)__=0.8500000000000001 CONFIDENCE=16.0 Success:true
- * __SIZE__=2 (1 new axioms) 
-[img](target/img-Wikidata_Q21174345.png)
- * MEMBER: Wikidata_Q21174345
- * MEMBER: ECTO_0002346 exposure to glycerol
- * ECTO_0002346 exposure to glycerol EquivalentTo Wikidata_Q21174345 Pr= 0.85
 
 
 ## http://purl.obolibrary.org/obo/ECTO_0002315
@@ -2768,6 +2720,18 @@
  * MEMBER: ECTO_0001964 exposure to 4-Nitropyrene
  * MEMBER: NCIT_C44325
  * ECTO_0001964 exposure to 4-Nitropyrene EquivalentTo NCIT_C44325 Pr= 0.85
+
+
+## http://purl.obolibrary.org/obo/ECTO_0000247
+
+ * __Pr(G)__=0.4829545454545454 CONFIDENCE=1.5000000000000009 Success:true
+ * __SIZE__=3 (2 new axioms) 
+[img](target/img-ECTO_0000247.png)
+ * MEMBER: ECTO_0000247 exposure to DDT
+ * MEMBER: Wikidata_Q21174131
+ * MEMBER: MRE_0000101
+ * ECTO_0000247 exposure to DDT EquivalentTo Wikidata_Q21174131 Pr= 0.85
+ * ECTO_0000247 exposure to DDT EquivalentTo MRE_0000101 Pr= 0.5
 
 
 ## http://purl.obolibrary.org/obo/ECTO_0002124
@@ -2853,6 +2817,19 @@
  * ECTO_0001092 cigar smoking related exposure EquivalentTo MRE_0000047 Pr= 0.7
 
 
+## http://purl.obolibrary.org/obo/MRE_0000147
+
+ * __Pr(G)__=0.8348343245539509 CONFIDENCE=16.00000000000002 Success:true
+ * __SIZE__=3 (3 new axioms) 
+[img](target/img-MRE_0000147.png)
+ * MEMBER: MRE_0000147
+ * MEMBER: ECTO_0001139 exposure to chlorobenzene
+ * MEMBER: Wikidata_Q21173557
+ * ECTO_0001139 exposure to chlorobenzene EquivalentTo Wikidata_Q21173557 Pr= 0.85
+ * MRE_0000147 EquivalentTo Wikidata_Q21173557 Pr= 0.85
+ * ECTO_0001139 exposure to chlorobenzene EquivalentTo MRE_0000147 Pr= 0.85
+
+
 ## http://purl.obolibrary.org/obo/ECTO_0002263
 
  * __Pr(G)__=0.5000000000000001 CONFIDENCE=1.5000000000000004 Success:true
@@ -2923,14 +2900,15 @@
  * ECTO_0001843 exposure to osmium tetroxide EquivalentTo Wikidata_Q21175021 Pr= 0.85
 
 
-## http://purl.obolibrary.org/obo/ECTO_0002095
+## http://purl.obolibrary.org/obo/ECTO_0001606
 
- * __Pr(G)__=0.5000000000000001 CONFIDENCE=1.5000000000000004 Success:true
- * __SIZE__=2 (1 new axioms) 
-[img](target/img-ECTO_0002095.png)
- * MEMBER: ECTO_0002095 exposure to epsilon-caprolactam
- * MEMBER: Wikidata_Q21173356
- * ECTO_0002095 exposure to epsilon-caprolactam EquivalentTo Wikidata_Q21173356 Pr= 0.5
+ * __Pr(G)__=0.3958090803259604 CONFIDENCE=0.4814814814814812 Success:true
+ * __SIZE__=3 (1 new axioms) 
+[img](target/img-ECTO_0001606.png)
+ * MEMBER: ECTO_0001606 exposure to aluminium atom
+ * MEMBER: Wikidata_Q21167711
+ * MEMBER: ECTO_0000146 exposure to aluminium cation
+ * ECTO_0000146 exposure to aluminium cation EquivalentTo Wikidata_Q21167711 Pr= 0.85
 
 
 ## http://purl.obolibrary.org/obo/ECTO_0002101
@@ -2941,6 +2919,16 @@
  * MEMBER: ECTO_0002101 exposure to caesium hydroxide
  * MEMBER: Wikidata_Q21173546
  * ECTO_0002101 exposure to caesium hydroxide EquivalentTo Wikidata_Q21173546 Pr= 0.85
+
+
+## http://purl.obolibrary.org/obo/ECTO_0002249
+
+ * __Pr(G)__=0.8500000000000001 CONFIDENCE=16.0 Success:true
+ * __SIZE__=2 (1 new axioms) 
+[img](target/img-ECTO_0002249.png)
+ * MEMBER: ECTO_0002249 exposure to silane
+ * MEMBER: Wikidata_Q21175302
+ * ECTO_0002249 exposure to silane EquivalentTo Wikidata_Q21175302 Pr= 0.85
 
 
 ## http://purl.obolibrary.org/obo/ECTO_0001882
@@ -3019,16 +3007,6 @@
  * ECTO_0001738 exposure to 1,4-dioxane EquivalentTo NCIT_C44298 Pr= 0.85
 
 
-## http://purl.obolibrary.org/obo/Wikidata_Q21175062
-
- * __Pr(G)__=0.8500000000000001 CONFIDENCE=16.0 Success:true
- * __SIZE__=2 (1 new axioms) 
-[img](target/img-Wikidata_Q21175062.png)
- * MEMBER: Wikidata_Q21175062
- * MEMBER: ECTO_0001867 exposure to picric acid
- * ECTO_0001867 exposure to picric acid EquivalentTo Wikidata_Q21175062 Pr= 0.85
-
-
 ## http://purl.obolibrary.org/obo/Wikidata_Q21173359
 
  * __Pr(G)__=0.8500000000000001 CONFIDENCE=16.0 Success:true
@@ -3049,6 +3027,16 @@
  * ECTO_0001899 exposure to temephos EquivalentTo Wikidata_Q21175337 Pr= 0.5
 
 
+## http://purl.obolibrary.org/obo/ECTO_0002176
+
+ * __Pr(G)__=0.5000000000000001 CONFIDENCE=1.5000000000000004 Success:true
+ * __SIZE__=2 (1 new axioms) 
+[img](target/img-ECTO_0002176.png)
+ * MEMBER: ECTO_0002176 exposure to 1H-indene
+ * MEMBER: Wikidata_Q21174764
+ * ECTO_0002176 exposure to 1H-indene EquivalentTo Wikidata_Q21174764 Pr= 0.5
+
+
 ## http://purl.obolibrary.org/obo/ECTO_0001949
 
  * __Pr(G)__=0.2221187845529451 CONFIDENCE=0.33333333333333304 Success:true
@@ -3059,6 +3047,16 @@
  * MEMBER: Wikidata_Q21175303
  * MEMBER: ECTO_0000158 exposure to silver cation
  * ECTO_0000158 exposure to silver cation EquivalentTo Wikidata_Q21175303 Pr= 0.85
+
+
+## http://purl.obolibrary.org/obo/Wikidata_Q21175010
+
+ * __Pr(G)__=0.8500000000000001 CONFIDENCE=16.0 Success:true
+ * __SIZE__=2 (1 new axioms) 
+[img](target/img-Wikidata_Q21175010.png)
+ * MEMBER: Wikidata_Q21175010
+ * MEMBER: ECTO_0001220 exposure to 2-nitrotoluene
+ * ECTO_0001220 exposure to 2-nitrotoluene EquivalentTo Wikidata_Q21175010 Pr= 0.85
 
 
 ## http://purl.obolibrary.org/obo/ECTO_0001923
@@ -3091,16 +3089,6 @@
  * ECTO_0002064 exposure to acetic anhydride EquivalentTo Wikidata_Q21167543 Pr= 0.85
 
 
-## http://purl.obolibrary.org/obo/ECTO_0002157
-
- * __Pr(G)__=0.8500000000000001 CONFIDENCE=16.0 Success:true
- * __SIZE__=2 (1 new axioms) 
-[img](target/img-ECTO_0002157.png)
- * MEMBER: ECTO_0002157 exposure to fenamiphos
- * MEMBER: Wikidata_Q21174312
- * ECTO_0002157 exposure to fenamiphos EquivalentTo Wikidata_Q21174312 Pr= 0.85
-
-
 ## http://purl.obolibrary.org/obo/NCIT_C44443
 
  * __Pr(G)__=0.8500000000000001 CONFIDENCE=16.0 Success:true
@@ -3127,16 +3115,6 @@
  * MRE_0000121 EquivalentTo Wikidata_Q21175297 Pr= 0.85
 
 
-## http://purl.obolibrary.org/obo/ECTO_0002176
-
- * __Pr(G)__=0.5000000000000001 CONFIDENCE=1.5000000000000004 Success:true
- * __SIZE__=2 (1 new axioms) 
-[img](target/img-ECTO_0002176.png)
- * MEMBER: ECTO_0002176 exposure to 1H-indene
- * MEMBER: Wikidata_Q21174764
- * ECTO_0002176 exposure to 1H-indene EquivalentTo Wikidata_Q21174764 Pr= 0.5
-
-
 ## http://purl.obolibrary.org/obo/MRE_0000169
 
  * __Pr(G)__=0.8500000000000001 CONFIDENCE=16.0 Success:true
@@ -3145,16 +3123,6 @@
  * MEMBER: MRE_0000169
  * MEMBER: ECTO_0001550 exposure to 2,2',4,4',5,6'-Hexabromodiphenyl ether
  * ECTO_0001550 exposure to 2,2',4,4',5,6'-Hexabromodiphenyl ether EquivalentTo MRE_0000169 Pr= 0.85
-
-
-## http://purl.obolibrary.org/obo/Wikidata_Q21175026
-
- * __Pr(G)__=0.8500000000000001 CONFIDENCE=16.0 Success:true
- * __SIZE__=2 (1 new axioms) 
-[img](target/img-Wikidata_Q21175026.png)
- * MEMBER: Wikidata_Q21175026
- * MEMBER: ECTO_0000361 exposure to paraquat
- * ECTO_0000361 exposure to paraquat EquivalentTo Wikidata_Q21175026 Pr= 0.85
 
 
 ## http://purl.obolibrary.org/obo/Wikidata_Q21174641
@@ -3429,16 +3397,6 @@
  * ECTO_0001669 exposure to chloroprene EquivalentTo NCIT_C44356 Pr= 0.85
 
 
-## http://purl.obolibrary.org/obo/Wikidata_Q21174769
-
- * __Pr(G)__=0.5000000000000001 CONFIDENCE=1.5000000000000004 Success:true
- * __SIZE__=2 (1 new axioms) 
-[img](target/img-Wikidata_Q21174769.png)
- * MEMBER: Wikidata_Q21174769
- * MEMBER: ECTO_0002178 exposure to ferric oxide
- * ECTO_0002178 exposure to ferric oxide EquivalentTo Wikidata_Q21174769 Pr= 0.5
-
-
 ## http://purl.obolibrary.org/obo/ECTO_0001939
 
  * __Pr(G)__=0.8348343245539509 CONFIDENCE=16.00000000000002 Success:true
@@ -3492,16 +3450,6 @@
  * ECTO_0002259 exposure to 1,4-diphenylbenzene EquivalentTo Wikidata_Q21175341 Pr= 0.5
 
 
-## http://purl.obolibrary.org/obo/ECTO_0002113
-
- * __Pr(G)__=0.8500000000000001 CONFIDENCE=16.0 Success:true
- * __SIZE__=2 (1 new axioms) 
-[img](target/img-ECTO_0002113.png)
- * MEMBER: ECTO_0002113 exposure to cumene
- * MEMBER: Wikidata_Q21174107
- * ECTO_0002113 exposure to cumene EquivalentTo Wikidata_Q21174107 Pr= 0.85
-
-
 ## http://purl.obolibrary.org/obo/ECTO_0001833
 
  * __Pr(G)__=0.8348343245539509 CONFIDENCE=16.00000000000002 Success:true
@@ -3515,6 +3463,16 @@
  * ECTO_0001833 exposure to N-nitrosodimethylamine EquivalentTo NCIT_C44417 Pr= 0.85
 
 
+## http://purl.obolibrary.org/obo/ECTO_0002157
+
+ * __Pr(G)__=0.8500000000000001 CONFIDENCE=16.0 Success:true
+ * __SIZE__=2 (1 new axioms) 
+[img](target/img-ECTO_0002157.png)
+ * MEMBER: ECTO_0002157 exposure to fenamiphos
+ * MEMBER: Wikidata_Q21174312
+ * ECTO_0002157 exposure to fenamiphos EquivalentTo Wikidata_Q21174312 Pr= 0.85
+
+
 ## http://purl.obolibrary.org/obo/ECTO_0001129
 
  * __Pr(G)__=0.8500000000000001 CONFIDENCE=16.0 Success:true
@@ -3523,6 +3481,16 @@
  * MEMBER: ECTO_0001129 prenatal exposure to drug
  * MEMBER: MRE_0000036
  * ECTO_0001129 prenatal exposure to drug EquivalentTo MRE_0000036 Pr= 0.85
+
+
+## http://purl.obolibrary.org/obo/ECTO_0001879
+
+ * __Pr(G)__=0.8500000000000001 CONFIDENCE=16.0 Success:true
+ * __SIZE__=2 (1 new axioms) 
+[img](target/img-ECTO_0001879.png)
+ * MEMBER: ECTO_0001879 exposure to propoxur
+ * MEMBER: Wikidata_Q21175079
+ * ECTO_0001879 exposure to propoxur EquivalentTo Wikidata_Q21175079 Pr= 0.85
 
 
 ## http://purl.obolibrary.org/obo/ECTO_0002321
@@ -3566,6 +3534,19 @@
  * MEMBER: PECO_0000304
  * MEMBER: ECTO_0000303 exposure to tert-butyl hydroperoxide
  * ECTO_0000303 exposure to tert-butyl hydroperoxide EquivalentTo PECO_0000304 Pr= 0.7
+
+
+## http://purl.obolibrary.org/obo/ECTO_0001535
+
+ * __Pr(G)__=0.8348343245539509 CONFIDENCE=16.00000000000002 Success:true
+ * __SIZE__=3 (3 new axioms) 
+[img](target/img-ECTO_0001535.png)
+ * MEMBER: ECTO_0001535 exposure to 1,1,2-trichloroethane
+ * MEMBER: MRE_0000134
+ * MEMBER: Wikidata_Q21175383
+ * MRE_0000134 EquivalentTo Wikidata_Q21175383 Pr= 0.85
+ * ECTO_0001535 exposure to 1,1,2-trichloroethane EquivalentTo MRE_0000134 Pr= 0.85
+ * ECTO_0001535 exposure to 1,1,2-trichloroethane EquivalentTo Wikidata_Q21175383 Pr= 0.85
 
 
 ## http://purl.obolibrary.org/obo/Wikidata_Q21174168
@@ -3701,6 +3682,16 @@
  * ECTO_0002294 exposure to sodium fluoride EquivalentTo Wikidata_Q21175309 Pr= 0.85
 
 
+## http://purl.obolibrary.org/obo/Wikidata_Q21175322
+
+ * __Pr(G)__=0.8500000000000001 CONFIDENCE=16.0 Success:true
+ * __SIZE__=2 (1 new axioms) 
+[img](target/img-Wikidata_Q21175322.png)
+ * MEMBER: Wikidata_Q21175322
+ * MEMBER: ECTO_0000161 exposure to sulfur dioxide
+ * ECTO_0000161 exposure to sulfur dioxide EquivalentTo Wikidata_Q21175322 Pr= 0.85
+
+
 ## http://purl.obolibrary.org/obo/ECTO_0001695
 
  * __Pr(G)__=0.8500000000000001 CONFIDENCE=16.0 Success:true
@@ -3821,16 +3812,6 @@
  * ECTO_0002304 exposure to organochlorine pesticide EquivalentTo MRE_0000087 Pr= 0.5
 
 
-## http://purl.obolibrary.org/obo/Wikidata_Q21174773
-
- * __Pr(G)__=0.5000000000000001 CONFIDENCE=1.5000000000000004 Success:true
- * __SIZE__=2 (1 new axioms) 
-[img](target/img-Wikidata_Q21174773.png)
- * MEMBER: Wikidata_Q21174773
- * MEMBER: ECTO_0002180 exposure to iron(2+) sulfate (anhydrous)
- * ECTO_0002180 exposure to iron(2+) sulfate (anhydrous) EquivalentTo Wikidata_Q21174773 Pr= 0.5
-
-
 ## http://purl.obolibrary.org/obo/ECTO_0001573
 
  * __Pr(G)__=0.07563511637000694 CONFIDENCE=0.0 Success:true
@@ -3863,17 +3844,6 @@
  * MEMBER: ECTO_0001532 exposure to fluorene
  * MEMBER: MRE_0000131
  * ECTO_0001532 exposure to fluorene EquivalentTo MRE_0000131 Pr= 0.85
-
-
-## http://purl.obolibrary.org/obo/ECTO_0002183
-
- * __Pr(G)__=0.31452358926919516 CONFIDENCE=0.4814814814814812 Success:true
- * __SIZE__=3 (1 new axioms) 
-[img](target/img-ECTO_0002183.png)
- * MEMBER: ECTO_0002183 exposure to isobutane
- * MEMBER: Wikidata_Q21174778
- * MEMBER: ECTO_0001779 exposure to isobutyraldehyde
- * ECTO_0002183 exposure to isobutane EquivalentTo Wikidata_Q21174778 Pr= 0.85
 
 
 ## http://purl.obolibrary.org/obo/Wikidata_Q21174175
@@ -3997,6 +3967,16 @@
  * ECTO_0001773 exposure to hydrogen chloride EquivalentTo Wikidata_Q21174753 Pr= 0.85
 
 
+## http://purl.obolibrary.org/obo/Wikidata_Q21174301
+
+ * __Pr(G)__=0.8500000000000001 CONFIDENCE=16.0 Success:true
+ * __SIZE__=2 (1 new axioms) 
+[img](target/img-Wikidata_Q21174301.png)
+ * MEMBER: Wikidata_Q21174301
+ * MEMBER: ECTO_0002155 exposure to diethyl ether
+ * ECTO_0002155 exposure to diethyl ether EquivalentTo Wikidata_Q21174301 Pr= 0.85
+
+
 ## http://purl.obolibrary.org/obo/ECTO_0001558
 
  * __Pr(G)__=0.8500000000000001 CONFIDENCE=16.0 Success:true
@@ -4025,16 +4005,6 @@
  * MEMBER: Wikidata_Q21174630
  * MEMBER: ECTO_0002164 exposure to halothane
  * ECTO_0002164 exposure to halothane EquivalentTo Wikidata_Q21174630 Pr= 0.85
-
-
-## http://purl.obolibrary.org/obo/ECTO_0002345
-
- * __Pr(G)__=0.8500000000000001 CONFIDENCE=16.0 Success:true
- * __SIZE__=2 (1 new axioms) 
-[img](target/img-ECTO_0002345.png)
- * MEMBER: ECTO_0002345 exposure to glutaraldehyde
- * MEMBER: Wikidata_Q21174343
- * ECTO_0002345 exposure to glutaraldehyde EquivalentTo Wikidata_Q21174343 Pr= 0.85
 
 
 ## http://purl.obolibrary.org/obo/Wikidata_Q21175000
@@ -4067,14 +4037,14 @@
  * ECTO_0002349 exposure to indium atom EquivalentTo Wikidata_Q21174765 Pr= 0.5
 
 
-## http://purl.obolibrary.org/obo/ECTO_0002249
+## http://purl.obolibrary.org/obo/Wikidata_Q21513721
 
  * __Pr(G)__=0.8500000000000001 CONFIDENCE=16.0 Success:true
  * __SIZE__=2 (1 new axioms) 
-[img](target/img-ECTO_0002249.png)
- * MEMBER: ECTO_0002249 exposure to silane
- * MEMBER: Wikidata_Q21175302
- * ECTO_0002249 exposure to silane EquivalentTo Wikidata_Q21175302 Pr= 0.85
+[img](target/img-Wikidata_Q21513721.png)
+ * MEMBER: Wikidata_Q21513721
+ * MEMBER: ECTO_0002295 exposure to mechlorethamine
+ * ECTO_0002295 exposure to mechlorethamine EquivalentTo Wikidata_Q21513721 Pr= 0.85
 
 
 ## http://purl.obolibrary.org/obo/ECTO_0002090
@@ -4115,26 +4085,6 @@
  * MEMBER: ECTO_0002323 exposure to chloroacetaldehyde
  * MEMBER: Wikidata_Q21173554
  * ECTO_0002323 exposure to chloroacetaldehyde EquivalentTo Wikidata_Q21173554 Pr= 0.85
-
-
-## http://purl.obolibrary.org/obo/ECTO_0001879
-
- * __Pr(G)__=0.8500000000000001 CONFIDENCE=16.0 Success:true
- * __SIZE__=2 (1 new axioms) 
-[img](target/img-ECTO_0001879.png)
- * MEMBER: ECTO_0001879 exposure to propoxur
- * MEMBER: Wikidata_Q21175079
- * ECTO_0001879 exposure to propoxur EquivalentTo Wikidata_Q21175079 Pr= 0.85
-
-
-## http://purl.obolibrary.org/obo/ECTO_0001802
-
- * __Pr(G)__=0.8500000000000001 CONFIDENCE=16.0 Success:true
- * __SIZE__=2 (1 new axioms) 
-[img](target/img-ECTO_0001802.png)
- * MEMBER: ECTO_0001802 exposure to methyl isocyanate
- * MEMBER: Wikidata_Q21174923
- * ECTO_0001802 exposure to methyl isocyanate EquivalentTo Wikidata_Q21174923 Pr= 0.85
 
 
 ## http://purl.obolibrary.org/obo/ECTO_0001655
@@ -4217,14 +4167,14 @@
  * ECTO_0001665 exposure to chloroform EquivalentTo Wikidata_Q21173565 Pr= 0.85
 
 
-## http://purl.obolibrary.org/obo/ECTO_0000243
+## http://purl.obolibrary.org/obo/ECTO_0001802
 
  * __Pr(G)__=0.8500000000000001 CONFIDENCE=16.0 Success:true
  * __SIZE__=2 (1 new axioms) 
-[img](target/img-ECTO_0000243.png)
- * MEMBER: ECTO_0000243 exposure to ethanol
- * MEMBER: Wikidata_Q21174271
- * ECTO_0000243 exposure to ethanol EquivalentTo Wikidata_Q21174271 Pr= 0.85
+[img](target/img-ECTO_0001802.png)
+ * MEMBER: ECTO_0001802 exposure to methyl isocyanate
+ * MEMBER: Wikidata_Q21174923
+ * ECTO_0001802 exposure to methyl isocyanate EquivalentTo Wikidata_Q21174923 Pr= 0.85
 
 
 ## http://purl.obolibrary.org/obo/Wikidata_Q21175052
@@ -4253,16 +4203,6 @@
  * ECTO_0000252 exposure to cadmium cation EquivalentTo NCIT_C44349 Pr= 0.85
 
 
-## http://purl.obolibrary.org/obo/ECTO_0001805
-
- * __Pr(G)__=0.8500000000000001 CONFIDENCE=16.0 Success:true
- * __SIZE__=2 (1 new axioms) 
-[img](target/img-ECTO_0001805.png)
- * MEMBER: ECTO_0001805 exposure to methyl methacrylate
- * MEMBER: Wikidata_Q21174926
- * ECTO_0001805 exposure to methyl methacrylate EquivalentTo Wikidata_Q21174926 Pr= 0.85
-
-
 ## http://purl.obolibrary.org/obo/Wikidata_Q21175095
 
  * __Pr(G)__=0.8500000000000001 CONFIDENCE=16.0 Success:true
@@ -4271,19 +4211,6 @@
  * MEMBER: Wikidata_Q21175095
  * MEMBER: ECTO_0000468 exposure to rotenone
  * ECTO_0000468 exposure to rotenone EquivalentTo Wikidata_Q21175095 Pr= 0.85
-
-
-## http://purl.obolibrary.org/obo/NCIT_C44378
-
- * __Pr(G)__=0.8348343245539509 CONFIDENCE=16.00000000000002 Success:true
- * __SIZE__=3 (3 new axioms) 
-[img](target/img-NCIT_C44378.png)
- * MEMBER: NCIT_C44378
- * MEMBER: Wikidata_Q21174199
- * MEMBER: ECTO_0002335 exposure to Dimethylcarbamoyl chloride
- * ECTO_0002335 exposure to Dimethylcarbamoyl chloride EquivalentTo NCIT_C44378 Pr= 0.85
- * NCIT_C44378 EquivalentTo Wikidata_Q21174199 Pr= 0.85
- * ECTO_0002335 exposure to Dimethylcarbamoyl chloride EquivalentTo Wikidata_Q21174199 Pr= 0.85
 
 
 ## http://purl.obolibrary.org/obo/ECTO_0002363
@@ -4334,6 +4261,16 @@
  * MEMBER: MRE_0000088
  * MEMBER: ECTO_0001528 exposure to Heptachlor epoxide
  * ECTO_0001528 exposure to Heptachlor epoxide EquivalentTo MRE_0000088 Pr= 0.85
+
+
+## http://purl.obolibrary.org/obo/Wikidata_Q21174769
+
+ * __Pr(G)__=0.5000000000000001 CONFIDENCE=1.5000000000000004 Success:true
+ * __SIZE__=2 (1 new axioms) 
+[img](target/img-Wikidata_Q21174769.png)
+ * MEMBER: Wikidata_Q21174769
+ * MEMBER: ECTO_0002178 exposure to ferric oxide
+ * ECTO_0002178 exposure to ferric oxide EquivalentTo Wikidata_Q21174769 Pr= 0.5
 
 
 ## http://purl.obolibrary.org/obo/Wikidata_Q21174633
@@ -4387,16 +4324,6 @@
  * ECTO_0001819 exposure to nitric acid EquivalentTo Wikidata_Q21174994 Pr= 0.85
 
 
-## http://purl.obolibrary.org/obo/Wikidata_Q21174255
-
- * __Pr(G)__=0.8500000000000001 CONFIDENCE=16.0 Success:true
- * __SIZE__=2 (1 new axioms) 
-[img](target/img-Wikidata_Q21174255.png)
- * MEMBER: Wikidata_Q21174255
- * MEMBER: ECTO_0002339 exposure to EPN
- * ECTO_0002339 exposure to EPN EquivalentTo Wikidata_Q21174255 Pr= 0.85
-
-
 ## http://purl.obolibrary.org/obo/ECTO_0002270
 
  * __Pr(G)__=0.5000000000000001 CONFIDENCE=1.5000000000000004 Success:true
@@ -4405,6 +4332,19 @@
  * MEMBER: ECTO_0002270 exposure to 1,3,5-trimethylbenzene
  * MEMBER: Wikidata_Q21175394
  * ECTO_0002270 exposure to 1,3,5-trimethylbenzene EquivalentTo Wikidata_Q21175394 Pr= 0.5
+
+
+## http://purl.obolibrary.org/obo/Wikidata_Q21167862
+
+ * __Pr(G)__=0.8348343245539509 CONFIDENCE=16.00000000000002 Success:true
+ * __SIZE__=3 (3 new axioms) 
+[img](target/img-Wikidata_Q21167862.png)
+ * MEMBER: Wikidata_Q21167862
+ * MEMBER: NCIT_C55816
+ * MEMBER: ECTO_0001618 exposure to asbestos
+ * ECTO_0001618 exposure to asbestos EquivalentTo Wikidata_Q21167862 Pr= 0.85
+ * ECTO_0001618 exposure to asbestos EquivalentTo NCIT_C55816 Pr= 0.85
+ * NCIT_C55816 EquivalentTo Wikidata_Q21167862 Pr= 0.85
 
 
 ## http://purl.obolibrary.org/obo/Wikidata_Q21174326
@@ -4497,6 +4437,16 @@
  * ECTO_0001555 exposure to daidzein EquivalentTo MRE_0000197 Pr= 0.85
 
 
+## http://purl.obolibrary.org/obo/Wikidata_Q21173354
+
+ * __Pr(G)__=0.8500000000000001 CONFIDENCE=16.0 Success:true
+ * __SIZE__=2 (1 new axioms) 
+[img](target/img-Wikidata_Q21173354.png)
+ * MEMBER: Wikidata_Q21173354
+ * MEMBER: ECTO_0002093 exposure to calcium sulfate
+ * ECTO_0002093 exposure to calcium sulfate EquivalentTo Wikidata_Q21173354 Pr= 0.85
+
+
 ## http://purl.obolibrary.org/obo/Wikidata_Q21174278
 
  * __Pr(G)__=0.8500000000000001 CONFIDENCE=16.0 Success:true
@@ -4505,6 +4455,16 @@
  * MEMBER: Wikidata_Q21174278
  * MEMBER: ECTO_0002340 exposure to heptan-3-one
  * ECTO_0002340 exposure to heptan-3-one EquivalentTo Wikidata_Q21174278 Pr= 0.85
+
+
+## http://purl.obolibrary.org/obo/Wikidata_Q21174130
+
+ * __Pr(G)__=0.5000000000000001 CONFIDENCE=1.5000000000000004 Success:true
+ * __SIZE__=2 (1 new axioms) 
+[img](target/img-Wikidata_Q21174130.png)
+ * MEMBER: Wikidata_Q21174130
+ * MEMBER: ECTO_0001198 exposure to 2,4-D
+ * ECTO_0001198 exposure to 2,4-D EquivalentTo Wikidata_Q21174130 Pr= 0.5
 
 
 ## http://purl.obolibrary.org/obo/Wikidata_Q21175005
@@ -4550,6 +4510,16 @@
  * ECTO_0002368 exposure to Pindone EquivalentTo Wikidata_Q21175063 Pr= 0.85
 
 
+## http://purl.obolibrary.org/obo/Wikidata_Q21175062
+
+ * __Pr(G)__=0.8500000000000001 CONFIDENCE=16.0 Success:true
+ * __SIZE__=2 (1 new axioms) 
+[img](target/img-Wikidata_Q21175062.png)
+ * MEMBER: Wikidata_Q21175062
+ * MEMBER: ECTO_0001867 exposure to picric acid
+ * ECTO_0001867 exposure to picric acid EquivalentTo Wikidata_Q21175062 Pr= 0.85
+
+
 ## http://purl.obolibrary.org/obo/NCIT_C44436
 
  * __Pr(G)__=0.5000000000000001 CONFIDENCE=1.5000000000000004 Success:true
@@ -4583,16 +4553,6 @@
  * PECO_0000059 EquivalentTo ZECO_0000111 chemical treatment Pr= 0.65
  * ECTO_0000231 exposure to chemical entity EquivalentTo NCIT_C36290 Pr= 0.85
  * ECTO_0000231 exposure to chemical entity EquivalentTo ZECO_0000111 chemical treatment Pr= 0.85
-
-
-## http://purl.obolibrary.org/obo/ECTO_0002114
-
- * __Pr(G)__=0.8500000000000001 CONFIDENCE=16.0 Success:true
- * __SIZE__=2 (1 new axioms) 
-[img](target/img-ECTO_0002114.png)
- * MEMBER: ECTO_0002114 exposure to cyanamide
- * MEMBER: Wikidata_Q21174109
- * ECTO_0002114 exposure to cyanamide EquivalentTo Wikidata_Q21174109 Pr= 0.85
 
 
 ## http://purl.obolibrary.org/obo/Wikidata_Q21174350
@@ -4634,6 +4594,16 @@
  * MEMBER: Wikidata_Q21173324
  * MEMBER: ECTO_0002085 exposure to butyl acetate
  * ECTO_0002085 exposure to butyl acetate EquivalentTo Wikidata_Q21173324 Pr= 0.85
+
+
+## http://purl.obolibrary.org/obo/Wikidata_Q21174303
+
+ * __Pr(G)__=0.8500000000000001 CONFIDENCE=16.0 Success:true
+ * __SIZE__=2 (1 new axioms) 
+[img](target/img-Wikidata_Q21174303.png)
+ * MEMBER: Wikidata_Q21174303
+ * MEMBER: ECTO_0002156 exposure to ethyl formate
+ * ECTO_0002156 exposure to ethyl formate EquivalentTo Wikidata_Q21174303 Pr= 0.85
 
 
 ## http://purl.obolibrary.org/obo/Wikidata_Q7807844
@@ -4689,6 +4659,16 @@
  * ECTO_0001184 exposure to aldrin EquivalentTo Wikidata_Q21167666 Pr= 0.85
 
 
+## http://purl.obolibrary.org/obo/ECTO_0001765
+
+ * __Pr(G)__=0.8500000000000001 CONFIDENCE=16.0 Success:true
+ * __SIZE__=2 (1 new axioms) 
+[img](target/img-ECTO_0001765.png)
+ * MEMBER: ECTO_0001765 exposure to furan
+ * MEMBER: NCIT_C44385
+ * ECTO_0001765 exposure to furan EquivalentTo NCIT_C44385 Pr= 0.85
+
+
 ## http://purl.obolibrary.org/obo/Wikidata_Q21173314
 
  * __Pr(G)__=0.8500000000000001 CONFIDENCE=16.0 Success:true
@@ -4719,41 +4699,14 @@
  * ECTO_0002218 exposure to dinitrogen oxide EquivalentTo Wikidata_Q21175013 Pr= 0.5
 
 
-## http://purl.obolibrary.org/obo/NCIT_C17941
+## http://purl.obolibrary.org/obo/Wikidata_Q21175305
 
- * __Pr(G)__=0.008833029126020419 CONFIDENCE=0.11111111111111183 Success:true
- * __SIZE__=13 (9 new axioms) 
-[img](target/img-NCIT_C17941.png)
- * MEMBER: NCIT_C17941
- * MEMBER: Wikidata_Q35120
- * MEMBER: Wikidata_Q6671777
- * MEMBER: MRE_0000000
- * MEMBER: NCIT_C61398
- * MEMBER: MRE_0000079
- * MEMBER: MRE_0000065
- * MEMBER: ECTO_0000001 exposure to radiation
- * MEMBER: Wikidata_Q114953
- * MEMBER: Wikidata_Q1190554
- * MEMBER: ZECO_0000100 conditions
- * MEMBER: ZECO_0000104 experimental conditions
- * MEMBER: ZECO_0000208 radiation
- * MESSAGE: Used heuristic to estimate 9 probabilistic edges - confidence may be negative. |Reduced| = 9
- * MESSAGE: ELIMINATED_UNSATISFIABLE: ECTO_0000001 exposure to radiation EquivalentTo Wikidata_Q35120
- * MESSAGE: ELIMINATED_UNSATISFIABLE: NCIT_C61398 EquivalentTo Wikidata_Q35120
- * MESSAGE: ELIMINATED_UNSATISFIABLE: ECTO_0000001 exposure to radiation EquivalentTo MRE_0000000
- * MESSAGE: ELIMINATED_UNSATISFIABLE: MRE_0000065 EquivalentTo ZECO_0000104 experimental conditions
- * MESSAGE: ELIMINATED_UNSATISFIABLE: ECTO_0000001 exposure to radiation EquivalentTo Wikidata_Q6671777
- * MESSAGE: ELIMINATED_UNSATISFIABLE: ECTO_0000001 exposure to radiation EquivalentTo NCIT_C17941
- * MESSAGE: ELIMINATED_UNSATISFIABLE: Wikidata_Q35120 EquivalentTo ZECO_0000208 radiation
- * ECTO_0000001 exposure to radiation EquivalentTo ZECO_0000208 radiation Pr= 0.85
- * MRE_0000065 EquivalentTo ZECO_0000208 radiation Pr= 0.85
- * MRE_0000000 EquivalentTo ZECO_0000100 conditions Pr= 0.85
- * NCIT_C61398 EquivalentTo ZECO_0000208 radiation Pr= 0.85
- * MRE_0000079 EquivalentTo Wikidata_Q6671777 Pr= 0.85
- * NCIT_C17941 EquivalentTo Wikidata_Q35120 Pr= 0.85
- * MRE_0000079 EquivalentTo ZECO_0000104 experimental conditions Pr= 0.85
- * MRE_0000000 EquivalentTo NCIT_C17941 Pr= 0.85
- * NCIT_C61398 EquivalentTo Wikidata_Q114953 Pr= 0.85
+ * __Pr(G)__=0.5000000000000001 CONFIDENCE=1.5000000000000004 Success:true
+ * __SIZE__=2 (1 new axioms) 
+[img](target/img-Wikidata_Q21175305.png)
+ * MEMBER: Wikidata_Q21175305
+ * MEMBER: ECTO_0002250 exposure to trisodium hexafluoroaluminate
+ * ECTO_0002250 exposure to trisodium hexafluoroaluminate EquivalentTo Wikidata_Q21175305 Pr= 0.5
 
 
 ## http://purl.obolibrary.org/obo/Wikidata_Q21167614
@@ -4766,6 +4719,16 @@
  * ECTO_0002069 exposure to acetylsalicylic acid EquivalentTo Wikidata_Q21167614 Pr= 0.85
 
 
+## http://purl.obolibrary.org/obo/ECTO_0002114
+
+ * __Pr(G)__=0.8500000000000001 CONFIDENCE=16.0 Success:true
+ * __SIZE__=2 (1 new axioms) 
+[img](target/img-ECTO_0002114.png)
+ * MEMBER: ECTO_0002114 exposure to cyanamide
+ * MEMBER: Wikidata_Q21174109
+ * ECTO_0002114 exposure to cyanamide EquivalentTo Wikidata_Q21174109 Pr= 0.85
+
+
 ## http://purl.obolibrary.org/obo/ECTO_0002228
 
  * __Pr(G)__=0.5000000000000001 CONFIDENCE=1.5000000000000004 Success:true
@@ -4776,14 +4739,14 @@
  * ECTO_0002228 exposure to 10H-phenothiazine EquivalentTo Wikidata_Q21175042 Pr= 0.5
 
 
-## http://purl.obolibrary.org/obo/Wikidata_Q21513721
+## http://purl.obolibrary.org/obo/ECTO_0002095
 
- * __Pr(G)__=0.8500000000000001 CONFIDENCE=16.0 Success:true
+ * __Pr(G)__=0.5000000000000001 CONFIDENCE=1.5000000000000004 Success:true
  * __SIZE__=2 (1 new axioms) 
-[img](target/img-Wikidata_Q21513721.png)
- * MEMBER: Wikidata_Q21513721
- * MEMBER: ECTO_0002295 exposure to mechlorethamine
- * ECTO_0002295 exposure to mechlorethamine EquivalentTo Wikidata_Q21513721 Pr= 0.85
+[img](target/img-ECTO_0002095.png)
+ * MEMBER: ECTO_0002095 exposure to epsilon-caprolactam
+ * MEMBER: Wikidata_Q21173356
+ * ECTO_0002095 exposure to epsilon-caprolactam EquivalentTo Wikidata_Q21173356 Pr= 0.5
 
 
 ## http://purl.obolibrary.org/obo/Wikidata_Q21175014
@@ -4816,6 +4779,16 @@
  * ECTO_0001596 exposure to acetonitrile EquivalentTo Wikidata_Q21167567 Pr= 0.85
 
 
+## http://purl.obolibrary.org/obo/Wikidata_Q21175408
+
+ * __Pr(G)__=0.5000000000000001 CONFIDENCE=1.5000000000000004 Success:true
+ * __SIZE__=2 (1 new axioms) 
+[img](target/img-Wikidata_Q21175408.png)
+ * MEMBER: Wikidata_Q21175408
+ * MEMBER: ECTO_0002272 exposure to divanadium pentaoxide
+ * ECTO_0002272 exposure to divanadium pentaoxide EquivalentTo Wikidata_Q21175408 Pr= 0.5
+
+
 ## http://purl.obolibrary.org/obo/ECTO_0002103
 
  * __Pr(G)__=0.5000000000000001 CONFIDENCE=1.5000000000000004 Success:true
@@ -4846,29 +4819,6 @@
  * ECTO_0002351 exposure to isophorone EquivalentTo Wikidata_Q21174786 Pr= 0.85
 
 
-## http://purl.obolibrary.org/obo/ECTO_0001538
-
- * __Pr(G)__=0.8348343245539509 CONFIDENCE=16.00000000000002 Success:true
- * __SIZE__=3 (3 new axioms) 
-[img](target/img-ECTO_0001538.png)
- * MEMBER: ECTO_0001538 exposure to 1,2-Dibromo-3-chloropropane
- * MEMBER: MRE_0000137
- * MEMBER: Wikidata_Q21174147
- * ECTO_0001538 exposure to 1,2-Dibromo-3-chloropropane EquivalentTo Wikidata_Q21174147 Pr= 0.85
- * ECTO_0001538 exposure to 1,2-Dibromo-3-chloropropane EquivalentTo MRE_0000137 Pr= 0.85
- * MRE_0000137 EquivalentTo Wikidata_Q21174147 Pr= 0.85
-
-
-## http://purl.obolibrary.org/obo/ECTO_0002337
-
- * __Pr(G)__=0.8500000000000001 CONFIDENCE=16.0 Success:true
- * __SIZE__=2 (1 new axioms) 
-[img](target/img-ECTO_0002337.png)
- * MEMBER: ECTO_0002337 exposure to 4-Heptanone
- * MEMBER: Wikidata_Q21174232
- * ECTO_0002337 exposure to 4-Heptanone EquivalentTo Wikidata_Q21174232 Pr= 0.85
-
-
 ## http://purl.obolibrary.org/obo/ECTO_0000199
 
  * __Pr(G)__=0.8500000000000001 CONFIDENCE=16.0 Success:true
@@ -4889,6 +4839,19 @@
  * ECTO_0000014 exposure to ultrasound radiation EquivalentTo ZECO_0000244 ultrasound Pr= 0.85
 
 
+## http://purl.obolibrary.org/obo/ECTO_0002235
+
+ * __Pr(G)__=0.1021659174499387 CONFIDENCE=0.6460905349794233 Success:true
+ * __SIZE__=4 (2 new axioms) 
+[img](target/img-ECTO_0002235.png)
+ * MEMBER: ECTO_0002235 exposure to phosphorus trichloride
+ * MEMBER: Wikidata_Q21175058
+ * MEMBER: ECTO_0002234 exposure to phosphoryl trichloride
+ * MEMBER: Wikidata_Q21175055
+ * ECTO_0002235 exposure to phosphorus trichloride EquivalentTo Wikidata_Q21175058 Pr= 0.5
+ * ECTO_0002234 exposure to phosphoryl trichloride EquivalentTo Wikidata_Q21175055 Pr= 0.5
+
+
 ## http://purl.obolibrary.org/obo/ECTO_0002327
 
  * __Pr(G)__=0.8500000000000001 CONFIDENCE=16.0 Success:true
@@ -4907,6 +4870,16 @@
  * MEMBER: Wikidata_Q21174181
  * MEMBER: ECTO_0002331 exposure to diethylamine
  * ECTO_0002331 exposure to diethylamine EquivalentTo Wikidata_Q21174181 Pr= 0.85
+
+
+## http://purl.obolibrary.org/obo/Wikidata_Q21174345
+
+ * __Pr(G)__=0.8500000000000001 CONFIDENCE=16.0 Success:true
+ * __SIZE__=2 (1 new axioms) 
+[img](target/img-Wikidata_Q21174345.png)
+ * MEMBER: Wikidata_Q21174345
+ * MEMBER: ECTO_0002346 exposure to glycerol
+ * ECTO_0002346 exposure to glycerol EquivalentTo Wikidata_Q21174345 Pr= 0.85
 
 
 ## http://purl.obolibrary.org/obo/Wikidata_Q21175059
@@ -4939,6 +4912,16 @@
  * ECTO_0002402 dietary monosodium glutamate exposure EquivalentTo MRE_0000025 Pr= 0.85
 
 
+## http://purl.obolibrary.org/obo/ECTO_0002094
+
+ * __Pr(G)__=0.8500000000000001 CONFIDENCE=16.0 Success:true
+ * __SIZE__=2 (1 new axioms) 
+[img](target/img-ECTO_0002094.png)
+ * MEMBER: ECTO_0002094 exposure to camphor
+ * MEMBER: Wikidata_Q21173355
+ * ECTO_0002094 exposure to camphor EquivalentTo Wikidata_Q21173355 Pr= 0.85
+
+
 ## http://purl.obolibrary.org/obo/NCIT_C45557
 
  * __Pr(G)__=0.1967741337937947 CONFIDENCE=0.4814814814814812 Success:true
@@ -4953,6 +4936,16 @@
  * ECTO_0000251 exposure to arsenic EquivalentTo NCIT_C45557 Pr= 0.85
 
 
+## http://purl.obolibrary.org/obo/ECTO_0002177
+
+ * __Pr(G)__=0.8500000000000001 CONFIDENCE=16.0 Success:true
+ * __SIZE__=2 (1 new axioms) 
+[img](target/img-ECTO_0002177.png)
+ * MEMBER: ECTO_0002177 exposure to iodoform
+ * MEMBER: Wikidata_Q21174768
+ * ECTO_0002177 exposure to iodoform EquivalentTo Wikidata_Q21174768 Pr= 0.85
+
+
 ## http://purl.obolibrary.org/obo/ECTO_0001541
 
  * __Pr(G)__=0.8500000000000001 CONFIDENCE=16.0 Success:true
@@ -4961,6 +4954,16 @@
  * MEMBER: ECTO_0001541 exposure to cis-1,2-dichloroethene
  * MEMBER: MRE_0000140
  * ECTO_0001541 exposure to cis-1,2-dichloroethene EquivalentTo MRE_0000140 Pr= 0.85
+
+
+## http://purl.obolibrary.org/obo/ECTO_0000002
+
+ * __Pr(G)__=0.8500000000000001 CONFIDENCE=16.0 Success:true
+ * __SIZE__=2 (1 new axioms) 
+[img](target/img-ECTO_0000002.png)
+ * MEMBER: ECTO_0000002 exposure to electromagnetic radiation
+ * MEMBER: ZECO_0000209 electromagnetic radiation
+ * ECTO_0000002 exposure to electromagnetic radiation EquivalentTo ZECO_0000209 electromagnetic radiation Pr= 0.85
 
 
 ## http://purl.obolibrary.org/obo/NCIT_C44299
@@ -4981,6 +4984,16 @@
  * MEMBER: Wikidata_Q21174921
  * MEMBER: ECTO_0002357 exposure to 5-Methyl-2-hexanone
  * ECTO_0002357 exposure to 5-Methyl-2-hexanone EquivalentTo Wikidata_Q21174921 Pr= 0.5
+
+
+## http://purl.obolibrary.org/obo/ECTO_0001805
+
+ * __Pr(G)__=0.8500000000000001 CONFIDENCE=16.0 Success:true
+ * __SIZE__=2 (1 new axioms) 
+[img](target/img-ECTO_0001805.png)
+ * MEMBER: ECTO_0001805 exposure to methyl methacrylate
+ * MEMBER: Wikidata_Q21174926
+ * ECTO_0001805 exposure to methyl methacrylate EquivalentTo Wikidata_Q21174926 Pr= 0.85
 
 
 ## http://purl.obolibrary.org/obo/ECTO_0000509
@@ -5035,16 +5048,6 @@
  * ECTO_0001718 exposure to Diglycidyl resorcinol ether EquivalentTo NCIT_C44376 Pr= 0.85
 
 
-## http://purl.obolibrary.org/obo/ECTO_0000002
-
- * __Pr(G)__=0.8500000000000001 CONFIDENCE=16.0 Success:true
- * __SIZE__=2 (1 new axioms) 
-[img](target/img-ECTO_0000002.png)
- * MEMBER: ECTO_0000002 exposure to electromagnetic radiation
- * MEMBER: ZECO_0000209 electromagnetic radiation
- * ECTO_0000002 exposure to electromagnetic radiation EquivalentTo ZECO_0000209 electromagnetic radiation Pr= 0.85
-
-
 ## http://purl.obolibrary.org/obo/NCIT_C44454
 
  * __Pr(G)__=0.8500000000000001 CONFIDENCE=16.0 Success:true
@@ -5053,17 +5056,6 @@
  * MEMBER: NCIT_C44454
  * MEMBER: ECTO_0001908 exposure to thioacetamide
  * ECTO_0001908 exposure to thioacetamide EquivalentTo NCIT_C44454 Pr= 0.85
-
-
-## http://purl.obolibrary.org/obo/ECTO_0001606
-
- * __Pr(G)__=0.3958090803259604 CONFIDENCE=0.4814814814814812 Success:true
- * __SIZE__=3 (1 new axioms) 
-[img](target/img-ECTO_0001606.png)
- * MEMBER: ECTO_0001606 exposure to aluminium atom
- * MEMBER: Wikidata_Q21167711
- * MEMBER: ECTO_0000146 exposure to aluminium cation
- * ECTO_0000146 exposure to aluminium cation EquivalentTo Wikidata_Q21167711 Pr= 0.85
 
 
 ## http://purl.obolibrary.org/obo/ECTO_0001798
@@ -5169,6 +5161,19 @@
  * ECTO_0002104 exposure to bromochloromethane EquivalentTo Wikidata_Q21173560 Pr= 0.85
 
 
+## http://purl.obolibrary.org/obo/MRE_0000154
+
+ * __Pr(G)__=0.8348343245539509 CONFIDENCE=16.00000000000002 Success:true
+ * __SIZE__=3 (3 new axioms) 
+[img](target/img-MRE_0000154.png)
+ * MEMBER: MRE_0000154
+ * MEMBER: ECTO_0001143 exposure to styrene
+ * MEMBER: Wikidata_Q21175318
+ * MRE_0000154 EquivalentTo Wikidata_Q21175318 Pr= 0.85
+ * ECTO_0001143 exposure to styrene EquivalentTo MRE_0000154 Pr= 0.85
+ * ECTO_0001143 exposure to styrene EquivalentTo Wikidata_Q21175318 Pr= 0.85
+
+
 ## http://purl.obolibrary.org/obo/Wikidata_Q21175007
 
  * __Pr(G)__=0.8500000000000001 CONFIDENCE=16.0 Success:true
@@ -5187,6 +5192,16 @@
  * MEMBER: MRE_0000199
  * MEMBER: ECTO_0001557 exposure to Enterolactone
  * ECTO_0001557 exposure to Enterolactone EquivalentTo MRE_0000199 Pr= 0.85
+
+
+## http://purl.obolibrary.org/obo/Wikidata_Q21174920
+
+ * __Pr(G)__=0.5000000000000001 CONFIDENCE=1.5000000000000004 Success:true
+ * __SIZE__=2 (1 new axioms) 
+[img](target/img-Wikidata_Q21174920.png)
+ * MEMBER: Wikidata_Q21174920
+ * MEMBER: ECTO_0001800 exposure to iodomethane
+ * ECTO_0001800 exposure to iodomethane EquivalentTo Wikidata_Q21174920 Pr= 0.5
 
 
 ## http://purl.obolibrary.org/obo/Wikidata_Q21175045
@@ -5242,6 +5257,16 @@
  * ECTO_0002347 exposure to 2-methylpentane-2,4-diol EquivalentTo Wikidata_Q21174746 Pr= 0.5
 
 
+## http://purl.obolibrary.org/obo/ECTO_0000243
+
+ * __Pr(G)__=0.8500000000000001 CONFIDENCE=16.0 Success:true
+ * __SIZE__=2 (1 new axioms) 
+[img](target/img-ECTO_0000243.png)
+ * MEMBER: ECTO_0000243 exposure to ethanol
+ * MEMBER: Wikidata_Q21174271
+ * ECTO_0000243 exposure to ethanol EquivalentTo Wikidata_Q21174271 Pr= 0.85
+
+
 ## http://purl.obolibrary.org/obo/ECTO_0001639
 
  * __Pr(G)__=0.40514775977121076 CONFIDENCE=1.5000000000000009 Success:true
@@ -5253,16 +5278,6 @@
  * NCIT_C29790 EquivalentTo Wikidata_Q21173319 Pr= 0.85
  * ECTO_0001639 exposure to buta-1,3-diene EquivalentTo NCIT_C29790 Pr= 0.5
  * ECTO_0001639 exposure to buta-1,3-diene EquivalentTo Wikidata_Q21173319 Pr= 0.5
-
-
-## http://purl.obolibrary.org/obo/Wikidata_Q21175305
-
- * __Pr(G)__=0.5000000000000001 CONFIDENCE=1.5000000000000004 Success:true
- * __SIZE__=2 (1 new axioms) 
-[img](target/img-Wikidata_Q21175305.png)
- * MEMBER: Wikidata_Q21175305
- * MEMBER: ECTO_0002250 exposure to trisodium hexafluoroaluminate
- * ECTO_0002250 exposure to trisodium hexafluoroaluminate EquivalentTo Wikidata_Q21175305 Pr= 0.5
 
 
 ## http://purl.obolibrary.org/obo/ECTO_0002344
@@ -5283,16 +5298,6 @@
  * MEMBER: MRE_0000083
  * MEMBER: ECTO_0001151 exposure to polychlorobiphenyl
  * ECTO_0001151 exposure to polychlorobiphenyl EquivalentTo MRE_0000083 Pr= 0.5
-
-
-## http://purl.obolibrary.org/obo/ECTO_0002094
-
- * __Pr(G)__=0.8500000000000001 CONFIDENCE=16.0 Success:true
- * __SIZE__=2 (1 new axioms) 
-[img](target/img-ECTO_0002094.png)
- * MEMBER: ECTO_0002094 exposure to camphor
- * MEMBER: Wikidata_Q21173355
- * ECTO_0002094 exposure to camphor EquivalentTo Wikidata_Q21173355 Pr= 0.85
 
 
 ## http://purl.obolibrary.org/obo/ECTO_0001648
@@ -5355,16 +5360,6 @@
  * ECTO_0002312 exposure to ethylparaben EquivalentTo MRE_0000176 Pr= 0.85
 
 
-## http://purl.obolibrary.org/obo/Wikidata_Q21174303
-
- * __Pr(G)__=0.8500000000000001 CONFIDENCE=16.0 Success:true
- * __SIZE__=2 (1 new axioms) 
-[img](target/img-Wikidata_Q21174303.png)
- * MEMBER: Wikidata_Q21174303
- * MEMBER: ECTO_0002156 exposure to ethyl formate
- * ECTO_0002156 exposure to ethyl formate EquivalentTo Wikidata_Q21174303 Pr= 0.85
-
-
 ## http://purl.obolibrary.org/obo/ECTO_0001750
 
  * __Pr(G)__=0.35804549283909015 CONFIDENCE=1.5000000000000009 Success:true
@@ -5376,16 +5371,6 @@
  * NCIT_C29821 EquivalentTo Wikidata_Q21174298 Pr= 0.85
  * ECTO_0001750 exposure to oxirane EquivalentTo NCIT_C29821 Pr= 0.5
  * ECTO_0001750 exposure to oxirane EquivalentTo Wikidata_Q21174298 Pr= 0.5
-
-
-## http://purl.obolibrary.org/obo/Wikidata_Q21174233
-
- * __Pr(G)__=0.8500000000000001 CONFIDENCE=16.0 Success:true
- * __SIZE__=2 (1 new axioms) 
-[img](target/img-Wikidata_Q21174233.png)
- * MEMBER: Wikidata_Q21174233
- * MEMBER: ECTO_0002338 exposure to diquat
- * ECTO_0002338 exposure to diquat EquivalentTo Wikidata_Q21174233 Pr= 0.85
 
 
 ## http://purl.obolibrary.org/obo/ECTO_0001652
@@ -5505,6 +5490,16 @@
  * ECTO_0001537 exposure to 1,1-dichloroethene EquivalentTo Wikidata_Q21175416 Pr= 0.85
 
 
+## http://purl.obolibrary.org/obo/ECTO_0002113
+
+ * __Pr(G)__=0.8500000000000001 CONFIDENCE=16.0 Success:true
+ * __SIZE__=2 (1 new axioms) 
+[img](target/img-ECTO_0002113.png)
+ * MEMBER: ECTO_0002113 exposure to cumene
+ * MEMBER: Wikidata_Q21174107
+ * ECTO_0002113 exposure to cumene EquivalentTo Wikidata_Q21174107 Pr= 0.85
+
+
 ## http://purl.obolibrary.org/obo/ECTO_0001649
 
  * __Pr(G)__=0.8500000000000001 CONFIDENCE=16.0 Success:true
@@ -5557,6 +5552,16 @@
  * MRE_0000044 EquivalentTo NCIT_C16929 Pr= 0.85
 
 
+## http://purl.obolibrary.org/obo/ECTO_0001875
+
+ * __Pr(G)__=0.5000000000000001 CONFIDENCE=1.5000000000000004 Success:true
+ * __SIZE__=2 (1 new axioms) 
+[img](target/img-ECTO_0001875.png)
+ * MEMBER: ECTO_0001875 exposure to prop-2-yn-1-ol
+ * MEMBER: Wikidata_Q21175074
+ * ECTO_0001875 exposure to prop-2-yn-1-ol EquivalentTo Wikidata_Q21175074 Pr= 0.5
+
+
 ## http://purl.obolibrary.org/obo/Wikidata_Q21173540
 
  * __Pr(G)__=0.8500000000000001 CONFIDENCE=16.0 Success:true
@@ -5575,6 +5580,16 @@
  * MEMBER: ECTO_0002356 exposure to dicyclohexylmethane-4,4'-diisocyanate
  * MEMBER: Wikidata_Q21174912
  * ECTO_0002356 exposure to dicyclohexylmethane-4,4'-diisocyanate EquivalentTo Wikidata_Q21174912 Pr= 0.5
+
+
+## http://purl.obolibrary.org/obo/NCIT_C44404
+
+ * __Pr(G)__=0.8500000000000001 CONFIDENCE=16.0 Success:true
+ * __SIZE__=2 (1 new axioms) 
+[img](target/img-NCIT_C44404.png)
+ * MEMBER: NCIT_C44404
+ * MEMBER: ECTO_0001260 exposure to mirex
+ * ECTO_0001260 exposure to mirex EquivalentTo NCIT_C44404 Pr= 0.85
 
 
 ## http://purl.obolibrary.org/obo/NCIT_C302
@@ -5822,16 +5837,6 @@
  * MEMBER: ECTO_0001149 exposure to organoarsenic compound
  * MEMBER: MRE_0000203
  * ECTO_0001149 exposure to organoarsenic compound EquivalentTo MRE_0000203 Pr= 0.85
-
-
-## http://purl.obolibrary.org/obo/NCIT_C44404
-
- * __Pr(G)__=0.8500000000000001 CONFIDENCE=16.0 Success:true
- * __SIZE__=2 (1 new axioms) 
-[img](target/img-NCIT_C44404.png)
- * MEMBER: NCIT_C44404
- * MEMBER: ECTO_0001260 exposure to mirex
- * ECTO_0001260 exposure to mirex EquivalentTo NCIT_C44404 Pr= 0.85
 
 
 ## http://purl.obolibrary.org/obo/Wikidata_Q21167507
