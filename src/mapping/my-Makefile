@@ -2,7 +2,7 @@ all: all_exposure probs.tsv m.tsv  rpt.html merged-exposure.obo axioms-r.obo  hi
 
 OBO = http://purl.obolibrary.org/obo
 
-MOD = peco xco zeco exo ecto ncit
+MOD = peco xco zeco exo ecto go ncit
 
 ## define variables for ontologies
 OBO=http://purl.obolibrary.org/obo
@@ -72,11 +72,18 @@ exposure-ncit.obo:
 	
 	rm tmp-in.obo
 	rm tmp-ids
+	rm tmp-xposure.obo
 	mv tmp-out.obo $@
 
 exposure-go.obo:
 	#blip ontol-query -r go -query "class(R,'response to stimulus'),subclassRT(ID,R)" -to obo | obo-grep.pl -r 'name: response to' - > $@
-	wget --no-check-certificate $(GO_OBO) -O $@
+	wget --no-check-certificate $(GO_OBO) -O tmp-in.obo
+	robot extract --method top -i tmp-in.obo -t GO:0050896 -o tmp-out.obo # get subclasses of 'response to stimulus'
+	obo-grep.pl -r 'name: response to' tmp-out.obo > tmp-go.obo # filter
+	
+	rm tmp-in.obo
+	rm tmp-out.obo
+	mv tmp-go.obo $@
 
 exposure-exo.obo:
 	wget --no-check-certificate $(EXO_OBO) -O $@
@@ -84,7 +91,7 @@ exposure-exo.obo:
 exposure-ecto.obo: ../../subsets/ecto-basic.obo
 	cp $< $@
 
-# MOD = peco xco zeco exo ecto ncit
+# MOD = peco xco zeco exo ecto go ncit
 slim-exposure.obo: $(patsubst %, exposure-%.obo,$(MOD))
 	obo-cat.pl $^ | grep -v ^namespace: | grep -v ^property_value: | ./add-syns.pl > $@
 	
@@ -102,7 +109,7 @@ slim-exposure.obo: $(patsubst %, exposure-%.obo,$(MOD))
 	#  -i exposure-exo.obo \
 	#  -i exposure-xco.obo \
 	#  -i exposure-ecto.obo \
-	E  -o tmp.obo
+	#  -o tmp.obo
 	#grep -v ^namespace: tmp.obo | grep -v ^property_value: | ./add-syns.pl > $@
 	  
 .PRECIOUS: slim-exposure.obo
