@@ -22,6 +22,8 @@ all_exposure: $(patsubst %, exposure-%.obo,$(MOD))
 
 clean:
 	rm $(patsubst %, exposure-%.obo,$(MOD))
+	rm axioms.owl
+	rm probs.tsv
 	
 # ----------------------------------------
 # creation of source ontology subsets
@@ -114,9 +116,37 @@ slim-exposure.obo: $(patsubst %, exposure-%.obo,$(MOD))
 	  
 .PRECIOUS: slim-exposure.obo
 
-probs.tsv: slim-exposure.obo ignore.pro
-	blip-findall  -i ignore.pro -debug index -goal nlp_index_all -i $< -u metadata_nlp entity_pair_mprobs/6 -no_pred > $@.tmp && mv $@.tmp $@
-
 MAX_E=8
-axioms.owl: slim-exposure.owl #probs.tsv
+axioms.owl: slim-exposure.owl probs.tsv
 	kboom --experimental  --splitSize 50 --max $(MAX_E) -m rpt.md -j rpt.json -n -o $@ -t probs.tsv $<
+
+probs.tsv: slim-exposure.obo
+	## convert slim-exposure.obo to ttl
+	robot convert -i slim-exposure.obo --check false -o slim-exposure.ttl
+	
+	## prepend schacl declarations
+	cat shacl-declarations.ttl slim-exposure.ttl > slim-exposure.tmp && mv slim-exposure.tmp slim-exposure.ttl
+	
+	## run rdfmatch to generate match info
+	rdfmatch -G match-graph.ttl -f tsv -i slim-exposure.ttl match > match-output.txt
+	
+	## find exact label matches; the cut command returns the first two columns of output
+	egrep 'info\((label|exact)-(label|exact)' match-output.txt | cut -f1,2 | uniq > exact-matches.txt
+	
+	## find other matches not in the exact matches file; note the removal of the null line
+	cut -f1,2 match-output.txt | fgrep -v -x -f exact-matches.txt | uniq | grep -v null > non-exact-matches.txt
+
+	## append probs of "0.1 0.1 0.85 0.1" to exact label matches
+	awk '{print $$0 "\t0.1\t0.1\t0.85\t0.1"}' exact-matches.txt > exact-matches.tmp && mv exact-matches.tmp exact-matches.txt
+	
+	## append probs of "0.1 0.1 0.7 0.1" for other matches
+	awk '{print $$0 "\t0.1\t0.1\t0.7\t0.1"}' non-exact-matches.txt > non-exact-matches.tmp && mv non-exact-matches.tmp non-exact-matches.txt
+	
+	## create probs file
+	cat exact-matches.txt non-exact-matches.txt > $@
+	
+	## clean up
+	rm exact-matches.txt
+	rm non-exact-matches.txt
+
+	
