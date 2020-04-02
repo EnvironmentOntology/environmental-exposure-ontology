@@ -1,20 +1,20 @@
+#all: all_exposure probs.tsv m.tsv  rpt.html merged-exposure.obo axioms-r.obo  hier all_ecto unmapped.tsv
 all: all_exposure probs.tsv m.tsv  rpt.html merged-exposure.obo axioms-r.obo  hier all_ecto unmapped.tsv
 
 OBO = http://purl.obolibrary.org/obo
 
-#wd causig loops?
-MOD = eo xco zeco snomed ncit go exo mre wikidata ecto
-#MOD = eo xco zeco snomed ncit go exo mre ecto
+
+# MOD = eo xco zeco snomed ncit go exo wikidata ecto mre
+MOD = xco zeco exo peco ecto ncit go snomed
 
 ## define variables for ontologies
-EO_OBO = "http://purl.obolibrary.org/obo/peco.obo"
 XCO_OBO = "http://purl.obolibrary.org/obo/xco.obo"
 NCIT_OBO = "http://purl.obolibrary.org/obo/ncit.obo"
 ZECO_OBO = "http://purl.obolibrary.org/obo/zeco.obo"
 PECO_OBO = "http://purl.obolibrary.org/obo/peco.obo"
 GO_OBO = "http://purl.obolibrary.org/obo/go.obo"
 EXO_OBO = 'http://purl.obolibrary.org/obo/exo.obo'
-MRE_OBO = ""
+MRE_OWL = "https://github.com/monarch-initiative/Medically-Relevant-Exposome/blob/master/src/ontology/mre-edit.owl"
 
 
 all_exposure: $(patsubst %, exposure-%.obo,$(MOD))
@@ -31,239 +31,119 @@ all_exposure: $(patsubst %, exposure-%.obo,$(MOD))
 #
 # these are all named exposure-X, where X is the source ontology
 
-# EO is now named PECO in OBO
-# copy whole ontology
-exposure-eo.obo:
-	#blip ontol-query -r eo -query "class(ID)" -to obo > $@
-	wget --no-check-certificate $(EO_OBO) -O $@
 
-# XCO in OBO copy all ontology
+## XCO in OBO copy all ontology
 exposure-xco.obo:
-	# blip ontol-query -r obo/xco -query "class(ID)" -to obo > $@
 	wget --no-check-certificate $(XCO_OBO) -O $@
 
-# copy all ontology
-exposure-zeco.obo:
-	#sblip ontol-query -r zeco -query "class(ID)" -to obo > $@
-	rwget --no-check-certificate $(ZECO_OBO) -O $@
 
-# just strings matching name
+## ZECO in OBO copy all ontology
+exposure-zeco.obo:
+	wget --no-check-certificate $(ZECO_OBO) -O $@
+
+
+## just strings matching name
 exposure-mesh.obo:
 	ogr -t obo -r mesh-obo.json %xposure% > $@
 
-# now called pheco
+
+## now called pheco <----  CAN'T FIND PHECO, SO I'LL USE PECO
 exposure-peco.obo:
-	#wget --no-check-certificate https://raw.githubusercontent.com/pombase/fypo/master/peco.obo -O $@
-	#wget --no-check-certificate https://raw.githubusercontent.com/Planteome/plant-experimental-conditions-ontology/master/peco.obo -O $@ > $@
-	#robot merge -i $(PECO_OBO) > $@
 	wget --no-check-certificate $(PECO_OBO) -O $@
 
+
+## currently no content in MRE ((Medically-Relevant-Exposome) to transform
+# exposure-mre.obo:
+# 	wget --no-check-certificate $(MRE_OWL) -O tmp-in.owl
+# 	robot convert -i tmp-owl -o tmp-out.obo
+# 	rm tmp-in.ow
+# 	mv tmp-out.obo $@
+
+
+## extract subclasses of 'Exposureure to potentially harmful entity'; note: snomed.obo must be in proper form before running
 exposure-snomed.obo:
-	blip ontol-query -r snomed_tidy -query "class(R,'Exposureure to potentially harmful entity'),subclassRT(ID,R)" -to obo | perl -npe 's@SCTID_@SCTID:@g' > $@
+	export ROBOT_JAVA_ARGS=-Xmx16G && robot extract --method top -i ../ontology/snomed.obo -t "http://purl.obolibrary.org/obo/SNOMED_418715001" -o tmp-snomed.obo
+	mv tmp-snomed.obo $@
 
+
+## extact classes containg 'xposure'; note: using obo-grep for performance reasons
 exposure-ncit.obo:
-	#blip ontol-query -r ncit -n %xposure% -to obo > $@
-	#robot merge -i $(NCIT_OBO) > $@
-	#robot query ``
+	wget --no-check-certificate $(NCIT_OBO) -O tmp-in.obo
+	obo-grep.pl -r ".*xposure.*" tmp-in.obo > tmp-xposure.obo # find obo stanzas containing *xposure*
+	rm tmp-in.obo
+	mv tmp-xposure.obo $@
 
+
+## extract subclasses of 'response to stimulus'
 exposure-go.obo:
-	#blip ontol-query -r go -query "class(R,'response to stimulus'),subclassRT(ID,R)" -to obo | obo-grep.pl -r 'name: response to' - > $@
-	wget --no-check-certificate $(GO_OBO) -O $@
+	wget --no-check-certificate $(GO_OBO) -O tmp-in.obo
+	export ROBOT_JAVA_ARGS=-Xmx16G && robot extract --method top -i tmp-in.obo -t GO:0050896 -o tmp-out.obo # get subclasses of 'response to stimulus'
+	obo-grep.pl -r 'name: .*response to.*' tmp-out.obo > tmp-go.obo # filter
 
+	rm tmp-in.obo
+	rm tmp-out.obo
+	mv tmp-go.obo $@
+
+
+## EXO in OBO copy ontology
 exposure-exo.obo:
-	#blip ontol-query -r exo -query "class(ID)" -to obo  > $@
 	wget --no-check-certificate $(EXO_OBO) -O $@
 
-exposure-mre.obo:
-	blip ontol-query -r mre -query "class(ID)" -to obo  > $@
-
-access-ncit.obo:
-	#blip ontol-query -r ncit -n 'Access to%' -to obo > $@
-	robot merge -i $(NCIT_OBO) > $@
-
-exposure-wikidata.obo:
-	#cp ../resources/wikidata/combined.obo $@
-	grep -v ^is_a: ../resources/wikidata/combined.obo > $@
 
 exposure-ecto.obo: ../../subsets/ecto-basic.obo
 	cp $< $@
 
+
 # MERGE ALL SUB ONTOLOGIES TOGETHER
 #combined-exposure.obo:
-combined-exposure.obo: all_exposure
-	obo-cat.pl exposure-*.obo | grep -v ^namespace: | grep -v ^property_value: | ./add-syns.pl > $@
-.PRECIOUS: combined-exposure.obo
+# combined-exposure.obo: all_exposure
+# 	obo-cat.pl exposure-*.obo | grep -v ^namespace: | grep -v ^property_value: | ./add-syns.pl > $@
+# .PRECIOUS: combined-exposure.obo
 
-#slim-exposure.obo: exposure-ncit.obo exposure-snomed.obo exposure-mre.obo exposure-ecto.obo exposure-wikidata.obo exposure-zeco.obo exposure-mesh.obo exposure-peco.obo
-# slim-exposure.obo: exposure-ncit.obo exposure-ecto.obo exposure-zeco.obo exposure-peco.obo
-slim-exposure.obo: exposure-ecto.obo exposure-zeco.obo exposure-peco.obo
+
+slim-exposure.obo: $(patsubst %, exposure-%.obo,$(MOD))
 	obo-cat.pl $^ | grep -v ^namespace: | grep -v ^property_value: | ./add-syns.pl > $@
-	#robot merge \
-	#  -i exposure-ncit.obo \
-	#  -i exposure-ecto.obo \
-	#  -i exposure-zeco.obo \
-	#  -i exposure-peco.obo \
-	#  -o tmp.obo
-	#robot merge \
-	#  -i exposure-ecto.obo \
-	#  -i exposure-zeco.obo \
-	#  -i exposure-peco.obo \
-	#  -o tmp.obo
-	#grep -v ^namespace: tmp.obo | grep -v ^property_value: | ./add-syns.pl > $@
-	  
+
 .PRECIOUS: slim-exposure.obo
 
-probs.tsv: slim-exposure.obo ignore.pro
-	blip-findall  -i ignore.pro -debug index -goal nlp_index_all -i $< -u metadata_nlp entity_pair_mprobs/6 -no_pred > $@.tmp && mv $@.tmp $@
-probs-debug.tsv: slim-exposure.obo ignore.pro
-	blip-findall  -i ignore.pro -debug index -goal nlp_index_all -i $< -u metadata_nlp entity_pair_mprobs/6 -label -no_pred > $@.tmp && mv $@.tmp $@
+probs.tsv: 
+	robot convert -i slim-exposure.obo --check false -o slim-exposure.ttl # convert slim-exposure.obo to ttl
 
-#probs-debug.tsv: slim-exposure.obo ignore.pro
-#	blip-findall  -i ignore.pro -debug index -goal nlp_index_all -i $< -u metadata_nlp "normalized_xref(A,B),pair_relationship_scores(A,B,S)" -select "x(A,B,S)" -no_pred -label -no_pred > $@.tmp && mv $@.tmp $@
+	## prepend schacl declarations
+	cat shacl-declarations.ttl slim-exposure.ttl > slim-exposure.tmp && mv slim-exposure.tmp slim-exposure.ttl
 
-m.tsv: combined-exposure.obo ignore.pro
-	blip-findall  -i ignore.pro -debug index -goal nlp_index_all -i $< -u metadata_nlp entity_pair_label_match/6 -label -no_pred > $@
-.PRECIOUS: m.tsv
+	## run rdfmatch to generate match info
+	rdfmatch -G match-graph.ttl -f tsv -i slim-exposure.ttl match > match-output.txt
 
-mxrefs.obo: m.tsv
-	cut -f1-2 $< | sort -u | tbl2obolinks.pl -k --rel xref > $@
+	## find exact label matches; the cut command returns the first two columns of output
+	egrep 'info\((label|exact)-(label|exact)' match-output.txt | cut -f1,2 | uniq > exact-matches.txt
 
-unmapped.tsv: combined-exposure.obo ignore.pro
-	blip-findall  -i ignore.pro -debug index -goal nlp_index_all -i $< -u metadata_nlp "entity_nomatch/1" -label -no_pred > $@
+	## find other matches not in the exact matches file; note the removal of the null line
+	cut -f1,2 match-output.txt | fgrep -v -x -f exact-matches.txt | uniq | grep -v null > non-exact-matches.txt
 
-suggestions.tsv: combined-exposure.obo ignore.pro
-	blip-findall  -i ignore.pro -consult suggester.pro -debug index -goal nlp_index_all -i $< -u metadata_nlp "" -label -no_pred > $@
+	## append probs of "0.1 0.1 0.85 0.1" to exact label matches
+	awk '{print $$0 "\t0.1\t0.1\t0.85\t0.1"}' exact-matches.txt > exact-matches.tmp && mv exact-matches.tmp exact-matches.txt
 
-unmapped-%.tsv: unmapped.tsv
-	grep $*: $< > $@
+	## append probs of "0.1 0.1 0.7 0.1" for other matches
+	awk '{print $$0 "\t0.1\t0.1\t0.7\t0.1"}' non-exact-matches.txt > non-exact-matches.tmp && mv non-exact-matches.tmp non-exact-matches.txt
 
-# not really obol...
-# use odputils to write suggestions based on parsing names using DPs
-obol-%.obo: mxrefs.obo
-	blip-findall -r $* -i ../ontology/ecto.obo -r envo -r chebi -u odputil -i $< -i ../patterns/ecto_patterns.pro "write_suggestion('MRE')" > $@.tmp && mv $@.tmp $@
+	## create probs file
+	cat exact-matches.txt non-exact-matches.txt > $@
 
-OBO=http://purl.obolibrary.org/obo
-%-exposure.owl: %-exposure.obo
-	owltools $< --set-ontology-id $(OBO)/rad.owl -o $@
+	## clean up
+	rm exact-matches.txt
+	rm non-exact-matches.txt
 
 MAX_E=8
-axioms.owl: slim-exposure.owl probs.tsv
+axioms.owl: slim-exposure.obo probs.tsv
 	kboom --experimental  --splitSize 50 --max $(MAX_E) -m rpt.md -j rpt.json -n -o $@ -t probs.tsv $<
+
 
 rpt.html: axioms.owl
 	pandoc rpt.md -o rpt.html
 
-axioms.obo: axioms.owl
-	owltools $< combined-exposure.owl --set-ontology-id $(OBO)/rad/axioms -o -f obo $@
 
-axioms-r.obo: combined-exposure.obo  axioms.obo
-	obo-add-comments.pl -r -t id -t equivalent_to -t is_a $^ > $@
-
-ORD = xx NCIT 10 xx EO 8 xx ZECO 6 xx XCO 4
-ORD_C =  $(patsubst xx,-c,$(ORD))
-ORD_D =  $(patsubst xx,-d,$(ORD))
-ORD_L =  $(patsubst xx,-l,$(ORD))
-#PRIORITIES := -l NCIT 10 -l EO 8 -l ZECO 5  -s NCIT 10 -s EO 8 -s ZECO 5 
-
-merged-exposure.owl: combined-exposure.owl axioms.owl
-	owltools $^ --merge-support-ontologies --reasoner elk --merge-equivalence-sets $(ORD_C) $(ORD_D) $(ORD_L) --set-ontology-id $(OBO)/rad.owl -o $@
-.PRECIOUS: merged-exposure.owl
-
-merged-exposure.obo: merged-exposure.owl
-	owltools $< -o -f obo --no-check $@
-
-aggregated-exposure.obo: combined-exposure.owl axioms.owl
-	owltools $^ --merge-support-ontologies  --set-ontology-id $(OBO)/ecto/combined.owl -o -f obo --no-check $@
-.PRECIOUS: aggregated-exposure.obo
-
-RPT = $@.tmp && egrep '\t(ANCESTOR|PARENT)\t' $@.tmp | mysort -k3,2,1 > $@
-new-inf-%.tsv: exposure-%.obo
-	owltools  exposure-$*.obo axioms.obo exposure-ecto.obo --spike-and-reason > $(RPT)
-missing-inf-%.tsv: exposure-%.obo
-	owltools  exposure-ecto.obo  axioms.obo exposure-$*.obo  --spike-and-reason > $(RPT)
-
-ONTDIR=../ontology/
-CORE=$(ONTDIR)/ecto-core.owl
-munged-%.owl: exposure-%.obo
-	owltools --catalog-xml $(ONTDIR)/catalog-v001.xml  $(CORE)  axioms.obo exposure-$*.obo --merge-support-ontologies --merge-imports-closure -o $@
-
-relgaps.tsv: aggregated-exposure.obo
-	blip-findall -i $< -u ontol_gapfiller -goal ix relgap/7 -label -no_pred > $@.tmp && mv $@.tmp $@
-
-
-
-#hier: merged-exposure.png merged-exposure.hier
-hier:
-	echo suppressed
-
-merged-exposure.hier: merged-exposure.obo
-	blip ontol-subset -i $< -n % -rel subclass > $@
-
-merged-exposure.png: merged-exposure.obo
-	blip ontol-subset -i $< -n $< -to png -rel subclass -u ontol_config_rad  -n % > $@
-
-
-all_ecto: unmatched_ecto.tsv not_in_ecto.tsv
-
-ECTO=../ontology/ecto.obo
-combined2ecto.tsv: combined-exposure.obo ignore.pro
-	blip-findall  -i ignore.pro -debug index -goal nlp_index_all -i $< -i $(ECTO) -u metadata_nlp entity_pair_mprobs/6 -no_pred -label > $@
-
-unmatched_ecto.tsv: combined-exposure.obo ignore.pro
-	blip-findall  -i ignore.pro -debug index -goal nlp_index_all -i $< -i $(ECTO) -u metadata_nlp entity_nomatch/1 -no_pred -label > $@.tmp && grep ^ECTO $@.tmp > $@
-
-not_in_ecto.tsv: combined-exposure.obo ignore.pro
-	blip-findall  -i ignore.pro -debug index -goal nlp_index_all -i $< -i $(ECTO) -u metadata_nlp "entity_nomatch_to(X,'ECTO')"  -label -select X > $@.tmp && mv $@.tmp $@
-
-not_in_ecto_x.tsv: combined-exposure.obo ignore.pro
-	blip-findall  -i ignore.pro -debug index -goal nlp_index_all -i $< -i $(ECTO) -u metadata_nlp "entity_nomatch_to(X,'ECTO'),entity_xref(X,Y)"  -label -select X-Y -no_pred > $@.tmp && mv $@.tmp $@
-
-
-mirror-chebi.obo:
-	wget $(OBO)/chebi.obo -O $@
-
-chebihack.obo:
-	blip ontol-query -r chebi -n % -to obo > $@.tmp && egrep -v '^(def|xref|namespace):' $@.tmp | egrep -v InChI | perl -npe 's@ EXACT @ RELATED @ if m@IUPAC@'  > $@
-
-TAGS = chebi-simple chebi-diet
-OBOL_ALL_E = $(patsubst %,obol-%-exact.obo,$(TAGS))
-OBOL_ALL_S = $(patsubst %,obol-%-all.obo,$(TAGS))
-OBOL_ALL = $(OBOL_ALL_E) $(OBOL_ALL_S)
-obol: $(OBOL_ALL)
-clean_obol:
-	rm $(OBOL_ALL)
-
-OBOL= obol -r ro  -i ../ontology/ecto.obo -i cme.obo -debug qobol -debug index qobol   -tag exposure
-OBOL_MRE= $(OBO) -r exposure -idspace MRE
-
-obol-chebi-%-exact.obo: 
-	$(OBOL_MRE) -i chebihack.obo -tag $*  -undefined_only true -export obo > $@ 
-.PRECIOUS: obol-chebi-%-exact.obo
-
-obol-chebi-%-all.obo: obol-chebi-%-exact.obo
-	$(OBOL_MRE) -i $< -i chebihack.obo -tag $*  -undefined_only true -export obo -scope all > $@
-.PRECIOUS: obol-chebi-%-all.obo
-
-
-obol.obo: $(OBOL_ALL)
-	obo-cat.pl $^ > $@
-
-obol-unparsed.txt: obol.obo
-	blip ontol-query -i $< -r exposure -query "class(X),id_idspace(X,'MRE'),\+genus(X,_),ID=X" -showdefs -showrel subclass > $@
-
-cme.obo:
-	blip-findall -consult chebihack.pro -i chebihack.obo w > $@
-
-
-epa-trichem.obo: tri_chemical_list_for_ry15_11_5_2015_1.txt
-	./trichem2obo.pl $< > $@
-
-epa-trichem-obol.obo: epa-trichem.obo
-	$(OBOL) -i $< -idspace EPATRICHEM -i chebihack.obo -tag simple  -undefined_only true -export obo -scope all > $@
-
-epa-trichem-unparsed.txt: epa-trichem.obo epa-trichem-obol.obo
-	blip ontol-query -i epa-trichem.obo -i epa-trichem-obol.obo -query "class(X),id_idspace(X,'EPATRICHEM'),\+genus(X,_),ID=X" -showdefs > $@
-
-
-chear.owl:
-	wget --no-check-certificate https://raw.githubusercontent.com/tetherless-world/chear-ontology/master/chear.owl -O $@
+clean-axioms:
+	rm $(patsubst %, exposure-%.obo,$(MOD))
+	rm axioms.owl
+	rm probs.tsv

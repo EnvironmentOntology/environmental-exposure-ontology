@@ -13,6 +13,16 @@
  * ExO_0000106 EquivalentTo XCO_0000013 Pr= 0.85
 
 
+## http://purl.obolibrary.org/obo/PECO_0001018
+
+ * __Pr(G)__=0.9730639730639731 CONFIDENCE=71.24999999999997 Success:true
+ * __SIZE__=2 (1 new axioms) 
+[img](target/img-PECO_0001018.png)
+ * MEMBER: PECO_0001018 cadmium exposure
+ * MEMBER: ECTO_0001566 exposure to cadmium
+ * ECTO_0001566 exposure to cadmium EquivalentTo PECO_0001018 cadmium exposure Pr= 0.85
+
+
 ## http://purl.obolibrary.org/obo/PECO_0007292
 
  * __Pr(G)__=0.7424242424242422 CONFIDENCE=5.999999999999992 Success:true
@@ -23,6 +33,16 @@
  * CHEBI_35889 EquivalentTo PECO_0007292 ethylphosphine exposure Pr= 0.7
 
 
+## http://purl.obolibrary.org/obo/ECTO_0001714
+
+ * __Pr(G)__=0.9730639730639731 CONFIDENCE=71.24999999999997 Success:true
+ * __SIZE__=2 (1 new axioms) 
+[img](target/img-ECTO_0001714.png)
+ * MEMBER: ECTO_0001714 exposure to diepoxybutane
+ * MEMBER: PECO_0007528 diepoxybutane exposure
+ * ECTO_0001714 exposure to diepoxybutane EquivalentTo PECO_0007528 diepoxybutane exposure Pr= 0.85
+
+
 ## http://purl.obolibrary.org/obo/XCO_0000512
 
  * __Pr(G)__=0.7424242424242422 CONFIDENCE=5.999999999999992 Success:true
@@ -31,6 +51,16 @@
  * MEMBER: XCO_0000512
  * MEMBER: CHEBI_50905
  * CHEBI_50905 EquivalentTo XCO_0000512 Pr= 0.7
+
+
+## http://purl.obolibrary.org/obo/ECTO_0001127
+
+ * __Pr(G)__=0.7424242424242422 CONFIDENCE=5.999999999999992 Success:true
+ * __SIZE__=2 (1 new axioms) 
+[img](target/img-ECTO_0001127.png)
+ * MEMBER: ECTO_0001127 poverty related exposure
+ * MEMBER: ExO_0000015
+ * ECTO_0001127 poverty related exposure EquivalentTo ExO_0000015 Pr= 0.7
 
 
 ## http://purl.obolibrary.org/obo/CHEBI_29103
@@ -44,14 +74,14 @@
  * CHEBI_29103 EquivalentTo XCO_0000311 Pr= 0.7
 
 
-## http://purl.obolibrary.org/obo/ECTO_0000127
+## http://purl.obolibrary.org/obo/PECO_0001012
 
  * __Pr(G)__=0.9730639730639731 CONFIDENCE=71.24999999999997 Success:true
  * __SIZE__=2 (1 new axioms) 
-[img](target/img-ECTO_0000127.png)
- * MEMBER: ECTO_0000127 exposure to carbohydrate
- * MEMBER: PECO_0001010 carbohydrate exposure
- * ECTO_0000127 exposure to carbohydrate EquivalentTo PECO_0001010 carbohydrate exposure Pr= 0.85
+[img](target/img-PECO_0001012.png)
+ * MEMBER: PECO_0001012 hexose exposure
+ * MEMBER: ECTO_0000129 exposure to hexose
+ * ECTO_0000129 exposure to hexose EquivalentTo PECO_0001012 hexose exposure Pr= 0.85
 
 
 ## http://purl.obolibrary.org/obo/ECTO_0000375
@@ -74,6 +104,36 @@
  * MEMBER: ECTO_0000538 exposure to micronutrient
  * MEMBER: PECO_0007239 micronutrient exposure
  * ECTO_0000538 exposure to micronutrient EquivalentTo PECO_0007239 micronutrient exposure Pr= 0.85
+
+
+## http://purl.obolibrary.org/obo/PECO_0007568
+
+ * __Pr(G)__=0.9730639730639731 CONFIDENCE=71.24999999999997 Success:true
+ * __SIZE__=2 (1 new axioms) 
+[img](target/img-PECO_0007568.png)
+ * MEMBER: PECO_0007568 sodium fluoride exposure
+ * MEMBER: ECTO_0002294 exposure to sodium fluoride
+ * ECTO_0002294 exposure to sodium fluoride EquivalentTo PECO_0007568 sodium fluoride exposure Pr= 0.85
+
+
+## http://purl.obolibrary.org/obo/ECTO_0002048
+
+ * __Pr(G)__=0.9730639730639731 CONFIDENCE=71.24999999999997 Success:true
+ * __SIZE__=2 (1 new axioms) 
+[img](target/img-ECTO_0002048.png)
+ * MEMBER: ECTO_0002048 ovariectomy
+ * MEMBER: XCO_0000094
+ * ECTO_0002048 ovariectomy EquivalentTo XCO_0000094 Pr= 0.85
+
+
+## http://purl.obolibrary.org/obo/PECO_0007530
+
+ * __Pr(G)__=0.9730639730639731 CONFIDENCE=71.24999999999997 Success:true
+ * __SIZE__=2 (1 new axioms) 
+[img](target/img-PECO_0007530.png)
+ * MEMBER: PECO_0007530 diethyl sulfate exposure
+ * MEMBER: ECTO_0001716 exposure to diethyl sulfate
+ * ECTO_0001716 exposure to diethyl sulfate EquivalentTo PECO_0007530 diethyl sulfate exposure Pr= 0.85
 
 
 ## http://purl.obolibrary.org/obo/XCO_0000284
@@ -104,16 +164,6 @@
  * MEMBER: XCO_0000093
  * MEMBER: CHEBI_33848
  * CHEBI_33848 EquivalentTo XCO_0000093 Pr= 0.7
-
-
-## http://purl.obolibrary.org/obo/PECO_0001018
-
- * __Pr(G)__=0.9730639730639731 CONFIDENCE=71.24999999999997 Success:true
- * __SIZE__=2 (1 new axioms) 
-[img](target/img-PECO_0001018.png)
- * MEMBER: PECO_0001018 cadmium exposure
- * MEMBER: ECTO_0001566 exposure to cadmium
- * ECTO_0001566 exposure to cadmium EquivalentTo PECO_0001018 cadmium exposure Pr= 0.85
 
 
 ## http://purl.obolibrary.org/obo/ECTO_0001082
@@ -148,6 +198,16 @@
  * ECTO_0001935 exposure to urethane EquivalentTo PECO_0007573 urethane exposure Pr= 0.85
 
 
+## http://purl.obolibrary.org/obo/ECTO_0002045
+
+ * __Pr(G)__=0.9730639730639731 CONFIDENCE=71.24999999999997 Success:true
+ * __SIZE__=2 (1 new axioms) 
+[img](target/img-ECTO_0002045.png)
+ * MEMBER: ECTO_0002045 axotomy of sciatic nerve
+ * MEMBER: XCO_0000375
+ * ECTO_0002045 axotomy of sciatic nerve EquivalentTo XCO_0000375 Pr= 0.85
+
+
 ## http://purl.obolibrary.org/obo/NCIT_C44415
 
  * __Pr(G)__=0.06692565444036433 CONFIDENCE=0.0 Success:true
@@ -157,7 +217,7 @@
  * MEMBER: XCO_0000354
  * MEMBER: XCO_0000355
  * MEMBER: CHEBI_21759
- * CHEBI_21759 EquivalentTo XCO_0000355 Pr= 0.7
+ * CHEBI_21759 EquivalentTo XCO_0000354 Pr= 0.7
  * NCIT_C44415 EquivalentTo XCO_0000354 Pr= 0.85
 
 
@@ -223,16 +283,6 @@
  * CHEBI_67079 EquivalentTo XCO_0000505 Pr= 0.7
 
 
-## http://purl.obolibrary.org/obo/ECTO_0002044
-
- * __Pr(G)__=0.9730639730639731 CONFIDENCE=71.24999999999997 Success:true
- * __SIZE__=2 (1 new axioms) 
-[img](target/img-ECTO_0002044.png)
- * MEMBER: ECTO_0002044 axotomy of saphenous nerve
- * MEMBER: XCO_0000376
- * ECTO_0002044 axotomy of saphenous nerve EquivalentTo XCO_0000376 Pr= 0.85
-
-
 ## http://purl.obolibrary.org/obo/ECTO_0000126
 
  * __Pr(G)__=0.9730639730639731 CONFIDENCE=71.24999999999997 Success:true
@@ -273,33 +323,6 @@
  * CHEBI_35341 EquivalentTo XCO_0000091 Pr= 0.7
 
 
-## http://purl.obolibrary.org/obo/PECO_0001012
-
- * __Pr(G)__=0.9730639730639731 CONFIDENCE=71.24999999999997 Success:true
- * __SIZE__=2 (1 new axioms) 
-[img](target/img-PECO_0001012.png)
- * MEMBER: PECO_0001012 hexose exposure
- * MEMBER: ECTO_0000129 exposure to hexose
- * ECTO_0000129 exposure to hexose EquivalentTo PECO_0001012 hexose exposure Pr= 0.85
-
-
-## http://purl.obolibrary.org/obo/ECTO_0000001
-
- * __Pr(G)__=0.2275511163836542 CONFIDENCE=377148.51562499977 Success:true
- * __SIZE__=4 (5 new axioms) 
-[img](target/img-ECTO_0000001.png)
- * MEMBER: ECTO_0000001 exposure to radiation
- * MEMBER: NCIT_C61398
- * MEMBER: XCO_0000038
- * MEMBER: PECO_0007151 radiation exposure
- * MESSAGE: Used heuristic to estimate 2 probabilistic edges - confidence may be negative. |Reduced| = 2
- * ECTO_0000001 exposure to radiation EquivalentTo NCIT_C61398 Pr= 0.85
- * NCIT_C61398 EquivalentTo PECO_0007151 radiation exposure Pr= 0.85
- * NCIT_C61398 EquivalentTo XCO_0000038 Pr= 0.85
- * ECTO_0000001 exposure to radiation EquivalentTo XCO_0000038 Pr= 0.85
- * ECTO_0000001 exposure to radiation EquivalentTo PECO_0007151 radiation exposure Pr= 0.85
-
-
 ## http://purl.obolibrary.org/obo/ZECO_0000103
 
  * __Pr(G)__=0.7424242424242422 CONFIDENCE=5.999999999999992 Success:true
@@ -308,6 +331,28 @@
  * MEMBER: ZECO_0000103 standard conditions
  * MEMBER: XCO_0000056
  * XCO_0000056 EquivalentTo ZECO_0000103 standard conditions Pr= 0.7
+
+
+## http://purl.obolibrary.org/obo/XCO_0000102
+
+ * __Pr(G)__=0.9730639730639731 CONFIDENCE=71.24999999999997 Success:true
+ * __SIZE__=2 (1 new axioms) 
+[img](target/img-XCO_0000102.png)
+ * MEMBER: XCO_0000102
+ * MEMBER: ZECO_0000114 fasting
+ * XCO_0000102 EquivalentTo ZECO_0000114 fasting Pr= 0.85
+
+
+## http://purl.obolibrary.org/obo/PECO_0007167
+
+ * __Pr(G)__=0.7249411282891367 CONFIDENCE=5.999999999999992 Success:true
+ * __SIZE__=3 (2 new axioms) 
+[img](target/img-PECO_0007167.png)
+ * MEMBER: PECO_0007167 pesticide exposure
+ * MEMBER: ECTO_0000530 exposure to pesticide
+ * MEMBER: CHEBI_25944
+ * ECTO_0000530 exposure to pesticide EquivalentTo PECO_0007167 pesticide exposure Pr= 0.85
+ * CHEBI_25944 EquivalentTo PECO_0007167 pesticide exposure Pr= 0.7
 
 
 ## http://purl.obolibrary.org/obo/XCO_0000482
@@ -340,14 +385,14 @@
  * CHEBI_50906 EquivalentTo XCO_0000341 Pr= 0.7
 
 
-## http://purl.obolibrary.org/obo/ECTO_0001714
+## http://purl.obolibrary.org/obo/ECTO_0000002
 
  * __Pr(G)__=0.9730639730639731 CONFIDENCE=71.24999999999997 Success:true
  * __SIZE__=2 (1 new axioms) 
-[img](target/img-ECTO_0001714.png)
- * MEMBER: ECTO_0001714 exposure to diepoxybutane
- * MEMBER: PECO_0007528 diepoxybutane exposure
- * ECTO_0001714 exposure to diepoxybutane EquivalentTo PECO_0007528 diepoxybutane exposure Pr= 0.85
+[img](target/img-ECTO_0000002.png)
+ * MEMBER: ECTO_0000002 exposure to electromagnetic radiation
+ * MEMBER: XCO_0000045
+ * ECTO_0000002 exposure to electromagnetic radiation EquivalentTo XCO_0000045 Pr= 0.85
 
 
 ## http://purl.obolibrary.org/obo/XCO_0000432
@@ -391,6 +436,26 @@
  * ECTO_0001984 exposure to N-methyl-N'-nitro-N-nitrosoguanidine EquivalentTo PECO_0007553 N-methyl-N'-nitro-N-nitrosoguanidine exposure Pr= 0.85
 
 
+## http://purl.obolibrary.org/obo/ZECO_0000163
+
+ * __Pr(G)__=0.9730639730639731 CONFIDENCE=71.24999999999997 Success:true
+ * __SIZE__=2 (1 new axioms) 
+[img](target/img-ZECO_0000163.png)
+ * MEMBER: ZECO_0000163 heat exposure
+ * MEMBER: XCO_0000308
+ * XCO_0000308 EquivalentTo ZECO_0000163 heat exposure Pr= 0.85
+
+
+## http://purl.obolibrary.org/obo/NCIT_C36251
+
+ * __Pr(G)__=0.9730639730639731 CONFIDENCE=71.24999999999997 Success:true
+ * __SIZE__=2 (1 new axioms) 
+[img](target/img-NCIT_C36251.png)
+ * MEMBER: NCIT_C36251
+ * MEMBER: ECTO_0000340 exposure to benzene
+ * ECTO_0000340 exposure to benzene EquivalentTo NCIT_C36251 Pr= 0.85
+
+
 ## http://purl.obolibrary.org/obo/PECO_0001022
 
  * __Pr(G)__=0.9990395451315763 CONFIDENCE=5219.062499999997 Success:true
@@ -400,18 +465,8 @@
  * MEMBER: XCO_0000040
  * MEMBER: ECTO_0000004 exposure to gamma radiation
  * PECO_0001022 gamma radiation exposure EquivalentTo XCO_0000040 Pr= 0.85
- * ECTO_0000004 exposure to gamma radiation EquivalentTo PECO_0001022 gamma radiation exposure Pr= 0.85
  * ECTO_0000004 exposure to gamma radiation EquivalentTo XCO_0000040 Pr= 0.85
-
-
-## http://purl.obolibrary.org/obo/PECO_0007550
-
- * __Pr(G)__=0.9730639730639731 CONFIDENCE=71.24999999999997 Success:true
- * __SIZE__=2 (1 new axioms) 
-[img](target/img-PECO_0007550.png)
- * MEMBER: PECO_0007550 methyl methanesulfonate exposure
- * MEMBER: ECTO_0000289 exposure to methyl methanesulfonate
- * ECTO_0000289 exposure to methyl methanesulfonate EquivalentTo PECO_0007550 methyl methanesulfonate exposure Pr= 0.85
+ * ECTO_0000004 exposure to gamma radiation EquivalentTo PECO_0001022 gamma radiation exposure Pr= 0.85
 
 
 ## http://purl.obolibrary.org/obo/PECO_0007531
@@ -432,6 +487,16 @@
  * MEMBER: XCO_0000323
  * MEMBER: CHEBI_30879
  * CHEBI_30879 EquivalentTo XCO_0000323 Pr= 0.7
+
+
+## http://purl.obolibrary.org/obo/PECO_0001015
+
+ * __Pr(G)__=0.9730639730639731 CONFIDENCE=71.24999999999997 Success:true
+ * __SIZE__=2 (1 new axioms) 
+[img](target/img-PECO_0001015.png)
+ * MEMBER: PECO_0001015 sucrose exposure
+ * MEMBER: ECTO_0000128 exposure to sucrose
+ * ECTO_0000128 exposure to sucrose EquivalentTo PECO_0001015 sucrose exposure Pr= 0.85
 
 
 ## http://purl.obolibrary.org/obo/XCO_0000249
@@ -524,24 +589,14 @@
  * ECTO_0000204 exposure to monosaccharide EquivalentTo PECO_0001011 monosaccharide exposure Pr= 0.85
 
 
-## http://purl.obolibrary.org/obo/XCO_0000172
-
- * __Pr(G)__=0.7424242424242422 CONFIDENCE=5.999999999999992 Success:true
- * __SIZE__=2 (1 new axioms) 
-[img](target/img-XCO_0000172.png)
- * MEMBER: XCO_0000172
- * MEMBER: CHEBI_16646
- * CHEBI_16646 EquivalentTo XCO_0000172 Pr= 0.7
-
-
-## http://purl.obolibrary.org/obo/PECO_0007568
+## http://purl.obolibrary.org/obo/NCIT_C55816
 
  * __Pr(G)__=0.9730639730639731 CONFIDENCE=71.24999999999997 Success:true
  * __SIZE__=2 (1 new axioms) 
-[img](target/img-PECO_0007568.png)
- * MEMBER: PECO_0007568 sodium fluoride exposure
- * MEMBER: ECTO_0002294 exposure to sodium fluoride
- * ECTO_0002294 exposure to sodium fluoride EquivalentTo PECO_0007568 sodium fluoride exposure Pr= 0.85
+[img](target/img-NCIT_C55816.png)
+ * MEMBER: NCIT_C55816
+ * MEMBER: ECTO_0001618 exposure to asbestos
+ * ECTO_0001618 exposure to asbestos EquivalentTo NCIT_C55816 Pr= 0.85
 
 
 ## http://purl.obolibrary.org/obo/ECTO_0000980
@@ -552,6 +607,26 @@
  * MEMBER: ECTO_0000980 exposure to temperature of air in surroundings
  * MEMBER: PECO_0007161 air temperature exposure
  * ECTO_0000980 exposure to temperature of air in surroundings EquivalentTo PECO_0007161 air temperature exposure Pr= 0.85
+
+
+## http://purl.obolibrary.org/obo/PECO_0007571
+
+ * __Pr(G)__=0.9730639730639731 CONFIDENCE=71.24999999999997 Success:true
+ * __SIZE__=2 (1 new axioms) 
+[img](target/img-PECO_0007571.png)
+ * MEMBER: PECO_0007571 triaziquone exposure
+ * MEMBER: ECTO_0001919 exposure to triaziquone
+ * ECTO_0001919 exposure to triaziquone EquivalentTo PECO_0007571 triaziquone exposure Pr= 0.85
+
+
+## http://purl.obolibrary.org/obo/ECTO_0000127
+
+ * __Pr(G)__=0.9730639730639731 CONFIDENCE=71.24999999999997 Success:true
+ * __SIZE__=2 (1 new axioms) 
+[img](target/img-ECTO_0000127.png)
+ * MEMBER: ECTO_0000127 exposure to carbohydrate
+ * MEMBER: PECO_0001010 carbohydrate exposure
+ * ECTO_0000127 exposure to carbohydrate EquivalentTo PECO_0001010 carbohydrate exposure Pr= 0.85
 
 
 ## http://purl.obolibrary.org/obo/CHEBI_24127
@@ -578,14 +653,24 @@
  * CHEBI_27899 EquivalentTo XCO_0000398 Pr= 0.7
 
 
-## http://purl.obolibrary.org/obo/ZECO_0000140
+## http://purl.obolibrary.org/obo/CHEBI_18154
+
+ * __Pr(G)__=0.7424242424242422 CONFIDENCE=5.999999999999992 Success:true
+ * __SIZE__=2 (1 new axioms) 
+[img](target/img-CHEBI_18154.png)
+ * MEMBER: CHEBI_18154
+ * MEMBER: XCO_0000173
+ * CHEBI_18154 EquivalentTo XCO_0000173 Pr= 0.7
+
+
+## http://purl.obolibrary.org/obo/PECO_0007550
 
  * __Pr(G)__=0.9730639730639731 CONFIDENCE=71.24999999999997 Success:true
  * __SIZE__=2 (1 new axioms) 
-[img](target/img-ZECO_0000140.png)
- * MEMBER: ZECO_0000140 housing conditions
- * MEMBER: XCO_0000033
- * XCO_0000033 EquivalentTo ZECO_0000140 housing conditions Pr= 0.85
+[img](target/img-PECO_0007550.png)
+ * MEMBER: PECO_0007550 methyl methanesulfonate exposure
+ * MEMBER: ECTO_0000289 exposure to methyl methanesulfonate
+ * ECTO_0000289 exposure to methyl methanesulfonate EquivalentTo PECO_0007550 methyl methanesulfonate exposure Pr= 0.85
 
 
 ## http://purl.obolibrary.org/obo/ECTO_0001138
@@ -598,14 +683,14 @@
  * ECTO_0001138 exposure to 1,2-dichloroethane EquivalentTo PECO_0007504 1,2-dichloroethane exposure Pr= 0.85
 
 
-## http://purl.obolibrary.org/obo/ECTO_0002043
+## http://purl.obolibrary.org/obo/PECO_0007074
 
  * __Pr(G)__=0.9730639730639731 CONFIDENCE=71.24999999999997 Success:true
  * __SIZE__=2 (1 new axioms) 
-[img](target/img-ECTO_0002043.png)
- * MEMBER: ECTO_0002043 right kidney transplant
- * MEMBER: XCO_0000250
- * ECTO_0002043 right kidney transplant EquivalentTo XCO_0000250 Pr= 0.85
+[img](target/img-PECO_0007074.png)
+ * MEMBER: PECO_0007074 auxin exposure
+ * MEMBER: ECTO_0000499 exposure to auxin
+ * ECTO_0000499 exposure to auxin EquivalentTo PECO_0007074 auxin exposure Pr= 0.85
 
 
 ## http://purl.obolibrary.org/obo/ECTO_0000295
@@ -628,14 +713,14 @@
  * XCO_0000099 EquivalentTo ZECO_0000101 control conditions Pr= 0.85
 
 
-## http://purl.obolibrary.org/obo/ECTO_0001989
+## http://purl.obolibrary.org/obo/XCO_0000079
 
- * __Pr(G)__=0.9730639730639731 CONFIDENCE=71.24999999999997 Success:true
+ * __Pr(G)__=0.7424242424242422 CONFIDENCE=5.999999999999992 Success:true
  * __SIZE__=2 (1 new axioms) 
-[img](target/img-ECTO_0001989.png)
- * MEMBER: ECTO_0001989 exposure to phosphate
- * MEMBER: PECO_0001006 phosphate exposure
- * ECTO_0001989 exposure to phosphate EquivalentTo PECO_0001006 phosphate exposure Pr= 0.85
+[img](target/img-XCO_0000079.png)
+ * MEMBER: XCO_0000079
+ * MEMBER: ECTO_0001091 cigarette smoking related exposure
+ * ECTO_0001091 cigarette smoking related exposure EquivalentTo XCO_0000079 Pr= 0.7
 
 
 ## http://purl.obolibrary.org/obo/ECTO_0002050
@@ -648,6 +733,16 @@
  * ECTO_0002050 hepatectomy EquivalentTo XCO_0000209 Pr= 0.85
 
 
+## http://purl.obolibrary.org/obo/XCO_0000435
+
+ * __Pr(G)__=0.7424242424242422 CONFIDENCE=5.999999999999992 Success:true
+ * __SIZE__=2 (1 new axioms) 
+[img](target/img-XCO_0000435.png)
+ * MEMBER: XCO_0000435
+ * MEMBER: CHEBI_35610
+ * CHEBI_35610 EquivalentTo XCO_0000435 Pr= 0.7
+
+
 ## http://purl.obolibrary.org/obo/XCO_0000185
 
  * __Pr(G)__=0.00885022244763199 CONFIDENCE=0.0 Success:true
@@ -658,16 +753,6 @@
  * MEMBER: XCO_0000184
  * MEMBER: XCO_0000317
  * CHEBI_29108 EquivalentTo XCO_0000185 Pr= 0.7
-
-
-## http://purl.obolibrary.org/obo/NCIT_C55816
-
- * __Pr(G)__=0.9730639730639731 CONFIDENCE=71.24999999999997 Success:true
- * __SIZE__=2 (1 new axioms) 
-[img](target/img-NCIT_C55816.png)
- * MEMBER: NCIT_C55816
- * MEMBER: ECTO_0001618 exposure to asbestos
- * ECTO_0001618 exposure to asbestos EquivalentTo NCIT_C55816 Pr= 0.85
 
 
 ## http://purl.obolibrary.org/obo/CHEBI_48864
@@ -690,14 +775,14 @@
  * ECTO_0000008 exposure to infrared radiation EquivalentTo XCO_0000046 Pr= 0.85
 
 
-## http://purl.obolibrary.org/obo/NCIT_C36251
+## http://purl.obolibrary.org/obo/ECTO_0001699
 
  * __Pr(G)__=0.9730639730639731 CONFIDENCE=71.24999999999997 Success:true
  * __SIZE__=2 (1 new axioms) 
-[img](target/img-NCIT_C36251.png)
- * MEMBER: NCIT_C36251
- * MEMBER: ECTO_0000340 exposure to benzene
- * ECTO_0000340 exposure to benzene EquivalentTo NCIT_C36251 Pr= 0.85
+[img](target/img-ECTO_0001699.png)
+ * MEMBER: ECTO_0001699 exposure to 1,2-dibromoethane
+ * MEMBER: PECO_0007503 1,2-dibromoethane exposure
+ * ECTO_0001699 exposure to 1,2-dibromoethane EquivalentTo PECO_0007503 1,2-dibromoethane exposure Pr= 0.85
 
 
 ## http://purl.obolibrary.org/obo/XCO_0000428
@@ -710,34 +795,14 @@
  * CHEBI_28757 EquivalentTo XCO_0000428 Pr= 0.7
 
 
-## http://purl.obolibrary.org/obo/PECO_0007571
+## http://purl.obolibrary.org/obo/ECTO_0002297
 
  * __Pr(G)__=0.9730639730639731 CONFIDENCE=71.24999999999997 Success:true
  * __SIZE__=2 (1 new axioms) 
-[img](target/img-PECO_0007571.png)
- * MEMBER: PECO_0007571 triaziquone exposure
- * MEMBER: ECTO_0001919 exposure to triaziquone
- * ECTO_0001919 exposure to triaziquone EquivalentTo PECO_0007571 triaziquone exposure Pr= 0.85
-
-
-## http://purl.obolibrary.org/obo/XCO_0000435
-
- * __Pr(G)__=0.7424242424242422 CONFIDENCE=5.999999999999992 Success:true
- * __SIZE__=2 (1 new axioms) 
-[img](target/img-XCO_0000435.png)
- * MEMBER: XCO_0000435
- * MEMBER: CHEBI_35610
- * CHEBI_35610 EquivalentTo XCO_0000435 Pr= 0.7
-
-
-## http://purl.obolibrary.org/obo/XCO_0000079
-
- * __Pr(G)__=0.7424242424242422 CONFIDENCE=5.999999999999992 Success:true
- * __SIZE__=2 (1 new axioms) 
-[img](target/img-XCO_0000079.png)
- * MEMBER: XCO_0000079
- * MEMBER: ECTO_0001091 cigarette smoking related exposure
- * ECTO_0001091 cigarette smoking related exposure EquivalentTo XCO_0000079 Pr= 0.7
+[img](target/img-ECTO_0002297.png)
+ * MEMBER: ECTO_0002297 exposure to sodium hydroxide
+ * MEMBER: PECO_0001060 sodium hydroxide exposure
+ * ECTO_0002297 exposure to sodium hydroxide EquivalentTo PECO_0001060 sodium hydroxide exposure Pr= 0.85
 
 
 ## http://purl.obolibrary.org/obo/ECTO_0000296
@@ -758,6 +823,23 @@
  * MEMBER: PECO_0007066 cytokinin exposure
  * MEMBER: ECTO_0000507 exposure to cytokinin
  * ECTO_0000507 exposure to cytokinin EquivalentTo PECO_0007066 cytokinin exposure Pr= 0.85
+
+
+## http://purl.obolibrary.org/obo/ECTO_0000001
+
+ * __Pr(G)__=0.2275511163836542 CONFIDENCE=377148.51562499977 Success:true
+ * __SIZE__=4 (5 new axioms) 
+[img](target/img-ECTO_0000001.png)
+ * MEMBER: ECTO_0000001 exposure to radiation
+ * MEMBER: NCIT_C61398
+ * MEMBER: XCO_0000038
+ * MEMBER: PECO_0007151 radiation exposure
+ * MESSAGE: Used heuristic to estimate 2 probabilistic edges - confidence may be negative. |Reduced| = 2
+ * ECTO_0000001 exposure to radiation EquivalentTo NCIT_C61398 Pr= 0.85
+ * NCIT_C61398 EquivalentTo PECO_0007151 radiation exposure Pr= 0.85
+ * NCIT_C61398 EquivalentTo XCO_0000038 Pr= 0.85
+ * ECTO_0000001 exposure to radiation EquivalentTo XCO_0000038 Pr= 0.85
+ * ECTO_0000001 exposure to radiation EquivalentTo PECO_0007151 radiation exposure Pr= 0.85
 
 
 ## http://purl.obolibrary.org/obo/XCO_0000043
@@ -781,24 +863,14 @@
  * CHEBI_29101 EquivalentTo XCO_0000253 Pr= 0.7
 
 
-## http://purl.obolibrary.org/obo/PECO_0007074
+## http://purl.obolibrary.org/obo/ECTO_0002043
 
  * __Pr(G)__=0.9730639730639731 CONFIDENCE=71.24999999999997 Success:true
  * __SIZE__=2 (1 new axioms) 
-[img](target/img-PECO_0007074.png)
- * MEMBER: PECO_0007074 auxin exposure
- * MEMBER: ECTO_0000499 exposure to auxin
- * ECTO_0000499 exposure to auxin EquivalentTo PECO_0007074 auxin exposure Pr= 0.85
-
-
-## http://purl.obolibrary.org/obo/ECTO_0002048
-
- * __Pr(G)__=0.9730639730639731 CONFIDENCE=71.24999999999997 Success:true
- * __SIZE__=2 (1 new axioms) 
-[img](target/img-ECTO_0002048.png)
- * MEMBER: ECTO_0002048 ovariectomy
- * MEMBER: XCO_0000094
- * ECTO_0002048 ovariectomy EquivalentTo XCO_0000094 Pr= 0.85
+[img](target/img-ECTO_0002043.png)
+ * MEMBER: ECTO_0002043 right kidney transplant
+ * MEMBER: XCO_0000250
+ * ECTO_0002043 right kidney transplant EquivalentTo XCO_0000250 Pr= 0.85
 
 
 ## http://purl.obolibrary.org/obo/XCO_0000390
@@ -833,6 +905,16 @@
  * CHEBI_36141 EquivalentTo XCO_0000422 Pr= 0.7
 
 
+## http://purl.obolibrary.org/obo/ZECO_0000140
+
+ * __Pr(G)__=0.9730639730639731 CONFIDENCE=71.24999999999997 Success:true
+ * __SIZE__=2 (1 new axioms) 
+[img](target/img-ZECO_0000140.png)
+ * MEMBER: ZECO_0000140 housing conditions
+ * MEMBER: XCO_0000033
+ * XCO_0000033 EquivalentTo ZECO_0000140 housing conditions Pr= 0.85
+
+
 ## http://purl.obolibrary.org/obo/XCO_0000248
 
  * __Pr(G)__=0.9730639730639731 CONFIDENCE=71.24999999999997 Success:true
@@ -851,6 +933,16 @@
  * MEMBER: CHEBI_24431
  * MEMBER: XCO_0000342
  * CHEBI_24431 EquivalentTo XCO_0000342 Pr= 0.7
+
+
+## http://purl.obolibrary.org/obo/XCO_0000172
+
+ * __Pr(G)__=0.7424242424242422 CONFIDENCE=5.999999999999992 Success:true
+ * __SIZE__=2 (1 new axioms) 
+[img](target/img-XCO_0000172.png)
+ * MEMBER: XCO_0000172
+ * MEMBER: CHEBI_16646
+ * CHEBI_16646 EquivalentTo XCO_0000172 Pr= 0.7
 
 
 ## http://purl.obolibrary.org/obo/CHEBI_35701
@@ -893,26 +985,24 @@
  * XCO_0000000 EquivalentTo ZECO_0000104 experimental conditions Pr= 0.85
 
 
-## http://purl.obolibrary.org/obo/ECTO_0002297
+## http://purl.obolibrary.org/obo/PECO_0007187
 
  * __Pr(G)__=0.9730639730639731 CONFIDENCE=71.24999999999997 Success:true
  * __SIZE__=2 (1 new axioms) 
-[img](target/img-ECTO_0002297.png)
- * MEMBER: ECTO_0002297 exposure to sodium hydroxide
- * MEMBER: PECO_0001060 sodium hydroxide exposure
- * ECTO_0002297 exposure to sodium hydroxide EquivalentTo PECO_0001060 sodium hydroxide exposure Pr= 0.85
+[img](target/img-PECO_0007187.png)
+ * MEMBER: PECO_0007187 salicylic acid exposure
+ * MEMBER: ECTO_0000132 exposure to salicylic acid
+ * ECTO_0000132 exposure to salicylic acid EquivalentTo PECO_0007187 salicylic acid exposure Pr= 0.85
 
 
-## http://purl.obolibrary.org/obo/PECO_0007167
+## http://purl.obolibrary.org/obo/ECTO_0002044
 
- * __Pr(G)__=0.7421129860601612 CONFIDENCE=5.999999999999992 Success:true
- * __SIZE__=3 (2 new axioms) 
-[img](target/img-PECO_0007167.png)
- * MEMBER: PECO_0007167 pesticide exposure
- * MEMBER: ECTO_0000530 exposure to pesticide
- * MEMBER: CHEBI_25944
- * ECTO_0000530 exposure to pesticide EquivalentTo PECO_0007167 pesticide exposure Pr= 0.85
- * CHEBI_25944 EquivalentTo PECO_0007167 pesticide exposure Pr= 0.7
+ * __Pr(G)__=0.9730639730639731 CONFIDENCE=71.24999999999997 Success:true
+ * __SIZE__=2 (1 new axioms) 
+[img](target/img-ECTO_0002044.png)
+ * MEMBER: ECTO_0002044 axotomy of saphenous nerve
+ * MEMBER: XCO_0000376
+ * ECTO_0002044 axotomy of saphenous nerve EquivalentTo XCO_0000376 Pr= 0.85
 
 
 ## http://purl.obolibrary.org/obo/ECTO_0001795
@@ -923,16 +1013,6 @@
  * MEMBER: ECTO_0001795 exposure to 2-methoxyethanol
  * MEMBER: PECO_0007517 2-methoxyethanol exposure
  * ECTO_0001795 exposure to 2-methoxyethanol EquivalentTo PECO_0007517 2-methoxyethanol exposure Pr= 0.85
-
-
-## http://purl.obolibrary.org/obo/ZECO_0000163
-
- * __Pr(G)__=0.9730639730639731 CONFIDENCE=71.24999999999997 Success:true
- * __SIZE__=2 (1 new axioms) 
-[img](target/img-ZECO_0000163.png)
- * MEMBER: ZECO_0000163 heat exposure
- * MEMBER: XCO_0000308
- * XCO_0000308 EquivalentTo ZECO_0000163 heat exposure Pr= 0.85
 
 
 ## http://purl.obolibrary.org/obo/ECTO_0000232
@@ -953,16 +1033,6 @@
  * MEMBER: ECTO_0001833 exposure to N-nitrosodimethylamine
  * MEMBER: PECO_0007554 N-nitrosodimethylamine exposure
  * ECTO_0001833 exposure to N-nitrosodimethylamine EquivalentTo PECO_0007554 N-nitrosodimethylamine exposure Pr= 0.85
-
-
-## http://purl.obolibrary.org/obo/CHEBI_18154
-
- * __Pr(G)__=0.7424242424242422 CONFIDENCE=5.999999999999992 Success:true
- * __SIZE__=2 (1 new axioms) 
-[img](target/img-CHEBI_18154.png)
- * MEMBER: CHEBI_18154
- * MEMBER: XCO_0000173
- * CHEBI_18154 EquivalentTo XCO_0000173 Pr= 0.7
 
 
 ## http://purl.obolibrary.org/obo/XCO_0000111
@@ -995,16 +1065,6 @@
  * ECTO_0000130 exposure to glucose EquivalentTo PECO_0001013 glucose exposure Pr= 0.85
 
 
-## http://purl.obolibrary.org/obo/PECO_0001015
-
- * __Pr(G)__=0.9730639730639731 CONFIDENCE=71.24999999999997 Success:true
- * __SIZE__=2 (1 new axioms) 
-[img](target/img-PECO_0001015.png)
- * MEMBER: PECO_0001015 sucrose exposure
- * MEMBER: ECTO_0000128 exposure to sucrose
- * ECTO_0000128 exposure to sucrose EquivalentTo PECO_0001015 sucrose exposure Pr= 0.85
-
-
 ## http://purl.obolibrary.org/obo/ECTO_0000515
 
  * __Pr(G)__=0.72499061401413 CONFIDENCE=5.999999999999992 Success:true
@@ -1027,26 +1087,6 @@
  * ECTO_0000981 exposure to temperature of water in surroundings EquivalentTo PECO_0007160 water temperature exposure Pr= 0.85
 
 
-## http://purl.obolibrary.org/obo/XCO_0000102
-
- * __Pr(G)__=0.9730639730639731 CONFIDENCE=71.24999999999997 Success:true
- * __SIZE__=2 (1 new axioms) 
-[img](target/img-XCO_0000102.png)
- * MEMBER: XCO_0000102
- * MEMBER: ZECO_0000114 fasting
- * XCO_0000102 EquivalentTo ZECO_0000114 fasting Pr= 0.85
-
-
-## http://purl.obolibrary.org/obo/ECTO_0001699
-
- * __Pr(G)__=0.9730639730639731 CONFIDENCE=71.24999999999997 Success:true
- * __SIZE__=2 (1 new axioms) 
-[img](target/img-ECTO_0001699.png)
- * MEMBER: ECTO_0001699 exposure to 1,2-dibromoethane
- * MEMBER: PECO_0007503 1,2-dibromoethane exposure
- * ECTO_0001699 exposure to 1,2-dibromoethane EquivalentTo PECO_0007503 1,2-dibromoethane exposure Pr= 0.85
-
-
 ## http://purl.obolibrary.org/obo/ECTO_0000133
 
  * __Pr(G)__=0.9730639730639731 CONFIDENCE=71.24999999999997 Success:true
@@ -1057,16 +1097,6 @@
  * ECTO_0000133 exposure to jasmonic acid EquivalentTo PECO_0007080 jasmonic acid exposure Pr= 0.85
 
 
-## http://purl.obolibrary.org/obo/ECTO_0001127
-
- * __Pr(G)__=0.7424242424242422 CONFIDENCE=5.999999999999992 Success:true
- * __SIZE__=2 (1 new axioms) 
-[img](target/img-ECTO_0001127.png)
- * MEMBER: ECTO_0001127 poverty related exposure
- * MEMBER: ExO_0000015
- * ECTO_0001127 poverty related exposure EquivalentTo ExO_0000015 Pr= 0.7
-
-
 ## http://purl.obolibrary.org/obo/ZECO_0000162
 
  * __Pr(G)__=0.9730639730639731 CONFIDENCE=71.24999999999997 Success:true
@@ -1075,26 +1105,6 @@
  * MEMBER: ZECO_0000162 cold exposure
  * MEMBER: XCO_0000306
  * XCO_0000306 EquivalentTo ZECO_0000162 cold exposure Pr= 0.85
-
-
-## http://purl.obolibrary.org/obo/PECO_0007530
-
- * __Pr(G)__=0.9730639730639731 CONFIDENCE=71.24999999999997 Success:true
- * __SIZE__=2 (1 new axioms) 
-[img](target/img-PECO_0007530.png)
- * MEMBER: PECO_0007530 diethyl sulfate exposure
- * MEMBER: ECTO_0001716 exposure to diethyl sulfate
- * ECTO_0001716 exposure to diethyl sulfate EquivalentTo PECO_0007530 diethyl sulfate exposure Pr= 0.85
-
-
-## http://purl.obolibrary.org/obo/ECTO_0000002
-
- * __Pr(G)__=0.9730639730639731 CONFIDENCE=71.24999999999997 Success:true
- * __SIZE__=2 (1 new axioms) 
-[img](target/img-ECTO_0000002.png)
- * MEMBER: ECTO_0000002 exposure to electromagnetic radiation
- * MEMBER: XCO_0000045
- * ECTO_0000002 exposure to electromagnetic radiation EquivalentTo XCO_0000045 Pr= 0.85
 
 
 ## http://purl.obolibrary.org/obo/NCIT_C41258
@@ -1118,24 +1128,14 @@
  * ECTO_0002032 activity related exposure EquivalentTo XCO_0000214 Pr= 0.7
 
 
-## http://purl.obolibrary.org/obo/PECO_0007187
+## http://purl.obolibrary.org/obo/ECTO_0001989
 
  * __Pr(G)__=0.9730639730639731 CONFIDENCE=71.24999999999997 Success:true
  * __SIZE__=2 (1 new axioms) 
-[img](target/img-PECO_0007187.png)
- * MEMBER: PECO_0007187 salicylic acid exposure
- * MEMBER: ECTO_0000132 exposure to salicylic acid
- * ECTO_0000132 exposure to salicylic acid EquivalentTo PECO_0007187 salicylic acid exposure Pr= 0.85
-
-
-## http://purl.obolibrary.org/obo/ECTO_0002045
-
- * __Pr(G)__=0.9730639730639731 CONFIDENCE=71.24999999999997 Success:true
- * __SIZE__=2 (1 new axioms) 
-[img](target/img-ECTO_0002045.png)
- * MEMBER: ECTO_0002045 axotomy of sciatic nerve
- * MEMBER: XCO_0000375
- * ECTO_0002045 axotomy of sciatic nerve EquivalentTo XCO_0000375 Pr= 0.85
+[img](target/img-ECTO_0001989.png)
+ * MEMBER: ECTO_0001989 exposure to phosphate
+ * MEMBER: PECO_0001006 phosphate exposure
+ * ECTO_0001989 exposure to phosphate EquivalentTo PECO_0001006 phosphate exposure Pr= 0.85
 
 
 ## http://purl.obolibrary.org/obo/XCO_0000445
