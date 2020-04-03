@@ -106,6 +106,11 @@ slim-exposure.obo: $(patsubst %, exposure-%.obo,$(MOD))
 
 .PRECIOUS: slim-exposure.obo
 
+
+slim-exposure.owl: slim-exposure.obo
+	robot convert -i slim-exposure.obo -o slim-exposure.owl
+
+
 probs.tsv: 
 	robot convert -i slim-exposure.obo --check false -o slim-exposure.ttl # convert slim-exposure.obo to ttl
 
@@ -135,7 +140,7 @@ probs.tsv:
 	rm non-exact-matches.txt
 
 MAX_E=8
-axioms.owl: slim-exposure.obo probs.tsv
+axioms.owl: slim-exposure.owl probs.tsv
 	kboom --experimental  --splitSize 50 --max $(MAX_E) -m rpt.md -j rpt.json -n -o $@ -t probs.tsv $<
 
 
@@ -145,5 +150,6 @@ rpt.html: axioms.owl
 
 clean-axioms:
 	rm $(patsubst %, exposure-%.obo,$(MOD))
+	rm slim-exposure.owl
 	rm axioms.owl
 	rm probs.tsv
