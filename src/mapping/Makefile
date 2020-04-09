@@ -78,7 +78,6 @@ exposure-ncit.obo:
   # THIS RUN BETTER B/C IT DOES NOT HAVE TO CONVERT FROM OBO TO OWL
 	#export ROBOT_JAVA_ARGS=-Xmx16G && robot \
 	#  query -i tmp-in.owl --tdb true -q xposure-construct.sparql tmp-out.obo
-	
 	## MUCH FASTER
 	obo-grep.pl -r ".*xposure.*" tmp-in.obo > tmp-xposure.obo # find obo stanzas containing *xposure*
 	
@@ -143,6 +142,9 @@ slim-exposure.obo: $(patsubst %, exposure-%.obo,$(MOD))
 MAX_E=8
 axioms.owl: slim-exposure.owl probs.tsv
 	kboom --experimental  --splitSize 50 --max $(MAX_E) -m rpt.md -j rpt.json -n -o $@ -t probs.tsv $<
+
+boomer.txt: slim-exposure.obo probs.tsv
+	 boomer --ptable probs.tsv --ontology $< --window-count 10 --runs 20 --prefixes prefixes.yaml --output $@
 
 probs.tsv: slim-exposure.obo
 	## convert slim-exposure.obo to ttl
