@@ -115,7 +115,7 @@ exposure-ecto.obo: ../../subsets/ecto-basic.obo
 
 exposure-snomed.obo:
 	export ROBOT_JAVA_ARGS=-Xmx16G && robot extract --method top -i ../ontology/snomed.obo -t "http://snomed.info/id/418715001" > tmp-snomed.obo
-  mv tmp-snomed.obo > $@
+	mv tmp-snomed.obo > $@
   
 # MOD = peco xco zeco exo ecto go ncit snomed
 slim-exposure.obo: $(patsubst %, exposure-%.obo,$(MOD))
