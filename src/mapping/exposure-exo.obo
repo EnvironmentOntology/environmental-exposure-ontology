@@ -1,0 +1,1534 @@
+format-version: 1.2
+ontology: exo.obo
+property_value: http://purl.obolibrary.org/obo/default-namespace "source" xsd:string
+
+[Term]
+id: ExO:0000000
+name: exposure stressor
+relationship: interacts_with ExO:0000001 ! exposure receptor
+relationship: interacts_with_an_exposure_receptor_via ExO:0000002 ! exposure event
+property_value: creation:date 2010-09-21T02:43:50Z xsd:string
+property_value: http://purl.obolibrary.org/obo/def "An agent, stimulus, activity, or event that causes stress or tension on an organism and interacts with an exposure receptor during an exposure event." xsd:string {http://www.geneontology.org/formats/oboInOWL#xref="CTD:curators"}
+property_value: http://purl.obolibrary.org/obo/namespace "exposure_stressor" xsd:string
+
+[Term]
+id: ExO:0000001
+name: exposure receptor
+relationship: interacts_with ExO:0000000 ! exposure stressor
+property_value: created:by "cmattin" xsd:string
+property_value: creation:date 2010-09-21T02:45:36Z xsd:string
+property_value: http://purl.obolibrary.org/obo/def "An entity (e.g., a human, human population, or a human organ) that interacts with an exposure stressor during an exposure event." xsd:string {http://www.geneontology.org/formats/oboInOWL#xref="CTD:curators"}
+property_value: http://purl.obolibrary.org/obo/namespace "exposure_receptor" xsd:string
+
+[Term]
+id: ExO:0000002
+name: exposure event
+relationship: BFO:0000051 ExO:0000000 ! exposure stressor
+relationship: BFO:0000051 ExO:0000001 ! exposure receptor
+relationship: interacts_with_an_exposure_receptor_via ExO:0000000 ! exposure stressor
+relationship: interacts_with_an_exposure_stressor_via ExO:0000001 ! exposure receptor
+property_value: created:by "cmattin" xsd:string
+property_value: creation:date 2010-09-21T02:47:00Z xsd:string
+property_value: http://purl.obolibrary.org/obo/def "An interaction between an exposure stressor and an exposure receptor." xsd:string {http://www.geneontology.org/formats/oboInOWL#xref="CTD:curators"}
+property_value: http://purl.obolibrary.org/obo/namespace "exposure_event" xsd:string
+
+[Term]
+id: ExO:0000003
+name: exposure outcome
+relationship: is_associated_with ExO:0000002 ! exposure event
+property_value: created:by "cmattin" xsd:string
+property_value: creation:date 2010-09-21T02:48:49Z xsd:string
+property_value: hasRelatedSynonym "interaction outcome" xsd:string
+property_value: http://purl.obolibrary.org/obo/def "Entity that results from the interaction between and exposure receptor and an exposure stressor during an exposure event." xsd:string {http://www.geneontology.org/formats/oboInOWL#xref="CTD:curators"}
+property_value: http://purl.obolibrary.org/obo/namespace "exposure_outcome" xsd:string
+
+[Term]
+id: ExO:0000004
+name: exposure transport path
+relationship: BFO:0000050 ExO:0000000 ! exposure stressor
+property_value: created:by "cmattin" xsd:string
+property_value: creation:date 2011-01-10T04:29:33Z xsd:string
+property_value: http://purl.obolibrary.org/obo/def "A exposure transport path is the course an agent takes from the source to the target." xsd:string {http://www.geneontology.org/formats/oboInOWL#xref="CTD:curators"}
+property_value: http://purl.obolibrary.org/obo/namespace "exposure_stressor" xsd:string
+
+[Term]
+id: ExO:0000005
+name: biological agent
+is_a: ExO:0000000 ! exposure stressor
+property_value: created:by "cmattin" xsd:string
+property_value: creation:date 2010-09-21T10:09:17Z xsd:string
+property_value: http://purl.obolibrary.org/obo/def "An agent of biological origin." xsd:string {http://www.geneontology.org/formats/oboInOWL#xref="CTD:curators"}
+property_value: http://purl.obolibrary.org/obo/namespace "exposure_stressor" xsd:string
+
+[Term]
+id: ExO:0000006
+name: chemical agent
+is_a: ExO:0000000 ! exposure stressor
+property_value: created:by "cmattin" xsd:string
+property_value: creation:date 2010-09-21T10:12:29Z xsd:string
+property_value: http://purl.obolibrary.org/obo/def "An agent of chemical origin." xsd:string {http://www.geneontology.org/formats/oboInOWL#xref="google:google"}
+property_value: http://purl.obolibrary.org/obo/namespace "exposure_stressor" xsd:string
+
+[Term]
+id: ExO:0000007
+name: ecological perturbation
+is_a: ExO:0000000 ! exposure stressor
+property_value: created:by "cmattin" xsd:string
+property_value: creation:date 2010-09-21T10:14:38Z xsd:string
+property_value: http://purl.obolibrary.org/obo/def "An exposure stressor that is a change in the distributions, abundance and relations of organisms and their interactions with the environment." xsd:string {http://www.geneontology.org/formats/oboInOWL#xref="google:google"}
+property_value: http://purl.obolibrary.org/obo/namespace "exposure_stressor" xsd:string
+
+[Term]
+id: ExO:0000008
+name: physical agent
+is_a: ExO:0000000 ! exposure stressor
+property_value: created:by "cmattin" xsd:string
+property_value: creation:date 2010-09-21T10:15:42Z xsd:string
+property_value: http://purl.obolibrary.org/obo/def "An agent as a source of energy that may cause injury or disease (e.g., noise, vibration, radiation, temperature extremes)." xsd:string {http://www.geneontology.org/formats/oboInOWL#xref="google:google"}
+property_value: http://purl.obolibrary.org/obo/namespace "exposure_stressor" xsd:string
+
+[Term]
+id: ExO:0000009
+name: psychosocial agent
+is_a: ExO:0000000 ! exposure stressor
+property_value: created:by "cmattin" xsd:string
+property_value: creation:date 2010-09-21T10:16:35Z xsd:string
+property_value: http://purl.obolibrary.org/obo/def "An agent that interferes with one's psychological development in and interaction with a social environment." xsd:string {http://www.geneontology.org/formats/oboInOWL#xref="google:google"}
+property_value: http://purl.obolibrary.org/obo/namespace "exposure_stressor" xsd:string
+
+[Term]
+id: ExO:0000010
+name: air transport path
+is_a: ExO:0000004 ! exposure transport path
+property_value: created:by "cmattin" xsd:string
+property_value: creation:date 2011-01-10T04:29:46Z xsd:string
+property_value: http://purl.obolibrary.org/obo/def "A transport path that allows a stressor to interact with a receptor via air." xsd:string {http://www.geneontology.org/formats/oboInOWL#xref="CTD:curators"}
+property_value: http://purl.obolibrary.org/obo/namespace "exposure_transport_path" xsd:string
+
+[Term]
+id: ExO:0000011
+name: biomechanical agent
+is_a: ExO:0000000 ! exposure stressor
+property_value: created:by "cmattin" xsd:string
+property_value: creation:date 2011-01-10T04:17:29Z xsd:string
+property_value: http://purl.obolibrary.org/obo/def "A mechanical agent applied to biological systems, such as humans, animals, plants, organs, and cells" xsd:string {http://www.geneontology.org/formats/oboInOWL#xref="CTD:curators"}
+property_value: http://purl.obolibrary.org/obo/namespace "exposure_stressor" xsd:string
+
+[Term]
+id: ExO:0000012
+name: habitat degradation
+is_a: ExO:0000007 ! ecological perturbation
+property_value: created:by "cmattin" xsd:string
+property_value: creation:date 2011-01-10T04:18:53Z xsd:string
+property_value: http://purl.obolibrary.org/obo/def "An ecological perturbation that results from the deterioration of  an ecological or environmental area that is inhabited by a particular species of animal, plant or other type of organism." xsd:string {http://www.geneontology.org/formats/oboInOWL#xref="GOC:hjd"}
+property_value: http://purl.obolibrary.org/obo/namespace "exposure_stressor" xsd:string
+
+[Term]
+id: ExO:0000013
+name: acid rain
+is_a: ExO:0000007 ! ecological perturbation
+property_value: created:by "cmattin" xsd:string
+property_value: creation:date 2011-01-10T04:19:11Z xsd:string
+property_value: http://purl.obolibrary.org/obo/def "An ecological perturbation that is acidic water, usually pH 2.5 to 4.5, which poisons the ecosystem and adversely affects plants, fishes, and mammals. It is caused by industrial pollutants, mainly sulfur oxides and nitrogen oxides, emitted into the atmosphere and returning to earth in the form of acidic rain water." xsd:string {http://www.geneontology.org/formats/oboInOWL#xref="MSH:D015258", http://www.geneontology.org/formats/oboInOWL#xref="Umls Cui:C0001111"}
+property_value: http://purl.obolibrary.org/obo/namespace "exposure_stressor" xsd:string
+
+[Term]
+id: ExO:0000014
+name: climate change
+is_a: ExO:0000007 ! ecological perturbation
+property_value: created:by "cmattin" xsd:string
+property_value: creation:date 2011-01-10T04:19:26Z xsd:string
+property_value: http://purl.obolibrary.org/obo/def "An ecological pertubation that is any significant change in measures of climate (such as temperature, precipitation, or wind) lasting for an extended period (decades or longer). It may result from natural factors such as changes in the sun's intensity, natural processes within the climate system such as changes in ocean circulation, or human activities." xsd:string {http://www.geneontology.org/formats/oboInOWL#xref="MSH:D057231", http://www.geneontology.org/formats/oboInOWL#xref="Umls Cui:C2718051"}
+property_value: http://purl.obolibrary.org/obo/namespace "exposure_stressor" xsd:string
+
+[Term]
+id: ExO:0000015
+name: poverty
+is_a: ExO:0000009 ! psychosocial agent
+property_value: created:by "cmattin" xsd:string
+property_value: creation:date 2011-01-10T04:19:54Z xsd:string
+property_value: hasRelatedSynonym "indigency" xsd:string
+property_value: http://purl.obolibrary.org/obo/def "A psychosocial agent that is a situation in which the level of living of an individual, family, or group is below the standard of the community. It is often related to a specific income level." xsd:string {http://www.geneontology.org/formats/oboInOWL#xref="MSH:D011203"}
+property_value: http://purl.obolibrary.org/obo/namespace "exposure_stressor" xsd:string
+
+[Term]
+id: ExO:0000016
+name: source
+relationship: BFO:0000050 ExO:0000000 ! exposure stressor
+property_value: created:by "cmattin" xsd:string
+property_value: creation:date 2011-01-10T04:20:11Z xsd:string
+property_value: http://purl.obolibrary.org/obo/def "Where something is available or from where it originates." xsd:string {http://www.geneontology.org/formats/oboInOWL#xref="Umls Cui:C0449416"}
+property_value: http://purl.obolibrary.org/obo/namespace "exposure_stressor" xsd:string
+property_value: xref CTD:curators
+
+[Term]
+id: ExO:0000017
+name: location
+is_a: ExO:0000002 ! exposure event
+is_a: ExO:0000088 ! spatial quality
+property_value: created:by "cmattin" xsd:string
+property_value: creation:date 2011-01-10T04:22:40Z xsd:string
+property_value: hasRelatedSynonym "Placement" xsd:string
+property_value: http://purl.obolibrary.org/obo/def "A spatial quality inhering in a bearer by virtue of the bearer's spatial location relative to other objects in the vicinity." xsd:string {http://www.geneontology.org/formats/oboInOWL#xref="PATO:0000140"}
+property_value: http://purl.obolibrary.org/obo/namespace "spatial_quality" xsd:string
+
+[Term]
+id: ExO:0000018
+name: exogenous
+is_a: ExO:0000017 ! location
+property_value: created:by "cmattin" xsd:string
+property_value: creation:date 2011-01-10T04:23:00Z xsd:string
+property_value: http://purl.obolibrary.org/obo/def "Substances or processes that originate outside of an organism or a system." xsd:string {http://www.geneontology.org/formats/oboInOWL#xref="CTD:curators"}
+property_value: http://purl.obolibrary.org/obo/namespace "spatial_quality" xsd:string
+
+[Term]
+id: ExO:0000019
+name: indoor
+is_a: ExO:0000017 ! location
+property_value: created:by "cmattin" xsd:string
+property_value: creation:date 2011-01-10T04:23:14Z xsd:string
+property_value: http://purl.obolibrary.org/obo/def "A location that is happening or arising or located inside some limits, or especially, some surface." xsd:string {http://www.geneontology.org/formats/oboInOWL#xref="CTD:curators"}
+property_value: http://purl.obolibrary.org/obo/namespace "spatial_quality" xsd:string
+
+[Term]
+id: ExO:0000020
+name: outdoor
+is_a: ExO:0000017 ! location
+property_value: created:by "cmattin" xsd:string
+property_value: creation:date 2011-01-10T04:23:24Z xsd:string
+property_value: http://purl.obolibrary.org/obo/def "An exogenous location that is happening or arising or located outside" xsd:string {http://www.geneontology.org/formats/oboInOWL#xref="CTD:curators"}
+property_value: http://purl.obolibrary.org/obo/namespace "spatial_quality" xsd:string
+
+[Term]
+id: ExO:0000021
+name: endogenous
+is_a: ExO:0000017 ! location
+property_value: created:by "cmattin" xsd:string
+property_value: creation:date 2011-01-10T04:23:36Z xsd:string
+property_value: http://purl.obolibrary.org/obo/def "Substances or processes that originate within an organism or a system." xsd:string {http://www.geneontology.org/formats/oboInOWL#xref="CTD:curators"}
+property_value: http://purl.obolibrary.org/obo/namespace "spatial_quality" xsd:string
+
+[Term]
+id: ExO:0000023
+name: process
+is_a: ExO:0000016 ! source
+property_value: created:by "cmattin" xsd:string
+property_value: creation:date 2011-01-10T04:24:15Z xsd:string
+property_value: http://purl.obolibrary.org/obo/def "The act of taking something through an established and usually routine set of procedures to convert it from one form to another." xsd:string {http://www.geneontology.org/formats/oboInOWL#xref="CTD:curators"}
+property_value: http://purl.obolibrary.org/obo/namespace "source" xsd:string
+
+[Term]
+id: ExO:0000024
+name: biological process
+is_a: ExO:0000023 ! process
+property_value: created:by "cmattin" xsd:string
+property_value: creation:date 2011-01-10T04:24:45Z xsd:string
+property_value: http://purl.obolibrary.org/obo/def "A process occurring in living organisms." xsd:string {http://www.geneontology.org/formats/oboInOWL#xref="CTD:curators"}
+property_value: http://purl.obolibrary.org/obo/namespace "source" xsd:string
+
+[Term]
+id: ExO:0000025
+name: industrial process
+is_a: ExO:0000023 ! process
+property_value: created:by "cmattin" xsd:string
+property_value: creation:date 2011-01-10T04:24:59Z xsd:string
+property_value: http://purl.obolibrary.org/obo/def "A systematic series of mechanical or chemical operations that produce or manufacture something." xsd:string {http://www.geneontology.org/formats/oboInOWL#xref="CTD:curators"}
+property_value: http://purl.obolibrary.org/obo/namespace "source" xsd:string
+
+[Term]
+id: ExO:0000026
+name: agricultural process
+is_a: ExO:0000023 ! process
+property_value: created:by "cmattin" xsd:string
+property_value: creation:date 2011-01-10T04:25:09Z xsd:string
+property_value: http://purl.obolibrary.org/obo/def "The exposure process of producing food, feed, fiber and other desired products by cultivation of certain plants or raising domesticated animals (livestock)." xsd:string {http://www.geneontology.org/formats/oboInOWL#xref="CTD:curators"}
+property_value: http://purl.obolibrary.org/obo/namespace "source" xsd:string
+
+[Term]
+id: ExO:0000028
+name: water transport path
+is_a: ExO:0000004 ! exposure transport path
+property_value: created:by "cmattin" xsd:string
+property_value: creation:date 2011-01-10T04:29:57Z xsd:string
+property_value: http://purl.obolibrary.org/obo/def "An exposure transport path involving the interaction of an exposure receptor with an exposure stressor via water." xsd:string {http://www.geneontology.org/formats/oboInOWL#xref="CTD:curators"}
+property_value: http://purl.obolibrary.org/obo/namespace "exposure_transport_path" xsd:string
+
+[Term]
+id: ExO:0000029
+name: soil transport path
+is_a: ExO:0000004 ! exposure transport path
+property_value: created:by "cmattin" xsd:string
+property_value: creation:date 2011-01-10T04:30:08Z xsd:string
+property_value: http://purl.obolibrary.org/obo/def "An exposure transport path involving the interaction of an exposure receptor with an exposure stressor via soil." xsd:string {http://www.geneontology.org/formats/oboInOWL#xref="CTD:curators"}
+property_value: http://purl.obolibrary.org/obo/namespace "exposure_transport_path" xsd:string
+
+[Term]
+id: ExO:0000030
+name: ecosphere
+is_a: ExO:0000001 ! exposure receptor
+property_value: created:by "cmattin" xsd:string
+property_value: creation:date 2011-01-10T09:26:27Z xsd:string
+property_value: http://purl.obolibrary.org/obo/def "The earth, all of the organisms living on it, and all of the environmental factors, which act on the organisms. The volume of area where biological matter can exist, slightly above, on or below ground level." xsd:string {http://www.geneontology.org/formats/oboInOWL#xref="XCTD:curators"}
+property_value: http://purl.obolibrary.org/obo/namespace "exposure_receptor" xsd:string
+
+[Term]
+id: ExO:0000031
+name: biosphere
+relationship: BFO:0000050 ExO:0000030 ! ecosphere
+property_value: created:by "cmattin" xsd:string
+property_value: creation:date 2011-01-10T09:27:26Z xsd:string
+property_value: hasAlternativeId ExO:0000032
+property_value: hasExactSynonym "anthrosphere" xsd:string
+property_value: http://purl.obolibrary.org/obo/def "MERGED DEFINITION:\\nTARGET DEFINITION: An exposure receptor that is the global ecological system integrating all living beings and their relationships, including their interaction with the elements of the lithosphere, hydrosphere and atmosphere.\\n--------------------\\nSOURCE DEFINITION: An exposure receptor that is the part of the environment that is made or modified by humans for use in human activities and human habitats." xsd:string {http://www.geneontology.org/formats/oboInOWL#xref="GOC:hjd"}
+property_value: http://purl.obolibrary.org/obo/namespace "exposure_receptor" xsd:string
+
+[Term]
+id: ExO:0000033
+name: human population
+is_a: ExO:0000001 ! exposure receptor
+relationship: BFO:0000050 ExO:0000031 ! biosphere
+property_value: created:by "cmattin" xsd:string
+property_value: creation:date 2011-01-10T09:28:02Z xsd:string
+property_value: http://purl.obolibrary.org/obo/def "An exposure receptor that is a group of Homo sapiens inhabiting a given area." xsd:string {http://www.geneontology.org/formats/oboInOWL#xref="CTD:curators"}
+property_value: http://purl.obolibrary.org/obo/namespace "exposure_receptor" xsd:string
+
+[Term]
+id: ExO:0000034
+name: occupation
+is_a: ExO:0000089 ! human attribute
+property_value: created:by "cmattin" xsd:string
+property_value: creation:date 2011-01-10T09:28:22Z xsd:string
+property_value: http://purl.obolibrary.org/obo/def "An individual attribute that is the usual or principal work or business of an individual." xsd:string {http://www.geneontology.org/formats/oboInOWL#xref="CTD:curators"}
+property_value: http://purl.obolibrary.org/obo/namespace "human_attribute" xsd:string
+
+[Term]
+id: ExO:0000035
+name: genetic background
+is_a: ExO:0000089 ! human attribute
+property_value: created:by "cmattin" xsd:string
+property_value: creation:date 2011-01-10T09:28:41Z xsd:string
+property_value: http://purl.obolibrary.org/obo/def "The individual attribute that is the genes and their composition that are characteristic of an individual or population." xsd:string {http://www.geneontology.org/formats/oboInOWL#xref="CTD:curators"}
+property_value: http://purl.obolibrary.org/obo/namespace "human_attribute" xsd:string
+
+[Term]
+id: ExO:0000037
+name: lifestage
+is_a: ExO:0000089 ! human attribute
+property_value: created:by "cmattin" xsd:string
+property_value: creation:date 2011-01-10T09:29:39Z xsd:string
+property_value: http://purl.obolibrary.org/obo/def "A individual attribute that is a particular period in the life of an organism." xsd:string {http://www.geneontology.org/formats/oboInOWL#xref="CTD:curators"}
+property_value: http://purl.obolibrary.org/obo/namespace "human_attribute" xsd:string
+
+[Term]
+id: ExO:0000038
+name: health status
+is_a: ExO:0000089 ! human attribute
+property_value: created:by "cmattin" xsd:string
+property_value: creation:date 2011-01-10T09:29:51Z xsd:string
+property_value: http://purl.obolibrary.org/obo/def "The condition of an organism in all aspects (e.g., functional or metabolic efficiency)." xsd:string {http://www.geneontology.org/formats/oboInOWL#xref="CTD:curators"}
+property_value: http://purl.obolibrary.org/obo/namespace "human_attribute" xsd:string
+
+[Term]
+id: ExO:0000039
+name: social characteristic
+is_a: ExO:0000089 ! human attribute
+property_value: created:by "cmattin" xsd:string
+property_value: creation:date 2011-01-10T09:30:08Z xsd:string
+property_value: http://purl.obolibrary.org/obo/def "An individual attribute human society and its modes of organization." xsd:string {http://www.geneontology.org/formats/oboInOWL#xref="CTD:curators"}
+property_value: http://purl.obolibrary.org/obo/namespace "human_attribute" xsd:string
+
+[Term]
+id: ExO:0000040
+name: cultural background
+is_a: ExO:0000039 ! social characteristic
+property_value: created:by "cmattin" xsd:string
+property_value: creation:date 2011-01-10T09:30:27Z xsd:string
+property_value: http://purl.obolibrary.org/obo/def "A social characteristic about or relating to the arts and manners favored or practiced by a group." xsd:string {http://www.geneontology.org/formats/oboInOWL#xref="CTD:curators"}
+property_value: http://purl.obolibrary.org/obo/namespace "human_attribute" xsd:string
+
+[Term]
+id: ExO:0000041
+name: education
+is_a: ExO:0000039 ! social characteristic
+property_value: created:by "cmattin" xsd:string
+property_value: creation:date 2011-01-10T09:30:40Z xsd:string
+property_value: http://purl.obolibrary.org/obo/def "The act or process of imparting or acquiring knowledge." xsd:string {http://www.geneontology.org/formats/oboInOWL#xref="CTD:curators"}
+property_value: http://purl.obolibrary.org/obo/namespace "human_attribute" xsd:string
+
+[Term]
+id: ExO:0000042
+name: human individual
+is_a: ExO:0000001 ! exposure receptor
+relationship: BFO:0000050 ExO:0000033 ! human population
+property_value: created:by "cmattin" xsd:string
+property_value: creation:date 2011-01-10T09:30:56Z xsd:string
+property_value: http://purl.obolibrary.org/obo/def "Being or characteristic of a single thing or person." xsd:string {http://www.geneontology.org/formats/oboInOWL#xref="CTD:curators"}
+property_value: http://purl.obolibrary.org/obo/namespace "exposure_receptor" xsd:string
+
+[Term]
+id: ExO:0000043
+name: anatomy
+is_a: ExO:0000089 ! human attribute
+is_a: ExO:0000101 ! phenotype
+property_value: created:by "cmattin" xsd:string
+property_value: creation:date 2011-01-10T09:31:27Z xsd:string
+property_value: http://purl.obolibrary.org/obo/def "The individual attribute describing the structure of a living organism." xsd:string {http://www.geneontology.org/formats/oboInOWL#xref="CTD:curators"}
+property_value: http://purl.obolibrary.org/obo/namespace "human_attribute" xsd:string
+
+[Term]
+id: ExO:0000044
+name: organ
+relationship: BFO:0000050 ExO:0000043 ! anatomy
+property_value: created:by "cmattin" xsd:string
+property_value: creation:date 2011-01-10T09:31:44Z xsd:string
+property_value: http://purl.obolibrary.org/obo/def "Anatomical structure, which consists of the maximal set of organ parts so connected to one another that together they constitute a unit of macroscopic anatomy, structurally distinct from other such units. Examples: femur, biceps, liver, heart, skin, tracheobronchial tree, ovary." xsd:string {http://www.geneontology.org/formats/oboInOWL#xref="FMA:67498"}
+property_value: http://purl.obolibrary.org/obo/namespace "anatomy" xsd:string
+
+[Term]
+id: ExO:0000045
+name: tissue
+relationship: BFO:0000050 ExO:0000043 ! anatomy
+property_value: created:by "cmattin" xsd:string
+property_value: creation:date 2011-01-10T09:31:55Z xsd:string
+property_value: http://purl.obolibrary.org/obo/def "Anatomical structure, which consists of similarly specialized cells and intercellular matrix, aggregated according to genetically determined spatial relationships. Examples: epithelium, muscle tissue, connective tissue, neural tissue, lymphoid tissue." xsd:string {http://www.geneontology.org/formats/oboInOWL#xref="FMA:9637"}
+property_value: http://purl.obolibrary.org/obo/namespace "anatomy" xsd:string
+
+[Term]
+id: ExO:0000046
+name: cell
+relationship: BFO:0000050 ExO:0000043 ! anatomy
+property_value: created:by "cmattin" xsd:string
+property_value: creation:date 2011-01-10T09:32:07Z xsd:string
+property_value: http://purl.obolibrary.org/obo/def "Anatomical structure that consists of a cell compartment surrounded by a plasma membrane; together with other cells and intercellular matrix, it constitutes tissues. Examples: lymphocyte, fibroblast, erythrocyte, neuron." xsd:string {http://www.geneontology.org/formats/oboInOWL#xref="FMA:68646"}
+property_value: http://purl.obolibrary.org/obo/namespace "anatomy" xsd:string
+
+[Term]
+id: ExO:0000047
+name: biological molecules
+relationship: BFO:0000050 ExO:0000043 ! anatomy
+property_value: created:by "cmattin" xsd:string
+property_value: creation:date 2011-01-10T09:32:26Z xsd:string
+property_value: http://purl.obolibrary.org/obo/def "Substances made up of atoms, such as proteins, nucleic acids, lipids and carbohydrates that are produced only by living organisms. Biological molecules are often referred to as macromolecules or biopolymers." xsd:string {http://www.geneontology.org/formats/oboInOWL#xref="CTD:curators"}
+property_value: http://purl.obolibrary.org/obo/namespace "anatomy" xsd:string
+
+[Term]
+id: ExO:0000048
+name: built environment
+relationship: BFO:0000050 ExO:0000031 ! biosphere
+property_value: created:by "cmattin" xsd:string
+property_value: creation:date 2011-01-10T09:32:56Z xsd:string
+property_value: http://purl.obolibrary.org/obo/def "Human-made surroundings that provide the setting for human activity, ranging in scale from personal shelter and buildings to neighborhoods and cite, and can often include their supporting infrastructure, such as water supply or energy networks." xsd:string {http://www.geneontology.org/formats/oboInOWL#xref="CTD:curators"}
+property_value: http://purl.obolibrary.org/obo/namespace "exposure_receptor" xsd:string
+
+[Term]
+id: ExO:0000050
+name: temporal quality
+relationship: BFO:0000050 ExO:0000002 ! exposure event
+relationship: BFO:0000050 ExO:0000016 ! source
+relationship: BFO:0000050 ExO:0000064 ! assay
+property_value: created:by "cmattin" xsd:string
+property_value: creation:date 2011-01-10T09:37:16Z xsd:string
+property_value: hasRelatedSynonym "Incidence" xsd:string
+property_value: hasRelatedSynonym "occurrence quality" xsd:string
+property_value: http://purl.obolibrary.org/obo/def "A quality of a single process inhering in a bearer by virtue of the bearer's occurrence." xsd:string {http://www.geneontology.org/formats/oboInOWL#xref="PATO:0000057"}
+property_value: http://purl.obolibrary.org/obo/namespace "temporal_quality" xsd:string
+
+[Term]
+id: ExO:0000051
+name: frequency
+is_a: ExO:0000050 ! temporal quality
+property_value: created:by "cmattin" xsd:string
+property_value: creation:date 2011-01-10T09:37:46Z xsd:string
+property_value: http://purl.obolibrary.org/obo/def "A physical quality, which inheres in a bearer by virtue of the number of the bearer's repetitive actions in a particular time." xsd:string {http://www.geneontology.org/formats/oboInOWL#xref="PATO:0000044"}
+property_value: http://purl.obolibrary.org/obo/namespace "temporal_quality" xsd:string
+
+[Term]
+id: ExO:0000052
+name: intermittent
+is_a: ExO:0000051 ! frequency
+property_value: created:by "cmattin" xsd:string
+property_value: creation:date 2011-01-10T09:37:57Z xsd:string
+property_value: hasRelatedSynonym "discontinuous" xsd:string
+property_value: hasRelatedSynonym "interrupted" xsd:string
+property_value: http://purl.obolibrary.org/obo/def "A quality of a single process inhering in a bearer by virtue of the bearer's being marked by breaks or interruptions." xsd:string {http://www.geneontology.org/formats/oboInOWL#xref="PATO:0000690"}
+property_value: http://purl.obolibrary.org/obo/namespace "temporal_quality" xsd:string
+
+[Term]
+id: ExO:0000053
+name: continuous
+is_a: ExO:0000051 ! frequency
+property_value: created:by "cmattin" xsd:string
+property_value: creation:date 2011-01-10T09:38:09Z xsd:string
+property_value: hasRelatedSynonym "uninterrupted" xsd:string
+property_value: http://purl.obolibrary.org/obo/def "A quality of a single process inhering in a bearer by virtue of the bearer's being uninterrupted in time, sequence, substance, or extent." xsd:string {http://www.geneontology.org/formats/oboInOWL#xref="PATO:0000689"}
+property_value: http://purl.obolibrary.org/obo/namespace "temporal_quality" xsd:string
+
+[Term]
+id: ExO:0000054
+name: duration
+is_a: ExO:0000050 ! temporal quality
+property_value: created:by "cmattin" xsd:string
+property_value: creation:date 2011-01-10T09:38:24Z xsd:string
+property_value: http://purl.obolibrary.org/obo/def "Amount of time during which an event persists." xsd:string {http://www.geneontology.org/formats/oboInOWL#xref="SBO:0000347"}
+property_value: http://purl.obolibrary.org/obo/namespace "temporal_quality" xsd:string
+
+[Term]
+id: ExO:0000055
+name: route
+relationship: BFO:0000050 ExO:0000002 ! exposure event
+property_value: created:by "cmattin" xsd:string
+property_value: creation:date 2011-01-10T09:38:37Z xsd:string
+property_value: http://purl.obolibrary.org/obo/def "The way people or other living organisms come into contact with a stressor." xsd:string {http://www.geneontology.org/formats/oboInOWL#xref="CTD:curators"}
+property_value: http://purl.obolibrary.org/obo/namespace "exposure_event" xsd:string
+
+[Term]
+id: ExO:0000056
+name: ingestion
+is_a: ExO:0000055 ! route
+property_value: created:by "cmattin" xsd:string
+property_value: creation:date 2011-01-10T09:38:47Z xsd:string
+property_value: http://purl.obolibrary.org/obo/def "The process of taking a material (e.g., stressor) into the mouth or body." xsd:string {http://www.geneontology.org/formats/oboInOWL#xref="CTD:curators"}
+property_value: http://purl.obolibrary.org/obo/namespace "route" xsd:string
+
+[Term]
+id: ExO:0000057
+name: inhalation
+is_a: ExO:0000055 ! route
+property_value: created:by "cmattin" xsd:string
+property_value: creation:date 2011-01-10T09:38:59Z xsd:string
+property_value: http://purl.obolibrary.org/obo/def "The process of drawing in by breathing." xsd:string {http://www.geneontology.org/formats/oboInOWL#xref="CTD:curators"}
+property_value: http://purl.obolibrary.org/obo/namespace "route" xsd:string
+
+[Term]
+id: ExO:0000058
+name: absorption
+is_a: ExO:0000055 ! route
+property_value: created:by "cmattin" xsd:string
+property_value: creation:date 2011-01-10T09:39:11Z xsd:string
+property_value: http://purl.obolibrary.org/obo/def "The process of one material (absorbent) being retained by another (absorbate)." xsd:string {http://www.geneontology.org/formats/oboInOWL#xref="REX:0000188"}
+property_value: http://purl.obolibrary.org/obo/namespace "route" xsd:string
+
+[Term]
+id: ExO:0000059
+name: leaching
+is_a: ExO:0000055 ! route
+property_value: created:by "cmattin" xsd:string
+property_value: creation:date 2011-01-10T09:39:25Z xsd:string
+property_value: http://purl.obolibrary.org/obo/def "The extraction of certain materials from a carrier into a liquid (usually, but not always a solvent)." xsd:string {http://www.geneontology.org/formats/oboInOWL#xref="GOC:hjd"}
+property_value: http://purl.obolibrary.org/obo/namespace "route" xsd:string
+
+[Term]
+id: ExO:0000060
+name: injection
+is_a: ExO:0000055 ! route
+property_value: created:by "cmattin" xsd:string
+property_value: creation:date 2011-01-10T09:39:37Z xsd:string
+property_value: http://purl.obolibrary.org/obo/def "A method of putting liquid into the body with a syringe and a hollow needle that punctures the skin." xsd:string {http://www.geneontology.org/formats/oboInOWL#xref="GOC:hjd"}
+property_value: http://purl.obolibrary.org/obo/namespace "route" xsd:string
+
+[Term]
+id: ExO:0000061
+name: subcutaneous tissue
+relationship: BFO:0000050 ExO:0000043 ! anatomy
+relationship: targeted_to ExO:0000060 ! injection
+property_value: created:by "cmattin" xsd:string
+property_value: creation:date 2011-01-10T09:39:49Z xsd:string
+property_value: hasRelatedSynonym "Superficial fascia" xsd:string
+property_value: http://purl.obolibrary.org/obo/def "Superficial fascia." xsd:string {http://www.geneontology.org/formats/oboInOWL#xref="FMA:9630"}
+property_value: http://purl.obolibrary.org/obo/namespace "anatomy" xsd:string
+
+[Term]
+id: ExO:0000062
+name: muscle
+relationship: BFO:0000050 ExO:0000043 ! anatomy
+relationship: targeted_to ExO:0000060 ! injection
+property_value: created:by "cmattin" xsd:string
+property_value: creation:date 2011-01-10T09:40:05Z xsd:string
+property_value: http://purl.obolibrary.org/obo/def "The contractile tissue of animals and is derived from the mesodermal layer of embryonic germ cells." xsd:string {http://www.geneontology.org/formats/oboInOWL#xref="FMA:30316"}
+property_value: http://purl.obolibrary.org/obo/namespace "anatomy" xsd:string
+
+[Term]
+id: ExO:0000063
+name: blood
+relationship: BFO:0000050 ExO:0000043 ! anatomy
+relationship: targeted_to ExO:0000060 ! injection
+property_value: created:by "cmattin" xsd:string
+property_value: creation:date 2011-01-10T09:40:25Z xsd:string
+property_value: http://purl.obolibrary.org/obo/def "Body substance which consists of plasma and blood cells." xsd:string {http://www.geneontology.org/formats/oboInOWL#xref="FMA:9670"}
+property_value: http://purl.obolibrary.org/obo/namespace "anatomy" xsd:string
+
+[Term]
+id: ExO:0000064
+name: assay
+relationship: characterizes ExO:0000002 ! exposure event
+property_value: created:by "cmattin" xsd:string
+property_value: creation:date 2011-01-11T01:22:29Z xsd:string
+property_value: http://purl.obolibrary.org/obo/def "A planned process with the objective to produce information about some evaluant." xsd:string {http://www.geneontology.org/formats/oboInOWL#xref="OBI:0000070"}
+property_value: http://purl.obolibrary.org/obo/namespace "assay" xsd:string
+
+[Term]
+id: ExO:0000065
+name: intensity
+relationship: BFO:0000050 ExO:0000002 ! exposure event
+relationship: BFO:0000050 ExO:0000016 ! source
+relationship: BFO:0000050 ExO:0000064 ! assay
+property_value: created:by "cmattin" xsd:string
+property_value: creation:date 2011-01-11T01:23:06Z xsd:string
+property_value: http://purl.obolibrary.org/obo/def "A quality inhering in a bearer by virtue of the bearer possessing or displaying a distinctive feature in type or degree or effect or force." xsd:string {http://www.geneontology.org/formats/oboInOWL#xref="PATO:0000049"}
+property_value: http://purl.obolibrary.org/obo/namespace "exposure_event" xsd:string
+
+[Term]
+id: ExO:0000066
+name: unit
+relationship: BFO:0000050 ExO:0000050 ! temporal quality
+relationship: BFO:0000050 ExO:0000067 ! measurement
+relationship: BFO:0000051 ExO:0000065 ! intensity
+property_value: created:by "cmattin" xsd:string
+property_value: creation:date 2011-01-11T01:23:54Z xsd:string
+property_value: http://purl.obolibrary.org/obo/def "A unit of measurement is a standardized quantity of a physical quality." xsd:string {http://www.geneontology.org/formats/oboInOWL#xref="UO:0000000"}
+property_value: http://purl.obolibrary.org/obo/namespace "unit" xsd:string
+
+[Term]
+id: ExO:0000067
+name: measurement
+is_a: ExO:0000064 ! assay
+property_value: created:by "cmattin" xsd:string
+property_value: creation:date 2011-01-11T01:24:53Z xsd:string
+property_value: http://purl.obolibrary.org/obo/def "A measurement is an information entity that is a recording of the output of a measurement such as produced by an instrument." xsd:string {http://www.geneontology.org/formats/oboInOWL#xref="EFO:0001444"}
+property_value: http://purl.obolibrary.org/obo/namespace "assay" xsd:string
+
+[Term]
+id: ExO:0000070
+name: time
+is_a: ExO:0000050 ! temporal quality
+property_value: created:by "cmattin" xsd:string
+property_value: creation:date 2011-01-11T01:26:02Z xsd:string
+property_value: http://purl.obolibrary.org/obo/def "An exposure quality in which events occur in sequence." xsd:string {http://www.geneontology.org/formats/oboInOWL#xref="PATO:0000165"}
+property_value: http://purl.obolibrary.org/obo/namespace "temporal_quality" xsd:string
+
+[Term]
+id: ExO:0000071
+name: biological marker
+is_a: ExO:0000064 ! assay
+property_value: created:by "cmattin" xsd:string
+property_value: creation:date 2011-01-11T01:26:20Z xsd:string
+property_value: http://purl.obolibrary.org/obo/def "A substance used as an indicator of a biological state." xsd:string {http://www.geneontology.org/formats/oboInOWL#xref="CHEBI:59163"}
+property_value: http://purl.obolibrary.org/obo/namespace "assay" xsd:string
+
+[Term]
+id: ExO:0000072
+name: model
+is_a: ExO:0000064 ! assay
+property_value: created:by "cmattin" xsd:string
+property_value: creation:date 2011-01-11T01:26:51Z xsd:string
+property_value: http://purl.obolibrary.org/obo/def "A representation." xsd:string {http://www.geneontology.org/formats/oboInOWL#xref="CTD:curators"}
+property_value: http://purl.obolibrary.org/obo/namespace "assay" xsd:string
+
+[Term]
+id: ExO:0000073
+name: conceptual
+is_a: ExO:0000072 ! model
+property_value: created:by "cmattin" xsd:string
+property_value: creation:date 2011-01-11T01:27:05Z xsd:string
+property_value: http://purl.obolibrary.org/obo/def "A representation of a particular system or subject matter that may only be drawn on paper, described in words, or imagined in the mind." xsd:string {http://www.geneontology.org/formats/oboInOWL#xref="CTD:curators"}
+property_value: http://purl.obolibrary.org/obo/namespace "assay" xsd:string
+
+[Term]
+id: ExO:0000074
+name: mathematical
+is_a: ExO:0000072 ! model
+property_value: created:by "cmattin" xsd:string
+property_value: creation:date 2011-01-11T01:27:35Z xsd:string
+property_value: http://purl.obolibrary.org/obo/def "A representation of a particular system or subject matter that can be computed." xsd:string {http://www.geneontology.org/formats/oboInOWL#xref="CTD:curators"}
+property_value: http://purl.obolibrary.org/obo/namespace "assay" xsd:string
+
+[Term]
+id: ExO:0000075
+name: computational
+is_a: ExO:0000072 ! model
+property_value: created:by "cmattin" xsd:string
+property_value: creation:date 2011-01-11T01:27:47Z xsd:string
+property_value: http://purl.obolibrary.org/obo/def "A representation of a particular system or subject matter that is computer-derived." xsd:string {http://www.geneontology.org/formats/oboInOWL#xref="CTD:curators"}
+property_value: http://purl.obolibrary.org/obo/namespace "assay" xsd:string
+
+[Term]
+id: ExO:0000076
+name: dose
+is_a: ExO:0000003 ! exposure outcome
+is_a: ExO:0000065 ! intensity
+property_value: created:by "cmattin" xsd:string
+property_value: creation:date 2011-01-11T01:28:26Z xsd:string
+property_value: http://purl.obolibrary.org/obo/def "The total quantity or strength of a substance administered at one time." xsd:string {http://www.geneontology.org/formats/oboInOWL#xref="EFO:0000428"}
+property_value: http://purl.obolibrary.org/obo/namespace "exposure_event" xsd:string
+
+[Term]
+id: ExO:0000077
+name: biological response
+is_a: ExO:0000003 ! exposure outcome
+property_value: created:by "cmattin" xsd:string
+property_value: creation:date 2011-01-11T01:29:49Z xsd:string
+property_value: http://purl.obolibrary.org/obo/namespace "exposure_outcome" xsd:string
+
+[Term]
+id: ExO:0000078
+name: molecular response
+is_a: ExO:0000077 ! biological response
+property_value: created:by "cmattin" xsd:string
+property_value: creation:date 2011-01-11T01:30:06Z xsd:string
+property_value: http://purl.obolibrary.org/obo/namespace "exposure_outcome" xsd:string
+
+[Term]
+id: ExO:0000079
+name: disease
+is_a: ExO:0000077 ! biological response
+is_a: ExO:0000103 ! influencing factor
+property_value: created:by "cmattin" xsd:string
+property_value: creation:date 2011-01-11T01:30:35Z xsd:string
+property_value: http://purl.obolibrary.org/obo/def "A disease is a pattern of abnormal functioning, or abnormal localization of normal functioning, and/or abnormal localization of constituents when compared to other members of that species." xsd:string {http://www.geneontology.org/formats/oboInOWL#xref="DOExO:4", http://www.geneontology.org/formats/oboInOWL#xref="MSH2010_2010_02_22:D004194", http://www.geneontology.org/formats/oboInOWL#xref="UMLS_CUI:C0012634"}
+property_value: http://purl.obolibrary.org/obo/namespace "exposure_outcome" xsd:string
+
+[Term]
+id: ExO:0000080
+name: symptom
+is_a: ExO:0000077 ! biological response
+property_value: created:by "cmattin" xsd:string
+property_value: creation:date 2011-01-11T01:30:47Z xsd:string
+property_value: http://purl.obolibrary.org/obo/def "A symptom is a perceived change in function, sensation, loss, disturbance or appearance reported by a patient indicative of a disease." xsd:string {http://www.geneontology.org/formats/oboInOWL#xref="SYOExO:14974"}
+property_value: http://purl.obolibrary.org/obo/namespace "exposure_outcome" xsd:string
+
+[Term]
+id: ExO:0000082
+name: public policy
+is_a: ExO:0000003 ! exposure outcome
+property_value: created:by "cmattin" xsd:string
+property_value: creation:date 2011-01-11T01:31:15Z xsd:string
+property_value: http://purl.obolibrary.org/obo/namespace "exposure_outcome" xsd:string
+
+[Term]
+id: ExO:0000083
+name: exposure medium
+relationship: BFO:0000050 ExO:0000002 ! exposure event
+property_value: created:by "cmattin" xsd:string
+property_value: creation:date 2011-01-11T01:33:44Z xsd:string
+property_value: http://purl.obolibrary.org/obo/def "An exposure medium is a substance through which something else is transmitted or carried during an exposure." xsd:string {http://www.geneontology.org/formats/oboInOWL#xref="sep:00037"}
+property_value: http://purl.obolibrary.org/obo/namespace "assay" xsd:string
+
+[Term]
+id: ExO:0000085
+name: commercial product
+is_a: ExO:0000016 ! source
+property_value: created:by "cmattin" xsd:string
+property_value: creation:date 2011-01-12T12:14:24Z xsd:string
+property_value: http://purl.obolibrary.org/obo/def "The end result of a manufacturing process; anything that is produced." xsd:string {http://www.geneontology.org/formats/oboInOWL#xref="NCIThesaurus:C1514468"}
+property_value: http://purl.obolibrary.org/obo/namespace "source" xsd:string
+
+[Term]
+id: ExO:0000087
+name: exposure intervention
+is_a: ExO:0000003 ! exposure outcome
+property_value: created:by "cmattin" xsd:string
+property_value: creation:date 2011-01-12T01:34:34Z xsd:string
+property_value: http://purl.obolibrary.org/obo/def "The act or fact of interfering so as to modify." xsd:string {http://www.geneontology.org/formats/oboInOWL#xref="CTD:curators"}
+property_value: http://purl.obolibrary.org/obo/namespace "exposure_outcome" xsd:string
+
+[Term]
+id: ExO:0000088
+name: spatial quality
+relationship: BFO:0000050 ExO:0000002 ! exposure event
+relationship: BFO:0000050 ExO:0000016 ! source
+relationship: BFO:0000050 ExO:0000064 ! assay
+property_value: created:by "cmattin" xsd:string
+property_value: creation:date 2011-01-10T04:20:11Z xsd:string
+property_value: http://purl.obolibrary.org/obo/def "Of or relating to space or components within space." xsd:string {http://www.geneontology.org/formats/oboInOWL#xref="CTD:curators"}
+property_value: http://purl.obolibrary.org/obo/namespace "spatial_quality" xsd:string
+
+[Term]
+id: ExO:0000089
+name: human attribute
+is_a: ExO:0000033 ! human population
+is_a: ExO:0000042 ! human individual
+relationship: BFO:0000050 ExO:0000042 ! human individual
+property_value: created:by "cmattin" xsd:string
+property_value: creation:date 2011-01-10T09:30:27Z xsd:string
+property_value: http://purl.obolibrary.org/obo/def "An attribute describing some aspect of an individual or human population." xsd:string {http://www.geneontology.org/formats/oboInOWL#xref="CTD:curators"}
+property_value: http://purl.obolibrary.org/obo/namespace "human_attribute" xsd:string
+
+[Term]
+id: ExO:0000090
+name: method
+relationship: BFO:0000050 ExO:0000064 ! assay
+property_value: created:by "cmattin" xsd:string
+property_value: creation:date 2011-06-08T03:47:29Z xsd:string
+property_value: http://purl.obolibrary.org/obo/def "The protocol for an assay." xsd:string {http://www.geneontology.org/formats/oboInOWL#xref="CTD:curators"}
+property_value: http://purl.obolibrary.org/obo/namespace "assay" xsd:string
+
+[Term]
+id: ExO:0000091
+name: residential environment stressor source
+is_a: ExO:0000016 ! source
+property_value: created:by "cgrondin" xsd:string
+property_value: creation:date "2017-04-03" xsd:string
+property_value: http://purl.obolibrary.org/obo/def "Of, or relating to, the area in which an individual or population lives, primarily describing the dwelling or shelter used for housing and the location immediately surrounding it" xsd:string
+property_value: http://purl.obolibrary.org/obo/namespace "source" xsd:string
+
+[Term]
+id: ExO:0000092
+name: environmental stressor source
+is_a: ExO:0000016 ! source
+property_value: created:by "cgrondin" xsd:string
+property_value: creation:date "2017-04-06" xsd:string
+property_value: http://purl.obolibrary.org/obo/def "The external elements and conditions which surround, influence, and affect the life and development of an organism or population." xsd:string
+property_value: http://purl.obolibrary.org/obo/namespace "source" xsd:string
+property_value: xref https://meshb.nlm.nih.gov/record/ui?ui=D004777 xsd:string
+
+[Term]
+id: ExO:0000093
+name: occupational stressor source
+is_a: ExO:0000016 ! source
+property_value: created:by "cgrondin" xsd:string
+property_value: creation:date "2017-04-06" xsd:string
+property_value: hasRelatedSynonym "occupation" xsd:string
+property_value: http://purl.obolibrary.org/obo/def "The origination of a stressor from the location of the principal work or business of an individual." xsd:string
+property_value: http://purl.obolibrary.org/obo/namespace "source" xsd:string
+
+[Term]
+id: ExO:0000094
+name: medicinal stressor source
+is_a: ExO:0000016 ! source
+property_value: created:by "cgrondin" xsd:string
+property_value: creation:date "2017-04-06" xsd:string
+property_value: hasRelatedSynonym "medicine\nmedication\ndrug" xsd:string
+property_value: http://purl.obolibrary.org/obo/def "A drug product that contains one or more active and/or inactive ingredients; it is intended to treat, prevent or alleviate the symptoms of disease. This term does not refer to the individual ingredients that make up the product." xsd:string
+property_value: http://purl.obolibrary.org/obo/namespace "source" xsd:string
+property_value: xref https://ncit.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI_Thesaurus&version=16.07d&code=C459&ns=null&type=properties&key=null&b=1&n=0&vse=null xsd:string
+
+[Term]
+id: ExO:0000095
+name: dietary stressor source
+is_a: ExO:0000016 ! source
+property_value: created:by "cgrondin" xsd:string
+property_value: creation:date "2017-04-03" xsd:string
+property_value: hasRelatedSynonym "diet" xsd:string
+property_value: hasRelatedSynonym "dietary" xsd:string
+property_value: http://purl.obolibrary.org/obo/def "The customary allowance of food and drink taken by a person or an animal from day to day, particularly one especially planned to meet specific requirements of the individual, including or excluding certain items of food; a prescribed course of eating and drinking in which the amount and kind of food, as well as the times at which it is to be taken, are regulated for therapeutic purposes or selected with reference to a particular state of health." xsd:string
+property_value: http://purl.obolibrary.org/obo/namespace "influencing_factor" xsd:string
+property_value: xref https://ncit.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI_Thesaurus&version=17.02d&code=C15222&ns=NCI_Thesaurus&type=properties&key=n1983551900&b=1&n=0&vse=null
+
+[Term]
+id: ExO:0000096
+name: country
+is_a: ExO:0000017 ! location
+property_value: created:by "cgrondin" xsd:string
+property_value: creation:date "2017-04-06" xsd:string
+property_value: hasRelatedSynonym "country code" xsd:string
+property_value: http://purl.obolibrary.org/obo/def "A collective generic term that refers here to a wide variety of dependencies, areas of special sovereignty, uninhabited islands, and other entities in addition to the traditional countries or independent states." xsd:string
+property_value: http://purl.obolibrary.org/obo/namespace "location" xsd:string
+property_value: xref https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=17.02d&ns=NCI_Thesaurus&code=C25464&key=n1028804090&b=1&n=null xsd:string
+
+[Term]
+id: ExO:0000097
+name: province
+is_a: ExO:0000096 ! country
+property_value: created:by "cgrondin" xsd:string
+property_value: creation:date "2017-04-06" xsd:string
+property_value: http://purl.obolibrary.org/obo/def "A region, district or division of a country; a tract; a portion a state, especially one remote from the capital." xsd:string
+property_value: http://purl.obolibrary.org/obo/namespace "location" xsd:string
+property_value: xref https://ncit.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI_Thesaurus&version=17.02d&code=C25632&ns=null&type=properties&key=null&b=1&n=0&vse=null xsd:string
+
+[Term]
+id: ExO:0000098
+name: region
+is_a: ExO:0000096 ! country
+property_value: created:by "cgrondin" xsd:string
+property_value: creation:date "2017-04-06" xsd:string
+property_value: http://purl.obolibrary.org/obo/def "An area or portion of something with more or less definite boundaries designed or specified according to some established biological, administrative, economic, demographic, etc. criteria." xsd:string
+property_value: http://purl.obolibrary.org/obo/namespace "location" xsd:string
+property_value: xref https://ncit.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI_Thesaurus&version=17.02d&code=C41129&ns=NCI_Thesaurus&type=properties&key=1373536612&b=1&n=0&vse=null xsd:string
+
+[Term]
+id: ExO:0000099
+name: US State
+is_a: ExO:0000096 ! country
+property_value: created:by "cgrondin" xsd:string
+property_value: creation:date "2017-4-06" xsd:string
+property_value: http://purl.obolibrary.org/obo/def "One of the fifty states which is a member of the federation known as the United States of America. Other US geographic areas, such as Puerto Rico and the District of Columbia, are essentially equivalent to State when used in an address." xsd:string
+property_value: http://purl.obolibrary.org/obo/namespace "location" xsd:string
+property_value: xref https://ncit.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI_Thesaurus&version=17.02d&code=C30010&ns=NCI_Thesaurus&type=properties&key=1797607167&b=1&n=0&vse=null xsd:string
+
+[Term]
+id: ExO:0000101
+name: phenotype
+is_a: ExO:0000077 ! biological response
+property_value: created:by "cgrondin" xsd:string
+property_value: creation:date "2017-04-06" xsd:string
+property_value: http://purl.obolibrary.org/obo/def "The assemblage of traits or outward appearance of an individual. It is the product of interactions between genes and between genes and the environment." xsd:string
+property_value: http://purl.obolibrary.org/obo/namespace "biological_response" xsd:string
+property_value: xref https://ncit.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI_Thesaurus&version=16.07d&code=C16977&ns=NCI_Thesaurus&type=properties&key=1003504562&b=1&n=0&vse=null xsd:string
+
+[Term]
+id: ExO:0000102
+name: age
+is_a: ExO:0000089 ! human attribute
+is_a: ExO:0000103 ! influencing factor
+property_value: created:by "cgrondin" xsd:string
+property_value: creation:date "2017-04-06" xsd:string
+property_value: hasRelatedSynonym "chronological age\npostnatal age\naged" xsd:string
+property_value: http://purl.obolibrary.org/obo/def "How long something or someone has existed; elapsed time since birth." xsd:string
+property_value: http://purl.obolibrary.org/obo/namespace "human_attribute" xsd:string
+property_value: xref https://ncit.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI_Thesaurus&version=16.07d&code=C25150&ns=null&type=properties&key=null&b=1&n=0&vse=null xsd:string
+
+[Term]
+id: ExO:0000103
+name: influencing factor
+is_a: ExO:0000038 ! health status
+property_value: created:by "cgrondin" xsd:string
+property_value: creation:date "2017-04-06" xsd:string
+property_value: hasRelatedSynonym "Influence" xsd:string
+property_value: http://purl.obolibrary.org/obo/def "Other conditions with the power to have an effect on health status." xsd:string
+property_value: http://purl.obolibrary.org/obo/namespace "health_status" xsd:string
+property_value: xref https://ncit.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI_Thesaurus&version=16.07d&code=C121660&ns=NCI_Thesaurus&type=properties&key=n821927297&b=1&n=0&vse=null xsd:string
+
+[Term]
+id: ExO:0000104
+name: alcohol consumption
+is_a: ExO:0000103 ! influencing factor
+property_value: created:by "cgrondin" xsd:string
+property_value: creation:date "2017-04-06" xsd:string
+property_value: hasRelatedSynonym "alcohol use\nalcohol drinking" xsd:string
+property_value: http://purl.obolibrary.org/obo/def "Consumption of liquids containing ethanol, including the behaviors associated with drinking the alcohol." xsd:string
+property_value: http://purl.obolibrary.org/obo/namespace "influencing_factor" xsd:string
+property_value: xref https://ncit.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI_Thesaurus&version=16.07d&code=C16273&ns=null&type=properties&key=null&b=1&n=0&vse=null xsd:string
+
+[Term]
+id: ExO:0000105
+name: body mass index
+is_a: ExO:0000103 ! influencing factor
+property_value: created:by "cgrondin" xsd:string
+property_value: creation:date "2017-04-06" xsd:string
+property_value: hasExactSynonym "BMI" xsd:string
+property_value: http://purl.obolibrary.org/obo/def "A general indicator of the body fat an individual is carrying based upon the ratio of weight to height." xsd:string
+property_value: http://purl.obolibrary.org/obo/namespace "human_attribute" xsd:string
+property_value: xref https://ncit.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI_Thesaurus&version=16.07d&code=C16358&ns=null&type=properties&key=null&b=1&n=0&vse=null xsd:string
+
+[Term]
+id: ExO:0000106
+name: diet
+is_a: ExO:0000103 ! influencing factor
+property_value: created:by "cgrondin" xsd:string
+property_value: creation:date "2017-04-06" xsd:string
+property_value: hasRelatedSynonym "dietary" xsd:string
+property_value: http://purl.obolibrary.org/obo/def "The customary allowance of food and drink taken by a person or an animal from day to day, particularly one especially planned to meet specific requirements of the individual, including or excluding certain items of food; a prescribed course of eating and drinking in which the amount and kind of food, as well as the times at which it is to be taken, are regulated for therapeutic purposes or selected with reference to a particular state of health." xsd:string
+property_value: http://purl.obolibrary.org/obo/namespace "influencing_factor" xsd:string
+property_value: xref https://ncit.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI_Thesaurus&version=16.07d&code=C15222&ns=null&type=properties&key=null&b=1&n=0&vse=null xsd:string
+
+[Term]
+id: ExO:0000107
+name: genotype
+is_a: ExO:0000103 ! influencing factor
+property_value: created:by "cgrondin" xsd:string
+property_value: creation:date "2017-04-06" xsd:string
+property_value: hasRelatedSynonym "genetics" xsd:string
+property_value: http://purl.obolibrary.org/obo/def "The genetic constitution of an organism or cell, as distinct from its expressed features or phenotype." xsd:string
+property_value: http://purl.obolibrary.org/obo/namespace "human_attribute" xsd:string
+property_value: xref https://ncit.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI_Thesaurus&version=16.07d&code=C16631&ns=NCI_Thesaurus&type=properties&key=n167868829&b=1&n=0&vse=null xsd:string
+
+[Term]
+id: ExO:0000108
+name: physical activity
+is_a: ExO:0000103 ! influencing factor
+property_value: created:by "cgrondin" xsd:string
+property_value: creation:date "2017-04-06" xsd:string
+property_value: http://purl.obolibrary.org/obo/def "Any form of exercise or movement. Physical activity may include planned activity such as walking, running, basketball, or other sports. Physical activity may also include other daily activities such as household chores, yard work, walking the dog, etc." xsd:string
+property_value: http://purl.obolibrary.org/obo/namespace "influencing_factor" xsd:string
+property_value: xref https://ncit.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI_Thesaurus&version=16.07d&code=C17708&ns=null&type=properties&key=null&b=1&n=0&vse=null xsd:string
+
+[Term]
+id: ExO:0000109
+name: race
+is_a: ExO:0000089 ! human attribute
+is_a: ExO:0000103 ! influencing factor
+property_value: created:by "cgrondin" xsd:string
+property_value: creation:date "2017-04-06" xsd:string
+property_value: hasRelatedSynonym "racial group" xsd:string
+property_value: http://purl.obolibrary.org/obo/def "An arbitrary classification of a taxonomic group that is a division of a species. It usually arises as a consequence of geographical isolation within a species and is characterized by shared heredity, physical attributes and behavior, and in the case of humans, by common history, nationality, or geographic distribution." xsd:string
+property_value: http://purl.obolibrary.org/obo/namespace "human_attribute" xsd:string
+property_value: xref https://ncit.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI_Thesaurus&version=16.07d&code=C17049&ns=null&type=properties&key=null&b=1&n=0&vse=null xsd:string
+
+[Term]
+id: ExO:0000110
+name: sex
+is_a: ExO:0000089 ! human attribute
+is_a: ExO:0000103 ! influencing factor
+property_value: created:by "cgrondin" xsd:string
+property_value: creation:date "2017-04-06" xsd:string
+property_value: hasRelatedSynonym "gender" xsd:string
+property_value: http://purl.obolibrary.org/obo/def "The assemblage of physical properties or qualities by which male is distinguished from female; the physical difference between male and female; the distinguishing peculiarity of male or female." xsd:string
+property_value: http://purl.obolibrary.org/obo/namespace "human_attribute" xsd:string
+property_value: xref https://ncit.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI_Thesaurus&version=16.07d&code=C28421&ns=NCI_Thesaurus&type=properties&key=n1987444752&b=1&n=0&vse=null xsd:string
+
+[Term]
+id: ExO:0000111
+name: female
+is_a: ExO:0000110 ! sex
+property_value: created:by "cgrondin" xsd:string
+property_value: creation:date "2017-04-06" xsd:string
+property_value: hasRelatedSynonym "woman\ngirl" xsd:string
+property_value: http://purl.obolibrary.org/obo/def "A person who belongs to the sex that normally produces ova. The term is used to indicate biological sex distinctions, or cultural gender role distinctions, or both." xsd:string
+property_value: http://purl.obolibrary.org/obo/namespace "human_attribute" xsd:string
+property_value: xref https://ncit.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI_Thesaurus&version=16.07d&code=C16576&ns=NCI_Thesaurus&type=properties&key=1029234390&b=1&n=0&vse=null xsd:string
+
+[Term]
+id: ExO:0000112
+name: male
+is_a: ExO:0000110 ! sex
+property_value: created:by "cgrondin" xsd:string
+property_value: creation:date "2017-04-06" xsd:string
+property_value: hasRelatedSynonym "man\nboy" xsd:string
+property_value: http://purl.obolibrary.org/obo/def "A person who belongs to the sex that normally produces sperm. The term is used to indicate biological sex distinctions, cultural gender role distinctions, or both." xsd:string
+property_value: http://purl.obolibrary.org/obo/namespace "human_attribute" xsd:string
+property_value: xref https://ncit.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI_Thesaurus&version=16.07d&code=C20197&ns=NCI_Thesaurus&type=properties&key=n1984214633&b=1&n=0&vse=null xsd:string
+
+[Term]
+id: ExO:0000113
+name: smoking status
+is_a: ExO:0000103 ! influencing factor
+property_value: created:by "cgrondin" xsd:string
+property_value: creation:date "2017-04-06" xsd:string
+property_value: hasRelatedSynonym "tobacco use" xsd:string
+property_value: http://purl.obolibrary.org/obo/def "An indication of a person's current tobacco and nicotine consumption as well as some indication of smoking history." xsd:string
+property_value: http://purl.obolibrary.org/obo/namespace "health_status" xsd:string
+property_value: xref https://ncit.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI_Thesaurus&version=16.07d&code=C19796&ns=null&type=properties&key=null&b=1&n=0&vse=null xsd:string
+
+[Term]
+id: ExO:0000114
+name: socioeconomic status
+is_a: ExO:0000039 ! social characteristic
+is_a: ExO:0000103 ! influencing factor
+property_value: created:by "cgrondin" xsd:string
+property_value: creation:date "2017-04-06" xsd:string
+property_value: creation:date "Characteristics of a person such as education and occupation, used to describe the person's position in stratification systems, access to services, etc." xsd:string
+property_value: hasRelatedSynonym "socioeconomic factors\nclass" xsd:string
+property_value: http://purl.obolibrary.org/obo/namespace "human_attribute" xsd:string
+property_value: xref https://ncit.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI_Thesaurus&version=16.07d&code=C17468&ns=null&type=properties&key=null&b=1&n=0&vse=null xsd:string
+
+[Term]
+id: ExO:0000115
+name: current smoker
+is_a: ExO:0000113 ! smoking status
+disjoint_from: ExO:0000116 ! former smoker
+disjoint_from: ExO:0000117 ! never smoker
+disjoint_from: ExO:0000118 ! non-smoker
+property_value: created:by "cgrondin" xsd:string
+property_value: creation:date "2017-04-06" xsd:string
+property_value: hasExactSynonym "Smoker" xsd:string
+property_value: http://purl.obolibrary.org/obo/def "An adult who has smoked 100 cigarettes in his or her lifetime and who currently smokes cigarettes. Includes daily smokers and non-daily smokers (also known as occasional smokers)." xsd:string
+property_value: http://purl.obolibrary.org/obo/namespace "exposure_receptor" xsd:string
+property_value: xref https://ncit.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI_Thesaurus&version=17.03d&code=C67147&ns=null&type=properties&key=null&b=1&n=0&vse=null xsd:string
+
+[Term]
+id: ExO:0000116
+name: former smoker
+is_a: ExO:0000113 ! smoking status
+property_value: created:by "cgrondin" xsd:string
+property_value: creation:date "2017-04-06" xsd:string
+property_value: hasExactSynonym "Prior Smoker" xsd:string
+property_value: http://purl.obolibrary.org/obo/def "A person who was not smoking at the time of the interview but has smoked at least 100 cigarettes in their life." xsd:string
+property_value: http://purl.obolibrary.org/obo/def https://ncit.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI_Thesaurus&version=16.07d&code=C67148&ns=null&type=properties&key=null&b=1&n=0&vse=null xsd:string
+property_value: http://purl.obolibrary.org/obo/namespace "exposure_receptor" xsd:string
+
+[Term]
+id: ExO:0000117
+name: never smoker
+is_a: ExO:0000113 ! smoking status
+property_value: created:by "cgrondin" xsd:string
+property_value: creation:date "2017-04-06" xsd:string
+property_value: hasRelatedSynonym "non-smoker" xsd:string
+property_value: http://purl.obolibrary.org/obo/def "A person who was not smoking at the time of the interview and has smoked less than 100 cigarettes in their life." xsd:string
+property_value: http://purl.obolibrary.org/obo/namespace "exposure_receptor" xsd:string
+property_value: xref https://ncit.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI_Thesaurus&version=16.07d&code=C65108&ns=null&type=properties&key=null&b=1&n=0&vse=null xsd:string
+
+[Term]
+id: ExO:0000118
+name: non-smoker
+is_a: ExO:0000113 ! smoking status
+property_value: created:by "cgrondin" xsd:string
+property_value: creation:date "2017-04-06" xsd:string
+property_value: hasRelatedSynonym "Never Smoker" xsd:string
+property_value: http://purl.obolibrary.org/obo/def "A person who was not smoking at the time of the interview and has smoked less than 100 cigarettes in their life." xsd:string
+property_value: http://purl.obolibrary.org/obo/namespace "exposure_receptor" xsd:string
+property_value: xref https://ncit.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI_Thesaurus&version=17.03d&code=C65108&ns=null&type=properties&key=null&b=1&n=0&vse=null xsd:string
+
+[Term]
+id: ExO:0000119
+name: children
+is_a: ExO:0000033 ! human population
+property_value: created:by "cgrondin" xsd:string
+property_value: creation:date "2017-04-07" xsd:string
+property_value: hasRelatedSynonym "child\ntoddler\nteen\nteenager\nschoolchildren\nadolescent" xsd:string
+property_value: http://purl.obolibrary.org/obo/def "Persons who are not yet adults. The specific cut-off age will vary by purpose." xsd:string
+property_value: http://purl.obolibrary.org/obo/namespace "exposure_receptor" xsd:string
+property_value: xref https://ncit.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI_Thesaurus&version=17.03d&code=C16423&ns=null&type=properties&key=null&b=1&n=0&vse=null xsd:string
+
+[Term]
+id: ExO:0000120
+name: cohort
+is_a: ExO:0000033 ! human population
+property_value: created:by "cgrondin" xsd:string
+property_value: creation:date "2017-04-07" xsd:string
+property_value: http://purl.obolibrary.org/obo/def "A group of individuals, identified by a common characteristic." xsd:string
+property_value: http://purl.obolibrary.org/obo/namespace "exposure_receptor" xsd:string
+property_value: xref "" xsd:string
+property_value: xref https://ncit.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI_Thesaurus&version=16.07d&code=C61512&ns=NCI_Thesaurus&type=properties&key=952446847&b=1&n=0&vse=null xsd:string
+
+[Term]
+id: ExO:0000121
+name: controls for disease or phenotype
+is_a: ExO:0000033 ! human population
+property_value: created:by "cgrondin" xsd:string
+property_value: creation:date "2017-04-07" xsd:string
+property_value: http://purl.obolibrary.org/obo/def "Study subjects who serve as controls (i.e., lack the characteristics of a disease or phenotype) in a research study as compared to study subjects with a disease or phenotype as indicated." xsd:string
+property_value: http://purl.obolibrary.org/obo/namespace "exposure_receptor" xsd:string
+
+[Term]
+id: ExO:0000122
+name: fetuses
+is_a: ExO:0000033 ! human population
+property_value: created:by "cgrondin" xsd:string
+property_value: creation:date "2017-04-07" xsd:string
+property_value: http://purl.obolibrary.org/obo/def "An unborn or unhatched vertebrate in the later stages of development showing the main recognizable features of the mature being." xsd:string
+property_value: http://purl.obolibrary.org/obo/namespace "exposure_receptor" xsd:string
+property_value: xref https://ncit.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI_Thesaurus&version=16.07d&code=C13235&ns=null&type=properties&key=null&b=1&n=0&vse=null xsd:string
+
+[Term]
+id: ExO:0000123
+name: infants or newborns
+is_a: ExO:0000033 ! human population
+property_value: created:by "cgrondin" xsd:string
+property_value: creation:date "2017-04-07" xsd:string
+property_value: hasRelatedSynonym "neonate\nnewborn" xsd:string
+property_value: http://purl.obolibrary.org/obo/def "A young child between one month and two years of age or between birth and one month of age." xsd:string
+property_value: http://purl.obolibrary.org/obo/namespace "exposure_receptor" xsd:string
+property_value: xref https://ncit.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI_Thesaurus&version=16.07d&code=C16731&ns=null&type=properties&key=null&b=1&n=0&vse=null xsd:string
+
+[Term]
+id: ExO:0000124
+name: military personnel
+is_a: ExO:0000033 ! human population
+property_value: created:by "cgrondin" xsd:string
+property_value: creation:date "2017-04-07" xsd:string
+property_value: http://purl.obolibrary.org/obo/def "Persons including soldiers involved with the armed forces." xsd:string
+property_value: http://purl.obolibrary.org/obo/namespace "exposure_receptor" xsd:string
+property_value: xref https://meshb.nlm.nih.gov/record/ui?ui=D008889 xsd:string
+
+[Term]
+id: ExO:0000125
+name: mothers
+is_a: ExO:0000033 ! human population
+property_value: created:by "cgrondin" xsd:string
+property_value: creation:date "2017-04-07" xsd:string
+property_value: hasRelatedSynonym "mother" xsd:string
+property_value: http://purl.obolibrary.org/obo/def "A female parent." xsd:string
+property_value: http://purl.obolibrary.org/obo/namespace "exposure_receptor" xsd:string
+property_value: xref https://ncit.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI_Thesaurus&version=16.07d&code=C25189&ns=null&type=properties&key=null&b=1&n=0&vse=null xsd:string
+
+[Term]
+id: ExO:0000126
+name: pregnant females
+is_a: ExO:0000033 ! human population
+property_value: created:by "cgrondin" xsd:string
+property_value: creation:date "2017-04-07" xsd:string
+property_value: hasRelatedSynonym "Pregnant Women" xsd:string
+property_value: http://purl.obolibrary.org/obo/def "Human females who are pregnant." xsd:string
+property_value: http://purl.obolibrary.org/obo/namespace "exposure_receptor" xsd:string
+property_value: xref https://meshb.nlm.nih.gov/record/ui?ui=D037841 xsd:string
+
+[Term]
+id: ExO:0000127
+name: study subjects
+is_a: ExO:0000033 ! human population
+property_value: created:by "cgrondin" xsd:string
+property_value: creation:date "2017-04-07" xsd:string
+property_value: hasRelatedSynonym "study subject" xsd:string
+property_value: http://purl.obolibrary.org/obo/def "Persons who are observed, analyzed, examined, investigated, experimented upon, or/and treated in the course of a particular study." xsd:string
+property_value: http://purl.obolibrary.org/obo/namespace "exposure_receptor" xsd:string
+property_value: xref https://ncit.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&version=16.07d&ns=NCI_Thesaurus&code=C41189&key=1161914719&b=1&n=null xsd:string
+
+[Term]
+id: ExO:0000128
+name: subjects with disease or phenotype
+is_a: ExO:0000033 ! human population
+property_value: created:by "cgrondin" xsd:string
+property_value: creation:date "2017-04-07" xsd:string
+property_value: http://purl.obolibrary.org/obo/def "Study subjects with a disease or phenotype as indicated." xsd:string
+property_value: http://purl.obolibrary.org/obo/namespace "exposure_receptor" xsd:string
+
+[Term]
+id: ExO:0000129
+name: subjects with gene influence
+is_a: ExO:0000033 ! human population
+property_value: created:by "cgrondin" xsd:string
+property_value: creation:date "2017-04-07" xsd:string
+property_value: http://purl.obolibrary.org/obo/def "Study subjects who exhibit characteristics of a specific genotype in a research study." xsd:string
+property_value: http://purl.obolibrary.org/obo/namespace "exposure_receptor" xsd:string
+
+[Term]
+id: ExO:0000130
+name: veterans
+is_a: ExO:0000033 ! human population
+property_value: created:by "cgrondin" xsd:string
+property_value: creation:date "2017-04-07" xsd:string
+property_value: http://purl.obolibrary.org/obo/def "Former members of the armed services." xsd:string
+property_value: http://purl.obolibrary.org/obo/namespace "exposure_receptor" xsd:string
+property_value: xref https://meshb.nlm.nih.gov/record/ui?ui=D014728 xsd:string
+
+[Term]
+id: ExO:0000131
+name: workers
+is_a: ExO:0000033 ! human population
+property_value: created:by "cgrondin" xsd:string
+property_value: creation:date "2017-04-07" xsd:string
+property_value: hasRelatedSynonym "worker\nemployee\nemployees" xsd:string
+property_value: http://purl.obolibrary.org/obo/def "A person performing a job or service for another person or a business firm on a full- or part-time basis and who receives payment for this work." xsd:string
+property_value: http://purl.obolibrary.org/obo/namespace "exposure_receptor" xsd:string
+property_value: xref https://ncit.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI_Thesaurus&version=16.07d&code=C51823&ns=null&type=properties&key=null&b=1&n=0&vse=null xsd:string
+
+[Term]
+id: ExO:0000132
+name: African American
+is_a: ExO:0000109 ! race
+disjoint_from: ExO:0000153 ! Other Race
+property_value: created:by "cgrondin" xsd:string
+property_value: creation:date "2017-04-07" xsd:string
+property_value: hasRelatedSynonym "Black\nNegro\nHaitian" xsd:string
+property_value: http://purl.obolibrary.org/obo/def "A person having origins in any of the Black racial groups of Africa. Terms such as \"Haitian\" or \"Negro\" can be used in addition to \"Black or African American\"." xsd:string
+property_value: http://purl.obolibrary.org/obo/namespace "exposure_receptor" xsd:string
+property_value: xref https://ncit.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI_Thesaurus&version=16.07d&code=C16352&ns=null&type=synonym&key=null&b=1&n=0&vse=null xsd:string
+
+[Term]
+id: ExO:0000133
+name: Alaska Native
+is_a: ExO:0000109 ! race
+disjoint_from: ExO:0000153 ! Other Race
+property_value: created:by "cgrondin" xsd:string
+property_value: creation:date "2017-04-07" xsd:string
+property_value: hasRelatedSynonym "Alaska Indian\nEskimo\nAleut\nInupiat\nYupik\nAlutiq\nEgegik\nPribilovian\nAlaskan Athabascan\nTlingit\nHaida" xsd:string
+property_value: http://purl.obolibrary.org/obo/def "Denotes a person having origins in any indigenous people of Alaska and their descendants and who maintains tribal affiliation, or community or cultural attachment. The concept refers to population subgroups such as Eskimos, Aleuts, Inupiat, Yupik, Alutiiq, Egegik,and Pribilovian, Alaskan Athabascan, Tlingit, and Haida. The concept refers also to individuals who classify themselves as such." xsd:string
+property_value: http://purl.obolibrary.org/obo/namespace "exposure_receptor" xsd:string
+property_value: xref https://ncit.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI_Thesaurus&version=16.07d&code=C18237&ns=null&type=synonym&key=null&b=1&n=0&vse=null xsd:string
+
+[Term]
+id: ExO:0000134
+name: American Indian
+is_a: ExO:0000109 ! race
+disjoint_from: ExO:0000153 ! Other Race
+property_value: created:by "cgrondin" xsd:string
+property_value: creation:date "2017-04-07" xsd:string
+property_value: http://purl.obolibrary.org/obo/def "Denotes a person having origins in one of the indigenous peoples of North America, who lived on the continent prior to the European colonization. The term includes individuals belonging to a large number of tribes, states, and ethnic groups, many of them still enduring as communities." xsd:string
+property_value: http://purl.obolibrary.org/obo/namespace "exposure receptor" xsd:string
+property_value: xref https://ncit.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI_Thesaurus&version=16.07d&code=C43877&ns=null&type=synonym&key=null&b=1&n=0&vse=null xsd:string
+
+[Term]
+id: ExO:0000135
+name: Asian
+is_a: ExO:0000109 ! race
+disjoint_from: ExO:0000153 ! Other Race
+property_value: created:by "cgrondin" xsd:string
+property_value: creation:date "2017-04-07" xsd:string
+property_value: http://purl.obolibrary.org/obo/def "A person having origins in any of the original peoples of the Far East, Southeast Asia, or the Indian subcontinent, including for example, Cambodia, China, India, Japan, Korea, Malaysia, Pakistan, the Philippine Islands, Thailand, and Vietnam." xsd:string
+property_value: http://purl.obolibrary.org/obo/namespace "exposure_receptor" xsd:string
+property_value: xref https://ncit.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI_Thesaurus&version=17.03d&code=C41260&ns=null&type=properties&key=null&b=1&n=0&vse=null xsd:string
+
+[Term]
+id: ExO:0000136
+name: Asian Indian
+is_a: ExO:0000109 ! race
+disjoint_from: ExO:0000153 ! Other Race
+property_value: created:by "cgrondin" xsd:string
+property_value: creation:date "2017-04-07" xsd:string
+property_value: hasRelatedSynonym "Indian\nAsian Indians" xsd:string
+property_value: http://purl.obolibrary.org/obo/def "A person having origins in the original peoples of the Indian sub-continent." xsd:string
+property_value: http://purl.obolibrary.org/obo/namespace "exposure_receptor" xsd:string
+property_value: xref https://ncit.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI_Thesaurus&version=17.03d&code=C41262&ns=null&type=properties&key=null&b=1&n=0&vse=null xsd:string
+
+[Term]
+id: ExO:0000137
+name: Central or South American
+is_a: ExO:0000109 ! race
+disjoint_from: ExO:0000153 ! Other Race
+property_value: created:by "cgrondin" xsd:string
+property_value: creation:date "2017-04-07" xsd:string
+property_value: http://purl.obolibrary.org/obo/def "A person of Central or South American culture or origin." xsd:string
+property_value: http://purl.obolibrary.org/obo/namespace "exposure_receptor" xsd:string
+
+[Term]
+id: ExO:0000138
+name: Chicano
+is_a: ExO:0000109 ! race
+disjoint_from: ExO:0000153 ! Other Race
+property_value: created:by "cgrondin" xsd:string
+property_value: creation:date "2017-04-07" xsd:string
+property_value: hasRelatedSynonym "Mexican-American" xsd:string
+property_value: http://purl.obolibrary.org/obo/def "A term sometimes used interchangeably with Mexican-American to denote an American citizen of Mexican decent.  The term is a chosen identity of some Mexican-Americans in the United States." xsd:string
+property_value: http://purl.obolibrary.org/obo/namespace "exposure_receptor" xsd:string
+
+[Term]
+id: ExO:0000139
+name: Chinese
+is_a: ExO:0000109 ! race
+disjoint_from: ExO:0000153 ! Other Race
+property_value: created:by "cgrondin" xsd:string
+property_value: creation:date "2017-04-07" xsd:string
+property_value: http://purl.obolibrary.org/obo/def "A person having origins in any of the original peoples of China." xsd:string
+property_value: http://purl.obolibrary.org/obo/namespace "exposure_receptor" xsd:string
+property_value: xref https://ncit.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI_Thesaurus&version=17.03d&code=C43391&ns=null&type=properties&key=null&b=1&n=0&vse=null xsd:string
+
+[Term]
+id: ExO:0000140
+name: Cuban
+is_a: ExO:0000109 ! race
+disjoint_from: ExO:0000153 ! Other Race
+property_value: created:by "cgrondin" xsd:string
+property_value: creation:date "2017-04-07" xsd:string
+property_value: hasRelatedSynonym "Cuban-American\nHispanic\nLatino" xsd:string
+property_value: http://purl.obolibrary.org/obo/def "A person of Cuban culture or origin, regardless of race." xsd:string
+property_value: http://purl.obolibrary.org/obo/namespace "exposure_receptor" xsd:string
+property_value: xref https://ncit.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI_Thesaurus&version=16.07d&code=C107608&ns=null&type=properties&key=null&b=1&n=0&vse=null xsd:string
+
+[Term]
+id: ExO:0000141
+name: Cuban-American
+is_a: ExO:0000109 ! race
+disjoint_from: ExO:0000153 ! Other Race
+property_value: created:by "cgrondin" xsd:string
+property_value: creation:date "2017-04-07" xsd:string
+property_value: hasRelatedSynonym "Cuban" xsd:string
+property_value: http://purl.obolibrary.org/obo/def "Denotes a person from or of Cuba or an American citizen of Cuban descent." xsd:string
+property_value: http://purl.obolibrary.org/obo/namespace "exposure_receptor" xsd:string
+property_value: xref https://ncit.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI_Thesaurus&version=17.03d&code=C67115&ns=null&type=properties&key=null&b=1&n=0&vse=null xsd:string
+
+[Term]
+id: ExO:0000142
+name: Dominican
+is_a: ExO:0000109 ! race
+disjoint_from: ExO:0000153 ! Other Race
+property_value: created:by "cgrondin" xsd:string
+property_value: creation:date "2017-04-07" xsd:string
+property_value: http://purl.obolibrary.org/obo/def "Denotes the inhabitants of the Dominican Republic, a person from there, or their descendants elsewhere." xsd:string
+property_value: http://purl.obolibrary.org/obo/namespace "exposure_receptor" xsd:string
+property_value: xref https://ncit.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI_Thesaurus&version=17.03d&code=C67117&ns=null&type=properties&key=null&b=1&n=0&vse=null xsd:string
+
+[Term]
+id: ExO:0000143
+name: Filipino
+is_a: ExO:0000109 ! race
+disjoint_from: ExO:0000153 ! Other Race
+property_value: created:by "cgrondin" xsd:string
+property_value: creation:date "2017-04-07" xsd:string
+property_value: http://purl.obolibrary.org/obo/def "A person having origins in any of the original peoples of the Philippine Islands." xsd:string
+property_value: http://purl.obolibrary.org/obo/namespace "exposure_receptor" xsd:string
+property_value: xref https://ncit.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI_Thesaurus&version=17.03d&code=C43393&ns=null&type=properties&key=null&b=1&n=0&vse=null xsd:string
+
+[Term]
+id: ExO:0000144
+name: Guamanian
+is_a: ExO:0000109 ! race
+disjoint_from: ExO:0000153 ! Other Race
+property_value: created:by "cgrondin" xsd:string
+property_value: creation:date "2017-04-07" xsd:string
+property_value: http://purl.obolibrary.org/obo/def "Denotes inhabitants of Guam, an island in the North Pacific Ocean, about three-quarters of the way from Hawaii to the Philippines, south of the Northern Mariana Islands." xsd:string
+property_value: http://purl.obolibrary.org/obo/namespace "exposure_receptor" xsd:string
+
+[Term]
+id: ExO:0000145
+name: Hispanic
+is_a: ExO:0000109 ! race
+disjoint_from: ExO:0000153 ! Other Race
+property_value: created:by "cgrondin" xsd:string
+property_value: creation:date "2017-04-07" xsd:string
+property_value: hasRelatedSynonym "Latino\nCuban\nMexican\nPuerto Rican\nSouth American\nCentral American\nSpanish origin" xsd:string
+property_value: http://purl.obolibrary.org/obo/def "A person of Cuban, Mexican, Puerto Rican, South or Central American, or other Spanish culture or origin, regardless of race." xsd:string
+property_value: http://purl.obolibrary.org/obo/namespace "exposure_receptor" xsd:string
+property_value: xref https://ncit.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI_Thesaurus&version=16.07d&code=C17459&ns=null&type=properties&key=null&b=1&n=0&vse=null xsd:string
+
+[Term]
+id: ExO:0000146
+name: Inuit
+is_a: ExO:0000109 ! race
+disjoint_from: ExO:0000153 ! Other Race
+property_value: created:by "cgrondin" xsd:string
+property_value: creation:date "2017-04-07" xsd:string
+property_value: hasRelatedSynonym "Eskimo" xsd:string
+property_value: http://purl.obolibrary.org/obo/def "A general term for a group of culturally similar indigenous peoples inhabiting the Arctic regions of Canada, Greenland, Russia and the United States. In Alaska, the term Eskimo is commonly used, because it includes both Yupik and Inupiat, while Inuit is not accepted as a collective term. In Canada and Greenland, the term Eskimo has fallen out of favor, as it is considered pejorative by the natives and has been replaced by the term Inuit." xsd:string
+property_value: http://purl.obolibrary.org/obo/namespace "exposure_receptor" xsd:string
+property_value: xref https://ncit.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI_Thesaurus&version=17.03d&code=C86558&ns=null&type=properties&key=null&b=1&n=0&vse=null xsd:string
+
+[Term]
+id: ExO:0000147
+name: Japanese
+is_a: ExO:0000109 ! race
+disjoint_from: ExO:0000153 ! Other Race
+property_value: created:by "cgrondin" xsd:string
+property_value: creation:date "2017-04-07" xsd:string
+property_value: http://purl.obolibrary.org/obo/def "A person having origins in any of the original peoples of Japan." xsd:string
+property_value: http://purl.obolibrary.org/obo/namespace "exposure_receptor" xsd:string
+property_value: xref https://ncit.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI_Thesaurus&version=17.03d&code=C43392&ns=null&type=properties&key=null&b=1&n=0&vse=null xsd:string
+
+[Term]
+id: ExO:0000148
+name: Korean
+is_a: ExO:0000109 ! race
+disjoint_from: ExO:0000153 ! Other Race
+property_value: created:by "cgrondin" xsd:string
+property_value: creation:date "2017-04-07" xsd:string
+property_value: http://purl.obolibrary.org/obo/def "A person having origins in any of the original peoples of Korea." xsd:string
+property_value: http://purl.obolibrary.org/obo/namespace "exposure_receptor" xsd:string
+property_value: xref https://ncit.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI_Thesaurus&version=17.03d&code=C43395&ns=null&type=properties&key=null&b=1&n=0&vse=null xsd:string
+
+[Term]
+id: ExO:0000149
+name: Latino
+is_a: ExO:0000109 ! race
+disjoint_from: ExO:0000153 ! Other Race
+property_value: created:by "cgrondin" xsd:string
+property_value: creation:date "2017-04-07" xsd:string
+property_value: hasRelatedSynonym "Hispanic\nSpanish origin" xsd:string
+property_value: http://purl.obolibrary.org/obo/def "A person of Cuban, Mexican, Puerto Rican, South or Central American, or other Spanish culture or origin, regardless of race." xsd:string
+property_value: http://purl.obolibrary.org/obo/namespace "exposure_receptor" xsd:string
+property_value: xref https://ncit.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI_Thesaurus&version=17.03d&code=C17459&ns=null&type=properties&key=null&b=1&n=0&vse=null xsd:string
+
+[Term]
+id: ExO:0000150
+name: Mexican
+is_a: ExO:0000109 ! race
+disjoint_from: ExO:0000153 ! Other Race
+property_value: created:by "cgrondin" xsd:string
+property_value: creation:date "2017-04-07" xsd:string
+property_value: hasRelatedSynonym "Hispanic" xsd:string
+property_value: http://purl.obolibrary.org/obo/def "Denotes a person from or of Mexico." xsd:string
+property_value: http://purl.obolibrary.org/obo/namespace "exposure_receptor" xsd:string
+property_value: xref https://ncit.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI_Thesaurus&version=16.07d&code=C67113&ns=null&type=properties&key=null&b=1&n=0&vse=null xsd:string
+
+[Term]
+id: ExO:0000151
+name: Mexican-American
+is_a: ExO:0000109 ! race
+disjoint_from: ExO:0000153 ! Other Race
+property_value: created:by "cgrondin" xsd:string
+property_value: creation:date "2017-04-07" xsd:string
+property_value: http://purl.obolibrary.org/obo/def "Denotes an american citizen of Mexican descent." xsd:string
+property_value: http://purl.obolibrary.org/obo/namespace "exposure_receptor" xsd:string
+property_value: xref https://ncit.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI_Thesaurus&version=17.03d&code=C67114&ns=null&type=properties&key=null&b=1&n=0&vse=null xsd:string
+
+[Term]
+id: ExO:0000152
+name: Native Hawaiian
+is_a: ExO:0000109 ! race
+disjoint_from: ExO:0000153 ! Other Race
+property_value: created:by "cgrondin" xsd:string
+property_value: creation:date "2017-04-07" xsd:string
+property_value: hasRelatedSynonym "Hawaiian" xsd:string
+property_value: http://purl.obolibrary.org/obo/def "A person having origins in any of the original peoples of Hawaii." xsd:string
+property_value: http://purl.obolibrary.org/obo/namespace "exposure_receptor" xsd:string
+property_value: xref https://ncit.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI_Thesaurus&version=17.03d&code=C43394&ns=null&type=properties&key=null&b=1&n=0&vse=null xsd:string
+
+[Term]
+id: ExO:0000153
+name: Other Race
+is_a: ExO:0000109 ! race
+disjoint_from: ExO:0000154 ! Pacific Islander
+disjoint_from: ExO:0000155 ! Puerto Rican
+disjoint_from: ExO:0000156 ! Samoan
+disjoint_from: ExO:0000157 ! Vietnamese
+disjoint_from: ExO:0000158 ! White
+property_value: created:by "cgrondin" xsd:string
+property_value: creation:date "2017-04-07" xsd:string
+property_value: hasRelatedSynonym "Other" xsd:string
+property_value: http://purl.obolibrary.org/obo/def "A person of non-specified racial, cultural, or geographic origins." xsd:string
+property_value: http://purl.obolibrary.org/obo/namespace "exposure_receptor" xsd:string
+
+[Term]
+id: ExO:0000154
+name: Pacific Islander
+is_a: ExO:0000109 ! race
+property_value: created:by "cgrondin" xsd:string
+property_value: creation:date "2017-04-07" xsd:string
+property_value: hasRelatedSynonym "Other Pacific Islander" xsd:string
+property_value: http://purl.obolibrary.org/obo/def "A person having origins in the original peoples of the Pacific Islands, but not Guam, Hawaii, the Mariana Islands or Samoa." xsd:string
+property_value: http://purl.obolibrary.org/obo/namespace "exposure_receptor" xsd:string
+property_value: xref https://ncit.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI_Thesaurus&version=17.03d&code=C107602&ns=null&type=properties&key=null&b=1&n=0&vse=null xsd:string
+
+[Term]
+id: ExO:0000155
+name: Puerto Rican
+is_a: ExO:0000109 ! race
+property_value: created:by "cgrondin" xsd:string
+property_value: creation:date "2017-04-07" xsd:string
+property_value: http://purl.obolibrary.org/obo/def "A person of Puerto Rican descent." xsd:string
+property_value: http://purl.obolibrary.org/obo/namespace "exposure_receptor" xsd:string
+property_value: xref https://ncit.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI_Thesaurus&version=16.07d&code=C67112&ns=null&type=properties&key=null&b=1&n=0&vse=null xsd:string
+
+[Term]
+id: ExO:0000156
+name: Samoan
+is_a: ExO:0000109 ! race
+property_value: created:by "cgrondin" xsd:string
+property_value: creation:date "2017-04-07" xsd:string
+property_value: http://purl.obolibrary.org/obo/def "A person having origins in any of the original peoples of Samoa." xsd:string
+property_value: http://purl.obolibrary.org/obo/namespace "exposure_receptor" xsd:string
+property_value: xref https://ncit.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI_Thesaurus&version=17.03d&code=C43407&ns=null&type=properties&key=null&b=1&n=0&vse=null xsd:string
+
+[Term]
+id: ExO:0000157
+name: Vietnamese
+is_a: ExO:0000109 ! race
+property_value: created:by "cgrondin" xsd:string
+property_value: creation:date "2017-04-07" xsd:string
+property_value: http://purl.obolibrary.org/obo/def "A person having origins in any of the original peoples of Vietnam." xsd:string
+property_value: http://purl.obolibrary.org/obo/namespace "exposure_receptor" xsd:string
+
+[Term]
+id: ExO:0000158
+name: White
+is_a: ExO:0000109 ! race
+property_value: created:by "cgrondin" xsd:string
+property_value: creation:date "2017-04-07" xsd:string
+property_value: hasRelatedSynonym "Caucasian\nCaucasians\nCaucasoid\nOccidental\nWhites" xsd:string
+property_value: http://purl.obolibrary.org/obo/def "A person having origins in any of the original peoples of Europe, the Middle East, or North Africa." xsd:string
+property_value: http://purl.obolibrary.org/obo/namespace "exposure_receptor" xsd:string
+property_value: xref https://ncit.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI_Thesaurus&version=17.03d&code=C41261&ns=null&type=properties&key=null&b=1&n=0&vse=null xsd:string
+
+[Typedef]
+id: characterizes
+name: characterizes
+
+[Typedef]
+id: has_part
+name: has_part
+property_value: xref BFO:0000051
+is_transitive: true
+
+[Typedef]
+id: interacts_with
+name: interacts_with
+
+[Typedef]
+id: interacts_with_an_exposure_receptor_via
+name: interacts_with_an_exposure_receptor_via
+
+[Typedef]
+id: interacts_with_an_exposure_stressor_via
+name: interacts_with_an_exposure stressor_via
+
+[Typedef]
+id: is_associated_with
+name: is_associated_with
+
+[Typedef]
+id: part:of
+is_reflexive: true
+is_transitive: true
+
+[Typedef]
+id: part_of
+property_value: http://purl.obolibrary.org/obo/def "For continuants: C part_of C' if and only if: given any c that instantiates C at a time t, there is some c' such that c' instantiates C' at time t, and c *part_of* c' at t. For processes: P part_of P' if and only if: given any p that instantiates P at a time t, there is some p' such that p' instantiates P' at time t, and p *part_of* p' at t. (Here *part_of* is the instance-level part-relation.)" xsd:string {http://www.geneontology.org/formats/oboInOWL#xref="PMID:15892874"}
+
