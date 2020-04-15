@@ -1,966 +1,970 @@
-<<<<<<< HEAD
 format-version: 1.2
+data-version: releases/2020-04-08
+default-namespace: zebrafish_experimental_conditions_ontology
 ontology: zeco
-subsetdef: ubprop:upper_level "abstract upper-level terms not directly useful for analysis"
+property_value: http://purl.org/dc/elements/1.1/description "None" xsd:string
+property_value: http://purl.org/dc/elements/1.1/title "Zebrafish Experimental Conditions Ontology" xsd:string
+property_value: http://purl.org/dc/terms/license "CC-BY" xsd:string
 
 [Term]
 id: ZECO:0000100
 name: conditions
-namespace: zebrafish_experimental_conditions_ontology
 def: "The state in which an organism exists. " []
 
 [Term]
 id: ZECO:0000101
 name: control conditions
-namespace: zebrafish_experimental_conditions_ontology
 def: "Condition which serves as a standard against which experimental conditions can be compared." []
-is_a: ZECO:0000100  ! conditions
+is_a: ZECO:0000100 ! conditions
 
 [Term]
 id: ZECO:0000102
 name: generic control
-namespace: zebrafish_experimental_conditions_ontology
 def: "Control condition in which the conditions of the organism in the control experiment are not standard but are being used as the condition against which the experimental condition is compared." []
 synonym: "innocuous condition" EXACT []
-is_a: ZECO:0000101  ! control conditions
+is_a: ZECO:0000101 ! control conditions
 
 [Term]
 id: ZECO:0000103
 name: standard conditions
-namespace: zebrafish_experimental_conditions_ontology
-def: "Experimental condition that is the standard environment for zebrafish husbandry, as described in bThe Zebrafish Bookb. In general the standard environment utilizes contaminant free tank water, heated to 28.5 degrees C, with the fish fed a normal contaminant free diet, with standard osmolarity, pH, and normal light cycle of 14hr light/10hr dark." []
-is_a: ZECO:0000100  ! conditions
+def: "Experimental condition that is the standard environment for zebrafish husbandry, as described in ‘The Zebrafish Book’. In general the standard environment utilizes contaminant free tank water, heated to 28.5 degrees C, with the fish fed a normal contaminant free diet, with standard osmolarity, pH, and normal light cycle of 14hr light/10hr dark." []
+is_a: ZECO:0000100 ! conditions
 
 [Term]
 id: ZECO:0000104
 name: experimental conditions
-namespace: zebrafish_experimental_conditions_ontology
 def: "Condition in which variables of the experiment are manipulated to determine the variables effect by comparing to a control condition." []
-is_a: ZECO:0000100  ! conditions
+is_a: ZECO:0000100 ! conditions
 
 [Term]
 id: ZECO:0000105
 name: biological treatment
-namespace: zebrafish_experimental_conditions_ontology
 def: "Experimental condition in which the organism is treated with a microorganism." []
-is_a: ZECO:0000104  ! experimental conditions
+is_a: ZECO:0000104 ! experimental conditions
 
 [Term]
 id: ZECO:0000106
 name: bacterial treatment
-namespace: zebrafish_experimental_conditions_ontology
 def: "Biological treatment in which fish have been infected with bacteria. This infection can be done by addition of bacteria in the water or by injection of bacteria, (for example in the brain ventricle, in the caudal vein, in the yolk sac), or ingestion, or other means." []
-is_a: ZECO:0000105  ! biological treatment
+is_a: ZECO:0000105 ! biological treatment
 
 [Term]
 id: ZECO:0000107
 name: fungal treatment
-namespace: zebrafish_experimental_conditions_ontology
 def: "Biological treatment in which fish have been infected with a fungus." []
-is_a: ZECO:0000105  ! biological treatment
+is_a: ZECO:0000105 ! biological treatment
 
 [Term]
 id: ZECO:0000108
 name: germ free
-namespace: zebrafish_experimental_conditions_ontology
 def: "Biological treatment in which fish were raised in the absence of bacteria." []
-is_a: ZECO:0000105  ! biological treatment
+is_a: ZECO:0000105 ! biological treatment
 
 [Term]
 id: ZECO:0000109
 name: protozoan treatment
-namespace: zebrafish_experimental_conditions_ontology
 def: "Biological treatment in which fish have been infected with protozoa." []
-is_a: ZECO:0000105  ! biological treatment
+is_a: ZECO:0000105 ! biological treatment
 
 [Term]
 id: ZECO:0000110
 name: viral treatment
-namespace: zebrafish_experimental_conditions_ontology
 def: "Biological treatment in which fish have been infected with a virus." []
-is_a: ZECO:0000105  ! biological treatment
+is_a: ZECO:0000105 ! biological treatment
 
 [Term]
 id: ZECO:0000111
 name: chemical treatment
-namespace: zebrafish_experimental_conditions_ontology
 def: "Experimental condition in which the fish is treated with a chemical substance. This treatment could be administered by adding the chemical substance to the tank water, injections, or by consumption." []
-is_a: ZECO:0000104  ! experimental conditions
+is_a: ZECO:0000104 ! experimental conditions
 
 [Term]
 id: ZECO:0000112
 name: diet
-namespace: zebrafish_experimental_conditions_ontology
 def: "Experimental condition where the food of the zebrafish is manipulated in some way." []
-is_a: ZECO:0000104  ! experimental conditions
+is_a: ZECO:0000104 ! experimental conditions
 
 [Term]
 id: ZECO:0000113
 name: food availability
-namespace: zebrafish_experimental_conditions_ontology
 def: "Diet condition in which the availabity of food is manipulated." []
-is_a: ZECO:0000112  ! diet
+is_a: ZECO:0000104 ! experimental conditions
 
 [Term]
 id: ZECO:0000114
 name: fasting
-namespace: zebrafish_experimental_conditions_ontology
 def: "Limited food availability condition in which there is no food provided." []
-is_a: ZECO:0000115  ! limited availability
+is_a: ZECO:0000115 ! limited food availability
 
 [Term]
 id: ZECO:0000115
-name: limited availability
-namespace: zebrafish_experimental_conditions_ontology
+name: limited food availability
 def: "Food availability condition in which food is provided in limited supply." []
-is_a: ZECO:0000113  ! food availability
+is_a: ZECO:0000113 ! food availability
 
 [Term]
 id: ZECO:0000116
-name: unlimited availability
-namespace: zebrafish_experimental_conditions_ontology
+name: unlimited food availability
 def: "Food availability condition in which food is available in unlimited supply." []
-is_a: ZECO:0000113  ! food availability
+is_a: ZECO:0000247 ! increased food availability
 
 [Term]
 id: ZECO:0000117
 name: food content
-namespace: zebrafish_experimental_conditions_ontology
 def: "Diet condition in which the contents of the food is manipulated." []
-is_a: ZECO:0000112  ! diet
+is_a: ZECO:0000112 ! diet
 
 [Term]
 id: ZECO:0000118
 name: cholesterol content
-namespace: zebrafish_experimental_conditions_ontology
 def: "Food content condition in which the amount of cholesterol in the diet is manipulated." []
-is_a: ZECO:0000117  ! food content
+is_a: ZECO:0000117 ! food content
 
 [Term]
 id: ZECO:0000119
 name: high cholesterol
-namespace: zebrafish_experimental_conditions_ontology
 def: "Cholesterol content condition in which the amount of cholesterol in the diet is elevated." []
-is_a: ZECO:0000118  ! cholesterol content
+is_a: ZECO:0000118 ! cholesterol content
 
 [Term]
 id: ZECO:0000120
 name: low cholesterol
-namespace: zebrafish_experimental_conditions_ontology
 def: "Cholesterol content condition in which the amount of cholesterol in the diet is reduced." []
-is_a: ZECO:0000118  ! cholesterol content
+is_a: ZECO:0000118 ! cholesterol content
 
 [Term]
 id: ZECO:0000121
 name: fat content
-namespace: zebrafish_experimental_conditions_ontology
 def: "Food content condition in which the amount of fat in the diet is manipulated." []
-is_a: ZECO:0000117  ! food content
+is_a: ZECO:0000117 ! food content
 
 [Term]
 id: ZECO:0000122
 name: high fat
-namespace: zebrafish_experimental_conditions_ontology
 def: "Fat content condition in which the amount of fat in the diet is elevated." []
-is_a: ZECO:0000121  ! fat content
+is_a: ZECO:0000121 ! fat content
+is_a: ZECO:0000251 ! nutrient increased
 
 [Term]
 id: ZECO:0000123
 name: high saturated fat
-namespace: zebrafish_experimental_conditions_ontology
 def: "High fat condition in which the amount of saturated fat in the diet is elevated." []
-is_a: ZECO:0000122  ! high fat
+is_a: ZECO:0000122 ! high fat
 
 [Term]
 id: ZECO:0000124
 name: high monounsaturated fat
-namespace: zebrafish_experimental_conditions_ontology
 def: "High fat condition in which the amount of monounsaturated fat in the diet is elevated." []
-is_a: ZECO:0000122  ! high fat
+is_a: ZECO:0000122 ! high fat
 
 [Term]
 id: ZECO:0000125
 name: low fat
-namespace: zebrafish_experimental_conditions_ontology
 def: "Fat content condition in which the amount of fat in the diet is reduced." []
-is_a: ZECO:0000121  ! fat content
+is_a: ZECO:0000121 ! fat content
+is_a: ZECO:0000250 ! nutrient decreased
 
 [Term]
 id: ZECO:0000126
 name: low trans fat
-namespace: zebrafish_experimental_conditions_ontology
 def: "Low fat condition in which the amount of trans fat in the diet is reduced." []
-is_a: ZECO:0000125  ! low fat
+is_a: ZECO:0000125 ! low fat
 
 [Term]
 id: ZECO:0000127
 name: low polyunsaturated fat
-namespace: zebrafish_experimental_conditions_ontology
 def: "Low fat condition in which the amount of polyunsaturated fat in the diet is reduced." []
-is_a: ZECO:0000125  ! low fat
+is_a: ZECO:0000125 ! low fat
 
 [Term]
 id: ZECO:0000128
 name: protein content
-namespace: zebrafish_experimental_conditions_ontology
 def: "Food content condition in which the amount of protein in the diet is manipulated." []
-is_a: ZECO:0000117  ! food content
+is_a: ZECO:0000117 ! food content
 
 [Term]
 id: ZECO:0000129
 name: high protein
-namespace: zebrafish_experimental_conditions_ontology
 def: "Protein content condition in which the protein in the diet is elevated." []
-is_a: ZECO:0000128  ! protein content
+is_a: ZECO:0000128 ! protein content
+is_a: ZECO:0000251 ! nutrient increased
 
 [Term]
 id: ZECO:0000130
 name: low protein
-namespace: zebrafish_experimental_conditions_ontology
 def: "Protein content condition in which the protein in the diet is reduced." []
-is_a: ZECO:0000128  ! protein content
+is_a: ZECO:0000128 ! protein content
+is_a: ZECO:0000250 ! nutrient decreased
 
 [Term]
 id: ZECO:0000131
 name: stress
-namespace: zebrafish_experimental_conditions_ontology
-is_a: ZECO:0000104  ! experimental conditions
+is_a: ZECO:0000104 ! experimental conditions
 
 [Term]
 id: ZECO:0000132
 name: high sugar
-namespace: zebrafish_experimental_conditions_ontology
 def: "High carbohydrate conditions in which the amount of sugar in the diet is elevated." []
-is_a: ZECO:0000241  ! high carbohydrate
+is_a: ZECO:0000241 ! high carbohydrate
 
 [Term]
 id: ZECO:0000133
 name: high fructose
-namespace: zebrafish_experimental_conditions_ontology
 def: "High sugar condition in which the amount of fructose in the diet is elevated." []
-is_a: ZECO:0000132  ! high sugar
+is_a: ZECO:0000132 ! high sugar
 
 [Term]
 id: ZECO:0000134
 name: high glucose
-namespace: zebrafish_experimental_conditions_ontology
 def: "High sugar condition in which the amount of glucose in the diet is elevated." []
-is_a: ZECO:0000132  ! high sugar
+is_a: ZECO:0000132 ! high sugar
 
 [Term]
 id: ZECO:0000135
 name: high sucrose
-namespace: zebrafish_experimental_conditions_ontology
 def: "High sugar condition in which the amount of sucrose in the diet is elevated." []
-is_a: ZECO:0000132  ! high sugar
+is_a: ZECO:0000132 ! high sugar
 
 [Term]
 id: ZECO:0000136
 name: low sugar
-namespace: zebrafish_experimental_conditions_ontology
 def: "High carbohydrate conditions in which the amount of sugar in the diet is reduced." []
-is_a: ZECO:0000242  ! low carbohydrate
+is_a: ZECO:0000242 ! low carbohydrate
 
 [Term]
 id: ZECO:0000137
 name: low sucrose
-namespace: zebrafish_experimental_conditions_ontology
 def: "Low sugar condition in which the amount of sucrose in the diet is reduced." []
-is_a: ZECO:0000136  ! low sugar
+is_a: ZECO:0000136 ! low sugar
 
 [Term]
 id: ZECO:0000138
 name: low fructose
-namespace: zebrafish_experimental_conditions_ontology
 def: "Low sugar condition in which the amount of fructose in the diet is reduced." []
-is_a: ZECO:0000136  ! low sugar
+is_a: ZECO:0000136 ! low sugar
 
 [Term]
 id: ZECO:0000139
 name: low glucose
-namespace: zebrafish_experimental_conditions_ontology
 def: "Low sugar condition in which the amount of glucose in the diet is reduced." []
-is_a: ZECO:0000136  ! low sugar
+is_a: ZECO:0000136 ! low sugar
 
 [Term]
 id: ZECO:0000140
 name: housing conditions
-namespace: zebrafish_experimental_conditions_ontology
 def: "Experimental condition that manipulates the enclosure of the fish." []
-is_a: ZECO:0000104  ! experimental conditions
+is_a: ZECO:0000104 ! experimental conditions
 
 [Term]
 id: ZECO:0000141
 name: open roofed
-namespace: zebrafish_experimental_conditions_ontology
 def: "Housing condition in which the roof of the enclosure if open." []
-is_a: ZECO:0000140  ! housing conditions
+is_a: ZECO:0000140 ! housing conditions
 
 [Term]
 id: ZECO:0000142
 name: overcrowding
-namespace: zebrafish_experimental_conditions_ontology
-def: "Housing condition in which the enclosure of the fish is overcrowded or contains an excess of fish or obstacles that reduce the available space of the enclosure. " []
-is_a: ZECO:0000140  ! housing conditions
+def: "Housing condition in which the enclosure of the fish is overcrowded, containing an excess of fish that reduces the available space of the enclosure." []
+synonym: "high density" EXACT []
+is_a: ZECO:0000140 ! housing conditions
 
 [Term]
 id: ZECO:0000143
 name: in vitro culture
-namespace: zebrafish_experimental_conditions_ontology
 def: "Experimental condition in which components of the fish have been removed and are maintained separately." []
-is_a: ZECO:0000104  ! experimental conditions
+is_a: ZECO:0000104 ! experimental conditions
 
 [Term]
 id: ZECO:0000144
 name: organ culture
-namespace: zebrafish_experimental_conditions_ontology
 def: "In vitro culture condition in which an organ is dissected/isolated/collected from the fish and placed in culture. The analysis of the experiment is done on this organ in culture." []
-is_a: ZECO:0000143  ! in vitro culture
+is_a: ZECO:0000143 ! in vitro culture
 
 [Term]
 id: ZECO:0000145
 name: primary cell culture
-namespace: zebrafish_experimental_conditions_ontology
 def: "In vitro culture condition in which an embryo or adult fish is dissociated to a single cell suspension. The analysis is made on this cell culture." []
-is_a: ZECO:0000143  ! in vitro culture
+is_a: ZECO:0000143 ! in vitro culture
 
 [Term]
 id: ZECO:0000146
 name: lighting conditions
-namespace: zebrafish_experimental_conditions_ontology
 def: "Experimental condition in which the intensity, wavelength, and/or duration of illumination is (are) different from the one in controlled conditions." []
-is_a: ZECO:0000104  ! experimental conditions
+is_a: ZECO:0000104 ! experimental conditions
 
 [Term]
 id: ZECO:0000147
 name: light duration
-namespace: zebrafish_experimental_conditions_ontology
-is_a: ZECO:0000146  ! lighting conditions
+is_a: ZECO:0000146 ! lighting conditions
 
 [Term]
 id: ZECO:0000148
 name: altered light dark cycle
-namespace: zebrafish_experimental_conditions_ontology
-is_a: ZECO:0000147  ! light duration
+is_a: ZECO:0000147 ! light duration
 
 [Term]
 id: ZECO:0000149
 name: constant dark
-namespace: zebrafish_experimental_conditions_ontology
-is_a: ZECO:0000147  ! light duration
+is_a: ZECO:0000147 ! light duration
 
 [Term]
 id: ZECO:0000150
 name: constant light
-namespace: zebrafish_experimental_conditions_ontology
-is_a: ZECO:0000147  ! light duration
+is_a: ZECO:0000147 ! light duration
 
 [Term]
 id: ZECO:0000151
 name: light intensity
-namespace: zebrafish_experimental_conditions_ontology
-is_a: ZECO:0000146  ! lighting conditions
+is_a: ZECO:0000146 ! lighting conditions
 
 [Term]
 id: ZECO:0000152
 name: high light intensity
-namespace: zebrafish_experimental_conditions_ontology
-is_a: ZECO:0000151  ! light intensity
+is_a: ZECO:0000151 ! light intensity
 
 [Term]
 id: ZECO:0000153
 name: low light intensity
-namespace: zebrafish_experimental_conditions_ontology
-is_a: ZECO:0000151  ! light intensity
+is_a: ZECO:0000151 ! light intensity
 
 [Term]
 id: ZECO:0000154
 name: gravity
-namespace: zebrafish_experimental_conditions_ontology
 def: "Experimental condition in which gravity forces are applied. For zebrafish, this can be in the form of centrifugal forces or trips to outerspace." []
-is_a: ZECO:0000104  ! experimental conditions
+is_a: ZECO:0000104 ! experimental conditions
 
 [Term]
 id: ZECO:0000155
 name: mechanical stress
-namespace: zebrafish_experimental_conditions_ontology
 def: "Experimental condition in which an external mechanical force is applied to the fish or part of the fish." []
-is_a: ZECO:0000131  ! stress
+is_a: ZECO:0000131 ! stress
 
 [Term]
 id: ZECO:0000156
 name: vibration
-namespace: zebrafish_experimental_conditions_ontology
-is_a: ZECO:0000155  ! mechanical stress
+is_a: ZECO:0000155 ! mechanical stress
 
 [Term]
 id: ZECO:0000157
 name: water flow
-namespace: zebrafish_experimental_conditions_ontology
-is_a: ZECO:0000155  ! mechanical stress
+is_a: ZECO:0000155 ! mechanical stress
 
 [Term]
 id: ZECO:0000158
 name: circular flow
-namespace: zebrafish_experimental_conditions_ontology
-is_a: ZECO:0000157  ! water flow
+is_a: ZECO:0000157 ! water flow
 
 [Term]
 id: ZECO:0000159
 name: through flow
-namespace: zebrafish_experimental_conditions_ontology
-is_a: ZECO:0000157  ! water flow
+is_a: ZECO:0000157 ! water flow
 
 [Term]
 id: ZECO:0000160
 name: temperature exposure
-namespace: zebrafish_experimental_conditions_ontology
 def: "Experimental condition in which the zebrafish is exposed to an increased or decreased temperature." []
-is_a: ZECO:0000104  ! experimental conditions
+is_a: ZECO:0000104 ! experimental conditions
 
 [Term]
 id: ZECO:0000161
 name: stable temperature exposure
-namespace: zebrafish_experimental_conditions_ontology
 def: "Temperature exposure condition in which fish are raised in temperature different (lower or higher) than the controlled temperature. The standard controlled temperature (according to the zebrafish book) is 28.5 degrees C." []
-is_a: ZECO:0000160  ! temperature exposure
+is_a: ZECO:0000160 ! temperature exposure
 
 [Term]
 id: ZECO:0000162
 name: cold exposure
-namespace: zebrafish_experimental_conditions_ontology
 def: "Temperature exposure condition in which fish are raised in temperature that is lower than the controlled temperature. The standard controlled temperature (according to the zebrafish book) is 28.5 degrees C." []
-is_a: ZECO:0000161  ! stable temperature exposure
+is_a: ZECO:0000161 ! stable temperature exposure
 
 [Term]
 id: ZECO:0000163
 name: heat exposure
-namespace: zebrafish_experimental_conditions_ontology
 def: "Temperature exposure condition in which fish are raised in temperature that is higher than the controlled temperature. The standard controlled temperature (according to the zebrafish book) is 28.5 degrees C." []
-is_a: ZECO:0000161  ! stable temperature exposure
+is_a: ZECO:0000161 ! stable temperature exposure
 
 [Term]
 id: ZECO:0000164
 name: temperature shock
-namespace: zebrafish_experimental_conditions_ontology
 def: "Temperature exposure condition in which fish are subjected for a short period of time to temperature that is lower or higher than the controlled temperature. The standard controlled temperature (according to the zebrafish book) is 28.5 degrees C." []
-is_a: ZECO:0000160  ! temperature exposure
+is_a: ZECO:0000160 ! temperature exposure
 
 [Term]
 id: ZECO:0000165
 name: cold shock
-namespace: zebrafish_experimental_conditions_ontology
 def: "Temperature shock condition in which fish are subjected for a short period of time to temperature lower than the controlled temperature. The standard controlled temperature (according to the zebrafish book) is 28.5 degrees C." []
-is_a: ZECO:0000164  ! temperature shock
+is_a: ZECO:0000164 ! temperature shock
 
 [Term]
 id: ZECO:0000166
 name: heat shock
-namespace: zebrafish_experimental_conditions_ontology
 def: "Temperature shock condition in which fish are subjected for a short period of time to temperature higher than the controlled temperature. The standard controlled temperature (according to the zebrafish book) is 28.5 degrees C." []
-is_a: ZECO:0000164  ! temperature shock
+is_a: ZECO:0000164 ! temperature shock
 
 [Term]
 id: ZECO:0000168
 name: ablation
-namespace: zebrafish_experimental_conditions_ontology
 def: "Targeted destruction of an anatomical structure." []
-is_a: ZECO:0000229  ! physical alteration
+is_a: ZECO:0000229 ! physical alteration
 
 [Term]
 id: ZECO:0000169
 name: chemical ablation
-namespace: zebrafish_experimental_conditions_ontology
 def: "Experimental condition which uses a chemical to ablate an anatomical structure or cell." []
-is_a: ZECO:0000168  ! ablation
+is_a: ZECO:0000168 ! ablation
 
 [Term]
 id: ZECO:0000170
 name: light ablation
-namespace: zebrafish_experimental_conditions_ontology
 def: "Experimental condition which uses focused light to ablate an anatomical structure or cell." []
-is_a: ZECO:0000168  ! ablation
+is_a: ZECO:0000168 ! ablation
+is_a: ZECO:0000245 ! light damage
 
 [Term]
 id: ZECO:0000171
 name: resection
-namespace: zebrafish_experimental_conditions_ontology
 def: "Surgical manipulation in which a particular organ, appendage, or part of the zebrafish is removed." []
-is_a: ZECO:0000176  ! surgical manipulation
+is_a: ZECO:0000176 ! surgical manipulation
 
 [Term]
 id: ZECO:0000172
 name: amputation
-namespace: zebrafish_experimental_conditions_ontology
 def: "Resection condtion in which all or part of an extremity such as the fin or tail are removed." []
-is_a: ZECO:0000171  ! resection
+is_a: ZECO:0000171 ! resection
 
 [Term]
 id: ZECO:0000173
 name: vaccine treatment
-namespace: zebrafish_experimental_conditions_ontology
 def: "Biological treatment in which the organism is treated with a substance to stimulate the production of antibodies and provide immunity against one or several diseases." []
-is_a: ZECO:0000105  ! biological treatment
+is_a: ZECO:0000105 ! biological treatment
 
 [Term]
 id: ZECO:0000174
 name: laceration
-namespace: zebrafish_experimental_conditions_ontology
 def: "Experimental condition in which there is a deep cut or tear of the flesh." []
-is_a: ZECO:0000229  ! physical alteration
+is_a: ZECO:0000229 ! physical alteration
 
 [Term]
 id: ZECO:0000176
 name: surgical manipulation
-namespace: zebrafish_experimental_conditions_ontology
 def: "Experimental condition that involves  manual or instrumental techniques to alter anatomical structures." []
-is_a: ZECO:0000229  ! physical alteration
+is_a: ZECO:0000229 ! physical alteration
 
 [Term]
 id: ZECO:0000177
 name: xenotransplantation
-namespace: zebrafish_experimental_conditions_ontology
 def: "Experimental condition in which living cells or tissues from one species are transplanted into another." []
-is_a: ZECO:0000176  ! surgical manipulation
+is_a: ZECO:0000105 ! biological treatment
 
 [Term]
 id: ZECO:0000178
 name: perforation
-namespace: zebrafish_experimental_conditions_ontology
 def: "Experimental condition in which a hole or break in the membranes of an organ or structure of the body is created." []
-is_a: ZECO:0000229  ! physical alteration
+is_a: ZECO:0000229 ! physical alteration
 
 [Term]
 id: ZECO:0000179
 name: abrasion
-namespace: zebrafish_experimental_conditions_ontology
 def: "Experimental condition that results in superficial damage of tissue such that it is scraped or worn away." []
-is_a: ZECO:0000229  ! physical alteration
+is_a: ZECO:0000229 ! physical alteration
 
 [Term]
 id: ZECO:0000180
 name: contusion
-namespace: zebrafish_experimental_conditions_ontology
 def: "Experimental condition that results in hematoma of tissue in which capillaries and sometimes venules are damaged by trauma, allowing blood to seep, hemorrhage, or extravasate into the surrounding interstitial tissues. (https://en.wikipedia.org/wiki/Bruise)" []
-is_a: ZECO:0000229  ! physical alteration
+is_a: ZECO:0000229 ! physical alteration
 
 [Term]
 id: ZECO:0000181
 name: transection
-namespace: zebrafish_experimental_conditions_ontology
 def: "Cutting transversly of an organ or tissue. Type of cutting often used to divide the spinal cord to investigate neural regeneration in zebrafish." []
-is_a: ZECO:0000176  ! surgical manipulation
+is_a: ZECO:0000176 ! surgical manipulation
 
 [Term]
 id: ZECO:0000182
 name: water quality
-namespace: zebrafish_experimental_conditions_ontology
-is_a: ZECO:0000104  ! experimental conditions
+def: "Experimental condition in which a chemical or physical characteristic of water is altered." []
+is_a: ZECO:0000104 ! experimental conditions
 
 [Term]
 id: ZECO:0000183
 name: gas composition
-namespace: zebrafish_experimental_conditions_ontology
-is_a: ZECO:0000182  ! water quality
+comment: Water quality condition that alters the concentration of atmospheric gases in water.
+is_a: ZECO:0000182 ! water quality
 
 [Term]
 id: ZECO:0000184
 name: carbon dioxide content
-namespace: zebrafish_experimental_conditions_ontology
-is_a: ZECO:0000183  ! gas composition
+def: "A gas composition condition that alters the concentraion of carbion dioxide." []
+is_a: ZECO:0000183 ! gas composition
 
 [Term]
 id: ZECO:0000185
 name: hypercapnia
-namespace: zebrafish_experimental_conditions_ontology
-is_a: ZECO:0000184  ! carbon dioxide content
+is_a: ZECO:0000184 ! carbon dioxide content
 
 [Term]
 id: ZECO:0000186
 name: hypocapnia
-namespace: zebrafish_experimental_conditions_ontology
-is_a: ZECO:0000184  ! carbon dioxide content
+is_a: ZECO:0000184 ! carbon dioxide content
 
 [Term]
 id: ZECO:0000187
 name: oxygen content
-namespace: zebrafish_experimental_conditions_ontology
-is_a: ZECO:0000183  ! gas composition
+def: "A gas composition condition that alters the concentraion of oxygen." []
+is_a: ZECO:0000183 ! gas composition
 
 [Term]
 id: ZECO:0000188
 name: hyperoxia
-namespace: zebrafish_experimental_conditions_ontology
-is_a: ZECO:0000187  ! oxygen content
+def: "An oxygen content with high concentration of oxygen." []
+is_a: ZECO:0000187 ! oxygen content
 
 [Term]
 id: ZECO:0000189
 name: hypoxia
-namespace: zebrafish_experimental_conditions_ontology
-is_a: ZECO:0000187  ! oxygen content
+def: "An oxygen content with low concentration of oxygen." []
+is_a: ZECO:0000187 ! oxygen content
 
 [Term]
 id: ZECO:0000190
 name: ion composition
-namespace: zebrafish_experimental_conditions_ontology
-is_a: ZECO:0000182  ! water quality
+is_a: ZECO:0000182 ! water quality
 
 [Term]
 id: ZECO:0000191
 name: modified calcium composition
-namespace: zebrafish_experimental_conditions_ontology
-is_a: ZECO:0000190  ! ion composition
+is_a: ZECO:0000190 ! ion composition
 
 [Term]
 id: ZECO:0000192
 name: high calcium
-namespace: zebrafish_experimental_conditions_ontology
-is_a: ZECO:0000191  ! modified calcium composition
+is_a: ZECO:0000191 ! modified calcium composition
 
 [Term]
 id: ZECO:0000193
 name: low calcium
-namespace: zebrafish_experimental_conditions_ontology
-is_a: ZECO:0000191  ! modified calcium composition
+is_a: ZECO:0000191 ! modified calcium composition
 
 [Term]
 id: ZECO:0000194
 name: modified potassium composition
-namespace: zebrafish_experimental_conditions_ontology
-is_a: ZECO:0000190  ! ion composition
+is_a: ZECO:0000190 ! ion composition
 
 [Term]
 id: ZECO:0000195
 name: high potassium
-namespace: zebrafish_experimental_conditions_ontology
-is_a: ZECO:0000194  ! modified potassium composition
+is_a: ZECO:0000194 ! modified potassium composition
 
 [Term]
 id: ZECO:0000196
 name: low potassium
-namespace: zebrafish_experimental_conditions_ontology
-is_a: ZECO:0000194  ! modified potassium composition
+is_a: ZECO:0000194 ! modified potassium composition
 
 [Term]
 id: ZECO:0000197
 name: modified sodium composition
-namespace: zebrafish_experimental_conditions_ontology
-is_a: ZECO:0000190  ! ion composition
+is_a: ZECO:0000190 ! ion composition
 
 [Term]
 id: ZECO:0000198
 name: high sodium
-namespace: zebrafish_experimental_conditions_ontology
-is_a: ZECO:0000197  ! modified sodium composition
+is_a: ZECO:0000197 ! modified sodium composition
 
 [Term]
 id: ZECO:0000199
 name: low sodium
-namespace: zebrafish_experimental_conditions_ontology
-is_a: ZECO:0000197  ! modified sodium composition
+is_a: ZECO:0000197 ! modified sodium composition
 
 [Term]
 id: ZECO:0000200
 name: pH
-namespace: zebrafish_experimental_conditions_ontology
-is_a: ZECO:0000190  ! ion composition
+is_a: ZECO:0000190 ! ion composition
 
 [Term]
 id: ZECO:0000201
 name: acidic
-namespace: zebrafish_experimental_conditions_ontology
 def: "Experimental condition in which the pH of the water is lower than the pH of the controlled conditions." []
-is_a: ZECO:0000200  ! pH
+is_a: ZECO:0000200 ! pH
 
 [Term]
 id: ZECO:0000202
 name: basic
-namespace: zebrafish_experimental_conditions_ontology
 def: "Experimental condition in which the pH of the water is higher than the pH of the controlled conditions." []
-is_a: ZECO:0000200  ! pH
+is_a: ZECO:0000200 ! pH
 
 [Term]
 id: ZECO:0000203
 name: water salinity
-namespace: zebrafish_experimental_conditions_ontology
-is_a: ZECO:0000182  ! water quality
+is_a: ZECO:0000182 ! water quality
 
 [Term]
 id: ZECO:0000204
 name: hypertonic
-namespace: zebrafish_experimental_conditions_ontology
 def: "Experimental condition in which the salt concentration is higher than the one in controlled conditions." []
-is_a: ZECO:0000203  ! water salinity
+is_a: ZECO:0000203 ! water salinity
 
 [Term]
 id: ZECO:0000205
 name: hypotonic
-namespace: zebrafish_experimental_conditions_ontology
 def: "Experimental condition in which the salt concentration is lower than the one in controlled conditions." []
-is_a: ZECO:0000203  ! water salinity
+is_a: ZECO:0000203 ! water salinity
 
 [Term]
 id: ZECO:0000206
 name: isotonic
-namespace: zebrafish_experimental_conditions_ontology
-is_a: ZECO:0000203  ! water salinity
+is_a: ZECO:0000203 ! water salinity
 
 [Term]
 id: ZECO:0000207
 name: stable
-namespace: zebrafish_experimental_conditions_ontology
-is_a: ZECO:0000203  ! water salinity
+is_a: ZECO:0000203 ! water salinity
 
 [Term]
 id: ZECO:0000208
 name: radiation
-namespace: zebrafish_experimental_conditions_ontology
-is_a: ZECO:0000104  ! experimental conditions
+is_a: ZECO:0000104 ! experimental conditions
 
 [Term]
 id: ZECO:0000209
 name: electromagnetic radiation
-namespace: zebrafish_experimental_conditions_ontology
-is_a: ZECO:0000208  ! radiation
+is_a: ZECO:0000208 ! radiation
 
 [Term]
 id: ZECO:0000210
 name: radio waves
-namespace: zebrafish_experimental_conditions_ontology
-is_a: ZECO:0000209  ! electromagnetic radiation
+is_a: ZECO:0000209 ! electromagnetic radiation
 
 [Term]
 id: ZECO:0000211
 name: microwaves
-namespace: zebrafish_experimental_conditions_ontology
-is_a: ZECO:0000209  ! electromagnetic radiation
+is_a: ZECO:0000209 ! electromagnetic radiation
 
 [Term]
 id: ZECO:0000212
 name: infared
-namespace: zebrafish_experimental_conditions_ontology
-is_a: ZECO:0000209  ! electromagnetic radiation
+is_a: ZECO:0000209 ! electromagnetic radiation
 
 [Term]
 id: ZECO:0000213
 name: visible light
-namespace: zebrafish_experimental_conditions_ontology
-is_a: ZECO:0000209  ! electromagnetic radiation
+def: "Electromagnetic radiation with a wavelength from 400 nm to 700 nm. Visible light referes to the light which is visible to the human eye and is responsible fo the sense of sight." [https://en.wikipedia.org/wiki/Light]
+is_a: ZECO:0000209 ! electromagnetic radiation
 
 [Term]
 id: ZECO:0000214
-name: UV
-namespace: zebrafish_experimental_conditions_ontology
-is_a: ZECO:0000209  ! electromagnetic radiation
+name: ultraviolet light
+def: "Electromagnetic radiation with a wavelength from 10 nm to 400nm. Long-wavelength ultraviolet radiation can cause chemical reactions and causes many substances to glow or fluoresce." [https://en.wikipedia.org/wiki/Ultraviolet]
+synonym: "UV" EXACT []
+synonym: "UV light" EXACT []
+is_a: ZECO:0000209 ! electromagnetic radiation
 
 [Term]
 id: ZECO:0000215
 name: x-ray
-namespace: zebrafish_experimental_conditions_ontology
-is_a: ZECO:0000209  ! electromagnetic radiation
+is_a: ZECO:0000209 ! electromagnetic radiation
 
 [Term]
 id: ZECO:0000216
-name: gama ray
-namespace: zebrafish_experimental_conditions_ontology
-is_a: ZECO:0000209  ! electromagnetic radiation
+name: gamma ray
+is_a: ZECO:0000209 ! electromagnetic radiation
 
 [Term]
 id: ZECO:0000217
 name: particle radiation
-namespace: zebrafish_experimental_conditions_ontology
-is_a: ZECO:0000208  ! radiation
+is_a: ZECO:0000208 ! radiation
 
 [Term]
 id: ZECO:0000218
 name: proton
-namespace: zebrafish_experimental_conditions_ontology
-is_a: ZECO:0000217  ! particle radiation
+is_a: ZECO:0000217 ! particle radiation
 
 [Term]
 id: ZECO:0000219
 name: neutron
-namespace: zebrafish_experimental_conditions_ontology
-is_a: ZECO:0000217  ! particle radiation
+is_a: ZECO:0000217 ! particle radiation
 
 [Term]
 id: ZECO:0000220
 name: acoustic radiation
-namespace: zebrafish_experimental_conditions_ontology
-is_a: ZECO:0000208  ! radiation
+is_a: ZECO:0000208 ! radiation
 
 [Term]
 id: ZECO:0000221
 name: alpha particle
-namespace: zebrafish_experimental_conditions_ontology
-is_a: ZECO:0000217  ! particle radiation
+is_a: ZECO:0000217 ! particle radiation
 
 [Term]
 id: ZECO:0000222
 name: electromagnetic field
-namespace: zebrafish_experimental_conditions_ontology
 def: "Experimental condition in which the fish is exposed to a physical field that is produced by electrically charged objects." []
-is_a: ZECO:0000104  ! experimental conditions
+is_a: ZECO:0000104 ! experimental conditions
 
 [Term]
 id: ZECO:0000223
 name: electric field
-namespace: zebrafish_experimental_conditions_ontology
 def: "Experimental condition where the fish is exposed to materials that produce an electric field." []
-is_a: ZECO:0000222  ! electromagnetic field
+is_a: ZECO:0000222 ! electromagnetic field
 
 [Term]
 id: ZECO:0000224
 name: magnetic field
-namespace: zebrafish_experimental_conditions_ontology
 def: "Experimental condition where the fish is exposed to magnetic materials." []
-is_a: ZECO:0000222  ! electromagnetic field
+is_a: ZECO:0000222 ! electromagnetic field
 
 [Term]
 id: ZECO:0000225
 name: high polysunsaturated fat
-namespace: zebrafish_experimental_conditions_ontology
 def: "High fat condition in which the amount of polyunsaturated fat in the diet is elevated." []
-is_a: ZECO:0000122  ! high fat
+is_a: ZECO:0000122 ! high fat
 
 [Term]
 id: ZECO:0000226
 name: high trans fat
-namespace: zebrafish_experimental_conditions_ontology
 def: "High fat condition in which the amount of trans fat in the diet is elevated." []
-is_a: ZECO:0000122  ! high fat
+is_a: ZECO:0000122 ! high fat
 
 [Term]
 id: ZECO:0000227
 name: low saturated fat
-namespace: zebrafish_experimental_conditions_ontology
 def: "Low fat condition in which the amount of saturated fat in the diet is reduced." []
-is_a: ZECO:0000125  ! low fat
+is_a: ZECO:0000125 ! low fat
 
 [Term]
 id: ZECO:0000228
 name: low monounsaturated fat
-namespace: zebrafish_experimental_conditions_ontology
 def: "Low fat condition in which the amount of monounsaturated fat in the diet is reduced." []
-is_a: ZECO:0000125  ! low fat
+is_a: ZECO:0000125 ! low fat
 
 [Term]
 id: ZECO:0000229
 name: physical alteration
-namespace: zebrafish_experimental_conditions_ontology
 def: "Experimental condition in which an anatomical structure, cell, or organ has sustained targeted physical change, usually through the use of an instrument." []
-is_a: ZECO:0000104  ! experimental conditions
+is_a: ZECO:0000104 ! experimental conditions
 
 [Term]
 id: ZECO:0000230
 name: bacterial treatment by injection
-namespace: zebrafish_experimental_conditions_ontology
 def: "Bacterial treatment where the bacteria are injected into the fish." []
-is_a: ZECO:0000106  ! bacterial treatment
+is_a: ZECO:0000106 ! bacterial treatment
 
 [Term]
 id: ZECO:0000231
 name: bacterial treatment by exposure to environment
-namespace: zebrafish_experimental_conditions_ontology
 def: "Bacterial treatment where the bacteria are introduced via the environment. For zebrafish this is the tank water." []
-is_a: ZECO:0000106  ! bacterial treatment
+is_a: ZECO:0000106 ! bacterial treatment
 
 [Term]
 id: ZECO:0000232
 name: fungal treatment by injection
-namespace: zebrafish_experimental_conditions_ontology
 def: "Fungal treatment where the fungus is injected into the fish." []
-is_a: ZECO:0000107  ! fungal treatment
+is_a: ZECO:0000107 ! fungal treatment
 
 [Term]
 id: ZECO:0000233
 name: fungal treatment by exposure to environment
-namespace: zebrafish_experimental_conditions_ontology
 def: "Fungal treatment where the fungus is introduced via the environment. For zebrafish this is the tank water." []
-is_a: ZECO:0000107  ! fungal treatment
+is_a: ZECO:0000107 ! fungal treatment
 
 [Term]
 id: ZECO:0000234
 name: viral treatment by exposure to environment
-namespace: zebrafish_experimental_conditions_ontology
 def: "Viral treatment where the virus is introduced via the environment. For zebrafish this is the tank water." []
-is_a: ZECO:0000110  ! viral treatment
+is_a: ZECO:0000110 ! viral treatment
 
 [Term]
 id: ZECO:0000235
 name: viral treatment by injection
-namespace: zebrafish_experimental_conditions_ontology
 def: "Viral treatment where the virus is injected into the fish." []
-is_a: ZECO:0000110  ! viral treatment
+is_a: ZECO:0000110 ! viral treatment
 
 [Term]
 id: ZECO:0000236
 name: cancer xenotransplantation
-namespace: zebrafish_experimental_conditions_ontology
 def: "Xenotransplantation condition in which cancer cells are injected or grafted into the zebrafish." []
-is_a: ZECO:0000177  ! xenotransplantation
+is_a: ZECO:0000177 ! xenotransplantation
 
 [Term]
 id: ZECO:0000237
 name: chemical treatment by injection
-namespace: zebrafish_experimental_conditions_ontology
 def: "Chemical treatment in which the chemical is injected into the zebrafish." []
-is_a: ZECO:0000111  ! chemical treatment
+is_a: ZECO:0000111 ! chemical treatment
 
 [Term]
 id: ZECO:0000238
 name: chemical treatment by environment
-namespace: zebrafish_experimental_conditions_ontology
 def: "Chemical treatment condition in which the chemical is introduced through the environment. For zebrafish this is the tank water." []
-is_a: ZECO:0000111  ! chemical treatment
+is_a: ZECO:0000111 ! chemical treatment
 
 [Term]
 id: ZECO:0000239
 name: chemical treatment by diet
-namespace: zebrafish_experimental_conditions_ontology
 def: "Chemical treatment condition in which the chemical is introduced through the diet." []
-is_a: ZECO:0000111  ! chemical treatment
-is_a: ZECO:0000112  ! diet
+is_a: ZECO:0000111 ! chemical treatment
+is_a: ZECO:0000112 ! diet
 
 [Term]
 id: ZECO:0000240
 name: carbohydrate content
-namespace: zebrafish_experimental_conditions_ontology
 def: "Food content condition in which the amount of carbohydrate in the diet is manipulated." []
-is_a: ZECO:0000117  ! food content
+is_a: ZECO:0000117 ! food content
 
 [Term]
 id: ZECO:0000241
 name: high carbohydrate
-namespace: zebrafish_experimental_conditions_ontology
 def: "Food content condtion in which the amount of carbohydrate in the diet is elevated." []
-is_a: ZECO:0000240  ! carbohydrate content
+is_a: ZECO:0000240 ! carbohydrate content
+is_a: ZECO:0000251 ! nutrient increased
 
 [Term]
 id: ZECO:0000242
 name: low carbohydrate
-namespace: zebrafish_experimental_conditions_ontology
 def: "Food content condtion in which the amount of carbohydrate in the diet is reduced." []
-is_a: ZECO:0000240  ! carbohydrate content
+is_a: ZECO:0000240 ! carbohydrate content
+is_a: ZECO:0000250 ! nutrient decreased
 
 [Term]
 id: ZECO:0000243
 name: stress by handling
-namespace: zebrafish_experimental_conditions_ontology
-is_a: ZECO:0000131  ! stress
+is_a: ZECO:0000131 ! stress
 
 [Term]
 id: ZECO:0000244
 name: ultrasound
-namespace: zebrafish_experimental_conditions_ontology
 def: "Mechanical stress condition where the organism is subjected to vibrations having an ultrasonic frequency." []
-is_a: ZECO:0000156  ! vibration
+is_a: ZECO:0000156 ! vibration
 
 [Term]
 id: ZECO:0000245
 name: light damage
-namespace: zebrafish_experimental_conditions_ontology
 def: "Physical alteration which uses light to damage the anatomical structure, cell, or organ." []
-is_a: ZECO:0000229  ! physical alteration
-=======
->>>>>>> c18442c9e4072bdd3f636203cabf551ff2244a81
+is_a: ZECO:0000229 ! physical alteration
+
+[Term]
+id: ZECO:0000246
+name: undercrowding
+def: "Housing condition in which the enclosure of the fish is undercrowded,containing a low amount of fish that increases the available space of the enclosure." []
+synonym: "low density" EXACT []
+is_a: ZECO:0000140 ! housing conditions
+
+[Term]
+id: ZECO:0000247
+name: increased food availability
+def: "Food availability condition in which food is provided in increased supply." []
+synonym: "overfeeding" EXACT []
+is_a: ZECO:0000113 ! food availability
+
+[Term]
+id: ZECO:0000248
+name: cold damage
+def: "Physical alteration which uses cold to damage an anatomical structure, cell, or organ" []
+is_a: ZECO:0000229 ! physical alteration
+
+[Term]
+id: ZECO:0000249
+name: cryoablation
+def: "Targetd destruction of an anatomical structure by freezing." []
+is_a: ZECO:0000168 ! ablation
+is_a: ZECO:0000248 ! cold damage
+
+[Term]
+id: ZECO:0000250
+name: nutrient decreased
+def: "Food content condition in which levels of a nutrient are decreased relative to standard diet." []
+is_a: ZECO:0000117 ! food content
+
+[Term]
+id: ZECO:0000251
+name: nutrient increased
+def: "Food content condition in which levels of a nutrient are increased relative to standard diet." []
+is_a: ZECO:0000117 ! food content
+
+[Term]
+id: ZECO:0000252
+name: feeding regime
+def: "Experimental condition that manipulates the frequency or way an organism is fed." []
+is_a: ZECO:0000104 ! experimental conditions
+
+[Term]
+id: ZECO:0000253
+name: gavage
+def: "Feeding regime in which food, drugs, or other substances are administered by force, typically through a tube leading down the throat to the stomach." []
+is_a: ZECO:0000252 ! feeding regime
+
+[Term]
+id: ZECO:0000254
+name: bacterial treatment by gavage
+def: "Bacterial treatment condition where bacteria are introduced to the organism by gavage." []
+is_a: ZECO:0000106 ! bacterial treatment
+is_a: ZECO:0000253 ! gavage
+
+[Term]
+id: ZECO:0000255
+name: chemical treatment by gavage
+def: "Chemical treatment condition where the chemical is introduced to the organism by gavage." []
+is_a: ZECO:0000111 ! chemical treatment
+is_a: ZECO:0000253 ! gavage
+
+[Term]
+id: ZECO:0000256
+name: bacterial treatment by diet
+def: "Bacterial treatment where bacteria are introduced via the diet. This includes probiotic treatments." []
+is_a: ZECO:0000112 ! diet
+
+[Typedef]
+id: BFO:0000050
+name: part of
+def: "a core relation that holds between a part and its whole" []
+property_value: IAO:0000111 "is part of" xsd:string
+property_value: IAO:0000112 "my brain is part of my body (continuant parthood, two material entities)" xsd:string
+property_value: IAO:0000112 "my stomach cavity is part of my stomach (continuant parthood, immaterial entity is part of material entity)" xsd:string
+property_value: IAO:0000112 "this day is part of this year (occurrent parthood)" xsd:string
+property_value: IAO:0000116 "Everything is part of itself. Any part of any part of a thing is itself part of that thing. Two distinct things cannot be part of each other." xsd:string
+property_value: IAO:0000116 "Occurrents are not subject to change and so parthood between occurrents holds for all the times that the part exists. Many continuants are subject to change, so parthood between continuants will only hold at certain times, but this is difficult to specify in OWL. See https://code.google.com/p/obo-relations/wiki/ROAndTime" xsd:string
+property_value: IAO:0000116 "Parthood requires the part and the whole to have compatible classes: only an occurrent can be part of an occurrent; only a process can be part of a process; only a continuant can be part of a continuant; only an independent continuant can be part of an independent continuant; only an immaterial entity can be part of an immaterial entity; only a specifically dependent continuant can be part of a specifically dependent continuant; only a generically dependent continuant can be part of a generically dependent continuant. (This list is not exhaustive.)\n\nA continuant cannot be part of an occurrent: use 'participates in'. An occurrent cannot be part of a continuant: use 'has participant'. A material entity cannot be part of an immaterial entity: use 'has location'. A specifically dependent continuant cannot be part of an independent continuant: use 'inheres in'. An independent continuant cannot be part of a specifically dependent continuant: use 'bearer of'." xsd:string
+property_value: IAO:0000118 "part_of" xsd:string
+property_value: RO:0001900 RO:0001901
+property_value: RO:0040042 BFO:0000002
+property_value: RO:0040042 BFO:0000003
+property_value: RO:0040042 BFO:0000004
+property_value: RO:0040042 BFO:0000017
+property_value: RO:0040042 BFO:0000019
+property_value: RO:0040042 BFO:0000020
+property_value: RO:0040042 BFO:0000031
+property_value: seeAlso http://ontologydesignpatterns.org/wiki/Community:Parts_and_Collections
+property_value: seeAlso http://ontologydesignpatterns.org/wiki/Submissions:PartOf
+property_value: seeAlso http://www.obofoundry.org/ro/#OBO_REL:part_of xsd:string
+is_transitive: true
+inverse_of: BFO:0000051 ! has part
+
+[Typedef]
+id: BFO:0000051
+name: has part
+def: "a core relation that holds between a whole and its part" []
+property_value: IAO:0000111 "has part" xsd:string
+property_value: IAO:0000112 "my body has part my brain (continuant parthood, two material entities)" xsd:string
+property_value: IAO:0000112 "my stomach has part my stomach cavity (continuant parthood, material entity has part immaterial entity)" xsd:string
+property_value: IAO:0000112 "this year has part this day (occurrent parthood)" xsd:string
+property_value: IAO:0000116 "Everything has itself as a part. Any part of any part of a thing is itself part of that thing. Two distinct things cannot have each other as a part." xsd:string
+property_value: IAO:0000116 "Occurrents are not subject to change and so parthood between occurrents holds for all the times that the part exists. Many continuants are subject to change, so parthood between continuants will only hold at certain times, but this is difficult to specify in OWL. See https://code.google.com/p/obo-relations/wiki/ROAndTime" xsd:string
+property_value: IAO:0000116 "Parthood requires the part and the whole to have compatible classes: only an occurrent have an occurrent as part; only a process can have a process as part; only a continuant can have a continuant as part; only an independent continuant can have an independent continuant as part; only a specifically dependent continuant can have a specifically dependent continuant as part; only a generically dependent continuant can have a generically dependent continuant as part. (This list is not exhaustive.)\n\nA continuant cannot have an occurrent as part: use 'participates in'. An occurrent cannot have a continuant as part: use 'has participant'. An immaterial entity cannot have a material entity as part: use 'location of'. An independent continuant cannot have a specifically dependent continuant as part: use 'bearer of'. A specifically dependent continuant cannot have an independent continuant as part: use 'inheres in'." xsd:string
+property_value: IAO:0000118 "has_part" xsd:string
+property_value: RO:0001900 RO:0001901
+is_transitive: true
+
+[Typedef]
+id: RO:0002211
+name: regulates
+def: "process(P1) regulates process(P2) iff: P1 results in the initiation or termination of P2 OR affects the frequency of its initiation or termination OR affects the magnitude or rate of output of P2." []
+property_value: IAO:0000114 IAO:0000125
+property_value: IAO:0000116 "We use 'regulates' here to specifically imply control. However, many colloquial usages of the term correctly correspond to the weaker relation of 'causally upstream of or within' (aka influences). Consider relabeling to make things more explicit" xsd:string
+property_value: IAO:0000117 "Chris Mungall" xsd:string
+property_value: IAO:0000117 "David Hill" xsd:string
+property_value: IAO:0000117 "Tanya Berardini" xsd:string
+property_value: IAO:0000119 "GO" xsd:string
+property_value: IAO:0000119 http://purl.obolibrary.org/obo/ro/docs/causal-relations
+property_value: IAO:0000232 "Regulation precludes parthood; the regulatory process may not be within the regulated process." xsd:string
+property_value: IAO:0000589 "regulates (processual)" xsd:string
+property_value: IAO:0000600 "false" xsd:boolean
+is_transitive: true
+

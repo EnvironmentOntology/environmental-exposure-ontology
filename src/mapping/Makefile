@@ -140,9 +140,33 @@ probs.tsv:
 	rm non-exact-matches.txt
 
 MAX_E=8
-axioms.owl: slim-exposure.owl probs.tsv
+axioms.owl: slim-exposure.owl probs.tsv 
 	kboom --experimental  --splitSize 50 --max $(MAX_E) -m rpt.md -j rpt.json -n -o $@ -t probs.tsv $<
 
+axioms-boomer.owl: slim-exposure.owl probs.tsv prefixes.yaml output.ofn
+	robot convert -i output.ofn -o output.owl
+	mv output.owl $@
+
+output.ofn:
+	boomer --ptable probs.tsv --ontology slim-exposure.owl --window-count 10 --runs 20 --prefixes prefixes.yaml
+
+########################################
+# These don't work. For some reason,
+# it keeps throwing an "Error 1". E.g.:
+#   Reaping losing child 0x7fcbf1410430 PID 96143 
+#   make: *** [axioms-boomer.owl] Error 1
+#   Removing child 0x7fcbf1410430 PID 96143 from chain.
+# I think it is keeping a lock on the
+# output file *(output.ofn).
+# So, using output.ofn target
+########################################
+#axioms-boomer.owl: slim-exposure.owl probs.tsv prefixes.yaml
+#	boomer --ptable probs.tsv --ontology slim-exposure.owl --window-count 10 --runs 20 --prefixes prefixes.yaml
+#	robot convert -i output.ofn -o output.owl
+#	mv output.owl $@
+#boomer-output.ofn:
+#	boomer --ptable probs.tsv --ontology slim-exposure.owl --window-count 10 --runs 20 --prefixes prefixes.yaml
+#	mv output.ofn $@
 
 rpt.html: axioms.owl
 	pandoc rpt.md -o rpt.html
