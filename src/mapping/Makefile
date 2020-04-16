@@ -90,7 +90,7 @@ exposure-exo.obo:
 	wget --no-check-certificate $(EXO_OBO) -O $@
 
 
-exposure-ecto.obo: ../../subsets/ecto-basic.obo
+exposure-ecto.obo: ../../ecto-base.obo
 	cp $< $@
 
 
