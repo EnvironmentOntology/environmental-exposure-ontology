@@ -85,7 +85,7 @@ $(ONT)-full.owl: $(SRC) $(OTHER_SRC)
 		annotate --ontology-iri $(ONTBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY)/$@ --output $@.tmp.owl && mv $@.tmp.owl $@
 
 $(ONT)-incl-mappings.owl: ../../$(ONT).owl ../mapping/axioms.owl ../mapping/axioms-boomer.owl
-	$(ROBOT) merge -i $(ONT).owl -i ../mapping/axioms.owl -i ../mapping/axioms-boomer.owl \
+	$(ROBOT) merge -i ../../$(ONT).owl -i ../mapping/axioms.owl -i ../mapping/axioms-boomer.owl \
 		annotate --ontology-iri $(ONTBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY)/$@ --output $@.tmp.owl && mv $@.tmp.owl $@
 
 $(ONT)-incl-mappings.obo: $(ONT)-incl-mappings.owl
