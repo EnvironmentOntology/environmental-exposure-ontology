@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: ecto/releases/2019-09-20/imports/exo_import.owl
+data-version: ecto/releases/2020-02-10/imports/exo_import.owl
 ontology: ecto/imports/exo_import
 
 [Term]
@@ -8,7 +8,7 @@ name: exposure stressor
 relationship: interacts_with ExO:0000001 ! exposure receptor
 relationship: interacts_with_an_exposure_receptor_via ExO:0000002 ! exposure event
 property_value: creation:date 2010-09-21T02:43:50Z xsd:string
-property_value: http://purl.obolibrary.org/obo/def "An agent, stimulus, activity, or event that causes stress or tension on an organism and interacts with an exposure receptor during an exposure event." xsd:string {http://www.geneontology.org/formats/oboInOWL#xref="CTD:curators"}
+property_value: http://purl.obolibrary.org/obo/def "An agent, stimulus, activity, or event that causes stress or tension on an organism and interacts with an exposure receptor during an exposure event." xsd:string {xref="CTD:curators"}
 property_value: http://purl.obolibrary.org/obo/namespace "exposure_stressor" xsd:string
 
 [Term]
@@ -17,7 +17,7 @@ name: exposure receptor
 relationship: interacts_with ExO:0000000 ! exposure stressor
 property_value: created:by "cmattin" xsd:string
 property_value: creation:date 2010-09-21T02:45:36Z xsd:string
-property_value: http://purl.obolibrary.org/obo/def "An entity (e.g., a human, human population, or a human organ) that interacts with an exposure stressor during an exposure event." xsd:string {http://www.geneontology.org/formats/oboInOWL#xref="CTD:curators"}
+property_value: http://purl.obolibrary.org/obo/def "An entity (e.g., a human, human population, or a human organ) that interacts with an exposure stressor during an exposure event." xsd:string {xref="CTD:curators"}
 property_value: http://purl.obolibrary.org/obo/namespace "exposure_receptor" xsd:string
 
 [Term]
@@ -29,7 +29,7 @@ relationship: interacts_with_an_exposure_receptor_via ExO:0000000 ! exposure str
 relationship: interacts_with_an_exposure_stressor_via ExO:0000001 ! exposure receptor
 property_value: created:by "cmattin" xsd:string
 property_value: creation:date 2010-09-21T02:47:00Z xsd:string
-property_value: http://purl.obolibrary.org/obo/def "An interaction between an exposure stressor and an exposure receptor." xsd:string {http://www.geneontology.org/formats/oboInOWL#xref="CTD:curators"}
+property_value: http://purl.obolibrary.org/obo/def "An interaction between an exposure stressor and an exposure receptor." xsd:string {xref="CTD:curators"}
 property_value: http://purl.obolibrary.org/obo/namespace "exposure_event" xsd:string
 
 [Term]
@@ -38,7 +38,7 @@ name: route
 relationship: BFO:0000050 ExO:0000002 ! exposure event
 property_value: created:by "cmattin" xsd:string
 property_value: creation:date 2011-01-10T09:38:37Z xsd:string
-property_value: http://purl.obolibrary.org/obo/def "The way people or other living organisms come into contact with a stressor." xsd:string {http://www.geneontology.org/formats/oboInOWL#xref="CTD:curators"}
+property_value: http://purl.obolibrary.org/obo/def "The way people or other living organisms come into contact with a stressor." xsd:string {xref="CTD:curators"}
 property_value: http://purl.obolibrary.org/obo/namespace "exposure_event" xsd:string
 
 [Term]
@@ -47,7 +47,7 @@ name: ingestion
 is_a: ExO:0000055 ! route
 property_value: created:by "cmattin" xsd:string
 property_value: creation:date 2011-01-10T09:38:47Z xsd:string
-property_value: http://purl.obolibrary.org/obo/def "The process of taking a material (e.g., stressor) into the mouth or body." xsd:string {http://www.geneontology.org/formats/oboInOWL#xref="CTD:curators"}
+property_value: http://purl.obolibrary.org/obo/def "The process of taking a material (e.g., stressor) into the mouth or body." xsd:string {xref="CTD:curators"}
 property_value: http://purl.obolibrary.org/obo/namespace "route" xsd:string
 
 [Term]
@@ -56,7 +56,7 @@ name: inhalation
 is_a: ExO:0000055 ! route
 property_value: created:by "cmattin" xsd:string
 property_value: creation:date 2011-01-10T09:38:59Z xsd:string
-property_value: http://purl.obolibrary.org/obo/def "The process of drawing in by breathing." xsd:string {http://www.geneontology.org/formats/oboInOWL#xref="CTD:curators"}
+property_value: http://purl.obolibrary.org/obo/def "The process of drawing in by breathing." xsd:string {xref="CTD:curators"}
 property_value: http://purl.obolibrary.org/obo/namespace "route" xsd:string
 
 [Term]
@@ -65,7 +65,7 @@ name: injection
 is_a: ExO:0000055 ! route
 property_value: created:by "cmattin" xsd:string
 property_value: creation:date 2011-01-10T09:39:37Z xsd:string
-property_value: http://purl.obolibrary.org/obo/def "A method of putting liquid into the body with a syringe and a hollow needle that punctures the skin." xsd:string {http://www.geneontology.org/formats/oboInOWL#xref="GOC:hjd"}
+property_value: http://purl.obolibrary.org/obo/def "A method of putting liquid into the body with a syringe and a hollow needle that punctures the skin." xsd:string {xref="GOC:hjd"}
 property_value: http://purl.obolibrary.org/obo/namespace "route" xsd:string
 
 [Typedef]

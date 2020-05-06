@@ -3,9 +3,8 @@
 
 ## Edit this ontology!
 
-You can edit this ontology via its [INCA Form](https://environmentontology.github.io/exposure-inca-form/)
+TBD
 
-Note: github integration not yet supported, you must save files and make pull requests
 
 ## Environmental conditions, treatments and exposures ontology (ECTO)
 

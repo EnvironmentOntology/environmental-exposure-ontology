@@ -1,0 +1,9 @@
+prefix xsd: <http://www.w3.org/2001/XMLSchema#> 
+select ?id
+where
+{
+  ?id ?p ?o .
+  filter ( !isblank(?id) )
+  filter ( datatype(?o) = xsd:string )
+  filter ( contains(lcase(?o), "xposure") )
+}
