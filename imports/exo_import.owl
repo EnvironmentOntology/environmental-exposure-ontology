@@ -1,327 +1,355 @@
-<?xml version="1.0"?>
-<rdf:RDF xmlns="http://purl.obolibrary.org/obo/ecto/imports/exo_import.owl#"
-     xml:base="http://purl.obolibrary.org/obo/ecto/imports/exo_import.owl"
-     xmlns:obo="http://purl.obolibrary.org/obo/"
-     xmlns:owl="http://www.w3.org/2002/07/owl#"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:xml="http://www.w3.org/XML/1998/namespace"
-     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:oboInOWL="http://www.geneontology.org/formats/oboInOwl#http://www.geneontology.org/formats/oboInOWL#"
-     xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
-    <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/ecto/imports/exo_import.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/ecto/releases/2019-09-20/imports/exo_import.owl"/>
-    </owl:Ontology>
-    
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+	xmlns="http://purl.obolibrary.org/obo/ecto/imports/exo_import.owl#"
+	xmlns:obo="http://purl.obolibrary.org/obo/"
+	xmlns:owl="http://www.w3.org/2002/07/owl#"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:xml="http://www.w3.org/XML/1998/namespace"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:oboInOWL="http://www.geneontology.org/formats/oboInOwl#http://www.geneontology.org/formats/oboInOWL#"
+	xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/ecto/imports/exo_import.owl">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+	<owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/ecto/releases/2020-02-10/imports/exo_import.owl"/>
+</rdf:Description>
+<!--  -->
+<!--  -->
+<!-- ################################################################# -->
+<!-- # -->
+<!-- #    Annotation properties -->
+<!-- # -->
+<!-- ################################################################# -->
+<!--  -->
+<!--  -->
+<!-- http://purl.obolibrary.org/obo/created_by -->
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/created_by">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+</rdf:Description>
+<!--  -->
+<!-- http://purl.obolibrary.org/obo/creation_date -->
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/creation_date">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+</rdf:Description>
+<!--  -->
+<!-- http://purl.obolibrary.org/obo/def -->
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/def">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+</rdf:Description>
+<!--  -->
+<!-- http://purl.obolibrary.org/obo/namespace -->
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/namespace">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+</rdf:Description>
+<!--  -->
+<!-- http://www.geneontology.org/formats/oboInOwl#id -->
+
+<rdf:Description rdf:about="http://www.geneontology.org/formats/oboInOwl#id">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+</rdf:Description>
+<!--  -->
+<!-- http://www.geneontology.org/formats/oboInOwl#xref -->
+
+<rdf:Description rdf:about="http://www.geneontology.org/formats/oboInOwl#xref">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+</rdf:Description>
+<!--  -->
+<!-- http://www.w3.org/2000/01/rdf-schema#label -->
+
+<rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#label">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+</rdf:Description>
+<!--  -->
+<!--  -->
+<!--  -->
+<!-- ################################################################# -->
+<!-- # -->
+<!-- #    Object Properties -->
+<!-- # -->
+<!-- ################################################################# -->
+<!--  -->
+<!--  -->
+<!-- http://purl.obolibrary.org/obo/BFO_0000050 -->
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000050">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+</rdf:Description>
+<!--  -->
+<!-- http://purl.obolibrary.org/obo/BFO_0000051 -->
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000051">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+</rdf:Description>
+<!--  -->
+<!-- http://purl.obolibrary.org/obo/part_of -->
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/part_of">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ReflexiveProperty"/>
+	<oboInOwl:id>part:of</oboInOwl:id>
+</rdf:Description>
+<!--  -->
+<!-- http://purl.obolibrary.org/obo/exo.obo#interacts_with -->
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/exo.obo#interacts_with">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<oboInOwl:id>interacts_with</oboInOwl:id>
+	<rdfs:label>interacts_with</rdfs:label>
+</rdf:Description>
+<!--  -->
+<!-- http://purl.obolibrary.org/obo/exo.obo#interacts_with_an_exposure_receptor_via -->
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/exo.obo#interacts_with_an_exposure_receptor_via">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<oboInOwl:id>interacts_with_an_exposure_receptor_via</oboInOwl:id>
+	<rdfs:label>interacts_with_an_exposure_receptor_via</rdfs:label>
+</rdf:Description>
+<!--  -->
+<!-- http://purl.obolibrary.org/obo/exo.obo#interacts_with_an_exposure_stressor_via -->
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/exo.obo#interacts_with_an_exposure_stressor_via">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<oboInOwl:id>interacts_with_an_exposure_stressor_via</oboInOwl:id>
+	<rdfs:label>interacts_with_an_exposure stressor_via</rdfs:label>
+</rdf:Description>
+<!--  -->
+<!--  -->
+<!--  -->
+<!-- ################################################################# -->
+<!-- # -->
+<!-- #    Classes -->
+<!-- # -->
+<!-- ################################################################# -->
+<!--  -->
+<!--  -->
+<!-- http://purl.obolibrary.org/obo/ExO_0000000 -->
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/ExO_0000000">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:nodeID="genid1"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid1">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/exo.obo#interacts_with"/>
+	<owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ExO_0000001"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/ExO_0000000">
+	<rdfs:subClassOf rdf:nodeID="genid2"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid2">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/exo.obo#interacts_with_an_exposure_receptor_via"/>
+	<owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ExO_0000002"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/ExO_0000000">
+	<obo:creation_date>2010-09-21T02:43:50Z</obo:creation_date>
+	<obo:def>An agent, stimulus, activity, or event that causes stress or tension on an organism and interacts with an exposure receptor during an exposure event.</obo:def>
+	<obo:namespace>exposure_stressor</obo:namespace>
+	<oboInOwl:id>ExO:0000000</oboInOwl:id>
+	<rdfs:label>exposure stressor</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid3">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Axiom"/>
+	<owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ExO_0000000"/>
+	<owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/def"/>
+	<owl:annotatedTarget>An agent, stimulus, activity, or event that causes stress or tension on an organism and interacts with an exposure receptor during an exposure event.</owl:annotatedTarget>
+	<oboInOwl:xref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CTD:curators</oboInOwl:xref>
+</rdf:Description>
+<!--  -->
+<!-- http://purl.obolibrary.org/obo/ExO_0000001 -->
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/ExO_0000001">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:nodeID="genid4"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid4">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/exo.obo#interacts_with"/>
+	<owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ExO_0000000"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/ExO_0000001">
+	<obo:created_by>cmattin</obo:created_by>
+	<obo:creation_date>2010-09-21T02:45:36Z</obo:creation_date>
+	<obo:def>An entity (e.g., a human, human population, or a human organ) that interacts with an exposure stressor during an exposure event.</obo:def>
+	<obo:namespace>exposure_receptor</obo:namespace>
+	<oboInOwl:id>ExO:0000001</oboInOwl:id>
+	<rdfs:label>exposure receptor</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid5">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Axiom"/>
+	<owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ExO_0000001"/>
+	<owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/def"/>
+	<owl:annotatedTarget>An entity (e.g., a human, human population, or a human organ) that interacts with an exposure stressor during an exposure event.</owl:annotatedTarget>
+	<oboInOwl:xref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CTD:curators</oboInOwl:xref>
+</rdf:Description>
+<!--  -->
+<!-- http://purl.obolibrary.org/obo/ExO_0000002 -->
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/ExO_0000002">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:nodeID="genid6"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid6">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+	<owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ExO_0000000"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/ExO_0000002">
+	<rdfs:subClassOf rdf:nodeID="genid7"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid7">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+	<owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ExO_0000001"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/ExO_0000002">
+	<rdfs:subClassOf rdf:nodeID="genid8"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid8">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/exo.obo#interacts_with_an_exposure_receptor_via"/>
+	<owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ExO_0000000"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/ExO_0000002">
+	<rdfs:subClassOf rdf:nodeID="genid9"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid9">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/exo.obo#interacts_with_an_exposure_stressor_via"/>
+	<owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ExO_0000001"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/ExO_0000002">
+	<obo:created_by>cmattin</obo:created_by>
+	<obo:creation_date>2010-09-21T02:47:00Z</obo:creation_date>
+	<obo:def>An interaction between an exposure stressor and an exposure receptor.</obo:def>
+	<obo:namespace>exposure_event</obo:namespace>
+	<oboInOwl:id>ExO:0000002</oboInOwl:id>
+	<rdfs:label>exposure event</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid10">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Axiom"/>
+	<owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ExO_0000002"/>
+	<owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/def"/>
+	<owl:annotatedTarget>An interaction between an exposure stressor and an exposure receptor.</owl:annotatedTarget>
+	<oboInOwl:xref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CTD:curators</oboInOwl:xref>
+</rdf:Description>
+<!--  -->
+<!-- http://purl.obolibrary.org/obo/ExO_0000055 -->
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/ExO_0000055">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:nodeID="genid11"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid11">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+	<owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ExO_0000002"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/ExO_0000055">
+	<obo:created_by>cmattin</obo:created_by>
+	<obo:creation_date>2011-01-10T09:38:37Z</obo:creation_date>
+	<obo:def>The way people or other living organisms come into contact with a stressor.</obo:def>
+	<obo:namespace>exposure_event</obo:namespace>
+	<oboInOwl:id>ExO:0000055</oboInOwl:id>
+	<rdfs:label>route</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid12">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Axiom"/>
+	<owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ExO_0000055"/>
+	<owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/def"/>
+	<owl:annotatedTarget>The way people or other living organisms come into contact with a stressor.</owl:annotatedTarget>
+	<oboInOwl:xref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CTD:curators</oboInOwl:xref>
+</rdf:Description>
+<!--  -->
+<!-- http://purl.obolibrary.org/obo/ExO_0000056 -->
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/ExO_0000056">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ExO_0000055"/>
+	<obo:created_by>cmattin</obo:created_by>
+	<obo:creation_date>2011-01-10T09:38:47Z</obo:creation_date>
+	<obo:def>The process of taking a material (e.g., stressor) into the mouth or body.</obo:def>
+	<obo:namespace>route</obo:namespace>
+	<oboInOwl:id>ExO:0000056</oboInOwl:id>
+	<rdfs:label>ingestion</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid13">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Axiom"/>
+	<owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ExO_0000056"/>
+	<owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/def"/>
+	<owl:annotatedTarget>The process of taking a material (e.g., stressor) into the mouth or body.</owl:annotatedTarget>
+	<oboInOwl:xref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CTD:curators</oboInOwl:xref>
+</rdf:Description>
+<!--  -->
+<!-- http://purl.obolibrary.org/obo/ExO_0000057 -->
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/ExO_0000057">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ExO_0000055"/>
+	<obo:created_by>cmattin</obo:created_by>
+	<obo:creation_date>2011-01-10T09:38:59Z</obo:creation_date>
+	<obo:def>The process of drawing in by breathing.</obo:def>
+	<obo:namespace>route</obo:namespace>
+	<oboInOwl:id>ExO:0000057</oboInOwl:id>
+	<rdfs:label>inhalation</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid14">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Axiom"/>
+	<owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ExO_0000057"/>
+	<owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/def"/>
+	<owl:annotatedTarget>The process of drawing in by breathing.</owl:annotatedTarget>
+	<oboInOwl:xref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CTD:curators</oboInOwl:xref>
+</rdf:Description>
+<!--  -->
+<!-- http://purl.obolibrary.org/obo/ExO_0000060 -->
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/ExO_0000060">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ExO_0000055"/>
+	<obo:created_by>cmattin</obo:created_by>
+	<obo:creation_date>2011-01-10T09:39:37Z</obo:creation_date>
+	<obo:def>A method of putting liquid into the body with a syringe and a hollow needle that punctures the skin.</obo:def>
+	<obo:namespace>route</obo:namespace>
+	<oboInOwl:id>ExO:0000060</oboInOwl:id>
+	<rdfs:label>injection</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid15">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Axiom"/>
+	<owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ExO_0000060"/>
+	<owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/def"/>
+	<owl:annotatedTarget>A method of putting liquid into the body with a syringe and a hollow needle that punctures the skin.</owl:annotatedTarget>
+	<oboInOwl:xref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:hjd</oboInOwl:xref>
+</rdf:Description>
+<!--  -->
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
 
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Annotation properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/created_by -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/created_by"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/creation_date -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/creation_date"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/def -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/def"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/namespace -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/namespace"/>
-    
-
-
-    <!-- http://www.geneontology.org/formats/oboInOwl#id -->
-
-    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#id"/>
-    
-
-
-    <!-- http://www.geneontology.org/formats/oboInOwl#http://www.geneontology.org/formats/oboInOWL#xref -->
-
-    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#http://www.geneontology.org/formats/oboInOWL#xref"/>
-    
-
-
-    <!-- http://www.w3.org/2000/01/rdf-schema#label -->
-
-    <owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#label"/>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Object Properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/BFO_0000050 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000050"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/BFO_0000051 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000051"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/part_of -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/part_of">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ReflexiveProperty"/>
-        <oboInOwl:id>part:of</oboInOwl:id>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/exo.obo#interacts_with -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/exo.obo#interacts_with">
-        <oboInOwl:id>interacts_with</oboInOwl:id>
-        <rdfs:label>interacts_with</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/exo.obo#interacts_with_an_exposure_receptor_via -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/exo.obo#interacts_with_an_exposure_receptor_via">
-        <oboInOwl:id>interacts_with_an_exposure_receptor_via</oboInOwl:id>
-        <rdfs:label>interacts_with_an_exposure_receptor_via</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/exo.obo#interacts_with_an_exposure_stressor_via -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/exo.obo#interacts_with_an_exposure_stressor_via">
-        <oboInOwl:id>interacts_with_an_exposure_stressor_via</oboInOwl:id>
-        <rdfs:label>interacts_with_an_exposure stressor_via</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Classes
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/ExO_0000000 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ExO_0000000">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/exo.obo#interacts_with"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ExO_0000001"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/exo.obo#interacts_with_an_exposure_receptor_via"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ExO_0000002"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <obo:creation_date>2010-09-21T02:43:50Z</obo:creation_date>
-        <obo:def>An agent, stimulus, activity, or event that causes stress or tension on an organism and interacts with an exposure receptor during an exposure event.</obo:def>
-        <obo:namespace>exposure_stressor</obo:namespace>
-        <oboInOwl:id>ExO:0000000</oboInOwl:id>
-        <rdfs:label>exposure stressor</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ExO_0000000"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/def"/>
-        <owl:annotatedTarget>An agent, stimulus, activity, or event that causes stress or tension on an organism and interacts with an exposure receptor during an exposure event.</owl:annotatedTarget>
-        <oboInOWL:xref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CTD:curators</oboInOWL:xref>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/ExO_0000001 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ExO_0000001">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/exo.obo#interacts_with"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ExO_0000000"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <obo:created_by>cmattin</obo:created_by>
-        <obo:creation_date>2010-09-21T02:45:36Z</obo:creation_date>
-        <obo:def>An entity (e.g., a human, human population, or a human organ) that interacts with an exposure stressor during an exposure event.</obo:def>
-        <obo:namespace>exposure_receptor</obo:namespace>
-        <oboInOwl:id>ExO:0000001</oboInOwl:id>
-        <rdfs:label>exposure receptor</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ExO_0000001"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/def"/>
-        <owl:annotatedTarget>An entity (e.g., a human, human population, or a human organ) that interacts with an exposure stressor during an exposure event.</owl:annotatedTarget>
-        <oboInOWL:xref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CTD:curators</oboInOWL:xref>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/ExO_0000002 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ExO_0000002">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ExO_0000000"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ExO_0000001"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/exo.obo#interacts_with_an_exposure_receptor_via"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ExO_0000000"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/exo.obo#interacts_with_an_exposure_stressor_via"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ExO_0000001"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <obo:created_by>cmattin</obo:created_by>
-        <obo:creation_date>2010-09-21T02:47:00Z</obo:creation_date>
-        <obo:def>An interaction between an exposure stressor and an exposure receptor.</obo:def>
-        <obo:namespace>exposure_event</obo:namespace>
-        <oboInOwl:id>ExO:0000002</oboInOwl:id>
-        <rdfs:label>exposure event</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ExO_0000002"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/def"/>
-        <owl:annotatedTarget>An interaction between an exposure stressor and an exposure receptor.</owl:annotatedTarget>
-        <oboInOWL:xref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CTD:curators</oboInOWL:xref>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/ExO_0000055 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ExO_0000055">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ExO_0000002"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <obo:created_by>cmattin</obo:created_by>
-        <obo:creation_date>2011-01-10T09:38:37Z</obo:creation_date>
-        <obo:def>The way people or other living organisms come into contact with a stressor.</obo:def>
-        <obo:namespace>exposure_event</obo:namespace>
-        <oboInOwl:id>ExO:0000055</oboInOwl:id>
-        <rdfs:label>route</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ExO_0000055"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/def"/>
-        <owl:annotatedTarget>The way people or other living organisms come into contact with a stressor.</owl:annotatedTarget>
-        <oboInOWL:xref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CTD:curators</oboInOWL:xref>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/ExO_0000056 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ExO_0000056">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ExO_0000055"/>
-        <obo:created_by>cmattin</obo:created_by>
-        <obo:creation_date>2011-01-10T09:38:47Z</obo:creation_date>
-        <obo:def>The process of taking a material (e.g., stressor) into the mouth or body.</obo:def>
-        <obo:namespace>route</obo:namespace>
-        <oboInOwl:id>ExO:0000056</oboInOwl:id>
-        <rdfs:label>ingestion</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ExO_0000056"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/def"/>
-        <owl:annotatedTarget>The process of taking a material (e.g., stressor) into the mouth or body.</owl:annotatedTarget>
-        <oboInOWL:xref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CTD:curators</oboInOWL:xref>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/ExO_0000057 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ExO_0000057">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ExO_0000055"/>
-        <obo:created_by>cmattin</obo:created_by>
-        <obo:creation_date>2011-01-10T09:38:59Z</obo:creation_date>
-        <obo:def>The process of drawing in by breathing.</obo:def>
-        <obo:namespace>route</obo:namespace>
-        <oboInOwl:id>ExO:0000057</oboInOwl:id>
-        <rdfs:label>inhalation</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ExO_0000057"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/def"/>
-        <owl:annotatedTarget>The process of drawing in by breathing.</owl:annotatedTarget>
-        <oboInOWL:xref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CTD:curators</oboInOWL:xref>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/ExO_0000060 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ExO_0000060">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ExO_0000055"/>
-        <obo:created_by>cmattin</obo:created_by>
-        <obo:creation_date>2011-01-10T09:39:37Z</obo:creation_date>
-        <obo:def>A method of putting liquid into the body with a syringe and a hollow needle that punctures the skin.</obo:def>
-        <obo:namespace>route</obo:namespace>
-        <oboInOwl:id>ExO:0000060</oboInOwl:id>
-        <rdfs:label>injection</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ExO_0000060"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/def"/>
-        <owl:annotatedTarget>A method of putting liquid into the body with a syringe and a hollow needle that punctures the skin.</owl:annotatedTarget>
-        <oboInOWL:xref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:hjd</oboInOWL:xref>
-    </owl:Axiom>
 </rdf:RDF>
-
-
-
-<!-- Generated by the OWL API (version 4.5.6) https://github.com/owlcs/owlapi -->
-
