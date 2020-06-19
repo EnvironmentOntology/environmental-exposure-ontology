@@ -1,0 +1,56 @@
+pattern_name: exposure_to_change_medium
+pattern_iri: http://purl.obolibrary.org/obo/ecto/patterns/exposure_to_change_medium.yaml
+
+description: "exposures to a change in levels in a specified medium"
+
+contributors:
+  - https://orcid.org/0000-0002-2908-3327
+
+classes:
+  exposure event: ExO:0000002
+  attribute: PATO:0001018
+  degree: PATO:0000069
+  medium: ENVO:00010483
+
+relations:
+  part of: BFO:0000050
+  has exposure stimulus: RO:0002309
+  inheres in: RO:0000052
+  has exposure medium: RO:0002243
+
+vars:
+  degree: "'degree'"
+  attribute: "'attribute'"
+  medium: "'medium'"
+
+name:
+  text: "exposure to %s of %s in %s"
+  vars:
+    - degree
+    - attribute
+    - medium
+
+annotationProperties:
+  exact_synonym: oio:hasExactSynonym
+
+annotations:
+  - annotationProperty: exact_synonym
+    text: "%s exposure to %s in %s"
+    vars:
+      - degree
+      - attribute
+      - medium
+
+def:
+  text: "A exposure event involving the interaction of an exposure receptor to %s of %s in %s."
+  vars:
+    - degree
+    - attribute
+    - medium
+
+equivalentTo:
+  text: "'exposure event' and 'has exposure stimulus' some (%s and 'inheres in' some %s) and ('has exposure medium' some %s)"
+  vars:
+    - degree
+    - attribute
+    - medium
