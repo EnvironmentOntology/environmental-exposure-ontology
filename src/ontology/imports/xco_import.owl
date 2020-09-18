@@ -9,7 +9,7 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/ecto/imports/xco_import.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/ecto/releases/2020-02-11/imports/xco_import.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/ecto/releases/2020-09-18/imports/xco_import.owl"/>
     </owl:Ontology>
     
 
@@ -203,6 +203,36 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/CHEBI_26895 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_26895">
+        <obo:IAO_0000231 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000227"/>
+        <obo:IAO_0100001 rdf:resource="http://purl.obolibrary.org/obo/XCO_0000672"/>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_35522 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_35522">
+        <obo:IAO_0000231 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000227"/>
+        <obo:IAO_0100001 rdf:resource="http://purl.obolibrary.org/obo/XCO_0000665"/>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_35569 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_35569">
+        <obo:IAO_0000231 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000227"/>
+        <obo:IAO_0100001 rdf:resource="http://purl.obolibrary.org/obo/XCO_0000673"/>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/XCO_0000000 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/XCO_0000000">
@@ -217,6 +247,44 @@
         <owl:annotatedTarget>A state of being, an external or environmental factor or a treatment observed or administered prior to or concurrent with an investigative procedure such as an assessment of a morphological or physiological state or property in a single individual or sample or in a group of individuals or samples, especially a state, factor or treatment which has the potential to influence the outcome of such an assessment.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Multiple_Dictionaries:http://www.thefreedictionary.com/</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMID:22654893</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/XCO_0000001 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/XCO_0000001">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/XCO_0000000"/>
+        <obo:IAO_0000115>The state of being involved in some action, either physical or mental.</obo:IAO_0000115>
+        <oboInOwl:hasOBONamespace>experimental_condition_ontology</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>XCO:0000001</oboInOwl:id>
+        <rdfs:label>activity</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/XCO_0000001"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>The state of being involved in some action, either physical or mental.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dorland:Dorlands_Illustrated_Medical_Dictionary--31st_Ed</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN:978-1416049982</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/XCO_0000002 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/XCO_0000002">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/XCO_0000059"/>
+        <obo:IAO_0000115>A state in which the organism is not exhibiting any physical exertion.</obo:IAO_0000115>
+        <oboInOwl:hasOBONamespace>experimental_condition_ontology</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>XCO:0000002</oboInOwl:id>
+        <rdfs:label>resting</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/XCO_0000002"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A state in which the organism is not exhibiting any physical exertion.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dorland:Dorlands_Illustrated_Medical_Dictionary--31st_Ed</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN:978-1416049982</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -253,6 +321,27 @@
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Any insertion of a tissue, material or device into the body using a procedure involving incision into the body.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Collins:Collins_Online_English_Dictionary</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dorland:Dorlands_Illustrated_Medical_Dictionary--31st_Ed</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN:978-1416049982</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/XCO_0000059 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/XCO_0000059">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/XCO_0000001"/>
+        <obo:IAO_0000115>Action in which a part of the body or whole body is involved in movement.</obo:IAO_0000115>
+        <oboInOwl:created_by>mshimoyama</oboInOwl:created_by>
+        <oboInOwl:creation_date>2009-12-17T01:50:15Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>experimental_condition_ontology</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>XCO:0000059</oboInOwl:id>
+        <rdfs:label>physical activity</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/XCO_0000059"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Action in which a part of the body or whole body is involved in movement.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dorland:Dorlands_Illustrated_Medical_Dictionary--31st_Ed</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN:978-1416049982</oboInOwl:hasDbXref>
     </owl:Axiom>

@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: ecto/releases/2020-02-11/imports/xco_import.owl
+data-version: ecto/releases/2020-09-18/imports/xco_import.owl
 ontology: ecto/imports/xco_import
 
 [Term]
@@ -7,6 +7,20 @@ id: XCO:0000000
 name: experimental condition
 namespace: experimental_condition_ontology
 def: "A state of being, an external or environmental factor or a treatment observed or administered prior to or concurrent with an investigative procedure such as an assessment of a morphological or physiological state or property in a single individual or sample or in a group of individuals or samples, especially a state, factor or treatment which has the potential to influence the outcome of such an assessment." [Multiple_Dictionaries:http\://www.thefreedictionary.com/, PMID:22654893]
+
+[Term]
+id: XCO:0000001
+name: activity
+namespace: experimental_condition_ontology
+def: "The state of being involved in some action, either physical or mental." [Dorland:Dorlands_Illustrated_Medical_Dictionary--31st_Ed, ISBN:978-1416049982]
+is_a: XCO:0000000 ! experimental condition
+
+[Term]
+id: XCO:0000002
+name: resting
+namespace: experimental_condition_ontology
+def: "A state in which the organism is not exhibiting any physical exertion." [Dorland:Dorlands_Illustrated_Medical_Dictionary--31st_Ed, ISBN:978-1416049982]
+is_a: XCO:0000059 ! physical activity
 
 [Term]
 id: XCO:0000026
@@ -21,6 +35,15 @@ name: surgical implantation
 namespace: experimental_condition_ontology
 def: "Any insertion of a tissue, material or device into the body using a procedure involving incision into the body." [Collins:Collins_Online_English_Dictionary, Dorland:Dorlands_Illustrated_Medical_Dictionary--31st_Ed, ISBN:978-1416049982]
 is_a: XCO:0000165 ! surgical manipulation
+
+[Term]
+id: XCO:0000059
+name: physical activity
+namespace: experimental_condition_ontology
+def: "Action in which a part of the body or whole body is involved in movement." [Dorland:Dorlands_Illustrated_Medical_Dictionary--31st_Ed, ISBN:978-1416049982]
+is_a: XCO:0000001 ! activity
+created_by: mshimoyama
+creation_date: 2009-12-17T01:50:15Z
 
 [Term]
 id: XCO:0000165
@@ -50,6 +73,18 @@ xref: MESH:D019771
 is_a: XCO:0000373 ! surgical denervation
 created_by: JSmith
 creation_date: 2014-01-09T14:56:20Z
+
+[Term]
+id: XCO:0000665
+alt_id: CHEBI:35522
+
+[Term]
+id: XCO:0000672
+alt_id: CHEBI:26895
+
+[Term]
+id: XCO:0000673
+alt_id: CHEBI:35569
 
 [Typedef]
 id: has_component
