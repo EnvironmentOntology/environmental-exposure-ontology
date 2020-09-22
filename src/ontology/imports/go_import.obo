@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: ecto/releases/2020-03-13/imports/go_import.owl
+data-version: ecto/releases/2020-09-18/imports/go_import.owl
 subsetdef: gocheck_do_not_annotate "Term not to be used for direct annotation"
 subsetdef: gocheck_do_not_manually_annotate "Term not to be used for direct manual annotation"
 subsetdef: goslim_agr "AGR slim"
@@ -23,7 +23,7 @@ name: molecular_function
 namespace: molecular_function
 alt_id: GO:0005554
 def: "A molecular process that can be carried out by the action of a single macromolecular machine, usually via direct physical interactions with other molecular entities. Function in this sense denotes an action, or activity, that a gene product (or a complex) performs. These actions are described from two distinct but related perspectives: (1) biochemical activity, and (2) role as a component in a larger system/process." [GOC:pdt]
-comment: Note that, in addition to forming the root of the molecular function ontology, this term is recommended for use for the annotation of gene products whose molecular function is unknown. When this term is used for annotation, it indicates that no information was available about the molecular function of the gene product annotated as of the date the annotation was made; the evidence code "no data" (ND), is used to indicate this. Despite its name, this is not a type of 'function' in the sense typically defined by upper ontologies such as Basic Formal Ontology (BFO). It is instead a BFO:process carried out by a single gene product or complex.
+comment: Note that, in addition to forming the root of the molecular function ontology, this term is recommended for use for the annotation of gene products whose molecular function is unknown. When this term is used for annotation, it indicates that no information was available about the molecular function of the gene product annotated as of the date the annotation was made; the evidence code 'no data' (ND), is used to indicate this. Despite its name, this is not a type of 'function' in the sense typically defined by upper ontologies such as Basic Formal Ontology (BFO). It is instead a BFO:process carried out by a single gene product or complex.
 subset: goslim_aspergillus
 subset: goslim_candida
 subset: goslim_chembl
@@ -94,10 +94,6 @@ subset: goslim_pir
 subset: goslim_plant
 synonym: "glycoprotein binding" NARROW []
 synonym: "protein amino acid binding" EXACT []
-xref: MIPS_funcat:16.01
-xref: MIPS_funcat:18.01.07
-xref: Reactome:R-HSA-170835 "An anchoring protein, ZFYVE9 (SARA), recruits SMAD2/3"
-xref: Reactome:R-HSA-170846 "TGFBR2 recruits TGFBR1"
 is_a: GO:0005488 ! binding
 
 [Term]
@@ -106,7 +102,7 @@ name: cellular_component
 namespace: cellular_component
 alt_id: GO:0008372
 def: "A location, relative to cellular compartments and structures, occupied by a macromolecular machine when it carries out a molecular function. There are two ways in which the gene ontology describes locations of gene products: (1) relative to cellular structures (e.g., cytoplasmic side of plasma membrane) or compartments (e.g., mitochondrion), and (2) the stable macromolecular complexes of which they are parts (e.g., the ribosome)." [GOC:pdt, NIF_Subcellular:sao1337158144]
-comment: Note that, in addition to forming the root of the cellular component ontology, this term is recommended for use for the annotation of gene products whose cellular component is unknown. When this term is used for annotation, it indicates that no information was available about the cellular component of the gene product annotated as of the date the annotation was made; the evidence code "no data" (ND), is used to indicate this.
+comment: Note that, in addition to forming the root of the cellular component ontology, this term is recommended for use for the annotation of gene products whose cellular component is unknown. When this term is used for annotation, it indicates that no information was available about the cellular component of the gene product annotated as of the date the annotation was made; the evidence code 'no data' (ND), is used to indicate this.
 subset: goslim_aspergillus
 subset: goslim_candida
 subset: goslim_chembl
@@ -156,7 +152,6 @@ subset: goslim_plant
 subset: goslim_yeast
 synonym: "cell nucleus" EXACT []
 synonym: "horsetail nucleus" NARROW [GOC:al, GOC:mah, GOC:vw, PMID:15030757]
-xref: MIPS_funcat:70.10
 xref: NIF_Subcellular:sao1702920020
 xref: Wikipedia:Cell_nucleus
 is_a: GO:0043231 ! intracellular membrane-bounded organelle
@@ -177,7 +172,6 @@ namespace: biological_process
 def: "The chemical reactions and pathways involving the phosphate group, the anion or salt of any phosphoric acid." [GOC:ai]
 synonym: "phosphate metabolic process" RELATED []
 synonym: "phosphate metabolism" EXACT []
-xref: MIPS_funcat:01.04
 is_a: GO:0006793 ! phosphorus metabolic process
 
 [Term]
@@ -207,7 +201,6 @@ synonym: "signaling cascade" NARROW []
 synonym: "signaling pathway" RELATED []
 synonym: "signalling cascade" NARROW []
 synonym: "signalling pathway" RELATED [GOC:mah]
-xref: MIPS_funcat:30
 xref: Wikipedia:Signal_transduction
 is_a: GO:0009987 ! cellular process
 is_a: GO:0050794 ! regulation of cellular process
@@ -233,7 +226,7 @@ synonym: "behavioural response to stimulus" EXACT []
 synonym: "single-organism behavior" RELATED []
 xref: Wikipedia:Behavior
 is_a: GO:0008150 ! biological_process
-created_by: janelomax
+created_by: jl
 creation_date: 2012-09-20T14:06:08Z
 
 [Term]
@@ -244,7 +237,7 @@ alt_id: GO:0000004
 alt_id: GO:0007582
 alt_id: GO:0044699
 def: "A biological process represents a specific objective that the organism is genetically programmed to achieve. Biological processes are often described by their outcome or ending state, e.g., the biological process of cell division results in the creation of two daughter cells (a divided cell) from a single parent cell. A biological process is accomplished by a particular set of molecular functions carried out by specific gene products (or macromolecular complexes), often in a highly regulated manner and in a particular temporal sequence." [GOC:pdt]
-comment: Note that, in addition to forming the root of the biological process ontology, this term is recommended for use for the annotation of gene products whose biological process is unknown. When this term is used for annotation, it indicates that no information was available about the biological process of the gene product annotated as of the date the annotation was made; the evidence code "no data" (ND), is used to indicate this.
+comment: Note that, in addition to forming the root of the biological process ontology, this term is recommended for use for the annotation of gene products whose biological process is unknown. When this term is used for annotation, it indicates that no information was available about the biological process of the gene product annotated as of the date the annotation was made; the evidence code 'no data' (ND), is used to indicate this.
 subset: goslim_aspergillus
 subset: goslim_candida
 subset: goslim_chembl
@@ -259,7 +252,7 @@ synonym: "physiological process" EXACT []
 synonym: "single organism process" RELATED []
 synonym: "single-organism process" RELATED []
 xref: Wikipedia:Biological_process
-created_by: janelomax
+created_by: jl
 creation_date: 2012-09-19T15:05:24Z
 
 [Term]
@@ -280,10 +273,9 @@ synonym: "metabolism" EXACT []
 synonym: "metabolism resulting in cell growth" NARROW []
 synonym: "multicellular organism metabolic process" NARROW []
 synonym: "single-organism metabolic process" RELATED []
-xref: MIPS_funcat:01
 xref: Wikipedia:Metabolism
 is_a: GO:0008150 ! biological_process
-created_by: janelomax
+created_by: jl
 creation_date: 2012-10-17T15:46:40Z
 
 [Term]
@@ -398,7 +390,7 @@ synonym: "cell physiology" EXACT []
 synonym: "cellular physiological process" EXACT []
 synonym: "single-organism cellular process" RELATED []
 is_a: GO:0008150 ! biological_process
-created_by: janelomax
+created_by: jl
 creation_date: 2012-12-11T16:56:55Z
 
 [Term]
@@ -512,7 +504,6 @@ xref: EC:2
 xref: Reactome:R-HSA-1483089 "PE is converted to PS by PTDSS2"
 xref: Reactome:R-HSA-1483186 "PC is converted to PS by PTDSS1"
 xref: Reactome:R-HSA-5668414 "TRAF2 ubiquitinates cIAP1,2 in cIAP1,2:TRAF1:TRAF2:TRAF3:NIK"
-xref: Reactome:R-HSA-6787403 "GTPBP3 and MTO1 transform uridine-34 yielding 5-taurinomethyluridine-34 in tRNA"
 xref: Reactome:R-HSA-8868783 "TSR3 transfers aminocarboxypropyl group from S-adenosylmethionine to N(1)-methylpseudouridine-1248 of 18SE rRNA yielding N(1)-methyl-N(3)-aminocarboxypropylpseudouridine-1248"
 is_a: GO:0003824 ! catalytic activity
 
@@ -584,7 +575,7 @@ synonym: "signalling" EXACT []
 synonym: "signalling process" RELATED [GOC:mah]
 synonym: "single organism signaling" RELATED []
 is_a: GO:0008150 ! biological_process
-created_by: janelomax
+created_by: jl
 creation_date: 2010-02-16T09:30:50Z
 
 [Term]
@@ -620,7 +611,6 @@ id: GO:0030545
 name: receptor regulator activity
 namespace: molecular_function
 def: "The function of interacting (directly or indirectly) with receptors such that the proportion of receptors in the active form is changed." [GOC:ceb]
-xref: MIPS_funcat:18.02.07
 is_a: GO:0098772 ! molecular function regulator
 
 [Term]
@@ -765,7 +755,7 @@ is_a: GO:0007165 ! signal transduction
 intersection_of: GO:0007165 ! signal transduction
 intersection_of: occurs_in GO:0005622 ! intracellular
 relationship: occurs_in GO:0005622 ! intracellular
-created_by: rfoulger
+created_by: bf
 creation_date: 2010-05-14T01:14:37Z
 
 [Term]
@@ -786,7 +776,7 @@ subset: goslim_plant
 synonym: "receptor activity" BROAD []
 synonym: "receptor activity involved in signal transduction" EXACT [GOC:bf]
 is_a: GO:0060089 ! molecular transducer activity
-created_by: rfoulger
+created_by: bf
 creation_date: 2011-08-01T02:45:27Z
 
 [Term]
@@ -797,7 +787,6 @@ def: "Self-propelled movement of a cell or organism from one location to another
 subset: goslim_chembl
 subset: goslim_generic
 subset: goslim_pir
-xref: MIPS_funcat:02.45.11
 is_a: GO:0008150 ! biological_process
 property_value: RO:0002161 NCBITaxon:451864
 
@@ -902,7 +891,6 @@ synonym: "up-regulation of enzyme activity" EXACT []
 synonym: "up-regulation of metalloenzyme activity" NARROW []
 synonym: "upregulation of enzyme activity" EXACT []
 synonym: "upregulation of metalloenzyme activity" NARROW []
-xref: MIPS_funcat:18.02.01.01
 is_a: GO:0044093 ! positive regulation of molecular function
 is_a: GO:0050790 ! regulation of catalytic activity
 intersection_of: GO:0008150 ! biological_process
@@ -1003,7 +991,7 @@ is_a: GO:0065009 ! regulation of molecular function
 intersection_of: GO:0008150 ! biological_process
 intersection_of: negatively_regulates GO:0003674 ! molecular_function
 relationship: negatively_regulates GO:0003674 ! molecular_function
-created_by: jane
+created_by: jl
 creation_date: 2009-04-21T04:07:27Z
 
 [Term]
@@ -1015,7 +1003,7 @@ is_a: GO:0065009 ! regulation of molecular function
 intersection_of: GO:0008150 ! biological_process
 intersection_of: positively_regulates GO:0003674 ! molecular_function
 relationship: positively_regulates GO:0003674 ! molecular_function
-created_by: jane
+created_by: jl
 creation_date: 2009-04-21T04:11:06Z
 
 [Term]
@@ -1081,7 +1069,6 @@ name: receptor ligand activity
 namespace: molecular_function
 alt_id: GO:0071884
 def: "The activity of a gene product that interacts with a receptor to effect a change in the activity of the receptor. Ligands may be produced by the same, or different, cell that expresses the receptor. Ligands may diffuse extracellularly from their point of origin to the receiving cell, or remain attached to an adjacent cell surface (e.g. Notch ligands)." [GOC:kv, GOC:molecular_function_refactoring, GOC:pdt]
-comment: Definition discussed in https://github.com/geneontology/go-ontology/issues/14220
 subset: goslim_chembl
 subset: goslim_drosophila
 synonym: "receptor agonist activity" BROAD [GOC:molecular_function_refactoring]
@@ -1091,7 +1078,8 @@ synonym: "vitamin D receptor activator activity" NARROW []
 is_a: GO:0005102 ! signaling receptor binding
 is_a: GO:0030546 ! signaling receptor activator activity
 relationship: part_of GO:0007165 ! signal transduction
-created_by: midori
+property_value: IAO:0000233 https://github.com/geneontology/go-ontology/issues/14220 xsd:anyURI
+created_by: mah
 creation_date: 2010-09-13T04:51:59Z
 
 [Term]
@@ -1267,7 +1255,6 @@ def: "Any process that modulates the activity of an enzyme." [GOC:ai, GOC:ebc, G
 subset: goslim_chembl
 synonym: "regulation of enzyme activity" EXACT []
 synonym: "regulation of metalloenzyme activity" NARROW []
-xref: MIPS_funcat:18.02.01
 is_a: GO:0065009 ! regulation of molecular function
 intersection_of: GO:0008150 ! biological_process
 intersection_of: regulates GO:0003824 ! catalytic activity
@@ -1309,7 +1296,6 @@ subset: goslim_flybase_ribbon
 subset: goslim_mouse
 subset: goslim_pir
 synonym: "physiological response to stimulus" EXACT []
-xref: MIPS_funcat:34.11
 is_a: GO:0008150 ! biological_process
 
 [Term]
@@ -1652,7 +1638,7 @@ is_a: GO:0044092 ! negative regulation of molecular function
 intersection_of: GO:0008150 ! biological_process
 intersection_of: negatively_regulates GO:0038023 ! signaling receptor activity
 relationship: negatively_regulates GO:0038023 ! signaling receptor activity
-created_by: rfoulger
+created_by: bf
 creation_date: 2010-12-02T09:28:47Z
 
 [Term]
@@ -1665,7 +1651,7 @@ is_a: GO:0044093 ! positive regulation of molecular function
 intersection_of: GO:0008150 ! biological_process
 intersection_of: positively_regulates GO:0038023 ! signaling receptor activity
 relationship: positively_regulates GO:0038023 ! signaling receptor activity
-created_by: rfoulger
+created_by: bf
 creation_date: 2010-12-02T09:28:50Z
 
 [Typedef]
