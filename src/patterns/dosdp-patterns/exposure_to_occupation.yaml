@@ -1,4 +1,4 @@
-pattern_name: exposure_to_behavior
+pattern_name: exposure_to_occupation
 pattern_iri: http://purl.obolibrary.org/obo/ecto/patterns/exposure_to_occupation.yaml
 
 description: "Exposures related to an occupation."
@@ -14,7 +14,7 @@ annotationProperties:
   exact_synonym: oio:hasExactSynonym
 
 relations:
-  has exposure stimulus: RO:0002309
+  has_exposure_stimulus: RO:0002309
 
 vars:
   stressor: "'occupation'"
@@ -36,6 +36,6 @@ def:
     - stressor
 
 equivalentTo:
-  text: "'exposure event' and ('has exposure stimulus' some %s)"
+  text: "'exposure event' and ('has_exposure_stimulus' some %s)"
   vars:
     - stressor
