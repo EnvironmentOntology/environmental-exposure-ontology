@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: ecto/releases/2020-02-11/imports/ncbitaxon_import.owl
+data-version: ecto/releases/2020-09-18/imports/ncbitaxon_import.owl
 ontology: ecto/imports/ncbitaxon_import
 
 [Term]
@@ -41,13 +41,15 @@ property_value: has_rank NCBITaxon:superkingdom
 
 [Term]
 id: NCBITaxon:117565
-name: Hyperotreti
+name: Myxini
 namespace: ncbi_taxonomy
 synonym: "Agnatha" RELATED in_part []
 synonym: "fish" EXACT common_name []
 synonym: "fishes" EXACT common_name []
+synonym: "Hyperotreti" RELATED synonym []
 xref: GC_ID:1
 is_a: NCBITaxon:1476529 ! Cyclostomata
+property_value: has_rank NCBITaxon:class
 
 [Term]
 id: NCBITaxon:117569
@@ -60,6 +62,7 @@ synonym: "fishes" EXACT common_name []
 synonym: "Monorhina" RELATED in_part []
 xref: GC_ID:1
 is_a: NCBITaxon:1476529 ! Cyclostomata
+property_value: has_rank NCBITaxon:class
 
 [Term]
 id: NCBITaxon:117570
@@ -89,12 +92,12 @@ synonym: "fishes" EXACT common_name []
 synonym: "lobe-finned fishes" EXACT common_name []
 xref: GC_ID:1
 is_a: NCBITaxon:8287 ! Sarcopterygii
+property_value: has_rank NCBITaxon:class
 
 [Term]
 id: NCBITaxon:12058
 name: Picornaviridae
 namespace: ncbi_taxonomy
-synonym: "Picormavirus" RELATED misspelling []
 synonym: "Picornavirus" RELATED synonym []
 xref: GC_ID:1
 is_a: NCBITaxon:464095 ! Picornavirales
@@ -105,7 +108,7 @@ id: NCBITaxon:12059
 name: Enterovirus
 namespace: ncbi_taxonomy
 alt_id: NCBITaxon:12128
-synonym: "Enteroviruses" RELATED synonym []
+synonym: "Enteroviruses" EXACT equivalent_name []
 xref: GC_ID:1
 is_a: NCBITaxon:12058 ! Picornaviridae
 property_value: has_rank NCBITaxon:genus
@@ -122,7 +125,7 @@ id: NCBITaxon:1206795
 name: Lophotrochozoa
 namespace: ncbi_taxonomy
 xref: GC_ID:1
-is_a: NCBITaxon:33317 ! Protostomia
+is_a: NCBITaxon:2697495 ! Spiralia
 
 [Term]
 id: NCBITaxon:1224
@@ -145,6 +148,16 @@ xref: PMID:26654112
 xref: PMID:29458499
 is_a: NCBITaxon:2 ! Bacteria
 property_value: has_rank NCBITaxon:phylum
+
+[Term]
+id: NCBITaxon:131221
+name: Streptophytina
+namespace: ncbi_taxonomy
+synonym: "Charophyta/Embryophyta group" RELATED synonym []
+synonym: "charophyte/embryophyte group" EXACT equivalent_name []
+xref: GC_ID:1
+is_a: NCBITaxon:35493 ! Streptophyta
+property_value: has_rank NCBITaxon:subphylum
 
 [Term]
 id: NCBITaxon:131567
@@ -213,6 +226,21 @@ xref: GC_ID:1
 xref: PMID:11743200
 xref: PMID:11791233
 is_a: NCBITaxon:9347 ! Eutheria
+
+[Term]
+id: NCBITaxon:1437183
+name: Mesangiospermae
+namespace: ncbi_taxonomy
+xref: GC_ID:1
+xref: PMID:25249442
+is_a: NCBITaxon:3398 ! Magnoliopsida
+
+[Term]
+id: NCBITaxon:1437201
+name: Pentapetalae
+namespace: ncbi_taxonomy
+xref: GC_ID:1
+is_a: NCBITaxon:91827 ! Gunneridae
 
 [Term]
 id: NCBITaxon:1476529
@@ -314,7 +342,9 @@ xref: PMID:11760965
 xref: PMID:12054223
 xref: PMID:2112744
 xref: PMID:270744
+xref: PMID:7520741
 xref: PMID:8123559
+xref: PMID:8186100
 xref: PMID:8590690
 xref: PMID:9103655
 xref: PMID:9336922
@@ -427,9 +457,32 @@ id: NCBITaxon:2585030
 name: unclassified Riboviria
 namespace: ncbi_taxonomy
 alt_id: NCBITaxon:1922347
-synonym: "unclassified RNA viruses" RELATED synonym []
+synonym: "unclassified RNA viruses" EXACT equivalent_name []
 xref: GC_ID:1
 is_a: NCBITaxon:2559587 ! Riboviria
+
+[Term]
+id: NCBITaxon:2682552
+name: Leptocardii
+namespace: ncbi_taxonomy
+xref: GC_ID:1
+is_a: NCBITaxon:7735 ! Cephalochordata
+property_value: has_rank NCBITaxon:class
+
+[Term]
+id: NCBITaxon:2682553
+name: Amphioxiformes
+namespace: ncbi_taxonomy
+xref: GC_ID:1
+is_a: NCBITaxon:2682552 ! Leptocardii
+property_value: has_rank NCBITaxon:order
+
+[Term]
+id: NCBITaxon:2697495
+name: Spiralia
+namespace: ncbi_taxonomy
+xref: GC_ID:1
+is_a: NCBITaxon:33317 ! Protostomia
 
 [Term]
 id: NCBITaxon:2759
@@ -520,6 +573,17 @@ is_a: NCBITaxon:9526 ! Catarrhini
 property_value: has_rank NCBITaxon:superfamily
 
 [Term]
+id: NCBITaxon:3193
+name: Embryophyta
+namespace: ncbi_taxonomy
+synonym: "higher plants" EXACT common_name []
+synonym: "land plants" EXACT common_name []
+synonym: "land plants" RELATED blast_name []
+synonym: "plants" EXACT common_name []
+xref: GC_ID:1
+is_a: NCBITaxon:131221 ! Streptophytina
+
+[Term]
 id: NCBITaxon:32443
 name: Teleostei
 namespace: ncbi_taxonomy
@@ -574,11 +638,14 @@ id: NCBITaxon:33090
 name: Viridiplantae
 namespace: ncbi_taxonomy
 synonym: "Chlorobionta" RELATED synonym []
-synonym: "Chlorophyta/Embryophyta group" RELATED synonym []
+synonym: "Chlorophyta/Embryophyta group" EXACT equivalent_name []
 synonym: "chlorophyte/embryophyte group" EXACT equivalent_name []
+synonym: "Chloroplastida" RELATED synonym []
 synonym: "green plants" EXACT common_name []
 synonym: "green plants" RELATED blast_name []
 xref: GC_ID:1
+xref: PMID:16248873
+xref: PMID:30257078
 is_a: NCBITaxon:2759 ! Eukaryota
 property_value: has_rank NCBITaxon:kingdom
 
@@ -626,15 +693,76 @@ xref: GC_ID:1
 is_a: NCBITaxon:33213 ! Bilateria
 
 [Term]
+id: NCBITaxon:3398
+name: Magnoliopsida
+namespace: ncbi_taxonomy
+synonym: "Angiospermae" RELATED synonym []
+synonym: "angiosperms" EXACT common_name []
+synonym: "flowering plants" EXACT genbank_common_name []
+synonym: "flowering plants" RELATED blast_name []
+synonym: "Magnoliophyta" RELATED synonym []
+xref: GC_ID:1
+xref: PMID:25249442
+is_a: NCBITaxon:58024 ! Spermatophyta
+property_value: has_rank NCBITaxon:class
+
+[Term]
+id: NCBITaxon:3481
+name: Cannabaceae
+namespace: ncbi_taxonomy
+synonym: "Cannabidaceae" RELATED synonym []
+synonym: "Cannabinaceae" RELATED synonym []
+synonym: "hemp family" EXACT common_name []
+synonym: "hop family" EXACT common_name []
+xref: GC_ID:1
+is_a: NCBITaxon:3744 ! Rosales
+property_value: has_rank NCBITaxon:family
+
+[Term]
+id: NCBITaxon:3482
+name: Cannabis
+namespace: ncbi_taxonomy
+xref: GC_ID:1
+is_a: NCBITaxon:3481 ! Cannabaceae
+property_value: has_rank NCBITaxon:genus
+
+[Term]
+id: NCBITaxon:3483
+name: Cannabis sativa
+namespace: ncbi_taxonomy
+xref: GC_ID:1
+is_a: NCBITaxon:3482 ! Cannabis
+property_value: has_rank NCBITaxon:species
+
+[Term]
 id: NCBITaxon:35278
 name: unclassified ssRNA positive-strand viruses
 namespace: ncbi_taxonomy
 alt_id: NCBITaxon:38173
-synonym: "ssRNA positive-strand viruses" RELATED synonym []
-synonym: "ssRNA positive-strand viruses, no DNA stage" RELATED synonym []
-synonym: "unclassified ssRNA positive-strand viruses, no DNA stage" RELATED synonym []
+synonym: "ssRNA positive-strand viruses" EXACT equivalent_name []
+synonym: "ssRNA positive-strand viruses, no DNA stage" EXACT equivalent_name []
+synonym: "unclassified ssRNA positive-strand viruses, no DNA stage" EXACT equivalent_name []
 xref: GC_ID:1
 is_a: NCBITaxon:439490 ! unclassified ssRNA viruses
+
+[Term]
+id: NCBITaxon:35493
+name: Streptophyta
+namespace: ncbi_taxonomy
+xref: GC_ID:1
+is_a: NCBITaxon:33090 ! Viridiplantae
+property_value: has_rank NCBITaxon:phylum
+
+[Term]
+id: NCBITaxon:3744
+name: Rosales
+namespace: ncbi_taxonomy
+alt_id: NCBITaxon:3473
+alt_id: NCBITaxon:3601
+alt_id: NCBITaxon:4266
+xref: GC_ID:1
+is_a: NCBITaxon:91835 ! fabids
+property_value: has_rank NCBITaxon:order
 
 [Term]
 id: NCBITaxon:376913
@@ -674,9 +802,22 @@ is_a: NCBITaxon:2585030 ! unclassified Riboviria
 id: NCBITaxon:439490
 name: unclassified ssRNA viruses
 namespace: ncbi_taxonomy
-synonym: "unassigned ssRNA viruses" RELATED synonym []
+synonym: "unassigned ssRNA viruses" EXACT equivalent_name []
 xref: GC_ID:1
 is_a: NCBITaxon:2585030 ! unclassified Riboviria
+
+[Term]
+id: NCBITaxon:451864
+name: Dikarya
+namespace: ncbi_taxonomy
+xref: GC_ID:1
+xref: PMID:15689432
+xref: PMID:16151185
+xref: PMID:17010206
+xref: PMID:17051209
+xref: PMID:17572334
+is_a: NCBITaxon:4751 ! Fungi
+property_value: has_rank NCBITaxon:subkingdom
 
 [Term]
 id: NCBITaxon:464095
@@ -685,6 +826,19 @@ namespace: ncbi_taxonomy
 xref: GC_ID:1
 is_a: NCBITaxon:2559587 ! Riboviria
 property_value: has_rank NCBITaxon:order
+
+[Term]
+id: NCBITaxon:4751
+name: Fungi
+namespace: ncbi_taxonomy
+synonym: "fungi" RELATED blast_name []
+synonym: "fungi" RELATED in_part []
+synonym: "Mycota" RELATED genbank_synonym []
+xref: GC_ID:1
+xref: PMID:11062127
+xref: PMID:12684019
+is_a: NCBITaxon:33154 ! Opisthokonta
+property_value: has_rank NCBITaxon:kingdom
 
 [Term]
 id: NCBITaxon:51985
@@ -718,6 +872,24 @@ namespace: ncbi_taxonomy
 xref: GC_ID:1
 is_a: NCBITaxon:569421 ! Paludicella
 property_value: has_rank NCBITaxon:species
+
+[Term]
+id: NCBITaxon:58023
+name: Tracheophyta
+namespace: ncbi_taxonomy
+synonym: "vascular plants" EXACT common_name []
+synonym: "vascular plants" RELATED blast_name []
+xref: GC_ID:1
+is_a: NCBITaxon:3193 ! Embryophyta
+
+[Term]
+id: NCBITaxon:58024
+name: Spermatophyta
+namespace: ncbi_taxonomy
+synonym: "seed plants" EXACT common_name []
+synonym: "seed plants" RELATED blast_name []
+xref: GC_ID:1
+is_a: NCBITaxon:78536 ! Euphyllophyta
 
 [Term]
 id: NCBITaxon:6040
@@ -794,6 +966,28 @@ is_a: NCBITaxon:1224 ! Proteobacteria
 property_value: has_rank NCBITaxon:subphylum
 
 [Term]
+id: NCBITaxon:71240
+name: eudicotyledons
+namespace: ncbi_taxonomy
+alt_id: NCBITaxon:3399
+synonym: "dicots" RELATED in_part []
+synonym: "Dicotyledoneae" RELATED in_part []
+synonym: "dicotyledons" RELATED in_part []
+synonym: "eudicots" RELATED blast_name []
+xref: GC_ID:1
+xref: PMID:25249442
+xref: PMID:26724406
+is_a: NCBITaxon:1437183 ! Mesangiospermae
+
+[Term]
+id: NCBITaxon:71275
+name: rosids
+namespace: ncbi_taxonomy
+synonym: "Rosidae" RELATED in_part []
+xref: GC_ID:1
+is_a: NCBITaxon:1437201 ! Pentapetalae
+
+[Term]
 id: NCBITaxon:72293
 name: Helicobacteraceae
 namespace: ncbi_taxonomy
@@ -862,7 +1056,7 @@ synonym: "amphioxius" EXACT common_name []
 synonym: "Branchiostomatidae" RELATED synonym []
 synonym: "lancelets" EXACT genbank_common_name []
 xref: GC_ID:1
-is_a: NCBITaxon:7735 ! Cephalochordata
+is_a: NCBITaxon:2682553 ! Amphioxiformes
 property_value: has_rank NCBITaxon:family
 
 [Term]
@@ -898,7 +1092,6 @@ id: NCBITaxon:7746
 name: Petromyzontidae
 namespace: ncbi_taxonomy
 synonym: "lampreys" EXACT genbank_common_name []
-synonym: "Petromyzonidae" RELATED misspelling []
 xref: GC_ID:1
 is_a: NCBITaxon:7745 ! Petromyzontiformes
 property_value: has_rank NCBITaxon:family
@@ -910,7 +1103,7 @@ namespace: ncbi_taxonomy
 synonym: "hagfishes" RELATED blast_name []
 synonym: "Myxinoidea" RELATED synonym []
 xref: GC_ID:1
-is_a: NCBITaxon:117565 ! Hyperotreti
+is_a: NCBITaxon:117565 ! Myxini
 property_value: has_rank NCBITaxon:order
 
 [Term]
@@ -954,6 +1147,14 @@ is_a: NCBITaxon:7777 ! Chondrichthyes
 property_value: has_rank NCBITaxon:subclass
 
 [Term]
+id: NCBITaxon:78536
+name: Euphyllophyta
+namespace: ncbi_taxonomy
+synonym: "euphyllophytes" EXACT equivalent_name []
+xref: GC_ID:1
+is_a: NCBITaxon:58023 ! Tracheophyta
+
+[Term]
 id: NCBITaxon:7878
 name: Dipnoi
 namespace: ncbi_taxonomy
@@ -968,6 +1169,7 @@ synonym: "lungfishes" RELATED blast_name []
 synonym: "Osteichthyes" RELATED in_part []
 xref: GC_ID:1
 is_a: NCBITaxon:1338369 ! Dipnotetrapodomorpha
+property_value: has_rank NCBITaxon:class
 
 [Term]
 id: NCBITaxon:7898
@@ -1018,7 +1220,6 @@ name: Danio rerio
 namespace: ncbi_taxonomy
 alt_id: NCBITaxon:27702
 alt_id: NCBITaxon:37966
-synonym: "Brachidanio rerio" RELATED misspelling []
 synonym: "Brachydanio rerio" RELATED synonym []
 synonym: "Brachydanio rerio frankei" RELATED synonym []
 synonym: "Cyprinus rerio" RELATED synonym []
@@ -1077,7 +1278,7 @@ synonym: "Reptilia" RELATED in_part []
 xref: GC_ID:1
 xref: PMID:22982760
 is_a: NCBITaxon:32561 ! Sauria
-property_value: has_rank NCBITaxon:superorder
+property_value: has_rank NCBITaxon:class
 
 [Term]
 id: NCBITaxon:8509
@@ -1111,6 +1312,26 @@ synonym: "Craniata" EXACT scientific_name []
 xref: GC_ID:1
 is_a: NCBITaxon:7711 ! Chordata
 property_value: has_rank NCBITaxon:subphylum
+
+[Term]
+id: NCBITaxon:91827
+name: Gunneridae
+namespace: ncbi_taxonomy
+alt_id: NCBITaxon:1437200
+synonym: "core eudicots" EXACT equivalent_name []
+synonym: "core eudicotyledons" EXACT equivalent_name []
+xref: GC_ID:1
+is_a: NCBITaxon:71240 ! eudicotyledons
+
+[Term]
+id: NCBITaxon:91835
+name: fabids
+namespace: ncbi_taxonomy
+alt_id: NCBITaxon:41939
+alt_id: NCBITaxon:4293
+synonym: "eurosids I" RELATED synonym []
+xref: GC_ID:1
+is_a: NCBITaxon:71275 ! rosids
 
 [Term]
 id: NCBITaxon:9347
@@ -1175,20 +1396,7 @@ property_value: has_rank NCBITaxon:genus
 id: NCBITaxon:9606
 name: Homo sapiens
 namespace: ncbi_taxonomy
-synonym: "Home sapiens" RELATED misspelling []
-synonym: "Homo sampiens" RELATED misspelling []
-synonym: "Homo sapeins" RELATED misspelling []
-synonym: "Homo sapian" RELATED misspelling []
-synonym: "Homo sapians" RELATED misspelling []
-synonym: "Homo sapien" RELATED misspelling []
-synonym: "Homo sapience" RELATED misspelling []
-synonym: "Homo sapiense" RELATED misspelling []
-synonym: "Homo sapients" RELATED misspelling []
-synonym: "Homo sapines" RELATED misspelling []
-synonym: "Homo spaiens" RELATED misspelling []
-synonym: "Homo spiens" RELATED misspelling []
 synonym: "human" EXACT genbank_common_name []
-synonym: "Humo sapiens" RELATED misspelling []
 synonym: "man" EXACT common_name []
 xref: GC_ID:1
 is_a: NCBITaxon:9605 ! Homo
@@ -1215,6 +1423,12 @@ property_value: has_rank NCBITaxon:family
 [Term]
 id: NCBITaxon:class
 name: class
+namespace: ncbi_taxonomy
+is_a: NCBITaxon:taxonomic_rank ! taxonomic rank
+
+[Term]
+id: NCBITaxon:cohort
+name: cohort
 namespace: ncbi_taxonomy
 is_a: NCBITaxon:taxonomic_rank ! taxonomic rank
 
@@ -1275,6 +1489,12 @@ is_a: NCBITaxon:taxonomic_rank ! taxonomic rank
 [Term]
 id: NCBITaxon:subclass
 name: subclass
+namespace: ncbi_taxonomy
+is_a: NCBITaxon:taxonomic_rank ! taxonomic rank
+
+[Term]
+id: NCBITaxon:subcohort
+name: subcohort
 namespace: ncbi_taxonomy
 is_a: NCBITaxon:taxonomic_rank ! taxonomic rank
 

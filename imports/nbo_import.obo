@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: ecto/releases/2020-03-13/imports/nbo_import.owl
+data-version: ecto/releases/2020-09-18/imports/nbo_import.owl
 subsetdef: 1_STAR "Preliminary entries"
 subsetdef: 3_STAR "Manually annotated by ChEBI Team"
 subsetdef: abnormal_slim "Abnormal/normal slim"
@@ -1143,8 +1143,8 @@ namespace: chebi_ontology
 subset: 3_STAR
 synonym: ">C=O" RELATED [IUPAC]
 synonym: "carbonyl" EXACT IUPAC_NAME [IUPAC]
-synonym: "carbonyl group" EXACT [ChEBI]
 synonym: "carbonyl group" EXACT [UniProt]
+synonym: "carbonyl group" EXACT [ChEBI]
 is_a: CHEBI:51422 ! organodiyl group
 property_value: http://purl.obolibrary.org/obo/chebi/charge "0" xsd:string
 property_value: http://purl.obolibrary.org/obo/chebi/formula "CO" xsd:string
@@ -6504,6 +6504,33 @@ relationship: regulates NBO:0001884 ! consumption of an addictive substance
 created_by: George Gkoutos
 
 [Term]
+id: NBO:0015005
+name: smoking behavior
+def: "Consumption behavior that involves inhaling a material (such as finely ground tobacco leaves) through the nose." []
+is_a: NBO:0001845 ! consumption behavior
+property_value: dc-contributor http://orcid.org/0000-0002-2908-3327 xsd:string
+property_value: http://purl.org/dc/elements/1.1/date 2019-09-06T10:51:02Z xsd:string
+created_by: https://orcid.org/0000-0002-7356-1779
+
+[Term]
+id: NBO:0015007
+name: cigarette smoking behavior
+def: "Smoking behavior that involves burning a substance such as tobacco wrapped in paper and inhaling the smoke." []
+is_a: NBO:0015005 ! smoking behavior
+property_value: dc-contributor http://orcid.org/0000-0002-2908-3327 xsd:string
+property_value: http://purl.org/dc/elements/1.1/date 2019-09-06T10:51:02Z xsd:string
+created_by: https://orcid.org/0000-0002-7356-1779
+
+[Term]
+id: NBO:0015008
+name: cigar smoking behavior
+def: "Smoking behavior that involves burning a substance such as tobacco wrapped in tobacco leaf and inhaling the smoke." []
+is_a: NBO:0015005 ! smoking behavior
+property_value: dc-contributor http://orcid.org/0000-0002-2908-3327 xsd:string
+property_value: http://purl.org/dc/elements/1.1/date 2019-09-06T10:51:02Z xsd:string
+created_by: https://orcid.org/0000-0002-7356-1779
+
+[Term]
 id: PATO:0000001
 name: quality
 namespace: quality
@@ -6604,6 +6631,15 @@ def: "A physical quality of the thermal energy of a system." [PATOC:GVG]
 subset: attribute_slim
 subset: scalar_slim
 is_a: PATO:0001018 ! physical quality
+
+[Term]
+id: PATO:0000161
+name: rate
+namespace: quality
+def: "A quality of a single process inhering in a bearer by virtue of the bearer's occurrence per unit time." [PATOC:melissa]
+subset: attribute_slim
+subset: scalar_slim
+is_a: PATO:0002062 ! physical quality of a process
 
 [Term]
 id: PATO:0000402
@@ -6739,6 +6775,35 @@ is_a: PATO:0002303 ! decreased object quality
 intersection_of: PATO:0000117 ! size
 intersection_of: decreased_in_magnitude_relative_to PATO:0000461 ! normal
 relationship: is_opposite_of PATO:0000586 ! increased size
+
+[Term]
+id: PATO:0000911
+name: decreased rate
+namespace: quality
+def: "A rate which is relatively low." [PATO:GVG]
+subset: mpath_slim
+subset: value_slim
+synonym: "slow rate" EXACT []
+is_a: PATO:0000161 ! rate
+is_a: PATO:0002302 ! decreased process quality
+intersection_of: PATO:0000161 ! rate
+intersection_of: decreased_in_magnitude_relative_to PATO:0000461 ! normal
+relationship: is_opposite_of PATO:0000912 ! increased rate
+
+[Term]
+id: PATO:0000912
+name: increased rate
+namespace: quality
+def: "A rate which is relatively high." [PATO:GVG]
+subset: mpath_slim
+subset: value_slim
+synonym: "fast rate" EXACT []
+synonym: "high rate" EXACT []
+is_a: PATO:0000161 ! rate
+is_a: PATO:0002304 ! increased process quality
+intersection_of: PATO:0000161 ! rate
+intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
+relationship: is_opposite_of PATO:0000911 ! decreased rate
 
 [Term]
 id: PATO:0001018
@@ -7076,6 +7141,15 @@ def: "A shape quality inhering in a bearer by virtue of the degree to which ther
 subset: attribute_slim
 subset: cell_quality
 is_a: PATO:0000052 ! shape
+
+[Term]
+id: PATO:0002062
+name: physical quality of a process
+namespace: quality
+subset: attribute_slim
+is_a: PATO:0001236 ! process quality
+created_by: george
+creation_date: 2009-06-05T09:16:46Z
 
 [Term]
 id: PATO:0002083

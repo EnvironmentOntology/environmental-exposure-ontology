@@ -1,0 +1,41 @@
+pattern_name: exposure_to_manufactured_product
+pattern_iri: http://purl.obolibrary.org/obo/ecto/patterns/exposure_to_manufactured_product.yaml
+
+description: "exposure to manufactured product"
+
+contributors:
+  - https://orcid.org/0000-0002-7463-6306
+
+classes:
+  exposure event: ExO:0000002
+  manufactured product: ENVO:00003074
+
+annotationProperties:
+  exact_synonym: oio:hasExactSynonym
+
+relations:
+  has exposure stimulus: RO:0002309
+
+vars:
+  stressor: "'manufactured product'"
+
+name:
+  text: "exposure to %s"
+  vars:
+    - stressor
+
+annotations:
+  - annotationProperty: exact_synonym
+    text: "%s exposure"
+    vars:
+      - stressor
+
+def: 
+  text: "A exposure event involving the interaction of an exposure receptor to %s."
+  vars:
+    - stressor
+
+equivalentTo: 
+  text: "'exposure event' and ('has exposure stimulus' some %s)"
+  vars:
+    - stressor
