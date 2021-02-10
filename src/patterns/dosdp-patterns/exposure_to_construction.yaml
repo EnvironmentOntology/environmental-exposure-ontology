@@ -1,14 +1,14 @@
-pattern_name: exposure_to_environmental_condition
-pattern_iri: http://purl.obolibrary.org/obo/ecto/patterns/exposure_to_environmental_condition.yaml
+pattern_name: exposure_to_construction
+pattern_iri: http://purl.obolibrary.org/obo/ecto/patterns/exposure_to_construction.yaml
 
-description: "exposures to an environmental condition"
+description: "exposures to a material entity which has been assembled through the intentional, instinctual, or deliberately programmed efforts of an organism or machine"
 
 contributors:
   - https://orcid.org/0000-0002-2908-3327
 
 classes:
   exposure event: ExO:0000002
-  environmental condition: ENVO:01000203
+  construction: ENVO:01001813
 
 relations:
   has exposure stimulus: RO:0002309
@@ -17,10 +17,10 @@ annotationProperties:
   exact_synonym: oio:hasExactSynonym
 
 vars:
-  condition: "'environmental condition'"
+  stressor: "'construction'"
 
 name:
-  text: "exposure to %s conditions"
+  text: "exposure to %s"
   vars:
     - stressor
 
@@ -31,7 +31,7 @@ annotations:
       - stressor
 
 def:
-  text: "A exposure event involving the interaction of an exposure receptor to the condition of %s."
+  text: "A exposure event involving the interaction of an exposure receptor to %s."
   vars:
     - stressor
 
