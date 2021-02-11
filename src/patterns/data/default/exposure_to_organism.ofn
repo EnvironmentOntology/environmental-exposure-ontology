@@ -13,12 +13,14 @@ Declaration(Class(<http://purl.obolibrary.org/obo/ECTO_3000001>))
 Declaration(Class(<http://purl.obolibrary.org/obo/ECTO_3000002>))
 Declaration(Class(<http://purl.obolibrary.org/obo/ECTO_3000003>))
 Declaration(Class(<http://purl.obolibrary.org/obo/ECTO_3000004>))
+Declaration(Class(<http://purl.obolibrary.org/obo/ECTO_3000005>))
 Declaration(Class(<http://purl.obolibrary.org/obo/ExO_0000002>))
+Declaration(Class(<http://purl.obolibrary.org/obo/NCBITaxon_1>))
 Declaration(Class(<http://purl.obolibrary.org/obo/NCBITaxon_10239>))
 Declaration(Class(<http://purl.obolibrary.org/obo/NCBITaxon_12059>))
 Declaration(Class(<http://purl.obolibrary.org/obo/NCBITaxon_151340>))
 Declaration(Class(<http://purl.obolibrary.org/obo/NCBITaxon_210>))
-Declaration(Class(<http://purl.obolibrary.org/obo/OBI_0100026>))
+Declaration(Class(<http://purl.obolibrary.org/obo/NCBITaxon_9606>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002309>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000115>))
 Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym>))
@@ -29,12 +31,12 @@ Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#has
 #   Classes
 ############################
 
-# Class: <http://purl.obolibrary.org/obo/ECTO_3000000> (exposure to organism)
+# Class: <http://purl.obolibrary.org/obo/ECTO_3000000> (exposure to root)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_3000000> "A history of exposure to organism."^^xsd:string)
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_3000000> "organism exposure"^^xsd:string)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_3000000> "exposure to organism"^^xsd:string)
-EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_3000000> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/OBI_0100026>)))
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_3000000> "A history of exposure to root."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_3000000> "root exposure"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_3000000> "exposure to root"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_3000000> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/NCBITaxon_1>)))
 
 # Class: <http://purl.obolibrary.org/obo/ECTO_3000001> (exposure to Viruses)
 
@@ -63,6 +65,13 @@ AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.ob
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_3000004> "Papillomaviridae exposure"^^xsd:string)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_3000004> "exposure to Papillomaviridae"^^xsd:string)
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_3000004> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/NCBITaxon_151340>)))
+
+# Class: <http://purl.obolibrary.org/obo/ECTO_3000005> (exposure to Homo sapiens)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_3000005> "A history of exposure to Homo sapiens."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_3000005> "Homo sapiens exposure"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_3000005> "exposure to Homo sapiens"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_3000005> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/NCBITaxon_9606>)))
 
 
 )
