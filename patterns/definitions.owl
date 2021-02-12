@@ -1,4 +1,4 @@
-Prefix(:=<urn:unnamed:ontology#ont1#>)
+Prefix(:=<urn:unnamed:ontology#ont1>)
 Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
 Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
 Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
@@ -7,7 +7,8 @@ Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 
 
 Ontology(<http://purl.obolibrary.org/obo/ecto/patterns/definitions.owl>
-<http://purl.obolibrary.org/obo/ecto/releases/2021-02-11/patterns/definitions.owl>
+<http://purl.obolibrary.org/obo/ecto/releases/2021-02-12/patterns/definitions.owl>
+Annotation(owl:versionInfo "2021-02-12"^^xsd:string)
 
 Declaration(Class(<http://purl.obolibrary.org/obo/CHEBI_100241>))
 Declaration(Class(<http://purl.obolibrary.org/obo/CHEBI_100246>))
@@ -2207,6 +2208,8 @@ Declaration(Class(<http://purl.obolibrary.org/obo/ECTO_0500022>))
 Declaration(Class(<http://purl.obolibrary.org/obo/ECTO_0500023>))
 Declaration(Class(<http://purl.obolibrary.org/obo/ECTO_0500024>))
 Declaration(Class(<http://purl.obolibrary.org/obo/ECTO_0600000>))
+Declaration(Class(<http://purl.obolibrary.org/obo/ECTO_0700001>))
+Declaration(Class(<http://purl.obolibrary.org/obo/ECTO_0700002>))
 Declaration(Class(<http://purl.obolibrary.org/obo/ECTO_0800001>))
 Declaration(Class(<http://purl.obolibrary.org/obo/ECTO_0800002>))
 Declaration(Class(<http://purl.obolibrary.org/obo/ECTO_0900001>))
@@ -6102,6 +6105,20 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynony
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_0600000> "exposure to environmental system"^^xsd:string)
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_0600000> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/ENVO_01000254>)))
 
+# Class: <http://purl.obolibrary.org/obo/ECTO_0700001> (exposure to ultrafine respirable suspended particulate matter via inhalation)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0700001> "A exposure event involving the interaction of an exposure receptor to ultrafine respirable suspended particulate matter via inhalation."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0700001> "ultrafine respirable suspended particulate matter exposure via inhalation"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_0700001> "exposure to ultrafine respirable suspended particulate matter via inhalation"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_0700001> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002242> <http://purl.obolibrary.org/obo/ExO_0000057>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/ENVO_01000416>)))
+
+# Class: <http://purl.obolibrary.org/obo/ECTO_0700002> (exposure to aerosol via inhalation)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0700002> "A exposure event involving the interaction of an exposure receptor to aerosol via inhalation."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0700002> "aerosol exposure via inhalation"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_0700002> "exposure to aerosol via inhalation"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_0700002> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002242> <http://purl.obolibrary.org/obo/ExO_0000057>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/ENVO_00010505>)))
+
 # Class: <http://purl.obolibrary.org/obo/ECTO_0800001> (exposure to mudslide in injection)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0800001> "A exposure event involving the interaction of an exposure receptor to mudslide happening in injection of the receptor."^^xsd:string)
@@ -6949,11 +6966,11 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynony
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_3000005> "exposure to Homo sapiens"^^xsd:string)
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_3000005> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/NCBITaxon_9606>)))
 
-# Class: <http://purl.obolibrary.org/obo/ECTO_4000000> (exposure to deviation(from_normal)deviation (from_normal) of quality)
+# Class: <http://purl.obolibrary.org/obo/ECTO_4000000> (exposure to deviation (from_normal)deviation(from_normal) of quality)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_4000000> "A exposure event involving the interaction of an exposure receptor to deviation(from_normal)deviation (from_normal) of quality."^^xsd:string)
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_4000000> "exposure to deviation(from_normal)deviation (from_normal) in quality"^^xsd:string)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_4000000> "exposure to deviation(from_normal)deviation (from_normal) of quality"^^xsd:string)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_4000000> "A exposure event involving the interaction of an exposure receptor to deviation (from_normal)deviation(from_normal) of quality."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_4000000> "exposure to deviation (from_normal)deviation(from_normal) in quality"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_4000000> "exposure to deviation (from_normal)deviation(from_normal) of quality"^^xsd:string)
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_4000000> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000069> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/PATO_0000001>)))))
 
 # Class: <http://purl.obolibrary.org/obo/ECTO_4000001> (exposure to increased temperature)
