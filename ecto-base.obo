@@ -1,12 +1,12 @@
 format-version: 1.2
-data-version: ecto/releases/2021-02-12/ecto-base.owl
+data-version: ecto/releases/2021-02-16/ecto-base.owl
 subsetdef: mrex "medically relevant exposure"
 ontology: ecto/ecto-base
 property_value: http://purl.org/dc/elements/1.1/description "ECTO describes exposures to experimental treatments of plants and model organisms (e.g. exposures to modification of diet, lighting levels, temperature); exposures of humans or any other organisms to stressors through a variety of routes, for purposes of public health, environmental monitoring etc, stimuli, natural and experimental, any kind of environmental condition or change in condition that can be experienced by an organism or population of organisms on earth. The scope is very general and can include for example plant treatment regimens, as well as human clinical exposures (although these may better be handled by a more specialized ontology)." xsd:string
 property_value: http://purl.org/dc/elements/1.1/title "Environment Exposure Ontology" xsd:string
 property_value: http://purl.org/dc/elements/1.1/type IAO:8000001
 property_value: http://purl.org/dc/terms/license https://creativecommons.org/publicdomain/zero/1.0/
-property_value: owl:versionInfo "2021-02-12" xsd:string
+property_value: owl:versionInfo "2021-02-16" xsd:string
 
 [Term]
 id: ECTO:0000001
@@ -1599,11 +1599,11 @@ intersection_of: RO:0002309 ENVO:01000882
 
 [Term]
 id: ECTO:1000027
-name: exposure to environmental material
-def: "A exposure event involving the interaction of an exposure receptor to environmental material." []
-synonym: "environmental material exposure" EXACT []
+name: exposure to http://purl.obolibrary.org/obo/ENVO_01000600
+def: "A exposure event involving the interaction of an exposure receptor to http://purl.obolibrary.org/obo/ENVO_01000600." []
+synonym: "http://purl.obolibrary.org/obo/ENVO_01000600 exposure" EXACT []
 intersection_of: ExO:0000002
-intersection_of: RO:0002309 ENVO:00010483
+intersection_of: RO:0002309 ENVO:01000600
 
 [Term]
 id: ECTO:1000028
@@ -5814,14 +5814,6 @@ intersection_of: ExO:0000002
 intersection_of: RO:0002309 CHEBI:17026
 
 [Term]
-id: ECTO:9000218
-name: vitamin K exposure
-def: "An exposure to vitamin K." []
-synonym: "exposure to vitamin K" EXACT []
-intersection_of: ExO:0000002
-intersection_of: RO:0002309 CHEBI:28384
-
-[Term]
 id: ECTO:9000219
 name: menaquinone exposure
 def: "An exposure to menaquinone." []
@@ -6150,14 +6142,6 @@ intersection_of: ExO:0000002
 intersection_of: RO:0002309 CHEBI:27958
 
 [Term]
-id: ECTO:9000266
-name: chemical entity exposure
-def: "An exposure to chemical entity." []
-synonym: "exposure to chemical entity" EXACT []
-intersection_of: ExO:0000002
-intersection_of: RO:0002309 CHEBI:24431
-
-[Term]
 id: ECTO:9000267
 name: hydrogen peroxide exposure
 def: "An exposure to hydrogen peroxide." []
@@ -6292,14 +6276,6 @@ def: "An exposure to organophosphorus compound." []
 synonym: "exposure to organophosphorus compound" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002309 CHEBI:25710
-
-[Term]
-id: ECTO:9000285
-name: arsenic molecular entity exposure
-def: "An exposure to arsenic molecular entity." []
-synonym: "exposure to arsenic molecular entity" EXACT []
-intersection_of: ExO:0000002
-intersection_of: RO:0002309 CHEBI:22632
 
 [Term]
 id: ECTO:9000286
@@ -11044,14 +11020,6 @@ def: "An exposure to venlafaxine." []
 synonym: "exposure to venlafaxine" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002309 CHEBI:9943
-
-[Term]
-id: ECTO:9000905
-name: verapamil exposure
-def: "An exposure to verapamil." []
-synonym: "exposure to verapamil" EXACT []
-intersection_of: ExO:0000002
-intersection_of: RO:0002309 CHEBI:9948
 
 [Term]
 id: ECTO:9000906
