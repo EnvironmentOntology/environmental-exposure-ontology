@@ -16,9 +16,9 @@
      xmlns:taxslim="http://purl.obolibrary.org/obo/ncbitaxon/subsets/taxslim#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/ecto/imports/envo_import.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/ecto/releases/2021-03-08/imports/envo_import.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/ecto/releases/2021-03-10/imports/envo_import.owl"/>
         <dc:source rdf:resource="http://purl.obolibrary.org/obo/envo/releases/2020-06-10/envo.owl"/>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2021-03-08</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2021-03-10</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -223,12 +223,6 @@
     <!-- http://purl.org/dc/terms/source -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/source"/>
-    
-
-
-    <!-- http://purl.org/dc/terms/title -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
     
 
 
@@ -8170,6 +8164,236 @@ Each of these 3 primitives can be composed to yield a cross-product of different
     
 
 
+    <!-- http://purl.obolibrary.org/obo/ENVO_00000100 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00000100">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_03000015"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000086"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0001154"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002354"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_02500028"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>A depression which has been formed as a result of erosion by water or ice and which is low-lying, bordered by higher ground, and especially elongate.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>EcoLexicon:valley</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>FTT:158</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>FTT:166</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>FTT:418</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>FTT:761</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>FTT:811</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>FTT:949</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Geonames:T.GRGE</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Geonames:T.VAL</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Geonames:T.VALS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>SWEETRealm:Valley</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>TGN:21425</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>TGN:21451</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>TGN:21452</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>TGN:21453</oboInOwl:hasDbXref>
+        <oboInOwl:hasNarrowSynonym>chasm</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>coulee</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>dale</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>glacial gorge</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>glacial trough</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>gulch</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>gully</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>median valley</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>shelf valley</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasRelatedSynonym>glen</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>goe</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>gorge</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>graben</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>hollow</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>lavaka</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>moat</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>ravine</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>re-entrant</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>seachannel</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>strath</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>trench</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>vale</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>water gap</oboInOwl:hasRelatedSynonym>
+        <rdfs:comment>Valleys are typically located between hills our mountains.</rdfs:comment>
+        <rdfs:label>valley</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000100"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A depression which has been formed as a result of erosion by water or ice and which is low-lying, bordered by higher ground, and especially elongate.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADL:FTT</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Valley</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000100"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
+        <owl:annotatedTarget>chasm</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000100"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
+        <owl:annotatedTarget>coulee</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000100"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
+        <owl:annotatedTarget>dale</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000100"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
+        <owl:annotatedTarget>glacial gorge</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000100"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
+        <owl:annotatedTarget>glacial trough</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000100"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
+        <owl:annotatedTarget>gulch</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000100"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
+        <owl:annotatedTarget>gully</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Getty:TGN</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000100"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
+        <owl:annotatedTarget>gully</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000100"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
+        <owl:annotatedTarget>median valley</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADL:FTT</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000100"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
+        <owl:annotatedTarget>median valley</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Geonames:feature</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000100"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
+        <owl:annotatedTarget>shelf valley</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Geonames:feature</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000100"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>glen</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADL:FTT</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000100"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>glen</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000100"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>goe</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000100"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>gorge</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Geonames:feature</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000100"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>gorge</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000100"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>graben</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000100"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>hollow</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADL:FTT</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000100"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>hollow</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Getty:TGN</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000100"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>hollow</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000100"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>moat</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000100"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>ravine</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000100"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>re-entrant</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000100"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>seachannel</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000100"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>strath</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000100"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>trench</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000100"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>water gap</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/ENVO_00000106 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00000106">
@@ -8189,7 +8413,7 @@ Each of these 3 primitives can be composed to yield a cross-product of different
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000106"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>An area in which grasses (Graminae) are a significant component of the vegetation.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://en.wikipedia.org/wiki/Grassland</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Grassland</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000106"/>
@@ -8588,6 +8812,97 @@ Each of these 3 primitives can be composed to yield a cross-product of different
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000114"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>grassland</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_00000128 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00000128">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_00000100"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000086"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0001824"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000100"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000086"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0001824"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>A valley that no longer has a surface flow of water. Typically found in either Karst (limestone) or chalk terrain.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Dry_valley</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace>ENVO</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>ENVO:00000128</oboInOwl:id>
+        <rdfs:label>dry valley</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000128"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A valley that no longer has a surface flow of water. Typically found in either Karst (limestone) or chalk terrain.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Dry_valley</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_00000129 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00000129">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_00000100"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000023"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000100"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000023"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>A valley that contains, and has been formed by, a stream.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>EcoLexicon:gully</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>EcoLexicon:ravine</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>FTT:159</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>FTT:420</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Geonames:H.RVN</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>TGN:21427</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace>ENVO</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasRelatedSynonym>gullie</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>ravine</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:id>ENVO:00000129</oboInOwl:id>
+        <rdfs:label>stream valley</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000129"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A valley that contains, and has been formed by, a stream.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MA:ma</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000129"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>ravine</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Geonames:feature</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000129"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>ravine</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -8999,6 +9314,33 @@ Each of these 3 primitives can be composed to yield a cross-product of different
     
 
 
+    <!-- http://purl.obolibrary.org/obo/ENVO_00000248 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00000248">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000100"/>
+        <obo:IAO_0000115>A valley that contains, or contained, a glacier and was formed by glacial activity. Typically U-shaped in cross-section.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Glacial_valley</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace>ENVO</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasRelatedSynonym>valley</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:id>ENVO:00000248</oboInOwl:id>
+        <oboInOwl:inSubset>envoPolar</oboInOwl:inSubset>
+        <rdfs:label>glacial valley</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000248"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A valley that contains, or contained, a glacier and was formed by glacial activity. Typically U-shaped in cross-section.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MA:ma</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000248"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>valley</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/ENVO_00000300 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00000300">
@@ -9195,13 +9537,13 @@ Each of these 3 primitives can be composed to yield a cross-product of different
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A zone beneath the land surface and above the level of permanent groundwater or phreatic zone in which water has a hydraulic head less than atmospheric pressure and is retained by a combination of adhesion and capillary action.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://wasg.iinet.net.au/terminol.html</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://en.wikipedia.org/wiki/Vadose_zone</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Vadose_zone</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000328"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>unsaturated zone</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://en.wikipedia.org/wiki/Vadose_zone</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Vadose_zone</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -9234,7 +9576,7 @@ Each of these 3 primitives can be composed to yield a cross-product of different
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>A compound astronomical body part which is located beneath the land surface and in which all interstices are filled with water that has a hydraulic head greater than atmospheric pressure due to the weight of overlying groundwater.</obo:IAO_0000115>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://en.wikipedia.org/wiki/Phreatic_zone</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Phreatic_zone</oboInOwl:hasDbXref>
         <oboInOwl:hasRelatedSynonym>zone of saturation</oboInOwl:hasRelatedSynonym>
         <rdfs:label>phreatic zone</rdfs:label>
     </owl:Class>
@@ -9243,13 +9585,13 @@ Each of these 3 primitives can be composed to yield a cross-product of different
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A compound astronomical body part which is located beneath the land surface and in which all interstices are filled with water that has a hydraulic head greater than atmospheric pressure due to the weight of overlying groundwater.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://wasg.iinet.net.au/terminol.html</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://en.wikipedia.org/wiki/Phreatic_zone</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Phreatic_zone</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000329"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>zone of saturation</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://en.wikipedia.org/wiki/Phreatic_zone</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Phreatic_zone</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -9412,6 +9754,8 @@ Each of these 3 primitives can be composed to yield a cross-product of different
                 <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000739"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000276"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000280"/>
         <obo:IAO_0000115>A biome is an ecosystem to which resident ecological communities have evolved adaptations.</obo:IAO_0000115>
         <oboInOwl:hasAlternativeId>LTER:809</oboInOwl:hasAlternativeId>
         <oboInOwl:hasDbXref>EcoLexicon:biome</oboInOwl:hasDbXref>
@@ -10369,7 +10713,7 @@ The lower boundary that separates soil from the nonsoil underneath is most diffi
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_0010001"/>
         <obo:IAO_0000115>The residual semi-solid material left from domestic or industrial processes, or wastewater treatment processes.</obo:IAO_0000115>
         <oboInOwl:hasDbXref>EcoLexicon:sludge</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://en.wikipedia.org/wiki/Sludge</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Sludge</oboInOwl:hasDbXref>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/envo#EnvO-Lite-GSC"/>
         <rdfs:label>sludge</rdfs:label>
     </owl:Class>
@@ -10377,7 +10721,7 @@ The lower boundary that separates soil from the nonsoil underneath is most diffi
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00002044"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>The residual semi-solid material left from domestic or industrial processes, or wastewater treatment processes.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://en.wikipedia.org/wiki/Sludge</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Sludge</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -10455,7 +10799,7 @@ The lower boundary that separates soil from the nonsoil underneath is most diffi
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00002059"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A treated form of sludge, sometimes used as a fertilizer in agriculture.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://en.wikipedia.org/wiki/Sludge</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Sludge</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -10465,7 +10809,7 @@ The lower boundary that separates soil from the nonsoil underneath is most diffi
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00002060">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00002176"/>
         <obo:IAO_0000115>A solid or gel in motor oil caused by the oil gelling or solidifying, usually at temperatures lower than 100deg C.</obo:IAO_0000115>
-        <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Oil_sludge</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://en.wikipedia.org/wiki/Oil_sludge</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace>ENVO</oboInOwl:hasOBONamespace>
         <oboInOwl:id>ENVO:00002060</oboInOwl:id>
         <rdfs:label>oil sludge</rdfs:label>
@@ -10474,7 +10818,7 @@ The lower boundary that separates soil from the nonsoil underneath is most diffi
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00002060"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A solid or gel in motor oil caused by the oil gelling or solidifying, usually at temperatures lower than 100deg C.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Oil_sludge</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://en.wikipedia.org/wiki/Oil_sludge</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -13265,6 +13609,19 @@ The lower boundary that separates soil from the nonsoil underneath is most diffi
     
 
 
+    <!-- http://purl.obolibrary.org/obo/ENVO_01000176 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000176">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000446"/>
+        <obo:IAO_0000115>A shrubland biome is a terrestrial biome which includes, across its entire spatial extent, dense groups of shrubs.</obo:IAO_0000115>
+        <oboInOwl:created_by>ORCID:0000-0002-4366-3088</oboInOwl:created_by>
+        <oboInOwl:creation_date>2013-04-07T14:26:46Z</oboInOwl:creation_date>
+        <rdfs:comment>Preliminary definition.</rdfs:comment>
+        <rdfs:label>shrubland biome</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/ENVO_01000179 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000179">
@@ -13321,6 +13678,21 @@ The lower boundary that separates soil from the nonsoil underneath is most diffi
         <owl:annotatedTarget>An environmental condition is a range of a determinate quality or combination of qualities that are present in an environmental system.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOI:10.1186/2041-1480-4-43</oboInOwl:hasDbXref>
     </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01000216 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000216">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000176"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001836"/>
+        <obo:IAO_0000115>A montane shrubland biome is a shrubland biome which occurs in regions elevated above sea level and which has community structure determined by elevation-dependent environmental conditions.</obo:IAO_0000115>
+        <oboInOwl:created_by>ORCID:0000-0002-4366-3088</oboInOwl:created_by>
+        <oboInOwl:creation_date>2013-04-07T14:40:32Z</oboInOwl:creation_date>
+        <oboInOwl:inSubset>wwfBiome</oboInOwl:inSubset>
+        <rdfs:comment>Preliminary definition.</rdfs:comment>
+        <rdfs:label>montane shrubland biome</rdfs:label>
+    </owl:Class>
     
 
 
@@ -13466,8 +13838,8 @@ The lower boundary that separates soil from the nonsoil underneath is most diffi
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000246"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A village biome is an anthropogenic terrestrial biome which contains settlements such as villages, towns, and/or small cities and which is primarily used for agricultural activity.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>DOI:10.1111/j.1466-8238.2010.00540.x</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>DOI:10.1890/070062</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOI:10.1111/j.1466-8238.2010.00540.x</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOI:10.1890/070062</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -13485,8 +13857,8 @@ The lower boundary that separates soil from the nonsoil underneath is most diffi
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000247"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A rangeland biome is an anthropogenic terrestrial biome which is primarily used for the rearing and grazing of livestock.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>DOI:10.1111/j.1466-8238.2010.00540.x</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>DOI:10.1890/070062</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOI:10.1111/j.1466-8238.2010.00540.x</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOI:10.1890/070062</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -13506,8 +13878,8 @@ The lower boundary that separates soil from the nonsoil underneath is most diffi
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000248"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A dense settlement biome is an anthropogenic terrestrial biome which is primarily used for human habitation, recreation, and industry within built structures with little other land use.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>DOI:10.1111/j.1466-8238.2010.00540.x</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>DOI:10.1890/070062</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOI:10.1111/j.1466-8238.2010.00540.x</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOI:10.1890/070062</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -13528,8 +13900,8 @@ The lower boundary that separates soil from the nonsoil underneath is most diffi
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000249"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>An urban biome is a dense settlement biome which has been urbanised.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>DOI:10.1111/j.1466-8238.2010.00540.x</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>DOI:10.1890/070062</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOI:10.1111/j.1466-8238.2010.00540.x</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOI:10.1890/070062</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -13615,25 +13987,25 @@ From https://en.wikipedia.org/wiki/ [A mineral] is different from a rock, which 
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000266"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Water vapour is a vapour which is the gas phase of water.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://en.wikipedia.org/wiki/Water_vapor</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Water_vapor</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000266"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>aqueous vapor</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://en.wikipedia.org/wiki/Water_vapor</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Water_vapor</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000266"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>aqueous vapour</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://en.wikipedia.org/wiki/Water_vapor</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Water_vapor</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000266"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>water vapor</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://en.wikipedia.org/wiki/Water_vapor</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Water_vapor</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -13674,8 +14046,8 @@ From https://en.wikipedia.org/wiki/ [A mineral] is different from a rock, which 
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000267"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>An atmosphere is a layer of gases surrounding a material body of sufficient mass that is held in place by the gravity of the body.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://en.wikipedia.org/wiki/Atmosphere</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://en.wikipedia.org/wiki/Physical_geography</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Atmosphere</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Physical_geography</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -13720,13 +14092,13 @@ From https://en.wikipedia.org/wiki/ [A mineral] is different from a rock, which 
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000268"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Atmospheric water vapour is water vapour that is part of an atmosphere.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://en.wikipedia.org/wiki/Water_vapor</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Water_vapor</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000268"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>atmospheric water vapor</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://en.wikipedia.org/wiki/Water_vapor</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Water_vapor</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -13770,7 +14142,34 @@ From https://en.wikipedia.org/wiki/ [A mineral] is different from a rock, which 
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000274"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Slate is a metamorphic rock which is fine-grained, foliated, homogeneous, Slates are derived from clastic sedimentary rocks.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://en.wikipedia.org/wiki/Slate</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Slate</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01000276 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000276">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001110"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000280"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>A large unit of land or water containing a geographically distinct assemblage of species, natural communities, and environmental conditions.</obo:IAO_0000115>
+        <oboInOwl:created_by>ORCID:0000-0002-4366-3088</oboInOwl:created_by>
+        <oboInOwl:creation_date>2013-10-12T17:21:09Z</oboInOwl:creation_date>
+        <oboInOwl:inSubset>envoPolar</oboInOwl:inSubset>
+        <rdfs:comment>Unlike biomes, ecoregions are geographically defined entities. ENVO&apos;s sister project, GAZ, contains terms for instances of ecoregions (e.g. Beringia lowland tundra). Requests for new terms should be directed to GAZ. ENVO will only contain this top-level class. The class&apos; definition is preliminary and will be aligned to BFO.</rdfs:comment>
+        <rdfs:label>ecoregion</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000276"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A large unit of land or water containing a geographically distinct assemblage of species, natural communities, and environmental conditions.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>DOI:10.1641/0006-3568(2001)051[0933:TEOTWA]2.0.CO;2</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>URL:http://worldwildlife.org/biomes</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -13805,6 +14204,33 @@ From https://en.wikipedia.org/wiki/ [A mineral] is different from a rock, which 
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>ice</owl:annotatedTarget>
         <oboInOwl:hasDbXref>http://www.eionet.europa.eu/gemet/concept/4131</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01000280 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000280">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001110"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000817"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>Ecozones delineate large areas of a planetary surface within which organisms have been evolving in relative isolation over long periods of time, separated from one another by geographic features, such as oceans, broad deserts, or high mountain ranges, that constitute barriers to migration.</obo:IAO_0000115>
+        <oboInOwl:created_by>ORCID:0000-0002-4366-3088</oboInOwl:created_by>
+        <oboInOwl:creation_date>2013-10-13T18:32:46Z</oboInOwl:creation_date>
+        <oboInOwl:inSubset>envoPolar</oboInOwl:inSubset>
+        <rdfs:comment>ENVO contains this top-level class, but all instances will be in GAZ. The definition is preliminary and will be aligned to BFO.
+https://en.wikipedia.org/wiki/  Ecozones correspond to the floristic kingdoms of botany or zoogeographic regions of zoology. Ecozones are characterized by the evolutionary history of the organisms they contain. They are distinct from biomes, also known as major habitat types, which are divisions of the Earth&apos;s surface based on life form, or the adaptation of plants and animals to climatic, soil, and other conditions. Biomes are characterized by similar climax vegetation. Each ecozone may include a number of different biomes. A tropical moist broadleaf forest in Central America, for example, may be similar to one in New Guinea in its vegetation type and structure, climate, soils, etc., but these forests are inhabited by plants and animals with very different evolutionary histories.</rdfs:comment>
+        <rdfs:label>ecozone</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000280"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Ecozones delineate large areas of a planetary surface within which organisms have been evolving in relative isolation over long periods of time, separated from one another by geographic features, such as oceans, broad deserts, or high mountain ranges, that constitute barriers to migration.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/ecozone</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -14656,6 +15082,71 @@ From https://en.wikipedia.org/wiki/ [A mineral] is different from a rock, which 
     
 
 
+    <!-- http://purl.obolibrary.org/obo/ENVO_01000340 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000340">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000343"/>
+        <obo:IAO_0000115>An altitudinal condition which inheres in a bearer by virtue of the bearer having a monthly mean temperature is less than 10 degrees Celsius and being located at altitudes above the tree line and below the snowline.</obo:IAO_0000115>
+        <oboInOwl:created_by>ORCID:0000-0002-4366-3088</oboInOwl:created_by>
+        <oboInOwl:hasDbXref>LTER:26</oboInOwl:hasDbXref>
+        <oboInOwl:inSubset>envoPolar</oboInOwl:inSubset>
+        <rdfs:comment>Requested term with preliminary def. See Issue 29 on the envo tracker.</rdfs:comment>
+        <rdfs:label>alpine</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000340"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>An altitudinal condition which inheres in a bearer by virtue of the bearer having a monthly mean temperature is less than 10 degrees Celsius and being located at altitudes above the tree line and below the snowline.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://en.wikipedia.org/wiki/Altitudinal_zonation</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01000342 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000342">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000343"/>
+        <obo:IAO_0000115>An altitudinal condition which inheres in a bearer by virtue of the bearer being located at an altitude between mid-altitude forests and the tree line.</obo:IAO_0000115>
+        <oboInOwl:created_by>ORCID:0000-0002-4366-3088</oboInOwl:created_by>
+        <oboInOwl:hasDbXref>LTER:350</oboInOwl:hasDbXref>
+        <oboInOwl:inSubset>envoPolar</oboInOwl:inSubset>
+        <rdfs:comment>The exact level of the tree line varies with local climate, but typically the tree line is found where mean monthly soil temperatures never exceed 10.0 degrees C and the mean annual soil temperatures are around 6.7 degrees C. In the tropics, this region is typified by montane rain forest (above 3,000 ft) while at higher latitudes coniferous forests often dominate.</rdfs:comment>
+        <rdfs:label>montane</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000342"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>An altitudinal condition which inheres in a bearer by virtue of the bearer being located at an altitude between mid-altitude forests and the tree line.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://en.wikipedia.org/wiki/Altitudinal_zonation</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000342"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+        <owl:annotatedTarget>The exact level of the tree line varies with local climate, but typically the tree line is found where mean monthly soil temperatures never exceed 10.0 degrees C and the mean annual soil temperatures are around 6.7 degrees C. In the tropics, this region is typified by montane rain forest (above 3,000 ft) while at higher latitudes coniferous forests often dominate.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://en.wikipedia.org/wiki/Altitudinal_zonation</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01000343 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000343">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000203"/>
+        <obo:IAO_0000115>An altitudinal condition is an environmental condition in which ranges of factors such as temperature, humidity, soil composition, solar irradiation, and tree density vary with ranges in altitude.</obo:IAO_0000115>
+        <oboInOwl:created_by>ORCID:0000-0002-4366-3088</oboInOwl:created_by>
+        <oboInOwl:inSubset>envoPolar</oboInOwl:inSubset>
+        <rdfs:comment>Depending on the latitude (and, to a lesser extent, other factors), the actual location of the zones where these conditions are in effect will change.</rdfs:comment>
+        <rdfs:label>altitudinal condition</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000343"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>An altitudinal condition is an environmental condition in which ranges of factors such as temperature, humidity, soil composition, solar irradiation, and tree density vary with ranges in altitude.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://en.wikipedia.org/wiki/Altitudinal_zonation</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/ENVO_01000352 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000352">
@@ -14947,6 +15438,47 @@ From https://en.wikipedia.org/wiki/ [A mineral] is different from a rock, which 
         <obo:IAO_0000115>A building part is a construction which is part of a building.</obo:IAO_0000115>
         <rdfs:comment>Not recommended for annotation. This class is likely to be made into an inferred class as its subclasses are distributed among more meaningful superclasses (i.e. ceiling is_a surface layer). See for example, &quot;building floor&quot;. The boundaries between building parts may be bona fide or fiat.</rdfs:comment>
         <rdfs:label>building part</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01000435 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000435">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_01001243"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000086"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_01000340"/>
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_01000342"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001243"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000086"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_01000340"/>
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_01000342"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>A class created to group GFM 2000 terms by the dominant vegetation type. Definitions pending.</rdfs:comment>
+        <rdfs:label>montane forest</rdfs:label>
     </owl:Class>
     
 
@@ -16750,7 +17282,7 @@ From https://en.wikipedia.org/wiki/ [A mineral] is different from a rock, which 
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000707"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Coastal flooding is a process in which normally dry, low-lying land near a coast is flooded by sea water.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Coastal_flood</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://en.wikipedia.org/wiki/Coastal_flood</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -18542,6 +19074,24 @@ From https://en.wikipedia.org/wiki/ [A mineral] is different from a rock, which 
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A petting zoo is a zoological garden which contains domesticated non-human animals and some wild non-human animals that are docile enough for humans to touch and feed.</owl:annotatedTarget>
         <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Petting_zoo</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01000925 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000925">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00003861"/>
+        <obo:IAO_0000115>A facility in which non-human animals are slaughtered and processed for human consumption.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym>slaughterhouse</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasRelatedSynonym>meat processing building</oboInOwl:hasRelatedSynonym>
+        <rdfs:label xml:lang="en">abattoir</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000925"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A facility in which non-human animals are slaughtered and processed for human consumption.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Slaughterhouse</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -21625,7 +22175,7 @@ From https://en.wikipedia.org/wiki/ [A mineral] is different from a rock, which 
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001206"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>An ecosystem in which grasses (Graminae) are the dominant form of vegetation and determine the system&apos;s structure and dynamics.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://en.wikipedia.org/wiki/Grassland</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Grassland</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001206"/>
@@ -22979,6 +23529,34 @@ From https://en.wikipedia.org/wiki/ [A mineral] is different from a rock, which 
     
 
 
+    <!-- http://purl.obolibrary.org/obo/ENVO_01001346 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01001346">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_03000010"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_00010483"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000638"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>An action of exogenic processes (such as water flow or wind) which remove environmental material from one location on the surface of an astronomical body, transporting it to another location where it is deposited.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">erosion</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001346"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>An action of exogenic processes (such as water flow or wind) which remove environmental material from one location on the surface of an astronomical body, transporting it to another location where it is deposited.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Erosion</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/ENVO_01001357 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01001357">
@@ -24269,6 +24847,25 @@ From https://en.wikipedia.org/wiki/ [A mineral] is different from a rock, which 
     
 
 
+    <!-- http://purl.obolibrary.org/obo/ENVO_01001570 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01001570">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000276"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002220"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000635"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>An ecoregion which is located on a landmass.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0002-4366-3088"/>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-03-05T17:40:44Z</oboInOwl:creation_date>
+        <oboInOwl:hasDbXref>https://www.worldwildlife.org/biome-categories/terrestrial-ecoregions</oboInOwl:hasDbXref>
+        <rdfs:label xml:lang="en">terrestrial ecoregion</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/ENVO_01001581 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01001581">
@@ -24858,6 +25455,119 @@ Some definitions include additional discussion of the the physics involved which
     
 
 
+    <!-- http://purl.obolibrary.org/obo/ENVO_01001679 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01001679">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001677"/>
+        <obo:IAO_0000115>A fluid interface which separates two fluid masses with differing properties.</obo:IAO_0000115>
+        <dc:creator rdf:resource="http://orcid.org/0000-0002-4366-3088"/>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-07-22T17:43:32Z</dc:date>
+        <rdfs:label xml:lang="en">fluid front</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001679"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A fluid interface which separates two fluid masses with differing properties.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:resource="http://glossary.ametsoc.org/wiki/Front"/>
+        <oboInOwl:hasDbXref rdf:resource="http://ww2010.atmos.uiuc.edu/(Gh)/guides/mtr/af/frnts/home.rxml"/>
+        <oboInOwl:hasDbXref rdf:resource="https://en.wikipedia.org/wiki/Weather_front"/>
+        <oboInOwl:hasDbXref rdf:resource="https://en.wikipedia.org/wiki/Front_(oceanography)"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01001680 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01001680">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_01001679"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002473"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000797"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001679"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002473"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000797"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>A fluid front which is composed primarily of gaseous material and separates at least two gaseous masses.</obo:IAO_0000115>
+        <dc:creator rdf:resource="http://orcid.org/0000-0002-4366-3088"/>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-07-22T17:50:08Z</dc:date>
+        <rdfs:label xml:lang="en">gaseous front</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01001681 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01001681">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_01001680"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000267"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002473"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_00002005"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000543"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001680"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002473"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_00002005"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002500"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_02500003"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002220"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001682"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>A gaseous front which separates two masses of air with different densities and is a principal cause of meteorological phenomena.</obo:IAO_0000115>
+        <dc:creator rdf:resource="http://orcid.org/0000-0002-4366-3088"/>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-07-22T17:57:21Z</dc:date>
+        <oboInOwl:hasExactSynonym>meteorological front</oboInOwl:hasExactSynonym>
+        <oboInOwl:inSubset>envoAtmo</oboInOwl:inSubset>
+        <rdfs:comment>This class refers to Earth&apos;s weather fronts. Other forms, not composed of air, are present on other planets and can be created on request. Note: &quot;Since the temperature distribution is the most important regulator of atmospheric density, a front almost invariably separates air masses of different temperature. Along with the basic density criterion and the common temperature criterion, many other features may distinguish a front, such as a pressure trough, a change in wind direction, a moisture discontinuity, and certain characteristic cloud and precipitation forms.&quot;</rdfs:comment>
+        <rdfs:label xml:lang="en">weather front</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001681"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A gaseous front which separates two masses of air with different densities and is a principal cause of meteorological phenomena.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:resource="http://glossary.ametsoc.org/wiki/Front"/>
+        <oboInOwl:hasDbXref rdf:resource="https://en.wikipedia.org/wiki/Weather_front"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001681"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+        <owl:annotatedTarget>This class refers to Earth&apos;s weather fronts. Other forms, not composed of air, are present on other planets and can be created on request. Note: &quot;Since the temperature distribution is the most important regulator of atmospheric density, a front almost invariably separates air masses of different temperature. Along with the basic density criterion and the common temperature criterion, many other features may distinguish a front, such as a pressure trough, a change in wind direction, a moisture discontinuity, and certain characteristic cloud and precipitation forms.&quot;</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:resource="http://glossary.ametsoc.org/wiki/Front"/>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/ENVO_01001682 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01001682">
@@ -25117,6 +25827,26 @@ Some definitions include additional discussion of the the physics involved which
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-08-20T09:47:10Z</dc:date>
         <rdfs:label xml:lang="en">mass of compounded environmental materials</rdfs:label>
     </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01001698 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01001698">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001681"/>
+        <obo:IAO_0000115 xml:lang="en">A weather front which separates air masses of tropical and polar origin.</obo:IAO_0000115>
+        <dc:creator rdf:resource="http://orcid.org/0000-0002-4366-3088"/>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-08-20T13:46:42Z</dc:date>
+        <oboInOwl:inSubset xml:lang="en">envoAtmo</oboInOwl:inSubset>
+        <oboInOwl:inSubset xml:lang="en">envoPolar</oboInOwl:inSubset>
+        <rdfs:label xml:lang="en">polar front</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001698"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="en">A weather front which separates air masses of tropical and polar origin.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:resource="http://glossary.ametsoc.org/wiki/Polar_front"/>
+    </owl:Axiom>
     
 
 
@@ -25456,6 +26186,64 @@ Some definitions include additional discussion of the the physics involved which
         <dc:creator rdf:resource="http://orcid.org/0000-0002-4366-3088"/>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-10-29T14:50:34Z</dc:date>
         <rdfs:label xml:lang="en">construction</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01001835 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01001835">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_00000428"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000086"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000340"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000428"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000086"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000340"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>A biome which is subject to alpine altitudinal conditions.</obo:IAO_0000115>
+        <dc:creator rdf:resource="http://orcid.org/0000-0002-4366-3088"/>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-11-06T15:59:35Z</dc:date>
+        <rdfs:label xml:lang="en">alpine biome</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01001836 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01001836">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_00000428"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000086"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000342"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000428"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000086"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000342"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>A biome which is subject to montane altitudinal conditions.</obo:IAO_0000115>
+        <dc:creator rdf:resource="http://orcid.org/0000-0002-4366-3088"/>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-11-06T16:00:33Z</dc:date>
+        <rdfs:label xml:lang="en">montane biome</rdfs:label>
     </owl:Class>
     
 
@@ -26913,6 +27701,23 @@ Some definitions include additional discussion of the the physics involved which
     
 
 
+    <!-- http://purl.obolibrary.org/obo/ENVO_02500028 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_02500028">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001346"/>
+        <obo:IAO_0000115>An action of exogenic processes (such as water flow or wind) which remove environmental material from one part of a planet&apos;s crust, transporting it to another location where it is deposited.</obo:IAO_0000115>
+        <oboInOwl:inSubset>envoPolar</oboInOwl:inSubset>
+        <rdfs:label>planetary erosion</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_02500028"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>An action of exogenic processes (such as water flow or wind) which remove environmental material from one part of a planet&apos;s crust, transporting it to another location where it is deposited.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Erosion</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/ENVO_02500031 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_02500031">
@@ -27422,6 +28227,32 @@ Some definitions include additional discussion of the the physics involved which
         <rdfs:comment>Experimental class for structural purposes not recommended for annotation.</rdfs:comment>
         <rdfs:label xml:lang="en">material transport process</rdfs:label>
     </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_03000015 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_03000015">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000309"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002131"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000638"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>A depression which is part of a planetary crust, is of geographic scale, and is partially or completely enclosed.</obo:IAO_0000115>
+        <obo:IAO_0000116>The general semantics of depression and geographic basin are still to be worked out see  https://github.com/EnvironmentOntology/envo/issues/486</obo:IAO_0000116>
+        <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0002-4366-3088"/>
+        <obo:IAO_0000117>http://orcid.org/0000-0002-3410-4655</obo:IAO_0000117>
+        <oboInOwl:inSubset>envoPolar</oboInOwl:inSubset>
+        <rdfs:label xml:lang="en">geographic basin</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_03000015"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A depression which is part of a planetary crust, is of geographic scale, and is partially or completely enclosed.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Basin</oboInOwl:hasDbXref>
+    </owl:Axiom>
     
 
 
@@ -28750,7 +29581,7 @@ Some definitions include additional discussion of the the physics involved which
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_2000000"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A manufactured product that is some mixture of chemicals created through some chemical engineering process</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ENVO:cjm</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ENVO:cjm</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -28811,7 +29642,7 @@ Some definitions include additional discussion of the the physics involved which
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_2000003"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A wastewater treatment plant that treats agriculatural wastewater. Agricultural wastewater treatment relates to the treatment of wastewaters produced in the course of agricultural activities. Agriculture is a highly intensified industry in many parts of the world, producing a range of wastewaters requiring a variety of treatment technologies and management practices.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://en.wikipedia.org/wiki/Agricultural_wastewater_treatment</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Agricultural_wastewater_treatment</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -31407,6 +32238,16 @@ Some definitions include additional discussion of the the physics involved which
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0001018"/>
         <obo:IAO_0000115>A physical quality that inheres in a bearer by virtue of the bearer&apos;s amount of force per unit area it exerts.</obo:IAO_0000115>
         <rdfs:label>pressure</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PATO_0001154 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0001154">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000052"/>
+        <obo:IAO_0000115>A quality inhering in a bearer by virtue of the bearer&apos;s length being notably higher than its width.</obo:IAO_0000115>
+        <rdfs:label>elongated</rdfs:label>
     </owl:Class>
     
 
@@ -35888,6 +36729,674 @@ Classes for population already  exist in IDO (&apos;organism population&apos;, I
         <obo:IAO_0000115>An region of the mesoderm that includes anterior lateral mesoderm of the first heart field plus contiguous pharyngeal mesoderm that gives rise to second-heart-field-derived regions of the heart and branchiomeric muscles.</obo:IAO_0000115>
         <rdfs:label>cardiopharyngeal field</rdfs:label>
     </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01001569 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/ENVO_01001569">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001570"/>
+        <obo:BFO_0000050 rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001571"/>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0002-4366-3088"/>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-03-05T17:25:21Z</oboInOwl:creation_date>
+        <oboInOwl:hasBroadSynonym>Western Australia Ecoregion</oboInOwl:hasBroadSynonym>
+        <oboInOwl:hasDbXref>WWF:AA1310</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://www.worldwildlife.org/ecoregions/aa1310</oboInOwl:hasDbXref>
+        <rdfs:label xml:lang="en">Western Australian Mulga Shrublands Ecoregion</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01001571 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/ENVO_01001571">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001570"/>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0002-4366-3088"/>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-03-05T17:51:32Z</oboInOwl:creation_date>
+        <oboInOwl:hasDbXref>https://www.worldwildlife.org/biomes/deserts-and-xeric-shrublands</oboInOwl:hasDbXref>
+        <rdfs:label xml:lang="en">Australasia Ecoregion</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01001572 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/ENVO_01001572">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001570"/>
+        <obo:BFO_0000050 rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001571"/>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0002-4366-3088"/>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-03-05T17:52:41Z</oboInOwl:creation_date>
+        <oboInOwl:hasBroadSynonym xml:lang="en">Southern central Australia Ecoregion</oboInOwl:hasBroadSynonym>
+        <oboInOwl:hasDbXref>WWF:AA1309</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://www.worldwildlife.org/ecoregions/aa1309</oboInOwl:hasDbXref>
+        <rdfs:label>Tirari-Sturt Stony Desert Ecoregion</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01001573 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/ENVO_01001573">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001570"/>
+        <obo:BFO_0000050 rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001571"/>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0002-4366-3088"/>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-03-05T17:54:35Z</oboInOwl:creation_date>
+        <oboInOwl:hasBroadSynonym>Eastern central Australia Ecoregion</oboInOwl:hasBroadSynonym>
+        <oboInOwl:hasDbXref>WWF:AA1308</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://www.worldwildlife.org/ecoregions/aa1308</oboInOwl:hasDbXref>
+        <rdfs:label xml:lang="en">Simpson Desert Region</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01001574 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/ENVO_01001574">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001570"/>
+        <obo:BFO_0000050 rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001571"/>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0002-4366-3088"/>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-03-05T17:56:13Z</oboInOwl:creation_date>
+        <oboInOwl:hasBroadSynonym>Western Australia Ecoregion</oboInOwl:hasBroadSynonym>
+        <oboInOwl:hasDbXref>WWF:AA1307</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://www.worldwildlife.org/ecoregions/aa1307</oboInOwl:hasDbXref>
+        <rdfs:label xml:lang="en">Pilbara Shrublands Ecoregion</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01001575 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/ENVO_01001575">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001570"/>
+        <obo:BFO_0000050 rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001571"/>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0002-4366-3088"/>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-03-05T18:10:52Z</oboInOwl:creation_date>
+        <oboInOwl:hasBroadSynonym>Western coast of Australia Ecoregion</oboInOwl:hasBroadSynonym>
+        <oboInOwl:hasDbXref>WWF:AA1301</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://www.worldwildlife.org/ecoregions/aa1301</oboInOwl:hasDbXref>
+        <rdfs:label xml:lang="en">Carnarvon Xeric Shrublands Ecoregion</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01001576 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/ENVO_01001576">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001570"/>
+        <obo:BFO_0000050 rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001571"/>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0002-4366-3088"/>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-03-05T18:12:28Z</oboInOwl:creation_date>
+        <oboInOwl:hasBroadSynonym>Central Australia Ecoregion</oboInOwl:hasBroadSynonym>
+        <oboInOwl:hasDbXref>WWF:AA1302</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://www.worldwildlife.org/ecoregions/aa1302</oboInOwl:hasDbXref>
+        <rdfs:label xml:lang="en">Central Ranges Xeric Shrub Ecoregion</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01001577 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/ENVO_01001577">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001570"/>
+        <obo:BFO_0000050 rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001571"/>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0002-4366-3088"/>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-03-05T18:15:11Z</oboInOwl:creation_date>
+        <oboInOwl:hasBroadSynonym>Western central Australia</oboInOwl:hasBroadSynonym>
+        <oboInOwl:hasDbXref>WWF:AA1303</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://www.worldwildlife.org/ecoregions/aa1303</oboInOwl:hasDbXref>
+        <rdfs:label xml:lang="en">Gibson Desert Ecoregion</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01001578 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/ENVO_01001578">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001570"/>
+        <obo:BFO_0000050 rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001571"/>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0002-4366-3088"/>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-03-05T18:17:15Z</oboInOwl:creation_date>
+        <oboInOwl:hasBroadSynonym>Northwestern Australia</oboInOwl:hasBroadSynonym>
+        <oboInOwl:hasDbXref>WWF:AA1304</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://www.worldwildlife.org/ecoregions/aa1304</oboInOwl:hasDbXref>
+        <rdfs:label xml:lang="en">The Great Sandy-Tanami Desert Ecoregion</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01001579 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/ENVO_01001579">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001570"/>
+        <obo:BFO_0000050 rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001571"/>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0002-4366-3088"/>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-03-05T18:24:06Z</oboInOwl:creation_date>
+        <oboInOwl:hasBroadSynonym>Southern Australia Ecoregion</oboInOwl:hasBroadSynonym>
+        <oboInOwl:hasDbXref>WWF:AA1305</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://www.worldwildlife.org/ecoregions/aa1305</oboInOwl:hasDbXref>
+        <rdfs:label xml:lang="en">Great Victoria Desert Ecoregion</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01001580 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/ENVO_01001580">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001570"/>
+        <obo:BFO_0000050 rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001571"/>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0002-4366-3088"/>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-03-05T18:26:16Z</oboInOwl:creation_date>
+        <oboInOwl:hasBroadSynonym>Southern Australia Ecoregion</oboInOwl:hasBroadSynonym>
+        <oboInOwl:hasDbXref>WWF:AA1306</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://www.worldwildlife.org/ecoregions/aa1306</oboInOwl:hasDbXref>
+        <rdfs:label xml:lang="en">Nullarbor Plains Xeric Shrubland Ecoregion</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01001583 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/ENVO_01001583">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001570"/>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0002-4366-3088"/>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-03-06T22:01:41Z</oboInOwl:creation_date>
+        <oboInOwl:hasDbXref>https://www.worldwildlife.org/biomes/deserts-and-xeric-shrublands</oboInOwl:hasDbXref>
+        <rdfs:label xml:lang="en">Afrotropical Ecoregion</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01001584 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/ENVO_01001584">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001570"/>
+        <obo:BFO_0000050 rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001583"/>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0002-4366-3088"/>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-03-06T22:02:37Z</oboInOwl:creation_date>
+        <oboInOwl:hasBroadSynonym>Southern Africa: Southern Namibia into South Africa</oboInOwl:hasBroadSynonym>
+        <oboInOwl:hasDbXref>WWF:AT1322</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://www.worldwildlife.org/ecoregions/at1322</oboInOwl:hasDbXref>
+        <rdfs:label xml:lang="en">Succulent Karoo Ecoregion</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01001585 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/ENVO_01001585">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001570"/>
+        <obo:BFO_0000050 rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001583"/>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0002-4366-3088"/>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-03-06T22:07:38Z</oboInOwl:creation_date>
+        <oboInOwl:hasDbXref>WWF:AT1321</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://www.worldwildlife.org/ecoregions/at1321</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>Arabian Peninsula: Yemen and Saudi Arabia</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">Yemen and Saudi Arabia Ecoregion</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01001586 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/ENVO_01001586">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001570"/>
+        <obo:BFO_0000050 rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001583"/>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0002-4366-3088"/>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-03-06T22:11:38Z</oboInOwl:creation_date>
+        <oboInOwl:hasDbXref>WWF:AT1320</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://www.worldwildlife.org/ecoregions/at1320</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>Arabian Peninsula: Yemen, Saudi Arabia, and Oman</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">Yemen, Saudi Arabia, and Oman Ecoregion</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01001587 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/ENVO_01001587">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001570"/>
+        <obo:BFO_0000050 rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001583"/>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0002-4366-3088"/>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-03-06T22:13:00Z</oboInOwl:creation_date>
+        <oboInOwl:hasDbXref>WWF:AT1319</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://www.worldwildlife.org/ecoregions/at1319</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>Somali montane xeric woodlands ecoregion</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">Somali Montane Xeric Woodland Ecoregion</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01001588 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/ENVO_01001588">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001570"/>
+        <obo:BFO_0000050 rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001583"/>
+        <dc:creator rdf:resource="http://orcid.org/0000-0002-4366-3088"/>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-03-06T22:15:07Z</oboInOwl:creation_date>
+        <oboInOwl:hasBroadSynonym>Islands east of the Horn of Africa and south of Yemen Ecoregion</oboInOwl:hasBroadSynonym>
+        <oboInOwl:hasDbXref>WWF:AT1318</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://www.worldwildlife.org/ecoregions/at1318</oboInOwl:hasDbXref>
+        <rdfs:label xml:lang="en">Socotran Archipelago Ecoregion</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01001589 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/ENVO_01001589">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001570"/>
+        <obo:BFO_0000050 rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001583"/>
+        <dc:creator rdf:resource="http://orcid.org/0000-0002-4366-3088"/>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-03-06T22:18:55Z</oboInOwl:creation_date>
+        <oboInOwl:hasDbXref>WWF:AT1317</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://www.worldwildlife.org/ecoregions/at1317</oboInOwl:hasDbXref>
+        <rdfs:label xml:lang="en">Red Sea Coastal Desert Ecoregion</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01001590 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/ENVO_01001590">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001570"/>
+        <obo:BFO_0000050 rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001583"/>
+        <dc:creator rdf:resource="http://orcid.org/0000-0002-4366-3088"/>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-03-06T22:20:56Z</oboInOwl:creation_date>
+        <oboInOwl:hasDbXref>WWF:AT1316</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://www.worldwildlife.org/ecoregions/at1316</oboInOwl:hasDbXref>
+        <rdfs:label xml:lang="en">Namibian Savanna Woodland Ecoregion</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01001591 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/ENVO_01001591">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001570"/>
+        <obo:BFO_0000050 rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001583"/>
+        <dc:creator rdf:resource="http://orcid.org/0000-0002-4366-3088"/>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-03-06T22:24:28Z</oboInOwl:creation_date>
+        <oboInOwl:hasBroadSynonym>Africa: Namibia Ecoregion</oboInOwl:hasBroadSynonym>
+        <oboInOwl:hasDbXref>WWF:AT1315</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://www.worldwildlife.org/ecoregions/at1315</oboInOwl:hasDbXref>
+        <rdfs:label xml:lang="en">Namib Desert Ecoregion</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01001592 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/ENVO_01001592">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001570"/>
+        <obo:BFO_0000050 rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001583"/>
+        <dc:creator rdf:resource="http://orcid.org/0000-0002-4366-3088"/>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-03-06T22:26:15Z</oboInOwl:creation_date>
+        <oboInOwl:hasDbXref>WWF:AT1314</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://www.worldwildlife.org/ecoregions/at1314</oboInOwl:hasDbXref>
+        <rdfs:label xml:lang="en">Nama Karoo Ecoregion</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01001593 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/ENVO_01001593">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001570"/>
+        <obo:BFO_0000050 rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001583"/>
+        <dc:creator rdf:resource="http://orcid.org/0000-0002-4366-3088"/>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-03-06T22:28:43Z</oboInOwl:creation_date>
+        <oboInOwl:hasDbXref>WWF:AT1313</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://www.worldwildlife.org/ecoregions/at1313</oboInOwl:hasDbXref>
+        <rdfs:label xml:lang="en">Masai Xeric Grasslands and Shrublands Ecoregion</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01001594 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/ENVO_01001594">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001570"/>
+        <obo:BFO_0000050 rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001583"/>
+        <dc:creator rdf:resource="http://orcid.org/0000-0002-4366-3088"/>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-03-06T22:30:23Z</oboInOwl:creation_date>
+        <oboInOwl:hasDbXref>WWF:AT1312</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://www.worldwildlife.org/ecoregions/at1312</oboInOwl:hasDbXref>
+        <rdfs:label xml:lang="en">Madagascar Succulent Woodlands Ecoregion</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01001595 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/ENVO_01001595">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001570"/>
+        <obo:BFO_0000050 rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001583"/>
+        <dc:creator rdf:resource="http://orcid.org/0000-0002-4366-3088"/>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-03-06T22:31:29Z</oboInOwl:creation_date>
+        <oboInOwl:hasDbXref>WWF:AT1311</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://www.worldwildlife.org/ecoregions/at1311</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>Madagascar spiny desert ecoregion</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">Madagascar Spiny Thickets Ecoregion</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01001596 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/ENVO_01001596">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001570"/>
+        <obo:BFO_0000050 rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001583"/>
+        <dc:creator rdf:resource="http://orcid.org/0000-0002-4366-3088"/>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-03-06T22:39:32Z</oboInOwl:creation_date>
+        <oboInOwl:hasDbXref>WWF:AT1310</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://www.worldwildlife.org/ecoregions/at1310</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>Africa: Coastal Namibia and Angola Ecoregion</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">Kaokoveld Desert Ecoregion</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01001597 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/ENVO_01001597">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001570"/>
+        <obo:BFO_0000050 rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001583"/>
+        <dc:creator rdf:resource="http://orcid.org/0000-0002-4366-3088"/>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-03-06T22:42:47Z</oboInOwl:creation_date>
+        <oboInOwl:hasDbXref>WWF:AT1309</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://www.worldwildlife.org/ecoregions/at1309</oboInOwl:hasDbXref>
+        <rdfs:label xml:lang="en">Kalahari Xeric Savanna Ecoregion</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01001598 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/ENVO_01001598">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001570"/>
+        <obo:BFO_0000050 rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001583"/>
+        <dc:creator rdf:resource="http://orcid.org/0000-0002-4366-3088"/>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-03-06T22:44:54Z</oboInOwl:creation_date>
+        <oboInOwl:hasDbXref>WWF:AT1308</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://www.worldwildlife.org/ecoregions/at1308</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>Southern Africa: Islands about half-way between southern Madagascar and southern Mozambique Ecoregion</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">Ile Europa and Bassas da India Ecoregion</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01001599 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/ENVO_01001599">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001570"/>
+        <obo:BFO_0000050 rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001583"/>
+        <dc:creator rdf:resource="http://orcid.org/0000-0002-4366-3088"/>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-03-06T22:46:58Z</oboInOwl:creation_date>
+        <oboInOwl:hasBroadSynonym>Eastern Africa: Somalia</oboInOwl:hasBroadSynonym>
+        <oboInOwl:hasDbXref>WWF:AT1307</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://www.worldwildlife.org/ecoregions/at1307</oboInOwl:hasDbXref>
+        <rdfs:label xml:lang="en">Hobyo Grassland and Shrubland Ecoregion</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01001600 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/ENVO_01001600">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001570"/>
+        <obo:BFO_0000050 rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001583"/>
+        <dc:creator rdf:resource="http://orcid.org/0000-0002-4366-3088"/>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-03-06T22:54:57Z</oboInOwl:creation_date>
+        <oboInOwl:hasDbXref>WWF:AT1306</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://www.worldwildlife.org/ecoregions/at1306</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>Arabian Peninsula: Oman and United Arab Emirates Ecoregion</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">Oman and United Arab Emirates Ecoregion</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01001601 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/ENVO_01001601">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001570"/>
+        <obo:BFO_0000050 rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001583"/>
+        <dc:creator rdf:resource="http://orcid.org/0000-0002-4366-3088"/>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-03-07T00:08:06Z</oboInOwl:creation_date>
+        <oboInOwl:hasDbXref>WWF:AT1305</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://www.worldwildlife.org/ecoregions/at1305</oboInOwl:hasDbXref>
+        <rdfs:label xml:lang="en">Ethiopian Xeric Grasslands and Shrublands Ecoregion</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01001602 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/ENVO_01001602">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001570"/>
+        <obo:BFO_0000050 rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001583"/>
+        <dc:creator rdf:resource="http://orcid.org/0000-0002-4366-3088"/>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-03-07T00:11:29Z</oboInOwl:creation_date>
+        <oboInOwl:hasDbXref>WWF:AT1304</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://www.worldwildlife.org/ecoregions/at1304</oboInOwl:hasDbXref>
+        <rdfs:label xml:lang="en">Eritrean Coastal Desert Ecoregion</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01001603 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/ENVO_01001603">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001570"/>
+        <obo:BFO_0000050 rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001583"/>
+        <dc:creator rdf:resource="http://orcid.org/0000-0002-4366-3088"/>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-03-07T00:13:33Z</oboInOwl:creation_date>
+        <oboInOwl:hasDbXref>WWF:AT1303</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://www.worldwildlife.org/ecoregions/at1303</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>North central Africa: Eastern Chad and small area of western Sudan</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">East Saharan Montane Xeric Woodland Ecoregion</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01001604 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/ENVO_01001604">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001570"/>
+        <obo:BFO_0000050 rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001583"/>
+        <dc:creator rdf:resource="http://orcid.org/0000-0002-4366-3088"/>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-03-07T00:16:12Z</oboInOwl:creation_date>
+        <oboInOwl:hasDbXref>WWF:AT1302</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://www.worldwildlife.org/ecoregions/at1302</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>Western Asia: Oman, Yemen, and Saudi Arabia Ecoregion</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">Oman, Yemen, and Saudi Arabia Ecoregion</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01001605 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/ENVO_01001605">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001570"/>
+        <obo:BFO_0000050 rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001583"/>
+        <dc:creator rdf:resource="http://orcid.org/0000-0002-4366-3088"/>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-03-07T00:18:09Z</oboInOwl:creation_date>
+        <oboInOwl:hasDbXref>WWF:AT1301</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://www.worldwildlife.org/ecoregions/at1301</oboInOwl:hasDbXref>
+        <rdfs:label xml:lang="en">Aldabra Island Xeric Scrub Ecoregion</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01001626 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/ENVO_01001626">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001570"/>
+        <dc:creator rdf:resource="http://orcid.org/0000-0002-4366-3088"/>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-04-26T23:38:50Z</oboInOwl:creation_date>
+        <oboInOwl:hasDbXref rdf:resource="https://www.worldwildlife.org/biomes/deserts-and-xeric-shrublands"/>
+        <rdfs:label xml:lang="en">Indo-Malay Ecoregion</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01001627 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/ENVO_01001627">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001570"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001780"/>
+        <obo:BFO_0000050 rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001626"/>
+        <dc:creator rdf:resource="http://orcid.org/0000-0002-4366-3088"/>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-04-26T23:40:13Z</oboInOwl:creation_date>
+        <oboInOwl:hasDbXref rdf:resource="https://www.worldwildlife.org/ecoregions/im1304"/>
+        <oboInOwl:hasDbXref>WWF:IM1304</oboInOwl:hasDbXref>
+        <oboInOwl:hasRelatedSynonym>Southern Asia: Western India into Pakistan</oboInOwl:hasRelatedSynonym>
+        <rdfs:label xml:lang="en">Thar Desert</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01001628 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/ENVO_01001628">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001570"/>
+        <obo:BFO_0000050 rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001626"/>
+        <dc:creator rdf:resource="http://orcid.org/0000-0002-4366-3088"/>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-04-27T00:12:51Z</oboInOwl:creation_date>
+        <oboInOwl:hasDbXref rdf:resource="https://www.worldwildlife.org/ecoregions/im1303"/>
+        <oboInOwl:hasDbXref>WWF:IM1303</oboInOwl:hasDbXref>
+        <oboInOwl:hasRelatedSynonym>Southern Asia: Eastern India and western Pakistan</oboInOwl:hasRelatedSynonym>
+        <rdfs:label xml:lang="en">Northwestern Thorn Scrub Forests</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01001699 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/ENVO_01001699">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001698"/>
+        <obo:IAO_0000115>A polar front between the deep, cold Arctic air and the shallower, warmer polar air of northern latitudes on Earth.</obo:IAO_0000115>
+        <dc:creator rdf:resource="http://orcid.org/0000-0002-4366-3088"/>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-08-20T13:47:18Z</dc:date>
+        <oboInOwl:inSubset>envoAtmo</oboInOwl:inSubset>
+        <oboInOwl:inSubset>envoPolar</oboInOwl:inSubset>
+        <rdfs:label xml:lang="en">Arctic front</rdfs:label>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001699"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A polar front between the deep, cold Arctic air and the shallower, warmer polar air of northern latitudes on Earth.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:resource="http://glossary.ametsoc.org/wiki/Arctic_front"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01001700 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/ENVO_01001700">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001698"/>
+        <obo:IAO_0000115>A polar front between the deep, cold Antarctic air and the shallower, warmer polar air of southern latitudes on Earth.</obo:IAO_0000115>
+        <dc:creator rdf:resource="http://orcid.org/0000-0002-4366-3088"/>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-08-20T13:48:44Z</dc:date>
+        <oboInOwl:inSubset>envoAtmo</oboInOwl:inSubset>
+        <oboInOwl:inSubset>envoPolar</oboInOwl:inSubset>
+        <rdfs:label xml:lang="en">Antarctic front</rdfs:label>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001700"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A polar front between the deep, cold Antarctic air and the shallower, warmer polar air of southern latitudes on Earth.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:resource="http://glossary.ametsoc.org/wiki/Antarctic_front"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01001862 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/ENVO_01001862">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001211"/>
+        <obo:RO_0002608 rdf:resource="https://www.wikidata.org/wiki/Q525"/>
+        <obo:IAO_0000115>Stellar radiation emitted from Sol.</obo:IAO_0000115>
+        <dc:creator rdf:resource="http://orcid.org/0000-0002-4366-3088"/>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-05-19T22:27:44Z</dc:date>
+        <rdfs:label xml:lang="en">Solar radiation</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.wikidata.org/wiki/Q2 -->
+
+    <owl:NamedIndividual rdf:about="https://www.wikidata.org/wiki/Q2">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000958"/>
+        <obo:IAO_0000115>third planet from the Sun in the Solar System</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">Earth</rdfs:label>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="https://www.wikidata.org/wiki/Q2"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>third planet from the Sun in the Solar System</owl:annotatedTarget>
+        <obo:IAO_0000119>https://www.wikidata.org/wiki/Q2</obo:IAO_0000119>
+    </owl:Axiom>
+    
+
+
+    <!-- https://www.wikidata.org/wiki/Q2306597 -->
+
+    <owl:NamedIndividual rdf:about="https://www.wikidata.org/wiki/Q2306597">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000216"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000248"/>
+            </owl:Restriction>
+        </rdf:type>
+        <obo:IAO_0000115>&quot;Suni, or Jalca, is one of the eight Natural Regions of Peru. It is located in the Andes at an altitude between 3,500 and 4,000 metres above sea level. Suni has a dry and cold weather and there are many glacial valleys. The flora includes gramineous plants and shrubs such as the taya-taya (Caesalpinia spinosa), the quishuar (Buddleja coriacea), and the cantuta (Cantua buxifolia) which was considered sacred by the Incas. Even though it is hard for plants to grow because of the weather, people are able to cultivate such crops as quinoa, qañiwa, broad beans and ulluku (Ullucus tuberosus). The main fauna is the guinea pig and, among numerous other highland birds, the Chiguanco thrush.&quot;</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym>Jalca</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">Suni</rdfs:label>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="https://www.wikidata.org/wiki/Q2306597"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>&quot;Suni, or Jalca, is one of the eight Natural Regions of Peru. It is located in the Andes at an altitude between 3,500 and 4,000 metres above sea level. Suni has a dry and cold weather and there are many glacial valleys. The flora includes gramineous plants and shrubs such as the taya-taya (Caesalpinia spinosa), the quishuar (Buddleja coriacea), and the cantuta (Cantua buxifolia) which was considered sacred by the Incas. Even though it is hard for plants to grow because of the weather, people are able to cultivate such crops as quinoa, qañiwa, broad beans and ulluku (Ullucus tuberosus). The main fauna is the guinea pig and, among numerous other highland birds, the Chiguanco thrush.&quot;</owl:annotatedTarget>
+        <obo:IAO_0000119>https://en.wikipedia.org/wiki/Suni_(geography)</obo:IAO_0000119>
+    </owl:Axiom>
+    
+
+
+    <!-- https://www.wikidata.org/wiki/Q525 -->
+
+    <owl:NamedIndividual rdf:about="https://www.wikidata.org/wiki/Q525">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000801"/>
+        <oboInOwl:hasExactSynonym>Sun</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">Sol</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://www.wikidata.org/wiki/Q715269 -->
+
+    <owl:NamedIndividual rdf:about="https://www.wikidata.org/wiki/Q715269">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000015"/>
+        <obo:BFO_0000050 rdf:resource="https://www.wikidata.org/wiki/Q2"/>
+        <obo:IAO_0000115>Earth&apos;s interconnected water system</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">World Ocean</rdfs:label>
+    </owl:NamedIndividual>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="https://www.wikidata.org/wiki/Q715269"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Earth&apos;s interconnected water system</owl:annotatedTarget>
+        <obo:IAO_0000119>https://www.wikidata.org/wiki/Q715269</obo:IAO_0000119>
+    </owl:Axiom>
     
 
 

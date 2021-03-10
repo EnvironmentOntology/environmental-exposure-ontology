@@ -29,12 +29,12 @@ TMPDIR=                     tmp
 SCRIPTSDIR=                 ../scripts
 SPARQLDIR =                 ../sparql
 COMPONENTSDIR =             components
-REPORT_FAIL_ON =            None
-REPORT_LABEL =              -l true
+REPORT_FAIL_ON =            ERROR
+REPORT_LABEL =              
 REPORT_PROFILE_OPTS =       
 OBO_FORMAT_OPTIONS =        
-SPARQL_VALIDATION_CHECKS =   equivalent-classes owldef-self-reference
-SPARQL_EXPORTS =             basic-report class-count-by-prefix edges xrefs obsoletes synonyms
+SPARQL_VALIDATION_CHECKS =  
+SPARQL_EXPORTS =            
 ODK_VERSION_MAKEFILE =      v1.2.27
 
 TODAY ?=                    $(shell date +%Y-%m-%d)
@@ -52,8 +52,8 @@ PATTERN_RELEASE_FILES=       $(PATTERNDIR)/definitions.owl $(PATTERNDIR)/pattern
 
 
 FORMATS = $(sort  owl obo json owl)
-FORMATS_INCL_TSV = $(sort $(FORMAT) tsv)
-RELEASE_ARTEFACTS = $(sort  full base base full)
+FORMATS_INCL_TSV = $(sort $(FORMATS) tsv)
+RELEASE_ARTEFACTS = $(sort $(ONT)-full $(ONT)-base $(ONT)-base $(ONT)-full)
 
 # ----------------------------------------
 # Top-level targets
@@ -80,7 +80,7 @@ $(TMPDIR) $(REPORTDIR) :
 ##
 ## By default this is the cross-product of {ont, ont-base} x FORMATS
 
-MAIN_PRODUCTS = $(sort $(foreach r,$(RELEASE_ARTEFACTS), $(ONT)-$(r)) $(ONT))
+MAIN_PRODUCTS = $(sort $(foreach r,$(RELEASE_ARTEFACTS), $(r)) $(ONT))
 MAIN_GZIPPED = 
 MAIN_FILES = $(foreach n,$(MAIN_PRODUCTS), $(foreach f,$(FORMATS), $(n).$(f))) $(MAIN_GZIPPED)
 
@@ -116,9 +116,12 @@ SUBSET_FILES = $(foreach n,$(SUBSET_ROOTS), $(foreach f,$(FORMATS_INCL_TSV), $(n
 .PHONY: all_subsets
 all_subsets: $(SUBSET_FILES)
 
-OBO_REPORT =  $(SRC)-obo-report $(ONT).owl-obo-report
+OBO_REPORT =  ecto-base.owl-obo-report
 REPORTS = $(OBO_REPORT)
 REPORT_FILES = $(patsubst %, $(REPORTDIR)/%.tsv, $(REPORTS))
+
+.PHONY: robot_reports
+robot_reports: $(REPORT_FILES)
 
 .PHONY: all_reports
 all_reports: all_reports_onestep $(REPORT_FILES)
@@ -164,7 +167,6 @@ prepare_release: $(ASSETS) $(PATTERN_RELEASE_FILES)
 .PHONY: prepare_initial_release
 prepare_initial_release: prepare_release
 	cd $(RELEASEDIR) && git add $(RELEASE_ASSETS)
-
 
 # ----------------------------------------
 # Import modules
@@ -231,7 +233,6 @@ imports/ncbitaxon_import.owl: mirror/ncbitaxon.owl imports/ncbitaxon_terms_combi
 		query --update ../sparql/inject-subset-declaration.ru --update ../sparql/postprocess-module.ru \
 		annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) --output $@.tmp.owl && mv $@.tmp.owl $@; fi
 
-
 .PHONY: refresh-imports
 refresh-imports:
 	make IMP=true MIR=true PAT=false IMP_LARGE=true all_imports -B
@@ -253,6 +254,13 @@ refresh-%:
 $(COMPONENTSDIR)/%: .FORCE
 	touch $@
 .PRECIOUS: $(COMPONENTSDIR)/%
+
+
+
+
+
+
+
 
 
 # ----------------------------------------
@@ -397,8 +405,11 @@ mirror/xco.owl: mirror/xco.trigger
 # ----------------------------------------
 subsets/%.tsv: subsets/%.owl
 	$(ROBOT) query -f tsv -i $< -s ../sparql/labels.sparql $@
+.PRECIOUS: subsets/%.tsv
+
 subsets/%.owl: $(ONT).owl
 	owltools --use-catalog $< --extract-ontology-subset --fill-gaps --subset $* -o $@.tmp.owl && mv $@.tmp.owl $@
+.PRECIOUS: subsets/%.owl
 
 
 # ----------------------------------------
@@ -479,7 +490,7 @@ pattern_term_lists_default := $(patsubst %.tsv, $(PATTERNDIR)/data/default/%.txt
 
 # Generating the individual pattern modules and merging them into definitions.owl
 $(PATTERNDIR)/definitions.owl: prepare_patterns update_patterns dosdp_patterns_default  
-	if [ $(PAT) = true ] && [ "${individual_patterns_names_default}" ]  ; then $(ROBOT) merge $(addprefix -i , $(individual_patterns_default))   annotate --ontology-iri $(ONTBASE)/patterns/definitions.owl  --version-iri $(ONTBASE)/releases/$(TODAY)/patterns/definitions.owl --annotation owl:versionInfo $(VERSION) -o definitions.ofn && mv definitions.ofn $@; fi
+	if [ $(PAT) = true ] && [ "${individual_patterns_names_default}" ]   && [ $(PAT) = true ]; then $(ROBOT) merge $(addprefix -i , $(individual_patterns_default))   annotate --ontology-iri $(ONTBASE)/patterns/definitions.owl  --version-iri $(ONTBASE)/releases/$(TODAY)/patterns/definitions.owl --annotation owl:versionInfo $(VERSION) -o definitions.ofn && mv definitions.ofn $@; fi
 
 individual_patterns_names_default := $(strip $(patsubst %.tsv,%, $(notdir $(wildcard $(PATTERNDIR)/data/default/*.tsv))))
 dosdp_patterns_default: $(SRC) all_imports .FORCE

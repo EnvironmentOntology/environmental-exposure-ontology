@@ -1,4 +1,4 @@
-Prefix(:=<urn:unnamed:ontology#ont18>)
+Prefix(:=<urn:unnamed:ontology#ont17>)
 Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
 Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
 Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
@@ -6,9 +6,8 @@ Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
 Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 
 
-Ontology(<urn:unnamed:ontology#ont18>
+Ontology(<urn:unnamed:ontology#ont17>
 
-Declaration(Class(<http://purl.obolibrary.org/obo/ECTO_0500000>))
 Declaration(Class(<http://purl.obolibrary.org/obo/ECTO_0500001>))
 Declaration(Class(<http://purl.obolibrary.org/obo/ECTO_0500002>))
 Declaration(Class(<http://purl.obolibrary.org/obo/ECTO_0500003>))
@@ -33,6 +32,7 @@ Declaration(Class(<http://purl.obolibrary.org/obo/ECTO_0500021>))
 Declaration(Class(<http://purl.obolibrary.org/obo/ECTO_0500022>))
 Declaration(Class(<http://purl.obolibrary.org/obo/ECTO_0500023>))
 Declaration(Class(<http://purl.obolibrary.org/obo/ECTO_0500024>))
+Declaration(Class(<http://purl.obolibrary.org/obo/ECTO_0500025>))
 Declaration(Class(<http://purl.obolibrary.org/obo/ENVO_00003074>))
 Declaration(Class(<http://purl.obolibrary.org/obo/ENVO_03510001>))
 Declaration(Class(<http://purl.obolibrary.org/obo/ENVO_03510002>))
@@ -68,13 +68,6 @@ Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#has
 ############################
 #   Classes
 ############################
-
-# Class: <http://purl.obolibrary.org/obo/ECTO_0500000> (exposure to manufactured product)
-
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0500000> "A exposure event involving the interaction of an exposure receptor to manufactured product."^^xsd:string)
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0500000> "manufactured product exposure"^^xsd:string)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_0500000> "exposure to manufactured product"^^xsd:string)
-EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_0500000> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/ENVO_00003074>)))
 
 # Class: <http://purl.obolibrary.org/obo/ECTO_0500001> (exposure to http://purl.obolibrary.org/obo/ENVO_03510001)
 
@@ -243,6 +236,13 @@ AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.ob
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0500024> "http://purl.obolibrary.org/obo/ENVO_03510025 exposure"^^xsd:string)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_0500024> "exposure to http://purl.obolibrary.org/obo/ENVO_03510025"^^xsd:string)
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_0500024> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/ENVO_03510025>)))
+
+# Class: <http://purl.obolibrary.org/obo/ECTO_0500025> (exposure to manufactured product)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0500025> "A exposure event involving the interaction of an exposure receptor to manufactured product."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0500025> "manufactured product exposure"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_0500025> "exposure to manufactured product"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_0500025> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/ENVO_00003074>)))
 
 
 )

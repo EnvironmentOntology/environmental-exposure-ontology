@@ -1,12 +1,12 @@
 format-version: 1.2
-data-version: ecto/releases/2021-02-16/ecto-base.owl
+data-version: ecto/releases/2021-03-10/ecto-base.owl
 subsetdef: mrex "medically relevant exposure"
 ontology: ecto/ecto-base
 property_value: http://purl.org/dc/elements/1.1/description "ECTO describes exposures to experimental treatments of plants and model organisms (e.g. exposures to modification of diet, lighting levels, temperature); exposures of humans or any other organisms to stressors through a variety of routes, for purposes of public health, environmental monitoring etc, stimuli, natural and experimental, any kind of environmental condition or change in condition that can be experienced by an organism or population of organisms on earth. The scope is very general and can include for example plant treatment regimens, as well as human clinical exposures (although these may better be handled by a more specialized ontology)." xsd:string
 property_value: http://purl.org/dc/elements/1.1/title "Environment Exposure Ontology" xsd:string
 property_value: http://purl.org/dc/elements/1.1/type IAO:8000001
 property_value: http://purl.org/dc/terms/license https://creativecommons.org/publicdomain/zero/1.0/
-property_value: owl:versionInfo "2021-02-16" xsd:string
+property_value: owl:versionInfo "2021-03-10" xsd:string
 
 [Term]
 id: ECTO:0000001
@@ -75,14 +75,9 @@ intersection_of: RO:0002309 CHEBI:44185
 [Term]
 id: ECTO:0000173
 name: corticosteroid exposure
-name: corticosterone exposure
 def: "An exposure to corticosteroid." []
-def: "An exposure to corticosterone." []
 synonym: "exposure to corticosteroid" EXACT []
-synonym: "exposure to corticosterone" EXACT []
 intersection_of: ExO:0000002
-intersection_of: ExO:0000002
-intersection_of: RO:0002309 CHEBI:16827
 intersection_of: RO:0002309 CHEBI:50858
 
 [Term]
@@ -622,48 +617,66 @@ intersection_of: RO:0002309 CHEBI:39025
 
 [Term]
 id: ECTO:0090010
-name: exposure to DDT in air
-name: exposure to DDT in liquid water
-name: exposure to DDT in soil
 name: exposure to lipid in obsolete food product
-name: exposure to paraquat in air
-name: exposure to paraquat in liquid water
-name: exposure to paraquat in soil
-def: "An exposure to DDT mixed in air." []
-def: "An exposure to DDT mixed in liquid water." []
-def: "An exposure to DDT mixed in soil." []
 def: "An exposure to lipid mixed in obsolete food product." []
-def: "An exposure to paraquat mixed in air." []
-def: "An exposure to paraquat mixed in liquid water." []
-def: "An exposure to paraquat mixed in soil." []
-synonym: "DDT exposure in air" EXACT []
-synonym: "DDT exposure in liquid water" EXACT []
-synonym: "DDT exposure in soil" EXACT []
 synonym: "lipid exposure in obsolete food product" EXACT []
+intersection_of: ExO:0000002
+intersection_of: RO:0002243 ENVO:00002002
+intersection_of: RO:0002309 CHEBI:18059
+
+[Term]
+id: ECTO:0090011
+name: exposure to paraquat in air
+def: "An exposure to paraquat mixed in air." []
 synonym: "paraquat exposure in air" EXACT []
-synonym: "paraquat exposure in liquid water" EXACT []
+intersection_of: ExO:0000002
+intersection_of: RO:0002243 ENVO:00002005
+intersection_of: RO:0002309 CHEBI:34905
+
+[Term]
+id: ECTO:0090012
+name: exposure to paraquat in soil
+def: "An exposure to paraquat mixed in soil." []
 synonym: "paraquat exposure in soil" EXACT []
 intersection_of: ExO:0000002
+intersection_of: RO:0002243 ENVO:00001998
+intersection_of: RO:0002309 CHEBI:34905
+
+[Term]
+id: ECTO:0090013
+name: exposure to paraquat in liquid water
+def: "An exposure to paraquat mixed in liquid water." []
+synonym: "paraquat exposure in liquid water" EXACT []
 intersection_of: ExO:0000002
+intersection_of: RO:0002243 ENVO:00002006
+intersection_of: RO:0002309 CHEBI:34905
+
+[Term]
+id: ECTO:0090014
+name: exposure to DDT in air
+def: "An exposure to DDT mixed in air." []
+synonym: "DDT exposure in air" EXACT []
 intersection_of: ExO:0000002
-intersection_of: ExO:0000002
-intersection_of: ExO:0000002
-intersection_of: ExO:0000002
+intersection_of: RO:0002243 ENVO:00002005
+intersection_of: RO:0002309 CHEBI:16130
+
+[Term]
+id: ECTO:0090015
+name: exposure to DDT in soil
+def: "An exposure to DDT mixed in soil." []
+synonym: "DDT exposure in soil" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002243 ENVO:00001998
-intersection_of: RO:0002243 ENVO:00001998
-intersection_of: RO:0002243 ENVO:00002002
-intersection_of: RO:0002243 ENVO:00002005
-intersection_of: RO:0002243 ENVO:00002005
+intersection_of: RO:0002309 CHEBI:16130
+
+[Term]
+id: ECTO:0090016
+name: exposure to DDT in liquid water
+def: "An exposure to DDT mixed in liquid water." []
+synonym: "DDT exposure in liquid water" EXACT []
+intersection_of: ExO:0000002
 intersection_of: RO:0002243 ENVO:00002006
-intersection_of: RO:0002243 ENVO:00002006
 intersection_of: RO:0002309 CHEBI:16130
-intersection_of: RO:0002309 CHEBI:16130
-intersection_of: RO:0002309 CHEBI:16130
-intersection_of: RO:0002309 CHEBI:18059
-intersection_of: RO:0002309 CHEBI:34905
-intersection_of: RO:0002309 CHEBI:34905
-intersection_of: RO:0002309 CHEBI:34905
 
 [Term]
 id: ECTO:0100000
@@ -763,16 +776,9 @@ intersection_of: RO:0002309 MAXO:0000058
 
 [Term]
 id: ECTO:0300000
-name: exposure to construction
 name: exposure to nicotine via consumption of an addictive substance via http://purl.obolibrary.org/obo/ExO_0000159
-def: "A exposure event involving the interaction of an exposure receptor to construction." []
 def: "An exposure event involving nicotine consumption of an addictive substance via http://purl.obolibrary.org/obo/ExO_0000159" []
-synonym: "construction exposure" EXACT []
 synonym: "nicotine consumption of an addictive substance exposure via http://purl.obolibrary.org/obo/ExO_0000159" EXACT []
-intersection_of: ExO:0000002
-intersection_of: ExO:0000002
-intersection_of: RO:0002242 ExO:0000159
-intersection_of: RO:0002309 ENVO:01001813
 
 [Term]
 id: ECTO:0300001
@@ -977,14 +983,9 @@ synonym: "decreased amount exposure to high-density lipoprotein in obsolete food
 [Term]
 id: ECTO:0500000
 name: exposure to environmental disposition
-name: exposure to manufactured product
 def: "A exposure event involving the interaction of an exposure receptor to environmental disposition." []
-def: "A exposure event involving the interaction of an exposure receptor to manufactured product." []
 synonym: "environmental disposition exposure" EXACT []
-synonym: "manufactured product exposure" EXACT []
 intersection_of: ExO:0000002
-intersection_of: ExO:0000002
-intersection_of: RO:0002309 ENVO:00003074
 intersection_of: RO:0002309 ENVO:01000452
 
 [Term]
@@ -1178,6 +1179,14 @@ def: "A exposure event involving the interaction of an exposure receptor to http
 synonym: "http://purl.obolibrary.org/obo/ENVO_03510025 exposure" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002309 ENVO:03510025
+
+[Term]
+id: ECTO:0500025
+name: exposure to manufactured product
+def: "A exposure event involving the interaction of an exposure receptor to manufactured product." []
+synonym: "manufactured product exposure" EXACT []
+intersection_of: ExO:0000002
+intersection_of: RO:0002309 ENVO:00003074
 
 [Term]
 id: ECTO:0600000
@@ -1590,6 +1599,14 @@ intersection_of: ExO:0000002
 intersection_of: RO:0002309 ENVO:01001078
 
 [Term]
+id: ECTO:1000021
+name: exposure to construction
+def: "A exposure event involving the interaction of an exposure receptor to construction." []
+synonym: "construction exposure" EXACT []
+intersection_of: ExO:0000002
+intersection_of: RO:0002309 ENVO:01001813
+
+[Term]
 id: ECTO:1000023
 name: exposure to icestorm
 def: "A exposure event involving the interaction of an exposure receptor to icestorm." []
@@ -1599,9 +1616,9 @@ intersection_of: RO:0002309 ENVO:01000882
 
 [Term]
 id: ECTO:1000027
-name: exposure to http://purl.obolibrary.org/obo/ENVO_01000600
-def: "A exposure event involving the interaction of an exposure receptor to http://purl.obolibrary.org/obo/ENVO_01000600." []
-synonym: "http://purl.obolibrary.org/obo/ENVO_01000600 exposure" EXACT []
+name: exposure to rainwater
+def: "A exposure event involving the interaction of an exposure receptor to rainwater." []
+synonym: "rainwater exposure" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002309 ENVO:01000600
 
@@ -2199,9 +2216,9 @@ intersection_of: RO:0002309 NCBITaxon:9606
 
 [Term]
 id: ECTO:4000000
-name: exposure to deviation (from_normal)deviation(from_normal) of quality
-def: "A exposure event involving the interaction of an exposure receptor to deviation (from_normal)deviation(from_normal) of quality." []
-synonym: "exposure to deviation (from_normal)deviation(from_normal) in quality" EXACT []
+name: exposure to deviation (from_normal) of quality
+def: "A exposure event involving the interaction of an exposure receptor to deviation (from_normal) of quality." []
+synonym: "exposure to deviation (from_normal) in quality" EXACT []
 
 [Term]
 id: ECTO:4000001
@@ -2267,9 +2284,9 @@ synonym: "exposure to increased amount in monosaccharide" EXACT []
 
 [Term]
 id: ECTO:4000011
-name: exposure to increased amount of methane
-def: "A exposure event involving the interaction of an exposure receptor to increased amount of methane." []
-synonym: "exposure to increased amount in methane" EXACT []
+name: exposure to increased amount of cholesterol
+def: "A exposure event involving the interaction of an exposure receptor to increased amount of cholesterol." []
+synonym: "exposure to increased amount in cholesterol" EXACT []
 
 [Term]
 id: ECTO:4000012
@@ -2321,9 +2338,9 @@ synonym: "exposure to decreased amount in monosaccharide" EXACT []
 
 [Term]
 id: ECTO:4000020
-name: exposure to decreased amount of methane
-def: "A exposure event involving the interaction of an exposure receptor to decreased amount of methane." []
-synonym: "exposure to decreased amount in methane" EXACT []
+name: exposure to decreased amount of cholesterol
+def: "A exposure event involving the interaction of an exposure receptor to decreased amount of cholesterol." []
+synonym: "exposure to decreased amount in cholesterol" EXACT []
 
 [Term]
 id: ECTO:4000021
@@ -2344,44 +2361,32 @@ def: "A exposure event involving the interaction of an exposure receptor to decr
 synonym: "exposure to decreased amount in high-density lipoprotein" EXACT []
 
 [Term]
-id: ECTO:4000025
+id: ECTO:4000024
 name: exposure to increased amount of pressure of air
-name: exposure to increased amount of pressure of water
-name: exposure to increased pressure
 def: "A exposure event involving the interaction of an exposure receptor to increased amount of pressure of air." []
-def: "A exposure event involving the interaction of an exposure receptor to increased amount of pressure of water." []
-def: "A exposure event involving the interaction of an exposure receptor to increased pressure." []
 synonym: "exposure to increased amount in pressure of air" EXACT []
-synonym: "exposure to increased amount in pressure of water" EXACT []
+
+[Term]
+id: ECTO:4000025
+name: exposure to increased pressure
+def: "A exposure event involving the interaction of an exposure receptor to increased pressure." []
 synonym: "increased pressure exposure" EXACT []
-intersection_of: ExO:0000002
 intersection_of: ExO:0000002
 intersection_of: RO:0002309 PATO:0001576
 
 [Term]
 id: ECTO:4000026
-name: exposure to decreased amount of pressure of air
-name: exposure to decreased amount of pressure of water
 name: exposure to decreased pressure
-def: "A exposure event involving the interaction of an exposure receptor to decreased amount of pressure of air." []
-def: "A exposure event involving the interaction of an exposure receptor to decreased amount of pressure of water." []
 def: "A exposure event involving the interaction of an exposure receptor to decreased pressure." []
 synonym: "decreased pressure exposure" EXACT []
-synonym: "exposure to decreased amount in pressure of air" EXACT []
-synonym: "exposure to decreased amount in pressure of water" EXACT []
-intersection_of: ExO:0000002
-intersection_of: ExO:0000002
 intersection_of: ExO:0000002
 intersection_of: RO:0002309 PATO:0001575
 
 [Term]
 id: ECTO:4000027
 name: exposure to frozen of liquid water
-name: exposure to increased amount of temperature of air
 def: "A exposure event involving the interaction of an exposure receptor to frozen of liquid water." []
-def: "A exposure event involving the interaction of an exposure receptor to increased amount of temperature of air." []
 synonym: "exposure to frozen in liquid water" EXACT []
-synonym: "exposure to increased amount in temperature of air" EXACT []
 
 [Term]
 id: ECTO:4000028
@@ -2412,6 +2417,30 @@ id: ECTO:4000032
 name: exposure to decreased amount of temperature of water
 def: "A exposure event involving the interaction of an exposure receptor to decreased amount of temperature of water." []
 synonym: "exposure to decreased amount in temperature of water" EXACT []
+
+[Term]
+id: ECTO:4000033
+name: exposure to decreased amount of pressure of water
+def: "A exposure event involving the interaction of an exposure receptor to decreased amount of pressure of water." []
+synonym: "exposure to decreased amount in pressure of water" EXACT []
+
+[Term]
+id: ECTO:4000034
+name: exposure to increased amount of temperature of air
+def: "A exposure event involving the interaction of an exposure receptor to increased amount of temperature of air." []
+synonym: "exposure to increased amount in temperature of air" EXACT []
+
+[Term]
+id: ECTO:4000035
+name: exposure to increased amount of pressure of water
+def: "A exposure event involving the interaction of an exposure receptor to increased amount of pressure of water." []
+synonym: "exposure to increased amount in pressure of water" EXACT []
+
+[Term]
+id: ECTO:4000036
+name: exposure to decreased amount of pressure of air
+def: "A exposure event involving the interaction of an exposure receptor to decreased amount of pressure of air." []
+synonym: "exposure to decreased amount in pressure of air" EXACT []
 
 [Term]
 id: ECTO:5000000
@@ -4086,14 +4115,6 @@ intersection_of: ExO:0000002
 intersection_of: RO:0002309 ENVO:01000769
 
 [Term]
-id: ECTO:8000032
-name: exposure to greenhouse effect
-def: "A exposure event involving the interaction of an exposure receptor to greenhouse effect." []
-synonym: "greenhouse effect exposure" EXACT []
-intersection_of: ExO:0000002
-intersection_of: RO:0002309 ENVO:02500004
-
-[Term]
 id: ECTO:8000033
 name: exposure to accumulation of toxins from algal bloom process
 def: "A exposure event involving the interaction of an exposure receptor to accumulation of toxins from algal bloom process." []
@@ -4140,14 +4161,6 @@ def: "A exposure event involving the interaction of an exposure receptor to wate
 synonym: "water pollution exposure" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002309 ENVO:02500039
-
-[Term]
-id: ECTO:8000039
-name: exposure to plastic pollution
-def: "A exposure event involving the interaction of an exposure receptor to plastic pollution." []
-synonym: "plastic pollution exposure" EXACT []
-intersection_of: ExO:0000002
-intersection_of: RO:0002309 ENVO:02500040
 
 [Term]
 id: ECTO:8000040
@@ -5814,22 +5827,6 @@ intersection_of: ExO:0000002
 intersection_of: RO:0002309 CHEBI:17026
 
 [Term]
-id: ECTO:9000219
-name: menaquinone exposure
-def: "An exposure to menaquinone." []
-synonym: "exposure to menaquinone" EXACT []
-intersection_of: ExO:0000002
-intersection_of: RO:0002309 CHEBI:16374
-
-[Term]
-id: ECTO:9000220
-name: phylloquinone exposure
-def: "An exposure to phylloquinone." []
-synonym: "exposure to phylloquinone" EXACT []
-intersection_of: ExO:0000002
-intersection_of: RO:0002309 CHEBI:18067
-
-[Term]
 id: ECTO:9000222
 name: hydroperoxide exposure
 def: "An exposure to hydroperoxide." []
@@ -5860,14 +5857,6 @@ def: "An exposure to ATP." []
 synonym: "exposure to ATP" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002309 CHEBI:15422
-
-[Term]
-id: ECTO:9000226
-name: riboflavin exposure
-def: "An exposure to riboflavin." []
-synonym: "exposure to riboflavin" EXACT []
-intersection_of: ExO:0000002
-intersection_of: RO:0002309 CHEBI:17015
 
 [Term]
 id: ECTO:9000228
@@ -5916,14 +5905,6 @@ def: "An exposure to triglyceride." []
 synonym: "exposure to triglyceride" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002309 CHEBI:17855
-
-[Term]
-id: ECTO:9000237
-name: silicon dioxide exposure
-def: "An exposure to silicon dioxide." []
-synonym: "exposure to silicon dioxide" EXACT []
-intersection_of: ExO:0000002
-intersection_of: RO:0002309 CHEBI:30563
 
 [Term]
 id: ECTO:9000238
@@ -8022,22 +8003,6 @@ intersection_of: ExO:0000002
 intersection_of: RO:0002309 CHEBI:27798
 
 [Term]
-id: ECTO:9000528
-name: styrene exposure
-def: "An exposure to styrene." []
-synonym: "exposure to styrene" EXACT []
-intersection_of: ExO:0000002
-intersection_of: RO:0002309 CHEBI:27452
-
-[Term]
-id: ECTO:9000529
-name: tetrachloroethene exposure
-def: "An exposure to tetrachloroethene." []
-synonym: "exposure to tetrachloroethene" EXACT []
-intersection_of: ExO:0000002
-intersection_of: RO:0002309 CHEBI:17300
-
-[Term]
 id: ECTO:9000530
 name: trichloroethene exposure
 def: "An exposure to trichloroethene." []
@@ -8076,14 +8041,6 @@ def: "An exposure to organoarsenic compound." []
 synonym: "exposure to organoarsenic compound" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002309 CHEBI:33406
-
-[Term]
-id: ECTO:9000535
-name: polychlorobiphenyl exposure
-def: "An exposure to polychlorobiphenyl." []
-synonym: "exposure to polychlorobiphenyl" EXACT []
-intersection_of: ExO:0000002
-intersection_of: RO:0002309 CHEBI:53156
 
 [Term]
 id: ECTO:9000537
@@ -8980,14 +8937,6 @@ def: "An exposure to perfluoroheptanoic acid." []
 synonym: "exposure to perfluoroheptanoic acid" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002309 CHEBI:35547
-
-[Term]
-id: ECTO:9000649
-name: perfluorooctanoic acid exposure
-def: "An exposure to perfluorooctanoic acid." []
-synonym: "exposure to perfluorooctanoic acid" EXACT []
-intersection_of: ExO:0000002
-intersection_of: RO:0002309 CHEBI:35549
 
 [Term]
 id: ECTO:9000650
@@ -9988,14 +9937,6 @@ def: "An exposure to microcystin-LR." []
 synonym: "exposure to microcystin-LR" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002309 CHEBI:6925
-
-[Term]
-id: ECTO:9000776
-name: N,N-diethyl-m-toluamide exposure
-def: "An exposure to N,N-diethyl-m-toluamide." []
-synonym: "exposure to N,N-diethyl-m-toluamide" EXACT []
-intersection_of: ExO:0000002
-intersection_of: RO:0002309 CHEBI:7071
 
 [Term]
 id: ECTO:9000777
@@ -11054,14 +10995,6 @@ intersection_of: ExO:0000002
 intersection_of: RO:0002309 CHEBI:30440
 
 [Term]
-id: ECTO:9000910
-name: uranium molecular entity exposure
-def: "An exposure to uranium molecular entity." []
-synonym: "exposure to uranium molecular entity" EXACT []
-intersection_of: ExO:0000002
-intersection_of: RO:0002309 CHEBI:33499
-
-[Term]
 id: ECTO:9000911
 name: fluorene exposure
 def: "An exposure to fluorene." []
@@ -11742,14 +11675,6 @@ intersection_of: ExO:0000002
 intersection_of: RO:0002309 CHEBI:38682
 
 [Term]
-id: ECTO:9001001
-name: bromomethane exposure
-def: "An exposure to bromomethane." []
-synonym: "exposure to bromomethane" EXACT []
-intersection_of: ExO:0000002
-intersection_of: RO:0002309 CHEBI:39275
-
-[Term]
 id: ECTO:9001002
 name: brucine exposure
 def: "An exposure to brucine." []
@@ -11974,14 +11899,6 @@ intersection_of: ExO:0000002
 intersection_of: RO:0002309 CHEBI:3639
 
 [Term]
-id: ECTO:9001035
-name: chromium molecular entity exposure
-def: "An exposure to chromium molecular entity." []
-synonym: "exposure to chromium molecular entity" EXACT []
-intersection_of: ExO:0000002
-intersection_of: RO:0002309 CHEBI:23237
-
-[Term]
 id: ECTO:9001036
 name: Guinea Green B exposure
 def: "An exposure to Guinea Green B." []
@@ -12108,14 +12025,6 @@ def: "An exposure to cyclohexanol." []
 synonym: "exposure to cyclohexanol" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002309 CHEBI:18099
-
-[Term]
-id: ECTO:9001052
-name: cyfluthrin exposure
-def: "An exposure to cyfluthrin." []
-synonym: "exposure to cyfluthrin" EXACT []
-intersection_of: ExO:0000002
-intersection_of: RO:0002309 CHEBI:4034
 
 [Term]
 id: ECTO:9001053
@@ -12526,14 +12435,6 @@ intersection_of: ExO:0000002
 intersection_of: RO:0002309 CHEBI:74880
 
 [Term]
-id: ECTO:9001106
-name: epichlorohydrin exposure
-def: "An exposure to epichlorohydrin." []
-synonym: "exposure to epichlorohydrin" EXACT []
-intersection_of: ExO:0000002
-intersection_of: RO:0002309 CHEBI:37144
-
-[Term]
 id: ECTO:9001107
 name: ethoprophos exposure
 def: "An exposure to ethoprophos." []
@@ -12822,14 +12723,6 @@ intersection_of: ExO:0000002
 intersection_of: RO:0002309 CHEBI:35194
 
 [Term]
-id: ECTO:9001145
-name: propan-2-ol exposure
-def: "An exposure to propan-2-ol." []
-synonym: "exposure to propan-2-ol" EXACT []
-intersection_of: ExO:0000002
-intersection_of: RO:0002309 CHEBI:17824
-
-[Term]
 id: ECTO:9001146
 name: Isosafrole exposure
 def: "An exposure to Isosafrole." []
@@ -12924,14 +12817,6 @@ def: "An exposure to Methyl acrylate." []
 synonym: "exposure to Methyl acrylate" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002309 CHEBI:82482
-
-[Term]
-id: ECTO:9001160
-name: methyl tert-butyl ether exposure
-def: "An exposure to methyl tert-butyl ether." []
-synonym: "exposure to methyl tert-butyl ether" EXACT []
-intersection_of: ExO:0000002
-intersection_of: RO:0002309 CHEBI:27642
 
 [Term]
 id: ECTO:9001161
@@ -13374,14 +13259,6 @@ intersection_of: ExO:0000002
 intersection_of: RO:0002309 CHEBI:34911
 
 [Term]
-id: ECTO:9001218
-name: phenol exposure
-def: "An exposure to phenol." []
-synonym: "exposure to phenol" EXACT []
-intersection_of: ExO:0000002
-intersection_of: RO:0002309 CHEBI:15882
-
-[Term]
 id: ECTO:9001219
 name: phenolphthalein exposure
 def: "An exposure to phenolphthalein." []
@@ -13428,14 +13305,6 @@ def: "An exposure to phenytoin." []
 synonym: "exposure to phenytoin" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002309 CHEBI:8107
-
-[Term]
-id: ECTO:9001225
-name: phosgene exposure
-def: "An exposure to phosgene." []
-synonym: "exposure to phosgene" EXACT []
-intersection_of: ExO:0000002
-intersection_of: RO:0002309 CHEBI:29365
 
 [Term]
 id: ECTO:9001226
@@ -14086,14 +13955,6 @@ intersection_of: ExO:0000002
 intersection_of: RO:0002309 CHEBI:53213
 
 [Term]
-id: ECTO:9001310
-name: nickel molecular entity exposure
-def: "An exposure to nickel molecular entity." []
-synonym: "exposure to nickel molecular entity" EXACT []
-intersection_of: ExO:0000002
-intersection_of: RO:0002309 CHEBI:33748
-
-[Term]
 id: ECTO:9001311
 name: silver molecular entity exposure
 def: "An exposure to silver molecular entity." []
@@ -14686,14 +14547,6 @@ intersection_of: ExO:0000002
 intersection_of: RO:0002309 CHEBI:27808
 
 [Term]
-id: ECTO:9001387
-name: triclosan exposure
-def: "An exposure to triclosan." []
-synonym: "exposure to triclosan" EXACT []
-intersection_of: ExO:0000002
-intersection_of: RO:0002309 CHEBI:164200
-
-[Term]
 id: ECTO:9001388
 name: organotin compound exposure
 def: "An exposure to organotin compound." []
@@ -14724,14 +14577,6 @@ def: "An exposure to acetylene." []
 synonym: "exposure to acetylene" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002309 CHEBI:27518
-
-[Term]
-id: ECTO:9001394
-name: acetylsalicylic acid exposure
-def: "An exposure to acetylsalicylic acid." []
-synonym: "exposure to acetylsalicylic acid" EXACT []
-intersection_of: ExO:0000002
-intersection_of: RO:0002309 CHEBI:15365
 
 [Term]
 id: ECTO:9001395
@@ -15790,14 +15635,6 @@ intersection_of: ExO:0000002
 intersection_of: RO:0002309 CHEBI:29036
 
 [Term]
-id: ECTO:9001533
-name: toluene 2,4-diisocyanate exposure
-def: "An exposure to toluene 2,4-diisocyanate." []
-synonym: "exposure to toluene 2,4-diisocyanate" EXACT []
-intersection_of: ExO:0000002
-intersection_of: RO:0002309 CHEBI:53556
-
-[Term]
 id: ECTO:9001534
 name: organochlorine insecticide exposure
 def: "An exposure to organochlorine insecticide." []
@@ -16652,14 +16489,6 @@ def: "An exposure to EC 2.5.1.19 (3-phosphoshikimate 1-carboxyvinyltransferase) 
 synonym: "exposure to EC 2.5.1.19 (3-phosphoshikimate 1-carboxyvinyltransferase) inhibitor" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002309 CHEBI:20569
-
-[Term]
-id: ECTO:9001643
-name: vitamin C exposure
-def: "An exposure to vitamin C." []
-synonym: "exposure to vitamin C" EXACT []
-intersection_of: ExO:0000002
-intersection_of: RO:0002309 CHEBI:21241
 
 [Term]
 id: ECTO:9001644
@@ -18004,14 +17833,6 @@ def: "An exposure to androgen." []
 synonym: "exposure to androgen" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002309 CHEBI:50113
-
-[Term]
-id: ECTO:9001834
-name: estrogen exposure
-def: "An exposure to estrogen." []
-synonym: "exposure to estrogen" EXACT []
-intersection_of: ExO:0000002
-intersection_of: RO:0002309 CHEBI:50114
 
 [Term]
 id: ECTO:9001835
@@ -20366,14 +20187,6 @@ intersection_of: ExO:0000002
 intersection_of: RO:0002309 CHEBI:18379
 
 [Term]
-id: ECTO:9002140
-name: waste material exposure
-def: "An exposure to waste material." []
-synonym: "exposure to waste material" EXACT []
-intersection_of: ExO:0000002
-intersection_of: RO:0002309 ENVO:00002264
-
-[Term]
 id: ECTO:9002141
 name: poly(chloroprene) polymer exposure
 def: "An exposure to poly(chloroprene) polymer." []
@@ -20396,22 +20209,6 @@ def: "An exposure to polyimide polymer." []
 synonym: "exposure to polyimide polymer" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002309 CHEBI:61484
-
-[Term]
-id: ECTO:9002144
-name: 1,1-Dichloroethane exposure
-def: "An exposure to 1,1-Dichloroethane." []
-synonym: "exposure to 1,1-Dichloroethane" EXACT []
-intersection_of: ExO:0000002
-intersection_of: RO:0002309 CHEBI:81599
-
-[Term]
-id: ECTO:9002145
-name: tetrachloroethene exposure
-def: "An exposure to tetrachloroethene." []
-synonym: "exposure to tetrachloroethene" EXACT []
-intersection_of: ExO:0000002
-intersection_of: RO:0002309 CHEBI:17300
 
 [Term]
 id: ECTO:9002146
