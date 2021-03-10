@@ -1,4 +1,4 @@
-Prefix(:=<urn:unnamed:ontology#ont1#>)
+Prefix(:=<urn:unnamed:ontology#ont24>)
 Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
 Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
 Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
@@ -6,8 +6,9 @@ Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
 Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 
 
-Ontology(<urn:unnamed:ontology#ont1>
+Ontology(<urn:unnamed:ontology#ont24>
 
+Declaration(Class(<http://purl.obolibrary.org/obo/ECTO_0001082>))
 Declaration(Class(<http://purl.obolibrary.org/obo/ECTO_6000000>))
 Declaration(Class(<http://purl.obolibrary.org/obo/ECTO_6000001>))
 Declaration(Class(<http://purl.obolibrary.org/obo/ECTO_6000002>))
@@ -38,13 +39,16 @@ Declaration(Class(<http://purl.obolibrary.org/obo/ECTO_6000026>))
 Declaration(Class(<http://purl.obolibrary.org/obo/ECTO_6000027>))
 Declaration(Class(<http://purl.obolibrary.org/obo/ECTO_6000028>))
 Declaration(Class(<http://purl.obolibrary.org/obo/ECTO_6000029>))
+Declaration(Class(<http://purl.obolibrary.org/obo/ECTO_6000030>))
 Declaration(Class(<http://purl.obolibrary.org/obo/ExO_0000002>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0007610>))
 Declaration(Class(<http://purl.obolibrary.org/obo/NBO_0000056>))
 Declaration(Class(<http://purl.obolibrary.org/obo/NBO_0000076>))
 Declaration(Class(<http://purl.obolibrary.org/obo/NBO_0000120>))
+Declaration(Class(<http://purl.obolibrary.org/obo/NBO_0009003>))
 Declaration(Class(<http://purl.obolibrary.org/obo/NBO_0015005>))
 Declaration(Class(<http://purl.obolibrary.org/obo/NCIT_C16203>))
+Declaration(Class(<http://purl.obolibrary.org/obo/NCIT_C16273>))
 Declaration(Class(<http://purl.obolibrary.org/obo/NCIT_C16522>))
 Declaration(Class(<http://purl.obolibrary.org/obo/NCIT_C16795>))
 Declaration(Class(<http://purl.obolibrary.org/obo/NCIT_C17009>))
@@ -78,6 +82,13 @@ Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#has
 ############################
 #   Classes
 ############################
+
+# Class: <http://purl.obolibrary.org/obo/ECTO_0001082> (exposure to Alcohol Consumption)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0001082> "An exposure event involving Alcohol Consumption"^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0001082> "Alcohol Consumption exposure"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_0001082> "exposure to Alcohol Consumption"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_0001082> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/NCIT_C16273>)))
 
 # Class: <http://purl.obolibrary.org/obo/ECTO_6000000> (exposure to behavior)
 
@@ -288,6 +299,13 @@ AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.ob
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_6000029> "Tobacco Smoking exposure"^^xsd:string)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_6000029> "exposure to Tobacco Smoking"^^xsd:string)
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_6000029> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/NCIT_C17934>)))
+
+# Class: <http://purl.obolibrary.org/obo/ECTO_6000030> (exposure to hunting behavior)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_6000030> "An exposure event involving hunting behavior"^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_6000030> "hunting behavior exposure"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_6000030> "exposure to hunting behavior"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_6000030> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/NBO_0009003>)))
 
 
 )

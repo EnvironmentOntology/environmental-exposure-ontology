@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: ecto/releases/2020-09-18/imports/pato_import.owl
+data-version: ecto/releases/2021-02-11/imports/pato_import.owl
 subsetdef: abnormal_slim "Abnormal/normal slim"
 subsetdef: absent_slim "Absent/present slim"
 subsetdef: attribute_slim "Attribute slim"
@@ -721,6 +721,18 @@ subset: scalar_slim
 is_a: PATO:0000141 ! structure
 
 [Term]
+id: PATO:0000982
+name: permeable
+namespace: quality
+def: "A permeability quality inhering in a bearer by virtue of the bearer's being capable to be permeated or pervaded by a gas or liquid (as by osmosis or diffusion)." [Biology-online:Biology-online]
+subset: disposition_slim
+subset: value_slim
+synonym: "porous" RELATED []
+is_a: PATO:0000970 ! permeability
+disjoint_from: PATO:0000983 ! impermeable
+relationship: is_opposite_of PATO:0000983 ! impermeable
+
+[Term]
 id: PATO:0000983
 name: impermeable
 namespace: quality
@@ -728,7 +740,7 @@ def: "A permeability quality inhering in a bearer by virtue of the bearer's bein
 subset: disposition_slim
 subset: value_slim
 is_a: PATO:0000970 ! permeability
-relationship: is_opposite_of PATO:0000982
+relationship: is_opposite_of PATO:0000982 ! permeable
 
 [Term]
 id: PATO:0000984
@@ -1007,7 +1019,33 @@ namespace: quality
 def: "A structural quality inhering in a bearer by virtue of the bearer's having distinct structure." [PATOC:GVG]
 subset: value_slim
 is_a: PATO:0000141 ! structure
-relationship: is_opposite_of PATO:0001412
+relationship: is_opposite_of PATO:0001412 ! unstructured
+
+[Term]
+id: PATO:0001412
+name: unstructured
+namespace: quality
+def: "A structural quality inhering in a bearer by virtue of the bearer's lacking distinct structure." [PATOC:GVG]
+subset: value_slim
+is_a: PATO:0000141 ! structure
+relationship: is_opposite_of PATO:0001411 ! structured
+
+[Term]
+id: PATO:0001428
+name: medium acidity
+namespace: quality
+def: "A concentration quality inhering in a medium by virtue of the bearer's tendency to hydronate a specific reference base." [chemicool:chemicool]
+subset: attribute_slim
+subset: scalar_slim
+is_a: PATO:0001842 ! acidity
+
+[Term]
+id: PATO:0001429
+name: acidic
+namespace: quality
+def: "An medium acidity quality inhering in a solution by virtue of the bearer's a high concentration of H+ ions." [chemicool:chemicool]
+subset: value_slim
+is_a: PATO:0001428 ! medium acidity
 
 [Term]
 id: PATO:0001454
@@ -1020,6 +1058,17 @@ subset: scalar_slim
 is_a: PATO:0000085 ! sensitivity toward
 
 [Term]
+id: PATO:0001455
+name: aerobic
+namespace: quality
+def: "A quality inhering in a bearer by virtue of the bearer's dependence on oxygen." [PATOC:GVG]
+subset: disposition_slim
+subset: value_slim
+is_a: PATO:0001454 ! sensitivity to oxygen
+disjoint_from: PATO:0001456 ! anaerobic
+relationship: is_opposite_of PATO:0001456 ! anaerobic
+
+[Term]
 id: PATO:0001456
 name: anaerobic
 namespace: quality
@@ -1027,7 +1076,7 @@ def: "A quality inhering in a bearer by virtue of the bearer's independence on o
 subset: disposition_slim
 subset: value_slim
 is_a: PATO:0001454 ! sensitivity to oxygen
-relationship: is_opposite_of PATO:0001455
+relationship: is_opposite_of PATO:0001455 ! aerobic
 
 [Term]
 id: PATO:0001475
@@ -1076,7 +1125,7 @@ synonym: "compressed" EXACT []
 synonym: "dense" RELATED []
 synonym: "squashed" EXACT []
 is_a: PATO:0000141 ! structure
-relationship: is_opposite_of PATO:0002452
+relationship: is_opposite_of PATO:0002452 ! decondensed
 
 [Term]
 id: PATO:0001543
@@ -1227,6 +1276,34 @@ is_a: PATO:0002305 ! increased object quality
 intersection_of: PATO:0001025 ! pressure
 intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
 relationship: is_opposite_of PATO:0001575 ! decreased pressure
+
+[Term]
+id: PATO:0001577
+name: increased permeability
+namespace: quality
+def: "A permeability which is relatively high." [PATO:GVG]
+subset: disposition_slim
+subset: value_slim
+synonym: "high permeability" EXACT []
+is_a: PATO:0000982 ! permeable
+is_a: PATO:0002305 ! increased object quality
+intersection_of: PATO:0000982 ! permeable
+intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
+relationship: is_opposite_of PATO:0001578 ! decreased permeability
+
+[Term]
+id: PATO:0001578
+name: decreased permeability
+namespace: quality
+def: "A permeability which is relatively low." [PATO:GVG]
+subset: disposition_slim
+subset: value_slim
+synonym: "low permeability" EXACT []
+is_a: PATO:0000982 ! permeable
+is_a: PATO:0002303 ! decreased object quality
+intersection_of: PATO:0000982 ! permeable
+intersection_of: decreased_in_magnitude_relative_to PATO:0000461 ! normal
+relationship: is_opposite_of PATO:0001577 ! increased permeability
 
 [Term]
 id: PATO:0001583
@@ -1882,6 +1959,17 @@ subset: value_slim
 is_a: PATO:0000025 ! composition
 created_by: gkoutos
 creation_date: 2013-01-29T11:03:49Z
+
+[Term]
+id: PATO:0002452
+name: decondensed
+namespace: quality
+def: "A structural quality inhering in a bearer by virtue of the bearer being thinner or more losely packed." [PATOC:JL]
+subset: value_slim
+is_a: PATO:0000141 ! structure
+relationship: is_opposite_of PATO:0001485 ! condensed
+created_by: gkoutos
+creation_date: 2013-04-08T08:43:31Z
 
 [Term]
 id: PATO:0002486

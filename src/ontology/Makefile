@@ -165,6 +165,7 @@ prepare_release: $(ASSETS) $(PATTERN_RELEASE_FILES)
 prepare_initial_release: prepare_release
 	cd $(RELEASEDIR) && git add $(RELEASE_ASSETS)
 
+
 # ----------------------------------------
 # Import modules
 # ----------------------------------------
@@ -230,6 +231,7 @@ imports/ncbitaxon_import.owl: mirror/ncbitaxon.owl imports/ncbitaxon_terms_combi
 		query --update ../sparql/inject-subset-declaration.ru --update ../sparql/postprocess-module.ru \
 		annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) --output $@.tmp.owl && mv $@.tmp.owl $@; fi
 
+
 .PHONY: refresh-imports
 refresh-imports:
 	make IMP=true MIR=true PAT=false IMP_LARGE=true all_imports -B
@@ -251,13 +253,6 @@ refresh-%:
 $(COMPONENTSDIR)/%: .FORCE
 	touch $@
 .PRECIOUS: $(COMPONENTSDIR)/%
-
-
-
-
-
-
-
 
 
 # ----------------------------------------
