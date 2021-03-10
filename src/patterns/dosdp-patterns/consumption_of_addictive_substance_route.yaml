@@ -1,0 +1,55 @@
+pattern_name: consumption_of_addictive_substance_route
+pattern_iri: http://purl.obolibrary.org/obo/ecto/patterns/consumption_of_addictive_substance_route.yaml
+
+description: "Exposures to an addictive substance that is the result of a behavior like smoking or drinking where the route is known."
+
+contributors:
+  - https://orcid.org/0000-0002-7463-6306
+
+classes:
+  exposure event: ExO:0000002
+  substance: CHEBI:24431
+  behavior: GO:0007610
+  route: ExO:0000055
+
+annotationProperties:
+  exact_synonym: oio:hasExactSynonym
+
+relations:
+  has_input: RO:0002233
+  has_exposure_stimulus: RO:0002309
+  has_exposure_route: RO:0002242
+
+vars:
+  stressor: "'substance'"
+  behavior: "'behavior'"
+  route: "'route'"
+
+name:
+  text: "exposure to %s via %s via %s"
+  vars:
+    - stressor
+    - behavior
+    - route
+
+annotations:
+  - annotationProperty: exact_synonym
+    text: "%s %s exposure via %s"
+    vars:
+      - stressor
+      - behavior
+      - route
+
+def:
+  text: "An exposure event involving %s %s via %s"
+  vars:
+    - stressor
+    - behavior
+    - route
+
+equivalentTo:
+  text: "'exposure event' and 'has_exposure_stimulus' some (%s and ('has_input' some %s)) and ('has_exposure_route' some %s)"
+  vars:
+    - behavior
+    - stressor
+    - route
