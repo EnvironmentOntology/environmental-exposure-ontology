@@ -17,25 +17,25 @@ annotationProperties:
   exact_synonym: oio:hasExactSynonym
 
 vars:
-  condition: "'environmental condition'"
+  stressor: "'environmental condition'"
 
 name:
   text: "exposure to %s conditions"
   vars:
-    - condition
+    - stressor
 
 annotations:
   - annotationProperty: exact_synonym
     text: "%s exposure"
     vars:
-      - condition
+      - stressor
 
 def:
   text: "A exposure event involving the interaction of an exposure receptor to the condition of %s."
   vars:
-    - condition
+    - stressor
 
 equivalentTo:
   text: "'exposure event' and 'has exposure stimulus' some %s"
   vars:
-    - condition
+    - stressor

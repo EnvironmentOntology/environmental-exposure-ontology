@@ -1,11 +1,12 @@
 format-version: 1.2
-data-version: ecto/releases/2020-09-18/ecto-base.owl
+data-version: ecto/releases/2021-02-16/ecto-base.owl
 subsetdef: mrex "medically relevant exposure"
 ontology: ecto/ecto-base
 property_value: http://purl.org/dc/elements/1.1/description "ECTO describes exposures to experimental treatments of plants and model organisms (e.g. exposures to modification of diet, lighting levels, temperature); exposures of humans or any other organisms to stressors through a variety of routes, for purposes of public health, environmental monitoring etc, stimuli, natural and experimental, any kind of environmental condition or change in condition that can be experienced by an organism or population of organisms on earth. The scope is very general and can include for example plant treatment regimens, as well as human clinical exposures (although these may better be handled by a more specialized ontology)." xsd:string
 property_value: http://purl.org/dc/elements/1.1/title "Environment Exposure Ontology" xsd:string
-property_value: http://purl.org/dc/elements/1.1/type http://purl.obolibrary.org/obo/IAO_8000001 xsd:string
+property_value: http://purl.org/dc/elements/1.1/type IAO:8000001
 property_value: http://purl.org/dc/terms/license https://creativecommons.org/publicdomain/zero/1.0/
+property_value: owl:versionInfo "2021-02-16" xsd:string
 
 [Term]
 id: ECTO:0000001
@@ -435,6 +436,14 @@ intersection_of: ExO:0000002
 intersection_of: RO:0002309 PATO:0001306
 
 [Term]
+id: ECTO:0001082
+name: exposure to Alcohol Consumption
+def: "An exposure event involving Alcohol Consumption" []
+synonym: "Alcohol Consumption exposure" EXACT []
+intersection_of: ExO:0000002
+intersection_of: RO:0002309 NCIT:C16273
+
+[Term]
 id: ECTO:0001108
 name: aflatoxin exposure
 def: "An exposure to aflatoxin." []
@@ -465,6 +474,14 @@ def: "An exposure to mercury molecular entity." []
 synonym: "exposure to mercury molecular entity" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002309 CHEBI:25196
+
+[Term]
+id: ECTO:0001591
+name: exposure to Occupation
+def: "An exposure event involving Occupation" []
+synonym: "Occupation exposure" EXACT []
+intersection_of: ExO:0000002
+intersection_of: RO:0002309 NCIT:C25193
 
 [Term]
 id: ECTO:0001659
@@ -513,6 +530,14 @@ def: "A exposure event involving the interaction of an exposure receptor to phys
 synonym: "physical object quality exposure" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002309 PATO:0001241
+
+[Term]
+id: ECTO:0020000
+name: exposure to http://purl.obolibrary.org/obo/NCIT_C103933
+def: "An exposure event involving http://purl.obolibrary.org/obo/NCIT_C103933" []
+synonym: "http://purl.obolibrary.org/obo/NCIT_C103933 exposure" EXACT []
+intersection_of: ExO:0000002
+intersection_of: RO:0002309 NCIT:C103933
 
 [Term]
 id: ECTO:0090001
@@ -738,9 +763,16 @@ intersection_of: RO:0002309 MAXO:0000058
 
 [Term]
 id: ECTO:0300000
+name: exposure to construction
 name: exposure to nicotine via consumption of an addictive substance via http://purl.obolibrary.org/obo/ExO_0000159
+def: "A exposure event involving the interaction of an exposure receptor to construction." []
 def: "An exposure event involving nicotine consumption of an addictive substance via http://purl.obolibrary.org/obo/ExO_0000159" []
+synonym: "construction exposure" EXACT []
 synonym: "nicotine consumption of an addictive substance exposure via http://purl.obolibrary.org/obo/ExO_0000159" EXACT []
+intersection_of: ExO:0000002
+intersection_of: ExO:0000002
+intersection_of: RO:0002242 ExO:0000159
+intersection_of: RO:0002309 ENVO:01001813
 
 [Term]
 id: ECTO:0300001
@@ -789,6 +821,14 @@ id: ECTO:0300009
 name: exposure to heroin via consumption of an addictive substance via http://purl.obolibrary.org/obo/ExO_0000159
 def: "An exposure event involving heroin consumption of an addictive substance via http://purl.obolibrary.org/obo/ExO_0000159" []
 synonym: "heroin consumption of an addictive substance exposure via http://purl.obolibrary.org/obo/ExO_0000159" EXACT []
+
+[Term]
+id: ECTO:0400000
+name: exposure to layer
+def: "A exposure event involving the interaction of an exposure receptor to layer." []
+synonym: "layer exposure" EXACT []
+intersection_of: ExO:0000002
+intersection_of: RO:0002309 ENVO:01000281
 
 [Term]
 id: ECTO:0400001
@@ -936,11 +976,16 @@ synonym: "decreased amount exposure to high-density lipoprotein in obsolete food
 
 [Term]
 id: ECTO:0500000
+name: exposure to environmental disposition
 name: exposure to manufactured product
+def: "A exposure event involving the interaction of an exposure receptor to environmental disposition." []
 def: "A exposure event involving the interaction of an exposure receptor to manufactured product." []
+synonym: "environmental disposition exposure" EXACT []
 synonym: "manufactured product exposure" EXACT []
 intersection_of: ExO:0000002
+intersection_of: ExO:0000002
 intersection_of: RO:0002309 ENVO:00003074
+intersection_of: RO:0002309 ENVO:01000452
 
 [Term]
 id: ECTO:0500001
@@ -1133,6 +1178,32 @@ def: "A exposure event involving the interaction of an exposure receptor to http
 synonym: "http://purl.obolibrary.org/obo/ENVO_03510025 exposure" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002309 ENVO:03510025
+
+[Term]
+id: ECTO:0600000
+name: exposure to environmental system
+def: "A exposure event involving the interaction of an exposure receptor to environmental system." []
+synonym: "environmental system exposure" EXACT []
+intersection_of: ExO:0000002
+intersection_of: RO:0002309 ENVO:01000254
+
+[Term]
+id: ECTO:0700001
+name: exposure to ultrafine respirable suspended particulate matter via inhalation
+def: "A exposure event involving the interaction of an exposure receptor to ultrafine respirable suspended particulate matter via inhalation." []
+synonym: "ultrafine respirable suspended particulate matter exposure via inhalation" EXACT []
+intersection_of: ExO:0000002
+intersection_of: RO:0002242 ExO:0000057
+intersection_of: RO:0002309 ENVO:01000416
+
+[Term]
+id: ECTO:0700002
+name: exposure to aerosol via inhalation
+def: "A exposure event involving the interaction of an exposure receptor to aerosol via inhalation." []
+synonym: "aerosol exposure via inhalation" EXACT []
+intersection_of: ExO:0000002
+intersection_of: RO:0002242 ExO:0000057
+intersection_of: RO:0002309 ENVO:00010505
 
 [Term]
 id: ECTO:0800001
@@ -1360,152 +1431,152 @@ intersection_of: RO:0002309 ENVO:01000203
 
 [Term]
 id: ECTO:1000001
-name: exposure to coal power plant conditions
-def: "A exposure event involving the interaction of an exposure receptor to the condition of coal power plant." []
+name: exposure to coal power plant
+def: "A exposure event involving the interaction of an exposure receptor to coal power plant." []
 synonym: "coal power plant exposure" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002309 ENVO:2000038
 
 [Term]
 id: ECTO:1000002
-name: exposure to fossil fuel power plant conditions
-def: "A exposure event involving the interaction of an exposure receptor to the condition of fossil fuel power plant." []
+name: exposure to fossil fuel power plant
+def: "A exposure event involving the interaction of an exposure receptor to fossil fuel power plant." []
 synonym: "fossil fuel power plant exposure" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002309 ENVO:2000037
 
 [Term]
 id: ECTO:1000003
-name: exposure to mine conditions
-def: "A exposure event involving the interaction of an exposure receptor to the condition of mine." []
+name: exposure to mine
+def: "A exposure event involving the interaction of an exposure receptor to mine." []
 synonym: "mine exposure" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002309 ENVO:00000076
 
 [Term]
 id: ECTO:1000004
-name: exposure to wooden building floor conditions
-def: "A exposure event involving the interaction of an exposure receptor to the condition of wooden building floor." []
+name: exposure to wooden building floor
+def: "A exposure event involving the interaction of an exposure receptor to wooden building floor." []
 synonym: "wooden building floor exposure" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002309 ENVO:01000488
 
 [Term]
 id: ECTO:1000005
-name: exposure to concrete building floor conditions
-def: "A exposure event involving the interaction of an exposure receptor to the condition of concrete building floor." []
+name: exposure to concrete building floor
+def: "A exposure event involving the interaction of an exposure receptor to concrete building floor." []
 synonym: "concrete building floor exposure" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002309 ENVO:01000489
 
 [Term]
 id: ECTO:1000006
-name: exposure to radiation shielding disposition conditions
-def: "A exposure event involving the interaction of an exposure receptor to the condition of radiation shielding disposition." []
+name: exposure to radiation shielding disposition
+def: "A exposure event involving the interaction of an exposure receptor to radiation shielding disposition." []
 synonym: "radiation shielding disposition exposure" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002309 ENVO:01001195
 
 [Term]
 id: ECTO:1000007
-name: exposure to high temperature environment conditions
-def: "A exposure event involving the interaction of an exposure receptor to the condition of high temperature environment." []
+name: exposure to high temperature environment
+def: "A exposure event involving the interaction of an exposure receptor to high temperature environment." []
 synonym: "high temperature environment exposure" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002309 ENVO:01000305
 
 [Term]
 id: ECTO:1000008
-name: exposure to gas power station conditions
-def: "A exposure event involving the interaction of an exposure receptor to the condition of gas power station." []
+name: exposure to gas power station
+def: "A exposure event involving the interaction of an exposure receptor to gas power station." []
 synonym: "gas power station exposure" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002309 ENVO:2000039
 
 [Term]
 id: ECTO:1000009
-name: exposure to power plant conditions
-def: "A exposure event involving the interaction of an exposure receptor to the condition of power plant." []
+name: exposure to power plant
+def: "A exposure event involving the interaction of an exposure receptor to power plant." []
 synonym: "power plant exposure" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002309 ENVO:00002214
 
 [Term]
 id: ECTO:1000010
-name: exposure to geothermal power plant conditions
-def: "A exposure event involving the interaction of an exposure receptor to the condition of geothermal power plant." []
+name: exposure to geothermal power plant
+def: "A exposure event involving the interaction of an exposure receptor to geothermal power plant." []
 synonym: "geothermal power plant exposure" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002309 ENVO:00002215
 
 [Term]
 id: ECTO:1000011
-name: exposure to nuclear power plant conditions
-def: "A exposure event involving the interaction of an exposure receptor to the condition of nuclear power plant." []
+name: exposure to nuclear power plant
+def: "A exposure event involving the interaction of an exposure receptor to nuclear power plant." []
 synonym: "nuclear power plant exposure" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002309 ENVO:00002271
 
 [Term]
 id: ECTO:1000012
-name: exposure to solar power station conditions
-def: "A exposure event involving the interaction of an exposure receptor to the condition of solar power station." []
+name: exposure to solar power station
+def: "A exposure event involving the interaction of an exposure receptor to solar power station." []
 synonym: "solar power station exposure" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002309 ENVO:2000041
 
 [Term]
 id: ECTO:1000013
-name: exposure to factory conditions
-def: "A exposure event involving the interaction of an exposure receptor to the condition of factory." []
+name: exposure to factory
+def: "A exposure event involving the interaction of an exposure receptor to factory." []
 synonym: "factory exposure" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002309 ENVO:01000536
 
 [Term]
 id: ECTO:1000014
-name: exposure to waste treatment plant conditions
-def: "A exposure event involving the interaction of an exposure receptor to the condition of waste treatment plant." []
+name: exposure to waste treatment plant
+def: "A exposure event involving the interaction of an exposure receptor to waste treatment plant." []
 synonym: "waste treatment plant exposure" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002309 ENVO:00002272
 
 [Term]
 id: ECTO:1000015
-name: exposure to wastewater treatment plant conditions
-def: "A exposure event involving the interaction of an exposure receptor to the condition of wastewater treatment plant." []
+name: exposure to wastewater treatment plant
+def: "A exposure event involving the interaction of an exposure receptor to wastewater treatment plant." []
 synonym: "wastewater treatment plant exposure" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002309 ENVO:00002043
 
 [Term]
 id: ECTO:1000016
-name: exposure to agricultural wastewater treatment plant conditions
-def: "A exposure event involving the interaction of an exposure receptor to the condition of agricultural wastewater treatment plant." []
+name: exposure to agricultural wastewater treatment plant
+def: "A exposure event involving the interaction of an exposure receptor to agricultural wastewater treatment plant." []
 synonym: "agricultural wastewater treatment plant exposure" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002309 ENVO:2000003
 
 [Term]
 id: ECTO:1000017
-name: exposure to industrial wastewate treatment plant conditions
-def: "A exposure event involving the interaction of an exposure receptor to the condition of industrial wastewate treatment plant." []
+name: exposure to industrial wastewate treatment plant
+def: "A exposure event involving the interaction of an exposure receptor to industrial wastewate treatment plant." []
 synonym: "industrial wastewate treatment plant exposure" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002309 ENVO:2000002
 
 [Term]
 id: ECTO:1000018
-name: exposure to extreme high temperature environment conditions
-def: "A exposure event involving the interaction of an exposure receptor to the condition of extreme high temperature environment." []
+name: exposure to extreme high temperature environment
+def: "A exposure event involving the interaction of an exposure receptor to extreme high temperature environment." []
 synonym: "extreme high temperature environment exposure" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002309 ENVO:01000318
 
 [Term]
 id: ECTO:1000019
-name: exposure to high pressure environment conditions
-def: "A exposure event involving the interaction of an exposure receptor to the condition of high pressure environment." []
+name: exposure to high pressure environment
+def: "A exposure event involving the interaction of an exposure receptor to high pressure environment." []
 synonym: "high pressure environment exposure" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002309 ENVO:01000304
@@ -1519,92 +1590,116 @@ intersection_of: ExO:0000002
 intersection_of: RO:0002309 ENVO:01001078
 
 [Term]
-id: ECTO:1000021
-name: exposure to landspout conditions
-def: "A exposure event involving the interaction of an exposure receptor to the condition of landspout." []
-synonym: "landspout exposure" EXACT []
-intersection_of: ExO:0000002
-intersection_of: RO:0002309 ENVO:01001486
-
-[Term]
-id: ECTO:1000022
-name: exposure to storm surge conditions
-def: "A exposure event involving the interaction of an exposure receptor to the condition of storm surge." []
-synonym: "storm surge exposure" EXACT []
-intersection_of: ExO:0000002
-intersection_of: RO:0002309 ENVO:01000714
-
-[Term]
 id: ECTO:1000023
-name: exposure to icestorm conditions
-def: "A exposure event involving the interaction of an exposure receptor to the condition of icestorm." []
+name: exposure to icestorm
+def: "A exposure event involving the interaction of an exposure receptor to icestorm." []
 synonym: "icestorm exposure" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002309 ENVO:01000882
 
 [Term]
-id: ECTO:1000024
-name: exposure to tornado conditions
-def: "A exposure event involving the interaction of an exposure receptor to the condition of tornado." []
-synonym: "tornado exposure" EXACT []
-intersection_of: ExO:0000002
-intersection_of: RO:0002309 ENVO:01001482
-
-[Term]
-id: ECTO:1000025
-name: exposure to waterspout conditions
-def: "A exposure event involving the interaction of an exposure receptor to the condition of waterspout." []
-synonym: "waterspout exposure" EXACT []
-intersection_of: ExO:0000002
-intersection_of: RO:0002309 ENVO:01001487
-
-[Term]
-id: ECTO:1000026
-name: exposure to flash flood conditions
-def: "A exposure event involving the interaction of an exposure receptor to the condition of flash flood." []
-synonym: "flash flood exposure" EXACT []
-intersection_of: ExO:0000002
-intersection_of: RO:0002309 ENVO:01000713
-
-[Term]
 id: ECTO:1000027
-name: exposure to rain conditions
-def: "A exposure event involving the interaction of an exposure receptor to the condition of rain." []
-synonym: "rain exposure" EXACT []
+name: exposure to http://purl.obolibrary.org/obo/ENVO_01000600
+def: "A exposure event involving the interaction of an exposure receptor to http://purl.obolibrary.org/obo/ENVO_01000600." []
+synonym: "http://purl.obolibrary.org/obo/ENVO_01000600 exposure" EXACT []
 intersection_of: ExO:0000002
-intersection_of: RO:0002309 ENVO:01001564
+intersection_of: RO:0002309 ENVO:01000600
 
 [Term]
 id: ECTO:1000028
-name: exposure to freezing rainfall conditions
-def: "A exposure event involving the interaction of an exposure receptor to the condition of freezing rainfall." []
+name: exposure to freezing rainfall
+def: "A exposure event involving the interaction of an exposure receptor to freezing rainfall." []
 synonym: "freezing rainfall exposure" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002309 ENVO:01000896
 
 [Term]
 id: ECTO:1000029
-name: exposure to thunderstorm conditions
-def: "A exposure event involving the interaction of an exposure receptor to the condition of thunderstorm." []
+name: exposure to thunderstorm
+def: "A exposure event involving the interaction of an exposure receptor to thunderstorm." []
 synonym: "thunderstorm exposure" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002309 ENVO:01000878
 
 [Term]
-id: ECTO:1000030
-name: exposure to flood conditions
-def: "A exposure event involving the interaction of an exposure receptor to the condition of flood." []
-synonym: "flood exposure" EXACT []
-intersection_of: ExO:0000002
-intersection_of: RO:0002309 ENVO:01000710
-
-[Term]
 id: ECTO:1000031
-name: exposure to tropical storm conditions
-def: "A exposure event involving the interaction of an exposure receptor to the condition of tropical storm." []
+name: exposure to tropical storm
+def: "A exposure event involving the interaction of an exposure receptor to tropical storm." []
 synonym: "tropical storm exposure" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002309 ENVO:01001296
+
+[Term]
+id: ECTO:1000032
+name: exposure to air conditioning unit conditions
+def: "A exposure event involving the interaction of an exposure receptor to the condition of air conditioning unit." []
+synonym: "air conditioning unit exposure" EXACT []
+intersection_of: ExO:0000002
+intersection_of: RO:0002309 ENVO:00002874
+
+[Term]
+id: ECTO:1000033
+name: exposure to construction
+def: "A exposure event involving the interaction of an exposure receptor to construction." []
+synonym: "construction exposure" EXACT []
+intersection_of: ExO:0000002
+intersection_of: RO:0002309 ENVO:01001813
+
+[Term]
+id: ECTO:1000034
+name: exposure to farm
+def: "A exposure event involving the interaction of an exposure receptor to farm." []
+synonym: "farm exposure" EXACT []
+intersection_of: ExO:0000002
+intersection_of: RO:0002309 ENVO:00000078
+
+[Term]
+id: ECTO:1000035
+name: exposure to hospital
+def: "A exposure event involving the interaction of an exposure receptor to hospital." []
+synonym: "hospital exposure" EXACT []
+intersection_of: ExO:0000002
+intersection_of: RO:0002309 ENVO:00002173
+
+[Term]
+id: ECTO:1000036
+name: exposure to laboratory facility
+def: "A exposure event involving the interaction of an exposure receptor to laboratory facility." []
+synonym: "laboratory facility exposure" EXACT []
+intersection_of: ExO:0000002
+intersection_of: RO:0002309 ENVO:01001406
+
+[Term]
+id: ECTO:1000037
+name: exposure to office
+def: "A exposure event involving the interaction of an exposure receptor to office." []
+synonym: "office exposure" EXACT []
+intersection_of: ExO:0000002
+intersection_of: RO:0002309 ENVO:01001224
+
+[Term]
+id: ECTO:1000040
+name: exposure to restaurant
+def: "A exposure event involving the interaction of an exposure receptor to restaurant." []
+synonym: "restaurant exposure" EXACT []
+intersection_of: ExO:0000002
+intersection_of: RO:0002309 ENVO:01000934
+
+[Term]
+id: ECTO:1000041
+name: exposure to shop
+def: "A exposure event involving the interaction of an exposure receptor to shop." []
+synonym: "shop exposure" EXACT []
+intersection_of: ExO:0000002
+intersection_of: RO:0002309 ENVO:00002221
+
+[Term]
+id: ECTO:1000056
+name: exposure to water-based rainfall
+def: "A exposure event involving the interaction of an exposure receptor to water-based rainfall." []
+synonym: "water-based rainfall exposure" EXACT []
+intersection_of: ExO:0000002
+intersection_of: RO:0002309 ENVO:01000830
 
 [Term]
 id: ECTO:2000000
@@ -1672,9 +1767,9 @@ intersection_of: RO:0002309 MAXO:0000180
 
 [Term]
 id: ECTO:2000008
-name: antiarrythmic agent therapy exposure
-def: "An exposure to antiarrythmic agent therapy." []
-synonym: "exposure to antiarrythmic agent therapy" EXACT []
+name: antiarrhythmic agent therapy exposure
+def: "An exposure to antiarrhythmic agent therapy." []
+synonym: "exposure to antiarrhythmic agent therapy" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002309 MAXO:0000185
 
@@ -1880,9 +1975,9 @@ intersection_of: RO:0002309 MAXO:0000258
 
 [Term]
 id: ECTO:2000036
-name: antigout agent therapy exposure
-def: "An exposure to antigout agent therapy." []
-synonym: "exposure to antigout agent therapy" EXACT []
+name: uricosuric agent therapy exposure
+def: "An exposure to uricosuric agent therapy." []
+synonym: "exposure to uricosuric agent therapy" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002309 MAXO:0000164
 
@@ -2040,9 +2135,9 @@ intersection_of: RO:0002309 MAXO:0010043
 
 [Term]
 id: ECTO:2000056
-name: transplantation surgical procedure exposure
-def: "An exposure to transplantation surgical procedure." []
-synonym: "exposure to transplantation surgical procedure" EXACT []
+name: transplantation procedure exposure
+def: "An exposure to transplantation procedure." []
+synonym: "exposure to transplantation procedure" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002309 MAXO:0000068
 
@@ -2056,11 +2151,11 @@ intersection_of: RO:0002309 MAXO:0000058
 
 [Term]
 id: ECTO:3000000
-name: exposure to organism
-def: "A history of exposure to organism." []
-synonym: "organism exposure" EXACT []
+name: exposure to root
+def: "A history of exposure to root." []
+synonym: "root exposure" EXACT []
 intersection_of: ExO:0000002
-intersection_of: RO:0002309 OBI:0100026
+intersection_of: RO:0002309 NCBITaxon:1
 
 [Term]
 id: ECTO:3000001
@@ -2095,10 +2190,18 @@ intersection_of: ExO:0000002
 intersection_of: RO:0002309 NCBITaxon:151340
 
 [Term]
+id: ECTO:3000005
+name: exposure to Homo sapiens
+def: "A history of exposure to Homo sapiens." []
+synonym: "Homo sapiens exposure" EXACT []
+intersection_of: ExO:0000002
+intersection_of: RO:0002309 NCBITaxon:9606
+
+[Term]
 id: ECTO:4000000
-name: exposure to deviation(from_normal)deviation (from_normal) of quality
-def: "A exposure event involving the interaction of an exposure receptor to deviation(from_normal)deviation (from_normal) of quality." []
-synonym: "exposure to deviation(from_normal)deviation (from_normal) in quality" EXACT []
+name: exposure to deviation (from_normal)deviation(from_normal) of quality
+def: "A exposure event involving the interaction of an exposure receptor to deviation (from_normal)deviation(from_normal) of quality." []
+synonym: "exposure to deviation (from_normal)deviation(from_normal) in quality" EXACT []
 
 [Term]
 id: ECTO:4000001
@@ -2336,36 +2439,59 @@ intersection_of: RO:0002309 ENVO:01000967
 
 [Term]
 id: ECTO:5000003
-name: exposure to acid mine drainage
-name: exposure to coal mine
-name: exposure to gold mine
-name: exposure to gold mine drainage
-name: exposure to mine
 name: exposure to mine drainage
-def: "A exposure event involving the interaction of an exposure receptor to acid mine drainage." []
-def: "A exposure event involving the interaction of an exposure receptor to coal mine." []
-def: "A exposure event involving the interaction of an exposure receptor to gold mine drainage." []
-def: "A exposure event involving the interaction of an exposure receptor to gold mine." []
 def: "A exposure event involving the interaction of an exposure receptor to mine drainage." []
-def: "A exposure event involving the interaction of an exposure receptor to mine." []
-synonym: "acid mine drainage exposure" EXACT []
-synonym: "coal mine exposure" EXACT []
-synonym: "gold mine drainage exposure" EXACT []
-synonym: "gold mine exposure" EXACT []
 synonym: "mine drainage exposure" EXACT []
-synonym: "mine exposure" EXACT []
 intersection_of: ExO:0000002
-intersection_of: ExO:0000002
-intersection_of: ExO:0000002
-intersection_of: ExO:0000002
-intersection_of: ExO:0000002
-intersection_of: ExO:0000002
-intersection_of: RO:0002309 ENVO:00000076
 intersection_of: RO:0002309 ENVO:00001996
+
+[Term]
+id: ECTO:5000004
+name: exposure to acid mine drainage
+def: "A exposure event involving the interaction of an exposure receptor to acid mine drainage." []
+synonym: "acid mine drainage exposure" EXACT []
+intersection_of: ExO:0000002
 intersection_of: RO:0002309 ENVO:00001997
+
+[Term]
+id: ECTO:5000005
+name: exposure to gold mine drainage
+def: "A exposure event involving the interaction of an exposure receptor to gold mine drainage." []
+synonym: "gold mine drainage exposure" EXACT []
+intersection_of: ExO:0000002
 intersection_of: RO:0002309 ENVO:00002112
+
+[Term]
+id: ECTO:5000006
+name: exposure to gold mine
+def: "A exposure event involving the interaction of an exposure receptor to gold mine." []
+synonym: "gold mine exposure" EXACT []
+intersection_of: ExO:0000002
 intersection_of: RO:0002309 ENVO:00002168
+
+[Term]
+id: ECTO:5000007
+name: exposure to coal mine
+def: "A exposure event involving the interaction of an exposure receptor to coal mine." []
+synonym: "coal mine exposure" EXACT []
+intersection_of: ExO:0000002
 intersection_of: RO:0002309 ENVO:00002169
+
+[Term]
+id: ECTO:5000008
+name: exposure to petting zoo
+def: "A exposure event involving the interaction of an exposure receptor to petting zoo." []
+synonym: "petting zoo exposure" EXACT []
+intersection_of: ExO:0000002
+intersection_of: RO:0002309 ENVO:01000923
+
+[Term]
+id: ECTO:5000009
+name: exposure to campground
+def: "A exposure event involving the interaction of an exposure receptor to campground." []
+synonym: "campground exposure" EXACT []
+intersection_of: ExO:0000002
+intersection_of: RO:0002309 ENVO:01000935
 
 [Term]
 id: ECTO:6000000
@@ -2606,6 +2732,14 @@ def: "An exposure event involving Tobacco Smoking" []
 synonym: "Tobacco Smoking exposure" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002309 NCIT:C17934
+
+[Term]
+id: ECTO:6000030
+name: exposure to hunting behavior
+def: "An exposure event involving hunting behavior" []
+synonym: "hunting behavior exposure" EXACT []
+intersection_of: ExO:0000002
+intersection_of: RO:0002309 NBO:0009003
 
 [Term]
 id: ECTO:7000001
@@ -3478,6 +3612,14 @@ def: "A exposure event involving the interaction of an exposure receptor to pulp
 synonym: "pulp-bleaching waste water exposure" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002309 ENVO:00002193
+
+[Term]
+id: ECTO:7000121
+name: exposure to fibrous glass dust
+def: "A exposure event involving the interaction of an exposure receptor to fibrous glass dust." []
+synonym: "fibrous glass dust exposure" EXACT []
+intersection_of: ExO:0000002
+intersection_of: RO:0002309 ENVO:02000102
 
 [Term]
 id: ECTO:7000122
@@ -5672,14 +5814,6 @@ intersection_of: ExO:0000002
 intersection_of: RO:0002309 CHEBI:17026
 
 [Term]
-id: ECTO:9000218
-name: vitamin K exposure
-def: "An exposure to vitamin K." []
-synonym: "exposure to vitamin K" EXACT []
-intersection_of: ExO:0000002
-intersection_of: RO:0002309 CHEBI:28384
-
-[Term]
 id: ECTO:9000219
 name: menaquinone exposure
 def: "An exposure to menaquinone." []
@@ -6008,14 +6142,6 @@ intersection_of: ExO:0000002
 intersection_of: RO:0002309 CHEBI:27958
 
 [Term]
-id: ECTO:9000266
-name: chemical entity exposure
-def: "An exposure to chemical entity." []
-synonym: "exposure to chemical entity" EXACT []
-intersection_of: ExO:0000002
-intersection_of: RO:0002309 CHEBI:24431
-
-[Term]
 id: ECTO:9000267
 name: hydrogen peroxide exposure
 def: "An exposure to hydrogen peroxide." []
@@ -6150,14 +6276,6 @@ def: "An exposure to organophosphorus compound." []
 synonym: "exposure to organophosphorus compound" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002309 CHEBI:25710
-
-[Term]
-id: ECTO:9000285
-name: arsenic molecular entity exposure
-def: "An exposure to arsenic molecular entity." []
-synonym: "exposure to arsenic molecular entity" EXACT []
-intersection_of: ExO:0000002
-intersection_of: RO:0002309 CHEBI:22632
 
 [Term]
 id: ECTO:9000286
@@ -10904,14 +11022,6 @@ intersection_of: ExO:0000002
 intersection_of: RO:0002309 CHEBI:9943
 
 [Term]
-id: ECTO:9000905
-name: verapamil exposure
-def: "An exposure to verapamil." []
-synonym: "exposure to verapamil" EXACT []
-intersection_of: ExO:0000002
-intersection_of: RO:0002309 CHEBI:9948
-
-[Term]
 id: ECTO:9000906
 name: phthalate ester exposure
 def: "An exposure to phthalate ester." []
@@ -11553,9 +11663,9 @@ intersection_of: RO:0002309 CHEBI:82274
 
 [Term]
 id: ECTO:9000990
-name: Benzoyl chloride exposure
-def: "An exposure to Benzoyl chloride." []
-synonym: "exposure to Benzoyl chloride" EXACT []
+name: benzoyl chloride exposure
+def: "An exposure to benzoyl chloride." []
+synonym: "exposure to benzoyl chloride" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002309 CHEBI:82275
 
@@ -12545,9 +12655,9 @@ intersection_of: RO:0002309 CHEBI:5097
 
 [Term]
 id: ECTO:9001123
-name: Fluometuron exposure
-def: "An exposure to Fluometuron." []
-synonym: "exposure to Fluometuron" EXACT []
+name: fluometuron exposure
+def: "An exposure to fluometuron." []
+synonym: "exposure to fluometuron" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002309 CHEBI:82012
 

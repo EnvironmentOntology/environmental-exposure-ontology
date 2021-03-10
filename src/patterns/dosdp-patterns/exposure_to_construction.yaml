@@ -1,0 +1,41 @@
+pattern_name: exposure_to_construction
+pattern_iri: http://purl.obolibrary.org/obo/ecto/patterns/exposure_to_construction.yaml
+
+description: "exposures to a material entity which has been assembled through the intentional, instinctual, or deliberately programmed efforts of an organism or machine"
+
+contributors:
+  - https://orcid.org/0000-0002-2908-3327
+
+classes:
+  exposure event: ExO:0000002
+  construction: ENVO:01001813
+
+relations:
+  has exposure stimulus: RO:0002309
+
+annotationProperties:
+  exact_synonym: oio:hasExactSynonym
+
+vars:
+  stressor: "'construction'"
+
+name:
+  text: "exposure to %s"
+  vars:
+    - stressor
+
+annotations:
+  - annotationProperty: exact_synonym
+    text: "%s exposure"
+    vars:
+      - stressor
+
+def:
+  text: "A exposure event involving the interaction of an exposure receptor to %s."
+  vars:
+    - stressor
+
+equivalentTo:
+  text: "'exposure event' and 'has exposure stimulus' some %s"
+  vars:
+    - stressor

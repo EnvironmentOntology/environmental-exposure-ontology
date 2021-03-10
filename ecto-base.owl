@@ -12,11 +12,12 @@
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/ecto/ecto-base.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/ecto/releases/2020-09-18/ecto-base.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/ecto/releases/2021-02-16/ecto-base.owl"/>
         <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ECTO describes exposures to experimental treatments of plants and model organisms (e.g. exposures to modification of diet, lighting levels, temperature); exposures of humans or any other organisms to stressors through a variety of routes, for purposes of public health, environmental monitoring etc, stimuli, natural and experimental, any kind of environmental condition or change in condition that can be experienced by an organism or population of organisms on earth. The scope is very general and can include for example plant treatment regimens, as well as human clinical exposures (although these may better be handled by a more specialized ontology).</dc:description>
         <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Environment Exposure Ontology</dc:title>
-        <dc:type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://purl.obolibrary.org/obo/IAO_8000001</dc:type>
+        <dc:type rdf:resource="http://purl.obolibrary.org/obo/IAO_8000001"/>
         <terms:license rdf:resource="https://creativecommons.org/publicdomain/zero/1.0/"/>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2021-02-16</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -13578,6 +13579,27 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/ECTO_0001082 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECTO_0001082">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ExO_0000002"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002309"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCIT_C16273"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An exposure event involving Alcohol Consumption</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alcohol Consumption exposure</oboInOwl:hasExactSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exposure to Alcohol Consumption</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/ECTO_0001108 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECTO_0001108">
@@ -13658,6 +13680,27 @@
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An exposure to mercury molecular entity.</obo:IAO_0000115>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exposure to mercury molecular entity</oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mercury molecular entity exposure</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ECTO_0001591 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECTO_0001591">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ExO_0000002"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002309"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCIT_C25193"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An exposure event involving Occupation</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Occupation exposure</oboInOwl:hasExactSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exposure to Occupation</rdfs:label>
     </owl:Class>
     
 
@@ -13784,6 +13827,27 @@
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A exposure event involving the interaction of an exposure receptor to physical object quality.</obo:IAO_0000115>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">physical object quality exposure</oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exposure to physical object quality</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ECTO_0020000 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECTO_0020000">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ExO_0000002"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002309"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCIT_C103933"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An exposure event involving http://purl.obolibrary.org/obo/NCIT_C103933</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://purl.obolibrary.org/obo/NCIT_C103933 exposure</oboInOwl:hasExactSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exposure to http://purl.obolibrary.org/obo/NCIT_C103933</rdfs:label>
     </owl:Class>
     
 
@@ -14584,8 +14648,22 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ExO_0000002"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002309"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001813"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A exposure event involving the interaction of an exposure receptor to construction.</obo:IAO_0000115>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An exposure event involving nicotine consumption of an addictive substance via http://purl.obolibrary.org/obo/ExO_0000159</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">construction exposure</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nicotine consumption of an addictive substance exposure via http://purl.obolibrary.org/obo/ExO_0000159</oboInOwl:hasExactSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exposure to construction</rdfs:label>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exposure to nicotine via consumption of an addictive substance via http://purl.obolibrary.org/obo/ExO_0000159</rdfs:label>
     </owl:Class>
     
@@ -14867,6 +14945,27 @@
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An exposure event involving heroin consumption of an addictive substance via http://purl.obolibrary.org/obo/ExO_0000159</obo:IAO_0000115>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">heroin consumption of an addictive substance exposure via http://purl.obolibrary.org/obo/ExO_0000159</oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exposure to heroin via consumption of an addictive substance via http://purl.obolibrary.org/obo/ExO_0000159</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ECTO_0400000 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECTO_0400000">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ExO_0000002"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002309"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000281"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A exposure event involving the interaction of an exposure receptor to layer.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">layer exposure</oboInOwl:hasExactSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exposure to layer</rdfs:label>
     </owl:Class>
     
 
@@ -15725,8 +15824,22 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ExO_0000002"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002309"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000452"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A exposure event involving the interaction of an exposure receptor to environmental disposition.</obo:IAO_0000115>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A exposure event involving the interaction of an exposure receptor to manufactured product.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">environmental disposition exposure</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">manufactured product exposure</oboInOwl:hasExactSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exposure to environmental disposition</rdfs:label>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exposure to manufactured product</rdfs:label>
     </owl:Class>
     
@@ -16232,6 +16345,77 @@
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A exposure event involving the interaction of an exposure receptor to http://purl.obolibrary.org/obo/ENVO_03510025.</obo:IAO_0000115>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://purl.obolibrary.org/obo/ENVO_03510025 exposure</oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exposure to http://purl.obolibrary.org/obo/ENVO_03510025</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ECTO_0600000 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECTO_0600000">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ExO_0000002"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002309"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000254"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A exposure event involving the interaction of an exposure receptor to environmental system.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">environmental system exposure</oboInOwl:hasExactSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exposure to environmental system</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ECTO_0700001 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECTO_0700001">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ExO_0000002"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002242"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ExO_0000057"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002309"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000416"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A exposure event involving the interaction of an exposure receptor to ultrafine respirable suspended particulate matter via inhalation.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ultrafine respirable suspended particulate matter exposure via inhalation</oboInOwl:hasExactSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exposure to ultrafine respirable suspended particulate matter via inhalation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ECTO_0700002 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECTO_0700002">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ExO_0000002"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002242"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ExO_0000057"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002309"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_00010505"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A exposure event involving the interaction of an exposure receptor to aerosol via inhalation.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">aerosol exposure via inhalation</oboInOwl:hasExactSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exposure to aerosol via inhalation</rdfs:label>
     </owl:Class>
     
 
@@ -16871,9 +17055,9 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A exposure event involving the interaction of an exposure receptor to the condition of coal power plant.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A exposure event involving the interaction of an exposure receptor to coal power plant.</obo:IAO_0000115>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">coal power plant exposure</oboInOwl:hasExactSynonym>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exposure to coal power plant conditions</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exposure to coal power plant</rdfs:label>
     </owl:Class>
     
 
@@ -16892,9 +17076,9 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A exposure event involving the interaction of an exposure receptor to the condition of fossil fuel power plant.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A exposure event involving the interaction of an exposure receptor to fossil fuel power plant.</obo:IAO_0000115>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fossil fuel power plant exposure</oboInOwl:hasExactSynonym>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exposure to fossil fuel power plant conditions</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exposure to fossil fuel power plant</rdfs:label>
     </owl:Class>
     
 
@@ -16913,9 +17097,9 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A exposure event involving the interaction of an exposure receptor to the condition of mine.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A exposure event involving the interaction of an exposure receptor to mine.</obo:IAO_0000115>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mine exposure</oboInOwl:hasExactSynonym>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exposure to mine conditions</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exposure to mine</rdfs:label>
     </owl:Class>
     
 
@@ -16934,9 +17118,9 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A exposure event involving the interaction of an exposure receptor to the condition of wooden building floor.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A exposure event involving the interaction of an exposure receptor to wooden building floor.</obo:IAO_0000115>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wooden building floor exposure</oboInOwl:hasExactSynonym>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exposure to wooden building floor conditions</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exposure to wooden building floor</rdfs:label>
     </owl:Class>
     
 
@@ -16955,9 +17139,9 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A exposure event involving the interaction of an exposure receptor to the condition of concrete building floor.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A exposure event involving the interaction of an exposure receptor to concrete building floor.</obo:IAO_0000115>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">concrete building floor exposure</oboInOwl:hasExactSynonym>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exposure to concrete building floor conditions</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exposure to concrete building floor</rdfs:label>
     </owl:Class>
     
 
@@ -16976,9 +17160,9 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A exposure event involving the interaction of an exposure receptor to the condition of radiation shielding disposition.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A exposure event involving the interaction of an exposure receptor to radiation shielding disposition.</obo:IAO_0000115>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">radiation shielding disposition exposure</oboInOwl:hasExactSynonym>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exposure to radiation shielding disposition conditions</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exposure to radiation shielding disposition</rdfs:label>
     </owl:Class>
     
 
@@ -16997,9 +17181,9 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A exposure event involving the interaction of an exposure receptor to the condition of high temperature environment.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A exposure event involving the interaction of an exposure receptor to high temperature environment.</obo:IAO_0000115>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">high temperature environment exposure</oboInOwl:hasExactSynonym>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exposure to high temperature environment conditions</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exposure to high temperature environment</rdfs:label>
     </owl:Class>
     
 
@@ -17018,9 +17202,9 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A exposure event involving the interaction of an exposure receptor to the condition of gas power station.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A exposure event involving the interaction of an exposure receptor to gas power station.</obo:IAO_0000115>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">gas power station exposure</oboInOwl:hasExactSynonym>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exposure to gas power station conditions</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exposure to gas power station</rdfs:label>
     </owl:Class>
     
 
@@ -17039,9 +17223,9 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A exposure event involving the interaction of an exposure receptor to the condition of power plant.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A exposure event involving the interaction of an exposure receptor to power plant.</obo:IAO_0000115>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">power plant exposure</oboInOwl:hasExactSynonym>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exposure to power plant conditions</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exposure to power plant</rdfs:label>
     </owl:Class>
     
 
@@ -17060,9 +17244,9 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A exposure event involving the interaction of an exposure receptor to the condition of geothermal power plant.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A exposure event involving the interaction of an exposure receptor to geothermal power plant.</obo:IAO_0000115>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">geothermal power plant exposure</oboInOwl:hasExactSynonym>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exposure to geothermal power plant conditions</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exposure to geothermal power plant</rdfs:label>
     </owl:Class>
     
 
@@ -17081,9 +17265,9 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A exposure event involving the interaction of an exposure receptor to the condition of nuclear power plant.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A exposure event involving the interaction of an exposure receptor to nuclear power plant.</obo:IAO_0000115>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nuclear power plant exposure</oboInOwl:hasExactSynonym>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exposure to nuclear power plant conditions</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exposure to nuclear power plant</rdfs:label>
     </owl:Class>
     
 
@@ -17102,9 +17286,9 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A exposure event involving the interaction of an exposure receptor to the condition of solar power station.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A exposure event involving the interaction of an exposure receptor to solar power station.</obo:IAO_0000115>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">solar power station exposure</oboInOwl:hasExactSynonym>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exposure to solar power station conditions</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exposure to solar power station</rdfs:label>
     </owl:Class>
     
 
@@ -17123,9 +17307,9 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A exposure event involving the interaction of an exposure receptor to the condition of factory.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A exposure event involving the interaction of an exposure receptor to factory.</obo:IAO_0000115>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">factory exposure</oboInOwl:hasExactSynonym>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exposure to factory conditions</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exposure to factory</rdfs:label>
     </owl:Class>
     
 
@@ -17144,9 +17328,9 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A exposure event involving the interaction of an exposure receptor to the condition of waste treatment plant.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A exposure event involving the interaction of an exposure receptor to waste treatment plant.</obo:IAO_0000115>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">waste treatment plant exposure</oboInOwl:hasExactSynonym>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exposure to waste treatment plant conditions</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exposure to waste treatment plant</rdfs:label>
     </owl:Class>
     
 
@@ -17165,9 +17349,9 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A exposure event involving the interaction of an exposure receptor to the condition of wastewater treatment plant.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A exposure event involving the interaction of an exposure receptor to wastewater treatment plant.</obo:IAO_0000115>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wastewater treatment plant exposure</oboInOwl:hasExactSynonym>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exposure to wastewater treatment plant conditions</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exposure to wastewater treatment plant</rdfs:label>
     </owl:Class>
     
 
@@ -17186,9 +17370,9 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A exposure event involving the interaction of an exposure receptor to the condition of agricultural wastewater treatment plant.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A exposure event involving the interaction of an exposure receptor to agricultural wastewater treatment plant.</obo:IAO_0000115>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">agricultural wastewater treatment plant exposure</oboInOwl:hasExactSynonym>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exposure to agricultural wastewater treatment plant conditions</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exposure to agricultural wastewater treatment plant</rdfs:label>
     </owl:Class>
     
 
@@ -17207,9 +17391,9 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A exposure event involving the interaction of an exposure receptor to the condition of industrial wastewate treatment plant.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A exposure event involving the interaction of an exposure receptor to industrial wastewate treatment plant.</obo:IAO_0000115>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">industrial wastewate treatment plant exposure</oboInOwl:hasExactSynonym>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exposure to industrial wastewate treatment plant conditions</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exposure to industrial wastewate treatment plant</rdfs:label>
     </owl:Class>
     
 
@@ -17228,9 +17412,9 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A exposure event involving the interaction of an exposure receptor to the condition of extreme high temperature environment.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A exposure event involving the interaction of an exposure receptor to extreme high temperature environment.</obo:IAO_0000115>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">extreme high temperature environment exposure</oboInOwl:hasExactSynonym>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exposure to extreme high temperature environment conditions</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exposure to extreme high temperature environment</rdfs:label>
     </owl:Class>
     
 
@@ -17249,9 +17433,9 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A exposure event involving the interaction of an exposure receptor to the condition of high pressure environment.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A exposure event involving the interaction of an exposure receptor to high pressure environment.</obo:IAO_0000115>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">high pressure environment exposure</oboInOwl:hasExactSynonym>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exposure to high pressure environment conditions</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exposure to high pressure environment</rdfs:label>
     </owl:Class>
     
 
@@ -17277,48 +17461,6 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/ECTO_1000021 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECTO_1000021">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ExO_0000002"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002309"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001486"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A exposure event involving the interaction of an exposure receptor to the condition of landspout.</obo:IAO_0000115>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">landspout exposure</oboInOwl:hasExactSynonym>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exposure to landspout conditions</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/ECTO_1000022 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECTO_1000022">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ExO_0000002"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002309"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000714"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A exposure event involving the interaction of an exposure receptor to the condition of storm surge.</obo:IAO_0000115>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">storm surge exposure</oboInOwl:hasExactSynonym>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exposure to storm surge conditions</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/ECTO_1000023 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECTO_1000023">
@@ -17333,72 +17475,9 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A exposure event involving the interaction of an exposure receptor to the condition of icestorm.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A exposure event involving the interaction of an exposure receptor to icestorm.</obo:IAO_0000115>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">icestorm exposure</oboInOwl:hasExactSynonym>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exposure to icestorm conditions</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/ECTO_1000024 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECTO_1000024">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ExO_0000002"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002309"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001482"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A exposure event involving the interaction of an exposure receptor to the condition of tornado.</obo:IAO_0000115>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tornado exposure</oboInOwl:hasExactSynonym>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exposure to tornado conditions</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/ECTO_1000025 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECTO_1000025">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ExO_0000002"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002309"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001487"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A exposure event involving the interaction of an exposure receptor to the condition of waterspout.</obo:IAO_0000115>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">waterspout exposure</oboInOwl:hasExactSynonym>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exposure to waterspout conditions</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/ECTO_1000026 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECTO_1000026">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ExO_0000002"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002309"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000713"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A exposure event involving the interaction of an exposure receptor to the condition of flash flood.</obo:IAO_0000115>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">flash flood exposure</oboInOwl:hasExactSynonym>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exposure to flash flood conditions</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exposure to icestorm</rdfs:label>
     </owl:Class>
     
 
@@ -17412,14 +17491,14 @@
                     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ExO_0000002"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002309"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001564"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000600"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A exposure event involving the interaction of an exposure receptor to the condition of rain.</obo:IAO_0000115>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rain exposure</oboInOwl:hasExactSynonym>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exposure to rain conditions</rdfs:label>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A exposure event involving the interaction of an exposure receptor to http://purl.obolibrary.org/obo/ENVO_01000600.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://purl.obolibrary.org/obo/ENVO_01000600 exposure</oboInOwl:hasExactSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exposure to http://purl.obolibrary.org/obo/ENVO_01000600</rdfs:label>
     </owl:Class>
     
 
@@ -17438,9 +17517,9 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A exposure event involving the interaction of an exposure receptor to the condition of freezing rainfall.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A exposure event involving the interaction of an exposure receptor to freezing rainfall.</obo:IAO_0000115>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">freezing rainfall exposure</oboInOwl:hasExactSynonym>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exposure to freezing rainfall conditions</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exposure to freezing rainfall</rdfs:label>
     </owl:Class>
     
 
@@ -17459,30 +17538,9 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A exposure event involving the interaction of an exposure receptor to the condition of thunderstorm.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A exposure event involving the interaction of an exposure receptor to thunderstorm.</obo:IAO_0000115>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">thunderstorm exposure</oboInOwl:hasExactSynonym>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exposure to thunderstorm conditions</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/ECTO_1000030 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECTO_1000030">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ExO_0000002"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002309"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000710"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A exposure event involving the interaction of an exposure receptor to the condition of flood.</obo:IAO_0000115>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">flood exposure</oboInOwl:hasExactSynonym>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exposure to flood conditions</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exposure to thunderstorm</rdfs:label>
     </owl:Class>
     
 
@@ -17501,9 +17559,198 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A exposure event involving the interaction of an exposure receptor to the condition of tropical storm.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A exposure event involving the interaction of an exposure receptor to tropical storm.</obo:IAO_0000115>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tropical storm exposure</oboInOwl:hasExactSynonym>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exposure to tropical storm conditions</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exposure to tropical storm</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ECTO_1000032 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECTO_1000032">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ExO_0000002"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002309"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_00002874"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A exposure event involving the interaction of an exposure receptor to the condition of air conditioning unit.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">air conditioning unit exposure</oboInOwl:hasExactSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exposure to air conditioning unit conditions</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ECTO_1000033 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECTO_1000033">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ExO_0000002"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002309"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001813"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A exposure event involving the interaction of an exposure receptor to construction.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">construction exposure</oboInOwl:hasExactSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exposure to construction</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ECTO_1000034 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECTO_1000034">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ExO_0000002"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002309"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000078"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A exposure event involving the interaction of an exposure receptor to farm.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">farm exposure</oboInOwl:hasExactSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exposure to farm</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ECTO_1000035 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECTO_1000035">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ExO_0000002"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002309"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_00002173"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A exposure event involving the interaction of an exposure receptor to hospital.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hospital exposure</oboInOwl:hasExactSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exposure to hospital</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ECTO_1000036 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECTO_1000036">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ExO_0000002"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002309"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001406"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A exposure event involving the interaction of an exposure receptor to laboratory facility.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">laboratory facility exposure</oboInOwl:hasExactSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exposure to laboratory facility</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ECTO_1000037 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECTO_1000037">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ExO_0000002"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002309"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001224"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A exposure event involving the interaction of an exposure receptor to office.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">office exposure</oboInOwl:hasExactSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exposure to office</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ECTO_1000040 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECTO_1000040">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ExO_0000002"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002309"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000934"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A exposure event involving the interaction of an exposure receptor to restaurant.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">restaurant exposure</oboInOwl:hasExactSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exposure to restaurant</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ECTO_1000041 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECTO_1000041">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ExO_0000002"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002309"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_00002221"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A exposure event involving the interaction of an exposure receptor to shop.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">shop exposure</oboInOwl:hasExactSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exposure to shop</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ECTO_1000056 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECTO_1000056">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ExO_0000002"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002309"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000830"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A exposure event involving the interaction of an exposure receptor to water-based rainfall.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">water-based rainfall exposure</oboInOwl:hasExactSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exposure to water-based rainfall</rdfs:label>
     </owl:Class>
     
 
@@ -17690,9 +17937,9 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An exposure to antiarrythmic agent therapy.</obo:IAO_0000115>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exposure to antiarrythmic agent therapy</oboInOwl:hasExactSynonym>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">antiarrythmic agent therapy exposure</rdfs:label>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An exposure to antiarrhythmic agent therapy.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exposure to antiarrhythmic agent therapy</oboInOwl:hasExactSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">antiarrhythmic agent therapy exposure</rdfs:label>
     </owl:Class>
     
 
@@ -18236,9 +18483,9 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An exposure to antigout agent therapy.</obo:IAO_0000115>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exposure to antigout agent therapy</oboInOwl:hasExactSynonym>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">antigout agent therapy exposure</rdfs:label>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An exposure to uricosuric agent therapy.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exposure to uricosuric agent therapy</oboInOwl:hasExactSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">uricosuric agent therapy exposure</rdfs:label>
     </owl:Class>
     
 
@@ -18656,9 +18903,9 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An exposure to transplantation surgical procedure.</obo:IAO_0000115>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exposure to transplantation surgical procedure</oboInOwl:hasExactSynonym>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">transplantation surgical procedure exposure</rdfs:label>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An exposure to transplantation procedure.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exposure to transplantation procedure</oboInOwl:hasExactSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">transplantation procedure exposure</rdfs:label>
     </owl:Class>
     
 
@@ -18693,14 +18940,14 @@
                     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ExO_0000002"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002309"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/OBI_0100026"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_1"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A history of exposure to organism.</obo:IAO_0000115>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">organism exposure</oboInOwl:hasExactSynonym>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exposure to organism</rdfs:label>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A history of exposure to root.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">root exposure</oboInOwl:hasExactSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exposure to root</rdfs:label>
     </owl:Class>
     
 
@@ -18789,6 +19036,27 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/ECTO_3000005 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECTO_3000005">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ExO_0000002"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002309"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_9606"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A history of exposure to Homo sapiens.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Homo sapiens exposure</oboInOwl:hasExactSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exposure to Homo sapiens</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/ECTO_4000000 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECTO_4000000">
@@ -18813,9 +19081,9 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A exposure event involving the interaction of an exposure receptor to deviation(from_normal)deviation (from_normal) of quality.</obo:IAO_0000115>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exposure to deviation(from_normal)deviation (from_normal) in quality</oboInOwl:hasExactSynonym>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exposure to deviation(from_normal)deviation (from_normal) of quality</rdfs:label>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A exposure event involving the interaction of an exposure receptor to deviation (from_normal)deviation(from_normal) of quality.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exposure to deviation (from_normal)deviation(from_normal) in quality</oboInOwl:hasExactSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exposure to deviation (from_normal)deviation(from_normal) of quality</rdfs:label>
     </owl:Class>
     
 
@@ -19943,22 +20211,21 @@
                     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ExO_0000002"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002309"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000076"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ExO_0000002"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002309"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_00001996"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A exposure event involving the interaction of an exposure receptor to mine drainage.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mine drainage exposure</oboInOwl:hasExactSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exposure to mine drainage</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ECTO_5000004 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECTO_5000004">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
@@ -19970,6 +20237,16 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A exposure event involving the interaction of an exposure receptor to acid mine drainage.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">acid mine drainage exposure</oboInOwl:hasExactSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exposure to acid mine drainage</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ECTO_5000005 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECTO_5000005">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
@@ -19981,6 +20258,16 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A exposure event involving the interaction of an exposure receptor to gold mine drainage.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">gold mine drainage exposure</oboInOwl:hasExactSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exposure to gold mine drainage</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ECTO_5000006 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECTO_5000006">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
@@ -19992,6 +20279,16 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A exposure event involving the interaction of an exposure receptor to gold mine.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">gold mine exposure</oboInOwl:hasExactSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exposure to gold mine</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ECTO_5000007 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECTO_5000007">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
@@ -20003,24 +20300,51 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A exposure event involving the interaction of an exposure receptor to acid mine drainage.</obo:IAO_0000115>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A exposure event involving the interaction of an exposure receptor to coal mine.</obo:IAO_0000115>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A exposure event involving the interaction of an exposure receptor to gold mine drainage.</obo:IAO_0000115>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A exposure event involving the interaction of an exposure receptor to gold mine.</obo:IAO_0000115>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A exposure event involving the interaction of an exposure receptor to mine drainage.</obo:IAO_0000115>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A exposure event involving the interaction of an exposure receptor to mine.</obo:IAO_0000115>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">acid mine drainage exposure</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">coal mine exposure</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">gold mine drainage exposure</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">gold mine exposure</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mine drainage exposure</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mine exposure</oboInOwl:hasExactSynonym>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exposure to acid mine drainage</rdfs:label>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exposure to coal mine</rdfs:label>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exposure to gold mine</rdfs:label>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exposure to gold mine drainage</rdfs:label>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exposure to mine</rdfs:label>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exposure to mine drainage</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ECTO_5000008 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECTO_5000008">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ExO_0000002"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002309"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000923"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A exposure event involving the interaction of an exposure receptor to petting zoo.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">petting zoo exposure</oboInOwl:hasExactSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exposure to petting zoo</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ECTO_5000009 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECTO_5000009">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ExO_0000002"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002309"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000935"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A exposure event involving the interaction of an exposure receptor to campground.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">campground exposure</oboInOwl:hasExactSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exposure to campground</rdfs:label>
     </owl:Class>
     
 
@@ -20651,6 +20975,27 @@
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An exposure event involving Tobacco Smoking</obo:IAO_0000115>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tobacco Smoking exposure</oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exposure to Tobacco Smoking</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ECTO_6000030 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECTO_6000030">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ExO_0000002"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002309"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NBO_0009003"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An exposure event involving hunting behavior</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hunting behavior exposure</oboInOwl:hasExactSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exposure to hunting behavior</rdfs:label>
     </owl:Class>
     
 
@@ -22940,6 +23285,27 @@
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A exposure event involving the interaction of an exposure receptor to pulp-bleaching waste water.</obo:IAO_0000115>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pulp-bleaching waste water exposure</oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exposure to pulp-bleaching waste water</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ECTO_7000121 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECTO_7000121">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ExO_0000002"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002309"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_02000102"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A exposure event involving the interaction of an exposure receptor to fibrous glass dust.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fibrous glass dust exposure</oboInOwl:hasExactSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exposure to fibrous glass dust</rdfs:label>
     </owl:Class>
     
 
@@ -28698,27 +29064,6 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/ECTO_9000218 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECTO_9000218">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ExO_0000002"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002309"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_28384"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An exposure to vitamin K.</obo:IAO_0000115>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exposure to vitamin K</oboInOwl:hasExactSynonym>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">vitamin K exposure</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/ECTO_9000219 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECTO_9000219">
@@ -29580,27 +29925,6 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/ECTO_9000266 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECTO_9000266">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ExO_0000002"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002309"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_24431"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An exposure to chemical entity.</obo:IAO_0000115>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exposure to chemical entity</oboInOwl:hasExactSynonym>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chemical entity exposure</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/ECTO_9000267 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECTO_9000267">
@@ -29954,27 +30278,6 @@
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An exposure to organophosphorus compound.</obo:IAO_0000115>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exposure to organophosphorus compound</oboInOwl:hasExactSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">organophosphorus compound exposure</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/ECTO_9000285 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECTO_9000285">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ExO_0000002"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002309"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_22632"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An exposure to arsenic molecular entity.</obo:IAO_0000115>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exposure to arsenic molecular entity</oboInOwl:hasExactSynonym>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">arsenic molecular entity exposure</rdfs:label>
     </owl:Class>
     
 
@@ -42432,27 +42735,6 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/ECTO_9000905 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECTO_9000905">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ExO_0000002"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002309"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_9948"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An exposure to verapamil.</obo:IAO_0000115>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exposure to verapamil</oboInOwl:hasExactSynonym>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">verapamil exposure</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/ECTO_9000906 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ECTO_9000906">
@@ -44147,9 +44429,9 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An exposure to Benzoyl chloride.</obo:IAO_0000115>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exposure to Benzoyl chloride</oboInOwl:hasExactSynonym>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Benzoyl chloride exposure</rdfs:label>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An exposure to benzoyl chloride.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exposure to benzoyl chloride</oboInOwl:hasExactSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">benzoyl chloride exposure</rdfs:label>
     </owl:Class>
     
 
@@ -46751,9 +47033,9 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An exposure to Fluometuron.</obo:IAO_0000115>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exposure to Fluometuron</oboInOwl:hasExactSynonym>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fluometuron exposure</rdfs:label>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An exposure to fluometuron.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exposure to fluometuron</oboInOwl:hasExactSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fluometuron exposure</rdfs:label>
     </owl:Class>
     
 
@@ -67188,6 +67470,12 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/ENVO_00000078 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00000078"/>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/ENVO_00000134 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00000134"/>
@@ -67374,6 +67662,12 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/ENVO_00002173 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00002173"/>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/ENVO_00002186 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00002186"/>
@@ -67407,6 +67701,12 @@
     <!-- http://purl.obolibrary.org/obo/ENVO_00002215 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00002215"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_00002221 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00002221"/>
     
 
 
@@ -67497,6 +67797,12 @@
     <!-- http://purl.obolibrary.org/obo/ENVO_00002873 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00002873"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_00002874 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00002874"/>
     
 
 
@@ -67614,9 +67920,21 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/ENVO_01000254 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000254"/>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/ENVO_01000256 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000256"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01000281 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000281"/>
     
 
 
@@ -67671,6 +67989,12 @@
     <!-- http://purl.obolibrary.org/obo/ENVO_01000451 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000451"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01000452 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000452"/>
     
 
 
@@ -67782,6 +68106,12 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/ENVO_01000600 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000600"/>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/ENVO_01000629 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000629"/>
@@ -67866,24 +68196,6 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/ENVO_01000710 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000710"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/ENVO_01000713 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000713"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/ENVO_01000714 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000714"/>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/ENVO_01000715 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000715"/>
@@ -67926,6 +68238,12 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/ENVO_01000830 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000830"/>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/ENVO_01000838 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000838"/>
@@ -67959,6 +68277,24 @@
     <!-- http://purl.obolibrary.org/obo/ENVO_01000896 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000896"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01000923 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000923"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01000934 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000934"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01000935 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000935"/>
     
 
 
@@ -68040,6 +68376,12 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/ENVO_01001224 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01001224"/>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/ENVO_01001279 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01001279"/>
@@ -68106,27 +68448,15 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/ENVO_01001482 -->
+    <!-- http://purl.obolibrary.org/obo/ENVO_01001406 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01001482"/>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01001406"/>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/ENVO_01001486 -->
+    <!-- http://purl.obolibrary.org/obo/ENVO_01001813 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01001486"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/ENVO_01001487 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01001487"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/ENVO_01001564 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01001564"/>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01001813"/>
     
 
 
@@ -69030,6 +69360,12 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/NBO_0009003 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NBO_0009003"/>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/NBO_0015005 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/NBO_0015005"/>
@@ -69045,6 +69381,12 @@
     <!-- http://purl.obolibrary.org/obo/NBO_0015008 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/NBO_0015008"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_1 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_1"/>
     
 
 
@@ -69078,6 +69420,18 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_9606 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_9606"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCIT_C103933 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCIT_C103933"/>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/NCIT_C116448 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCIT_C116448"/>
@@ -69087,6 +69441,12 @@
     <!-- http://purl.obolibrary.org/obo/NCIT_C16203 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCIT_C16203"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCIT_C16273 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCIT_C16273"/>
     
 
 
@@ -69246,6 +69606,12 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/NCIT_C25193 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCIT_C25193"/>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/NCIT_C27851 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCIT_C27851"/>
@@ -69327,12 +69693,6 @@
     <!-- http://purl.obolibrary.org/obo/NCIT_C96640 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCIT_C96640"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/OBI_0100026 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0100026"/>
     
 
 
