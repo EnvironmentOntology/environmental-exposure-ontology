@@ -100,24 +100,20 @@ $(TMPDIR)/$(ONT)-main.obo: | $(TMPDIR)
 	$(ROBOT) merge -i $@ reason -o $@.owl && mv $@.owl $@
 	
 $(TMPDIR)/$(ONT)-base-quick.owl: $(ONT)-base.owl | $(TMPDIR)
-	$(ROBOT) merge -i $< -o $@.owl && mv $@.owl $@
+	$(ROBOT) merge -i $< remove --base-iri $(URIBASE)/ECTO_ --axioms external --trim false -o $@.owl && mv $@.owl $@
 
 $(TMPDIR)/$(ONT)-base-release.owl: | $(TMPDIR)
-	wget $(ONTBASE)/$(ONT)-base.owl -O $@
-	$(ROBOT) merge -i $@ -o $@.owl && mv $@.owl $@
-
-reports/robot_main_diff.md: $(TMPDIR)/$(ONT)-quick.obo $(TMPDIR)/$(ONT)-main.obo
-	$(ROBOT) diff --left $(TMPDIR)/$(ONT)-main.obo --right $(TMPDIR)/$(ONT)-quick.obo -f markdown -o $@
+	$(ROBOT) merge -I $(ONTBASE)/$(ONT)-base.owl remove --base-iri $(URIBASE)/ECTO_ --axioms external --trim false -o $@.owl && mv $@.owl $@
 
 reports/robot_base_diff.md: $(TMPDIR)/$(ONT)-base-quick.owl $(TMPDIR)/$(ONT)-base-release.owl
 	$(ROBOT) diff --left $(TMPDIR)/$(ONT)-base-quick.owl --right $(TMPDIR)/$(ONT)-base-release.owl -f markdown -o $@
 
 reports/robot_base_diff.txt: $(TMPDIR)/$(ONT)-base-quick.owl $(TMPDIR)/$(ONT)-base-release.owl
-	$(ROBOT) diff --left $(TMPDIR)/$(ONT)-base-quick.owl --right $(TMPDIR)/$(ONT)-base-release.owl -o $@
+	$(ROBOT) diff --left $(TMPDIR)/$(ONT)-base-quick.owl --right  $(TMPDIR)/$(ONT)-base-release.owl -o $@
 
 .PHONY: feature_diff
 feature_diff:
-	make IMP=false PAT=false reports/robot_main_diff.md reports/robot_base_diff.md reports/robot_base_diff.txt
+	make IMP=false PAT=false reports/robot_base_diff.md reports/robot_base_diff.txt
 	
 #########################################
 ### Generating all ROBOT templates ######
@@ -134,4 +130,4 @@ $(TEMPLATESDIR)/%.owl: $(TEMPLATESDIR)/%.tsv $(SRC)
 templates: $(TEMPLATES)
 	
 $(COMPONENTSDIR)/obsoletes.owl:
-	$(ROBOT) merge -i $(TEMPLATESDIR)/obsolete.owl -i $(TEMPLATESDIR)/replaced.owl -o $@
+	$(ROBOT) merge -i $(TEMPLATESDIR)/obsolete.owl -o $@
