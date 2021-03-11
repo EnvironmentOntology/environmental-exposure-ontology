@@ -41,7 +41,7 @@ TODAY ?=                    $(shell date +%Y-%m-%d)
 OBODATE ?=                  $(shell date +'%d:%m:%Y %H:%M')
 VERSION=                    $(TODAY)
 ANNOTATE_ONTOLOGY_VERSION = annotate -V $(ONTBASE)/releases/$(VERSION)/$@ --annotation owl:versionInfo $(VERSION)
-OTHER_SRC =                 $(PATTERNDIR)/definitions.owl $(COMPONENTSDIR)/ecto-xrefs.owl $(COMPONENTSDIR)/bridge.owl 
+OTHER_SRC =                 $(PATTERNDIR)/definitions.owl $(COMPONENTSDIR)/ecto-xrefs.owl $(COMPONENTSDIR)/bridge.owl $(COMPONENTSDIR)/obsoletes.owl 
 ONTOLOGYTERMS =             $(TMPDIR)/ontologyterms.txt
 PATTERNDIR=                 ../patterns
 DOSDP_SCHEMA=                http:// # change to PURL when ready.
@@ -261,6 +261,8 @@ refresh-%:
 $(COMPONENTSDIR)/%: .FORCE
 	touch $@
 .PRECIOUS: $(COMPONENTSDIR)/%
+
+
 
 
 

@@ -118,3 +118,20 @@ reports/robot_base_diff.txt: $(TMPDIR)/$(ONT)-base-quick.owl $(TMPDIR)/$(ONT)-ba
 .PHONY: feature_diff
 feature_diff:
 	make IMP=false PAT=false reports/robot_main_diff.md reports/robot_base_diff.md reports/robot_base_diff.txt
+	
+#########################################
+### Generating all ROBOT templates ######
+#########################################
+
+TEMPLATESDIR=../templates
+
+TEMPLATES=$(patsubst %.tsv, $(TEMPLATESDIR)/%.owl, $(notdir $(wildcard $(TEMPLATESDIR)/*.tsv)))
+
+$(TEMPLATESDIR)/%.owl: $(TEMPLATESDIR)/%.tsv $(SRC)
+	$(ROBOT) merge -i $(SRC) template --template $< --output $@ && \
+	$(ROBOT) annotate --input $@ --ontology-iri $(ONTBASE)/components/$*.owl -o $@
+
+templates: $(TEMPLATES)
+	
+$(COMPONENTSDIR)/obsoletes.owl:
+	$(ROBOT) merge -i $(TEMPLATESDIR)/obsolete.owl -i $(TEMPLATESDIR)/replaced.owl -o $@
