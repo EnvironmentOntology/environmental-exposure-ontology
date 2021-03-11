@@ -1,12 +1,13 @@
 format-version: 1.2
-data-version: ecto/releases/2021-03-10/ecto-base.owl
+data-version: ecto/releases/2021-03-11/ecto-base.owl
 subsetdef: mrex "medically relevant exposure"
 ontology: ecto/ecto-base
 property_value: http://purl.org/dc/elements/1.1/description "ECTO describes exposures to experimental treatments of plants and model organisms (e.g. exposures to modification of diet, lighting levels, temperature); exposures of humans or any other organisms to stressors through a variety of routes, for purposes of public health, environmental monitoring etc, stimuli, natural and experimental, any kind of environmental condition or change in condition that can be experienced by an organism or population of organisms on earth. The scope is very general and can include for example plant treatment regimens, as well as human clinical exposures (although these may better be handled by a more specialized ontology)." xsd:string
 property_value: http://purl.org/dc/elements/1.1/title "Environment Exposure Ontology" xsd:string
 property_value: http://purl.org/dc/elements/1.1/type IAO:8000001
 property_value: http://purl.org/dc/terms/license https://creativecommons.org/publicdomain/zero/1.0/
-property_value: owl:versionInfo "2021-03-10" xsd:string
+property_value: IAO:0000700 http://purl.obolibrary.org/obo/ExO_0000002 xsd:string
+property_value: owl:versionInfo "2021-03-11" xsd:string
 
 [Term]
 id: ECTO:0000001
@@ -34,7 +35,7 @@ intersection_of: RO:0002309 ENVO:21001216
 
 [Term]
 id: ECTO:0000007
-name: exposure to visible spectrum radiation
+name: exposure to visible light radiation
 def: "A exposure event involving the interaction of an exposure receptor to visible spectrum radiation." []
 synonym: "visible spectrum radiation exposure" EXACT []
 intersection_of: ExO:0000002
@@ -528,9 +529,9 @@ intersection_of: RO:0002309 PATO:0001241
 
 [Term]
 id: ECTO:0020000
-name: exposure to http://purl.obolibrary.org/obo/NCIT_C103933
-def: "An exposure event involving http://purl.obolibrary.org/obo/NCIT_C103933" []
-synonym: "http://purl.obolibrary.org/obo/NCIT_C103933 exposure" EXACT []
+name: exposure to Automotive Occupations
+def: "An exposure event involving Automotive Occupations" []
+synonym: "Automotive Occupations exposure" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002309 NCIT:C103933
 
@@ -990,7 +991,7 @@ intersection_of: RO:0002309 ENVO:01000452
 
 [Term]
 id: ECTO:0500001
-name: exposure to http://purl.obolibrary.org/obo/ENVO_03510001
+name: exposure to brake fluid
 def: "A exposure event involving the interaction of an exposure receptor to http://purl.obolibrary.org/obo/ENVO_03510001." []
 synonym: "http://purl.obolibrary.org/obo/ENVO_03510001 exposure" EXACT []
 intersection_of: ExO:0000002
@@ -998,7 +999,7 @@ intersection_of: RO:0002309 ENVO:03510001
 
 [Term]
 id: ECTO:0500002
-name: exposure to http://purl.obolibrary.org/obo/ENVO_03510004
+name: exposure to hydraulic fluid
 def: "A exposure event involving the interaction of an exposure receptor to http://purl.obolibrary.org/obo/ENVO_03510004." []
 synonym: "http://purl.obolibrary.org/obo/ENVO_03510004 exposure" EXACT []
 intersection_of: ExO:0000002
@@ -1006,7 +1007,7 @@ intersection_of: RO:0002309 ENVO:03510004
 
 [Term]
 id: ECTO:0500003
-name: exposure to http://purl.obolibrary.org/obo/ENVO_03510002
+name: exposure to automatic transmission fluid
 def: "A exposure event involving the interaction of an exposure receptor to http://purl.obolibrary.org/obo/ENVO_03510002." []
 synonym: "http://purl.obolibrary.org/obo/ENVO_03510002 exposure" EXACT []
 intersection_of: ExO:0000002
@@ -1014,7 +1015,7 @@ intersection_of: RO:0002309 ENVO:03510002
 
 [Term]
 id: ECTO:0500004
-name: exposure to http://purl.obolibrary.org/obo/ENVO_03510005
+name: exposure to motor oil
 def: "A exposure event involving the interaction of an exposure receptor to http://purl.obolibrary.org/obo/ENVO_03510005." []
 synonym: "http://purl.obolibrary.org/obo/ENVO_03510005 exposure" EXACT []
 intersection_of: ExO:0000002
@@ -1022,7 +1023,7 @@ intersection_of: RO:0002309 ENVO:03510005
 
 [Term]
 id: ECTO:0500005
-name: exposure to http://purl.obolibrary.org/obo/ENVO_03510010
+name: exposure to dye
 def: "A exposure event involving the interaction of an exposure receptor to http://purl.obolibrary.org/obo/ENVO_03510010." []
 synonym: "http://purl.obolibrary.org/obo/ENVO_03510010 exposure" EXACT []
 intersection_of: ExO:0000002
@@ -1030,7 +1031,7 @@ intersection_of: RO:0002309 ENVO:03510010
 
 [Term]
 id: ECTO:0500006
-name: exposure to http://purl.obolibrary.org/obo/ENVO_03510011
+name: exposure to leather dye
 def: "A exposure event involving the interaction of an exposure receptor to http://purl.obolibrary.org/obo/ENVO_03510011." []
 synonym: "http://purl.obolibrary.org/obo/ENVO_03510011 exposure" EXACT []
 intersection_of: ExO:0000002
@@ -1038,7 +1039,7 @@ intersection_of: RO:0002309 ENVO:03510011
 
 [Term]
 id: ECTO:0500007
-name: exposure to http://purl.obolibrary.org/obo/ENVO_03510012
+name: exposure to paper dye
 def: "A exposure event involving the interaction of an exposure receptor to http://purl.obolibrary.org/obo/ENVO_03510012." []
 synonym: "http://purl.obolibrary.org/obo/ENVO_03510012 exposure" EXACT []
 intersection_of: ExO:0000002
@@ -1046,7 +1047,7 @@ intersection_of: RO:0002309 ENVO:03510012
 
 [Term]
 id: ECTO:0500008
-name: exposure to http://purl.obolibrary.org/obo/ENVO_03510013
+name: exposure to textile dye
 def: "A exposure event involving the interaction of an exposure receptor to http://purl.obolibrary.org/obo/ENVO_03510013." []
 synonym: "http://purl.obolibrary.org/obo/ENVO_03510013 exposure" EXACT []
 intersection_of: ExO:0000002
@@ -1054,7 +1055,7 @@ intersection_of: RO:0002309 ENVO:03510013
 
 [Term]
 id: ECTO:0500009
-name: exposure to http://purl.obolibrary.org/obo/ENVO_03510014
+name: exposure to India ink
 def: "A exposure event involving the interaction of an exposure receptor to http://purl.obolibrary.org/obo/ENVO_03510014." []
 synonym: "http://purl.obolibrary.org/obo/ENVO_03510014 exposure" EXACT []
 intersection_of: ExO:0000002
@@ -1062,7 +1063,7 @@ intersection_of: RO:0002309 ENVO:03510014
 
 [Term]
 id: ECTO:0500010
-name: exposure to http://purl.obolibrary.org/obo/ENVO_03510017
+name: exposure to fountain pen ink
 def: "A exposure event involving the interaction of an exposure receptor to http://purl.obolibrary.org/obo/ENVO_03510017." []
 synonym: "http://purl.obolibrary.org/obo/ENVO_03510017 exposure" EXACT []
 intersection_of: ExO:0000002
@@ -1070,7 +1071,7 @@ intersection_of: RO:0002309 ENVO:03510017
 
 [Term]
 id: ECTO:0500011
-name: exposure to http://purl.obolibrary.org/obo/ENVO_03510019
+name: exposure to cleaning agent
 def: "A exposure event involving the interaction of an exposure receptor to http://purl.obolibrary.org/obo/ENVO_03510019." []
 synonym: "http://purl.obolibrary.org/obo/ENVO_03510019 exposure" EXACT []
 intersection_of: ExO:0000002
@@ -1078,7 +1079,7 @@ intersection_of: RO:0002309 ENVO:03510019
 
 [Term]
 id: ECTO:0500012
-name: exposure to http://purl.obolibrary.org/obo/ENVO_03510020
+name: exposure to degreaser
 def: "A exposure event involving the interaction of an exposure receptor to http://purl.obolibrary.org/obo/ENVO_03510020." []
 synonym: "http://purl.obolibrary.org/obo/ENVO_03510020 exposure" EXACT []
 intersection_of: ExO:0000002
@@ -1086,7 +1087,7 @@ intersection_of: RO:0002309 ENVO:03510020
 
 [Term]
 id: ECTO:0500013
-name: exposure to http://purl.obolibrary.org/obo/ENVO_03510021
+name: exposure to varnish
 def: "A exposure event involving the interaction of an exposure receptor to http://purl.obolibrary.org/obo/ENVO_03510021." []
 synonym: "http://purl.obolibrary.org/obo/ENVO_03510021 exposure" EXACT []
 intersection_of: ExO:0000002
@@ -1094,7 +1095,7 @@ intersection_of: RO:0002309 ENVO:03510021
 
 [Term]
 id: ECTO:0500014
-name: exposure to http://purl.obolibrary.org/obo/ENVO_03510022
+name: exposure to resin (gum) varnish
 def: "A exposure event involving the interaction of an exposure receptor to http://purl.obolibrary.org/obo/ENVO_03510022." []
 synonym: "http://purl.obolibrary.org/obo/ENVO_03510022 exposure" EXACT []
 intersection_of: ExO:0000002
@@ -1102,7 +1103,7 @@ intersection_of: RO:0002309 ENVO:03510022
 
 [Term]
 id: ECTO:0500015
-name: exposure to http://purl.obolibrary.org/obo/ENVO_03510040
+name: exposure to stain
 def: "A exposure event involving the interaction of an exposure receptor to http://purl.obolibrary.org/obo/ENVO_03510040." []
 synonym: "http://purl.obolibrary.org/obo/ENVO_03510040 exposure" EXACT []
 intersection_of: ExO:0000002
@@ -1110,7 +1111,7 @@ intersection_of: RO:0002309 ENVO:03510040
 
 [Term]
 id: ECTO:0500016
-name: exposure to http://purl.obolibrary.org/obo/ENVO_03510041
+name: exposure to wood stain
 def: "A exposure event involving the interaction of an exposure receptor to http://purl.obolibrary.org/obo/ENVO_03510041." []
 synonym: "http://purl.obolibrary.org/obo/ENVO_03510041 exposure" EXACT []
 intersection_of: ExO:0000002
@@ -1118,7 +1119,7 @@ intersection_of: RO:0002309 ENVO:03510041
 
 [Term]
 id: ECTO:0500017
-name: exposure to http://purl.obolibrary.org/obo/ENVO_03510024
+name: exposure to lacquer
 def: "A exposure event involving the interaction of an exposure receptor to http://purl.obolibrary.org/obo/ENVO_03510024." []
 synonym: "http://purl.obolibrary.org/obo/ENVO_03510024 exposure" EXACT []
 intersection_of: ExO:0000002
@@ -1126,7 +1127,7 @@ intersection_of: RO:0002309 ENVO:03510024
 
 [Term]
 id: ECTO:0500018
-name: exposure to http://purl.obolibrary.org/obo/ENVO_03510028
+name: exposure to oil paint thinner
 def: "A exposure event involving the interaction of an exposure receptor to http://purl.obolibrary.org/obo/ENVO_03510028." []
 synonym: "http://purl.obolibrary.org/obo/ENVO_03510028 exposure" EXACT []
 intersection_of: ExO:0000002
@@ -1134,7 +1135,7 @@ intersection_of: RO:0002309 ENVO:03510028
 
 [Term]
 id: ECTO:0500019
-name: exposure to http://purl.obolibrary.org/obo/ENVO_03510026
+name: exposure to acrylic paint medium
 def: "A exposure event involving the interaction of an exposure receptor to http://purl.obolibrary.org/obo/ENVO_03510026." []
 synonym: "http://purl.obolibrary.org/obo/ENVO_03510026 exposure" EXACT []
 intersection_of: ExO:0000002
@@ -1142,7 +1143,7 @@ intersection_of: RO:0002309 ENVO:03510026
 
 [Term]
 id: ECTO:0500020
-name: exposure to http://purl.obolibrary.org/obo/ENVO_03510027
+name: exposure to enamel thinner
 def: "A exposure event involving the interaction of an exposure receptor to http://purl.obolibrary.org/obo/ENVO_03510027." []
 synonym: "http://purl.obolibrary.org/obo/ENVO_03510027 exposure" EXACT []
 intersection_of: ExO:0000002
@@ -1150,7 +1151,7 @@ intersection_of: RO:0002309 ENVO:03510027
 
 [Term]
 id: ECTO:0500021
-name: exposure to http://purl.obolibrary.org/obo/ENVO_03510030
+name: exposure to vitreous enamel
 def: "A exposure event involving the interaction of an exposure receptor to http://purl.obolibrary.org/obo/ENVO_03510030." []
 synonym: "http://purl.obolibrary.org/obo/ENVO_03510030 exposure" EXACT []
 intersection_of: ExO:0000002
@@ -1158,7 +1159,7 @@ intersection_of: RO:0002309 ENVO:03510030
 
 [Term]
 id: ECTO:0500022
-name: exposure to http://purl.obolibrary.org/obo/ENVO_03510034
+name: exposure to turpentine
 def: "A exposure event involving the interaction of an exposure receptor to http://purl.obolibrary.org/obo/ENVO_03510034." []
 synonym: "http://purl.obolibrary.org/obo/ENVO_03510034 exposure" EXACT []
 intersection_of: ExO:0000002
@@ -1166,7 +1167,7 @@ intersection_of: RO:0002309 ENVO:03510034
 
 [Term]
 id: ECTO:0500023
-name: exposure to http://purl.obolibrary.org/obo/ENVO_03510035
+name: exposure to naphtha
 def: "A exposure event involving the interaction of an exposure receptor to http://purl.obolibrary.org/obo/ENVO_03510035." []
 synonym: "http://purl.obolibrary.org/obo/ENVO_03510035 exposure" EXACT []
 intersection_of: ExO:0000002
@@ -1174,7 +1175,7 @@ intersection_of: RO:0002309 ENVO:03510035
 
 [Term]
 id: ECTO:0500024
-name: exposure to http://purl.obolibrary.org/obo/ENVO_03510025
+name: exposure to paint thinner
 def: "A exposure event involving the interaction of an exposure receptor to http://purl.obolibrary.org/obo/ENVO_03510025." []
 synonym: "http://purl.obolibrary.org/obo/ENVO_03510025 exposure" EXACT []
 intersection_of: ExO:0000002
@@ -1616,7 +1617,7 @@ intersection_of: RO:0002309 ENVO:01000882
 
 [Term]
 id: ECTO:1000027
-name: exposure to rainwater
+name: exposure to rain
 def: "A exposure event involving the interaction of an exposure receptor to rainwater." []
 synonym: "rainwater exposure" EXACT []
 intersection_of: ExO:0000002
@@ -1656,11 +1657,11 @@ intersection_of: RO:0002309 ENVO:00002874
 
 [Term]
 id: ECTO:1000033
-name: exposure to construction
-def: "A exposure event involving the interaction of an exposure receptor to construction." []
-synonym: "construction exposure" EXACT []
+name: exposure to abattoir
+def: "A exposure event involving the interaction of an exposure receptor to abattoir." []
+synonym: "abattoir exposure" EXACT []
 intersection_of: ExO:0000002
-intersection_of: RO:0002309 ENVO:01001813
+intersection_of: RO:0002309 ENVO:01000925
 
 [Term]
 id: ECTO:1000034
@@ -1712,7 +1713,7 @@ intersection_of: RO:0002309 ENVO:00002221
 
 [Term]
 id: ECTO:1000056
-name: exposure to water-based rainfall
+name: exposure to rainfall
 def: "A exposure event involving the interaction of an exposure receptor to water-based rainfall." []
 synonym: "water-based rainfall exposure" EXACT []
 intersection_of: ExO:0000002
@@ -1800,11 +1801,11 @@ intersection_of: RO:0002309 MAXO:0000166
 
 [Term]
 id: ECTO:2000010
-name: obsolete calcium channel blocker agent therapy exposure
-def: "An exposure to obsolete calcium channel blocker agent therapy." []
-synonym: "exposure to obsolete calcium channel blocker agent therapy" EXACT []
+name: calcium channel blocking agent therapy exposure
+def: "An exposure to calcium channel blocking agent therapy." []
+synonym: "exposure to calcium channel blocking agent therapy" EXACT []
 intersection_of: ExO:0000002
-intersection_of: RO:0002309 MAXO:0000188
+intersection_of: RO:0002309 MAXO:0000434
 
 [Term]
 id: ECTO:2000011
@@ -2024,9 +2025,9 @@ intersection_of: RO:0002309 NCIT:C17007
 
 [Term]
 id: ECTO:2000040
-name: Radiography exposure
-def: "An exposure to Radiography." []
-synonym: "exposure to Radiography" EXACT []
+name: X-Ray Imaging exposure
+def: "An exposure to X-Ray Imaging." []
+synonym: "exposure to X-Ray Imaging" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002309 NCIT:C38101
 
@@ -2112,25 +2113,25 @@ intersection_of: RO:0002309 NCIT:C96640
 
 [Term]
 id: ECTO:2000051
-name: http://purl.obolibrary.org/obo/NCIT_C20080 exposure
-def: "An exposure to http://purl.obolibrary.org/obo/NCIT_C20080." []
-synonym: "exposure to http://purl.obolibrary.org/obo/NCIT_C20080" EXACT []
+name: Angiography exposure
+def: "An exposure to Angiography." []
+synonym: "exposure to Angiography" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002309 NCIT:C20080
 
 [Term]
 id: ECTO:2000052
-name: http://purl.obolibrary.org/obo/NCIT_C17054 exposure
-def: "An exposure to http://purl.obolibrary.org/obo/NCIT_C17054." []
-synonym: "exposure to http://purl.obolibrary.org/obo/NCIT_C17054" EXACT []
+name: Radioactivity exposure
+def: "An exposure to Radioactivity." []
+synonym: "exposure to Radioactivity" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002309 NCIT:C17054
 
 [Term]
 id: ECTO:2000053
-name: http://purl.obolibrary.org/obo/NCIT_C27851 exposure
-def: "An exposure to http://purl.obolibrary.org/obo/NCIT_C27851." []
-synonym: "exposure to http://purl.obolibrary.org/obo/NCIT_C27851" EXACT []
+name: Human Papillomavirus Infection exposure
+def: "An exposure to Human Papillomavirus Infection." []
+synonym: "exposure to Human Papillomavirus Infection" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002309 NCIT:C27851
 
@@ -2780,7 +2781,7 @@ intersection_of: RO:0002309 ENVO:00002008
 
 [Term]
 id: ECTO:7000002
-name: exposure to fume
+name: exposure to fumes
 def: "A exposure event involving the interaction of an exposure receptor to fume." []
 synonym: "fume exposure" EXACT []
 intersection_of: ExO:0000002
@@ -3020,7 +3021,7 @@ intersection_of: RO:0002309 ENVO:01001284
 
 [Term]
 id: ECTO:7000032
-name: exposure to aluminium dust
+name: exposure to aluminum dust
 def: "A exposure event involving the interaction of an exposure receptor to aluminium dust." []
 synonym: "aluminium dust exposure" EXACT []
 intersection_of: ExO:0000002
@@ -3084,7 +3085,7 @@ intersection_of: RO:0002309 ENVO:01000478
 
 [Term]
 id: ECTO:7000040
-name: exposure to lime plaster
+name: exopsure to lime plaster
 def: "A exposure event involving the interaction of an exposure receptor to lime plaster." []
 synonym: "lime plaster exposure" EXACT []
 intersection_of: ExO:0000002
@@ -3121,14 +3122,6 @@ def: "A exposure event involving the interaction of an exposure receptor to part
 synonym: "particle beam radiation exposure" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002309 ENVO:01001025
-
-[Term]
-id: ECTO:7000053
-name: exposure to X-ray radiation
-def: "A exposure event involving the interaction of an exposure receptor to X-ray radiation." []
-synonym: "X-ray radiation exposure" EXACT []
-intersection_of: ExO:0000002
-intersection_of: RO:0002309 ENVO:21001217
 
 [Term]
 id: ECTO:7000055
@@ -3196,7 +3189,7 @@ intersection_of: RO:0002309 ENVO:01000946
 
 [Term]
 id: ECTO:7000063
-name: exposure to liquid water
+name: exposure to water
 def: "A exposure event involving the interaction of an exposure receptor to liquid water." []
 synonym: "liquid water exposure" EXACT []
 intersection_of: ExO:0000002
@@ -3292,7 +3285,7 @@ intersection_of: RO:0002309 ENVO:00002001
 
 [Term]
 id: ECTO:7000077
-name: exposure to fecal material
+name: exposure to feces
 def: "A exposure event involving the interaction of an exposure receptor to fecal material." []
 synonym: "fecal material exposure" EXACT []
 intersection_of: ExO:0000002
@@ -3340,7 +3333,7 @@ intersection_of: RO:0002309 ENVO:00002060
 
 [Term]
 id: ECTO:7000083
-name: exposure to chemically enriched sediment
+name: exposure to contaminated sediment
 def: "A exposure event involving the interaction of an exposure receptor to chemically enriched sediment." []
 synonym: "chemically enriched sediment exposure" EXACT []
 intersection_of: ExO:0000002
@@ -3348,7 +3341,7 @@ intersection_of: RO:0002309 ENVO:00002114
 
 [Term]
 id: ECTO:7000084
-name: exposure to petroleum enriched sediment
+name: exposure to petroleum contaminated sediment
 def: "A exposure event involving the interaction of an exposure receptor to petroleum enriched sediment." []
 synonym: "petroleum enriched sediment exposure" EXACT []
 intersection_of: ExO:0000002
@@ -3548,7 +3541,7 @@ intersection_of: RO:0002309 ENVO:00003032
 
 [Term]
 id: ECTO:7000109
-name: exposure to bodily fluid material
+name: exposure to bodily fluid
 def: "A exposure event involving the interaction of an exposure receptor to bodily fluid material." []
 synonym: "bodily fluid material exposure" EXACT []
 intersection_of: ExO:0000002
@@ -3556,7 +3549,7 @@ intersection_of: RO:0002309 ENVO:02000019
 
 [Term]
 id: ECTO:7000110
-name: exposure to blood material
+name: exposure to blood
 def: "A exposure event involving the interaction of an exposure receptor to blood material." []
 synonym: "blood material exposure" EXACT []
 intersection_of: ExO:0000002
@@ -3564,7 +3557,7 @@ intersection_of: RO:0002309 ENVO:02000020
 
 [Term]
 id: ECTO:7000111
-name: exposure to amniotic fluid material
+name: exposure to amniotic fluid
 def: "A exposure event involving the interaction of an exposure receptor to amniotic fluid material." []
 synonym: "amniotic fluid material exposure" EXACT []
 intersection_of: ExO:0000002
@@ -3572,7 +3565,7 @@ intersection_of: RO:0002309 ENVO:02000021
 
 [Term]
 id: ECTO:7000112
-name: exposure to excreta material
+name: exposure to excreta
 def: "A exposure event involving the interaction of an exposure receptor to excreta material." []
 synonym: "excreta material exposure" EXACT []
 intersection_of: ExO:0000002
@@ -3580,7 +3573,7 @@ intersection_of: RO:0002309 ENVO:02000022
 
 [Term]
 id: ECTO:7000113
-name: exposure to bile material
+name: exposure to bile
 def: "A exposure event involving the interaction of an exposure receptor to bile material." []
 synonym: "bile material exposure" EXACT []
 intersection_of: ExO:0000002
@@ -3641,14 +3634,6 @@ def: "A exposure event involving the interaction of an exposure receptor to pulp
 synonym: "pulp-bleaching waste water exposure" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002309 ENVO:00002193
-
-[Term]
-id: ECTO:7000121
-name: exposure to fibrous glass dust
-def: "A exposure event involving the interaction of an exposure receptor to fibrous glass dust." []
-synonym: "fibrous glass dust exposure" EXACT []
-intersection_of: ExO:0000002
-intersection_of: RO:0002309 ENVO:02000102
 
 [Term]
 id: ECTO:7000122
@@ -3724,7 +3709,7 @@ intersection_of: RO:0002309 ENVO:00003076
 
 [Term]
 id: ECTO:7000131
-name: exposure to http://purl.obolibrary.org/obo/ENVO_03510018
+name: exposure to resin
 def: "A exposure event involving the interaction of an exposure receptor to http://purl.obolibrary.org/obo/ENVO_03510018." []
 synonym: "http://purl.obolibrary.org/obo/ENVO_03510018 exposure" EXACT []
 intersection_of: ExO:0000002
@@ -3732,7 +3717,7 @@ intersection_of: RO:0002309 ENVO:03510018
 
 [Term]
 id: ECTO:7000132
-name: exposure to http://purl.obolibrary.org/obo/ENVO_03510023
+name: exposure to shellac
 def: "A exposure event involving the interaction of an exposure receptor to http://purl.obolibrary.org/obo/ENVO_03510023." []
 synonym: "http://purl.obolibrary.org/obo/ENVO_03510023 exposure" EXACT []
 intersection_of: ExO:0000002
@@ -3740,7 +3725,7 @@ intersection_of: RO:0002309 ENVO:03510023
 
 [Term]
 id: ECTO:7000133
-name: exposure to http://purl.obolibrary.org/obo/ENVO_03510016
+name: exposure to tragacanth
 def: "A exposure event involving the interaction of an exposure receptor to http://purl.obolibrary.org/obo/ENVO_03510016." []
 synonym: "http://purl.obolibrary.org/obo/ENVO_03510016 exposure" EXACT []
 intersection_of: ExO:0000002
@@ -3748,7 +3733,7 @@ intersection_of: RO:0002309 ENVO:03510016
 
 [Term]
 id: ECTO:7000134
-name: exposure to http://purl.obolibrary.org/obo/ENVO_03510015
+name: exposure to xanthan gum
 def: "A exposure event involving the interaction of an exposure receptor to http://purl.obolibrary.org/obo/ENVO_03510015." []
 synonym: "http://purl.obolibrary.org/obo/ENVO_03510015 exposure" EXACT []
 intersection_of: ExO:0000002
@@ -3756,7 +3741,7 @@ intersection_of: RO:0002309 ENVO:03510015
 
 [Term]
 id: ECTO:7000135
-name: exposure to http://purl.obolibrary.org/obo/ENVO_03510000
+name: exposure to wood dust
 def: "A exposure event involving the interaction of an exposure receptor to http://purl.obolibrary.org/obo/ENVO_03510000." []
 synonym: "http://purl.obolibrary.org/obo/ENVO_03510000 exposure" EXACT []
 intersection_of: ExO:0000002
@@ -3764,7 +3749,7 @@ intersection_of: RO:0002309 ENVO:03510000
 
 [Term]
 id: ECTO:7000136
-name: exposure to http://purl.obolibrary.org/obo/ENVO_03510006
+name: exposure to diesel fuel
 def: "A exposure event involving the interaction of an exposure receptor to http://purl.obolibrary.org/obo/ENVO_03510006." []
 synonym: "http://purl.obolibrary.org/obo/ENVO_03510006 exposure" EXACT []
 intersection_of: ExO:0000002
@@ -3772,7 +3757,7 @@ intersection_of: RO:0002309 ENVO:03510006
 
 [Term]
 id: ECTO:7000137
-name: exposure to http://purl.obolibrary.org/obo/ENVO_03510007
+name: exposure to gasoline
 def: "A exposure event involving the interaction of an exposure receptor to http://purl.obolibrary.org/obo/ENVO_03510007." []
 synonym: "http://purl.obolibrary.org/obo/ENVO_03510007 exposure" EXACT []
 intersection_of: ExO:0000002
@@ -3780,7 +3765,7 @@ intersection_of: RO:0002309 ENVO:03510007
 
 [Term]
 id: ECTO:7000138
-name: exposure to http://purl.obolibrary.org/obo/ENVO_03510008
+name: exposure to diesel exhaust
 def: "A exposure event involving the interaction of an exposure receptor to http://purl.obolibrary.org/obo/ENVO_03510008." []
 synonym: "http://purl.obolibrary.org/obo/ENVO_03510008 exposure" EXACT []
 intersection_of: ExO:0000002
@@ -3788,7 +3773,7 @@ intersection_of: RO:0002309 ENVO:03510008
 
 [Term]
 id: ECTO:7000139
-name: exposure to http://purl.obolibrary.org/obo/ENVO_03510009
+name: exposure to gasolilne exhaust
 def: "A exposure event involving the interaction of an exposure receptor to http://purl.obolibrary.org/obo/ENVO_03510009." []
 synonym: "http://purl.obolibrary.org/obo/ENVO_03510009 exposure" EXACT []
 intersection_of: ExO:0000002
@@ -3796,7 +3781,7 @@ intersection_of: RO:0002309 ENVO:03510009
 
 [Term]
 id: ECTO:7000140
-name: exposure to http://purl.obolibrary.org/obo/ENVO_03510029
+name: exposure to primer (paint)
 def: "A exposure event involving the interaction of an exposure receptor to http://purl.obolibrary.org/obo/ENVO_03510029." []
 synonym: "http://purl.obolibrary.org/obo/ENVO_03510029 exposure" EXACT []
 intersection_of: ExO:0000002
@@ -3804,7 +3789,7 @@ intersection_of: RO:0002309 ENVO:03510029
 
 [Term]
 id: ECTO:7000141
-name: exposure to http://purl.obolibrary.org/obo/ENVO_03510031
+name: exposure to oil-based paint
 def: "A exposure event involving the interaction of an exposure receptor to http://purl.obolibrary.org/obo/ENVO_03510031." []
 synonym: "http://purl.obolibrary.org/obo/ENVO_03510031 exposure" EXACT []
 intersection_of: ExO:0000002
@@ -3812,7 +3797,7 @@ intersection_of: RO:0002309 ENVO:03510031
 
 [Term]
 id: ECTO:7000142
-name: exposure to http://purl.obolibrary.org/obo/ENVO_03510032
+name: exposure to acrylic paint
 def: "A exposure event involving the interaction of an exposure receptor to http://purl.obolibrary.org/obo/ENVO_03510032." []
 synonym: "http://purl.obolibrary.org/obo/ENVO_03510032 exposure" EXACT []
 intersection_of: ExO:0000002
@@ -3820,7 +3805,7 @@ intersection_of: RO:0002309 ENVO:03510032
 
 [Term]
 id: ECTO:7000143
-name: exposure to http://purl.obolibrary.org/obo/ENVO_03510033
+name: exposure to luminescent paint
 def: "A exposure event involving the interaction of an exposure receptor to http://purl.obolibrary.org/obo/ENVO_03510033." []
 synonym: "http://purl.obolibrary.org/obo/ENVO_03510033 exposure" EXACT []
 intersection_of: ExO:0000002
@@ -3828,7 +3813,7 @@ intersection_of: RO:0002309 ENVO:03510033
 
 [Term]
 id: ECTO:7000144
-name: exposure to http://purl.obolibrary.org/obo/ENVO_03510036
+name: exposure to rock dust
 def: "A exposure event involving the interaction of an exposure receptor to http://purl.obolibrary.org/obo/ENVO_03510036." []
 synonym: "http://purl.obolibrary.org/obo/ENVO_03510036 exposure" EXACT []
 intersection_of: ExO:0000002
@@ -3836,7 +3821,7 @@ intersection_of: RO:0002309 ENVO:03510036
 
 [Term]
 id: ECTO:7000145
-name: exposure to http://purl.obolibrary.org/obo/ENVO_03510037
+name: exposure to radioactive material
 def: "A exposure event involving the interaction of an exposure receptor to http://purl.obolibrary.org/obo/ENVO_03510037." []
 synonym: "http://purl.obolibrary.org/obo/ENVO_03510037 exposure" EXACT []
 intersection_of: ExO:0000002
@@ -3844,7 +3829,7 @@ intersection_of: RO:0002309 ENVO:03510037
 
 [Term]
 id: ECTO:7000146
-name: exposure to http://purl.obolibrary.org/obo/ENVO_03510038
+name: exposure to cyanoacrylate
 def: "A exposure event involving the interaction of an exposure receptor to http://purl.obolibrary.org/obo/ENVO_03510038." []
 synonym: "http://purl.obolibrary.org/obo/ENVO_03510038 exposure" EXACT []
 intersection_of: ExO:0000002
@@ -3852,7 +3837,7 @@ intersection_of: RO:0002309 ENVO:03510038
 
 [Term]
 id: ECTO:7000147
-name: exposure to http://purl.obolibrary.org/obo/ENVO_03510039
+name: exposure to plastic production compound
 def: "A exposure event involving the interaction of an exposure receptor to http://purl.obolibrary.org/obo/ENVO_03510039." []
 synonym: "http://purl.obolibrary.org/obo/ENVO_03510039 exposure" EXACT []
 intersection_of: ExO:0000002
@@ -3860,7 +3845,7 @@ intersection_of: RO:0002309 ENVO:03510039
 
 [Term]
 id: ECTO:8000000
-name: exposure to environmental system process
+name: exposure to environmental process
 def: "A exposure event involving the interaction of an exposure receptor to environmental system process." []
 synonym: "environmental system process exposure" EXACT []
 intersection_of: ExO:0000002
@@ -3908,7 +3893,7 @@ intersection_of: RO:0002309 ENVO:02500004
 
 [Term]
 id: ECTO:8000006
-name: exposure to combustion process
+name: exposure to combusion process
 def: "A exposure event involving the interaction of an exposure receptor to combustion process." []
 synonym: "combustion process exposure" EXACT []
 intersection_of: ExO:0000002
@@ -4076,7 +4061,7 @@ intersection_of: RO:0002309 ENVO:01000709
 
 [Term]
 id: ECTO:8000027
-name: exposure to meteotsunami
+name: exposure to metotsunami
 def: "A exposure event involving the interaction of an exposure receptor to meteotsunami." []
 synonym: "meteotsunami exposure" EXACT []
 intersection_of: ExO:0000002
@@ -4180,7 +4165,7 @@ intersection_of: RO:0002309 ENVO:1000745
 
 [Term]
 id: ECTO:8000044
-name: exposure to acoustic radiation
+name: exposure to sound radiation
 def: "A exposure event involving the interaction of an exposure receptor to acoustic radiation." []
 synonym: "acoustic radiation exposure" EXACT []
 intersection_of: ExO:0000002
@@ -4188,7 +4173,7 @@ intersection_of: RO:0002309 ENVO:01001027
 
 [Term]
 id: ECTO:8000045
-name: exposure to gamma-ray radiation
+name: exposure to gamma radiation
 def: "A exposure event involving the interaction of an exposure receptor to gamma-ray radiation." []
 synonym: "gamma-ray radiation exposure" EXACT []
 intersection_of: ExO:0000002
@@ -4196,7 +4181,7 @@ intersection_of: RO:0002309 ENVO:21001218
 
 [Term]
 id: ECTO:8000046
-name: exposure to X-ray radiation
+name: exposure to x-ray radiation
 def: "A exposure event involving the interaction of an exposure receptor to X-ray radiation." []
 synonym: "X-ray radiation exposure" EXACT []
 intersection_of: ExO:0000002
@@ -4212,7 +4197,7 @@ intersection_of: RO:0002309 ENVO:21001214
 
 [Term]
 id: ECTO:8000050
-name: exposure to http://purl.obolibrary.org/obo/ENVO_03500015
+name: exposure to far-infrared radiation
 def: "A exposure event involving the interaction of an exposure receptor to http://purl.obolibrary.org/obo/ENVO_03500015." []
 synonym: "http://purl.obolibrary.org/obo/ENVO_03500015 exposure" EXACT []
 intersection_of: ExO:0000002
@@ -4220,7 +4205,7 @@ intersection_of: RO:0002309 ENVO:03500015
 
 [Term]
 id: ECTO:8000051
-name: exposure to http://purl.obolibrary.org/obo/ENVO_03500013
+name: exposure to mid-infrared radiation
 def: "A exposure event involving the interaction of an exposure receptor to http://purl.obolibrary.org/obo/ENVO_03500013." []
 synonym: "http://purl.obolibrary.org/obo/ENVO_03500013 exposure" EXACT []
 intersection_of: ExO:0000002
@@ -4228,7 +4213,7 @@ intersection_of: RO:0002309 ENVO:03500013
 
 [Term]
 id: ECTO:8000052
-name: exposure to http://purl.obolibrary.org/obo/ENVO_03500014
+name: exposure to near-infrared radiation
 def: "A exposure event involving the interaction of an exposure receptor to http://purl.obolibrary.org/obo/ENVO_03500014." []
 synonym: "http://purl.obolibrary.org/obo/ENVO_03500014 exposure" EXACT []
 intersection_of: ExO:0000002
@@ -4244,7 +4229,7 @@ intersection_of: RO:0002309 ENVO:21001212
 
 [Term]
 id: ECTO:8000054
-name: exposure to radio wave radiation
+name: exposure to radiowave radiation
 def: "A exposure event involving the interaction of an exposure receptor to radio wave radiation." []
 synonym: "radio wave radiation exposure" EXACT []
 intersection_of: ExO:0000002
@@ -4252,7 +4237,7 @@ intersection_of: RO:0002309 ENVO:21001213
 
 [Term]
 id: ECTO:8000055
-name: exposure to http://purl.obolibrary.org/obo/ENVO_03500012
+name: exposure to ultrasound radiation
 def: "A exposure event involving the interaction of an exposure receptor to http://purl.obolibrary.org/obo/ENVO_03500012." []
 synonym: "http://purl.obolibrary.org/obo/ENVO_03500012 exposure" EXACT []
 intersection_of: ExO:0000002
@@ -4761,14 +4746,6 @@ def: "An exposure to tetrachloroethene." []
 synonym: "exposure to tetrachloroethene" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002309 CHEBI:17300
-
-[Term]
-id: ECTO:9000075
-name: trichloroethene exposure
-def: "An exposure to trichloroethene." []
-synonym: "exposure to trichloroethene" EXACT []
-intersection_of: ExO:0000002
-intersection_of: RO:0002309 CHEBI:16602
 
 [Term]
 id: ECTO:9000076

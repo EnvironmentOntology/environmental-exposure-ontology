@@ -55,12 +55,6 @@ $(MODDIR)/%.owl: $(MODDIR)/%.rdf
 
 touch:
 	echo $(all_modules_omn)
-
-imports/ncit_import.owl:
-	echo "!!!!!NCIT currently skipped for performance reasons"
-	
-mirror/ncit.owl:
-	echo "!!!!!NCIT currently skipped for performance reasons"
 	
 imports/npo_import.owl:
 	echo "!!!!!NPO currently skipped!"
@@ -72,7 +66,7 @@ imports/exo_import.owl:
 	echo "!!!!!EXO mirror currently skipped, see: https://github.com/CTDbase/exposure-ontology/issues/11"
 	
 mirror/exo.owl:
-	echo "!!!!!EXO currently skipped, see: https://github.com/CTDbase/exposure-ontology/issues/11"
+	echo "!!!!!EXO currently skipped, see: https://github.com/CTDbase/exposure-ontology/issues/11. NOTE: althogh the issue is fixed, there has not been a release since!"
 
 
 $(ONT)-full.owl: $(SRC) $(OTHER_SRC)
@@ -96,4 +90,17 @@ test: odkversion sparql_test all_reports
 	echo "!!!!!! FULL TEST RUN IS OVERWRITTEN, REMOVING DISJOINTS - ecto.Makefile. See https://github.com/EnvironmentOntology/environmental-exposure-ontology/issues/79 !!!!!!"
 	$(ROBOT) merge --input $(SRC) \
 		remove --axioms disjoint --preserve-structure false \
-		reason --reasoner ELK  --equivalent-classes-allowed all --exclude-tautologies structural --output test.owl && rm test.owl && echo "Success"
+		reason --reasoner ELK  --equivalent-classes-allowed asserted-only --exclude-tautologies structural --output test.owl && rm test.owl && echo "Success"
+
+$(TMPDIR)/$(ONT)-quick.obo: | dirs
+	$(ROBOT) merge -i $(SRC) reason -o $@.owl && mv $@.owl $@
+
+$(TMPDIR)/$(ONT)-main.obo: | dirs
+	git show master:$(SRC) > $@
+	$(ROBOT) merge -i $@ reason -o $@.owl && mv $@.owl $@
+
+reports/robot_main_diff.md: $(TMPDIR)/$(ONT)-quick.obo $(TMPDIR)/$(ONT)-main.obo
+	$(ROBOT) diff --left $(TMPDIR)/$(ONT)-main.obo --right $(TMPDIR)/$(ONT)-quick.obo -f markdown -o $@
+
+.PHONY: feature_diff
+feature_diff: reports/robot_main_diff.md

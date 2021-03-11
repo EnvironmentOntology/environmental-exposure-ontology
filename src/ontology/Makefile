@@ -226,6 +226,13 @@ imports/chebi_import.owl: mirror/chebi.owl imports/chebi_terms_combined.txt
 		query --update ../sparql/inject-subset-declaration.ru --update ../sparql/postprocess-module.ru \
 		annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) --output $@.tmp.owl && mv $@.tmp.owl $@; fi
 
+## Module for ontology: ncit
+
+imports/ncit_import.owl: mirror/ncit.owl imports/ncit_terms_combined.txt
+	if [ $(IMP) = true ] && [ $(IMP_LARGE) = true ]; then $(ROBOT) extract -i $< -T imports/ncit_terms_combined.txt --force true --individuals include --method BOT \
+		query --update ../sparql/inject-subset-declaration.ru --update ../sparql/postprocess-module.ru \
+		annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) --output $@.tmp.owl && mv $@.tmp.owl $@; fi
+
 ## Module for ontology: ncbitaxon
 
 imports/ncbitaxon_import.owl: mirror/ncbitaxon.owl imports/ncbitaxon_terms_combined.txt
@@ -341,7 +348,7 @@ mirror/nbo.owl: mirror/nbo.trigger
 mirror/ncit.trigger: $(SRC)
 
 mirror/ncit.owl: mirror/ncit.trigger
-	if [ $(MIR) = true ] && [ $(IMP) = true ]; then $(ROBOT) convert -I $(URIBASE)/ncit.owl -o $@.tmp.owl && mv $@.tmp.owl $@; fi
+	if [ $(MIR) = true ] && [ $(IMP) = true ] && [ $(IMP_LARGE) = true ]; then $(ROBOT) convert -I $(URIBASE)/ncit.owl -o $@.tmp.owl && mv $@.tmp.owl $@; fi
 .PRECIOUS: mirror/%.owl
 
 
