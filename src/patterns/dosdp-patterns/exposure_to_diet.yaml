@@ -1,0 +1,41 @@
+pattern_name: exposure_to_diet
+pattern_iri: http://purl.obolibrary.org/obo/ecto/patterns/exposure_to_diet.yaml
+
+description: "Exposures related to a diet."
+
+contributors:
+  - https://orcid.org/0000-0002-2908-3327
+
+classes:
+  exposure event: ExO:0000002
+  diet: ONS:0000094
+
+annotationProperties:
+  exact_synonym: oio:hasExactSynonym
+
+relations:
+  has_exposure_stimulus: RO:0002309
+
+vars:
+  stressor: "'diet'"
+
+name:
+  text: "exposure to %s"
+  vars:
+    - stressor
+
+annotations:
+  - annotationProperty: exact_synonym
+    text: "%s exposure"
+    vars:
+      - stressor
+
+def:
+  text: "An exposure event involving %s"
+  vars:
+    - stressor
+
+equivalentTo:
+  text: "'exposure event' and ('has_exposure_stimulus' some %s)"
+  vars:
+    - stressor
