@@ -9,8 +9,8 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/ecto/imports/ncit_import.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/ecto/releases/2021-03-10/imports/ncit_import.owl"/>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2021-03-10</owl:versionInfo>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/ecto/releases/2021-03-16/imports/ncit_import.owl"/>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2021-03-16</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -112,6 +112,14 @@
     <!-- http://purl.obolibrary.org/obo/NCIT_C105551 -->
 
     <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/NCIT_C105551">
+        <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#SubsetProperty"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCIT_C105763 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/NCIT_C105763">
         <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#SubsetProperty"/>
     </owl:AnnotationProperty>
     
@@ -520,54 +528,6 @@
     <!-- http://purl.obolibrary.org/obo/NCIT_C89506 -->
 
     <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/NCIT_C89506">
-        <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#SubsetProperty"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/NCIT_C89969 -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/NCIT_C89969">
-        <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#SubsetProperty"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/NCIT_C89970 -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/NCIT_C89970">
-        <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#SubsetProperty"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/NCIT_C89980 -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/NCIT_C89980">
-        <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#SubsetProperty"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/NCIT_C89981 -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/NCIT_C89981">
-        <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#SubsetProperty"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/NCIT_C90007 -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/NCIT_C90007">
-        <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#SubsetProperty"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/NCIT_C90009 -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/NCIT_C90009">
         <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#SubsetProperty"/>
     </owl:AnnotationProperty>
     
@@ -1335,6 +1295,60 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/NCIT_C16567 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCIT_C16567">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCIT_C17708"/>
+        <obo:IAO_0000115>Activity that requires physical or mental exertion, especially when performed to develop or maintain fitness.</obo:IAO_0000115>
+        <obo:NCIT_NHC0>C16567</obo:NCIT_NHC0>
+        <obo:NCIT_P106>Daily or Recreational Activity</obo:NCIT_P106>
+        <obo:NCIT_P108>Exercise</obo:NCIT_P108>
+        <obo:NCIT_P207>C0015259</obo:NCIT_P207>
+        <obo:NCIT_P322>ACC/AHA</obo:NCIT_P322>
+        <obo:NCIT_P325>Performance of physical exertion for improvement of health or correction of physical deformity.</obo:NCIT_P325>
+        <obo:NCIT_P366>Exercise</obo:NCIT_P366>
+        <oboInOwl:hasExactSynonym>Exercise</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Exercise Type</oboInOwl:hasExactSynonym>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/NCIT_C167409"/>
+        <rdfs:label>Exercise</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCIT_C16567"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Activity that requires physical or mental exertion, especially when performed to develop or maintain fitness.</owl:annotatedTarget>
+        <obo:NCIT_P378>NCI</obo:NCIT_P378>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCIT_C16567"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/NCIT_P325"/>
+        <owl:annotatedTarget>Performance of physical exertion for improvement of health or correction of physical deformity.</owl:annotatedTarget>
+        <obo:NCIT_P378>ACC/AHA</obo:NCIT_P378>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCIT_C16567"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>Exercise</owl:annotatedTarget>
+        <obo:NCIT_P383>PT</obo:NCIT_P383>
+        <obo:NCIT_P384>ACC/AHA</obo:NCIT_P384>
+        <obo:NCIT_P386>PCC</obo:NCIT_P386>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCIT_C16567"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>Exercise</owl:annotatedTarget>
+        <obo:NCIT_P383>PT</obo:NCIT_P383>
+        <obo:NCIT_P384>NCI</obo:NCIT_P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCIT_C16567"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>Exercise Type</owl:annotatedTarget>
+        <obo:NCIT_P383>SY</obo:NCIT_P383>
+        <obo:NCIT_P384>NCI</obo:NCIT_P384>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/NCIT_C16795 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCIT_C16795">
@@ -1773,12 +1787,6 @@
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCIT_C17052"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>High-energy radiation capable of producing ionization in substances through which it passes.</owl:annotatedTarget>
-        <obo:NCIT_P378>NCI</obo:NCIT_P378>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCIT_C17052"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/NCIT_P325"/>
         <owl:annotatedTarget>A type of radiation made (or given off) by x-ray procedures, radioactive substances, rays that enter the Earth&apos;s atmosphere from outer space, and other sources. At high doses, ionizing radiation increases chemical activity inside cells and can lead to health risks, including cancer.</owl:annotatedTarget>
         <obo:NCIT_P378>NCI-GLOSS</obo:NCIT_P378>
@@ -1811,6 +1819,12 @@
         <obo:NCIT_P383>PT</obo:NCIT_P383>
         <obo:NCIT_P384>NCI-GLOSS</obo:NCIT_P384>
         <obo:NCIT_P385>CDR0000430698</obo:NCIT_P385>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCIT_C17052"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>High-energy radiation capable of producing ionization in substances through which it passes.</owl:annotatedTarget>
+        <obo:NCIT_P378>NCI</obo:NCIT_P378>
     </owl:Axiom>
     
 
@@ -2326,6 +2340,36 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/NCIT_C17427 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCIT_C17427">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCIT_C20134"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCIT_C96001"/>
+        <obo:IAO_0000115>Discontinuation of the habit of smoking.</obo:IAO_0000115>
+        <obo:NCIT_NHC0>C17427</obo:NCIT_NHC0>
+        <obo:NCIT_P106>Individual Behavior</obo:NCIT_P106>
+        <obo:NCIT_P108>Smoking Cessation</obo:NCIT_P108>
+        <obo:NCIT_P207>C0085134</obo:NCIT_P207>
+        <obo:NCIT_P366>Smoking_Cessation</obo:NCIT_P366>
+        <oboInOwl:hasExactSynonym>Smoking Cessation</oboInOwl:hasExactSynonym>
+        <rdfs:label>Smoking Cessation</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCIT_C17427"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Discontinuation of the habit of smoking.</owl:annotatedTarget>
+        <obo:NCIT_P378>NCI</obo:NCIT_P378>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCIT_C17427"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>Smoking Cessation</owl:annotatedTarget>
+        <obo:NCIT_P383>PT</obo:NCIT_P383>
+        <obo:NCIT_P384>NCI</obo:NCIT_P384>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/NCIT_C17468 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCIT_C17468">
@@ -2358,6 +2402,47 @@
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>Socioeconomic Status</owl:annotatedTarget>
         <obo:NCIT_P383>SY</obo:NCIT_P383>
+        <obo:NCIT_P384>NCI</obo:NCIT_P384>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCIT_C17708 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCIT_C17708">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCIT_C43431"/>
+        <obo:IAO_0000115>Any form of exercise or movement. Physical activity may include planned activity such as walking, running, basketball, or other sports. Physical activity may also include other daily activities such as household chores, yard work, walking the dog, etc.</obo:IAO_0000115>
+        <obo:NCIT_NHC0>C17708</obo:NCIT_NHC0>
+        <obo:NCIT_P106>Daily or Recreational Activity</obo:NCIT_P106>
+        <obo:NCIT_P107>Physical Activity</obo:NCIT_P107>
+        <obo:NCIT_P108>Physical Activity</obo:NCIT_P108>
+        <obo:NCIT_P207>C0026606</obo:NCIT_P207>
+        <obo:NCIT_P322>CTRP</obo:NCIT_P322>
+        <obo:NCIT_P366>Physical_Activity</obo:NCIT_P366>
+        <oboInOwl:hasExactSynonym>Physical Activity</oboInOwl:hasExactSynonym>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/NCIT_C116977"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/NCIT_C118169"/>
+        <rdfs:label>Physical Activity</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCIT_C17708"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Any form of exercise or movement. Physical activity may include planned activity such as walking, running, basketball, or other sports. Physical activity may also include other daily activities such as household chores, yard work, walking the dog, etc.</owl:annotatedTarget>
+        <obo:NCIT_P378>NCI</obo:NCIT_P378>
+        <obo:NCIT_P381>from NIDDK Glossary; http://www.niddk.nih.gov/health/nutrit/pubs/glossary/glossaryintro.htm</obo:NCIT_P381>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCIT_C17708"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>Physical Activity</owl:annotatedTarget>
+        <obo:NCIT_P383>DN</obo:NCIT_P383>
+        <obo:NCIT_P384>CTRP</obo:NCIT_P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCIT_C17708"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>Physical Activity</owl:annotatedTarget>
+        <obo:NCIT_P383>PT</obo:NCIT_P383>
         <obo:NCIT_P384>NCI</obo:NCIT_P384>
     </owl:Axiom>
     
@@ -2992,35 +3077,6 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/NCIT_C19706 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCIT_C19706">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCIT_C19683"/>
-        <obo:IAO_0000115>Dietary Practices refers to a person&apos;s choices in food consumption.</obo:IAO_0000115>
-        <obo:NCIT_NHC0>C19706</obo:NCIT_NHC0>
-        <obo:NCIT_P106>Individual Behavior</obo:NCIT_P106>
-        <obo:NCIT_P108>Dietary Practices</obo:NCIT_P108>
-        <obo:NCIT_P207>C1511904</obo:NCIT_P207>
-        <obo:NCIT_P366>Dietary_Practices</obo:NCIT_P366>
-        <oboInOwl:hasExactSynonym>Dietary Practices</oboInOwl:hasExactSynonym>
-        <rdfs:label>Dietary Practices</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCIT_C19706"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>Dietary Practices refers to a person&apos;s choices in food consumption.</owl:annotatedTarget>
-        <obo:NCIT_P378>NCI</obo:NCIT_P378>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCIT_C19706"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>Dietary Practices</owl:annotatedTarget>
-        <obo:NCIT_P383>PT</obo:NCIT_P383>
-        <obo:NCIT_P384>NCI</obo:NCIT_P384>
-    </owl:Axiom>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/NCIT_C19733 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCIT_C19733">
@@ -3081,64 +3137,6 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCIT_C20026"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>Flame-Broiling</owl:annotatedTarget>
-        <obo:NCIT_P383>PT</obo:NCIT_P383>
-        <obo:NCIT_P384>NCI</obo:NCIT_P384>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/NCIT_C20046 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCIT_C20046">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCIT_C19706"/>
-        <obo:IAO_0000115>A risk factor for colorectal, stomach, and pancreatic cancer.</obo:IAO_0000115>
-        <obo:NCIT_NHC0>C20046</obo:NCIT_NHC0>
-        <obo:NCIT_P106>Individual Behavior</obo:NCIT_P106>
-        <obo:NCIT_P108>Red Meat Consumption</obo:NCIT_P108>
-        <obo:NCIT_P207>C1514806</obo:NCIT_P207>
-        <obo:NCIT_P366>Red_Meat_Consumption</obo:NCIT_P366>
-        <oboInOwl:hasExactSynonym>Red Meat Consumption</oboInOwl:hasExactSynonym>
-        <rdfs:label>Red Meat Consumption</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCIT_C20046"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A risk factor for colorectal, stomach, and pancreatic cancer.</owl:annotatedTarget>
-        <obo:NCIT_P378>NCI</obo:NCIT_P378>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCIT_C20046"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>Red Meat Consumption</owl:annotatedTarget>
-        <obo:NCIT_P383>PT</obo:NCIT_P383>
-        <obo:NCIT_P384>NCI</obo:NCIT_P384>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/NCIT_C20048 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCIT_C20048">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCIT_C19706"/>
-        <obo:IAO_0000115>High consumption of vegetables and related micronutrients; exerts a moderate protective effect on the risk of developing breast cancer. (from Medscape)</obo:IAO_0000115>
-        <obo:NCIT_NHC0>C20048</obo:NCIT_NHC0>
-        <obo:NCIT_P106>Individual Behavior</obo:NCIT_P106>
-        <obo:NCIT_P108>High Vegetable Diet</obo:NCIT_P108>
-        <obo:NCIT_P207>C1512459</obo:NCIT_P207>
-        <obo:NCIT_P366>High_Vegetable_Diet</obo:NCIT_P366>
-        <oboInOwl:hasExactSynonym>High Vegetable Diet</oboInOwl:hasExactSynonym>
-        <rdfs:label>High Vegetable Diet</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCIT_C20048"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>High consumption of vegetables and related micronutrients; exerts a moderate protective effect on the risk of developing breast cancer. (from Medscape)</owl:annotatedTarget>
-        <obo:NCIT_P378>NCI</obo:NCIT_P378>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCIT_C20048"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>High Vegetable Diet</owl:annotatedTarget>
         <obo:NCIT_P383>PT</obo:NCIT_P383>
         <obo:NCIT_P384>NCI</obo:NCIT_P384>
     </owl:Axiom>
@@ -3775,6 +3773,51 @@
         <obo:NCIT_P383>PT</obo:NCIT_P383>
         <obo:NCIT_P384>ICDC</obo:NCIT_P384>
         <obo:NCIT_P386>ICDC</obo:NCIT_P386>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCIT_C25404 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCIT_C25404">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCIT_C43431"/>
+        <obo:IAO_0000115>A thing done.</obo:IAO_0000115>
+        <obo:NCIT_NHC0>C25404</obo:NCIT_NHC0>
+        <obo:NCIT_P106>Activity</obo:NCIT_P106>
+        <obo:NCIT_P108>Action</obo:NCIT_P108>
+        <obo:NCIT_P207>C3266814</obo:NCIT_P207>
+        <obo:NCIT_P366>Action</obo:NCIT_P366>
+        <oboInOwl:hasExactSynonym>Action</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>Generic Action</oboInOwl:hasExactSynonym>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/NCIT_C105763"/>
+        <rdfs:label>Action</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCIT_C25404"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A thing done.</owl:annotatedTarget>
+        <obo:NCIT_P378>NCI</obo:NCIT_P378>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCIT_C25404"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>Action</owl:annotatedTarget>
+        <obo:NCIT_P383>PT</obo:NCIT_P383>
+        <obo:NCIT_P384>NCI</obo:NCIT_P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCIT_C25404"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>Action</owl:annotatedTarget>
+        <obo:NCIT_P383>SY</obo:NCIT_P383>
+        <obo:NCIT_P384>caDSR</obo:NCIT_P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCIT_C25404"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>Generic Action</owl:annotatedTarget>
+        <obo:NCIT_P383>SY</obo:NCIT_P383>
+        <obo:NCIT_P384>NCI</obo:NCIT_P384>
     </owl:Axiom>
     
 
@@ -4959,6 +5002,42 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/NCIT_C61497 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCIT_C61497">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCIT_C25404"/>
+        <obo:IAO_0000115>A stopping.</obo:IAO_0000115>
+        <obo:NCIT_NHC0>C61497</obo:NCIT_NHC0>
+        <obo:NCIT_P106>Activity</obo:NCIT_P106>
+        <obo:NCIT_P108>Cessation</obo:NCIT_P108>
+        <obo:NCIT_P207>C1880019</obo:NCIT_P207>
+        <obo:NCIT_P366>Cessation</obo:NCIT_P366>
+        <oboInOwl:hasExactSynonym>Cessation</oboInOwl:hasExactSynonym>
+        <rdfs:label>Cessation</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCIT_C61497"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A stopping.</owl:annotatedTarget>
+        <obo:NCIT_P378>NCI</obo:NCIT_P378>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCIT_C61497"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>Cessation</owl:annotatedTarget>
+        <obo:NCIT_P383>PT</obo:NCIT_P383>
+        <obo:NCIT_P384>NCI</obo:NCIT_P384>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCIT_C61497"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>Cessation</owl:annotatedTarget>
+        <obo:NCIT_P383>SY</obo:NCIT_P383>
+        <obo:NCIT_P384>caDSR</obo:NCIT_P384>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/NCIT_C61508 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCIT_C61508">
@@ -5165,216 +5244,6 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/NCIT_C90383 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCIT_C90383">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCIT_C19706"/>
-        <obo:IAO_0000115>A plan that specifies a diet, amount and schedule of nutritional intake.</obo:IAO_0000115>
-        <obo:NCIT_NHC0>C90383</obo:NCIT_NHC0>
-        <obo:NCIT_P106>Daily or Recreational Activity</obo:NCIT_P106>
-        <obo:NCIT_P108>Feeding Regimen</obo:NCIT_P108>
-        <obo:NCIT_P207>C2983604</obo:NCIT_P207>
-        <obo:NCIT_P322>CDISC</obo:NCIT_P322>
-        <obo:NCIT_P325>A plan that specifies a diet, amount and schedule of nutritional intake.</obo:NCIT_P325>
-        <oboInOwl:hasExactSynonym>FEEDREG</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>Feeding Regimen</oboInOwl:hasExactSynonym>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/NCIT_C61410"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/NCIT_C77526"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/NCIT_C89980"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/NCIT_C89981"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/NCIT_C90007"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/NCIT_C90009"/>
-        <rdfs:label>Feeding Regimen</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCIT_C90383"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A plan that specifies a diet, amount and schedule of nutritional intake.</owl:annotatedTarget>
-        <obo:NCIT_P378>NCI</obo:NCIT_P378>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCIT_C90383"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/NCIT_P325"/>
-        <owl:annotatedTarget>A plan that specifies a diet, amount and schedule of nutritional intake.</owl:annotatedTarget>
-        <obo:NCIT_P378>CDISC</obo:NCIT_P378>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCIT_C90383"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>FEEDREG</owl:annotatedTarget>
-        <obo:NCIT_P383>PT</obo:NCIT_P383>
-        <obo:NCIT_P384>CDISC</obo:NCIT_P384>
-        <obo:NCIT_P385>SEND-SBCCDSND</obo:NCIT_P385>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCIT_C90383"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>FEEDREG</owl:annotatedTarget>
-        <obo:NCIT_P383>PT</obo:NCIT_P383>
-        <obo:NCIT_P384>CDISC</obo:NCIT_P384>
-        <obo:NCIT_P385>SEND-STSPRMCD</obo:NCIT_P385>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCIT_C90383"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>Feeding Regimen</owl:annotatedTarget>
-        <obo:NCIT_P383>PT</obo:NCIT_P383>
-        <obo:NCIT_P384>CDISC</obo:NCIT_P384>
-        <obo:NCIT_P385>SEND-SBCSND</obo:NCIT_P385>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCIT_C90383"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>Feeding Regimen</owl:annotatedTarget>
-        <obo:NCIT_P383>PT</obo:NCIT_P383>
-        <obo:NCIT_P384>CDISC</obo:NCIT_P384>
-        <obo:NCIT_P385>SEND-STSPRM</obo:NCIT_P385>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCIT_C90383"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>Feeding Regimen</owl:annotatedTarget>
-        <obo:NCIT_P383>PT</obo:NCIT_P383>
-        <obo:NCIT_P384>NCI</obo:NCIT_P384>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCIT_C90383"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>Feeding Regimen</owl:annotatedTarget>
-        <obo:NCIT_P383>SY</obo:NCIT_P383>
-        <obo:NCIT_P384>CDISC</obo:NCIT_P384>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/NCIT_C90384 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCIT_C90384">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCIT_C19706"/>
-        <obo:IAO_0000115>A measurement of a subject&apos;s nutritional intake.</obo:IAO_0000115>
-        <obo:NCIT_NHC0>C90384</obo:NCIT_NHC0>
-        <obo:NCIT_P106>Activity</obo:NCIT_P106>
-        <obo:NCIT_P108>Food Consumption</obo:NCIT_P108>
-        <obo:NCIT_P207>C2983605</obo:NCIT_P207>
-        <obo:NCIT_P322>CDISC</obo:NCIT_P322>
-        <obo:NCIT_P325>A measurement of a subject&apos;s nutritional intake. (NCI)</obo:NCIT_P325>
-        <oboInOwl:hasExactSynonym>FC</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>Food Consumption</oboInOwl:hasExactSynonym>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/NCIT_C61410"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/NCIT_C77526"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/NCIT_C89969"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/NCIT_C89970"/>
-        <rdfs:label>Food Consumption</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCIT_C90384"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A measurement of a subject&apos;s nutritional intake.</owl:annotatedTarget>
-        <obo:NCIT_P378>NCI</obo:NCIT_P378>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCIT_C90384"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/NCIT_P325"/>
-        <owl:annotatedTarget>A measurement of a subject&apos;s nutritional intake. (NCI)</owl:annotatedTarget>
-        <obo:NCIT_P378>CDISC</obo:NCIT_P378>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCIT_C90384"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>FC</owl:annotatedTarget>
-        <obo:NCIT_P383>PT</obo:NCIT_P383>
-        <obo:NCIT_P384>CDISC</obo:NCIT_P384>
-        <obo:NCIT_P385>SEND-FWTESTCD</obo:NCIT_P385>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCIT_C90384"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>Food Consumption</owl:annotatedTarget>
-        <obo:NCIT_P383>PT</obo:NCIT_P383>
-        <obo:NCIT_P384>CDISC</obo:NCIT_P384>
-        <obo:NCIT_P385>SEND-FWTEST</obo:NCIT_P385>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCIT_C90384"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>Food Consumption</owl:annotatedTarget>
-        <obo:NCIT_P383>PT</obo:NCIT_P383>
-        <obo:NCIT_P384>NCI</obo:NCIT_P384>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCIT_C90384"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>Food Consumption</owl:annotatedTarget>
-        <obo:NCIT_P383>SY</obo:NCIT_P383>
-        <obo:NCIT_P384>CDISC</obo:NCIT_P384>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/NCIT_C90484 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCIT_C90484">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCIT_C19706"/>
-        <obo:IAO_0000115>A measurement of a subject&apos;s water intake.</obo:IAO_0000115>
-        <obo:NCIT_NHC0>C90484</obo:NCIT_NHC0>
-        <obo:NCIT_P106>Activity</obo:NCIT_P106>
-        <obo:NCIT_P108>Water Consumption</obo:NCIT_P108>
-        <obo:NCIT_P207>C0013123</obo:NCIT_P207>
-        <obo:NCIT_P322>CDISC</obo:NCIT_P322>
-        <obo:NCIT_P325>A measurement of a subject&apos;s water intake. (NCI)</obo:NCIT_P325>
-        <oboInOwl:hasExactSynonym>WC</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>Water Consumption</oboInOwl:hasExactSynonym>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/NCIT_C61410"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/NCIT_C77526"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/NCIT_C89969"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/NCIT_C89970"/>
-        <rdfs:label>Water Consumption</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCIT_C90484"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A measurement of a subject&apos;s water intake.</owl:annotatedTarget>
-        <obo:NCIT_P378>NCI</obo:NCIT_P378>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCIT_C90484"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/NCIT_P325"/>
-        <owl:annotatedTarget>A measurement of a subject&apos;s water intake. (NCI)</owl:annotatedTarget>
-        <obo:NCIT_P378>CDISC</obo:NCIT_P378>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCIT_C90484"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>WC</owl:annotatedTarget>
-        <obo:NCIT_P383>PT</obo:NCIT_P383>
-        <obo:NCIT_P384>CDISC</obo:NCIT_P384>
-        <obo:NCIT_P385>SEND-FWTESTCD</obo:NCIT_P385>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCIT_C90484"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>Water Consumption</owl:annotatedTarget>
-        <obo:NCIT_P383>PT</obo:NCIT_P383>
-        <obo:NCIT_P384>CDISC</obo:NCIT_P384>
-        <obo:NCIT_P385>SEND-FWTEST</obo:NCIT_P385>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCIT_C90484"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>Water Consumption</owl:annotatedTarget>
-        <obo:NCIT_P383>PT</obo:NCIT_P383>
-        <obo:NCIT_P384>NCI</obo:NCIT_P384>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCIT_C90484"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>Water Consumption</owl:annotatedTarget>
-        <obo:NCIT_P383>SY</obo:NCIT_P383>
-        <obo:NCIT_P384>CDISC</obo:NCIT_P384>
-    </owl:Axiom>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/NCIT_C93210 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCIT_C93210">
@@ -5405,6 +5274,35 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCIT_C93210"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>Inflammatory Disorder</owl:annotatedTarget>
+        <obo:NCIT_P383>PT</obo:NCIT_P383>
+        <obo:NCIT_P384>NCI</obo:NCIT_P384>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCIT_C96001 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCIT_C96001">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCIT_C19683"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCIT_C61497"/>
+        <obo:IAO_0000115>Discontinuation of the use of tobacco in any form.</obo:IAO_0000115>
+        <obo:NCIT_NHC0>C96001</obo:NCIT_NHC0>
+        <obo:NCIT_P106>Activity</obo:NCIT_P106>
+        <obo:NCIT_P108>Tobacco Use Cessation</obo:NCIT_P108>
+        <obo:NCIT_P207>C0600549</obo:NCIT_P207>
+        <oboInOwl:hasExactSynonym>Tobacco Use Cessation</oboInOwl:hasExactSynonym>
+        <rdfs:label>Tobacco Use Cessation</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCIT_C96001"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Discontinuation of the use of tobacco in any form.</owl:annotatedTarget>
+        <obo:NCIT_P378>NCI</obo:NCIT_P378>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCIT_C96001"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>Tobacco Use Cessation</owl:annotatedTarget>
         <obo:NCIT_P383>PT</obo:NCIT_P383>
         <obo:NCIT_P384>NCI</obo:NCIT_P384>
     </owl:Axiom>

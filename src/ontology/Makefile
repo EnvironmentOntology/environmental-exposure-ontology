@@ -92,7 +92,7 @@ all_main: $(MAIN_FILES)
 ## By default this is the cross-product of IMPORT_MODULES x FORMATS
 
 
-IMPORTS =  chebi envo exo go iao maxo nbo ncit ncbitaxon npo pato ro uberon xco
+IMPORTS =  chebi envo exo go iao ons maxo foodon nbo ncit ncbitaxon npo pato ro uberon xco
 
 IMPORT_ROOTS = $(patsubst %, imports/%_import, $(IMPORTS))
 IMPORT_OWL_FILES = $(foreach n,$(IMPORT_ROOTS), $(n).owl)
@@ -111,7 +111,8 @@ all_imports: $(IMPORT_FILES)
 SUBSETS = 
 
 SUBSET_ROOTS = $(patsubst %, subsets/%, $(SUBSETS))
-SUBSET_FILES = $(foreach n,$(SUBSET_ROOTS), $(foreach f,$(FORMATS_INCL_TSV), $(n).$(f)))
+SUBSET_FORMATS = $(sort tsv owl)
+SUBSET_FILES = $(foreach n,$(SUBSET_ROOTS), $(foreach f,$(SUBSET_FORMATS), $(n).$(f)))
 
 .PHONY: all_subsets
 all_subsets: $(SUBSET_FILES)
@@ -327,12 +328,30 @@ mirror/iao.owl: mirror/iao.trigger
 .PRECIOUS: mirror/%.owl
 
 
+## ONTOLOGY: ons
+## Copy of ons is re-downloaded whenever source changes
+mirror/ons.trigger: $(SRC)
+
+mirror/ons.owl: mirror/ons.trigger
+	if [ $(MIR) = true ] && [ $(IMP) = true ]; then $(ROBOT) convert -I $(URIBASE)/ons.owl -o $@.tmp.owl && mv $@.tmp.owl $@; fi
+.PRECIOUS: mirror/%.owl
+
+
 ## ONTOLOGY: maxo
 ## Copy of maxo is re-downloaded whenever source changes
 mirror/maxo.trigger: $(SRC)
 
 mirror/maxo.owl: mirror/maxo.trigger
 	if [ $(MIR) = true ] && [ $(IMP) = true ]; then $(ROBOT) convert -I $(URIBASE)/maxo.owl -o $@.tmp.owl && mv $@.tmp.owl $@; fi
+.PRECIOUS: mirror/%.owl
+
+
+## ONTOLOGY: foodon
+## Copy of foodon is re-downloaded whenever source changes
+mirror/foodon.trigger: $(SRC)
+
+mirror/foodon.owl: mirror/foodon.trigger
+	if [ $(MIR) = true ] && [ $(IMP) = true ]; then $(ROBOT) convert -I $(URIBASE)/foodon.owl -o $@.tmp.owl && mv $@.tmp.owl $@; fi
 .PRECIOUS: mirror/%.owl
 
 
