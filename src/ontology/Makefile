@@ -29,19 +29,19 @@ TMPDIR=                     tmp
 SCRIPTSDIR=                 ../scripts
 SPARQLDIR =                 ../sparql
 COMPONENTSDIR =             components
-REPORT_FAIL_ON =            None
-REPORT_LABEL =              -l true
+REPORT_FAIL_ON =            ERROR
+REPORT_LABEL =              
 REPORT_PROFILE_OPTS =       
 OBO_FORMAT_OPTIONS =        
-SPARQL_VALIDATION_CHECKS =   equivalent-classes owldef-self-reference
-SPARQL_EXPORTS =             basic-report class-count-by-prefix edges xrefs obsoletes synonyms
+SPARQL_VALIDATION_CHECKS =  
+SPARQL_EXPORTS =            
 ODK_VERSION_MAKEFILE =      v1.2.27
 
 TODAY ?=                    $(shell date +%Y-%m-%d)
 OBODATE ?=                  $(shell date +'%d:%m:%Y %H:%M')
 VERSION=                    $(TODAY)
 ANNOTATE_ONTOLOGY_VERSION = annotate -V $(ONTBASE)/releases/$(VERSION)/$@ --annotation owl:versionInfo $(VERSION)
-OTHER_SRC =                 $(PATTERNDIR)/definitions.owl $(COMPONENTSDIR)/ecto-xrefs.owl $(COMPONENTSDIR)/bridge.owl 
+OTHER_SRC =                 $(PATTERNDIR)/definitions.owl $(COMPONENTSDIR)/ecto-xrefs.owl $(COMPONENTSDIR)/bridge.owl $(COMPONENTSDIR)/obsoletes.owl 
 ONTOLOGYTERMS =             $(TMPDIR)/ontologyterms.txt
 PATTERNDIR=                 ../patterns
 DOSDP_SCHEMA=                http:// # change to PURL when ready.
@@ -52,8 +52,8 @@ PATTERN_RELEASE_FILES=       $(PATTERNDIR)/definitions.owl $(PATTERNDIR)/pattern
 
 
 FORMATS = $(sort  owl obo json owl)
-FORMATS_INCL_TSV = $(sort $(FORMAT) tsv)
-RELEASE_ARTEFACTS = $(sort  full base base full)
+FORMATS_INCL_TSV = $(sort $(FORMATS) tsv)
+RELEASE_ARTEFACTS = $(sort $(ONT)-full $(ONT)-base $(ONT)-base $(ONT)-full)
 
 # ----------------------------------------
 # Top-level targets
@@ -80,7 +80,7 @@ $(TMPDIR) $(REPORTDIR) :
 ##
 ## By default this is the cross-product of {ont, ont-base} x FORMATS
 
-MAIN_PRODUCTS = $(sort $(foreach r,$(RELEASE_ARTEFACTS), $(ONT)-$(r)) $(ONT))
+MAIN_PRODUCTS = $(sort $(foreach r,$(RELEASE_ARTEFACTS), $(r)) $(ONT))
 MAIN_GZIPPED = 
 MAIN_FILES = $(foreach n,$(MAIN_PRODUCTS), $(foreach f,$(FORMATS), $(n).$(f))) $(MAIN_GZIPPED)
 
@@ -92,7 +92,7 @@ all_main: $(MAIN_FILES)
 ## By default this is the cross-product of IMPORT_MODULES x FORMATS
 
 
-IMPORTS =  chebi envo exo go iao maxo nbo ncit ncbitaxon npo pato ro uberon xco
+IMPORTS =  chebi envo exo go iao ons maxo foodon nbo ncit ncbitaxon npo pato ro uberon xco
 
 IMPORT_ROOTS = $(patsubst %, imports/%_import, $(IMPORTS))
 IMPORT_OWL_FILES = $(foreach n,$(IMPORT_ROOTS), $(n).owl)
@@ -111,14 +111,18 @@ all_imports: $(IMPORT_FILES)
 SUBSETS = 
 
 SUBSET_ROOTS = $(patsubst %, subsets/%, $(SUBSETS))
-SUBSET_FILES = $(foreach n,$(SUBSET_ROOTS), $(foreach f,$(FORMATS_INCL_TSV), $(n).$(f)))
+SUBSET_FORMATS = $(sort tsv owl)
+SUBSET_FILES = $(foreach n,$(SUBSET_ROOTS), $(foreach f,$(SUBSET_FORMATS), $(n).$(f)))
 
 .PHONY: all_subsets
 all_subsets: $(SUBSET_FILES)
 
-OBO_REPORT =  $(SRC)-obo-report $(ONT).owl-obo-report
+OBO_REPORT =  ecto-base.owl-obo-report
 REPORTS = $(OBO_REPORT)
 REPORT_FILES = $(patsubst %, $(REPORTDIR)/%.tsv, $(REPORTS))
+
+.PHONY: robot_reports
+robot_reports: $(REPORT_FILES)
 
 .PHONY: all_reports
 all_reports: all_reports_onestep $(REPORT_FILES)
@@ -223,6 +227,13 @@ imports/chebi_import.owl: mirror/chebi.owl imports/chebi_terms_combined.txt
 		query --update ../sparql/inject-subset-declaration.ru --update ../sparql/postprocess-module.ru \
 		annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) --output $@.tmp.owl && mv $@.tmp.owl $@; fi
 
+## Module for ontology: ncit
+
+imports/ncit_import.owl: mirror/ncit.owl imports/ncit_terms_combined.txt
+	if [ $(IMP) = true ] && [ $(IMP_LARGE) = true ]; then $(ROBOT) extract -i $< -T imports/ncit_terms_combined.txt --force true --individuals include --method BOT \
+		query --update ../sparql/inject-subset-declaration.ru --update ../sparql/postprocess-module.ru \
+		annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) --output $@.tmp.owl && mv $@.tmp.owl $@; fi
+
 ## Module for ontology: ncbitaxon
 
 imports/ncbitaxon_import.owl: mirror/ncbitaxon.owl imports/ncbitaxon_terms_combined.txt
@@ -251,6 +262,8 @@ refresh-%:
 $(COMPONENTSDIR)/%: .FORCE
 	touch $@
 .PRECIOUS: $(COMPONENTSDIR)/%
+
+
 
 
 
@@ -315,12 +328,30 @@ mirror/iao.owl: mirror/iao.trigger
 .PRECIOUS: mirror/%.owl
 
 
+## ONTOLOGY: ons
+## Copy of ons is re-downloaded whenever source changes
+mirror/ons.trigger: $(SRC)
+
+mirror/ons.owl: mirror/ons.trigger
+	if [ $(MIR) = true ] && [ $(IMP) = true ]; then $(ROBOT) convert -I $(URIBASE)/ons.owl -o $@.tmp.owl && mv $@.tmp.owl $@; fi
+.PRECIOUS: mirror/%.owl
+
+
 ## ONTOLOGY: maxo
 ## Copy of maxo is re-downloaded whenever source changes
 mirror/maxo.trigger: $(SRC)
 
 mirror/maxo.owl: mirror/maxo.trigger
 	if [ $(MIR) = true ] && [ $(IMP) = true ]; then $(ROBOT) convert -I $(URIBASE)/maxo.owl -o $@.tmp.owl && mv $@.tmp.owl $@; fi
+.PRECIOUS: mirror/%.owl
+
+
+## ONTOLOGY: foodon
+## Copy of foodon is re-downloaded whenever source changes
+mirror/foodon.trigger: $(SRC)
+
+mirror/foodon.owl: mirror/foodon.trigger
+	if [ $(MIR) = true ] && [ $(IMP) = true ]; then $(ROBOT) convert -I $(URIBASE)/foodon.owl -o $@.tmp.owl && mv $@.tmp.owl $@; fi
 .PRECIOUS: mirror/%.owl
 
 
@@ -338,7 +369,7 @@ mirror/nbo.owl: mirror/nbo.trigger
 mirror/ncit.trigger: $(SRC)
 
 mirror/ncit.owl: mirror/ncit.trigger
-	if [ $(MIR) = true ] && [ $(IMP) = true ]; then $(ROBOT) convert -I $(URIBASE)/ncit.owl -o $@.tmp.owl && mv $@.tmp.owl $@; fi
+	if [ $(MIR) = true ] && [ $(IMP) = true ] && [ $(IMP_LARGE) = true ]; then $(ROBOT) convert -I $(URIBASE)/ncit.owl -o $@.tmp.owl && mv $@.tmp.owl $@; fi
 .PRECIOUS: mirror/%.owl
 
 
@@ -402,8 +433,11 @@ mirror/xco.owl: mirror/xco.trigger
 # ----------------------------------------
 subsets/%.tsv: subsets/%.owl
 	$(ROBOT) query -f tsv -i $< -s ../sparql/labels.sparql $@
+.PRECIOUS: subsets/%.tsv
+
 subsets/%.owl: $(ONT).owl
 	owltools --use-catalog $< --extract-ontology-subset --fill-gaps --subset $* -o $@.tmp.owl && mv $@.tmp.owl $@
+.PRECIOUS: subsets/%.owl
 
 
 # ----------------------------------------
@@ -484,7 +518,7 @@ pattern_term_lists_default := $(patsubst %.tsv, $(PATTERNDIR)/data/default/%.txt
 
 # Generating the individual pattern modules and merging them into definitions.owl
 $(PATTERNDIR)/definitions.owl: prepare_patterns update_patterns dosdp_patterns_default  
-	if [ $(PAT) = true ] && [ "${individual_patterns_names_default}" ]  ; then $(ROBOT) merge $(addprefix -i , $(individual_patterns_default))   annotate --ontology-iri $(ONTBASE)/patterns/definitions.owl  --version-iri $(ONTBASE)/releases/$(TODAY)/patterns/definitions.owl --annotation owl:versionInfo $(VERSION) -o definitions.ofn && mv definitions.ofn $@; fi
+	if [ $(PAT) = true ] && [ "${individual_patterns_names_default}" ]   && [ $(PAT) = true ]; then $(ROBOT) merge $(addprefix -i , $(individual_patterns_default))   annotate --ontology-iri $(ONTBASE)/patterns/definitions.owl  --version-iri $(ONTBASE)/releases/$(TODAY)/patterns/definitions.owl --annotation owl:versionInfo $(VERSION) -o definitions.ofn && mv definitions.ofn $@; fi
 
 individual_patterns_names_default := $(strip $(patsubst %.tsv,%, $(notdir $(wildcard $(PATTERNDIR)/data/default/*.tsv))))
 dosdp_patterns_default: $(SRC) all_imports .FORCE

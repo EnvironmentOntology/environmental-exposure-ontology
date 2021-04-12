@@ -1,0 +1,41 @@
+Prefix(:=<urn:unnamed:ontology#ont8>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+
+
+Ontology(<urn:unnamed:ontology#ont8>
+
+Declaration(Class(<http://purl.obolibrary.org/obo/ECTO_0001591>))
+Declaration(Class(<http://purl.obolibrary.org/obo/ECTO_0020000>))
+Declaration(Class(<http://purl.obolibrary.org/obo/ExO_0000002>))
+Declaration(Class(<http://purl.obolibrary.org/obo/NCIT_C103933>))
+Declaration(Class(<http://purl.obolibrary.org/obo/NCIT_C25193>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002309>))
+Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000115>))
+Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym>))
+
+
+
+############################
+#   Classes
+############################
+
+# Class: <http://purl.obolibrary.org/obo/ECTO_0001591> (exposure to occupation)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0001591> "An exposure event involving Occupation"^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0001591> "Occupation exposure"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_0001591> "exposure to occupation"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_0001591> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/NCIT_C25193>)))
+
+# Class: <http://purl.obolibrary.org/obo/ECTO_0020000> (exposure to automotive occupations)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0020000> "An exposure event involving Automotive Occupations"^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0020000> "Automotive Occupations exposure"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_0020000> "exposure to automotive occupations"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_0020000> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/NCIT_C103933>)))
+
+
+)
