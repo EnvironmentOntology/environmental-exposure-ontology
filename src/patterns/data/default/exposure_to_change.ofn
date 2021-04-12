@@ -1,4 +1,4 @@
-Prefix(:=<urn:unnamed:ontology#ont1#>)
+Prefix(:=<urn:unnamed:ontology#ont19>)
 Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
 Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
 Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
@@ -6,8 +6,9 @@ Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
 Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 
 
-Ontology(<urn:unnamed:ontology#ont1>
+Ontology(<urn:unnamed:ontology#ont19>
 
+Declaration(Class(<http://purl.obolibrary.org/obo/CHEBI_16113>))
 Declaration(Class(<http://purl.obolibrary.org/obo/CHEBI_16183>))
 Declaration(Class(<http://purl.obolibrary.org/obo/CHEBI_17234>))
 Declaration(Class(<http://purl.obolibrary.org/obo/CHEBI_17855>))
@@ -42,14 +43,17 @@ Declaration(Class(<http://purl.obolibrary.org/obo/ECTO_4000020>))
 Declaration(Class(<http://purl.obolibrary.org/obo/ECTO_4000021>))
 Declaration(Class(<http://purl.obolibrary.org/obo/ECTO_4000022>))
 Declaration(Class(<http://purl.obolibrary.org/obo/ECTO_4000023>))
-Declaration(Class(<http://purl.obolibrary.org/obo/ECTO_4000025>))
-Declaration(Class(<http://purl.obolibrary.org/obo/ECTO_4000026>))
+Declaration(Class(<http://purl.obolibrary.org/obo/ECTO_4000024>))
 Declaration(Class(<http://purl.obolibrary.org/obo/ECTO_4000027>))
 Declaration(Class(<http://purl.obolibrary.org/obo/ECTO_4000028>))
 Declaration(Class(<http://purl.obolibrary.org/obo/ECTO_4000029>))
 Declaration(Class(<http://purl.obolibrary.org/obo/ECTO_4000030>))
 Declaration(Class(<http://purl.obolibrary.org/obo/ECTO_4000031>))
 Declaration(Class(<http://purl.obolibrary.org/obo/ECTO_4000032>))
+Declaration(Class(<http://purl.obolibrary.org/obo/ECTO_4000033>))
+Declaration(Class(<http://purl.obolibrary.org/obo/ECTO_4000034>))
+Declaration(Class(<http://purl.obolibrary.org/obo/ECTO_4000035>))
+Declaration(Class(<http://purl.obolibrary.org/obo/ECTO_4000036>))
 Declaration(Class(<http://purl.obolibrary.org/obo/ENVO_00002005>))
 Declaration(Class(<http://purl.obolibrary.org/obo/ENVO_00002006>))
 Declaration(Class(<http://purl.obolibrary.org/obo/ENVO_09200001>))
@@ -74,241 +78,250 @@ Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#has
 #   Classes
 ############################
 
-# Class: <http://purl.obolibrary.org/obo/ECTO_0001055> (exposure to decreased amount of temperature of air)
+# Class: <http://purl.obolibrary.org/obo/ECTO_0001055> (exposure to decreased air temperature)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0001055> "A exposure event involving the interaction of an exposure receptor to decreased amount of temperature of air."^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0001055> "exposure to decreased amount in temperature of air"^^xsd:string)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_0001055> "exposure to decreased amount of temperature of air"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_0001055> "exposure to decreased air temperature"^^xsd:string)
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_0001055> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001997> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/ENVO_09200001>)))))
 
-# Class: <http://purl.obolibrary.org/obo/ECTO_4000000> (exposure to deviation(from_normal)deviation (from_normal) of quality)
+# Class: <http://purl.obolibrary.org/obo/ECTO_4000000> (exposure to change)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_4000000> "A exposure event involving the interaction of an exposure receptor to deviation(from_normal)deviation (from_normal) of quality."^^xsd:string)
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_4000000> "exposure to deviation(from_normal)deviation (from_normal) in quality"^^xsd:string)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_4000000> "exposure to deviation(from_normal)deviation (from_normal) of quality"^^xsd:string)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_4000000> "A exposure event involving the interaction of an exposure receptor to deviation (from_normal) of quality."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_4000000> "exposure to deviation (from_normal) in quality"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_4000000> "exposure to change"^^xsd:string)
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_4000000> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000069> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/PATO_0000001>)))))
 
-# Class: <http://purl.obolibrary.org/obo/ECTO_4000002> (exposure to increased amount of salt)
+# Class: <http://purl.obolibrary.org/obo/ECTO_4000002> (exposure to increased salt)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_4000002> "A exposure event involving the interaction of an exposure receptor to increased amount of salt."^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_4000002> "exposure to increased amount in salt"^^xsd:string)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_4000002> "exposure to increased amount of salt"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_4000002> "exposure to increased salt"^^xsd:string)
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_4000002> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000470> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/CHEBI_24866>)))))
 
-# Class: <http://purl.obolibrary.org/obo/ECTO_4000003> (exposure to decreased amount of salt)
+# Class: <http://purl.obolibrary.org/obo/ECTO_4000003> (exposure to decreased salt)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_4000003> "A exposure event involving the interaction of an exposure receptor to decreased amount of salt."^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_4000003> "exposure to decreased amount in salt"^^xsd:string)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_4000003> "exposure to decreased amount of salt"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_4000003> "exposure to decreased salt"^^xsd:string)
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_4000003> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001997> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/CHEBI_24866>)))))
 
-# Class: <http://purl.obolibrary.org/obo/ECTO_4000004> (exposure to increased amount of methane)
+# Class: <http://purl.obolibrary.org/obo/ECTO_4000004> (exposure to increased methane)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_4000004> "A exposure event involving the interaction of an exposure receptor to increased amount of methane."^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_4000004> "exposure to increased amount in methane"^^xsd:string)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_4000004> "exposure to increased amount of methane"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_4000004> "exposure to increased methane"^^xsd:string)
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_4000004> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000470> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/CHEBI_16183>)))))
 
-# Class: <http://purl.obolibrary.org/obo/ECTO_4000005> (exposure to decreased amount of methane)
+# Class: <http://purl.obolibrary.org/obo/ECTO_4000005> (exposure to decreased methane)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_4000005> "A exposure event involving the interaction of an exposure receptor to decreased amount of methane."^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_4000005> "exposure to decreased amount in methane"^^xsd:string)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_4000005> "exposure to decreased amount of methane"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_4000005> "exposure to decreased methane"^^xsd:string)
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_4000005> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001997> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/CHEBI_16183>)))))
 
-# Class: <http://purl.obolibrary.org/obo/ECTO_4000006> (exposure to increased amount of glucose)
+# Class: <http://purl.obolibrary.org/obo/ECTO_4000006> (exposure to increased glucose)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_4000006> "A exposure event involving the interaction of an exposure receptor to increased amount of glucose."^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_4000006> "exposure to increased amount in glucose"^^xsd:string)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_4000006> "exposure to increased amount of glucose"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_4000006> "exposure to increased glucose"^^xsd:string)
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_4000006> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000470> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/CHEBI_17234>)))))
 
-# Class: <http://purl.obolibrary.org/obo/ECTO_4000007> (exposure to increased amount of fructose)
+# Class: <http://purl.obolibrary.org/obo/ECTO_4000007> (exposure to increased fructose)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_4000007> "A exposure event involving the interaction of an exposure receptor to increased amount of fructose."^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_4000007> "exposure to increased amount in fructose"^^xsd:string)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_4000007> "exposure to increased amount of fructose"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_4000007> "exposure to increased fructose"^^xsd:string)
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_4000007> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000470> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/CHEBI_28757>)))))
 
-# Class: <http://purl.obolibrary.org/obo/ECTO_4000008> (exposure to increased amount of sucrose)
+# Class: <http://purl.obolibrary.org/obo/ECTO_4000008> (exposure to increased sucrose)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_4000008> "A exposure event involving the interaction of an exposure receptor to increased amount of sucrose."^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_4000008> "exposure to increased amount in sucrose"^^xsd:string)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_4000008> "exposure to increased amount of sucrose"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_4000008> "exposure to increased sucrose"^^xsd:string)
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_4000008> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000470> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/CHEBI_17992>)))))
 
-# Class: <http://purl.obolibrary.org/obo/ECTO_4000009> (exposure to increased amount of protein)
+# Class: <http://purl.obolibrary.org/obo/ECTO_4000009> (exposure to increased protein)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_4000009> "A exposure event involving the interaction of an exposure receptor to increased amount of protein."^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_4000009> "exposure to increased amount in protein"^^xsd:string)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_4000009> "exposure to increased amount of protein"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_4000009> "exposure to increased protein"^^xsd:string)
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_4000009> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000470> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/CHEBI_36080>)))))
 
-# Class: <http://purl.obolibrary.org/obo/ECTO_4000010> (exposure to increased amount of monosaccharide)
+# Class: <http://purl.obolibrary.org/obo/ECTO_4000010> (exposure to increased monosaccharide)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_4000010> "A exposure event involving the interaction of an exposure receptor to increased amount of monosaccharide."^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_4000010> "exposure to increased amount in monosaccharide"^^xsd:string)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_4000010> "exposure to increased amount of monosaccharide"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_4000010> "exposure to increased monosaccharide"^^xsd:string)
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_4000010> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000470> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/CHEBI_35381>)))))
 
-# Class: <http://purl.obolibrary.org/obo/ECTO_4000011> (exposure to increased amount of methane)
+# Class: <http://purl.obolibrary.org/obo/ECTO_4000011> (exposure to increased cholesterol)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_4000011> "A exposure event involving the interaction of an exposure receptor to increased amount of methane."^^xsd:string)
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_4000011> "exposure to increased amount in methane"^^xsd:string)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_4000011> "exposure to increased amount of methane"^^xsd:string)
-EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_4000011> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000470> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/CHEBI_16183>)))))
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_4000011> "A exposure event involving the interaction of an exposure receptor to increased amount of cholesterol."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_4000011> "exposure to increased amount in cholesterol"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_4000011> "exposure to increased cholesterol"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_4000011> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000470> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/CHEBI_16113>)))))
 
-# Class: <http://purl.obolibrary.org/obo/ECTO_4000012> (exposure to increased amount of triglyceride)
+# Class: <http://purl.obolibrary.org/obo/ECTO_4000012> (exposure to increased triglyceride)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_4000012> "A exposure event involving the interaction of an exposure receptor to increased amount of triglyceride."^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_4000012> "exposure to increased amount in triglyceride"^^xsd:string)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_4000012> "exposure to increased amount of triglyceride"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_4000012> "exposure to increased triglyceride"^^xsd:string)
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_4000012> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000470> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/CHEBI_17855>)))))
 
-# Class: <http://purl.obolibrary.org/obo/ECTO_4000013> (exposure to increased amount of low-density lipoprotein)
+# Class: <http://purl.obolibrary.org/obo/ECTO_4000013> (exposure to increased low-density lipoprotein)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_4000013> "A exposure event involving the interaction of an exposure receptor to increased amount of low-density lipoprotein."^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_4000013> "exposure to increased amount in low-density lipoprotein"^^xsd:string)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_4000013> "exposure to increased amount of low-density lipoprotein"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_4000013> "exposure to increased low-density lipoprotein"^^xsd:string)
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_4000013> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000470> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/CHEBI_39026>)))))
 
-# Class: <http://purl.obolibrary.org/obo/ECTO_4000014> (exposure to increased amount of high-density lipoprotein)
+# Class: <http://purl.obolibrary.org/obo/ECTO_4000014> (exposure to increased high-density lipoprotein)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_4000014> "A exposure event involving the interaction of an exposure receptor to increased amount of high-density lipoprotein."^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_4000014> "exposure to increased amount in high-density lipoprotein"^^xsd:string)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_4000014> "exposure to increased amount of high-density lipoprotein"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_4000014> "exposure to increased high-density lipoprotein"^^xsd:string)
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_4000014> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000470> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/CHEBI_39025>)))))
 
-# Class: <http://purl.obolibrary.org/obo/ECTO_4000015> (exposure to decreased amount of glucose)
+# Class: <http://purl.obolibrary.org/obo/ECTO_4000015> (exposure to decreased glucose)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_4000015> "A exposure event involving the interaction of an exposure receptor to decreased amount of glucose."^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_4000015> "exposure to decreased amount in glucose"^^xsd:string)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_4000015> "exposure to decreased amount of glucose"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_4000015> "exposure to decreased glucose"^^xsd:string)
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_4000015> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001997> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/CHEBI_17234>)))))
 
-# Class: <http://purl.obolibrary.org/obo/ECTO_4000016> (exposure to decreased amount of fructose)
+# Class: <http://purl.obolibrary.org/obo/ECTO_4000016> (exposure to decreased fructose)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_4000016> "A exposure event involving the interaction of an exposure receptor to decreased amount of fructose."^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_4000016> "exposure to decreased amount in fructose"^^xsd:string)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_4000016> "exposure to decreased amount of fructose"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_4000016> "exposure to decreased fructose"^^xsd:string)
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_4000016> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001997> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/CHEBI_28757>)))))
 
-# Class: <http://purl.obolibrary.org/obo/ECTO_4000017> (exposure to decreased amount of sucrose)
+# Class: <http://purl.obolibrary.org/obo/ECTO_4000017> (exposure to decreased sucrose)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_4000017> "A exposure event involving the interaction of an exposure receptor to decreased amount of sucrose."^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_4000017> "exposure to decreased amount in sucrose"^^xsd:string)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_4000017> "exposure to decreased amount of sucrose"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_4000017> "exposure to decreased sucrose"^^xsd:string)
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_4000017> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001997> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/CHEBI_17992>)))))
 
-# Class: <http://purl.obolibrary.org/obo/ECTO_4000018> (exposure to decreased amount of protein)
+# Class: <http://purl.obolibrary.org/obo/ECTO_4000018> (exposure to decreased protein)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_4000018> "A exposure event involving the interaction of an exposure receptor to decreased amount of protein."^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_4000018> "exposure to decreased amount in protein"^^xsd:string)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_4000018> "exposure to decreased amount of protein"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_4000018> "exposure to decreased protein"^^xsd:string)
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_4000018> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001997> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/CHEBI_36080>)))))
 
-# Class: <http://purl.obolibrary.org/obo/ECTO_4000019> (exposure to decreased amount of monosaccharide)
+# Class: <http://purl.obolibrary.org/obo/ECTO_4000019> (exposure to decreased monosaccharide)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_4000019> "A exposure event involving the interaction of an exposure receptor to decreased amount of monosaccharide."^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_4000019> "exposure to decreased amount in monosaccharide"^^xsd:string)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_4000019> "exposure to decreased amount of monosaccharide"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_4000019> "exposure to decreased monosaccharide"^^xsd:string)
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_4000019> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001997> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/CHEBI_35381>)))))
 
-# Class: <http://purl.obolibrary.org/obo/ECTO_4000020> (exposure to decreased amount of methane)
+# Class: <http://purl.obolibrary.org/obo/ECTO_4000020> (exposure to decreased cholesterol)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_4000020> "A exposure event involving the interaction of an exposure receptor to decreased amount of methane."^^xsd:string)
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_4000020> "exposure to decreased amount in methane"^^xsd:string)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_4000020> "exposure to decreased amount of methane"^^xsd:string)
-EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_4000020> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001997> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/CHEBI_16183>)))))
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_4000020> "A exposure event involving the interaction of an exposure receptor to decreased amount of cholesterol."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_4000020> "exposure to decreased amount in cholesterol"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_4000020> "exposure to decreased cholesterol"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_4000020> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001997> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/CHEBI_16113>)))))
 
-# Class: <http://purl.obolibrary.org/obo/ECTO_4000021> (exposure to decreased amount of triglyceride)
+# Class: <http://purl.obolibrary.org/obo/ECTO_4000021> (exposure to decreased triglyceride)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_4000021> "A exposure event involving the interaction of an exposure receptor to decreased amount of triglyceride."^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_4000021> "exposure to decreased amount in triglyceride"^^xsd:string)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_4000021> "exposure to decreased amount of triglyceride"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_4000021> "exposure to decreased triglyceride"^^xsd:string)
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_4000021> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001997> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/CHEBI_17855>)))))
 
-# Class: <http://purl.obolibrary.org/obo/ECTO_4000022> (exposure to decreased amount of low-density lipoprotein)
+# Class: <http://purl.obolibrary.org/obo/ECTO_4000022> (exposure to decreased low-density lipoprotein)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_4000022> "A exposure event involving the interaction of an exposure receptor to decreased amount of low-density lipoprotein."^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_4000022> "exposure to decreased amount in low-density lipoprotein"^^xsd:string)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_4000022> "exposure to decreased amount of low-density lipoprotein"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_4000022> "exposure to decreased low-density lipoprotein"^^xsd:string)
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_4000022> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001997> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/CHEBI_39026>)))))
 
-# Class: <http://purl.obolibrary.org/obo/ECTO_4000023> (exposure to decreased amount of high-density lipoprotein)
+# Class: <http://purl.obolibrary.org/obo/ECTO_4000023> (exposure to decreased high-density lipoprotein)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_4000023> "A exposure event involving the interaction of an exposure receptor to decreased amount of high-density lipoprotein."^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_4000023> "exposure to decreased amount in high-density lipoprotein"^^xsd:string)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_4000023> "exposure to decreased amount of high-density lipoprotein"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_4000023> "exposure to decreased high-density lipoprotein"^^xsd:string)
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_4000023> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001997> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/CHEBI_39025>)))))
 
-# Class: <http://purl.obolibrary.org/obo/ECTO_4000025> (exposure to increased amount of pressure of air)
+# Class: <http://purl.obolibrary.org/obo/ECTO_4000024> (exposure to increased air pressure)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_4000025> "A exposure event involving the interaction of an exposure receptor to increased amount of pressure of air."^^xsd:string)
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_4000025> "A exposure event involving the interaction of an exposure receptor to increased amount of pressure of water."^^xsd:string)
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_4000025> "exposure to increased amount in pressure of air"^^xsd:string)
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_4000025> "exposure to increased amount in pressure of water"^^xsd:string)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_4000025> "exposure to increased amount of pressure of air"^^xsd:string)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_4000025> "exposure to increased amount of pressure of water"^^xsd:string)
-EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_4000025> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000470> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/ENVO_09200011>)))))
-EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_4000025> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000470> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/ENVO_3100033>)))))
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_4000024> "A exposure event involving the interaction of an exposure receptor to increased amount of pressure of air."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_4000024> "exposure to increased amount in pressure of air"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_4000024> "exposure to increased air pressure"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_4000024> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000470> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/ENVO_09200011>)))))
 
-# Class: <http://purl.obolibrary.org/obo/ECTO_4000026> (exposure to decreased amount of pressure of water)
-
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_4000026> "A exposure event involving the interaction of an exposure receptor to decreased amount of pressure of air."^^xsd:string)
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_4000026> "A exposure event involving the interaction of an exposure receptor to decreased amount of pressure of water."^^xsd:string)
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_4000026> "exposure to decreased amount in pressure of air"^^xsd:string)
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_4000026> "exposure to decreased amount in pressure of water"^^xsd:string)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_4000026> "exposure to decreased amount of pressure of air"^^xsd:string)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_4000026> "exposure to decreased amount of pressure of water"^^xsd:string)
-EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_4000026> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001997> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/ENVO_09200011>)))))
-EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_4000026> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001997> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/ENVO_3100033>)))))
-
-# Class: <http://purl.obolibrary.org/obo/ECTO_4000027> (exposure to frozen of liquid water)
+# Class: <http://purl.obolibrary.org/obo/ECTO_4000027> (exposure to freezing water)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_4000027> "A exposure event involving the interaction of an exposure receptor to frozen of liquid water."^^xsd:string)
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_4000027> "A exposure event involving the interaction of an exposure receptor to increased amount of temperature of air."^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_4000027> "exposure to frozen in liquid water"^^xsd:string)
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_4000027> "exposure to increased amount in temperature of air"^^xsd:string)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_4000027> "exposure to frozen of liquid water"^^xsd:string)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_4000027> "exposure to increased amount of temperature of air"^^xsd:string)
-EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_4000027> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000470> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/ENVO_09200001>)))))
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_4000027> "exposure to freezing water"^^xsd:string)
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_4000027> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001985> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/ENVO_00002006>)))))
 
-# Class: <http://purl.obolibrary.org/obo/ECTO_4000028> (exposure to frozen of air)
+# Class: <http://purl.obolibrary.org/obo/ECTO_4000028> (exposure to freezing air)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_4000028> "A exposure event involving the interaction of an exposure receptor to frozen of air."^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_4000028> "exposure to frozen in air"^^xsd:string)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_4000028> "exposure to frozen of air"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_4000028> "exposure to freezing air"^^xsd:string)
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_4000028> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001985> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/ENVO_00002005>)))))
 
-# Class: <http://purl.obolibrary.org/obo/ECTO_4000029> (exposure to increased amount of temperature of soil)
+# Class: <http://purl.obolibrary.org/obo/ECTO_4000029> (exposure to increased soil temperature)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_4000029> "A exposure event involving the interaction of an exposure receptor to increased amount of temperature of soil."^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_4000029> "exposure to increased amount in temperature of soil"^^xsd:string)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_4000029> "exposure to increased amount of temperature of soil"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_4000029> "exposure to increased soil temperature"^^xsd:string)
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_4000029> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000470> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/ENVO_09200012>)))))
 
-# Class: <http://purl.obolibrary.org/obo/ECTO_4000030> (exposure to decreased amount of temperature of soil)
+# Class: <http://purl.obolibrary.org/obo/ECTO_4000030> (exposure to decreased soil temperature)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_4000030> "A exposure event involving the interaction of an exposure receptor to decreased amount of temperature of soil."^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_4000030> "exposure to decreased amount in temperature of soil"^^xsd:string)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_4000030> "exposure to decreased amount of temperature of soil"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_4000030> "exposure to decreased soil temperature"^^xsd:string)
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_4000030> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001997> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/ENVO_09200012>)))))
 
-# Class: <http://purl.obolibrary.org/obo/ECTO_4000031> (exposure to increased amount of temperature of water)
+# Class: <http://purl.obolibrary.org/obo/ECTO_4000031> (exposure to increased water temperature)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_4000031> "A exposure event involving the interaction of an exposure receptor to increased amount of temperature of water."^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_4000031> "exposure to increased amount in temperature of water"^^xsd:string)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_4000031> "exposure to increased amount of temperature of water"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_4000031> "exposure to increased water temperature"^^xsd:string)
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_4000031> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000470> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/ENVO_09200014>)))))
 
-# Class: <http://purl.obolibrary.org/obo/ECTO_4000032> (exposure to decreased amount of temperature of water)
+# Class: <http://purl.obolibrary.org/obo/ECTO_4000032> (exposure to decreased water temperature)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_4000032> "A exposure event involving the interaction of an exposure receptor to decreased amount of temperature of water."^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_4000032> "exposure to decreased amount in temperature of water"^^xsd:string)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_4000032> "exposure to decreased amount of temperature of water"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_4000032> "exposure to decreased water temperature"^^xsd:string)
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_4000032> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001997> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/ENVO_09200014>)))))
+
+# Class: <http://purl.obolibrary.org/obo/ECTO_4000033> (exposure to decreased water pressure)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_4000033> "A exposure event involving the interaction of an exposure receptor to decreased amount of pressure of water."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_4000033> "exposure to decreased amount in pressure of water"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_4000033> "exposure to decreased water pressure"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_4000033> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001997> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/ENVO_3100033>)))))
+
+# Class: <http://purl.obolibrary.org/obo/ECTO_4000034> (exposure to increased air temperature)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_4000034> "A exposure event involving the interaction of an exposure receptor to increased amount of temperature of air."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_4000034> "exposure to increased amount in temperature of air"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_4000034> "exposure to increased air temperature"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_4000034> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000470> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/ENVO_09200001>)))))
+
+# Class: <http://purl.obolibrary.org/obo/ECTO_4000035> (exposure to increased water pressure)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_4000035> "A exposure event involving the interaction of an exposure receptor to increased amount of pressure of water."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_4000035> "exposure to increased amount in pressure of water"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_4000035> "exposure to increased water pressure"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_4000035> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000470> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/ENVO_3100033>)))))
+
+# Class: <http://purl.obolibrary.org/obo/ECTO_4000036> (exposure to decreased air pressure)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_4000036> "A exposure event involving the interaction of an exposure receptor to decreased amount of pressure of air."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_4000036> "exposure to decreased amount in pressure of air"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_4000036> "exposure to decreased air pressure"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_4000036> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001997> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/ENVO_09200011>)))))
 
 
 )

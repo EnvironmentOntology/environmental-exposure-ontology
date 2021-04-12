@@ -17,7 +17,7 @@
      xmlns:taxslim="http://purl.obolibrary.org/obo/ncbitaxon/subsets/taxslim#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/ecto/imports/envo_import.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/ecto/releases/2020-09-18/imports/envo_import.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/ecto/releases/2021-02-11/imports/envo_import.owl"/>
     </owl:Ontology>
     
 
@@ -129,6 +129,14 @@
 
     <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000424">
         <rdfs:label>expand expression to</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000425 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000425">
+        <rdfs:label>expand assertion to</rdfs:label>
     </owl:AnnotationProperty>
     
 
@@ -9012,6 +9020,57 @@ Each of these 3 primitives can be composed to yield a cross-product of different
     
 
 
+    <!-- http://purl.obolibrary.org/obo/ENVO_00000011 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00000011">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000002"/>
+        <obo:IAO_0000115>An enclosure for displaying selected plant or animal life.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>FTT:31</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>FTT:743</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Geonames:S.GDN</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>TGN:53010</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Garden</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>garden</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>ENVO</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasRelatedSynonym>PARK</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>cropland</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>park</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:id>ENVO:00000011</oboInOwl:id>
+        <rdfs:label>garden</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000011"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>An enclosure for displaying selected plant or animal life.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Geonames:feature</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000011"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>garden</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Geonames:feature</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000011"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>PARK</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000011"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>cropland</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000011"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>park</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADL:FTT</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/ENVO_00000012 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00000012">
@@ -9382,6 +9441,12 @@ Each of these 3 primitives can be composed to yield a cross-product of different
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000020"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>pasteuer lake</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000020"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A body of water or other liquid of considerable size contained in a depression on a landmass.</owl:annotatedTarget>
         <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Lake</oboInOwl:hasDbXref>
@@ -9422,12 +9487,6 @@ Each of these 3 primitives can be composed to yield a cross-product of different
         <owl:annotatedTarget>mortlake</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
     </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000020"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>pasteuer lake</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
-    </owl:Axiom>
     
 
 
@@ -9462,6 +9521,20 @@ Each of these 3 primitives can be composed to yield a cross-product of different
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000022"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A stream which, through permanent or seasonal flow processes, moves from elevated land towards lower elevations through a definite channel and empties either into a sea, lake, or another river or ends on land as bed seepage and evapotranspiration exceed water supply.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:resource="http://orcid.org/0000-0002-4366-3088"/>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADL:FTT</oboInOwl:hasDbXref>
+        <rdfs:comment>https://en.wikipedia.org/wiki/River</rdfs:comment>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000022"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasAlternativeId"/>
+        <owl:annotatedTarget>LTER:474</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>https://vocab.lternet.edu/vocab/vocab/index.php?tema=474&amp;/rivers</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000022"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>rio</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADL:FTT</oboInOwl:hasDbXref>
@@ -9483,20 +9556,6 @@ Each of these 3 primitives can be composed to yield a cross-product of different
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
         <owl:annotatedTarget>&quot;There are no official definitions for the generic term river as applied to geographic features, although in some countries or communities a stream is defined by its size. Many names for small rivers are specific to geographic location; examples are &quot;run&quot; in some parts of the United States, &quot;burn&quot; in Scotland and northeast England, and &quot;beck&quot; in northern England. Sometimes a river is defined as being larger than a creek, but not always: the language is vague.&quot;</owl:annotatedTarget>
         <rdfs:comment>https://en.wikipedia.org/wiki/River</rdfs:comment>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000022"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A stream which, through permanent or seasonal flow processes, moves from elevated land towards lower elevations through a definite channel and empties either into a sea, lake, or another river or ends on land as bed seepage and evapotranspiration exceed water supply.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:resource="http://orcid.org/0000-0002-4366-3088"/>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADL:FTT</oboInOwl:hasDbXref>
-        <rdfs:comment>https://en.wikipedia.org/wiki/River</rdfs:comment>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000022"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasAlternativeId"/>
-        <owl:annotatedTarget>LTER:474</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>https://vocab.lternet.edu/vocab/vocab/index.php?tema=474&amp;/rivers</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -10434,6 +10493,285 @@ Each of these 3 primitives can be composed to yield a cross-product of different
     
 
 
+    <!-- http://purl.obolibrary.org/obo/ENVO_00000077 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00000077">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_01001110"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000056"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001246"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002354"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001430"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001110"/>
+        <oboInOwl:hasDbXref>FTT:1246</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>FTT:1247</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>FTT:44</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>FTT:45</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>FTT:46</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>FTT:48</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>FTT:50</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>FTT:51</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>FTT:52</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>FTT:57</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>FTT:60</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>FTT:62</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>FTT:63</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>FTT:64</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>FTT:72</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>FTT:74</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Geonames:L.AGRC</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Geonames:L.RESA</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Geonames:S.NSY</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>TGN:55001</oboInOwl:hasDbXref>
+        <oboInOwl:hasNarrowSynonym>barn</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>cattle dipping tank</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>corral</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>dairy</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>feedlot</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>grange</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>grazing allotment</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>irrigated field</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>nursery</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>pastoral site</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>sheepfold</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>stockyard</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasRelatedSynonym>AgriculturalLands</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>agricultural colony</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>agricultural facility</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>agricultural land</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>agricultural reserve</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>agricultural site</oboInOwl:hasRelatedSynonym>
+        <rdfs:comment>As with other classes that are &quot;features&quot;, the subclasses of this class are being moved to more informative locations. Their relation to agriculture will be modelled by something more akin to a quality or relation to an agricultural process.</rdfs:comment>
+        <rdfs:label>agricultural ecosystem</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000077"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
+        <owl:annotatedTarget>barn</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADL:FTT</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000077"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
+        <owl:annotatedTarget>cattle dipping tank</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADL:FTT</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000077"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
+        <owl:annotatedTarget>corral</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADL:FTT</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000077"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
+        <owl:annotatedTarget>dairy</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADL:FTT</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000077"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
+        <owl:annotatedTarget>feedlot</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADL:FTT</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000077"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
+        <owl:annotatedTarget>grange</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADL:FTT</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000077"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
+        <owl:annotatedTarget>grazing allotment</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADL:FTT</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000077"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
+        <owl:annotatedTarget>irrigated field</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADL:FTT</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000077"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
+        <owl:annotatedTarget>nursery</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADL:FTT</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000077"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
+        <owl:annotatedTarget>nursery</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Geonames:feature</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000077"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
+        <owl:annotatedTarget>pastoral site</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADL:FTT</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000077"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
+        <owl:annotatedTarget>sheepfold</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADL:FTT</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000077"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
+        <owl:annotatedTarget>stockyard</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADL:FTT</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000077"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>AgriculturalLands</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NASA:earthrealm</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000077"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>agricultural colony</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Geonames:feature</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000077"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>agricultural facility</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADL:FTT</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000077"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>agricultural land</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Getty:TGN</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000077"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>agricultural reserve</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADL:FTT</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000077"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>agricultural reserve</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Geonames:feature</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000077"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>agricultural site</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADL:FTT</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_00000078 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00000078">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000077"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_01000245"/>
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_01000247"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>An area of land which is used for the cultivation of crops or grazing of livestock, including any agricultural constructions therein.</obo:IAO_0000115>
+        <oboInOwl:hasBroadSynonym>agricultural site</oboInOwl:hasBroadSynonym>
+        <oboInOwl:hasDbXref>FTT:45</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>FTT:58</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>FTT:59</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>FTT:69</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Geonames:S.FRM</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Geonames:S.FRMS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Geonames:S.RNCH</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>TGN:54011</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Farm</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>FARM</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasRelatedSynonym>farm</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>farms</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>farmstead</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>ranch</oboInOwl:hasRelatedSynonym>
+        <rdfs:label>farm</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000078"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>An area of land which is used for the cultivation of crops or grazing of livestock, including any agricultural constructions therein.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000078"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym"/>
+        <owl:annotatedTarget>agricultural site</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADL:FTT</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000078"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>FARM</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000078"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>farm</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Geonames:feature</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000078"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>farms</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Geonames:feature</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000078"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>farmstead</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADL:FTT</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000078"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>ranch</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Geonames:feature</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000078"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>ranch</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Getty:TGN</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000078"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>ranch</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/ENVO_00000086 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00000086">
@@ -11200,6 +11538,56 @@ Each of these 3 primitives can be composed to yield a cross-product of different
     
 
 
+    <!-- http://purl.obolibrary.org/obo/ENVO_00000114 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00000114">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000352"/>
+        <obo:IAO_0000115>A field which is located on land and used for agricultural purposes, such as the grazing of livestock or the cultivation of crops.</obo:IAO_0000115>
+        <oboInOwl:hasBroadSynonym>agricultural site</oboInOwl:hasBroadSynonym>
+        <oboInOwl:hasDbXref>EcoLexicon:field</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>FTT:45</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>FTT:61</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Geonames:L.FLD</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>SWEETRealm:Field</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>TGN:21456</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>field</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasRelatedSynonym>cropland</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>grassland</oboInOwl:hasRelatedSynonym>
+        <rdfs:label>agricultural field</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000114"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A field which is located on land and used for agricultural purposes, such as the grazing of livestock or the cultivation of crops.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Field_%28agriculture%29</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000114"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym"/>
+        <owl:annotatedTarget>agricultural site</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADL:FTT</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000114"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>field</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Geonames:feature</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000114"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>cropland</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000114"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>grassland</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/ENVO_00000128 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00000128">
@@ -11407,7 +11795,7 @@ Each of these 3 primitives can be composed to yield a cross-product of different
         <oboInOwl:hasDbXref rdf:resource="http://sweetontology.net/realmSoil/Permafrost"/>
         <oboInOwl:hasDbXref>EcoLexicon:permafrost</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>LTER:408</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Permafrost</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://en.wikipedia.org/wiki/Permafrost</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>Permafrost</oboInOwl:hasExactSynonym>
         <oboInOwl:inSubset>envoPolar</oboInOwl:inSubset>
         <rdfs:comment>Ice is not always present, as may be in the case of nonporous bedrock, but it frequently occurs and it may be in amounts exceeding the potential hydraulic saturation of the ground material.</rdfs:comment>
@@ -11418,7 +11806,7 @@ Each of these 3 primitives can be composed to yield a cross-product of different
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Soil or rock and included ice or organic material at or below the freezing point of water (0 degrees Celsius or 32 degrees Fahrenheit) for two or more years.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0003-4808-4736"/>
-        <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Permafrost</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://en.wikipedia.org/wiki/Permafrost</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000134"/>
@@ -11651,7 +12039,7 @@ Each of these 3 primitives can be composed to yield a cross-product of different
         <oboInOwl:hasDbXref>Geonames:T.TAL</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>SWEETRealm:Talus</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>TGN:21508</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://en.wikipedia.org/wiki/Scree</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Scree</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace>ENVO</oboInOwl:hasOBONamespace>
         <oboInOwl:hasRelatedSynonym>TALUS</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym>talus slope</oboInOwl:hasRelatedSynonym>
@@ -11662,7 +12050,7 @@ Each of these 3 primitives can be composed to yield a cross-product of different
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000194"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Broken rock that appears at the bottom of crags, mountain cliffs or valley shoulders.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://en.wikipedia.org/wiki/Scree</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Scree</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000194"/>
@@ -12201,13 +12589,13 @@ Each of these 3 primitives can be composed to yield a cross-product of different
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A zone beneath the land surface and above the level of permanent groundwater or phreatic zone in which water has a hydraulic head less than atmospheric pressure and is retained by a combination of adhesion and capillary action.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://wasg.iinet.net.au/terminol.html</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://en.wikipedia.org/wiki/Vadose_zone</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Vadose_zone</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000328"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>unsaturated zone</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://en.wikipedia.org/wiki/Vadose_zone</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Vadose_zone</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -12240,7 +12628,7 @@ Each of these 3 primitives can be composed to yield a cross-product of different
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>A compound astronomical body part which is located beneath the land surface and in which all interstices are filled with water that has a hydraulic head greater than atmospheric pressure due to the weight of overlying groundwater.</obo:IAO_0000115>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://en.wikipedia.org/wiki/Phreatic_zone</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Phreatic_zone</oboInOwl:hasDbXref>
         <oboInOwl:hasRelatedSynonym>zone of saturation</oboInOwl:hasRelatedSynonym>
         <rdfs:label>phreatic zone</rdfs:label>
     </owl:Class>
@@ -12249,13 +12637,13 @@ Each of these 3 primitives can be composed to yield a cross-product of different
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A compound astronomical body part which is located beneath the land surface and in which all interstices are filled with water that has a hydraulic head greater than atmospheric pressure due to the weight of overlying groundwater.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://wasg.iinet.net.au/terminol.html</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://en.wikipedia.org/wiki/Phreatic_zone</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Phreatic_zone</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000329"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>zone of saturation</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://en.wikipedia.org/wiki/Phreatic_zone</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Phreatic_zone</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -12631,6 +13019,22 @@ SOURCE DEFINITION: Marine brine pools are large areas of brine on the ocean basi
     
 
 
+    <!-- http://purl.obolibrary.org/obo/ENVO_00000469 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00000469">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000070"/>
+        <obo:IAO_0000115>A facility, permanent or temporary, on land, in air, space or water, where scientific research or measurements can be undertaken.</obo:IAO_0000115>
+        <rdfs:label>research facility</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000469"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A facility, permanent or temporary, on land, in air, space or water, where scientific research or measurements can be undertaken.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MA:ma</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/ENVO_00000495 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00000495">
@@ -12847,7 +13251,7 @@ SOURCE DEFINITION: Marine brine pools are large areas of brine on the ocean basi
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A rock is a naturally occurring solid aggregate of one or more minerals or mineraloids.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MA:ma</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://en.wikipedia.org/wiki/Rock_(geology)</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Rock_(geology)</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -14183,6 +14587,23 @@ The lower boundary that separates soil from the nonsoil underneath is most diffi
     
 
 
+    <!-- http://purl.obolibrary.org/obo/ENVO_00002173 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00002173">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000781"/>
+        <obo:IAO_0000115>A hospital is a building in which health care services are  provided by specialized staff and equipment.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Hospital</oboInOwl:hasDbXref>
+        <rdfs:label>hospital</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00002173"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A hospital is a building in which health care services are  provided by specialized staff and equipment.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Hospital</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/ENVO_00002176 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00002176">
@@ -14548,6 +14969,26 @@ The lower boundary that separates soil from the nonsoil underneath is most diffi
     
 
 
+    <!-- http://purl.obolibrary.org/obo/ENVO_00002221 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00002221">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001222"/>
+        <obo:IAO_0000115>A building in which a business presents a selection of goods and offers to trade or sell them to customers for money or other goods.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Shopping</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>retail shop</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>retail store</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>retailer</oboInOwl:hasExactSynonym>
+        <rdfs:label>shop</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00002221"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A building in which a business presents a selection of goods and offers to trade or sell them to customers for money or other goods.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Shopping</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/ENVO_00002228 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00002228">
@@ -14562,6 +15003,40 @@ The lower boundary that separates soil from the nonsoil underneath is most diffi
         <oboInOwl:id>ENVO:00002228</oboInOwl:id>
         <rdfs:label>pond water</rdfs:label>
     </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_00002232 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00002232">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00001998"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0001000"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_00010483"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002473"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000481"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>Andosols are soils that develop in volcanic ejecta or glasses under almost any climate (except under hyperarid climate conditions). However, Andosols may also develop in other silicate-rich materials under acid weathering in humid and perhumid climates.</obo:IAO_0000115>
+        <rdfs:label>andosol</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00002232"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Andosols are soils that develop in volcanic ejecta or glasses under almost any climate (except under hyperarid climate conditions). However, Andosols may also develop in other silicate-rich materials under acid weathering in humid and perhumid climates.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:resource="http://fao.org/ag/agl/agll/wrb/doc/wrb2006final.pdf"/>
+        <oboInOwl:hasDbXref rdf:resource="https://en.wikipedia.org/wiki/Andosols"/>
+        <oboInOwl:hasDbXref rdf:resource="https://www.nrcs.usda.gov/Internet/FSE_DOCUMENTS/nrcs142p2_051232.pdf"/>
+    </owl:Axiom>
     
 
 
@@ -14599,6 +15074,39 @@ The lower boundary that separates soil from the nonsoil underneath is most diffi
         </rdfs:subClassOf>
         <obo:IAO_0000115>A portion of soil which is found in a forested area.</obo:IAO_0000115>
         <rdfs:label>forest soil</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_00002263 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00002263">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_00001998"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0001025"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000011"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00001998"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000011"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0001025"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000011"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>A portion of soil which is found in a garden.</obo:IAO_0000115>
+        <rdfs:label>garden soil</rdfs:label>
     </owl:Class>
     
 
@@ -15432,6 +15940,32 @@ The lower boundary that separates soil from the nonsoil underneath is most diffi
     
 
 
+    <!-- http://purl.obolibrary.org/obo/ENVO_00005749 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00005749">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_00001998"/>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_01000247"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000245"/>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00001998"/>
+        <obo:IAO_0000115>A portion of soil which is part of a cropland or a rangeland biome.</obo:IAO_0000115>
+        <rdfs:label>farm soil</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/ENVO_00005750 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00005750">
@@ -15484,6 +16018,34 @@ The lower boundary that separates soil from the nonsoil underneath is most diffi
         <oboInOwl:hasOBONamespace>ENVO</oboInOwl:hasOBONamespace>
         <oboInOwl:id>ENVO:00005753</oboInOwl:id>
         <rdfs:label>urea enriched soil</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_00005755 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00005755">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_00001998"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0001025"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000114"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00001998"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0001025"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000114"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <oboInOwl:hasOBONamespace>ENVO</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>ENVO:00005755</oboInOwl:id>
+        <rdfs:label>field soil</rdfs:label>
     </owl:Class>
     
 
@@ -15758,6 +16320,26 @@ The lower boundary that separates soil from the nonsoil underneath is most diffi
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Airborne solid particles (also called dust or particulate matter (PM)) or liquid droplets.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://en.wikipedia.org/wiki/Aerosol</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_00010625 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00010625">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000011"/>
+        <obo:IAO_0000115>A facility in which animals are confined within enclosures and displayed to the public, and in which they may also be bred.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym>zoo</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>zoological park</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>ENVO</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>ENVO:00010625</oboInOwl:id>
+        <rdfs:label>zoological garden</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00010625"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A facility in which animals are confined within enclosures and displayed to the public, and in which they may also be bred.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Zoo</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -16572,6 +17154,70 @@ The lower boundary that separates soil from the nonsoil underneath is most diffi
     
 
 
+    <!-- http://purl.obolibrary.org/obo/ENVO_01000245 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000245">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001244"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002354"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000952"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>A cropland ecosystem in which dominant ecological communities are maintained in a stable state - mimicking a climax community - by human intervention.</obo:IAO_0000115>
+        <oboInOwl:created_by>ORCID:0000-0002-4366-3088</oboInOwl:created_by>
+        <oboInOwl:creation_date>2013-06-14T11:45:47Z</oboInOwl:creation_date>
+        <rdfs:label>cropland biome</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000245"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A cropland ecosystem in which dominant ecological communities are maintained in a stable state - mimicking a climax community - by human intervention.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:resource="http://dx.doi.org/10.1111/j.1466-8238.2010.00540.x"/>
+        <oboInOwl:hasDbXref rdf:resource="http://dx.doi.org/10.1890/070062"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01000246 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000246">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000219"/>
+        <obo:IAO_0000115>A village biome is an anthropogenic terrestrial biome which contains settlements such as villages, towns, and/or small cities and which is primarily used for agricultural activity.</obo:IAO_0000115>
+        <oboInOwl:created_by>ORCID:0000-0002-4366-3088</oboInOwl:created_by>
+        <oboInOwl:creation_date>2013-06-14T11:45:47Z</oboInOwl:creation_date>
+        <rdfs:comment>Villages are also described as agricultural settlements with greater than 100 persons per square kilometre; however, no upper limit is defined.</rdfs:comment>
+        <rdfs:label>village biome</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000246"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A village biome is an anthropogenic terrestrial biome which contains settlements such as villages, towns, and/or small cities and which is primarily used for agricultural activity.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOI:10.1111/j.1466-8238.2010.00540.x</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOI:10.1890/070062</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01000247 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000247">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000219"/>
+        <obo:IAO_0000115>A rangeland biome is an anthropogenic terrestrial biome which is primarily used for the rearing and grazing of livestock.</obo:IAO_0000115>
+        <oboInOwl:created_by>ORCID:0000-0002-4366-3088</oboInOwl:created_by>
+        <oboInOwl:creation_date>2013-06-14T11:45:47Z</oboInOwl:creation_date>
+        <rdfs:label>rangeland biome</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000247"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A rangeland biome is an anthropogenic terrestrial biome which is primarily used for the rearing and grazing of livestock.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOI:10.1111/j.1466-8238.2010.00540.x</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOI:10.1890/070062</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/ENVO_01000248 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000248">
@@ -16851,7 +17497,7 @@ From https://en.wikipedia.org/wiki/ [A mineral] is different from a rock, which 
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000274"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Slate is a metamorphic rock which is fine-grained, foliated, homogeneous, Slates are derived from clastic sedimentary rocks.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://en.wikipedia.org/wiki/Slate</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Slate</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -16877,8 +17523,8 @@ From https://en.wikipedia.org/wiki/ [A mineral] is different from a rock, which 
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000276"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A large unit of land or water containing a geographically distinct assemblage of species, natural communities, and environmental conditions.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOI:10.1641/0006-3568(2001)051[0933:TEOTWA]2.0.CO;2</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">URL:http://worldwildlife.org/biomes</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>DOI:10.1641/0006-3568(2001)051[0933:TEOTWA]2.0.CO;2</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>URL:http://worldwildlife.org/biomes</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -17856,6 +18502,25 @@ https://en.wikipedia.org/wiki/  Ecozones correspond to the floristic kingdoms of
     
 
 
+    <!-- http://purl.obolibrary.org/obo/ENVO_01000352 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000352">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000813"/>
+        <obo:IAO_0000115>An unbroken expanse (as of ice)</obo:IAO_0000115>
+        <oboInOwl:created_by>ORCID:0000-0002-4366-3088</oboInOwl:created_by>
+        <oboInOwl:inSubset>envoPolar</oboInOwl:inSubset>
+        <rdfs:comment>This class was created to accommodate &quot;fields&quot; from agricultural fields to marine mesoscale eddy fields. Thus, it has a very broad definition which makes it less than informative when annotating. Please consider using or requesting an appropriate subclass.</rdfs:comment>
+        <rdfs:label>field</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000352"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>An unbroken expanse (as of ice)</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>http://www.merriam-webster.com/dictionary/field</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/ENVO_01000355 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000355">
@@ -18318,7 +18983,7 @@ https://en.wikipedia.org/wiki/  Ecozones correspond to the floristic kingdoms of
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000460"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Asphalt also known as bitumen is a sticky, black, and highly viscous liquid or semi-solid form of petroleum.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://en.wikipedia.org/wiki/Asphalt</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Asphalt</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -18344,7 +19009,7 @@ https://en.wikipedia.org/wiki/  Ecozones correspond to the floristic kingdoms of
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000461"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Refined asphalt is a sticky, black, and highly viscous liquid or semi-solid with a boiling point above 500 degrees Celsius, obtained from the fractional distillation of crude oil.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://en.wikipedia.org/wiki/Asphalt</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Asphalt</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -18363,7 +19028,7 @@ https://en.wikipedia.org/wiki/  Ecozones correspond to the floristic kingdoms of
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000462"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Masonry cement is a substance used in construction that has the disposition to set and harden and thus may be used to bind materials together.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://en.wikipedia.org/wiki/Cement</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Cement</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -18471,6 +19136,24 @@ https://en.wikipedia.org/wiki/  Ecozones correspond to the floristic kingdoms of
         <owl:annotatedTarget>Glass is an amorphous (non-crystalline) solid which is often transparent.</owl:annotatedTarget>
         <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Glass</oboInOwl:hasDbXref>
     </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01000481 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000481">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000480"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002473"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_30563"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>Silica-based glass is a glass composed primarily of silicon dioxide, the primary constituent of sand.</obo:IAO_0000115>
+        <oboInOwl:hasBroadSynonym>glass</oboInOwl:hasBroadSynonym>
+        <rdfs:comment>Silica-based glasses are the most common manufactured variety of glass.</rdfs:comment>
+        <rdfs:label>silica-based glass</rdfs:label>
+    </owl:Class>
     
 
 
@@ -19355,6 +20038,23 @@ https://en.wikipedia.org/wiki/  Ecozones correspond to the floristic kingdoms of
     
 
 
+    <!-- http://purl.obolibrary.org/obo/ENVO_01000655 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000655">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000634"/>
+        <obo:IAO_0000115>An explosive eruption is a volcanic process in which pressurised magma is violently expelled and froths into volcanic ash. Explosive eruptions can eject a cloud of rocks, dust, gas, and pyroclastic material  which may then collapse, creating a pyroclastic flow of hot volcanic matter.</obo:IAO_0000115>
+        <oboInOwl:inSubset>environmental_hazards</oboInOwl:inSubset>
+        <rdfs:label xml:lang="en">explosive eruption</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000655"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>An explosive eruption is a volcanic process in which pressurised magma is violently expelled and froths into volcanic ash. Explosive eruptions can eject a cloud of rocks, dust, gas, and pyroclastic material  which may then collapse, creating a pyroclastic flow of hot volcanic matter.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Explosive_eruption</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/ENVO_01000658 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000658">
@@ -19364,6 +20064,34 @@ https://en.wikipedia.org/wiki/  Ecozones correspond to the floristic kingdoms of
         <rdfs:comment>The thresholds for what makes a settlment &quot;dense&quot; can be determined as needed. If there is a specific threshold that should be added to ENVO, please make a new class request.</rdfs:comment>
         <rdfs:label xml:lang="en">dense settlement</rdfs:label>
     </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01000660 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000660">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00010483"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000086"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0001444"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002353"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000655"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>Tephra is fragmental material produced by a volcanic eruption regardless of composition, fragment size or emplacement mechanism.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">tephra</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000660"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Tephra is fragmental material produced by a volcanic eruption regardless of composition, fragment size or emplacement mechanism.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Tephra</oboInOwl:hasDbXref>
+    </owl:Axiom>
     
 
 
@@ -20523,6 +21251,70 @@ https://en.wikipedia.org/wiki/  Ecozones correspond to the floristic kingdoms of
         </rdfs:subClassOf>
         <obo:IAO_0000115>An abiotic mesoscopic physical object which is primarily composed of plastic.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">piece of plastic</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01000779 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000779">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_00000070"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000056"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001445"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000070"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000056"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001445"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>The system of public works in a country, state or region, including roads, utility lines and public buildings.</obo:IAO_0000115>
+        <oboInOwl:hasBroadSynonym>infrastructure</oboInOwl:hasBroadSynonym>
+        <rdfs:comment>We label this as &apos;public infrastructure&apos;, as the OECD definition refers specifically to public constructed features. The parts of public infrastructure are not exhaustive and should be extended as needed.</rdfs:comment>
+        <rdfs:label xml:lang="en">public infrastructure</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000779"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>The system of public works in a country, state or region, including roads, utility lines and public buildings.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>https://stats.oecd.org/glossary/detail.asp?ID=4511</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01000781 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000781">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000056"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001447"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000073"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000779"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000056"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001447"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>A building which is publically accessible.</obo:IAO_0000115>
+        <obo:IAO_0000116>Created for SDGIO, we treat &quot;public&quot; as &quot;publically accessible&quot; where the semantics of access are dealt with in SDGIO.</obo:IAO_0000116>
+        <rdfs:label xml:lang="en">public building</rdfs:label>
     </owl:Class>
     
 
@@ -21758,6 +22550,63 @@ https://en.wikipedia.org/wiki/  Ecozones correspond to the floristic kingdoms of
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A sudden electrostatic discharge which occurs during an electrical storm as differentially charged atmospheric entities equalise their charge.</owl:annotatedTarget>
         <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Lightning</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01000923 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000923">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00010625"/>
+        <obo:IAO_0000115>A petting zoo is a zoological garden which contains domesticated non-human animals and some wild non-human animals that are docile enough for humans to touch and feed.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym>petting farm</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasRelatedSynonym>children&apos;s zoo</oboInOwl:hasRelatedSynonym>
+        <rdfs:comment>Petting zoos are often nested within a zoological garden featuring wild non-human animals, not docile enough for humans to touch.</rdfs:comment>
+        <rdfs:label xml:lang="en">petting zoo</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000923"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A petting zoo is a zoological garden which contains domesticated non-human animals and some wild non-human animals that are docile enough for humans to touch and feed.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Petting_zoo</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01000934 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000934">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001222"/>
+        <obo:IAO_0000115>A building within which food and drink are prepared and served to customers in exchange for money or other goods and/or services.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym>eatery</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">restaurant</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000934"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A building within which food and drink are prepared and served to customers in exchange for money or other goods and/or services.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Restaurant</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01000935 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000935">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000002"/>
+        <obo:IAO_0000115>A part of an ecosystem which may be or has been used for one or more overnight stays by humans sheltering in tents, camper vans, caravans, or improvised shelters.</obo:IAO_0000115>
+        <obo:IAO_0000116>This is a very ambiguous term with wide-ranging usage patterns across cultural groups and regions.</obo:IAO_0000116>
+        <oboInOwl:hasExactSynonym>camping ground</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>camping pitch</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>camping site</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>campsite</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">campground</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000935"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A part of an ecosystem which may be or has been used for one or more overnight stays by humans sheltering in tents, camper vans, caravans, or improvised shelters.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Campsite</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -25737,6 +26586,46 @@ https://en.wikipedia.org/wiki/  Ecozones correspond to the floristic kingdoms of
     
 
 
+    <!-- http://purl.obolibrary.org/obo/ENVO_01001222 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01001222">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_00000073"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000056"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001451"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000073"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000056"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001451"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>A building which is primarily used to facilitate the buying or selling of goods or services.</obo:IAO_0000115>
+        <rdfs:comment>&quot;Commerce includes legal, economic, political, social, cultural and technological systems that are in operation in any country or internationally.&quot;</rdfs:comment>
+        <rdfs:label xml:lang="en">commercial building</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001222"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A building which is primarily used to facilitate the buying or selling of goods or services.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Commercial_building</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001222"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+        <owl:annotatedTarget>&quot;Commerce includes legal, economic, political, social, cultural and technological systems that are in operation in any country or internationally.&quot;</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Commerce</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/ENVO_01001223 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01001223">
@@ -25752,6 +26641,22 @@ https://en.wikipedia.org/wiki/  Ecozones correspond to the floristic kingdoms of
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A process during which wood is processed into beams or planks.</owl:annotatedTarget>
         <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Lumber</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01001224 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01001224">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000420"/>
+        <obo:IAO_0000115>A building part within which administrative work is done by an organisations users in order to support and realise the objectives of that organization.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">office</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001224"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A building part within which administrative work is done by an organisations users in order to support and realise the objectives of that organization.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Office#Office_buildings</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -25870,6 +26775,79 @@ https://en.wikipedia.org/wiki/  Ecozones correspond to the floristic kingdoms of
         <owl:annotatedTarget>An ecosystem which is determined by communities of plants with a tree growth form and in which members of those communities form continuous or discontinuous regions of canopy cover.</owl:annotatedTarget>
         <oboInOwl:hasDbXref>http://www.fao.org/docrep/017/ap862e/ap862e00.pdf</oboInOwl:hasDbXref>
         <rdfs:comment>https://www1.usgs.gov/csas/nvcs/nvcsGetUnitDetails?elementGlobalId=860217</rdfs:comment>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01001244 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01001244">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001790"/>
+        <obo:IAO_0000115>An ecosystem which 1) is determined by communities of annual crops, perennial woody crops, or by actively tilled land, 2) is primarily used for agricultural activity, and 3) contains no village or larger human settlement.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">cropland ecosystem</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001244"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>An ecosystem which 1) is determined by communities of annual crops, perennial woody crops, or by actively tilled land, 2) is primarily used for agricultural activity, and 3) contains no village or larger human settlement.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:resource="http://dx.doi.org/10.1890/070062"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01001246 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01001246">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_02500000"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000066"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_01000245"/>
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_01000246"/>
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_01000247"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_02500027"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000066"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000635"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000066"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_01000245"/>
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_01000246"/>
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_01000247"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>A process during which humans rear animals or plants on land for harvest and consumption.</obo:IAO_0000115>
+        <obo:IAO_0000116>Expand the sites of occurrence listed as axioms as new terms emerge.</obo:IAO_0000116>
+        <oboInOwl:hasRelatedSynonym>agriculture</oboInOwl:hasRelatedSynonym>
+        <rdfs:label xml:lang="en">agricultural process</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001246"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A process during which humans rear animals or plants on land for harvest and consumption.</owl:annotatedTarget>
+        <rdfs:comment>http://www.fao.org/docrep/003/x6941e/x6941e04.htm#bm04</rdfs:comment>
     </owl:Axiom>
     
 
@@ -26958,6 +27936,40 @@ https://en.wikipedia.org/wiki/  Ecozones correspond to the floristic kingdoms of
     
 
 
+    <!-- http://purl.obolibrary.org/obo/ENVO_01001405 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01001405">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000313"/>
+        <obo:IAO_0000115>An anthropogenic environment which is bounded by the building envelope of a laboratory and in which a system of manufactured products exert control on one or more of its environmental conditions.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0002-4366-3088"/>
+        <rdfs:label xml:lang="en">laboratory environment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01001406 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01001406">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000469"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001405"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>A research facility in which systems of manufactured products control internal conditions and in which scientific or technological research, experiments, and measurement may be performed.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0002-4366-3088"/>
+        <rdfs:label xml:lang="en">laboratory facility</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001406"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A research facility in which systems of manufactured products control internal conditions and in which scientific or technological research, experiments, and measurement may be performed.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Laboratory</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/ENVO_01001414 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01001414">
@@ -27120,6 +28132,46 @@ https://en.wikipedia.org/wiki/  Ecozones correspond to the floristic kingdoms of
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001429"/>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
         <owl:annotatedTarget>Further examples include subdividing real estate into lots, typically for the purpose of building homes and converting unused factories into condominia.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Land_development</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01001430 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01001430">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001429"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002234"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_00000114"/>
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_01000245"/>
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_01000246"/>
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_01000247"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>A land conversion process during which terrestrial ecosystems are altered to facilitate agricultural activities such as crop cultivation or the rearing of livestock.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0002-4366-3088"/>
+        <oboInOwl:hasExactSynonym>agricultural land conversion</oboInOwl:hasExactSynonym>
+        <rdfs:comment>This process typically relies on the conversion and development of  forests, savannas or grassland. Creation of farmland from wasteland, deserts or previous impervious surfaces is considerably less frequent because of the presence of degraded soil or the lack of fertile soil.</rdfs:comment>
+        <rdfs:label xml:lang="en">agricultural land conversion process</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001430"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A land conversion process during which terrestrial ecosystems are altered to facilitate agricultural activities such as crop cultivation or the rearing of livestock.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Land_development</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001430"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+        <owl:annotatedTarget>This process typically relies on the conversion and development of  forests, savannas or grassland. Creation of farmland from wasteland, deserts or previous impervious surfaces is considerably less frequent because of the presence of degraded soil or the lack of fertile soil.</owl:annotatedTarget>
         <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Land_development</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -27385,6 +28437,75 @@ https://en.wikipedia.org/wiki/  Ecozones correspond to the floristic kingdoms of
     
 
 
+    <!-- http://purl.obolibrary.org/obo/ENVO_01001445 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01001445">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001436"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_03000010"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000010"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>A planned environmental usage process during which an environment supports 1) enterprises concerned with the provision to the public of essentials, such as electricity or water or 2) the basic network or foundation of capital facilities or community investments which are necessary to support economic and community activities.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0002-4366-3088"/>
+        <oboInOwl:hasBroadSynonym>transportation</oboInOwl:hasBroadSynonym>
+        <rdfs:label xml:lang="en">usage of an environment for infrastructure and utilities</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001445"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A planned environmental usage process during which an environment supports 1) enterprises concerned with the provision to the public of essentials, such as electricity or water or 2) the basic network or foundation of capital facilities or community investments which are necessary to support economic and community activities.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/11493/144275.pdf</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Land_use</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://www.eionet.europa.eu/gemet/en/concept/4321</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://www.eionet.europa.eu/gemet/en/concept/6822</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01001447 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01001447">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001436"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PCO_0000002"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002473"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_9606"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>A planned environmental usage process during which an environment supports welfare activities organised by the state or a local authority and carried out by trained personnel.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0002-4366-3088"/>
+        <rdfs:comment>Services include those provided by health care facilities, places of religious worship, educational facilities, police stations, fire stations, coastguard facilities, public sanitation, non-human animal welfare services, detention services, and other public services.</rdfs:comment>
+        <rdfs:label xml:lang="en">usage of an environment for community and social services</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001447"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A planned environmental usage process during which an environment supports welfare activities organised by the state or a local authority and carried out by trained personnel.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/11493/144275.pdf</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Land_use</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://www.eionet.europa.eu/gemet/en/concept/7816</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/ENVO_01001450 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01001450">
@@ -27414,6 +28535,26 @@ https://en.wikipedia.org/wiki/  Ecozones correspond to the floristic kingdoms of
         <oboInOwl:hasDbXref>https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/11493/144275.pdf</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Land_use</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>https://www.eionet.europa.eu/gemet/en/concept/4279</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01001451 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01001451">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001436"/>
+        <obo:IAO_0000115>A planned environmental usage process during which an environment supports facilities associated with commerce or the earning of a livelihood through means other than manufacturing or the provision of a public service.</obo:IAO_0000115>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0002-4366-3088"/>
+        <rdfs:comment>This class includes activities carried out in commercial offices, meeting centres, art studios, recording studios, film sets, warehouses, and distribution centres.</rdfs:comment>
+        <rdfs:label xml:lang="en">usage of an environment for business</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001451"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A planned environmental usage process during which an environment supports facilities associated with commerce or the earning of a livelihood through means other than manufacturing or the provision of a public service.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/11493/144275.pdf</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Land_use</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://www.eionet.europa.eu/gemet/en/concept/1084</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -29568,6 +30709,41 @@ Some definitions include additional discussion of the the physics involved which
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-11-06T16:06:47Z</dc:date>
         <rdfs:label xml:lang="en">arid biome</rdfs:label>
     </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01001841 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01001841">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00002232"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_00010483"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0001000"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000660"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>An andosol which derives its silica content from glass and tephra ejected during a volcanic eruption.</obo:IAO_0000115>
+        <dc:creator rdf:resource="http://orcid.org/0000-0002-4366-3088"/>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-11-08T16:48:01Z</dc:date>
+        <rdfs:label xml:lang="en">volcanic soil</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001841"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>An andosol which derives its silica content from glass and tephra ejected during a volcanic eruption.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:resource="https://en.wikipedia.org/wiki/Andosols"/>
+        <oboInOwl:hasDbXref rdf:resource="https://www.nrcs.usda.gov/Internet/FSE_DOCUMENTS/nrcs142p2_051232.pdf"/>
+    </owl:Axiom>
     
 
 
@@ -33531,7 +34707,7 @@ Some definitions include additional discussion of the the physics involved which
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_2000003"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A wastewater treatment plant that treats agriculatural wastewater. Agricultural wastewater treatment relates to the treatment of wastewaters produced in the course of agricultural activities. Agriculture is a highly intensified industry in many parts of the world, producing a range of wastewaters requiring a variety of treatment technologies and management practices.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://en.wikipedia.org/wiki/Agricultural_wastewater_treatment</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Agricultural_wastewater_treatment</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -36151,6 +37327,18 @@ Some definitions include additional discussion of the the physics involved which
     
 
 
+    <!-- http://purl.obolibrary.org/obo/FOODON_00001133 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00001133">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001714"/>
+        <obo:IAO_0000115>A relish, sauce, or seasoning  added to food to impart a particular flavour or to complement the dish.</obo:IAO_0000115>
+        <obo:IAO_0000117 xml:lang="en">Damion Dooley</obo:IAO_0000117>
+        <obo:IAO_0000119 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Condiment</obo:IAO_0000119>
+        <rdfs:label xml:lang="en">condiment food product</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/FOODON_00001147 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00001147">
@@ -36272,6 +37460,24 @@ Some definitions include additional discussion of the the physics involved which
     
 
 
+    <!-- http://purl.obolibrary.org/obo/FOODON_00001857 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00001857">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001714"/>
+        <rdfs:label xml:lang="en">food flavoring or seasoning product</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FOODON_00002157 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00002157">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00002300"/>
+        <rdfs:label xml:lang="en">plant sweetener</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/FOODON_00002158 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00002158">
@@ -36280,6 +37486,17 @@ Some definitions include additional discussion of the the physics involved which
         <obo:IAO_0000117 xml:lang="en">Damion Dooley</obo:IAO_0000117>
         <oboInOwl:hasBroadSynonym xml:lang="en">preserved</oboInOwl:hasBroadSynonym>
         <rdfs:label xml:lang="en">food (preserved)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FOODON_00002300 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00002300">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001133"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001857"/>
+        <obo:IAO_0100001 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.langual.org/langual_thesaurus.asp?termid=H0202</obo:IAO_0100001>
+        <rdfs:label xml:lang="en">sweetener food product</rdfs:label>
     </owl:Class>
     
 
@@ -36752,6 +37969,17 @@ If used for food supplement substances, thissection and its narrover terms refer
     
 
 
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_131221 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_131221">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_35493"/>
+        <oboInOwl:hasRelatedSynonym>Charophyta/Embryophyta group</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>charophyte/embryophyte group</oboInOwl:hasRelatedSynonym>
+        <rdfs:label>Streptophytina</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/NCBITaxon_131567 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_131567">
@@ -36795,6 +38023,24 @@ If used for food supplement substances, thissection and its narrover terms refer
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_9347"/>
         <oboInOwl:hasRelatedSynonym>Boreotheria</oboInOwl:hasRelatedSynonym>
         <rdfs:label>Boreoeutheria</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_1437183 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_1437183">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3398"/>
+        <rdfs:label>Mesangiospermae</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_1437201 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_1437201">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_91827"/>
+        <rdfs:label>Pentapetalae</rdfs:label>
     </owl:Class>
     
 
@@ -36932,6 +38178,19 @@ If used for food supplement substances, thissection and its narrover terms refer
     
 
 
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_3193 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_3193">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_131221"/>
+        <oboInOwl:hasExactSynonym>higher plants</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>land plants</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>plants</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasRelatedSynonym>land plants</oboInOwl:hasRelatedSynonym>
+        <rdfs:label>Embryophyta</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/NCBITaxon_32523 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_32523">
@@ -37054,6 +38313,28 @@ If used for food supplement substances, thissection and its narrover terms refer
     
 
 
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_3398 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_3398">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_58024"/>
+        <oboInOwl:hasExactSynonym>angiosperms</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>flowering plants</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasRelatedSynonym>Angiospermae</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>flowering plants</oboInOwl:hasRelatedSynonym>
+        <rdfs:label>Magnoliophyta</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_35493 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_35493">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_33090"/>
+        <rdfs:label>Streptophyta</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/NCBITaxon_376913 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_376913">
@@ -37103,6 +38384,28 @@ If used for food supplement substances, thissection and its narrover terms refer
     
 
 
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_58023 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_58023">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3193"/>
+        <oboInOwl:hasExactSynonym>vascular plants</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasRelatedSynonym>vascular plants</oboInOwl:hasRelatedSynonym>
+        <rdfs:label>Tracheophyta</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_58024 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_58024">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_78536"/>
+        <oboInOwl:hasExactSynonym>seed plants</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasRelatedSynonym>seed plants</oboInOwl:hasRelatedSynonym>
+        <rdfs:label>Spermatophyta</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/NCBITaxon_6072 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_6072">
@@ -37133,6 +38436,30 @@ If used for food supplement substances, thissection and its narrover terms refer
         <oboInOwl:hasRelatedSynonym>Pelecypoda</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym>bivalves</oboInOwl:hasRelatedSynonym>
         <rdfs:label>Bivalvia</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_71240 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_71240">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_1437183"/>
+        <oboInOwl:hasRelatedSynonym>Dicotyledoneae</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>Magnoliopsida</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>dicots</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>dicotyledons</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>eudicots</oboInOwl:hasRelatedSynonym>
+        <rdfs:label>eudicotyledons</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_71275 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_71275">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_1437201"/>
+        <oboInOwl:hasRelatedSynonym>Rosidae</oboInOwl:hasRelatedSynonym>
+        <rdfs:label>rosids</rdfs:label>
     </owl:Class>
     
 
@@ -37182,6 +38509,16 @@ If used for food supplement substances, thissection and its narrover terms refer
     
 
 
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_78536 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_78536">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_58023"/>
+        <oboInOwl:hasRelatedSynonym>euphyllophytes</oboInOwl:hasRelatedSynonym>
+        <rdfs:label>Euphyllophyta</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/NCBITaxon_8287 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_8287">
@@ -37207,6 +38544,17 @@ If used for food supplement substances, thissection and its narrover terms refer
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_7711"/>
         <oboInOwl:hasExactSynonym>Craniata</oboInOwl:hasExactSynonym>
         <rdfs:label>Craniata &lt;chordata&gt;</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_91827 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_91827">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_71240"/>
+        <oboInOwl:hasRelatedSynonym>core eudicots</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>core eudicotyledons</oboInOwl:hasRelatedSynonym>
+        <rdfs:label>Gunneridae</rdfs:label>
     </owl:Class>
     
 
@@ -37567,6 +38915,18 @@ If used for food supplement substances, thissection and its narrover terms refer
     
 
 
+    <!-- http://purl.obolibrary.org/obo/PATO_0000911 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0000911">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000161"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0002302"/>
+        <obo:IAO_0000115>A rate which is relatively low.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym>slow rate</oboInOwl:hasExactSynonym>
+        <rdfs:label>decreased rate</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/PATO_0000912 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0000912">
@@ -37631,6 +38991,18 @@ If used for food supplement substances, thissection and its narrover terms refer
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000141"/>
         <obo:IAO_0000115>A structure quality inhering in a bearer by virtue of the bearer&apos;s disposition to admit the passage of gas or liquid through pores or interstices.</obo:IAO_0000115>
         <rdfs:label>porosity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PATO_0000982 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0000982">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000970"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/PATO_0000983"/>
+        <obo:IAO_0000115>A permeability quality inhering in a bearer by virtue of the bearer&apos;s being capable to be permeated or pervaded by a gas or liquid (as by osmosis or diffusion).</obo:IAO_0000115>
+        <oboInOwl:hasRelatedSynonym>porous</oboInOwl:hasRelatedSynonym>
+        <rdfs:label>permeable</rdfs:label>
     </owl:Class>
     
 
@@ -37735,6 +39107,18 @@ If used for food supplement substances, thissection and its narrover terms refer
         <obo:IAO_0000115>A concentration which is higher relative to the normal or average.</obo:IAO_0000115>
         <oboInOwl:hasExactSynonym>high concentration</oboInOwl:hasExactSynonym>
         <rdfs:label>increased concentration</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PATO_0001163 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0001163">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0001159"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0002303"/>
+        <obo:IAO_0000115>A concentration which is lower relative to the normal or average.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym>low concentration</oboInOwl:hasExactSynonym>
+        <rdfs:label>decreased concentration</rdfs:label>
     </owl:Class>
     
 
@@ -37901,12 +39285,51 @@ If used for food supplement substances, thissection and its narrover terms refer
     
 
 
+    <!-- http://purl.obolibrary.org/obo/PATO_0001442 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0001442">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000141"/>
+        <obo:IAO_0000115>A structural quality inhering in a bearer by virtue of whether the bearer includes all its components.</obo:IAO_0000115>
+        <rdfs:label>wholeness</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PATO_0001444 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0001444">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0001442"/>
+        <obo:IAO_0000115>A broken quality inhering in a bearer by virtue of the bearer&apos;s being broken open.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym>burst</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>fragmented</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>ruptured</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasNarrowSynonym>fractured</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasRelatedSynonym>cracked</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>hemorrhaged</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>split</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>torn</oboInOwl:hasRelatedSynonym>
+        <rdfs:label>broken</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/PATO_0001454 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0001454">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000085"/>
         <obo:IAO_0000115>A sensitivity quality inhering in a bearer by virtue of the bearer&apos;s dependence on oxygen.</obo:IAO_0000115>
         <rdfs:label>sensitivity to oxygen</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PATO_0001455 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0001455">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0001454"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/PATO_0001456"/>
+        <obo:IAO_0000115>A quality inhering in a bearer by virtue of the bearer&apos;s dependence on oxygen.</obo:IAO_0000115>
+        <rdfs:label>aerobic</rdfs:label>
     </owl:Class>
     
 
@@ -38559,6 +39982,17 @@ If used for food supplement substances, thissection and its narrover terms refer
     
 
 
+    <!-- http://purl.obolibrary.org/obo/PATO_0015011 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0015011">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0002303"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0015009"/>
+        <obo:IAO_0000115>An decrease in humidity.</obo:IAO_0000115>
+        <rdfs:label>decreased humidity</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/PATO_0015021 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0015021">
@@ -38791,7 +40225,7 @@ Classes for population already  exist in IDO (&apos;organism population&apos;, I
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PO_0009011"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A plant anatomical entity (PO:0025131) that is, or was, part of a plant, or was derived from a part of a plant.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>CARO:0000003</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CARO:0000003</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">POC:curators</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>

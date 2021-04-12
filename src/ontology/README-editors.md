@@ -128,3 +128,9 @@ There are three major steps involved in creating a new release:
    1. As the tag version you **need to choose the date on which your ontologies were build.** You can find this, for example, by looking at the `ecto.obo` file and check the `data-version:` property. The date needs to be prefixed with a `v`, so, for example `v2020-02-06`.
    1. You can write whatever you want in the release title, but I typically write the date again. The description underneath should contain a concise list of changes or term additions - Chris has a whole philosophy on this. For now, I recommend you to simply summarising the changed, in particular, which terms have been added or removed.
    1. Click "Publish release". Done.
+
+## Deprecating terms
+
+* Delete the term from the pattern in src/ontology/data/default/x.tsv
+* Add a row to src/templates/obsolete.tsv
+* run cd src/ontology && sh run.sh make templates components/obsoletes.owl

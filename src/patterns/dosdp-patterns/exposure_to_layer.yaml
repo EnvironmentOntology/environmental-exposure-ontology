@@ -1,0 +1,41 @@
+pattern_name: exposure_to_layer
+pattern_iri: http://purl.obolibrary.org/obo/ecto/patterns/exposure_to_layer.yaml
+
+description: "exposures to a quantity of some material which is spatially continuous, has comparable thickness, and usually covers some surface"
+
+contributors:
+  - https://orcid.org/0000-0002-2908-3327
+
+classes:
+  exposure event: ExO:0000002
+  environmental layer: ENVO:01000281
+
+annotationProperties:
+  exact_synonym: oio:hasExactSynonym
+
+relations:
+  has exposure stimulus: RO:0002309
+
+vars:
+  stressor: "'environmental layer'"
+
+name:
+  text: "exposure to %s"
+  vars:
+    - stressor
+
+annotations:
+  - annotationProperty: exact_synonym
+    text: "%s exposure"
+    vars:
+      - stressor
+
+def: 
+  text: "A exposure event involving the interaction of an exposure receptor to %s."
+  vars:
+    - stressor
+
+equivalentTo: 
+  text: "'exposure event' and ('has exposure stimulus' some %s)"
+  vars:
+    - stressor
