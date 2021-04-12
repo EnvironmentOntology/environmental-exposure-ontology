@@ -1,4 +1,4 @@
-Prefix(:=<urn:unnamed:ontology#ont1#>)
+Prefix(:=<urn:unnamed:ontology#ont1>)
 Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
 Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
 Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
@@ -80,7 +80,6 @@ Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0000180>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0000184>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0000185>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0000187>))
-Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0000188>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0000189>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0000190>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0000191>))
@@ -96,12 +95,13 @@ Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0000282>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0000284>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0000287>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0000288>))
-Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0000314>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0000315>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0000317>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0000318>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0000319>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0000321>))
+Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0000434>))
+Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0000640>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0001023>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0010043>))
 Declaration(Class(<http://purl.obolibrary.org/obo/NCIT_C116448>))
@@ -131,396 +131,396 @@ Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#has
 #   Classes
 ############################
 
-# Class: <http://purl.obolibrary.org/obo/ECTO_2000000> (medical action exposure)
+# Class: <http://purl.obolibrary.org/obo/ECTO_2000000> (exposure to medical action)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_2000000> "An exposure to medical action."^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_2000000> "exposure to medical action"^^xsd:string)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_2000000> "medical action exposure"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_2000000> "exposure to medical action"^^xsd:string)
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_2000000> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/MAXO_0000001>)))
 
-# Class: <http://purl.obolibrary.org/obo/ECTO_2000001> (pulmonary antihypertensive agent therapy exposure)
+# Class: <http://purl.obolibrary.org/obo/ECTO_2000001> (exposure to medication for hypertension)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_2000001> "An exposure to pulmonary antihypertensive agent therapy."^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_2000001> "exposure to pulmonary antihypertensive agent therapy"^^xsd:string)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_2000001> "pulmonary antihypertensive agent therapy exposure"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_2000001> "exposure to medication for hypertension"^^xsd:string)
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_2000001> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/MAXO_0000321>)))
 
-# Class: <http://purl.obolibrary.org/obo/ECTO_2000002> (dyslipidemic agent therapy exposure)
+# Class: <http://purl.obolibrary.org/obo/ECTO_2000002> (exposure to dyslipidemic agent therapy)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_2000002> "An exposure to dyslipidemic agent therapy."^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_2000002> "exposure to dyslipidemic agent therapy"^^xsd:string)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_2000002> "dyslipidemic agent therapy exposure"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_2000002> "exposure to dyslipidemic agent therapy"^^xsd:string)
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_2000002> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/MAXO_0000189>)))
 
-# Class: <http://purl.obolibrary.org/obo/ECTO_2000003> (blood glucose regulator therapy exposure)
+# Class: <http://purl.obolibrary.org/obo/ECTO_2000003> (exposure to blood glucose regulator therapy)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_2000003> "An exposure to blood glucose regulator therapy."^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_2000003> "exposure to blood glucose regulator therapy"^^xsd:string)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_2000003> "blood glucose regulator therapy exposure"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_2000003> "exposure to blood glucose regulator therapy"^^xsd:string)
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_2000003> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/MAXO_0000175>)))
 
-# Class: <http://purl.obolibrary.org/obo/ECTO_2000004> (therapeutic insulin treatment exposure)
+# Class: <http://purl.obolibrary.org/obo/ECTO_2000004> (exposure to theraputic insulin treatment)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_2000004> "An exposure to therapeutic insulin treatment."^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_2000004> "exposure to therapeutic insulin treatment"^^xsd:string)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_2000004> "therapeutic insulin treatment exposure"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_2000004> "exposure to theraputic insulin treatment"^^xsd:string)
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_2000004> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/MAXO_0000259>)))
 
-# Class: <http://purl.obolibrary.org/obo/ECTO_2000005> (sex hormone modifying agent therapy exposure)
+# Class: <http://purl.obolibrary.org/obo/ECTO_2000005> (exposure to hormone replacement therapy)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_2000005> "An exposure to sex hormone modifying agent therapy."^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_2000005> "exposure to sex hormone modifying agent therapy"^^xsd:string)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_2000005> "sex hormone modifying agent therapy exposure"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_2000005> "exposure to hormone replacement therapy"^^xsd:string)
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_2000005> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/MAXO_0000282>)))
 
-# Class: <http://purl.obolibrary.org/obo/ECTO_2000006> (estrogen modifying agent therapy exposure)
+# Class: <http://purl.obolibrary.org/obo/ECTO_2000006> (exposure to estrogen modification therapy)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_2000006> "An exposure to estrogen modifying agent therapy."^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_2000006> "exposure to estrogen modifying agent therapy"^^xsd:string)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_2000006> "estrogen modifying agent therapy exposure"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_2000006> "exposure to estrogen modification therapy"^^xsd:string)
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_2000006> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/MAXO_0000287>)))
 
-# Class: <http://purl.obolibrary.org/obo/ECTO_2000007> (platelet aggregation inhibitor agent therapy exposure)
+# Class: <http://purl.obolibrary.org/obo/ECTO_2000007> (exposure to platelet aggregation inhibitors)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_2000007> "An exposure to platelet aggregation inhibitor agent therapy."^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_2000007> "exposure to platelet aggregation inhibitor agent therapy"^^xsd:string)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_2000007> "platelet aggregation inhibitor agent therapy exposure"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_2000007> "exposure to platelet aggregation inhibitors"^^xsd:string)
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_2000007> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/MAXO_0000180>)))
 
-# Class: <http://purl.obolibrary.org/obo/ECTO_2000008> (antiarrythmic agent therapy exposure)
+# Class: <http://purl.obolibrary.org/obo/ECTO_2000008> (exposure to antiarrythmic agents)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_2000008> "An exposure to antiarrythmic agent therapy."^^xsd:string)
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_2000008> "exposure to antiarrythmic agent therapy"^^xsd:string)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_2000008> "antiarrythmic agent therapy exposure"^^xsd:string)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_2000008> "An exposure to antiarrhythmic agent therapy."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_2000008> "exposure to antiarrhythmic agent therapy"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_2000008> "exposure to antiarrythmic agents"^^xsd:string)
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_2000008> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/MAXO_0000185>)))
 
-# Class: <http://purl.obolibrary.org/obo/ECTO_2000009> (antipsychotic agent therapy exposure)
+# Class: <http://purl.obolibrary.org/obo/ECTO_2000009> (exposure to antipsychotic medication)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_2000009> "An exposure to antipsychotic agent therapy."^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_2000009> "exposure to antipsychotic agent therapy"^^xsd:string)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_2000009> "antipsychotic agent therapy exposure"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_2000009> "exposure to antipsychotic medication"^^xsd:string)
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_2000009> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/MAXO_0000166>)))
 
-# Class: <http://purl.obolibrary.org/obo/ECTO_2000010> (obsolete calcium channel blocker agent therapy exposure)
+# Class: <http://purl.obolibrary.org/obo/ECTO_2000010> (exposure to calcium channel blocker treatment)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_2000010> "An exposure to obsolete calcium channel blocker agent therapy."^^xsd:string)
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_2000010> "exposure to obsolete calcium channel blocker agent therapy"^^xsd:string)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_2000010> "obsolete calcium channel blocker agent therapy exposure"^^xsd:string)
-EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_2000010> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/MAXO_0000188>)))
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_2000010> "An exposure to calcium channel blocking agent therapy."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_2000010> "exposure to calcium channel blocking agent therapy"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_2000010> "exposure to calcium channel blocker treatment"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_2000010> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/MAXO_0000434>)))
 
-# Class: <http://purl.obolibrary.org/obo/ECTO_2000011> (nonsteroidal anti-inflammatory agent therapy exposure)
+# Class: <http://purl.obolibrary.org/obo/ECTO_2000011> (exposure to NSAIDs)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_2000011> "An exposure to nonsteroidal anti-inflammatory agent therapy."^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_2000011> "exposure to nonsteroidal anti-inflammatory agent therapy"^^xsd:string)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_2000011> "nonsteroidal anti-inflammatory agent therapy exposure"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_2000011> "exposure to NSAIDs"^^xsd:string)
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_2000011> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/MAXO_0000221>)))
 
-# Class: <http://purl.obolibrary.org/obo/ECTO_2000012> (H2-receptor antagonist agent therapy exposure)
+# Class: <http://purl.obolibrary.org/obo/ECTO_2000012> (exposure to H2 blockers)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_2000012> "An exposure to H2-receptor antagonist agent therapy."^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_2000012> "exposure to H2-receptor antagonist agent therapy"^^xsd:string)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_2000012> "H2-receptor antagonist agent therapy exposure"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_2000012> "exposure to H2 blockers"^^xsd:string)
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_2000012> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/MAXO_0000269>)))
 
-# Class: <http://purl.obolibrary.org/obo/ECTO_2000013> (diuretic agent therapy exposure)
+# Class: <http://purl.obolibrary.org/obo/ECTO_2000013> (exposure to theraputic diuretics)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_2000013> "An exposure to diuretic agent therapy."^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_2000013> "exposure to diuretic agent therapy"^^xsd:string)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_2000013> "diuretic agent therapy exposure"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_2000013> "exposure to theraputic diuretics"^^xsd:string)
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_2000013> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/MAXO_0000165>)))
 
-# Class: <http://purl.obolibrary.org/obo/ECTO_2000014> (anticholinergic bronchodilator agent therapy exposure)
+# Class: <http://purl.obolibrary.org/obo/ECTO_2000014> (exposure to anticholinergic bronchodilators)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_2000014> "An exposure to anticholinergic bronchodilator agent therapy."^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_2000014> "exposure to anticholinergic bronchodilator agent therapy"^^xsd:string)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_2000014> "anticholinergic bronchodilator agent therapy exposure"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_2000014> "exposure to anticholinergic bronchodilators"^^xsd:string)
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_2000014> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/MAXO_0000317>)))
 
-# Class: <http://purl.obolibrary.org/obo/ECTO_2000015> (inhaled corticosteroid agent therapy exposure)
+# Class: <http://purl.obolibrary.org/obo/ECTO_2000015> (exposure to corticosteroid therapy)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_2000015> "An exposure to inhaled corticosteroid agent therapy."^^xsd:string)
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_2000015> "exposure to inhaled corticosteroid agent therapy"^^xsd:string)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_2000015> "inhaled corticosteroid agent therapy exposure"^^xsd:string)
-EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_2000015> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/MAXO_0000314>)))
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_2000015> "An exposure to corticosteroid agent therapy."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_2000015> "exposure to corticosteroid agent therapy"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_2000015> "exposure to corticosteroid therapy"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_2000015> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/MAXO_0000640>)))
 
-# Class: <http://purl.obolibrary.org/obo/ECTO_2000016> (monoamine oxidase inhibitor agent therapy exposure)
+# Class: <http://purl.obolibrary.org/obo/ECTO_2000016> (exposure to MAO inhibitor)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_2000016> "An exposure to monoamine oxidase inhibitor agent therapy."^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_2000016> "exposure to monoamine oxidase inhibitor agent therapy"^^xsd:string)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_2000016> "monoamine oxidase inhibitor agent therapy exposure"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_2000016> "exposure to MAO inhibitor"^^xsd:string)
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_2000016> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/MAXO_0000213>)))
 
-# Class: <http://purl.obolibrary.org/obo/ECTO_2000017> (antidepressant agent therapy exposure)
+# Class: <http://purl.obolibrary.org/obo/ECTO_2000017> (exposure to antidepressants)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_2000017> "An exposure to antidepressant agent therapy."^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_2000017> "exposure to antidepressant agent therapy"^^xsd:string)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_2000017> "antidepressant agent therapy exposure"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_2000017> "exposure to antidepressants"^^xsd:string)
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_2000017> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/MAXO_0000160>)))
 
-# Class: <http://purl.obolibrary.org/obo/ECTO_2000018> (phosphodiesterase inhibitor bronchodilator agent therapy exposure)
+# Class: <http://purl.obolibrary.org/obo/ECTO_2000018> (exposure to phosphodiesterase inhibitors)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_2000018> "An exposure to phosphodiesterase inhibitor bronchodilator agent therapy."^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_2000018> "exposure to phosphodiesterase inhibitor bronchodilator agent therapy"^^xsd:string)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_2000018> "phosphodiesterase inhibitor bronchodilator agent therapy exposure"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_2000018> "exposure to phosphodiesterase inhibitors"^^xsd:string)
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_2000018> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/MAXO_0000318>)))
 
-# Class: <http://purl.obolibrary.org/obo/ECTO_2000019> (proton pump inhibitor agent therapy exposure)
+# Class: <http://purl.obolibrary.org/obo/ECTO_2000019> (exposure to proton pump inhibitors)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_2000019> "An exposure to proton pump inhibitor agent therapy."^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_2000019> "exposure to proton pump inhibitor agent therapy"^^xsd:string)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_2000019> "proton pump inhibitor agent therapy exposure"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_2000019> "exposure to proton pump inhibitors"^^xsd:string)
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_2000019> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/MAXO_0000272>)))
 
-# Class: <http://purl.obolibrary.org/obo/ECTO_2000020> (progestin modifying agent therapy exposure)
+# Class: <http://purl.obolibrary.org/obo/ECTO_2000020> (exposure to progestin treatment)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_2000020> "An exposure to progestin modifying agent therapy."^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_2000020> "exposure to progestin modifying agent therapy"^^xsd:string)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_2000020> "progestin modifying agent therapy exposure"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_2000020> "exposure to progestin treatment"^^xsd:string)
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_2000020> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/MAXO_0000288>)))
 
-# Class: <http://purl.obolibrary.org/obo/ECTO_2000021> (antiparkinson agent therapy exposure)
+# Class: <http://purl.obolibrary.org/obo/ECTO_2000021> (exposure to drugs to treat Parkinsons)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_2000021> "An exposure to antiparkinson agent therapy."^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_2000021> "exposure to antiparkinson agent therapy"^^xsd:string)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_2000021> "antiparkinson agent therapy exposure"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_2000021> "exposure to drugs to treat Parkinsons"^^xsd:string)
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_2000021> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/MAXO_0000157>)))
 
-# Class: <http://purl.obolibrary.org/obo/ECTO_2000022> (vasodilator agent therapy exposure)
+# Class: <http://purl.obolibrary.org/obo/ECTO_2000022> (exposure to vasodilators)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_2000022> "An exposure to vasodilator agent therapy."^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_2000022> "exposure to vasodilator agent therapy"^^xsd:string)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_2000022> "vasodilator agent therapy exposure"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_2000022> "exposure to vasodilators"^^xsd:string)
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_2000022> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/MAXO_0000191>)))
 
-# Class: <http://purl.obolibrary.org/obo/ECTO_2000023> (sympathomimetic bronchodilator agent therapy exposure)
+# Class: <http://purl.obolibrary.org/obo/ECTO_2000023> (exposure to sympathomimetic bronchodilators)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_2000023> "An exposure to sympathomimetic bronchodilator agent therapy."^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_2000023> "exposure to sympathomimetic bronchodilator agent therapy"^^xsd:string)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_2000023> "sympathomimetic bronchodilator agent therapy exposure"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_2000023> "exposure to sympathomimetic bronchodilators"^^xsd:string)
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_2000023> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/MAXO_0000319>)))
 
-# Class: <http://purl.obolibrary.org/obo/ECTO_2000024> (tricyclic antidepressant agent therapy exposure)
+# Class: <http://purl.obolibrary.org/obo/ECTO_2000024> (exposure to tricyclic antidepressants)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_2000024> "An exposure to tricyclic antidepressant agent therapy."^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_2000024> "exposure to tricyclic antidepressant agent therapy"^^xsd:string)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_2000024> "tricyclic antidepressant agent therapy exposure"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_2000024> "exposure to tricyclic antidepressants"^^xsd:string)
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_2000024> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/MAXO_0000215>)))
 
-# Class: <http://purl.obolibrary.org/obo/ECTO_2000025> (thyroid-modifying hormonal agent therapy exposure)
+# Class: <http://purl.obolibrary.org/obo/ECTO_2000025> (exposure to thyroid-modifying hormonal therapy)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_2000025> "An exposure to thyroid-modifying hormonal agent therapy."^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_2000025> "exposure to thyroid-modifying hormonal agent therapy"^^xsd:string)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_2000025> "thyroid-modifying hormonal agent therapy exposure"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_2000025> "exposure to thyroid-modifying hormonal therapy"^^xsd:string)
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_2000025> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/MAXO_0000284>)))
 
-# Class: <http://purl.obolibrary.org/obo/ECTO_2000027> (anticoagulant agent therapy exposure)
+# Class: <http://purl.obolibrary.org/obo/ECTO_2000027> (exposure to anticoagulants)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_2000027> "An exposure to anticoagulant agent therapy."^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_2000027> "exposure to anticoagulant agent therapy"^^xsd:string)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_2000027> "anticoagulant agent therapy exposure"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_2000027> "exposure to anticoagulants"^^xsd:string)
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_2000027> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/MAXO_0000178>)))
 
-# Class: <http://purl.obolibrary.org/obo/ECTO_2000028> (RAAS inhibitor therapy exposure)
+# Class: <http://purl.obolibrary.org/obo/ECTO_2000028> (exposure to sartans)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_2000028> "An exposure to RAAS inhibitor therapy."^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_2000028> "exposure to RAAS inhibitor therapy"^^xsd:string)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_2000028> "RAAS inhibitor therapy exposure"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_2000028> "exposure to sartans"^^xsd:string)
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_2000028> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/MAXO_0000190>)))
 
-# Class: <http://purl.obolibrary.org/obo/ECTO_2000029> (alpha-adrenergic antagonist agent therapy exposure)
+# Class: <http://purl.obolibrary.org/obo/ECTO_2000029> (exposure to alpha-blockers)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_2000029> "An exposure to alpha-adrenergic antagonist agent therapy."^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_2000029> "exposure to alpha-adrenergic antagonist agent therapy"^^xsd:string)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_2000029> "alpha-adrenergic antagonist agent therapy exposure"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_2000029> "exposure to alpha-blockers"^^xsd:string)
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_2000029> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/MAXO_0000184>)))
 
-# Class: <http://purl.obolibrary.org/obo/ECTO_2000030> (cholinesterase inhibitor therapy exposure)
+# Class: <http://purl.obolibrary.org/obo/ECTO_2000030> (exposure to cholinesterase inhibitor)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_2000030> "An exposure to cholinesterase inhibitor therapy."^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_2000030> "exposure to cholinesterase inhibitor therapy"^^xsd:string)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_2000030> "cholinesterase inhibitor therapy exposure"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_2000030> "exposure to cholinesterase inhibitor"^^xsd:string)
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_2000030> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/MAXO_0000210>)))
 
-# Class: <http://purl.obolibrary.org/obo/ECTO_2000031> (tranquilizing agent therapy exposure)
+# Class: <http://purl.obolibrary.org/obo/ECTO_2000031> (exposure to theraputic tranquilizers)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_2000031> "An exposure to tranquilizing agent therapy."^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_2000031> "exposure to tranquilizing agent therapy"^^xsd:string)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_2000031> "tranquilizing agent therapy exposure"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_2000031> "exposure to theraputic tranquilizers"^^xsd:string)
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_2000031> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/MAXO_0001023>)))
 
-# Class: <http://purl.obolibrary.org/obo/ECTO_2000032> (beta-adrenergic antagonist agent therapy exposure)
+# Class: <http://purl.obolibrary.org/obo/ECTO_2000032> (exposure to beta-blockers)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_2000032> "An exposure to beta-adrenergic antagonist agent therapy."^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_2000032> "exposure to beta-adrenergic antagonist agent therapy"^^xsd:string)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_2000032> "beta-adrenergic antagonist agent therapy exposure"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_2000032> "exposure to beta-blockers"^^xsd:string)
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_2000032> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/MAXO_0000187>)))
 
-# Class: <http://purl.obolibrary.org/obo/ECTO_2000034> (antileukotriene agent therapy exposure)
+# Class: <http://purl.obolibrary.org/obo/ECTO_2000034> (exposure to antileukotriene agents)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_2000034> "An exposure to antileukotriene agent therapy."^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_2000034> "exposure to antileukotriene agent therapy"^^xsd:string)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_2000034> "antileukotriene agent therapy exposure"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_2000034> "exposure to antileukotriene agents"^^xsd:string)
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_2000034> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/MAXO_0000315>)))
 
-# Class: <http://purl.obolibrary.org/obo/ECTO_2000035> (glycemic agent therapy exposure)
+# Class: <http://purl.obolibrary.org/obo/ECTO_2000035> (exposure to glycemic agents)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_2000035> "An exposure to glycemic agent therapy."^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_2000035> "exposure to glycemic agent therapy"^^xsd:string)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_2000035> "glycemic agent therapy exposure"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_2000035> "exposure to glycemic agents"^^xsd:string)
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_2000035> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/MAXO_0000258>)))
 
-# Class: <http://purl.obolibrary.org/obo/ECTO_2000036> (antigout agent therapy exposure)
+# Class: <http://purl.obolibrary.org/obo/ECTO_2000036> (exposure to antigout agent)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_2000036> "An exposure to antigout agent therapy."^^xsd:string)
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_2000036> "exposure to antigout agent therapy"^^xsd:string)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_2000036> "antigout agent therapy exposure"^^xsd:string)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_2000036> "An exposure to uricosuric agent therapy."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_2000036> "exposure to uricosuric agent therapy"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_2000036> "exposure to antigout agent"^^xsd:string)
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_2000036> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/MAXO_0000164>)))
 
-# Class: <http://purl.obolibrary.org/obo/ECTO_2000037> (Diagnostic Imaging exposure)
+# Class: <http://purl.obolibrary.org/obo/ECTO_2000037> (exposure to diagnostic imaging)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_2000037> "An exposure to Diagnostic Imaging."^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_2000037> "exposure to Diagnostic Imaging"^^xsd:string)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_2000037> "Diagnostic Imaging exposure"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_2000037> "exposure to diagnostic imaging"^^xsd:string)
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_2000037> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/NCIT_C16502>)))
 
-# Class: <http://purl.obolibrary.org/obo/ECTO_2000038> (Ultrasound Tomography exposure)
+# Class: <http://purl.obolibrary.org/obo/ECTO_2000038> (exposure to ultrasound tomography)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_2000038> "An exposure to Ultrasound Tomography."^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_2000038> "exposure to Ultrasound Tomography"^^xsd:string)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_2000038> "Ultrasound Tomography exposure"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_2000038> "exposure to ultrasound tomography"^^xsd:string)
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_2000038> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/NCIT_C116448>)))
 
-# Class: <http://purl.obolibrary.org/obo/ECTO_2000039> (Positron Emission Tomography exposure)
+# Class: <http://purl.obolibrary.org/obo/ECTO_2000039> (exposure to positron emission tomography)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_2000039> "An exposure to Positron Emission Tomography."^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_2000039> "exposure to Positron Emission Tomography"^^xsd:string)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_2000039> "Positron Emission Tomography exposure"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_2000039> "exposure to positron emission tomography"^^xsd:string)
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_2000039> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/NCIT_C17007>)))
 
-# Class: <http://purl.obolibrary.org/obo/ECTO_2000040> (Radiography exposure)
+# Class: <http://purl.obolibrary.org/obo/ECTO_2000040> (exposure to radiography)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_2000040> "An exposure to Radiography."^^xsd:string)
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_2000040> "exposure to Radiography"^^xsd:string)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_2000040> "Radiography exposure"^^xsd:string)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_2000040> "An exposure to X-Ray Imaging."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_2000040> "exposure to X-Ray Imaging"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_2000040> "exposure to radiography"^^xsd:string)
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_2000040> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/NCIT_C38101>)))
 
-# Class: <http://purl.obolibrary.org/obo/ECTO_2000041> (Mammography exposure)
+# Class: <http://purl.obolibrary.org/obo/ECTO_2000041> (exposure to mammography)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_2000041> "An exposure to Mammography."^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_2000041> "exposure to Mammography"^^xsd:string)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_2000041> "Mammography exposure"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_2000041> "exposure to mammography"^^xsd:string)
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_2000041> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/NCIT_C16818>)))
 
-# Class: <http://purl.obolibrary.org/obo/ECTO_2000042> (Xeroradiography exposure)
+# Class: <http://purl.obolibrary.org/obo/ECTO_2000042> (exposure to xeroradiography)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_2000042> "An exposure to Xeroradiography."^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_2000042> "exposure to Xeroradiography"^^xsd:string)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_2000042> "Xeroradiography exposure"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_2000042> "exposure to xeroradiography"^^xsd:string)
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_2000042> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/NCIT_C17263>)))
 
-# Class: <http://purl.obolibrary.org/obo/ECTO_2000043> (Myelography exposure)
+# Class: <http://purl.obolibrary.org/obo/ECTO_2000043> (exposure to myelography)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_2000043> "An exposure to Myelography."^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_2000043> "exposure to Myelography"^^xsd:string)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_2000043> "Myelography exposure"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_2000043> "exposure to myelography"^^xsd:string)
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_2000043> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/NCIT_C20175>)))
 
-# Class: <http://purl.obolibrary.org/obo/ECTO_2000044> (Bronchography exposure)
+# Class: <http://purl.obolibrary.org/obo/ECTO_2000044> (exposure to bronchography)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_2000044> "An exposure to Bronchography."^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_2000044> "exposure to Bronchography"^^xsd:string)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_2000044> "Bronchography exposure"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_2000044> "exposure to bronchography"^^xsd:string)
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_2000044> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/NCIT_C38040>)))
 
-# Class: <http://purl.obolibrary.org/obo/ECTO_2000045> (Cystography exposure)
+# Class: <http://purl.obolibrary.org/obo/ECTO_2000045> (exposure to cystography)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_2000045> "An exposure to Cystography."^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_2000045> "exposure to Cystography"^^xsd:string)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_2000045> "Cystography exposure"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_2000045> "exposure to cystography"^^xsd:string)
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_2000045> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/NCIT_C38049>)))
 
-# Class: <http://purl.obolibrary.org/obo/ECTO_2000046> (Vaginography exposure)
+# Class: <http://purl.obolibrary.org/obo/ECTO_2000046> (exposure to vaginography)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_2000046> "An exposure to Vaginography."^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_2000046> "exposure to Vaginography"^^xsd:string)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_2000046> "Vaginography exposure"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_2000046> "exposure to vaginography"^^xsd:string)
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_2000046> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/NCIT_C38096>)))
 
-# Class: <http://purl.obolibrary.org/obo/ECTO_2000047> (Abdominal Radiography exposure)
+# Class: <http://purl.obolibrary.org/obo/ECTO_2000047> (exposure to abdominal radiography)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_2000047> "An exposure to Abdominal Radiography."^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_2000047> "exposure to Abdominal Radiography"^^xsd:string)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_2000047> "Abdominal Radiography exposure"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_2000047> "exposure to abdominal radiography"^^xsd:string)
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_2000047> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/NCIT_C38102>)))
 
-# Class: <http://purl.obolibrary.org/obo/ECTO_2000048> (Chest Radiography exposure)
+# Class: <http://purl.obolibrary.org/obo/ECTO_2000048> (exposure to chest radiography)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_2000048> "An exposure to Chest Radiography."^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_2000048> "exposure to Chest Radiography"^^xsd:string)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_2000048> "Chest Radiography exposure"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_2000048> "exposure to chest radiography"^^xsd:string)
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_2000048> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/NCIT_C38103>)))
 
-# Class: <http://purl.obolibrary.org/obo/ECTO_2000049> (Cholangiography exposure)
+# Class: <http://purl.obolibrary.org/obo/ECTO_2000049> (exposure to cholangiography)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_2000049> "An exposure to Cholangiography."^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_2000049> "exposure to Cholangiography"^^xsd:string)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_2000049> "Cholangiography exposure"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_2000049> "exposure to cholangiography"^^xsd:string)
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_2000049> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/NCIT_C61508>)))
 
-# Class: <http://purl.obolibrary.org/obo/ECTO_2000050> (Total Body Radiography exposure)
+# Class: <http://purl.obolibrary.org/obo/ECTO_2000050> (exposure to total body radiography)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_2000050> "An exposure to Total Body Radiography."^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_2000050> "exposure to Total Body Radiography"^^xsd:string)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_2000050> "Total Body Radiography exposure"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_2000050> "exposure to total body radiography"^^xsd:string)
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_2000050> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/NCIT_C96640>)))
 
-# Class: <http://purl.obolibrary.org/obo/ECTO_2000051> (http://purl.obolibrary.org/obo/NCIT_C20080 exposure)
+# Class: <http://purl.obolibrary.org/obo/ECTO_2000051> (exposure to angiography)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_2000051> "An exposure to http://purl.obolibrary.org/obo/NCIT_C20080."^^xsd:string)
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_2000051> "exposure to http://purl.obolibrary.org/obo/NCIT_C20080"^^xsd:string)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_2000051> "http://purl.obolibrary.org/obo/NCIT_C20080 exposure"^^xsd:string)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_2000051> "An exposure to Angiography."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_2000051> "exposure to Angiography"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_2000051> "exposure to angiography"^^xsd:string)
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_2000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/NCIT_C20080>)))
 
-# Class: <http://purl.obolibrary.org/obo/ECTO_2000052> (http://purl.obolibrary.org/obo/NCIT_C17054 exposure)
+# Class: <http://purl.obolibrary.org/obo/ECTO_2000052> (exposure to radioactivity)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_2000052> "An exposure to http://purl.obolibrary.org/obo/NCIT_C17054."^^xsd:string)
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_2000052> "exposure to http://purl.obolibrary.org/obo/NCIT_C17054"^^xsd:string)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_2000052> "http://purl.obolibrary.org/obo/NCIT_C17054 exposure"^^xsd:string)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_2000052> "An exposure to Radioactivity."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_2000052> "exposure to Radioactivity"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_2000052> "exposure to radioactivity"^^xsd:string)
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_2000052> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/NCIT_C17054>)))
 
-# Class: <http://purl.obolibrary.org/obo/ECTO_2000053> (http://purl.obolibrary.org/obo/NCIT_C27851 exposure)
+# Class: <http://purl.obolibrary.org/obo/ECTO_2000053> (exposure to Human Papillomavirus Infection)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_2000053> "An exposure to http://purl.obolibrary.org/obo/NCIT_C27851."^^xsd:string)
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_2000053> "exposure to http://purl.obolibrary.org/obo/NCIT_C27851"^^xsd:string)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_2000053> "http://purl.obolibrary.org/obo/NCIT_C27851 exposure"^^xsd:string)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_2000053> "An exposure to Human Papillomavirus Infection."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_2000053> "exposure to Human Papillomavirus Infection"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_2000053> "exposure to Human Papillomavirus Infection"^^xsd:string)
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_2000053> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/NCIT_C27851>)))
 
-# Class: <http://purl.obolibrary.org/obo/ECTO_2000054> (surgical procedure exposure)
+# Class: <http://purl.obolibrary.org/obo/ECTO_2000054> (exposure to surgery)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_2000054> "An exposure to surgical procedure."^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_2000054> "exposure to surgical procedure"^^xsd:string)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_2000054> "surgical procedure exposure"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_2000054> "exposure to surgery"^^xsd:string)
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_2000054> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/MAXO_0000004>)))
 
-# Class: <http://purl.obolibrary.org/obo/ECTO_2000055> (kidney transplantation exposure)
+# Class: <http://purl.obolibrary.org/obo/ECTO_2000055> (exposure to kidney implantation)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_2000055> "An exposure to kidney transplantation."^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_2000055> "exposure to kidney transplantation"^^xsd:string)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_2000055> "kidney transplantation exposure"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_2000055> "exposure to kidney implantation"^^xsd:string)
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_2000055> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/MAXO_0010043>)))
 
-# Class: <http://purl.obolibrary.org/obo/ECTO_2000056> (transplantation surgical procedure exposure)
+# Class: <http://purl.obolibrary.org/obo/ECTO_2000056> (exposure to transplant surgery)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_2000056> "An exposure to transplantation surgical procedure."^^xsd:string)
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_2000056> "exposure to transplantation surgical procedure"^^xsd:string)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_2000056> "transplantation surgical procedure exposure"^^xsd:string)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_2000056> "An exposure to transplantation procedure."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_2000056> "exposure to transplantation procedure"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_2000056> "exposure to transplant surgery"^^xsd:string)
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_2000056> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/MAXO_0000068>)))
 
-# Class: <http://purl.obolibrary.org/obo/ECTO_2000057> (pharmacotherapy exposure)
+# Class: <http://purl.obolibrary.org/obo/ECTO_2000057> (exposure to pharmacotherapy)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_2000057> "An exposure to pharmacotherapy."^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_2000057> "exposure to pharmacotherapy"^^xsd:string)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_2000057> "pharmacotherapy exposure"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_2000057> "exposure to pharmacotherapy"^^xsd:string)
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_2000057> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/MAXO_0000058>)))
 
 

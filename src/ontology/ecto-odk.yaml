@@ -11,16 +11,21 @@ export_formats:
 import_group:
   products:
     - id: chebi
-      mirror_from: http://purl.obolibrary.org/obo/chebi.owl.gz
+      use_gzipped: TRUE
+      is_large: TRUE
     - id: envo
     - id: exo
     - id: go
     - id: iao
+    - id: ons
     - id: maxo
-      mirror_from: https://raw.githubusercontent.com/monarch-initiative/MAxO/master/maxo.owl
+    - id: foodon
     - id: nbo
     - id: ncit
+      is_large: TRUE
     - id: ncbitaxon
+      use_gzipped: TRUE
+      is_large: TRUE
     - id: npo
       mirror_from: https://raw.githubusercontent.com/monarch-initiative/MAxO/master/maxo.owl
     - id: pato
@@ -32,4 +37,11 @@ components:
   products:
     - filename: ecto-xrefs.owl
     - filename: bridge.owl
-allow_equivalents: all
+    - filename: obsoletes.owl
+allow_equivalents: asserted-only
+robot_report:
+  fail_on : ERROR
+  use_labels : False
+  #custom_profile : True
+  report_on :
+    - ecto-base.owl

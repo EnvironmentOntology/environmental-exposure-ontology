@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: ecto/releases/2020-09-18/imports/uberon_import.owl
+data-version: ecto/releases/2021-02-11/imports/uberon_import.owl
 subsetdef: cumbo "CUMBO"
 subsetdef: developmental_classification "developmental_classification"
 subsetdef: early_development "A class that represents an early developmental structure, like a blastocyst. This part of the ontology is undergoing review to remove inappropriate grouping classes."
@@ -13039,8 +13039,8 @@ namespace: uberon
 def: "An arrangement of nerve fibers, running from the spine where it proceeds through the neck then the axilla and into the arm where it innervates skin and muscle. [WP,modified]." [http://en.wikipedia.org/wiki/Brachial_plexus, UBERON:cjm]
 subset: uberon_slim
 synonym: "brachial plexus" EXACT [MA:0001180]
-synonym: "plexus brachialis" RELATED [http://en.wikipedia.org/wiki/Brachial_plexus]
 synonym: "plexus brachialis" RELATED LATIN [http://en.wikipedia.org/wiki/Brachial_plexus]
+synonym: "plexus brachialis" RELATED [http://en.wikipedia.org/wiki/Brachial_plexus]
 xref: Brachial:plexus
 xref: EHDAA2:0000180
 xref: EHDAA:3782
@@ -48479,6 +48479,29 @@ property_value: seeAlso https://github.com/obophenotype/uberon/wiki/Modeling-pai
 is_a: in_lateral_side_of ! in_lateral_side_of
 
 [Typedef]
+id: in_taxon
+name: in taxon
+namespace: uberon
+xref: RO:0002162
+holds_over_chain: attaches_to in_taxon
+holds_over_chain: connected_to in_taxon
+holds_over_chain: connects in_taxon
+holds_over_chain: continuous_with in_taxon
+holds_over_chain: developmentally_induced_by in_taxon
+holds_over_chain: develops_from in_taxon
+holds_over_chain: existence_ends_during in_taxon
+holds_over_chain: existence_starts_during in_taxon
+holds_over_chain: extends_fibers_into in_taxon
+holds_over_chain: has_developmental_contribution_from in_taxon
+holds_over_chain: has_potential_to_develop_into in_taxon
+holds_over_chain: innervated_by in_taxon
+holds_over_chain: overlaps in_taxon
+holds_over_chain: part_of in_taxon
+holds_over_chain: produced_by in_taxon
+holds_over_chain: produces in_taxon
+holds_over_chain: supplies in_taxon
+
+[Typedef]
 id: indirectly_supplies
 name: indirectly_supplies
 namespace: uberon
@@ -48565,6 +48588,14 @@ xref: RO:0002161
 expand_assertion_to: "Class: <http://www.w3.org/2002/07/owl#Nothing> EquivalentTo: ?X and (RO_0002162 some ?Y)" []
 is_metadata_tag: true
 is_class_level: true
+
+[Typedef]
+id: only_in_taxon
+name: only_in_taxon
+namespace: uberon
+def: "S only_in_taxon T iff: S SubClassOf in_taxon only T" [http://www.ncbi.nlm.nih.gov/pubmed/20973947]
+xref: RO:0002160
+is_a: in_taxon ! in taxon
 
 [Typedef]
 id: output_of
