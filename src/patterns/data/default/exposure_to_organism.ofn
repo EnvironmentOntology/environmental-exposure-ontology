@@ -1,4 +1,4 @@
-Prefix(:=<urn:unnamed:ontology#ont1#>)
+Prefix(:=<urn:unnamed:ontology#ont12>)
 Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
 Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
 Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
@@ -6,11 +6,21 @@ Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
 Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 
 
-Ontology(<urn:unnamed:ontology#ont1>
+Ontology(<urn:unnamed:ontology#ont12>
 
 Declaration(Class(<http://purl.obolibrary.org/obo/ECTO_3000000>))
+Declaration(Class(<http://purl.obolibrary.org/obo/ECTO_3000001>))
+Declaration(Class(<http://purl.obolibrary.org/obo/ECTO_3000002>))
+Declaration(Class(<http://purl.obolibrary.org/obo/ECTO_3000003>))
+Declaration(Class(<http://purl.obolibrary.org/obo/ECTO_3000004>))
+Declaration(Class(<http://purl.obolibrary.org/obo/ECTO_3000005>))
 Declaration(Class(<http://purl.obolibrary.org/obo/ExO_0000002>))
-Declaration(Class(<http://purl.obolibrary.org/obo/OBI_0100026>))
+Declaration(Class(<http://purl.obolibrary.org/obo/NCBITaxon_1>))
+Declaration(Class(<http://purl.obolibrary.org/obo/NCBITaxon_10239>))
+Declaration(Class(<http://purl.obolibrary.org/obo/NCBITaxon_12059>))
+Declaration(Class(<http://purl.obolibrary.org/obo/NCBITaxon_151340>))
+Declaration(Class(<http://purl.obolibrary.org/obo/NCBITaxon_210>))
+Declaration(Class(<http://purl.obolibrary.org/obo/NCBITaxon_9606>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002309>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000115>))
 Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym>))
@@ -23,10 +33,45 @@ Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#has
 
 # Class: <http://purl.obolibrary.org/obo/ECTO_3000000> (exposure to organism)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_3000000> "A history of exposure to organism."^^xsd:string)
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_3000000> "organism exposure"^^xsd:string)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_3000000> "A history of exposure to root."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_3000000> "root exposure"^^xsd:string)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_3000000> "exposure to organism"^^xsd:string)
-EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_3000000> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/OBI_0100026>)))
+EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_3000000> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/NCBITaxon_1>)))
+
+# Class: <http://purl.obolibrary.org/obo/ECTO_3000001> (exposure to virus)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_3000001> "A history of exposure to Viruses."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_3000001> "Viruses exposure"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_3000001> "exposure to virus"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_3000001> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/NCBITaxon_10239>)))
+
+# Class: <http://purl.obolibrary.org/obo/ECTO_3000002> (exposure to Enterovirus)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_3000002> "A history of exposure to Enterovirus."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_3000002> "Enterovirus exposure"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_3000002> "exposure to Enterovirus"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_3000002> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/NCBITaxon_12059>)))
+
+# Class: <http://purl.obolibrary.org/obo/ECTO_3000003> (exposure to Helicobacter pylori)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_3000003> "A history of exposure to Helicobacter pylori."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_3000003> "Helicobacter pylori exposure"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_3000003> "exposure to Helicobacter pylori"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_3000003> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/NCBITaxon_210>)))
+
+# Class: <http://purl.obolibrary.org/obo/ECTO_3000004> (exposure to Papillomaviridae)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_3000004> "A history of exposure to Papillomaviridae."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_3000004> "Papillomaviridae exposure"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_3000004> "exposure to Papillomaviridae"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_3000004> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/NCBITaxon_151340>)))
+
+# Class: <http://purl.obolibrary.org/obo/ECTO_3000005> (exposure to humans)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_3000005> "A history of exposure to Homo sapiens."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_3000005> "Homo sapiens exposure"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_3000005> "exposure to humans"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_3000005> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/NCBITaxon_9606>)))
 
 
 )

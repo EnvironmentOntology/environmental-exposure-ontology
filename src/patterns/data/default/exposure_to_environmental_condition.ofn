@@ -1,4 +1,4 @@
-Prefix(:=<urn:unnamed:ontology#ont1#>)
+Prefix(:=<urn:unnamed:ontology#ont9>)
 Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
 Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
 Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
@@ -6,10 +6,14 @@ Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
 Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 
 
-Ontology(<urn:unnamed:ontology#ont1>
+Ontology(<urn:unnamed:ontology#ont9>
 
 Declaration(Class(<http://purl.obolibrary.org/obo/ECTO_1000000>))
+Declaration(Class(<http://purl.obolibrary.org/obo/ECTO_1000020>))
+Declaration(Class(<http://purl.obolibrary.org/obo/ECTO_1000032>))
+Declaration(Class(<http://purl.obolibrary.org/obo/ENVO_00002874>))
 Declaration(Class(<http://purl.obolibrary.org/obo/ENVO_01000203>))
+Declaration(Class(<http://purl.obolibrary.org/obo/ENVO_01001078>))
 Declaration(Class(<http://purl.obolibrary.org/obo/ExO_0000002>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002309>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000115>))
@@ -21,12 +25,26 @@ Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#has
 #   Classes
 ############################
 
-# Class: <http://purl.obolibrary.org/obo/ECTO_1000000> (exposure to environmental condition conditions)
+# Class: <http://purl.obolibrary.org/obo/ECTO_1000000> (exposure to environmental condition)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_1000000> "A exposure event involving the interaction of an exposure receptor to the condition of environmental condition."^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_1000000> "environmental condition exposure"^^xsd:string)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_1000000> "exposure to environmental condition conditions"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_1000000> "exposure to environmental condition"^^xsd:string)
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_1000000> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/ENVO_01000203>)))
+
+# Class: <http://purl.obolibrary.org/obo/ECTO_1000020> (exposure to weather)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_1000020> "A exposure event involving the interaction of an exposure receptor to the condition of weather."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_1000020> "weather exposure"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_1000020> "exposure to weather"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_1000020> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/ENVO_01001078>)))
+
+# Class: <http://purl.obolibrary.org/obo/ECTO_1000032> (exposure to air conditioning unit)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_1000032> "A exposure event involving the interaction of an exposure receptor to the condition of air conditioning unit."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_1000032> "air conditioning unit exposure"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_1000032> "exposure to air conditioning unit"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_1000032> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/ENVO_00002874>)))
 
 
 )

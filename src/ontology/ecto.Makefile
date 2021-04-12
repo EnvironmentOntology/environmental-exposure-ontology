@@ -55,15 +55,83 @@ $(MODDIR)/%.owl: $(MODDIR)/%.rdf
 
 touch:
 	echo $(all_modules_omn)
-
-imports/ncit_import.owl:
-	echo "!!!!!NCIT currently skipped for performance reasons"
-	
-mirror/ncit.owl:
-	echo "!!!!!NCIT currently skipped for performance reasons"
 	
 imports/npo_import.owl:
 	echo "!!!!!NPO currently skipped!"
 	
 mirror/npo.owl:
 	echo "!!!!!NPO currently skipped!"
+	
+imports/exo_import.owl:
+	echo "!!!!!EXO mirror currently skipped, see: https://github.com/CTDbase/exposure-ontology/issues/11"
+	
+mirror/exo.owl:
+	echo "!!!!!EXO currently skipped, see: https://github.com/CTDbase/exposure-ontology/issues/11. NOTE: althogh the issue is fixed, there has not been a release since!"
+
+
+$(ONT)-full.owl: $(SRC) $(OTHER_SRC)
+	echo "!!!!!! FULL RELEASE IS OVERWRITTEN, REMOVING DISJOINTS - ecto.Makefile. See https://github.com/EnvironmentOntology/environmental-exposure-ontology/issues/79 !!!!!!"
+	$(ROBOT) merge --input $< \
+		remove --axioms disjoint --preserve-structure false \
+		reason --reasoner ELK --equivalent-classes-allowed asserted-only --exclude-tautologies structural \
+		relax \
+		reduce -r ELK \
+		annotate --ontology-iri $(ONTBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY)/$@ --output $@.tmp.owl && mv $@.tmp.owl $@
+
+$(ONT)-incl-mappings.owl: ../../$(ONT).owl ../mapping/axioms.owl ../mapping/axioms-boomer.owl
+	$(ROBOT) merge -i ../../$(ONT).owl -i ../mapping/axioms.owl -i ../mapping/axioms-boomer.owl \
+		annotate --ontology-iri $(ONTBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY)/$@ --output $@.tmp.owl && mv $@.tmp.owl $@
+
+$(ONT)-incl-mappings.obo: $(ONT)-incl-mappings.owl
+	$(ROBOT) convert --input $< --check false -f obo $(OBO_FORMAT_OPTIONS) -o $@.tmp.obo && grep -v ^owl-axioms $@.tmp.obo > $@ && rm $@.tmp.obo
+
+
+test: odkversion sparql_test all_reports
+	echo "!!!!!! FULL TEST RUN IS OVERWRITTEN, REMOVING DISJOINTS - ecto.Makefile. See https://github.com/EnvironmentOntology/environmental-exposure-ontology/issues/79 !!!!!!"
+	$(ROBOT) merge --input $(SRC) \
+		remove --axioms disjoint --preserve-structure false \
+		reason --reasoner ELK  --equivalent-classes-allowed asserted-only --exclude-tautologies structural --output test.owl && rm test.owl && echo "Success"
+
+$(TMPDIR)/$(ONT)-quick.obo: | $(TMPDIR)
+	$(ROBOT) merge -i $(SRC) reason -o $@.owl && mv $@.owl $@
+
+$(TMPDIR)/$(ONT)-main.obo: | $(TMPDIR)
+	git show master:src/ontology/$(SRC) > $@
+	$(ROBOT) merge -i $@ reason -o $@.owl && mv $@.owl $@
+	
+$(TMPDIR)/$(ONT)-base-quick.owl: $(ONT)-base.owl | $(TMPDIR)
+	$(ROBOT) merge -i $< remove --base-iri $(URIBASE)/ECTO_ --axioms external --trim false -o $@.owl && mv $@.owl $@
+
+$(TMPDIR)/$(ONT)-base-release.owl: | $(TMPDIR)
+	$(ROBOT) merge -I $(ONTBASE)/$(ONT)-base.owl remove --base-iri $(URIBASE)/ECTO_ --axioms external --trim false -o $@.owl && mv $@.owl $@
+
+reports/robot_base_diff.md: $(TMPDIR)/$(ONT)-base-quick.owl $(TMPDIR)/$(ONT)-base-release.owl
+	$(ROBOT) diff --left $(TMPDIR)/$(ONT)-base-quick.owl --right $(TMPDIR)/$(ONT)-base-release.owl -f markdown -o $@
+
+reports/robot_base_diff.txt: $(TMPDIR)/$(ONT)-base-quick.owl $(TMPDIR)/$(ONT)-base-release.owl
+	$(ROBOT) diff --left $(TMPDIR)/$(ONT)-base-quick.owl --right  $(TMPDIR)/$(ONT)-base-release.owl -o $@
+
+.PHONY: feature_diff
+feature_diff:
+	make IMP=false PAT=false reports/robot_base_diff.md reports/robot_base_diff.txt
+	
+#########################################
+### Generating all ROBOT templates ######
+#########################################
+
+TEMPLATESDIR=../templates
+
+TEMPLATES=$(patsubst %.tsv, $(TEMPLATESDIR)/%.owl, $(notdir $(wildcard $(TEMPLATESDIR)/*.tsv)))
+
+$(TEMPLATESDIR)/%.owl: $(TEMPLATESDIR)/%.tsv $(SRC)
+	$(ROBOT) merge -i $(SRC) template --template $< --output $@ && \
+	$(ROBOT) annotate --input $@ --ontology-iri $(ONTBASE)/components/$*.owl -o $@
+
+templates: $(TEMPLATES)
+	
+$(COMPONENTSDIR)/obsoletes.owl:
+	$(ROBOT) merge -i $(TEMPLATESDIR)/obsolete.owl -o $@
+
+
+mirror/pr.owl mirror/chebi.owl imports/chebi_import.owl imports/pr_import.owl:
+	echo "Skipping $@"

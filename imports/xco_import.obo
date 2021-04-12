@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: ecto/releases/2019-09-20/imports/xco_import.owl
+data-version: ecto/releases/2021-02-11/imports/xco_import.owl
 ontology: ecto/imports/xco_import
 
 [Term]
@@ -7,6 +7,20 @@ id: XCO:0000000
 name: experimental condition
 namespace: experimental_condition_ontology
 def: "A state of being, an external or environmental factor or a treatment observed or administered prior to or concurrent with an investigative procedure such as an assessment of a morphological or physiological state or property in a single individual or sample or in a group of individuals or samples, especially a state, factor or treatment which has the potential to influence the outcome of such an assessment." [Multiple_Dictionaries:http\://www.thefreedictionary.com/, PMID:22654893]
+
+[Term]
+id: XCO:0000001
+name: activity
+namespace: experimental_condition_ontology
+def: "The state of being involved in some action, either physical or mental." [Dorland:Dorlands_Illustrated_Medical_Dictionary--31st_Ed, ISBN:978-1416049982]
+is_a: XCO:0000000 ! experimental condition
+
+[Term]
+id: XCO:0000002
+name: resting
+namespace: experimental_condition_ontology
+def: "A state in which the organism is not exhibiting any physical exertion." [Dorland:Dorlands_Illustrated_Medical_Dictionary--31st_Ed, ISBN:978-1416049982]
+is_a: XCO:0000059 ! physical activity
 
 [Term]
 id: XCO:0000026
@@ -23,6 +37,33 @@ def: "Any insertion of a tissue, material or device into the body using a proced
 is_a: XCO:0000165 ! surgical manipulation
 
 [Term]
+id: XCO:0000059
+name: physical activity
+namespace: experimental_condition_ontology
+def: "Action in which a part of the body or whole body is involved in movement." [Dorland:Dorlands_Illustrated_Medical_Dictionary--31st_Ed, ISBN:978-1416049982]
+is_a: XCO:0000001 ! activity
+created_by: mshimoyama
+creation_date: 2009-12-17T01:50:15Z
+
+[Term]
+id: XCO:0000088
+name: chemical
+namespace: experimental_condition_ontology
+def: "Any condition in which the main influencing factor is a substance having a specific molecular composition obtained by or used in a reaction involving changes to atoms or molecules." [American_Heritage:The_American_Heritage_Science_Dictionary_2005, Collins:Collins_Online_English_Dictionary]
+is_a: XCO:0000000 ! experimental condition
+created_by: mshimoyama
+creation_date: 2010-11-01T01:00:51Z
+
+[Term]
+id: XCO:0000135
+name: receptor agonist
+namespace: experimental_condition_ontology
+def: "A drug or other chemical that can combine with a receptor to produce a physiologic reaction typical of a naturally occurring substance. A receptor is a molecule on the surface or within a cell that recognizes and binds with specific molecules, producing a specific effect in the cell." [American_Heritage:The_American_Heritage_Dictionary_of_the_English_Language--4th_Ed, Dorland:Dorlands_Illustrated_Medical_Dictionary--31st_Ed, ISBN:978-1416049982]
+is_a: XCO:0000214 ! activator
+created_by: JSmith
+creation_date: 2012-03-15T07:46:38Z
+
+[Term]
 id: XCO:0000165
 name: surgical manipulation
 namespace: experimental_condition_ontology
@@ -30,6 +71,36 @@ def: "Any process involving manual and instrumental techniques for incision or e
 is_a: XCO:0000000 ! experimental condition
 created_by: JSmith
 creation_date: 2012-07-11T01:38:55Z
+
+[Term]
+id: XCO:0000214
+name: activator
+namespace: experimental_condition_ontology
+def: "Any substance that makes another substance active or reactive, induces a chemical reaction, or combines with an enzyme to increase its catalytic activity." [Miller-Keane:Miller-Keane_Encyclopedia_and_Dictionary_of_Medicine_Nursing_and_Allied_Health--7th_Ed]
+is_a: XCO:0000341 ! chemical with specified function
+created_by: JSmith
+creation_date: 2012-10-04T05:09:16Z
+
+[Term]
+id: XCO:0000341
+name: chemical with specified function
+namespace: experimental_condition_ontology
+def: "Any condition in which the main influencing factor is a substance having a specific molecular composition obtained by or used in a reaction involving changes to atoms or molecules and which has the capacity to perform a particular role or initiate or participate in a particular activity or process." [American_Heritage:The_American_Heritage_Science_Dictionary_2005, Collins:Collins_Online_English_Dictionary, Mosby:Mosbys_Dental_Dictionary--2nd_Ed]
+synonym: "chemical with specified role" EXACT []
+xref: CHEBI:50906
+is_a: XCO:0000088 ! chemical
+created_by: JSmith
+creation_date: 2013-09-03T16:26:49Z
+
+[Term]
+id: XCO:0000342
+name: chemical with specified structure
+namespace: experimental_condition_ontology
+def: "Any condition in which the main influencing factor is a substance having a specific molecular composition obtained by or used in a reaction involving changes to atoms or molecules, where that molecular composition explicitly contains one or more particular parts or groups that are held or put together in a particular way." [American_Heritage:The_American_Heritage_Dictionary_of_the_English_Language--4th_Ed, American_Heritage:The_American_Heritage_Science_Dictionary_2005, Collins:Collins_Online_English_Dictionary]
+xref: CHEBI:24431
+is_a: XCO:0000088 ! chemical
+created_by: JSmith
+creation_date: 2013-09-03T16:30:12Z
 
 [Term]
 id: XCO:0000373
@@ -50,6 +121,57 @@ xref: MESH:D019771
 is_a: XCO:0000373 ! surgical denervation
 created_by: JSmith
 creation_date: 2014-01-09T14:56:20Z
+
+[Term]
+id: XCO:0000664
+name: adrenergic receptor agonist
+namespace: experimental_condition_ontology
+def: "An agent that selectively binds to and activates adrenergic receptors." [CHEBI:37886]
+synonym: "adrenergic agonists" EXACT []
+synonym: "adrenoceptor agonists" EXACT []
+synonym: "adrenomimetic" EXACT []
+synonym: "adrenomimetics" EXACT []
+is_a: XCO:0000135 ! receptor agonist
+created_by: slaulede
+creation_date: 2020-02-11T14:23:32Z
+
+[Term]
+id: XCO:0000665
+name: beta-adrenergic agonist
+namespace: experimental_condition_ontology
+alt_id: CHEBI:35522
+def: "A substance that selectively binds to and activates beta-adrenergic receptors." [CHEBI:35522]
+synonym: "beta-adrenergic agonists" EXACT []
+synonym: "beta-adrenergic receptor agonist" EXACT []
+synonym: "beta-adrenergic receptor agonists" EXACT []
+synonym: "beta-adrenoceptor agonists" EXACT []
+is_a: XCO:0000664 ! adrenergic receptor agonist
+created_by: slaulede
+creation_date: 2020-02-11T14:28:45Z
+
+[Term]
+id: XCO:0000672
+name: tetracyclines
+namespace: experimental_condition_ontology
+alt_id: CHEBI:26895
+alt_id: MESH:D013754
+def: "A subclass of polyketides having an octahydrotetracene-2-carboxamide skeleton, substituted with many hydroxy and other groups." [CHEBI:26895]
+is_a: XCO:0000342 ! chemical with specified structure
+created_by: slaulede
+creation_date: 2020-03-05T16:13:01Z
+
+[Term]
+id: XCO:0000673
+name: alpha-adrenergic agonist
+namespace: experimental_condition_ontology
+alt_id: CHEBI:35569
+def: "An agent that selectively binds to and activates alpha-adrenergic receptors." [CHEBI:35569]
+synonym: "alpha-adrenergic agonists" EXACT []
+synonym: "alpha-adrenergic receptor agonist" EXACT []
+synonym: "alpha-adrenoceptor agonists" EXACT []
+is_a: XCO:0000664 ! adrenergic receptor agonist
+created_by: slaulede
+creation_date: 2020-03-05T16:49:13Z
 
 [Typedef]
 id: has_component

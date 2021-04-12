@@ -1,0 +1,48 @@
+pattern_name: exposure_to_behavior_route
+pattern_iri: http://purl.obolibrary.org/obo/ecto/patterns/exposure_to_behavior_route.yaml
+
+description: "exposures to a behavior where the route is known"
+
+contributors:
+  - https://orcid.org/0000-0002-7463-6306
+
+classes:
+  exposure event: ExO:0000002
+  behavior: NBO:0000313
+  route: ExO:0000055
+
+relations:
+  has exposure stimulus: RO:0002309
+  has exposure route: RO:0002242
+
+annotationProperties:
+  exact_synonym: oio:hasExactSynonym
+
+vars:
+  stressor: "'behavior'"
+  route: "'route'"
+
+name:
+  text: "exposure to %s via %s"
+  vars:
+    - stressor
+    - route
+
+annotations:
+  - annotationProperty: exact_synonym
+    text: "%s exposure via %s"
+    vars:
+      - stressor
+      - route
+
+def:
+  text: "An exposure to %s via %s."
+  vars:
+    - stressor
+    - route
+
+equivalentTo:
+  text: "'exposure event' and ('has exposure stimulus' some %s) and ('has exposure route' some %s)"
+  vars:
+    - stressor
+    - route

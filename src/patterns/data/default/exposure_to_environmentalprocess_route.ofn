@@ -1,4 +1,4 @@
-Prefix(:=<urn:unnamed:ontology#ont1#>)
+Prefix(:=<urn:unnamed:ontology#ont3>)
 Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
 Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
 Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
@@ -6,12 +6,15 @@ Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
 Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 
 
-Ontology(<urn:unnamed:ontology#ont1>
+Ontology(<urn:unnamed:ontology#ont3>
 
 Declaration(Class(<http://purl.obolibrary.org/obo/ECTO_0800001>))
-Declaration(Class(<http://purl.obolibrary.org/obo/ENVO_01000695>))
+Declaration(Class(<http://purl.obolibrary.org/obo/ECTO_0800002>))
+Declaration(Class(<http://purl.obolibrary.org/obo/ENVO_02500000>))
+Declaration(Class(<http://purl.obolibrary.org/obo/ENVO_02500037>))
 Declaration(Class(<http://purl.obolibrary.org/obo/ExO_0000002>))
-Declaration(Class(<http://purl.obolibrary.org/obo/ExO_0000060>))
+Declaration(Class(<http://purl.obolibrary.org/obo/ExO_0000055>))
+Declaration(Class(<http://purl.obolibrary.org/obo/ExO_0000159>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002242>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002309>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000115>))
@@ -23,12 +26,19 @@ Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#has
 #   Classes
 ############################
 
-# Class: <http://purl.obolibrary.org/obo/ECTO_0800001> (exposure to mudslide in injection)
+# Class: <http://purl.obolibrary.org/obo/ECTO_0800001> (exposure to environmental process route)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0800001> "A exposure event involving the interaction of an exposure receptor to mudslide happening in injection of the receptor."^^xsd:string)
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0800001> "mudslide exposure in injection"^^xsd:string)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_0800001> "exposure to mudslide in injection"^^xsd:string)
-EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_0800001> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002242> <http://purl.obolibrary.org/obo/ExO_0000060>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/ENVO_01000695>)))
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0800001> "A exposure event involving the interaction of an exposure receptor to environmental system process happening in route of the receptor."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0800001> "environmental system process exposure in route"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_0800001> "exposure to environmental process route"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_0800001> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002242> <http://purl.obolibrary.org/obo/ExO_0000055>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/ENVO_02500000>)))
+
+# Class: <http://purl.obolibrary.org/obo/ECTO_0800002> (exposure to air pollution via maternal)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0800002> "A exposure event involving the interaction of an exposure receptor to air pollution happening in http://purl.obolibrary.org/obo/ExO_0000159 of the receptor."^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0800002> "air pollution exposure in http://purl.obolibrary.org/obo/ExO_0000159"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_0800002> "exposure to air pollution via maternal"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_0800002> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002242> <http://purl.obolibrary.org/obo/ExO_0000159>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/ENVO_02500037>)))
 
 
 )

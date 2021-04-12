@@ -9,7 +9,7 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/ecto/imports/xco_import.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/ecto/releases/2019-09-20/imports/xco_import.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/ecto/releases/2021-02-11/imports/xco_import.owl"/>
     </owl:Ontology>
     
 
@@ -203,6 +203,36 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/CHEBI_26895 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_26895">
+        <obo:IAO_0000231 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000227"/>
+        <obo:IAO_0100001 rdf:resource="http://purl.obolibrary.org/obo/XCO_0000672"/>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_35522 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_35522">
+        <obo:IAO_0000231 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000227"/>
+        <obo:IAO_0100001 rdf:resource="http://purl.obolibrary.org/obo/XCO_0000665"/>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_35569 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_35569">
+        <obo:IAO_0000231 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000227"/>
+        <obo:IAO_0100001 rdf:resource="http://purl.obolibrary.org/obo/XCO_0000673"/>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/XCO_0000000 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/XCO_0000000">
@@ -217,6 +247,44 @@
         <owl:annotatedTarget>A state of being, an external or environmental factor or a treatment observed or administered prior to or concurrent with an investigative procedure such as an assessment of a morphological or physiological state or property in a single individual or sample or in a group of individuals or samples, especially a state, factor or treatment which has the potential to influence the outcome of such an assessment.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Multiple_Dictionaries:http://www.thefreedictionary.com/</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMID:22654893</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/XCO_0000001 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/XCO_0000001">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/XCO_0000000"/>
+        <obo:IAO_0000115>The state of being involved in some action, either physical or mental.</obo:IAO_0000115>
+        <oboInOwl:hasOBONamespace>experimental_condition_ontology</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>XCO:0000001</oboInOwl:id>
+        <rdfs:label>activity</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/XCO_0000001"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>The state of being involved in some action, either physical or mental.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dorland:Dorlands_Illustrated_Medical_Dictionary--31st_Ed</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN:978-1416049982</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/XCO_0000002 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/XCO_0000002">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/XCO_0000059"/>
+        <obo:IAO_0000115>A state in which the organism is not exhibiting any physical exertion.</obo:IAO_0000115>
+        <oboInOwl:hasOBONamespace>experimental_condition_ontology</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>XCO:0000002</oboInOwl:id>
+        <rdfs:label>resting</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/XCO_0000002"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A state in which the organism is not exhibiting any physical exertion.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dorland:Dorlands_Illustrated_Medical_Dictionary--31st_Ed</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN:978-1416049982</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -259,6 +327,70 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/XCO_0000059 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/XCO_0000059">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/XCO_0000001"/>
+        <obo:IAO_0000115>Action in which a part of the body or whole body is involved in movement.</obo:IAO_0000115>
+        <oboInOwl:created_by>mshimoyama</oboInOwl:created_by>
+        <oboInOwl:creation_date>2009-12-17T01:50:15Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>experimental_condition_ontology</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>XCO:0000059</oboInOwl:id>
+        <rdfs:label>physical activity</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/XCO_0000059"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Action in which a part of the body or whole body is involved in movement.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dorland:Dorlands_Illustrated_Medical_Dictionary--31st_Ed</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN:978-1416049982</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/XCO_0000088 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/XCO_0000088">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/XCO_0000000"/>
+        <obo:IAO_0000115>Any condition in which the main influencing factor is a substance having a specific molecular composition obtained by or used in a reaction involving changes to atoms or molecules.</obo:IAO_0000115>
+        <oboInOwl:created_by>mshimoyama</oboInOwl:created_by>
+        <oboInOwl:creation_date>2010-11-01T01:00:51Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>experimental_condition_ontology</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>XCO:0000088</oboInOwl:id>
+        <rdfs:label>chemical</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/XCO_0000088"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Any condition in which the main influencing factor is a substance having a specific molecular composition obtained by or used in a reaction involving changes to atoms or molecules.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">American_Heritage:The_American_Heritage_Science_Dictionary_2005</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Collins:Collins_Online_English_Dictionary</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/XCO_0000135 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/XCO_0000135">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/XCO_0000214"/>
+        <obo:IAO_0000115>A drug or other chemical that can combine with a receptor to produce a physiologic reaction typical of a naturally occurring substance. A receptor is a molecule on the surface or within a cell that recognizes and binds with specific molecules, producing a specific effect in the cell.</obo:IAO_0000115>
+        <oboInOwl:created_by>JSmith</oboInOwl:created_by>
+        <oboInOwl:creation_date>2012-03-15T07:46:38Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>experimental_condition_ontology</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>XCO:0000135</oboInOwl:id>
+        <rdfs:label>receptor agonist</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/XCO_0000135"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A drug or other chemical that can combine with a receptor to produce a physiologic reaction typical of a naturally occurring substance. A receptor is a molecule on the surface or within a cell that recognizes and binds with specific molecules, producing a specific effect in the cell.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">American_Heritage:The_American_Heritage_Dictionary_of_the_English_Language--4th_Ed</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dorland:Dorlands_Illustrated_Medical_Dictionary--31st_Ed</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN:978-1416049982</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/XCO_0000165 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/XCO_0000165">
@@ -275,6 +407,73 @@
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Any process involving manual and instrumental techniques for incision or excision of a part of an organism to investigate and/or treat a pathological condition.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wikipedia:http://en.wikipedia.org/wiki/Surgery</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/XCO_0000214 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/XCO_0000214">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/XCO_0000341"/>
+        <obo:IAO_0000115>Any substance that makes another substance active or reactive, induces a chemical reaction, or combines with an enzyme to increase its catalytic activity.</obo:IAO_0000115>
+        <oboInOwl:created_by>JSmith</oboInOwl:created_by>
+        <oboInOwl:creation_date>2012-10-04T05:09:16Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>experimental_condition_ontology</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>XCO:0000214</oboInOwl:id>
+        <rdfs:label>activator</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/XCO_0000214"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Any substance that makes another substance active or reactive, induces a chemical reaction, or combines with an enzyme to increase its catalytic activity.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Miller-Keane:Miller-Keane_Encyclopedia_and_Dictionary_of_Medicine_Nursing_and_Allied_Health--7th_Ed</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/XCO_0000341 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/XCO_0000341">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/XCO_0000088"/>
+        <obo:IAO_0000115>Any condition in which the main influencing factor is a substance having a specific molecular composition obtained by or used in a reaction involving changes to atoms or molecules and which has the capacity to perform a particular role or initiate or participate in a particular activity or process.</obo:IAO_0000115>
+        <oboInOwl:created_by>JSmith</oboInOwl:created_by>
+        <oboInOwl:creation_date>2013-09-03T16:26:49Z</oboInOwl:creation_date>
+        <oboInOwl:hasDbXref>CHEBI:50906</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>chemical with specified role</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>experimental_condition_ontology</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>XCO:0000341</oboInOwl:id>
+        <rdfs:label>chemical with specified function</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/XCO_0000341"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Any condition in which the main influencing factor is a substance having a specific molecular composition obtained by or used in a reaction involving changes to atoms or molecules and which has the capacity to perform a particular role or initiate or participate in a particular activity or process.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">American_Heritage:The_American_Heritage_Science_Dictionary_2005</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Collins:Collins_Online_English_Dictionary</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mosby:Mosbys_Dental_Dictionary--2nd_Ed</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/XCO_0000342 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/XCO_0000342">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/XCO_0000088"/>
+        <obo:IAO_0000115>Any condition in which the main influencing factor is a substance having a specific molecular composition obtained by or used in a reaction involving changes to atoms or molecules, where that molecular composition explicitly contains one or more particular parts or groups that are held or put together in a particular way.</obo:IAO_0000115>
+        <oboInOwl:created_by>JSmith</oboInOwl:created_by>
+        <oboInOwl:creation_date>2013-09-03T16:30:12Z</oboInOwl:creation_date>
+        <oboInOwl:hasDbXref>CHEBI:24431</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace>experimental_condition_ontology</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>XCO:0000342</oboInOwl:id>
+        <rdfs:label>chemical with specified structure</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/XCO_0000342"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Any condition in which the main influencing factor is a substance having a specific molecular composition obtained by or used in a reaction involving changes to atoms or molecules, where that molecular composition explicitly contains one or more particular parts or groups that are held or put together in a particular way.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">American_Heritage:The_American_Heritage_Dictionary_of_the_English_Language--4th_Ed</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">American_Heritage:The_American_Heritage_Science_Dictionary_2005</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Collins:Collins_Online_English_Dictionary</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -321,6 +520,101 @@
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dorland:Dorlands_Illustrated_Medical_Dictionary--31st_Ed</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN:978-1416049982</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mosby:Mosbys_Medical_Dictionary--8th_Ed</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/XCO_0000664 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/XCO_0000664">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/XCO_0000135"/>
+        <obo:IAO_0000115>An agent that selectively binds to and activates adrenergic receptors.</obo:IAO_0000115>
+        <oboInOwl:created_by>slaulede</oboInOwl:created_by>
+        <oboInOwl:creation_date>2020-02-11T14:23:32Z</oboInOwl:creation_date>
+        <oboInOwl:hasExactSynonym>adrenergic agonists</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>adrenoceptor agonists</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>adrenomimetic</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>adrenomimetics</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>experimental_condition_ontology</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>XCO:0000664</oboInOwl:id>
+        <rdfs:label>adrenergic receptor agonist</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/XCO_0000664"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>An agent that selectively binds to and activates adrenergic receptors.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CHEBI:37886</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/XCO_0000665 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/XCO_0000665">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/XCO_0000664"/>
+        <obo:IAO_0000115>A substance that selectively binds to and activates beta-adrenergic receptors.</obo:IAO_0000115>
+        <oboInOwl:created_by>slaulede</oboInOwl:created_by>
+        <oboInOwl:creation_date>2020-02-11T14:28:45Z</oboInOwl:creation_date>
+        <oboInOwl:hasAlternativeId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CHEBI:35522</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasExactSynonym>beta-adrenergic agonists</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>beta-adrenergic receptor agonist</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>beta-adrenergic receptor agonists</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>beta-adrenoceptor agonists</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>experimental_condition_ontology</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>XCO:0000665</oboInOwl:id>
+        <rdfs:label>beta-adrenergic agonist</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/XCO_0000665"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A substance that selectively binds to and activates beta-adrenergic receptors.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CHEBI:35522</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/XCO_0000672 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/XCO_0000672">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/XCO_0000342"/>
+        <obo:IAO_0000115>A subclass of polyketides having an octahydrotetracene-2-carboxamide skeleton, substituted with many hydroxy and other groups.</obo:IAO_0000115>
+        <oboInOwl:created_by>slaulede</oboInOwl:created_by>
+        <oboInOwl:creation_date>2020-03-05T16:13:01Z</oboInOwl:creation_date>
+        <oboInOwl:hasAlternativeId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CHEBI:26895</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasAlternativeId>MESH:D013754</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasOBONamespace>experimental_condition_ontology</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>XCO:0000672</oboInOwl:id>
+        <rdfs:label>tetracyclines</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/XCO_0000672"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A subclass of polyketides having an octahydrotetracene-2-carboxamide skeleton, substituted with many hydroxy and other groups.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CHEBI:26895</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/XCO_0000673 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/XCO_0000673">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/XCO_0000664"/>
+        <obo:IAO_0000115>An agent that selectively binds to and activates alpha-adrenergic receptors.</obo:IAO_0000115>
+        <oboInOwl:created_by>slaulede</oboInOwl:created_by>
+        <oboInOwl:creation_date>2020-03-05T16:49:13Z</oboInOwl:creation_date>
+        <oboInOwl:hasAlternativeId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CHEBI:35569</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasExactSynonym>alpha-adrenergic agonists</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>alpha-adrenergic receptor agonist</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>alpha-adrenoceptor agonists</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>experimental_condition_ontology</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>XCO:0000673</oboInOwl:id>
+        <rdfs:label>alpha-adrenergic agonist</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/XCO_0000673"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>An agent that selectively binds to and activates alpha-adrenergic receptors.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CHEBI:35569</oboInOwl:hasDbXref>
     </owl:Axiom>
 </rdf:RDF>
 

@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="http://purl.obolibrary.org/obo/ecto/imports/xco_import.owl#"
      xml:base="http://purl.obolibrary.org/obo/ecto/imports/xco_import.owl"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:obo="http://purl.obolibrary.org/obo/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -9,7 +10,9 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/ecto/imports/xco_import.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/ecto/releases/2019-09-20/imports/xco_import.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/ecto/releases/2021-03-16/imports/xco_import.owl"/>
+        <dc:source rdf:resource="http://purl.obolibrary.org/obo/xco/4.46/xco.owl"/>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2021-03-16</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -57,22 +60,6 @@
     
 
 
-    <!-- http://www.geneontology.org/formats/oboInOwl#hasAlternativeId -->
-
-    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasAlternativeId">
-        <rdfs:label>has_alternative_id</rdfs:label>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym -->
-
-    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym">
-        <rdfs:label>has_broad_synonym</rdfs:label>
-    </owl:AnnotationProperty>
-    
-
-
     <!-- http://www.geneontology.org/formats/oboInOwl#hasDbXref -->
 
     <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasDbXref">
@@ -89,41 +76,15 @@
     
 
 
-    <!-- http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym -->
-
-    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym">
-        <rdfs:label>has_narrow_synonym</rdfs:label>
-    </owl:AnnotationProperty>
-    
-
-
     <!-- http://www.geneontology.org/formats/oboInOwl#hasOBONamespace -->
 
-    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasOBONamespace">
-        <rdfs:label>has_obo_namespace</rdfs:label>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym -->
-
-    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym">
-        <rdfs:label>has_related_synonym</rdfs:label>
-    </owl:AnnotationProperty>
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasOBONamespace"/>
     
 
 
     <!-- http://www.geneontology.org/formats/oboInOwl#id -->
 
     <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#id"/>
-    
-
-
-    <!-- http://www.geneontology.org/formats/oboInOwl#shorthand -->
-
-    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#shorthand">
-        <rdfs:label>shorthand</rdfs:label>
-    </owl:AnnotationProperty>
     
 
 
@@ -142,64 +103,21 @@
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
-    // Object Properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/BFO_0000050 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000050">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
-        <oboInOwl:hasDbXref>BFO:0000050</oboInOwl:hasDbXref>
-        <oboInOwl:hasOBONamespace>experimental_condition_ontology</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>part_of</oboInOwl:id>
-        <oboInOwl:shorthand>part_of</oboInOwl:shorthand>
-        <rdfs:label>part_of</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/BFO_0000051 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000051">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
-        <oboInOwl:created_by>JSmith</oboInOwl:created_by>
-        <oboInOwl:creation_date>2014-03-07T11:32:23Z</oboInOwl:creation_date>
-        <oboInOwl:hasDbXref>BFO:0000051</oboInOwl:hasDbXref>
-        <oboInOwl:hasOBONamespace>experimental_condition_ontology</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>has_part</oboInOwl:id>
-        <oboInOwl:shorthand>has_part</oboInOwl:shorthand>
-        <rdfs:label>has_part</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/RO_0002211 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002211">
-        <oboInOwl:created_by>JSmith</oboInOwl:created_by>
-        <oboInOwl:creation_date>2014-03-07T11:34:22Z</oboInOwl:creation_date>
-        <oboInOwl:hasDbXref>RO:0002211</oboInOwl:hasDbXref>
-        <oboInOwl:hasOBONamespace>experimental_condition_ontology</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>has_component</oboInOwl:id>
-        <oboInOwl:shorthand>has_component</oboInOwl:shorthand>
-        <rdfs:label>has_component</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
     // Classes
     //
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_35522 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_35522">
+        <obo:IAO_0000231 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000227"/>
+        <obo:IAO_0100001 rdf:resource="http://purl.obolibrary.org/obo/XCO_0000665"/>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    </owl:Class>
     
 
 
@@ -221,106 +139,61 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/XCO_0000026 -->
+    <!-- http://purl.obolibrary.org/obo/XCO_0000001 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/XCO_0000026">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/XCO_0000165"/>
-        <obo:IAO_0000115>The process of ablating or extracting an organ, gland or other body part from an organism prior to, or in the process of, an experiment being performed on the organism.</obo:IAO_0000115>
-        <oboInOwl:hasOBONamespace>experimental_condition_ontology</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>XCO:0000026</oboInOwl:id>
-        <rdfs:label>surgical removal</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/XCO_0000026"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>The process of ablating or extracting an organ, gland or other body part from an organism prior to, or in the process of, an experiment being performed on the organism.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Multiple_Dictionaries:http://www.thefreedictionary.com/</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/XCO_0000027 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/XCO_0000027">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/XCO_0000165"/>
-        <obo:IAO_0000115>Any insertion of a tissue, material or device into the body using a procedure involving incision into the body.</obo:IAO_0000115>
-        <oboInOwl:hasOBONamespace>experimental_condition_ontology</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>XCO:0000027</oboInOwl:id>
-        <rdfs:label>surgical implantation</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/XCO_0000027"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>Any insertion of a tissue, material or device into the body using a procedure involving incision into the body.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Collins:Collins_Online_English_Dictionary</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dorland:Dorlands_Illustrated_Medical_Dictionary--31st_Ed</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN:978-1416049982</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/XCO_0000165 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/XCO_0000165">
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/XCO_0000001">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/XCO_0000000"/>
-        <obo:IAO_0000115>Any process involving manual and instrumental techniques for incision or excision of a part of an organism to investigate and/or treat a pathological condition.</obo:IAO_0000115>
-        <oboInOwl:created_by>JSmith</oboInOwl:created_by>
-        <oboInOwl:creation_date>2012-07-11T01:38:55Z</oboInOwl:creation_date>
+        <obo:IAO_0000115>The state of being involved in some action, either physical or mental.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>experimental_condition_ontology</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>XCO:0000165</oboInOwl:id>
-        <rdfs:label>surgical manipulation</rdfs:label>
+        <oboInOwl:id>XCO:0000001</oboInOwl:id>
+        <rdfs:label>activity</rdfs:label>
     </owl:Class>
     <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/XCO_0000165"/>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/XCO_0000001"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>Any process involving manual and instrumental techniques for incision or excision of a part of an organism to investigate and/or treat a pathological condition.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wikipedia:http://en.wikipedia.org/wiki/Surgery</oboInOwl:hasDbXref>
+        <owl:annotatedTarget>The state of being involved in some action, either physical or mental.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dorland:Dorlands_Illustrated_Medical_Dictionary--31st_Ed</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN:978-1416049982</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/XCO_0000373 -->
+    <!-- http://purl.obolibrary.org/obo/XCO_0000002 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/XCO_0000373">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/XCO_0000026"/>
-        <obo:IAO_0000115>The resection or complete surgical removal of a nerve, any of the cordlike structures that convey impulses between the central nervous system and one or more parts of the body, and that each consist of an outer connective tissue sheath surrounding a bundle of conductive fibers.</obo:IAO_0000115>
-        <oboInOwl:created_by>JSmith</oboInOwl:created_by>
-        <oboInOwl:creation_date>2014-01-09T14:52:48Z</oboInOwl:creation_date>
-        <oboInOwl:hasDbXref>MESH:D003714</oboInOwl:hasDbXref>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/XCO_0000002">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/XCO_0000059"/>
+        <obo:IAO_0000115>A state in which the organism is not exhibiting any physical exertion.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>experimental_condition_ontology</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>XCO:0000373</oboInOwl:id>
-        <rdfs:label>surgical denervation</rdfs:label>
+        <oboInOwl:id>XCO:0000002</oboInOwl:id>
+        <rdfs:label>resting</rdfs:label>
     </owl:Class>
     <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/XCO_0000373"/>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/XCO_0000002"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>The resection or complete surgical removal of a nerve, any of the cordlike structures that convey impulses between the central nervous system and one or more parts of the body, and that each consist of an outer connective tissue sheath surrounding a bundle of conductive fibers.</owl:annotatedTarget>
+        <owl:annotatedTarget>A state in which the organism is not exhibiting any physical exertion.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dorland:Dorlands_Illustrated_Medical_Dictionary--31st_Ed</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN:978-1416049982</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mosby:Mosbys_Dental_Dictionary--2nd_Ed</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/XCO_0000374 -->
+    <!-- http://purl.obolibrary.org/obo/XCO_0000059 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/XCO_0000374">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/XCO_0000373"/>
-        <obo:IAO_0000115>Surgical transection or severing of an axon, the process of a neuron capable of conducting action potentials or self-propagating nerve impulses away from the cell body.</obo:IAO_0000115>
-        <oboInOwl:created_by>JSmith</oboInOwl:created_by>
-        <oboInOwl:creation_date>2014-01-09T14:56:20Z</oboInOwl:creation_date>
-        <oboInOwl:hasDbXref>MESH:D019771</oboInOwl:hasDbXref>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/XCO_0000059">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/XCO_0000001"/>
+        <obo:IAO_0000115>Action in which a part of the body or whole body is involved in movement.</obo:IAO_0000115>
+        <oboInOwl:created_by>mshimoyama</oboInOwl:created_by>
+        <oboInOwl:creation_date>2009-12-17T01:50:15Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>experimental_condition_ontology</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>XCO:0000374</oboInOwl:id>
-        <rdfs:label>axotomy</rdfs:label>
+        <oboInOwl:id>XCO:0000059</oboInOwl:id>
+        <rdfs:label>physical activity</rdfs:label>
     </owl:Class>
     <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/XCO_0000374"/>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/XCO_0000059"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>Surgical transection or severing of an axon, the process of a neuron capable of conducting action potentials or self-propagating nerve impulses away from the cell body.</owl:annotatedTarget>
+        <owl:annotatedTarget>Action in which a part of the body or whole body is involved in movement.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dorland:Dorlands_Illustrated_Medical_Dictionary--31st_Ed</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN:978-1416049982</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mosby:Mosbys_Medical_Dictionary--8th_Ed</oboInOwl:hasDbXref>
     </owl:Axiom>
 </rdf:RDF>
 

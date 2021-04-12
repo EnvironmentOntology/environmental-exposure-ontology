@@ -1,4 +1,4 @@
-Prefix(:=<urn:unnamed:ontology#ont1#>)
+Prefix(:=<urn:unnamed:ontology#ont10>)
 Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
 Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
 Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
@@ -6,14 +6,30 @@ Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
 Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 
 
-Ontology(<urn:unnamed:ontology#ont1>
+Ontology(<urn:unnamed:ontology#ont10>
 
 Declaration(Class(<http://purl.obolibrary.org/obo/CHEBI_16236>))
 Declaration(Class(<http://purl.obolibrary.org/obo/CHEBI_18723>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CHEBI_25418>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CHEBI_27808>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CHEBI_27958>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CHEBI_6809>))
 Declaration(Class(<http://purl.obolibrary.org/obo/ECTO_0100000>))
 Declaration(Class(<http://purl.obolibrary.org/obo/ECTO_0100001>))
+Declaration(Class(<http://purl.obolibrary.org/obo/ECTO_0100002>))
+Declaration(Class(<http://purl.obolibrary.org/obo/ECTO_0100003>))
+Declaration(Class(<http://purl.obolibrary.org/obo/ECTO_0100004>))
+Declaration(Class(<http://purl.obolibrary.org/obo/ECTO_0100005>))
+Declaration(Class(<http://purl.obolibrary.org/obo/ECTO_0100006>))
+Declaration(Class(<http://purl.obolibrary.org/obo/ECTO_0100007>))
+Declaration(Class(<http://purl.obolibrary.org/obo/ECTO_0100008>))
+Declaration(Class(<http://purl.obolibrary.org/obo/ECTO_0100009>))
 Declaration(Class(<http://purl.obolibrary.org/obo/ExO_0000002>))
 Declaration(Class(<http://purl.obolibrary.org/obo/NBO_0001884>))
+Declaration(Class(<http://purl.obolibrary.org/obo/NBO_0015005>))
+Declaration(Class(<http://purl.obolibrary.org/obo/NBO_0015007>))
+Declaration(Class(<http://purl.obolibrary.org/obo/NBO_0015008>))
+Declaration(Class(<http://purl.obolibrary.org/obo/NCBITaxon_3483>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002233>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002309>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000115>))
@@ -25,19 +41,75 @@ Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#has
 #   Classes
 ############################
 
-# Class: <http://purl.obolibrary.org/obo/ECTO_0100000> (exposure to nicotine via consumption of an addictive substance)
+# Class: <http://purl.obolibrary.org/obo/ECTO_0100000> (exposure to nicotine addictive consumption)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0100000> "An exposure event involving nicotine consumption of an addictive substance"^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0100000> "nicotine consumption of an addictive substance exposure"^^xsd:string)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_0100000> "exposure to nicotine via consumption of an addictive substance"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_0100000> "exposure to nicotine addictive consumption"^^xsd:string)
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_0100000> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/NBO_0001884> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002233> <http://purl.obolibrary.org/obo/CHEBI_18723>)))))
 
-# Class: <http://purl.obolibrary.org/obo/ECTO_0100001> (exposure to ethanol via consumption of an addictive substance)
+# Class: <http://purl.obolibrary.org/obo/ECTO_0100001> (exposure to drinking alcohol)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0100001> "An exposure event involving ethanol consumption of an addictive substance"^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0100001> "ethanol consumption of an addictive substance exposure"^^xsd:string)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_0100001> "exposure to ethanol via consumption of an addictive substance"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_0100001> "exposure to drinking alcohol"^^xsd:string)
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_0100001> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/NBO_0001884> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002233> <http://purl.obolibrary.org/obo/CHEBI_16236>)))))
+
+# Class: <http://purl.obolibrary.org/obo/ECTO_0100002> (exposure to smoking nicotine)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0100002> "An exposure event involving nicotine smoking behavior"^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0100002> "nicotine smoking behavior exposure"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_0100002> "exposure to smoking nicotine"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_0100002> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/NBO_0015005> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002233> <http://purl.obolibrary.org/obo/CHEBI_18723>)))))
+
+# Class: <http://purl.obolibrary.org/obo/ECTO_0100003> (exposure to cigarette smoking)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0100003> "An exposure event involving nicotine cigarette smoking behavior"^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0100003> "nicotine cigarette smoking behavior exposure"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_0100003> "exposure to cigarette smoking"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_0100003> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/NBO_0015007> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002233> <http://purl.obolibrary.org/obo/CHEBI_18723>)))))
+
+# Class: <http://purl.obolibrary.org/obo/ECTO_0100004> (exposure to cigar smoking)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0100004> "An exposure event involving nicotine cigar smoking behavior"^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0100004> "nicotine cigar smoking behavior exposure"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_0100004> "exposure to cigar smoking"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_0100004> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/NBO_0015008> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002233> <http://purl.obolibrary.org/obo/CHEBI_18723>)))))
+
+# Class: <http://purl.obolibrary.org/obo/ECTO_0100005> (exposure to cannabis)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0100005> "An exposure event involving Cannabis sativa consumption of an addictive substance"^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0100005> "Cannabis sativa consumption of an addictive substance exposure"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_0100005> "exposure to cannabis"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_0100005> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/NBO_0001884> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002233> <http://purl.obolibrary.org/obo/NCBITaxon_3483>)))))
+
+# Class: <http://purl.obolibrary.org/obo/ECTO_0100006> (exposure to morphiane alkaloid)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0100006> "An exposure event involving morphinane alkaloid consumption of an addictive substance"^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0100006> "morphinane alkaloid consumption of an addictive substance exposure"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_0100006> "exposure to morphiane alkaloid"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_0100006> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/NBO_0001884> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002233> <http://purl.obolibrary.org/obo/CHEBI_25418>)))))
+
+# Class: <http://purl.obolibrary.org/obo/ECTO_0100007> (exposure to cocaine addictive consumption)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0100007> "An exposure event involving cocaine consumption of an addictive substance"^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0100007> "cocaine consumption of an addictive substance exposure"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_0100007> "exposure to cocaine addictive consumption"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_0100007> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/NBO_0001884> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002233> <http://purl.obolibrary.org/obo/CHEBI_27958>)))))
+
+# Class: <http://purl.obolibrary.org/obo/ECTO_0100008> (exposure to methamphetamine addictive consumption)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0100008> "An exposure event involving methamphetamine consumption of an addictive substance"^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0100008> "methamphetamine consumption of an addictive substance exposure"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_0100008> "exposure to methamphetamine addictive consumption"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_0100008> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/NBO_0001884> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002233> <http://purl.obolibrary.org/obo/CHEBI_6809>)))))
+
+# Class: <http://purl.obolibrary.org/obo/ECTO_0100009> (exposure to heroin addictive consumption)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0100009> "An exposure event involving heroin consumption of an addictive substance"^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0100009> "heroin consumption of an addictive substance exposure"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_0100009> "exposure to heroin addictive consumption"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_0100009> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/NBO_0001884> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002233> <http://purl.obolibrary.org/obo/CHEBI_27808>)))))
 
 
 )

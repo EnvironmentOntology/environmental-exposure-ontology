@@ -1,0 +1,48 @@
+pattern_name: exposure_to_environmental_material_route
+pattern_iri: http://purl.obolibrary.org/obo/ecto/patterns/exposure_to_environmental_material_route.yaml
+
+description: "exposures to an environmental material with specified route"
+
+contributors:
+  - https://orcid.org/0000-0002-2908-3327
+
+classes:
+  exposure event: ExO:0000002
+  environmental material: ENVO:00010483
+  route: ExO:0000055
+
+annotationProperties:
+  exact_synonym: oio:hasExactSynonym
+
+relations:
+  has exposure stimulus: RO:0002309
+  has exposure route: RO:0002242
+
+vars:
+  stressor: "'environmental material'"
+  route: "'route'"
+
+name:
+  text: "exposure to %s via %s"
+  vars:
+    - stressor
+    - route
+
+annotations:
+  - annotationProperty: exact_synonym
+    text: "%s exposure via %s"
+    vars:
+      - stressor
+      - route
+
+def:
+  text: "A exposure event involving the interaction of an exposure receptor to %s via %s."
+  vars:
+    - stressor
+    - route
+
+equivalentTo:
+  text: "'exposure event' and ('has exposure stimulus' some %s) and ('has exposure route' some %s)"
+  vars:
+    - stressor
+    - route
