@@ -61,8 +61,10 @@ exposure-peco.obo:
 
 
 ## extract subclasses of 'Exposureure to potentially harmful entity'; note: snomed.obo must be in proper form before running
+SNOMED_PREFIX=http://purl.obolibrary.org/obo/SNOMED_
+SNOMED_PREFIX=http://snomed.info/id/
 exposure-snomed.obo:
-	export ROBOT_JAVA_ARGS=-Xmx16G && robot extract --method top -i ../ontology/snomed.obo -t "http://purl.obolibrary.org/obo/SNOMED_418715001" -o tmp-snomed.obo
+	export ROBOT_JAVA_ARGS=-Xmx16G && robot extract --method top -i ../ontology/snomed.obo -t "$(SNOMED_PREFIX)418715001" -o tmp-snomed.obo
 	mv tmp-snomed.obo $@
 
 
