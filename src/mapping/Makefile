@@ -71,7 +71,7 @@ exposure-snomed.obo:
 ## extact classes containg 'xposure'; note: using obo-grep for performance reasons
 exposure-ncit.obo:
 	wget --no-check-certificate $(NCIT_OBO) -O tmp-in.obo
-	obo-grep.pl -r ".*xposure.*" tmp-in.obo > tmp-xposure.obo # find obo stanzas containing *xposure*
+	perl obo-grep.pl -r ".*xposure.*" tmp-in.obo > tmp-xposure.obo # find obo stanzas containing *xposure*
 	rm tmp-in.obo
 	mv tmp-xposure.obo $@
 
@@ -80,7 +80,7 @@ exposure-ncit.obo:
 exposure-go.obo:
 	wget --no-check-certificate $(GO_OBO) -O tmp-in.obo
 	export ROBOT_JAVA_ARGS=-Xmx16G && robot extract --method top -i tmp-in.obo -t GO:0050896 -o tmp-out.obo # get subclasses of 'response to stimulus'
-	obo-grep.pl -r 'name: .*response to.*' tmp-out.obo > tmp-go.obo # filter
+	perl obo-grep.pl -r 'name: .*response to.*' tmp-out.obo > tmp-go.obo # filter
 
 	rm tmp-in.obo
 	rm tmp-out.obo
@@ -99,12 +99,12 @@ exposure-ecto.obo: ../../ecto-base.obo
 # MERGE ALL SUB ONTOLOGIES TOGETHER
 #combined-exposure.obo:
 # combined-exposure.obo: all_exposure
-# 	obo-cat.pl exposure-*.obo | grep -v ^namespace: | grep -v ^property_value: | ./add-syns.pl > $@
+# 	perl obo-cat.pl exposure-*.obo | grep -v ^namespace: | grep -v ^property_value: | ./add-syns.pl > $@
 # .PRECIOUS: combined-exposure.obo
 
 
 slim-exposure.obo: $(patsubst %, exposure-%.obo,$(MOD))
-	obo-cat.pl $^ | grep -v ^namespace: | grep -v ^property_value: | ./add-syns.pl > $@
+	perl obo-cat.pl $^ | grep -v ^namespace: | grep -v ^property_value: | ./add-syns.pl > $@
 
 .PRECIOUS: slim-exposure.obo
 
