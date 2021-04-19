@@ -1,5 +1,5 @@
-#all: all_exposure probs.tsv m.tsv  rpt.html merged-exposure.obo axioms-r.obo  hier all_ecto unmapped.tsv
-all: all_exposure probs.tsv m.tsv  rpt.html merged-exposure.obo axioms-r.obo  hier all_ecto unmapped.tsv
+#all: all_exposure probs.tsv  rpt.html merged-exposure.obo axioms-r.obo  hier all_ecto unmapped.tsv
+all: all_exposure probs.tsv rpt.html merged-exposure.obo axioms-r.obo  hier all_ecto unmapped.tsv
 
 OBO = http://purl.obolibrary.org/obo
 
@@ -61,7 +61,7 @@ exposure-peco.obo:
 
 
 ## extract subclasses of 'Exposureure to potentially harmful entity'; note: snomed.obo must be in proper form before running
-SNOMED_PREFIX=http://purl.obolibrary.org/obo/SNOMED_
+#SNOMED_PREFIX=http://purl.obolibrary.org/obo/SNOMED_
 SNOMED_PREFIX=http://snomed.info/id/
 exposure-snomed.obo:
 	export ROBOT_JAVA_ARGS=-Xmx16G && robot extract --method top -i ../ontology/snomed.obo -t "$(SNOMED_PREFIX)418715001" -o tmp-snomed.obo
@@ -102,9 +102,9 @@ exposure-ecto.obo: ../../ecto-base.obo
 # 	perl obo-cat.pl exposure-*.obo | grep -v ^namespace: | grep -v ^property_value: | ./add-syns.pl > $@
 # .PRECIOUS: combined-exposure.obo
 
-
-slim-exposure.obo: $(patsubst %, exposure-%.obo,$(MOD))
-	perl obo-cat.pl $^ | grep -v ^namespace: | grep -v ^property_value: | ./add-syns.pl > $@
+EXPOSURE_ONTS=$(patsubst %, exposure-%.obo,$(MOD))
+slim-exposure.obo: 
+	perl obo-cat.pl $(EXPOSURE_ONTS) | grep -v ^namespace: | grep -v ^property_value: | ./add-syns.pl > $@
 
 .PRECIOUS: slim-exposure.obo
 
@@ -112,6 +112,12 @@ slim-exposure.obo: $(patsubst %, exposure-%.obo,$(MOD))
 slim-exposure.owl: slim-exposure.obo
 	robot convert -i slim-exposure.obo -o slim-exposure.owl
 
+RDFMATCHDEBUG=
+RDFMATCH = swipl -p library=/tools/rdf_matcher/prolog /tools/rdf_matcher/bin/rdfmatch $(RDFMATCHDEBUG)
+
+
+c:
+	$(RDFMATCH) -i slim-exposure.ttl match > match-output.txt
 
 probs.tsv: 
 	robot convert -i slim-exposure.obo --check false -o slim-exposure.ttl # convert slim-exposure.obo to ttl
@@ -120,7 +126,9 @@ probs.tsv:
 	cat shacl-declarations.ttl slim-exposure.ttl > slim-exposure.tmp && mv slim-exposure.tmp slim-exposure.ttl
 
 	## run rdfmatch to generate match info
-	rdfmatch -G match-graph.ttl -f tsv -i slim-exposure.ttl match > match-output.txt
+	# -G match-graph.ttl -f tsv 
+	# make more like bosch one with sssom output
+	$(RDFMATCH) -i slim-exposure.ttl match > match-output.txt
 
 	## find exact label matches; the cut command returns the first two columns of output
 	egrep 'info\((label|exact)-(label|exact)' match-output.txt | cut -f1,2 | uniq > exact-matches.txt
