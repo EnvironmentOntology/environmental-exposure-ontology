@@ -61,13 +61,6 @@ imports/npo_import.owl:
 	
 mirror/npo.owl:
 	echo "!!!!!NPO currently skipped!"
-	
-imports/exo_import.owl:
-	echo "!!!!!EXO mirror currently skipped, see: https://github.com/CTDbase/exposure-ontology/issues/11"
-	
-mirror/exo.owl:
-	echo "!!!!!EXO currently skipped, see: https://github.com/CTDbase/exposure-ontology/issues/11. NOTE: althogh the issue is fixed, there has not been a release since!"
-
 
 $(ONT)-full.owl: $(SRC) $(OTHER_SRC)
 	echo "!!!!!! FULL RELEASE IS OVERWRITTEN, REMOVING DISJOINTS - ecto.Makefile. See https://github.com/EnvironmentOntology/environmental-exposure-ontology/issues/79 !!!!!!"
