@@ -124,7 +124,3 @@ templates: $(TEMPLATES)
 	
 $(COMPONENTSDIR)/obsoletes.owl:
 	$(ROBOT) merge -i $(TEMPLATESDIR)/obsolete.owl -o $@
-
-
-mirror/pr.owl mirror/chebi.owl imports/chebi_import.owl imports/pr_import.owl:
-	echo "Skipping $@"
