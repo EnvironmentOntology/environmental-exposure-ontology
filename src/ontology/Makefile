@@ -65,7 +65,7 @@ RELEASE_ARTEFACTS = $(sort $(ONT)-full $(ONT)-base $(ONT)-base $(ONT)-full)
 all: odkversion all_imports patterns all_main all_subsets sparql_test all_reports all_assets
 
 .PHONY: test
-test: odkversion sparql_test all_reports
+test: odkversion sparql_test all_reports 
 	$(ROBOT) reason --input $(SRC) --reasoner ELK  --equivalent-classes-allowed asserted-only --exclude-tautologies structural --output test.owl && rm test.owl && echo "Success"
 
 .PHONY: odkversion
@@ -126,6 +126,13 @@ robot_reports: $(REPORT_FILES)
 
 .PHONY: all_reports
 all_reports: all_reports_onestep $(REPORT_FILES)
+
+$(REPORTDIR)/validate_profile_owl2dl_%.txt: % | $(REPORTDIR)
+	$(ROBOT) validate-profile --profile DL -i $< -o $@
+.PRECIOUS: $(REPORTDIR)/validate_profile_owl2dl_%.txt
+
+.PHONY: validate_profile_%
+validate_profile_%: $(REPORTDIR)/validate_profile_owl2dl_%.txt
 
 ## -- all files/assets --
 
@@ -624,5 +631,7 @@ validate_idranges:
 .PHONY: update_repo
 update_repo:
 	sh $(SCRIPTSDIR)/update_repo.sh
+	
+
 
 include ecto.Makefile
