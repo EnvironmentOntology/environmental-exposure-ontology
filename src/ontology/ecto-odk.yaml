@@ -2,7 +2,6 @@ id: ecto
 title: "Environmental conditions, treatments and exposures ontology"
 github_org: EnvironmentOntology
 repo: environmental-exposure-ontology
-report_fail_on: none
 use_dosdps: TRUE
 export_formats:
   - owl
@@ -26,8 +25,8 @@ import_group:
     - id: ncbitaxon
       use_gzipped: TRUE
       is_large: TRUE
+      mirror_from: http://purl.obolibrary.org/obo/ncbitaxon/subsets/taxslim.owl
     - id: npo
-      mirror_from: https://raw.githubusercontent.com/monarch-initiative/MAxO/master/maxo.owl
     - id: pato
     - id: ro
     - id: uberon 
@@ -42,6 +41,5 @@ allow_equivalents: asserted-only
 robot_report:
   fail_on : ERROR
   use_labels : False
-  #custom_profile : True
   report_on :
     - ecto-base.owl

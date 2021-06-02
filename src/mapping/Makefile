@@ -121,10 +121,10 @@ slim-exposure.ttl: slim-exposure.obo shacl-declarations.ttl
 	## prepend SHACL declarations
 	cat shacl-declarations.ttl $@ > slim-exposure.tmp && mv slim-exposure.tmp $@
 
-ecto.sssom.tsv: #slim-exposure.ttl
+ecto.sssom.tsv: slim-exposure.ttl
 	## run rdfmatch to generate match info
 	# -G match-graph.ttl -f tsv 
-	$(RDFMATCH) -i slim-exposure.ttl match > full_$@
+	$(RDFMATCH) -i slim-exposure.ttl --predicate skos:exactMatch match > full_$@
 	sssom dedupe -i full_$@ -o $@
 	# The following is needed because the SSSOM dedupe command does not handle sssom annotations
 	grep "^[^#]" $@ > $@.tmp && mv $@.tmp $@ # This is removing all metadata in case the command gets fixed
