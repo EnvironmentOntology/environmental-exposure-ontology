@@ -1,6 +1,8 @@
 [![Build Status](https://travis-ci.org/EnvironmentOntology/environmental-exposure-ontology.svg?branch=master)](https://travis-ci.org/EnvironmentOntology/environmental-exposure-ontology)
 [![DOI](https://zenodo.org/badge/13996/EnvironmentOntology/environmental-exposure-ontology.svg)](https://zenodo.org/badge/latestdoi/13996/EnvironmentOntology/environmental-exposure-ontology)
 
+[![ecto_logo](https://github.com/jmcmurry/closed-illustrations/blob/master/logos/ecto-logos/ecto-logo_black-stacked.png)
+
 ## Edit this ontology!
 
 TBD
