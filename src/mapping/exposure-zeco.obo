@@ -1,10 +1,12 @@
 format-version: 1.2
-data-version: releases/2020-04-08
+data-version: releases/2020-11-30
+subsetdef: ubprop:upper_level "abstract upper-level terms not directly useful for analysis"
 default-namespace: zebrafish_experimental_conditions_ontology
 ontology: zeco
 property_value: http://purl.org/dc/elements/1.1/description "None" xsd:string
 property_value: http://purl.org/dc/elements/1.1/title "Zebrafish Experimental Conditions Ontology" xsd:string
 property_value: http://purl.org/dc/terms/license "CC-BY" xsd:string
+property_value: owl:versionInfo "2020-11-30" xsd:string
 
 [Term]
 id: ZECO:0000100
@@ -87,7 +89,7 @@ is_a: ZECO:0000104 ! experimental conditions
 [Term]
 id: ZECO:0000113
 name: food availability
-def: "Diet condition in which the availabity of food is manipulated." []
+def: "Experimental condition in which the availabity of food is manipulated." []
 is_a: ZECO:0000104 ! experimental conditions
 
 [Term]
@@ -330,7 +332,7 @@ is_a: ZECO:0000151 ! light intensity
 [Term]
 id: ZECO:0000154
 name: gravity
-def: "Experimental condition in which gravity forces are applied. For zebrafish, this can be in the form of centrifugal forces or trips to outerspace." []
+def: "Experimental condition in which gravity forces are manipulated. For zebrafish, this can be in the form of centrifugal forces or trips to outerspace." []
 is_a: ZECO:0000104 ! experimental conditions
 
 [Term]
@@ -423,7 +425,7 @@ is_a: ZECO:0000245 ! light damage
 [Term]
 id: ZECO:0000171
 name: resection
-def: "Surgical manipulation in which a particular organ, appendage, or part of the zebrafish is removed." []
+def: "Surgical manipulation in which a particular organ, appendage, or part of an organism is removed." []
 is_a: ZECO:0000176 ! surgical manipulation
 
 [Term]
@@ -863,7 +865,7 @@ is_a: ZECO:0000229 ! physical alteration
 [Term]
 id: ZECO:0000249
 name: cryoablation
-def: "Targetd destruction of an anatomical structure by freezing." []
+def: "Experimental condition which uses a cold instrument to ablate an anatomical structure or cell." []
 is_a: ZECO:0000168 ! ablation
 is_a: ZECO:0000248 ! cold damage
 
@@ -908,8 +910,45 @@ is_a: ZECO:0000253 ! gavage
 [Term]
 id: ZECO:0000256
 name: bacterial treatment by diet
-def: "Bacterial treatment where bacteria are introduced via the diet. This includes probiotic treatments." []
-is_a: ZECO:0000112 ! diet
+def: "Bacterial treatment where bacteria are introduced via the diet." []
+is_a: ZECO:0000106 ! bacterial treatment
+
+[Term]
+id: ZECO:0000259
+name: cauterization
+def: "Condition that uses a cold or hot insturment, electrical current, or chemical to burn or dissolve an anatomical structure to remove or close it off." []
+is_a: ZECO:0000229 ! physical alteration
+
+[Term]
+id: ZECO:0000260
+name: thermal cauterization
+def: "Cauterization of a tissue using a heated instrument." []
+is_a: ZECO:0000259 ! cauterization
+
+[Term]
+id: ZECO:0000261
+name: compression injury
+def: "An injury that occurs because of pressure from a heavy object onto a body part. A compression injury may also arise from squeezing of a body part between two objects. https://www.medicinenet.com/crush_injury/definition.htm" []
+synonym: "crush injury" EXACT []
+is_a: ZECO:0000229 ! physical alteration
+
+[Term]
+id: ZECO:0000262
+name: probiotic content
+def: "Food content condition in which the amount of probiotics in the diet is manipulated" []
+is_a: ZECO:0000117 ! food content
+
+[Term]
+id: ZECO:0000263
+name: microgravity
+def: "Experimental condition in which gravity forces are smaller than in control conditions. An example of a microgravity condition would be trips to outerspace." []
+is_a: ZECO:0000154 ! gravity
+
+[Term]
+id: ZECO:0000264
+name: increased gravity
+def: "Experimental condition in which gravity forces are greater than in control conditions. An example of an increased gravity condition would be the application of centrifugal forces." []
+is_a: ZECO:0000154 ! gravity
 
 [Typedef]
 id: BFO:0000050
