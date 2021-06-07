@@ -20,13 +20,12 @@ Import(<http://purl.obolibrary.org/obo/ecto/imports/nbo_import.owl>)
 Import(<http://purl.obolibrary.org/obo/ecto/imports/ncbitaxon_import.owl>)
 Import(<http://purl.obolibrary.org/obo/ecto/imports/ncit_import.owl>)
 Import(<http://purl.obolibrary.org/obo/ecto/imports/npo_import.owl>)
-Import(<http://purl.obolibrary.org/obo/ecto/imports/pato_import.owl>)
 Import(<http://purl.obolibrary.org/obo/ecto/imports/ons_import.owl>)
+Import(<http://purl.obolibrary.org/obo/ecto/imports/pato_import.owl>)
 Import(<http://purl.obolibrary.org/obo/ecto/imports/ro_import.owl>)
 Import(<http://purl.obolibrary.org/obo/ecto/imports/uberon_import.owl>)
 Import(<http://purl.obolibrary.org/obo/ecto/imports/xco_import.owl>)
 Import(<http://purl.obolibrary.org/obo/ecto/patterns/definitions.owl>)
-
 Annotation(<http://purl.obolibrary.org/obo/IAO_0000700> "http://purl.obolibrary.org/obo/ExO_0000002")
 Annotation(<http://purl.org/dc/elements/1.1/description> "ECTO describes exposures to experimental treatments of plants and model organisms (e.g. exposures to modification of diet, lighting levels, temperature); exposures of humans or any other organisms to stressors through a variety of routes, for purposes of public health, environmental monitoring etc, stimuli, natural and experimental, any kind of environmental condition or change in condition that can be experienced by an organism or population of organisms on earth. The scope is very general and can include for example plant treatment regimens, as well as human clinical exposures (although these may better be handled by a more specialized ontology)."^^xsd:string)
 Annotation(<http://purl.org/dc/elements/1.1/title> "Environment Exposure Ontology"^^xsd:string)
@@ -63,5 +62,9 @@ AnnotationAssertion(rdfs:label <http://www.geneontology.org/formats/oboInOwl#has
 
 
 
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000118> <http://purl.obolibrary.org/obo/ExO_0000001> "exposure recipient")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000118> <http://purl.obolibrary.org/obo/ExO_0000001> "exposure target")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym> <http://purl.obolibrary.org/obo/ExO_0000001> "exposure recipient")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym> <http://purl.obolibrary.org/obo/ExO_0000001> "exposure target")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0000115> "definition"^^xsd:string)
 )
