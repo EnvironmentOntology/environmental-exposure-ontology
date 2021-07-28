@@ -1,0 +1,54 @@
+pattern_name: food_ingestion
+pattern_iri: http://purl.obolibrary.org/obo/ecto/patterns/food_ingestion.yaml
+
+description: "exposures to a food material via the route of ingestion"
+
+contributors:
+  - https://orcid.org/0000-0002-7463-6306
+
+classes:
+  exposure event: ExO:0000002
+  food material: FOODON:00002403
+  ingestion: ExO:0000056
+
+relations:
+  has exposure stimulus: RO:0002309
+  has exposure route: RO:0002242
+
+annotationProperties:
+  exact_synonym: oio:hasExactSynonym
+
+vars:
+  stressor: "'food material'"
+
+name:
+  text: "ingestion of %s"
+  vars:
+    - stressor
+
+annotations:
+  - annotationProperty: exact_synonym
+    text: "%s exposure via ingestion"
+    vars:
+      - stressor
+  - annotationProperty: exact_synonym
+    text: "%s ingestion"
+    vars:
+      - stressor
+  - annotationProperty: exact_synonym
+    text: "%s consumption"
+    vars:
+      - stressor
+  - annotationProperty: exact_synonym
+    text: "consumption of %s"
+    vars:
+      - stressor
+def:
+  text: "An exposure to %s via ingestion."
+  vars:
+    - stressor
+
+equivalentTo:
+  text: "'exposure event' and ('has exposure stimulus' some %s) and ('has exposure route' some 'ingestion')"
+  vars:
+    - stressor

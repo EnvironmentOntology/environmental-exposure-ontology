@@ -1,17 +1,18 @@
-#all: all_exposure probs.tsv m.tsv  rpt.html merged-exposure.obo axioms-r.obo  hier all_ecto unmapped.tsv
-all: all_exposure probs.tsv m.tsv  rpt.html merged-exposure.obo axioms-r.obo  hier all_ecto unmapped.tsv
+#all: all_exposure ecto.sssom.tsv  rpt.html merged-exposure.obo axioms-r.obo  hier all_ecto unmapped.tsv
+all: all_exposure ecto.sssom.tsv rpt.html merged-exposure.obo axioms-r.obo  hier all_ecto unmapped.tsv
 
 OBO = http://purl.obolibrary.org/obo
 
-
-# MOD = eo xco zeco snomed ncit go exo wikidata ecto mre
-MOD = xco zeco exo peco ecto ncit go snomed
+# eo, the plant environment ontology, was previously used here but is now obsoleted
+#MOD = wikidata
+MOD = xco zeco exo peco ecto ncit go snomed mre eo
 
 ## define variables for ontologies
 XCO_OBO = "http://purl.obolibrary.org/obo/xco.obo"
 NCIT_OBO = "http://purl.obolibrary.org/obo/ncit.obo"
 ZECO_OBO = "http://purl.obolibrary.org/obo/zeco.obo"
 PECO_OBO = "http://purl.obolibrary.org/obo/peco.obo"
+EO_OBO = "http://purl.obolibrary.org/obo/eo.obo"
 GO_OBO = "http://purl.obolibrary.org/obo/go.obo"
 EXO_OBO = 'http://purl.obolibrary.org/obo/exo.obo'
 MRE_OWL = "https://github.com/monarch-initiative/Medically-Relevant-Exposome/blob/master/src/ontology/mre-edit.owl"
@@ -53,23 +54,24 @@ exposure-peco.obo:
 
 
 ## currently no content in MRE ((Medically-Relevant-Exposome) to transform
-# exposure-mre.obo:
-# 	wget --no-check-certificate $(MRE_OWL) -O tmp-in.owl
-# 	robot convert -i tmp-owl -o tmp-out.obo
-# 	rm tmp-in.ow
-# 	mv tmp-out.obo $@
+exposure-mre.obo:
+	git clone https://github.com/monarch-initiative/Medically-Relevant-Exposome.git
+	robot convert -i Medically-Relevant-Exposome/src/ontology/mre-edit.owl -o mre.obo
+	mv mre.obo $@
 
 
 ## extract subclasses of 'Exposureure to potentially harmful entity'; note: snomed.obo must be in proper form before running
+#SNOMED_PREFIX=http://purl.obolibrary.org/obo/SNOMED_
+SNOMED_PREFIX=http://snomed.info/id/
 exposure-snomed.obo:
-	export ROBOT_JAVA_ARGS=-Xmx16G && robot extract --method top -i ../ontology/snomed.obo -t "http://purl.obolibrary.org/obo/SNOMED_418715001" -o tmp-snomed.obo
+	export ROBOT_JAVA_ARGS=-Xmx16G && robot extract --method top -i ../ontology/snomed.obo -t "$(SNOMED_PREFIX)418715001" -o tmp-snomed.obo
 	mv tmp-snomed.obo $@
 
 
 ## extact classes containg 'xposure'; note: using obo-grep for performance reasons
 exposure-ncit.obo:
 	wget --no-check-certificate $(NCIT_OBO) -O tmp-in.obo
-	obo-grep.pl -r ".*xposure.*" tmp-in.obo > tmp-xposure.obo # find obo stanzas containing *xposure*
+	perl obo-grep.pl -r ".*xposure.*" tmp-in.obo > tmp-xposure.obo # find obo stanzas containing *xposure*
 	rm tmp-in.obo
 	mv tmp-xposure.obo $@
 
@@ -78,7 +80,7 @@ exposure-ncit.obo:
 exposure-go.obo:
 	wget --no-check-certificate $(GO_OBO) -O tmp-in.obo
 	export ROBOT_JAVA_ARGS=-Xmx16G && robot extract --method top -i tmp-in.obo -t GO:0050896 -o tmp-out.obo # get subclasses of 'response to stimulus'
-	obo-grep.pl -r 'name: .*response to.*' tmp-out.obo > tmp-go.obo # filter
+	perl obo-grep.pl -r 'name: .*response to.*' tmp-out.obo > tmp-go.obo # filter
 
 	rm tmp-in.obo
 	rm tmp-out.obo
@@ -97,29 +99,54 @@ exposure-ecto.obo: ../../ecto-base.obo
 # MERGE ALL SUB ONTOLOGIES TOGETHER
 #combined-exposure.obo:
 # combined-exposure.obo: all_exposure
-# 	obo-cat.pl exposure-*.obo | grep -v ^namespace: | grep -v ^property_value: | ./add-syns.pl > $@
+# 	perl obo-cat.pl exposure-*.obo | grep -v ^namespace: | grep -v ^property_value: | ./add-syns.pl > $@
 # .PRECIOUS: combined-exposure.obo
 
+EXPOSURE_ONTS=$(patsubst %, exposure-%.obo,$(MOD))
 
-slim-exposure.obo: $(patsubst %, exposure-%.obo,$(MOD))
-	obo-cat.pl $^ | grep -v ^namespace: | grep -v ^property_value: | ./add-syns.pl > $@
-
+slim-exposure.obo: $(EXPOSURE_ONTS)
+	perl obo-cat.pl $(EXPOSURE_ONTS) | grep -v ^namespace: | grep -v ^property_value: | ./add-syns.pl > $@
 .PRECIOUS: slim-exposure.obo
 
 
 slim-exposure.owl: slim-exposure.obo
 	robot convert -i slim-exposure.obo -o slim-exposure.owl
 
+RDFMATCHDEBUG=
+RDFMATCH = swipl -p library=/tools/rdf_matcher/prolog /tools/rdf_matcher/bin/rdfmatch $(RDFMATCHDEBUG)
 
-probs.tsv: 
-	robot convert -i slim-exposure.obo --check false -o slim-exposure.ttl # convert slim-exposure.obo to ttl
 
-	## prepend schacl declarations
-	cat shacl-declarations.ttl slim-exposure.ttl > slim-exposure.tmp && mv slim-exposure.tmp slim-exposure.ttl
+slim-exposure.ttl: slim-exposure.obo shacl-declarations.ttl
+	robot convert -i $< --check false -o $@
+	## prepend SHACL declarations
+	cat shacl-declarations.ttl $@ > slim-exposure.tmp && mv slim-exposure.tmp $@
 
+ecto.sssom.tsv: slim-exposure.ttl
 	## run rdfmatch to generate match info
-	rdfmatch -G match-graph.ttl -f tsv -i slim-exposure.ttl match > match-output.txt
+	# -G match-graph.ttl -f tsv 
+	$(RDFMATCH) -i slim-exposure.ttl --predicate skos:exactMatch match > full_$@
+	sssom dedupe -i full_$@ -o $@
+	# The following is needed because the SSSOM dedupe command does not handle sssom annotations
+	grep "^[^#]" $@ > $@.tmp && mv $@.tmp $@ # This is removing all metadata in case the command gets fixed
+	grep "^[#]" full_ecto.sssom.tsv > meta_full_ecto.sssom.tsv
+	cat meta_full_ecto.sssom.tsv $@ > tmp.ecto.sssom.tsv
+	mv tmp.ecto.sssom.tsv $@
+	
+	# We could use the sssom file coming out of rdfmatcher and call this done
+	# (obo weights) file added
+	# Take sssom.py to generate the ptables
+	# sssom command to collaps to highest probablity one
+	# ptable + ontologies go into boomer
+	# many different voc (say mod)
+	# merge then put them tohether - 
+	# How many unmatched MRE terms?
+	# Make MRE table
 
+.PHONY: release_mappings
+release_mappings:
+	cp ecto.sssom.tsv ../../mappings/ecto.sssom.tsv
+
+old_commands:
 	## find exact label matches; the cut command returns the first two columns of output
 	egrep 'info\((label|exact)-(label|exact)' match-output.txt | cut -f1,2 | uniq > exact-matches.txt
 
@@ -140,15 +167,15 @@ probs.tsv:
 	rm non-exact-matches.txt
 
 MAX_E=8
-axioms.owl: slim-exposure.owl probs.tsv 
-	kboom --experimental  --splitSize 50 --max $(MAX_E) -m rpt.md -j rpt.json -n -o $@ -t probs.tsv $<
+axioms.owl: slim-exposure.owl ecto.sssom.tsv 
+	kboom --experimental  --splitSize 50 --max $(MAX_E) -m rpt.md -j rpt.json -n -o $@ -t ecto.sssom.tsv $<
 
-axioms-boomer.owl: slim-exposure.owl probs.tsv prefixes.yaml output.ofn
+axioms-boomer.owl: slim-exposure.owl ecto.sssom.tsv prefixes.yaml output.ofn
 	robot convert -i output.ofn -o output.owl
 	mv output.owl $@
 
 output.ofn:
-	boomer --ptable probs.tsv --ontology slim-exposure.owl --window-count 10 --runs 20 --prefixes prefixes.yaml
+	boomer --ptable ecto.sssom.tsv --ontology slim-exposure.owl --window-count 10 --runs 20 --prefixes prefixes.yaml
 
 ########################################
 # These don't work. For some reason,
@@ -160,12 +187,12 @@ output.ofn:
 # output file *(output.ofn).
 # So, using output.ofn target
 ########################################
-#axioms-boomer.owl: slim-exposure.owl probs.tsv prefixes.yaml
-#	boomer --ptable probs.tsv --ontology slim-exposure.owl --window-count 10 --runs 20 --prefixes prefixes.yaml
+#axioms-boomer.owl: slim-exposure.owl ecto.sssom.tsv prefixes.yaml
+#	boomer --ptable ecto.sssom.tsv --ontology slim-exposure.owl --window-count 10 --runs 20 --prefixes prefixes.yaml
 #	robot convert -i output.ofn -o output.owl
 #	mv output.owl $@
 #boomer-output.ofn:
-#	boomer --ptable probs.tsv --ontology slim-exposure.owl --window-count 10 --runs 20 --prefixes prefixes.yaml
+#	boomer --ptable ecto.sssom.tsv --ontology slim-exposure.owl --window-count 10 --runs 20 --prefixes prefixes.yaml
 #	mv output.ofn $@
 
 rpt.html: axioms.owl
@@ -176,4 +203,4 @@ clean-axioms:
 	rm $(patsubst %, exposure-%.obo,$(MOD))
 	rm slim-exposure.owl
 	rm axioms.owl
-	rm probs.tsv
+	rm ecto.sssom.tsv

@@ -1,0 +1,19 @@
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?curie (STR(?lab) AS ?label) WHERE {
+	?x rdf:type owl:Class .
+	OPTIONAL {?x rdfs:label ?lab}
+	BIND(
+		IF(	
+			regex(str(?x), "http[:][/][/]www[.]ebi[.]ac[.]uk[/]efo[/]EFO[_]")
+				|| regex(str(?x), "http[:][/][/]purl[.]obolibrary[.]org[/]obo[/]")
+				|| regex(str(?x), "http[:][/][/]www[.]orpha.net[/]ORDO[/]"),
+			REPLACE(
+				REPLACE(STR(?x), "http[:][/][/]purl[.]obolibrary[.]org[/]obo[/]|http[:][/][/]www[.]ebi[.]ac[.]uk[/]efo[/]|http[:][/][/]www[.]orpha.net[/]ORDO[/]", "", "i"),
+			"[_]", ":", "i")
+			,?x) 
+		AS ?curie)
+}
+ORDER BY ?curie
