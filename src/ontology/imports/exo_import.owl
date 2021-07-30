@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="http://purl.obolibrary.org/obo/ecto/imports/exo_import.owl#"
      xml:base="http://purl.obolibrary.org/obo/ecto/imports/exo_import.owl"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:obo="http://purl.obolibrary.org/obo/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -9,8 +10,9 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/ecto/imports/exo_import.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/ecto/releases/2021-05-04/imports/exo_import.owl"/>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2021-05-04</owl:versionInfo>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/ecto/releases/2021-07-30/imports/exo_import.owl"/>
+        <dc:source rdf:resource="http://purl.obolibrary.org/obo/exo/2.1/exo.owl"/>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2021-07-30</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -52,6 +54,12 @@
     
 
 
+    <!-- http://www.geneontology.org/formats/oboInOwl#hasAlternativeId -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasAlternativeId"/>
+    
+
+
     <!-- http://www.geneontology.org/formats/oboInOwl#hasDbXref -->
 
     <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasDbXref">
@@ -71,6 +79,12 @@
     <!-- http://www.geneontology.org/formats/oboInOwl#hasOBONamespace -->
 
     <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasOBONamespace"/>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
     
 
 
@@ -164,6 +178,16 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/exo#is_associated_with -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/exo#is_associated_with">
+        <oboInOwl:hasOBONamespace>source</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>is_associated_with</oboInOwl:id>
+        <rdfs:label>is_associated_with</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -227,6 +251,8 @@
         <obo:IAO_0000115>An entity (e.g., a human, human population, or a human organ) that interacts with an exposure stressor during an exposure event.</obo:IAO_0000115>
         <oboInOwl:created_by>cmattin</oboInOwl:created_by>
         <oboInOwl:creation_date>2010-09-21T02:45:36Z</oboInOwl:creation_date>
+        <oboInOwl:hasExactSynonym>exposure recipient</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>exposure target</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>exposure_receptor</oboInOwl:hasOBONamespace>
         <oboInOwl:id>ExO:0000001</oboInOwl:id>
         <rdfs:label>exposure_receptor</rdfs:label>
@@ -279,6 +305,151 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ExO_0000002"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>An interaction between an exposure stressor and an exposure_receptor.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CTD:curators</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ExO_0000003 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ExO_0000003">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/exo#is_associated_with"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ExO_0000002"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>Entity that results from the interaction between and exposure_receptor and an exposure stressor during an exposure event.</obo:IAO_0000115>
+        <oboInOwl:created_by>cmattin</oboInOwl:created_by>
+        <oboInOwl:creation_date>2010-09-21T02:48:49Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>exposure_outcome</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasRelatedSynonym>interaction outcome</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:id>ExO:0000003</oboInOwl:id>
+        <rdfs:label>exposure outcome</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ExO_0000003"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Entity that results from the interaction between and exposure_receptor and an exposure stressor during an exposure event.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CTD:curators</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ExO_0000030 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ExO_0000030">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ExO_0000001"/>
+        <obo:IAO_0000115>The earth, all of the organisms living on it, and all of the environmental factors, which act on the organisms. The volume of area where biological matter can exist, slightly above, on or below ground level.</obo:IAO_0000115>
+        <oboInOwl:created_by>cmattin</oboInOwl:created_by>
+        <oboInOwl:creation_date>2011-01-10T09:26:27Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>exposure_receptor</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>ExO:0000030</oboInOwl:id>
+        <rdfs:label>ecosphere</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ExO_0000030"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>The earth, all of the organisms living on it, and all of the environmental factors, which act on the organisms. The volume of area where biological matter can exist, slightly above, on or below ground level.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">XCTD:curators</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ExO_0000031 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ExO_0000031">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ExO_0000030"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>MERGED DEFINITION:\nTARGET DEFINITION: An exposure_receptor that is the global ecological system integrating all living beings and their relationships, including their interaction with the elements of the lithosphere, hydrosphere and atmosphere.\n--------------------\nSOURCE DEFINITION: An exposure_receptor that is the part of the environment that is made or modified by humans for use in human activities and human habitats.</obo:IAO_0000115>
+        <oboInOwl:created_by>cmattin</oboInOwl:created_by>
+        <oboInOwl:creation_date>2011-01-10T09:27:26Z</oboInOwl:creation_date>
+        <oboInOwl:hasAlternativeId>ExO:0000032</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasExactSynonym>anthrosphere</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>exposure_receptor</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>ExO:0000031</oboInOwl:id>
+        <rdfs:label>biosphere</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ExO_0000031"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>MERGED DEFINITION:\nTARGET DEFINITION: An exposure_receptor that is the global ecological system integrating all living beings and their relationships, including their interaction with the elements of the lithosphere, hydrosphere and atmosphere.\n--------------------\nSOURCE DEFINITION: An exposure_receptor that is the part of the environment that is made or modified by humans for use in human activities and human habitats.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:hjd</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ExO_0000033 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ExO_0000033">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ExO_0000001"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ExO_0000031"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>An exposure_receptor that is a group of Homo sapiens inhabiting a given area.</obo:IAO_0000115>
+        <oboInOwl:created_by>cmattin</oboInOwl:created_by>
+        <oboInOwl:creation_date>2011-01-10T09:28:02Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>exposure_receptor</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>ExO:0000033</oboInOwl:id>
+        <rdfs:label>human population</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ExO_0000033"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>An exposure_receptor that is a group of Homo sapiens inhabiting a given area.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CTD:curators</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ExO_0000038 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ExO_0000038">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ExO_0000089"/>
+        <obo:IAO_0000115>The condition of an organism in all aspects (e.g., functional or metabolic efficiency).</obo:IAO_0000115>
+        <oboInOwl:created_by>cmattin</oboInOwl:created_by>
+        <oboInOwl:creation_date>2011-01-10T09:29:51Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>human_attribute</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>ExO:0000038</oboInOwl:id>
+        <rdfs:label>health status</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ExO_0000038"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>The condition of an organism in all aspects (e.g., functional or metabolic efficiency).</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CTD:curators</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ExO_0000042 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ExO_0000042">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ExO_0000001"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ExO_0000033"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>Being or characteristic of a single thing or person.</obo:IAO_0000115>
+        <oboInOwl:created_by>cmattin</oboInOwl:created_by>
+        <oboInOwl:creation_date>2011-01-10T09:30:56Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>exposure_receptor</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>ExO:0000042</oboInOwl:id>
+        <rdfs:label>human individual</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ExO_0000042"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Being or characteristic of a single thing or person.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CTD:curators</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -366,6 +537,100 @@
         <owl:annotatedTarget>A method of putting liquid into the body with a syringe and a hollow needle that punctures the skin.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:hjd</oboInOwl:hasDbXref>
     </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ExO_0000077 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ExO_0000077">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ExO_0000003"/>
+        <oboInOwl:created_by>cmattin</oboInOwl:created_by>
+        <oboInOwl:creation_date>2011-01-11T01:29:49Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>exposure_outcome</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>ExO:0000077</oboInOwl:id>
+        <rdfs:label>biological response</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ExO_0000079 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ExO_0000079">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ExO_0000077"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ExO_0000103"/>
+        <obo:IAO_0000115>A disease is a pattern of abnormal functioning, or abnormal localization of normal functioning, and/or abnormal localization of constituents when compared to other members of that species.</obo:IAO_0000115>
+        <oboInOwl:created_by>cmattin</oboInOwl:created_by>
+        <oboInOwl:creation_date>2011-01-11T01:30:35Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>exposure_outcome</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>ExO:0000079</oboInOwl:id>
+        <rdfs:label>disease</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ExO_0000079"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A disease is a pattern of abnormal functioning, or abnormal localization of normal functioning, and/or abnormal localization of constituents when compared to other members of that species.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOExO:4</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MSH2010_2010_02_22:D004194</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UMLS:C0012634</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ExO_0000089 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ExO_0000089">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ExO_0000033"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ExO_0000042"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ExO_0000042"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>An attribute describing some aspect of an individual or human population.</obo:IAO_0000115>
+        <oboInOwl:created_by>cmattin</oboInOwl:created_by>
+        <oboInOwl:creation_date>2011-01-10T09:30:27Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>human_attribute</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>ExO:0000089</oboInOwl:id>
+        <rdfs:label>human attribute</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ExO_0000089"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>An attribute describing some aspect of an individual or human population.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CTD:curators</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ExO_0000101 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ExO_0000101">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ExO_0000077"/>
+        <obo:IAO_0000115>The assemblage of traits or outward appearance of an individual. It is the product of interactions between genes and between genes and the environment.</obo:IAO_0000115>
+        <oboInOwl:created_by>cgrondin</oboInOwl:created_by>
+        <oboInOwl:creation_date>2017-04-06T03:47:29Z</oboInOwl:creation_date>
+        <oboInOwl:hasDbXref>https://ncit.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI_Thesaurus&amp;version=16.07d&amp;code=C16977&amp;ns=NCI_Thesaurus&amp;type=properties&amp;key=1003504562&amp;b=1&amp;n=0&amp;vse=null</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace>biological_response</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>ExO:0000101</oboInOwl:id>
+        <rdfs:label>phenotype</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ExO_0000103 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ExO_0000103">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ExO_0000038"/>
+        <obo:IAO_0000115>Other conditions with the power to have an effect on health status.</obo:IAO_0000115>
+        <oboInOwl:created_by>cgrondin</oboInOwl:created_by>
+        <oboInOwl:creation_date>2017-04-06T03:47:29Z</oboInOwl:creation_date>
+        <oboInOwl:hasDbXref>https://ncit.nci.nih.gov/ncitbrowser/pages/concept_details.jsf?dictionary=NCI_Thesaurus&amp;version=16.07d&amp;code=C121660&amp;ns=NCI_Thesaurus&amp;type=properties&amp;key=n821927297&amp;b=1&amp;n=0&amp;vse=null</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace>health_status</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasRelatedSynonym>Influence</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:id>ExO:0000103</oboInOwl:id>
+        <rdfs:label>influencing factor</rdfs:label>
+    </owl:Class>
     
 
 

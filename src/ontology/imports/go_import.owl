@@ -11,9 +11,9 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/ecto/imports/go_import.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/ecto/releases/2021-03-16/imports/go_import.owl"/>
-        <dc:source rdf:resource="http://purl.obolibrary.org/obo/go/releases/2021-02-01/go.owl"/>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2021-03-16</owl:versionInfo>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/ecto/releases/2021-07-30/imports/go_import.owl"/>
+        <dc:source rdf:resource="http://purl.obolibrary.org/obo/go/releases/2021-07-02/go.owl"/>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2021-07-30</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -91,6 +91,14 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/go#goslim_drosophila -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/go#goslim_drosophila">
+        <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#SubsetProperty"/>
+    </owl:AnnotationProperty>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/go#goslim_flybase_ribbon -->
 
     <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/go#goslim_flybase_ribbon">
@@ -110,6 +118,14 @@
     <!-- http://purl.obolibrary.org/obo/go#goslim_metagenomics -->
 
     <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/go#goslim_metagenomics">
+        <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#SubsetProperty"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/go#goslim_mouse -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/go#goslim_mouse">
         <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#SubsetProperty"/>
     </owl:AnnotationProperty>
     
@@ -219,6 +235,12 @@
     
 
 
+    <!-- http://www.geneontology.org/formats/oboInOwl#shorthand -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#shorthand"/>
+    
+
+
     <!-- http://www.w3.org/2000/01/rdf-schema#comment -->
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#comment"/>
@@ -234,11 +256,210 @@
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000050 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000050">
+        <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <oboInOwl:hasDbXref>BFO:0000050</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace>external</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>part_of</oboInOwl:id>
+        <oboInOwl:shorthand>part_of</oboInOwl:shorthand>
+        <rdfs:label>part of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000051 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000051">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <oboInOwl:hasDbXref>BFO:0000051</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace>external</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>has_part</oboInOwl:id>
+        <oboInOwl:shorthand>has_part</oboInOwl:shorthand>
+        <rdfs:label>has part</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
     // Classes
     //
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GO_0003674 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0003674">
+        <obo:IAO_0000115>A molecular process that can be carried out by the action of a single macromolecular machine, usually via direct physical interactions with other molecular entities. Function in this sense denotes an action, or activity, that a gene product (or a complex) performs. These actions are described from two distinct but related perspectives: (1) biochemical activity, and (2) role as a component in a larger system/process.</obo:IAO_0000115>
+        <oboInOwl:hasAlternativeId>GO:0005554</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasExactSynonym>molecular function</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>molecular_function</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>GO:0003674</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_aspergillus"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_candida"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_chembl"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_generic"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_metagenomics"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_pir"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_plant"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_yeast"/>
+        <rdfs:comment>Note that, in addition to forming the root of the molecular function ontology, this term is recommended for use for the annotation of gene products whose molecular function is unknown. When this term is used for annotation, it indicates that no information was available about the molecular function of the gene product annotated as of the date the annotation was made; the evidence code &apos;no data&apos; (ND), is used to indicate this. Despite its name, this is not a type of &apos;function&apos; in the sense typically defined by upper ontologies such as Basic Formal Ontology (BFO). It is instead a BFO:process carried out by a single gene product or complex.</rdfs:comment>
+        <rdfs:label>molecular_function</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0003674"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A molecular process that can be carried out by the action of a single macromolecular machine, usually via direct physical interactions with other molecular entities. Function in this sense denotes an action, or activity, that a gene product (or a complex) performs. These actions are described from two distinct but related perspectives: (1) biochemical activity, and (2) role as a component in a larger system/process.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:pdt</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GO_0003824 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0003824">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0003674"/>
+        <obo:IAO_0000115>Catalysis of a biochemical reaction at physiological temperatures. In biologically catalyzed reactions, the reactants are known as substrates, and the catalysts are naturally occurring macromolecular substances known as enzymes. Enzymes possess specific binding sites for substrates, and are usually composed wholly or largely of protein, but RNA that has catalytic activity (ribozyme) is often also regarded as enzymatic.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>Wikipedia:Enzyme</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>enzyme activity</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>molecular_function</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>GO:0003824</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_agr"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_chembl"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_flybase_ribbon"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_metagenomics"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_pir"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_plant"/>
+        <rdfs:label>catalytic activity</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0003824"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Catalysis of a biochemical reaction at physiological temperatures. In biologically catalyzed reactions, the reactants are known as substrates, and the catalysts are naturally occurring macromolecular substances known as enzymes. Enzymes possess specific binding sites for substrates, and are usually composed wholly or largely of protein, but RNA that has catalytic activity (ribozyme) is often also regarded as enzymatic.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:vw</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN:0198506732</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0003824"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>enzyme activity</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:dph</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:tb</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GO_0004104 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0004104">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0052689"/>
+        <obo:IAO_0000115>Catalysis of the reaction: an acylcholine + H2O = choline + a carboxylic acid anion.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>EC:3.1.1.8</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>MetaCyc:CHOLINESTERASE-RXN</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>RHEA:21964</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace>molecular_function</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasRelatedSynonym>BtChoEase activity</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>acylcholine acylhydrolase activity</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>anticholineesterase activity</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>benzoylcholinesterase activity</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>butyrylcholine esterase activity</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>butyrylcholinesterase activity</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>choline esterase II (unspecific) activity</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>choline esterase activity</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>non-specific cholinesterase activity</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>propionylcholinesterase activity</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>pseudocholinesterase activity</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:id>GO:0004104</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_chembl"/>
+        <rdfs:label>cholinesterase activity</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004104"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>butyrylcholinesterase activity</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>EC:3.1.1.8</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004104"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>choline esterase II (unspecific) activity</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>EC:3.1.1.8</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004104"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>choline esterase activity</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>EC:3.1.1.8</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004104"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>non-specific cholinesterase activity</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>EC:3.1.1.8</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004104"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>propionylcholinesterase activity</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>EC:3.1.1.8</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004104"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>pseudocholinesterase activity</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>EC:3.1.1.8</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004104"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Catalysis of the reaction: an acylcholine + H2O = choline + a carboxylic acid anion.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>EC:3.1.1.8</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004104"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>BtChoEase activity</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>EC:3.1.1.8</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004104"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>acylcholine acylhydrolase activity</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>EC:3.1.1.8</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004104"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>anticholineesterase activity</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>EC:3.1.1.8</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004104"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>benzoylcholinesterase activity</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>EC:3.1.1.8</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0004104"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>butyrylcholine esterase activity</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>EC:3.1.1.8</oboInOwl:hasDbXref>
+    </owl:Axiom>
     
 
 
@@ -360,6 +581,131 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/GO_0016787 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0016787">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0003824"/>
+        <obo:IAO_0000115>Catalysis of the hydrolysis of various bonds, e.g. C-O, C-N, C-C, phosphoric anhydride bonds, etc. Hydrolase is the systematic name for any enzyme of EC class 3.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>EC:3.-.-.-</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Reactome:R-HSA-1236938</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Reactome:R-HSA-2029475</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Reactome:R-HSA-5694583</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Reactome:R-HSA-5695964</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Reactome:R-HSA-6786190</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Reactome:R-HSA-6788295</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Reactome:R-HSA-8938314</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Reactome:R-HSA-8952137</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace>molecular_function</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>GO:0016787</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_aspergillus"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_candida"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_chembl"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_metagenomics"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_mouse"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_pir"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_plant"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_yeast"/>
+        <rdfs:label>hydrolase activity</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0016787"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Catalysis of the hydrolysis of various bonds, e.g. C-O, C-N, C-C, phosphoric anhydride bonds, etc. Hydrolase is the systematic name for any enzyme of EC class 3.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN:0198506732</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0016787"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>Reactome:R-HSA-1236938</owl:annotatedTarget>
+        <rdfs:label>Partial proteolysis of antigen in phagolysosomes</rdfs:label>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0016787"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>Reactome:R-HSA-2029475</owl:annotatedTarget>
+        <rdfs:label>Production of AA by iPLA2 upon FCGR activation</rdfs:label>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0016787"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>Reactome:R-HSA-5694583</owl:annotatedTarget>
+        <rdfs:label>ABHD4 hydrolyses NAPE</rdfs:label>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0016787"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>Reactome:R-HSA-5695964</owl:annotatedTarget>
+        <rdfs:label>ABHD14B hydrolyses PNPB</rdfs:label>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0016787"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>Reactome:R-HSA-6786190</owl:annotatedTarget>
+        <rdfs:label>CMBL hydrolyses OM to OLMS</rdfs:label>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0016787"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>Reactome:R-HSA-6788295</owl:annotatedTarget>
+        <rdfs:label>HDHD1:Mg2+ dephosphorylates PURIDP</rdfs:label>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0016787"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>Reactome:R-HSA-8938314</owl:annotatedTarget>
+        <rdfs:label>ENPPs hydrolyse CoA-SH to PPANT, PAP</rdfs:label>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0016787"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>Reactome:R-HSA-8952137</owl:annotatedTarget>
+        <rdfs:label>Phospholipid phosphatase 6 hydrolyses Presqualene diphosphate to presqualene monophosphate</rdfs:label>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GO_0016788 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0016788">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0016787"/>
+        <obo:IAO_0000115>Catalysis of the hydrolysis of any ester bond.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>EC:3.1.-.-</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Reactome:R-HSA-162729</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Reactome:R-HSA-9023617</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Reactome:R-HSA-9023619</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>esterase activity</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>molecular_function</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>GO:0016788</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_chembl"/>
+        <rdfs:label>hydrolase activity, acting on ester bonds</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0016788"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Catalysis of the hydrolysis of any ester bond.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:jl</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0016788"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>Reactome:R-HSA-162729</owl:annotatedTarget>
+        <rdfs:label>uPAR-acyl-GPI + H2O -&gt; uPAR + long-chain fatty acid</rdfs:label>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0016788"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>Reactome:R-HSA-9023617</owl:annotatedTarget>
+        <rdfs:label>Butyrylcholinesterase hydrolyzes acyl Ghrelin</rdfs:label>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0016788"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>Reactome:R-HSA-9023619</owl:annotatedTarget>
+        <rdfs:label>Platelet-activating factor acetylhydrolase (PLA2G7) hydrolyzes acyl Ghrelin</rdfs:label>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/GO_0042755 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0042755">
@@ -397,6 +743,159 @@
         <owl:annotatedTarget>The specific behavior of an organism relating to the intake of liquids, especially water.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:curators</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:pr</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GO_0052689 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0052689">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0016788"/>
+        <obo:IAO_0000115>Catalysis of the hydrolysis of a carboxylic ester bond.</obo:IAO_0000115>
+        <oboInOwl:hasAlternativeId>GO:0004091</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasAlternativeId>GO:0004302</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasAlternativeId>GO:0004759</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasAlternativeId>GO:0016789</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasDbXref>EC:3.1.1.1</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>KEGG_REACTION:R00630</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>MetaCyc:CARBOXYLESTERASE-RXN</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>RHEA:21164</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Reactome:R-HSA-5693691</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Reactome:R-HSA-8937442</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Reactome:R-HSA-9619024</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>UM-BBD_reactionID:r1025</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>carboxylesterase activity</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>carboxylic acid esterase activity</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasNarrowSynonym>ali-esterase activity</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>alpha-carboxylesterase activity</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>cocaine esterase activity</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>esterase A</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>esterase B</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>procaine esterase activity</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>serine esterase activity</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>triacetin esterase</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>vitamin A esterase</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasOBONamespace>molecular_function</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasRelatedSynonym>B-esterase activity</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>carboxyesterase activity</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>carboxyl ester hydrolase activity</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>carboxylate esterase activity</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>carboxylic ester hydrolase activity</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>carboxylic esterase activity</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>nonspecific carboxylesterase activity</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:id>GO:0052689</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_drosophila"/>
+        <rdfs:label>carboxylic ester hydrolase activity</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0052689"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Catalysis of the hydrolysis of a carboxylic ester bond.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>EC:3.1.1.-</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>EC:3.1.1.1</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:curators</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0052689"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>Reactome:R-HSA-5693691</owl:annotatedTarget>
+        <rdfs:label>CES1 trimer.CES2 hydrolyse COCN to BEG</rdfs:label>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0052689"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>Reactome:R-HSA-8937442</owl:annotatedTarget>
+        <rdfs:label>CES3 hydrolyses CHEST to CHOL and LCFA(-)</rdfs:label>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0052689"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <owl:annotatedTarget>Reactome:R-HSA-9619024</owl:annotatedTarget>
+        <rdfs:label>CES1trimer hydrolyses ACEI pro-drugs to ACEIs</rdfs:label>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0052689"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
+        <owl:annotatedTarget>ali-esterase activity</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>EC:3.1.1.1</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0052689"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
+        <owl:annotatedTarget>alpha-carboxylesterase activity</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>EC:3.1.1.1</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0052689"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
+        <owl:annotatedTarget>cocaine esterase activity</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>EC:3.1.1.1</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0052689"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
+        <owl:annotatedTarget>esterase A</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>EC:3.1.1.1</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0052689"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
+        <owl:annotatedTarget>esterase B</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>EC:3.1.1.1</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0052689"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
+        <owl:annotatedTarget>procaine esterase activity</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>EC:3.1.1.1</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0052689"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
+        <owl:annotatedTarget>triacetin esterase</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>EC:3.1.1.1</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0052689"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
+        <owl:annotatedTarget>vitamin A esterase</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>EC:3.1.1.1</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0052689"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>B-esterase activity</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>EC:3.1.1.1</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0052689"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>carboxyesterase activity</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>EC:3.1.1.1</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0052689"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>carboxyl ester hydrolase activity</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>EC:3.1.1.1</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0052689"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>carboxylate esterase activity</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>EC:3.1.1.1</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0052689"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>carboxylic esterase activity</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>EC:3.1.1.1</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0052689"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>nonspecific carboxylesterase activity</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>EC:3.1.1.1</oboInOwl:hasDbXref>
     </owl:Axiom>
 </rdf:RDF>
 

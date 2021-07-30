@@ -7,6 +7,7 @@ Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 
 
 Ontology(<http://purl.obolibrary.org/obo/ecto.owl>
+Import(<http://purl.obolibrary.org/obo/mondo.owl>)
 Import(<http://purl.obolibrary.org/obo/ecto/components/bridge.owl>)
 Import(<http://purl.obolibrary.org/obo/ecto/components/ecto-xrefs.owl>)
 Import(<http://purl.obolibrary.org/obo/ecto/components/obsoletes.owl>)
@@ -20,19 +21,21 @@ Import(<http://purl.obolibrary.org/obo/ecto/imports/nbo_import.owl>)
 Import(<http://purl.obolibrary.org/obo/ecto/imports/ncbitaxon_import.owl>)
 Import(<http://purl.obolibrary.org/obo/ecto/imports/ncit_import.owl>)
 Import(<http://purl.obolibrary.org/obo/ecto/imports/npo_import.owl>)
-Import(<http://purl.obolibrary.org/obo/ecto/imports/pato_import.owl>)
 Import(<http://purl.obolibrary.org/obo/ecto/imports/ons_import.owl>)
+Import(<http://purl.obolibrary.org/obo/ecto/imports/pato_import.owl>)
 Import(<http://purl.obolibrary.org/obo/ecto/imports/ro_import.owl>)
 Import(<http://purl.obolibrary.org/obo/ecto/imports/uberon_import.owl>)
 Import(<http://purl.obolibrary.org/obo/ecto/imports/xco_import.owl>)
 Import(<http://purl.obolibrary.org/obo/ecto/patterns/definitions.owl>)
-
 Annotation(<http://purl.obolibrary.org/obo/IAO_0000700> "http://purl.obolibrary.org/obo/ExO_0000002")
 Annotation(<http://purl.org/dc/elements/1.1/description> "ECTO describes exposures to experimental treatments of plants and model organisms (e.g. exposures to modification of diet, lighting levels, temperature); exposures of humans or any other organisms to stressors through a variety of routes, for purposes of public health, environmental monitoring etc, stimuli, natural and experimental, any kind of environmental condition or change in condition that can be experienced by an organism or population of organisms on earth. The scope is very general and can include for example plant treatment regimens, as well as human clinical exposures (although these may better be handled by a more specialized ontology)."^^xsd:string)
 Annotation(<http://purl.org/dc/elements/1.1/title> "Environment Exposure Ontology"^^xsd:string)
 Annotation(<http://purl.org/dc/terms/license> <https://creativecommons.org/publicdomain/zero/1.0/>)
 
+Declaration(Class(<http://purl.obolibrary.org/obo/ECTO_0070022>))
+Declaration(Class(<http://purl.obolibrary.org/obo/ECTO_0070023>))
 Declaration(Class(<http://purl.obolibrary.org/obo/RO_0002310>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/ECTO_0070024>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000700>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/ecto#mrex>))
 Declaration(AnnotationProperty(<http://purl.org/dc/elements/1.1/description>))
@@ -46,6 +49,10 @@ Declaration(AnnotationProperty(rdfs:label))
 ############################
 #   Annotation Properties
 ############################
+
+# Annotation Property: <http://purl.obolibrary.org/obo/IAO_0000115> (definition)
+
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0000115> "definition"^^xsd:string)
 
 # Annotation Property: <http://purl.obolibrary.org/obo/ecto#mrex> (<http://purl.obolibrary.org/obo/ecto#mrex>)
 
@@ -61,7 +68,46 @@ AnnotationAssertion(rdfs:label <http://www.geneontology.org/formats/oboInOwl#Sub
 AnnotationAssertion(rdfs:label <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "database_cross_reference"^^xsd:string)
 
 
+############################
+#   Object Properties
+############################
+
+# Object Property: <http://purl.obolibrary.org/obo/ECTO_0070024> (has exposure medium)
+
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/date> <http://purl.obolibrary.org/obo/ECTO_0070024> "2021-07-30T22:26:57Z"^^xsd:dateTime)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/ECTO_0070024> <http://orcid.org/0000-0002-7463-6306>)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_0070024> "has exposure medium")
+SubObjectPropertyOf(<http://purl.obolibrary.org/obo/ECTO_0070024> <http://purl.obolibrary.org/obo/RO_0002244>)
 
 
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0000115> "definition"^^xsd:string)
+
+############################
+#   Classes
+############################
+
+# Class: <http://purl.obolibrary.org/obo/ECTO_0070022> (ingestion of apple)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0070022> "An exposure to apple via ingestion.")
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/date> <http://purl.obolibrary.org/obo/ECTO_0070022> "2021-07-30T22:03:34Z"^^xsd:dateTime)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/ECTO_0070022> <http://orcid.org/0000-0002-7463-6306>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0070022> "apple consumption")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0070022> "apple exposure via ingestion")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0070022> "apple ingestion")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0070022> "consumption of apple")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_0070022> "ingestion of apple")
+EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_0070022> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002242> <http://purl.obolibrary.org/obo/ExO_0000056>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/FOODON_00002473>)))
+SubClassOf(<http://purl.obolibrary.org/obo/ECTO_0070022> <http://purl.obolibrary.org/obo/ExO_0000002>)
+SubClassOf(<http://purl.obolibrary.org/obo/ECTO_0070022> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002240> <http://purl.obolibrary.org/obo/ExO_0000042>))
+
+# Class: <http://purl.obolibrary.org/obo/ECTO_0070023> (exposure to chlorpyrifos in apple via ingestion)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0070023> "An exposure to chlorpyrifos mixed in apple via ingestion")
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/date> <http://purl.obolibrary.org/obo/ECTO_0070023> "2021-07-30T22:16:30Z"^^xsd:dateTime)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/ECTO_0070023> <http://orcid.org/0000-0002-7463-6306>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0070023> "chlorpyrifos exposure in apple via ingestion")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_0070023> "exposure to chlorpyrifos in apple via ingestion")
+EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_0070023> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/ECTO_0070024> <http://purl.obolibrary.org/obo/FOODON_00002473>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002242> <http://purl.obolibrary.org/obo/ExO_0000056>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/CHEBI_34631>)))
+SubClassOf(<http://purl.obolibrary.org/obo/ECTO_0070023> <http://purl.obolibrary.org/obo/ECTO_9000633>)
+
+
 )
