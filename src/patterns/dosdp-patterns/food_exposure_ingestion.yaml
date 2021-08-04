@@ -1,5 +1,5 @@
-pattern_name: food_ingestion
-pattern_iri: http://purl.obolibrary.org/obo/ecto/patterns/food_ingestion.yaml
+pattern_name: food_exposure_ingestion
+pattern_iri: http://purl.obolibrary.org/obo/ecto/patterns/food_exposure_ingestion.yaml
 
 description: "exposures to a food material via the route of ingestion"
 
@@ -22,7 +22,7 @@ vars:
   stressor: "'food material'"
 
 name:
-  text: "ingestion of %s"
+  text: "exposure to %s via ingestion"
   vars:
     - stressor
 
@@ -31,18 +31,7 @@ annotations:
     text: "%s exposure via ingestion"
     vars:
       - stressor
-  - annotationProperty: exact_synonym
-    text: "%s ingestion"
-    vars:
-      - stressor
-  - annotationProperty: exact_synonym
-    text: "%s consumption"
-    vars:
-      - stressor
-  - annotationProperty: exact_synonym
-    text: "consumption of %s"
-    vars:
-      - stressor
+      
 def:
   text: "An exposure to %s via ingestion."
   vars:
