@@ -22,7 +22,7 @@ vars:
   stressor: "'food material'"
 
 name:
-  text: "ingestion of %s"
+  text: "exposure to %s via ingestion"
   vars:
     - stressor
 
@@ -30,19 +30,7 @@ annotations:
   - annotationProperty: exact_synonym
     text: "%s exposure via ingestion"
     vars:
-      - stressor
-  - annotationProperty: exact_synonym
-    text: "%s ingestion"
-    vars:
-      - stressor
-  - annotationProperty: exact_synonym
-    text: "%s consumption"
-    vars:
-      - stressor
-  - annotationProperty: exact_synonym
-    text: "consumption of %s"
-    vars:
-      - stressor
+      - stressor   
 def:
   text: "An exposure to %s via ingestion."
   vars:
