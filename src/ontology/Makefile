@@ -92,7 +92,7 @@ all_main: $(MAIN_FILES)
 ## By default this is the cross-product of IMPORT_MODULES x FORMATS
 
 
-IMPORTS =  chebi envo exo go iao ons maxo foodon nbo ncit ncbitaxon npo pato ro uberon xco
+IMPORTS =  chebi envo exo go iao ons maxo foodon nbo ncit ncbitaxon pato ro uberon xco
 
 IMPORT_ROOTS = $(patsubst %, imports/%_import, $(IMPORTS))
 IMPORT_OWL_FILES = $(foreach n,$(IMPORT_ROOTS), $(n).owl)
@@ -386,15 +386,6 @@ mirror/ncbitaxon.trigger: $(SRC)
 mirror/ncbitaxon.owl: mirror/ncbitaxon.trigger
 	if [ $(MIR) = true ] && [ $(IMP) = true ] && [ $(IMP_LARGE) = true ]; then $(ROBOT) convert -I http://purl.obolibrary.org/obo/ncbitaxon/subsets/taxslim.owl -o $@.tmp.owl && mv $@.tmp.owl $@; fi
 .PRECIOUS: mirror/ncbitaxon.owl
-
-
-## ONTOLOGY: npo
-## Copy of npo is re-downloaded whenever source changes
-mirror/npo.trigger: $(SRC)
-
-mirror/npo.owl: mirror/npo.trigger
-	if [ $(MIR) = true ] && [ $(IMP) = true ]; then $(ROBOT) convert -I $(URIBASE)/npo.owl -o $@.tmp.owl && mv $@.tmp.owl $@; fi
-.PRECIOUS: mirror/npo.owl
 
 
 ## ONTOLOGY: pato
