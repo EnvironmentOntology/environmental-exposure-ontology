@@ -63,10 +63,12 @@ mirror/npo.owl:
 	echo "!!!!!NPO currently skipped!"
 
 #https://github.com/EnvironmentOntology/envo/issues/1069
+#https://github.com/EnvironmentOntology/envo/issues/1314
 $(IMPORTDIR)/envo_import.owl: $(MIRRORDIR)/envo.owl $(IMPORTDIR)/envo_terms_combined.txt
 	if [ $(IMP) = true ]; then $(ROBOT) query -i $< --update ../sparql/preprocess-module.ru \
 		extract -T $(IMPORTDIR)/envo_terms_combined.txt --force true --copy-ontology-annotations true --individuals include --method BOT \
 		remove --term ENVO:01001479 --axioms equivalent  --preserve-structure false \
+		remove  --term RO:0000057 --term RO:0000057 --term RO:0000057 --term RO:0001015 --term RO:0000057 --term BFO:0000067 --trim true \
 		query --update ../sparql/inject-subset-declaration.ru --update ../sparql/inject-synonymtype-declaration.ru --update ../sparql/postprocess-module.ru \
 		annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) --output $@.tmp.owl && mv $@.tmp.owl $@; fi
 
