@@ -62,12 +62,22 @@ imports/npo_import.owl:
 mirror/npo.owl:
 	echo "!!!!!NPO currently skipped!"
 
+#https://github.com/EnvironmentOntology/envo/issues/1069
 $(IMPORTDIR)/envo_import.owl: $(MIRRORDIR)/envo.owl $(IMPORTDIR)/envo_terms_combined.txt
 	if [ $(IMP) = true ]; then $(ROBOT) query -i $< --update ../sparql/preprocess-module.ru \
 		extract -T $(IMPORTDIR)/envo_terms_combined.txt --force true --copy-ontology-annotations true --individuals include --method BOT \
 		remove --term ENVO:01001479 --axioms equivalent  --preserve-structure false \
 		query --update ../sparql/inject-subset-declaration.ru --update ../sparql/inject-synonymtype-declaration.ru --update ../sparql/postprocess-module.ru \
 		annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) --output $@.tmp.owl && mv $@.tmp.owl $@; fi
+
+# https://github.com/enpadasi/Ontology-for-Nutritional-Studies/issues/33
+$(IMPORTDIR)/ons_import.owl: $(MIRRORDIR)/ons.owl $(IMPORTDIR)/ons_terms_combined.txt
+	if [ $(IMP) = true ]; then $(ROBOT) query -i $< --update ../sparql/preprocess-module.ru \
+		extract -T $(IMPORTDIR)/ons_terms_combined.txt --force true --copy-ontology-annotations true --individuals include --method BOT \
+		remove --term RO:0002434 --term RO:0000052 --term RO:0002018 --term RO:0002233 --term RO:0002248 --term RO:0002434 --term RO:0002437 --term RO:0002501 --term RO:0002506 --term RO:0002507 --term RO:0002509 --term RO:0002574 --term RO:0002595 --trim true \
+		query --update ../sparql/inject-subset-declaration.ru --update ../sparql/inject-synonymtype-declaration.ru --update ../sparql/postprocess-module.ru \
+		annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) --output $@.tmp.owl && mv $@.tmp.owl $@; fi
+
 
 $(ONT)-full.owl: $(SRC) $(OTHER_SRC)
 	echo "!!!!!! FULL RELEASE IS OVERWRITTEN, REMOVING DISJOINTS - ecto.Makefile. See https://github.com/EnvironmentOntology/environmental-exposure-ontology/issues/79 !!!!!!"
