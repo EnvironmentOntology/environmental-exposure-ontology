@@ -62,9 +62,9 @@ imports/npo_import.owl:
 mirror/npo.owl:
 	echo "!!!!!NPO currently skipped!"
 
-$(IMPORTDIR)/envo_import.owl: $(MIRRORDIR)/envo_import.owl $(IMPORTDIR)/envo_import_terms_combined.txt
+$(IMPORTDIR)/envo_import.owl: $(MIRRORDIR)/envo.owl $(IMPORTDIR)/envo_terms_combined.txt
 	if [ $(IMP) = true ]; then $(ROBOT) query -i $< --update ../sparql/preprocess-module.ru \
-		extract -T $(IMPORTDIR)/envo_import_terms_combined.txt --force true --copy-ontology-annotations true --individuals include --method BOT \
+		extract -T $(IMPORTDIR)/envo_terms_combined.txt --force true --copy-ontology-annotations true --individuals include --method BOT \
 		remove --term ENVO:01001479 --axioms equivalent  --preserve-structure false /
 		query --update ../sparql/inject-subset-declaration.ru --update ../sparql/inject-synonymtype-declaration.ru --update ../sparql/postprocess-module.ru \
 		annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) --output $@.tmp.owl && mv $@.tmp.owl $@; fi
