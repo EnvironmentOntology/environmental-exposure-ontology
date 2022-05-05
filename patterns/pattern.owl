@@ -21,10 +21,13 @@ Declaration(Class(<http://purl.obolibrary.org/obo/ENVO_01001813>))
 Declaration(Class(<http://purl.obolibrary.org/obo/ENVO_02500000>))
 Declaration(Class(<http://purl.obolibrary.org/obo/ExO_0000002>))
 Declaration(Class(<http://purl.obolibrary.org/obo/ExO_0000055>))
+Declaration(Class(<http://purl.obolibrary.org/obo/ExO_0000056>))
+Declaration(Class(<http://purl.obolibrary.org/obo/FOODON_00002403>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0007610>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0000001>))
 Declaration(Class(<http://purl.obolibrary.org/obo/NBO_0000313>))
 Declaration(Class(<http://purl.obolibrary.org/obo/NCIT_C25193>))
+Declaration(Class(<http://purl.obolibrary.org/obo/NCIT_C43431>))
 Declaration(Class(<http://purl.obolibrary.org/obo/OBI_0100026>))
 Declaration(Class(<http://purl.obolibrary.org/obo/ONS_0000094>))
 Declaration(Class(<http://purl.obolibrary.org/obo/PATO_0000001>))
@@ -59,6 +62,7 @@ Declaration(Class(<http://purl.obolibrary.org/obo/ecto/patterns/exposure_to_medi
 Declaration(Class(<http://purl.obolibrary.org/obo/ecto/patterns/exposure_to_medical_action_route.yaml>))
 Declaration(Class(<http://purl.obolibrary.org/obo/ecto/patterns/exposure_to_occupation.yaml>))
 Declaration(Class(<http://purl.obolibrary.org/obo/ecto/patterns/exposure_to_organism.yaml>))
+Declaration(Class(<http://purl.obolibrary.org/obo/ecto/patterns/food_ingestion.yaml>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000050>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0000052>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002233>))
@@ -111,7 +115,7 @@ AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.ob
 AnnotationAssertion(<http://purl.org/dc/terms/title> <http://purl.obolibrary.org/obo/ecto/patterns/exposure_to_behavior.yaml> "exposure_to_behavior"^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ecto/patterns/exposure_to_behavior.yaml> "'behavior' exposure"^^xsd:string)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ecto/patterns/exposure_to_behavior.yaml> "exposure to 'behavior'"^^xsd:string)
-EquivalentClasses(<http://purl.obolibrary.org/obo/ecto/patterns/exposure_to_behavior.yaml> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/NBO_0000313>)))
+EquivalentClasses(<http://purl.obolibrary.org/obo/ecto/patterns/exposure_to_behavior.yaml> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/NCIT_C43431>)))
 
 # Class: <http://purl.obolibrary.org/obo/ecto/patterns/exposure_to_behavior_route.yaml> (exposure to 'behavior' via 'route')
 
@@ -193,12 +197,12 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynony
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ecto/patterns/exposure_to_disposition.yaml> "exposure to 'environmental disposition'"^^xsd:string)
 EquivalentClasses(<http://purl.obolibrary.org/obo/ecto/patterns/exposure_to_disposition.yaml> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/ENVO_01000452>)))
 
-# Class: <http://purl.obolibrary.org/obo/ecto/patterns/exposure_to_environmental_condition.yaml> (exposure to 'environmental condition' conditions)
+# Class: <http://purl.obolibrary.org/obo/ecto/patterns/exposure_to_environmental_condition.yaml> (exposure to 'environmental condition')
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ecto/patterns/exposure_to_environmental_condition.yaml> "A exposure event involving the interaction of an exposure receptor to the condition of 'environmental condition'."^^xsd:string)
 AnnotationAssertion(<http://purl.org/dc/terms/title> <http://purl.obolibrary.org/obo/ecto/patterns/exposure_to_environmental_condition.yaml> "exposure_to_environmental_condition"^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ecto/patterns/exposure_to_environmental_condition.yaml> "'environmental condition' exposure"^^xsd:string)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ecto/patterns/exposure_to_environmental_condition.yaml> "exposure to 'environmental condition' conditions"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ecto/patterns/exposure_to_environmental_condition.yaml> "exposure to 'environmental condition'"^^xsd:string)
 EquivalentClasses(<http://purl.obolibrary.org/obo/ecto/patterns/exposure_to_environmental_condition.yaml> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/ENVO_01000203>)))
 
 # Class: <http://purl.obolibrary.org/obo/ecto/patterns/exposure_to_environmental_material.yaml> (exposure to 'environmental material')
@@ -304,6 +308,14 @@ AnnotationAssertion(<http://purl.org/dc/terms/title> <http://purl.obolibrary.org
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ecto/patterns/exposure_to_organism.yaml> "'organism' exposure"^^xsd:string)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ecto/patterns/exposure_to_organism.yaml> "exposure to 'organism'"^^xsd:string)
 EquivalentClasses(<http://purl.obolibrary.org/obo/ecto/patterns/exposure_to_organism.yaml> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/OBI_0100026>)))
+
+# Class: <http://purl.obolibrary.org/obo/ecto/patterns/food_ingestion.yaml> (exposure to 'food material' via ingestion)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ecto/patterns/food_ingestion.yaml> "An exposure to 'food material' via ingestion."^^xsd:string)
+AnnotationAssertion(<http://purl.org/dc/terms/title> <http://purl.obolibrary.org/obo/ecto/patterns/food_ingestion.yaml> "food_ingestion"^^xsd:string)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ecto/patterns/food_ingestion.yaml> "'food material' exposure via ingestion"^^xsd:string)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ecto/patterns/food_ingestion.yaml> "exposure to 'food material' via ingestion"^^xsd:string)
+EquivalentClasses(<http://purl.obolibrary.org/obo/ecto/patterns/food_ingestion.yaml> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002242> <http://purl.obolibrary.org/obo/ExO_0000056>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/FOODON_00002403>)))
 
 
 )

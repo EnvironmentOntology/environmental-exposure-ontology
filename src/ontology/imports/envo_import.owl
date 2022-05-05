@@ -17,9 +17,9 @@
      xmlns:taxslim="http://purl.obolibrary.org/obo/ncbitaxon/subsets/taxslim#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/ecto/imports/envo_import.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/ecto/releases/2022-04-06/imports/envo_import.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/ecto/releases/2022-05-04/imports/envo_import.owl"/>
         <dc:source rdf:resource="http://purl.obolibrary.org/obo/envo/releases/2021-05-14/envo.owl"/>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2022-04-06</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2022-05-04</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -195,9 +195,65 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/ncbitaxon/subsets/taxslim#blast_name -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/ncbitaxon/subsets/taxslim#blast_name">
+        <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#SynonymTypeProperty"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ncbitaxon/subsets/taxslim#common_name -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/ncbitaxon/subsets/taxslim#common_name">
+        <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#SynonymTypeProperty"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ncbitaxon/subsets/taxslim#genbank_common_name -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/ncbitaxon/subsets/taxslim#genbank_common_name">
+        <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#SynonymTypeProperty"/>
+    </owl:AnnotationProperty>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/ncbitaxon/subsets/taxslim#has_rank -->
 
     <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/ncbitaxon/subsets/taxslim#has_rank"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ncbitaxon/subsets/taxslim#synonym -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/ncbitaxon/subsets/taxslim#synonym">
+        <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#SynonymTypeProperty"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/po#Japanese -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/po#Japanese">
+        <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#SynonymTypeProperty"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/po#Plural -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/po#Plural">
+        <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#SynonymTypeProperty"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/po#Spanish -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/po#Spanish">
+        <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#SynonymTypeProperty"/>
+    </owl:AnnotationProperty>
     
 
 
@@ -279,12 +335,6 @@
     
 
 
-    <!-- http://purl.org/dc/terms/title -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
-    
-
-
     <!-- http://schema.org/image -->
 
     <owl:AnnotationProperty rdf:about="http://schema.org/image"/>
@@ -296,6 +346,12 @@
     <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#SubsetProperty">
         <rdfs:label>subset_property</rdfs:label>
     </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#SynonymTypeProperty -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#SynonymTypeProperty"/>
     
 
 
@@ -552,18 +608,6 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
     
 
 
-    <!-- http://purl.obolibrary.org/obo/BFO_0000067 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000067">
-        <obo:IAO_0000111 xml:lang="en">site of</obo:IAO_0000111>
-        <obo:IAO_0000115 xml:lang="en">[copied from inverse property &apos;occurs in&apos;] b occurs_in c =def b is a process and c is a material entity or immaterial entity&amp; there exists a spatiotemporal region r and b occupies_spatiotemporal_region r.&amp; forall(t) if b exists_at t then c exists_at t &amp; there exist spatial regions s and s’ where &amp; b spatially_projects_onto s at t&amp; c is occupies_spatial_region s’ at t&amp; s is a proper_continuant_part_of s’ at t</obo:IAO_0000115>
-        <rdfs:comment>Paraphrase of definition: a relation between an independent continuant and a process, in which the process takes place entirely within the independent continuant</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/bfo.owl"/>
-        <rdfs:label xml:lang="en">contains process</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/ENVO_01001307 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/ENVO_01001307">
@@ -642,22 +686,6 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
     
 
 
-    <!-- http://purl.obolibrary.org/obo/RO_0000057 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0000057">
-        <obo:IAO_0000111 xml:lang="en">has participant</obo:IAO_0000111>
-        <obo:IAO_0000112 xml:lang="en">this blood coagulation has participant this blood clot</obo:IAO_0000112>
-        <obo:IAO_0000112 xml:lang="en">this investigation has participant this investigator</obo:IAO_0000112>
-        <obo:IAO_0000112 xml:lang="en">this process has participant this input material (or this output material)</obo:IAO_0000112>
-        <obo:IAO_0000115 xml:lang="en">a relation between a process and a continuant, in which the continuant is somehow involved in the process</obo:IAO_0000115>
-        <obo:IAO_0000116 xml:lang="en">Has_participant is a primitive instance-level relation between a process, a continuant, and a time at which the continuant participates in some way in the process. The relation obtains, for example, when this particular process of oxygen exchange across this particular alveolar membrane has_participant this particular sample of hemoglobin at this particular time.</obo:IAO_0000116>
-        <obo:IAO_0000118 xml:lang="en">has_participant</obo:IAO_0000118>
-        <dc:source>http://www.obofoundry.org/ro/#OBO_REL:has_participant</dc:source>
-        <rdfs:label xml:lang="en">has participant</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/RO_0000085 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0000085">
@@ -709,21 +737,6 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
         <obo:IAO_0000232>This relation is taken from the RO2005 version of RO. It may be obsoleted and replaced by relations with different definitions. See also the &apos;develops from&apos; family of relations.</obo:IAO_0000232>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/ro/subsets#ro-eco"/>
         <rdfs:label xml:lang="en">derives from</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/RO_0001015 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0001015">
-        <obo:IAO_0000111 xml:lang="en">is location of</obo:IAO_0000111>
-        <obo:IAO_0000112 xml:lang="en">my head is the location of my brain</obo:IAO_0000112>
-        <obo:IAO_0000112 xml:lang="en">this cage is the location of this rat</obo:IAO_0000112>
-        <obo:IAO_0000115 xml:lang="en">a relation between two independent continuants, the location and the target, in which the target is entirely within the location</obo:IAO_0000115>
-        <obo:IAO_0000116 xml:lang="en">Most location relations will only hold at certain times, but this is difficult to specify in OWL. See https://code.google.com/p/obo-relations/wiki/ROAndTime</obo:IAO_0000116>
-        <obo:IAO_0000118 xml:lang="en">location_of</obo:IAO_0000118>
-        <obo:RO_0001900 rdf:resource="http://purl.obolibrary.org/obo/RO_0001901"/>
-        <rdfs:label xml:lang="en">location of</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1076,7 +1089,6 @@ boundary_of: http://purl.obolibrary.org/obo/RO_0002000</obo:IAO_0000115>
     <!-- http://purl.obolibrary.org/obo/RO_0002233 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002233">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000125"/>
         <obo:IAO_0000115>p has input c iff: p is a process, c is a material entity, c is a participant in p, c is present at the start of p, and the state of c is modified during p.</obo:IAO_0000115>
         <obo:IAO_0000117>Chris Mungall</obo:IAO_0000117>
@@ -1093,7 +1105,6 @@ boundary_of: http://purl.obolibrary.org/obo/RO_0002000</obo:IAO_0000115>
     <!-- http://purl.obolibrary.org/obo/RO_0002234 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002234">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000125"/>
         <obo:IAO_0000115>p has output c iff c is a participant in p, c is present at the end of p, and c is not present at the beginning of p.</obo:IAO_0000115>
         <obo:IAO_0000117>Chris Mungall</obo:IAO_0000117>
@@ -2889,6 +2900,15 @@ Each of these 3 primitives can be composed to yield a cross-product of different
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_25107">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_22313"/>
         <rdfs:label>magnesium atom</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_25108 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_25108">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33299"/>
+        <rdfs:label>magnesium molecular entity</rdfs:label>
     </owl:Class>
     
 
@@ -7502,7 +7522,7 @@ Each of these 3 primitives can be composed to yield a cross-product of different
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000020"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A body of water or other liquid of considerable size contained in a depression on a landmass.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://en.wikipedia.org/wiki/Lake</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Lake</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000020"/>
@@ -8263,12 +8283,6 @@ Each of these 3 primitives can be composed to yield a cross-product of different
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00000062">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000408"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0001015"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_9606"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>Place or area with clustered or scattered buildings and a permanent human population.</obo:IAO_0000115>
         <oboInOwl:hasBroadSynonym>place</oboInOwl:hasBroadSynonym>
         <oboInOwl:hasDbXref>FTT:1097</oboInOwl:hasDbXref>
@@ -9523,7 +9537,7 @@ Each of these 3 primitives can be composed to yield a cross-product of different
         <oboInOwl:hasDbXref>TGN:21641</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>TGN:21642</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>TGN:21645</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://en.wikipedia.org/wiki/Forest</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Forest</oboInOwl:hasDbXref>
         <oboInOwl:hasRelatedSynonym>forest</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym>wood</oboInOwl:hasRelatedSynonym>
         <rdfs:comment>The definitions of forest can vary greatly, and different classes will be needed to support the major categories. Tree cover alone is not enough to distinguish between forests and plantations. The international definition proposed by the 2010 FAO Forestry Resource Assessment: &quot;land spanning more than 0.5 ha with trees higher than 5 metres and canopy cover of more than 10 percent, or trees able to reach these thresholds in situ . It does not include land that is predominantly under agricultural or urban land use.&quot; - FAO.  2010. Global forest resources assessment 2010, Main report, FAO Forestry Paper 163. Rome.</rdfs:comment>
@@ -9533,7 +9547,7 @@ Each of these 3 primitives can be composed to yield a cross-product of different
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000111"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>An area with a high density of trees. A small forest may be called a wood.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://en.wikipedia.org/wiki/Forest</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Forest</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000111"/>
@@ -10320,13 +10334,13 @@ Each of these 3 primitives can be composed to yield a cross-product of different
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A zone beneath the land surface and above the level of permanent groundwater or phreatic zone in which water has a hydraulic head less than atmospheric pressure and is retained by a combination of adhesion and capillary action.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://wasg.iinet.net.au/terminol.html</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://en.wikipedia.org/wiki/Vadose_zone</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Vadose_zone</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000328"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>unsaturated zone</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://en.wikipedia.org/wiki/Vadose_zone</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Vadose_zone</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -10359,7 +10373,7 @@ Each of these 3 primitives can be composed to yield a cross-product of different
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>A compound astronomical body part which is located beneath the land surface and in which all interstices are filled with water that has a hydraulic head greater than atmospheric pressure due to the weight of overlying groundwater.</obo:IAO_0000115>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://en.wikipedia.org/wiki/Phreatic_zone</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Phreatic_zone</oboInOwl:hasDbXref>
         <oboInOwl:hasRelatedSynonym>zone of saturation</oboInOwl:hasRelatedSynonym>
         <rdfs:label>phreatic zone</rdfs:label>
     </owl:Class>
@@ -10368,13 +10382,13 @@ Each of these 3 primitives can be composed to yield a cross-product of different
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A compound astronomical body part which is located beneath the land surface and in which all interstices are filled with water that has a hydraulic head greater than atmospheric pressure due to the weight of overlying groundwater.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://wasg.iinet.net.au/terminol.html</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://en.wikipedia.org/wiki/Phreatic_zone</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Phreatic_zone</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000329"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>zone of saturation</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://en.wikipedia.org/wiki/Phreatic_zone</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Phreatic_zone</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -10484,24 +10498,7 @@ Each of these 3 primitives can be composed to yield a cross-product of different
     <!-- http://purl.obolibrary.org/obo/ENVO_00000397 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00000397">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_00000395"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0001015"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000020"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000395"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0001015"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000020"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <oboInOwl:hasDbXref>FTT:233</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>FTT:464</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Geonames:H.CHNL</oboInOwl:hasDbXref>
@@ -11502,7 +11499,7 @@ The lower boundary that separates soil from the nonsoil underneath is most diffi
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_0010001"/>
         <obo:IAO_0000115>The residual semi-solid material left from domestic or industrial processes, or wastewater treatment processes.</obo:IAO_0000115>
         <oboInOwl:hasDbXref>EcoLexicon:sludge</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Sludge</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://en.wikipedia.org/wiki/Sludge</oboInOwl:hasDbXref>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/envo#EnvO-Lite-GSC"/>
         <rdfs:label>sludge</rdfs:label>
     </owl:Class>
@@ -11510,7 +11507,7 @@ The lower boundary that separates soil from the nonsoil underneath is most diffi
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00002044"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>The residual semi-solid material left from domestic or industrial processes, or wastewater treatment processes.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Sludge</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://en.wikipedia.org/wiki/Sludge</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -11588,7 +11585,7 @@ The lower boundary that separates soil from the nonsoil underneath is most diffi
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00002059"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A treated form of sludge, sometimes used as a fertilizer in agriculture.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Sludge</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://en.wikipedia.org/wiki/Sludge</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -14576,13 +14573,13 @@ The lower boundary that separates soil from the nonsoil underneath is most diffi
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000242"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A scrubland which is located in a desert.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ORCID:0000-0001-8743-9574</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ORCID:0000-0001-8743-9574</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000242"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>desert scrub</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ORCID:0000-0001-8743-9574</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ORCID:0000-0001-8743-9574</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -15922,7 +15919,7 @@ https://en.wikipedia.org/wiki/  Ecozones correspond to the floristic kingdoms of
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000340"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>An altitudinal condition which inheres in a bearer by virtue of the bearer having a monthly mean temperature is less than 10 degrees Celsius and being located at altitudes above the tree line and below the snowline.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Altitudinal_zonation</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://en.wikipedia.org/wiki/Altitudinal_zonation</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -15942,13 +15939,13 @@ https://en.wikipedia.org/wiki/  Ecozones correspond to the floristic kingdoms of
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000342"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>An altitudinal condition which inheres in a bearer by virtue of the bearer being located at an altitude between mid-altitude forests and the tree line.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Altitudinal_zonation</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://en.wikipedia.org/wiki/Altitudinal_zonation</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000342"/>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
         <owl:annotatedTarget>The exact level of the tree line varies with local climate, but typically the tree line is found where mean monthly soil temperatures never exceed 10.0 degrees C and the mean annual soil temperatures are around 6.7 degrees C. In the tropics, this region is typified by montane rain forest (above 3,000 ft) while at higher latitudes coniferous forests often dominate.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Altitudinal_zonation</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://en.wikipedia.org/wiki/Altitudinal_zonation</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -15967,7 +15964,7 @@ https://en.wikipedia.org/wiki/  Ecozones correspond to the floristic kingdoms of
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000343"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>An altitudinal condition is an environmental condition in which ranges of factors such as temperature, humidity, soil composition, solar irradiation, and tree density vary with ranges in altitude.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Altitudinal_zonation</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://en.wikipedia.org/wiki/Altitudinal_zonation</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -16514,7 +16511,7 @@ https://en.wikipedia.org/wiki/  Ecozones correspond to the floristic kingdoms of
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000462"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Masonry cement is a substance used in construction that has the disposition to set and harden and thus may be used to bind materials together.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://en.wikipedia.org/wiki/Cement</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Cement</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -17342,18 +17339,6 @@ https://en.wikipedia.org/wiki/  Ecozones correspond to the floristic kingdoms of
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_03000010"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000247"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000638"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000648"/>
             </owl:Restriction>
@@ -17633,24 +17618,7 @@ https://en.wikipedia.org/wiki/  Ecozones correspond to the floristic kingdoms of
     <!-- http://purl.obolibrary.org/obo/ENVO_01000650 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000650">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_00000395"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0001015"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000023"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000395"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0001015"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000023"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:label xml:lang="en">stream channel</rdfs:label>
     </owl:Class>
     
@@ -17660,12 +17628,6 @@ https://en.wikipedia.org/wiki/  Ecozones correspond to the floristic kingdoms of
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000652">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000650"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0001015"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000022"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:label xml:lang="en">river channel</rdfs:label>
     </owl:Class>
     
@@ -17846,12 +17808,6 @@ https://en.wikipedia.org/wiki/  Ecozones correspond to the floristic kingdoms of
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000669"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002427"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001093"/>
             </owl:Restriction>
@@ -17978,20 +17934,6 @@ https://en.wikipedia.org/wiki/  Ecozones correspond to the floristic kingdoms of
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000689">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000981"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
-                <owl:someValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_00000015"/>
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_00000016"/>
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_00000020"/>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>A tsunami is a process during which a series of waves is generated in a water body, typically an ocean or large lake, by the displacement of a large volume of water. Earthquakes, volcanic eruptions and other underwater explosions (including detonations of underwater nuclear devices), landslides, glacier calvings, meteorite impacts and other disturbances above or below water all have the potential to generate a tsunami.</obo:IAO_0000115>
         <oboInOwl:hasExactSynonym>seismic sea wave</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>tidal wave</oboInOwl:hasExactSynonym>
@@ -18023,28 +17965,6 @@ https://en.wikipedia.org/wiki/  Ecozones correspond to the floristic kingdoms of
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_03000016"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_00002000"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
-                <owl:someValuesFrom>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_00010483"/>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000086"/>
-                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0001546"/>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>Mass wasting is the geomorphic process by which solid environmental material such as soil, sand, regolith, and/or rock move downslope typically as a mass, largely under the force of gravity, but frequently affected by water and water content as in submarine environments and mudslides.</obo:IAO_0000115>
         <oboInOwl:hasBroadSynonym>mass movement</oboInOwl:hasBroadSynonym>
         <oboInOwl:hasExactSynonym>slope movement</oboInOwl:hasExactSynonym>
@@ -18066,23 +17986,6 @@ https://en.wikipedia.org/wiki/  Ecozones correspond to the floristic kingdoms of
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000692">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000690"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
-                <owl:someValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_00000194"/>
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_00001995"/>
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_00001998"/>
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_00002007"/>
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_01000001"/>
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_01000017"/>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>A landslide is a process whereby a large mass of earth and rocks moves down a hill or a mountainside.</obo:IAO_0000115>
         <oboInOwl:hasDbXref>GEMET:http://www.eionet.europa.eu/gemet/concept/4668</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>landslip</oboInOwl:hasExactSynonym>
@@ -18102,22 +18005,6 @@ https://en.wikipedia.org/wiki/  Ecozones correspond to the floristic kingdoms of
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000695">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000690"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
-                <owl:someValuesFrom>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_00010483"/>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002473"/>
-                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000001"/>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <oboInOwl:inSubset>environmental_hazards</oboInOwl:inSubset>
         <rdfs:label xml:lang="en">mudslide</rdfs:label>
     </owl:Class>
@@ -18225,39 +18112,6 @@ https://en.wikipedia.org/wiki/  Ecozones correspond to the floristic kingdoms of
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000707">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_02500002"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000687"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
-                <owl:someValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_00000015"/>
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_00000016"/>
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_00000020"/>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
-                <owl:someValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_00000020"/>
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_00001999"/>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>Coastal flooding is a process in which normally dry, low-lying land near a coast is flooded by sea water.</obo:IAO_0000115>
         <oboInOwl:inSubset>environmental_hazards</oboInOwl:inSubset>
         <rdfs:label xml:lang="en">coastal flooding</rdfs:label>
@@ -18293,12 +18147,6 @@ https://en.wikipedia.org/wiki/  Ecozones correspond to the floristic kingdoms of
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000709">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_02500002"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000309"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>Flash flooding is a process in which low-lying land is inundated with water for a short period of time and are usually the result of precipitation or a breach in the container of a water body.</obo:IAO_0000115>
         <oboInOwl:inSubset>environmental_hazards</oboInOwl:inSubset>
         <rdfs:comment>Flash floods generally last no more than six hours. http://www.srh.noaa.gov/mrx/hydro/flooddef.php</rdfs:comment>
@@ -18459,19 +18307,6 @@ https://en.wikipedia.org/wiki/  Ecozones correspond to the floristic kingdoms of
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000717">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_02500002"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
-                <owl:someValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_00000086"/>
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_00000309"/>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>Areal flooding is a flooding process in which flat or low-lying areas become inundated with water due to water input exceeding infiltration, evaporation, or run off.</obo:IAO_0000115>
         <oboInOwl:inSubset>environmental_hazards</oboInOwl:inSubset>
         <rdfs:label xml:lang="en">areal flooding</rdfs:label>
@@ -18489,19 +18324,6 @@ https://en.wikipedia.org/wiki/  Ecozones correspond to the floristic kingdoms of
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000718">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_02500002"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
-                <owl:someValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_00000856"/>
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_01000248"/>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>Urban flooding is a flooding process in which land or property in a built environment, particularly in more densely populated areas, is inundated due to the rate of water input exceeding that of water drainage provided by the environment&apos;s drainage systems.</obo:IAO_0000115>
         <obo:IAO_0000116>Relevant to built environments and can be linked to urban flows. Also relevant to water and sanitation SDGs.</obo:IAO_0000116>
         <oboInOwl:inSubset>environmental_hazards</oboInOwl:inSubset>
@@ -18625,7 +18447,7 @@ https://en.wikipedia.org/wiki/  Ecozones correspond to the floristic kingdoms of
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000739"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>An environmental system which can sustain and allow the growth of an ecological population.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EnvO:EnvO</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>EnvO:EnvO</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -18677,12 +18499,6 @@ https://en.wikipedia.org/wiki/  Ecozones correspond to the floristic kingdoms of
                         </owl:unionOf>
                     </owl:Class>
                 </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000635"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>A process in which natural ecosystems present over an expanse of land are removed and replaced with anthropogenic ecosystems.</obo:IAO_0000115>
@@ -18968,12 +18784,6 @@ https://en.wikipedia.org/wiki/  Ecozones correspond to the floristic kingdoms of
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_03000010"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_00010483"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>A planned process during which a portion of environmental material is removed from a material entity.</obo:IAO_0000115>
         <obo:IAO_0000116>This should be an OBI planned process. Pending import.</obo:IAO_0000116>
         <rdfs:comment>Created for SDGIO and intended to be a more general form of resource extraction process.</rdfs:comment>
@@ -19004,12 +18814,6 @@ https://en.wikipedia.org/wiki/  Ecozones correspond to the floristic kingdoms of
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000792">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001747"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000797"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>A process whereby a large volume of gas moves due to a disequilibrium of physical forces.</obo:IAO_0000115>
         <oboInOwl:hasRelatedSynonym>wind</oboInOwl:hasRelatedSynonym>
         <oboInOwl:inSubset>envoAtmo</oboInOwl:inSubset>
@@ -19443,18 +19247,6 @@ https://en.wikipedia.org/wiki/  Ecozones correspond to the floristic kingdoms of
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000830">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000703"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000829"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000832"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>A hydrological precipitation process in which atmospheric water vapour condenses to form droplets of liquid water massive enough to fall to a planetary surface due to the planet&apos;s gravity.</obo:IAO_0000115>
         <oboInOwl:hasBroadSynonym>rain fall</oboInOwl:hasBroadSynonym>
         <oboInOwl:hasBroadSynonym>rainfall</oboInOwl:hasBroadSynonym>
@@ -19710,12 +19502,6 @@ https://en.wikipedia.org/wiki/  Ecozones correspond to the floristic kingdoms of
                         </owl:intersectionOf>
                     </owl:Class>
                 </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000155"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -20129,12 +19915,6 @@ https://en.wikipedia.org/wiki/  Ecozones correspond to the floristic kingdoms of
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000895">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000703"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000406"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>A hydrological process in which irregular aggregates of snow fall to a planetary surface.</obo:IAO_0000115>
         <oboInOwl:hasExactSynonym>snow fall</oboInOwl:hasExactSynonym>
         <oboInOwl:inSubset>environmental_hazards</oboInOwl:inSubset>
@@ -20148,22 +19928,6 @@ https://en.wikipedia.org/wiki/  Ecozones correspond to the floristic kingdoms of
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000896">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000830"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
-                <owl:someValuesFrom>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_01000832"/>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000086"/>
-                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0001985"/>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>Rainfall which occurs when the temperature of a planetary surface and its surrounding atmosphere are below the freezing point of water, resulting in supercooled raindrops which freeze upon impact with solid surfaces.</obo:IAO_0000115>
         <oboInOwl:hasAlternativeId>METAR:FZRA</oboInOwl:hasAlternativeId>
         <oboInOwl:hasBroadSynonym>freezing rain</oboInOwl:hasBroadSynonym>
@@ -20396,29 +20160,6 @@ https://en.wikipedia.org/wiki/  Ecozones correspond to the floristic kingdoms of
     <!-- http://purl.obolibrary.org/obo/ENVO_01000951 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000951">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_01000254"/>
-                    <owl:Class>
-                        <owl:complementOf>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000067"/>
-                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000952"/>
-                            </owl:Restriction>
-                        </owl:complementOf>
-                    </owl:Class>
-                    <owl:Class>
-                        <owl:complementOf>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002354"/>
-                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000952"/>
-                            </owl:Restriction>
-                        </owl:complementOf>
-                    </owl:Class>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000254"/>
         <obo:IAO_0000115>An environmental system in which minimal to no anthropisation has occurred and non-human agents are the primary determinants of the system&apos;s dynamics and composition.</obo:IAO_0000115>
         <obo:IAO_0000118>non-anthropised environment</obo:IAO_0000118>
@@ -20582,12 +20323,6 @@ https://en.wikipedia.org/wiki/  Ecozones correspond to the floristic kingdoms of
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000981">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001747"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000815"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>A process whereby a volume of liquid moves due to a disequilibrium of physical forces.</obo:IAO_0000115>
         <oboInOwl:inSubset>envoPolar</oboInOwl:inSubset>
         <rdfs:comment>This class can refer to the flow of any material in a liquid phase.</rdfs:comment>
@@ -20607,12 +20342,6 @@ https://en.wikipedia.org/wiki/  Ecozones correspond to the floristic kingdoms of
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000982">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000981"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_02500031"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_00002006"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>A process during which a volume of water is transported due to a disequilibria in physical forces.</obo:IAO_0000115>
         <oboInOwl:inSubset>environmental_hazards</oboInOwl:inSubset>
         <rdfs:label xml:lang="en">water flow process</rdfs:label>
@@ -21122,18 +20851,6 @@ https://en.wikipedia.org/wiki/  Ecozones correspond to the floristic kingdoms of
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01001023">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001852"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_36342"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_00010483"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>A process during which energy is emitted or transmitted in the form of waves or particles through space or a material medium.</obo:IAO_0000115>
         <obo:IAO_0000116>Requires addition of waves for full axiomatisation. This should be linked to &quot;subatomic particle&quot; with an &quot;or&quot;. Note that ENVO represents space as an environmental material (a hard vacuum with sparse material inclusions).</obo:IAO_0000116>
         <oboInOwl:inSubset>environmental_hazards</oboInOwl:inSubset>
@@ -22268,24 +21985,7 @@ https://en.wikipedia.org/wiki/  Ecozones correspond to the floristic kingdoms of
     <!-- http://purl.obolibrary.org/obo/ENVO_01001093 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01001093">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_03000010"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001097"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_03000010"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001097"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>A process during which pieces of a planetary crust and uppermost mantle move.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">tectonic movement</rdfs:label>
     </owl:Class>
@@ -23130,12 +22830,6 @@ https://en.wikipedia.org/wiki/  Ecozones correspond to the floristic kingdoms of
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01001170">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_02500026"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_02500027"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001110"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>A process during which an ecosystem, its parts, or the processes it participates in are modified by human intervention to accomplish an objective.</obo:IAO_0000115>
         <oboInOwl:hasExactSynonym>ecosystem management</oboInOwl:hasExactSynonym>
         <oboInOwl:hasRelatedSynonym xml:lang="de">Umweltmaßnahme</oboInOwl:hasRelatedSynonym>
@@ -23162,18 +22856,6 @@ https://en.wikipedia.org/wiki/  Ecozones correspond to the floristic kingdoms of
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01001174">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001795"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001167"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PCO_0000002"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002427"/>
@@ -24705,22 +24387,6 @@ https://en.wikipedia.org/wiki/  Ecozones correspond to the floristic kingdoms of
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000877"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
-                <owl:someValuesFrom>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_01001300"/>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000086"/>
-                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0002268"/>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002427"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001748"/>
             </owl:Restriction>
@@ -24845,12 +24511,6 @@ https://en.wikipedia.org/wiki/  Ecozones correspond to the floristic kingdoms of
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000063"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000067"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000982"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -25033,18 +24693,6 @@ https://en.wikipedia.org/wiki/  Ecozones correspond to the floristic kingdoms of
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01001346">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_03000010"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_00010483"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000638"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>An action of exogenic processes (such as water flow or wind) which remove environmental material from one location on the surface of an astronomical body, transporting it to another location where it is deposited.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">erosion</rdfs:label>
     </owl:Class>
@@ -25682,25 +25330,6 @@ https://en.wikipedia.org/wiki/  Ecozones correspond to the floristic kingdoms of
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01001429">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000743"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000446"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
-                <owl:someValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_01000313"/>
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_01000951"/>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>An anthropisation process during which terrestrial environments - natural or anthropised - or parts thereof are altered to facilitate human activities such as agriculture, settlement, or commerce.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0002-4366-3088"/>
         <oboInOwl:hasExactSynonym>land conversion</oboInOwl:hasExactSynonym>
@@ -25766,25 +25395,6 @@ https://en.wikipedia.org/wiki/  Ecozones correspond to the floristic kingdoms of
     <!-- http://purl.obolibrary.org/obo/ENVO_01001431 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01001431">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_01001436"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
-                        <owl:someValuesFrom>
-                            <owl:Class>
-                                <owl:unionOf rdf:parseType="Collection">
-                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_00000446"/>
-                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_01000635"/>
-                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_01001226"/>
-                                </owl:unionOf>
-                            </owl:Class>
-                        </owl:someValuesFrom>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001436"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -25795,20 +25405,6 @@ https://en.wikipedia.org/wiki/  Ecozones correspond to the floristic kingdoms of
                             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_01000743"/>
                             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_01001429"/>
                             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_02500005"/>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
-                <owl:someValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_00000446"/>
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_01000635"/>
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_01001226"/>
                         </owl:unionOf>
                     </owl:Class>
                 </owl:someValuesFrom>
@@ -25832,25 +25428,6 @@ https://en.wikipedia.org/wiki/  Ecozones correspond to the floristic kingdoms of
     <!-- http://purl.obolibrary.org/obo/ENVO_01001433 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01001433">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_01001437"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
-                        <owl:someValuesFrom>
-                            <owl:Class>
-                                <owl:unionOf rdf:parseType="Collection">
-                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_00000446"/>
-                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_01000635"/>
-                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_01001226"/>
-                                </owl:unionOf>
-                            </owl:Class>
-                        </owl:someValuesFrom>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001431"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001437"/>
         <obo:IAO_0000115>A land use process during which materials of economic value are extracted from a planet, usually from an orebody, lode, vein, seam, reef or placer deposit.</obo:IAO_0000115>
@@ -25889,19 +25466,6 @@ https://en.wikipedia.org/wiki/  Ecozones correspond to the floristic kingdoms of
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001170"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
-                <owl:someValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_01000313"/>
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_01000951"/>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -25952,38 +25516,7 @@ https://en.wikipedia.org/wiki/  Ecozones correspond to the floristic kingdoms of
     <!-- http://purl.obolibrary.org/obo/ENVO_01001439 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01001439">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_01001437"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
-                        <owl:someValuesFrom>
-                            <owl:Class>
-                                <owl:unionOf rdf:parseType="Collection">
-                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_00000447"/>
-                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_01000320"/>
-                                </owl:unionOf>
-                            </owl:Class>
-                        </owl:someValuesFrom>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001437"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
-                <owl:someValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_00000447"/>
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_01000320"/>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>A mining process which occurs in a marine ecosystem.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0002-4366-3088"/>
         <rdfs:label xml:lang="en">marine mining</rdfs:label>
@@ -25999,12 +25532,6 @@ https://en.wikipedia.org/wiki/  Ecozones correspond to the floristic kingdoms of
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_03000010"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000010"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>A planned environmental usage process during which an environment facilitates the movement of materials and material objects (persons or goods) from place to place, typically with the assistance of a vehicle.</obo:IAO_0000115>
@@ -26033,12 +25560,6 @@ https://en.wikipedia.org/wiki/  Ecozones correspond to the floristic kingdoms of
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_03000010"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000010"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>A planned environmental usage process during which an environment supports 1) enterprises concerned with the provision to the public of essentials, such as electricity or water or 2) the basic network or foundation of capital facilities or community investments which are necessary to support economic and community activities.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0002-4366-3088"/>
         <oboInOwl:hasBroadSynonym>transportation</oboInOwl:hasBroadSynonym>
@@ -26060,22 +25581,6 @@ https://en.wikipedia.org/wiki/  Ecozones correspond to the floristic kingdoms of
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01001447">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001436"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
-                <owl:someValuesFrom>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PCO_0000002"/>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002473"/>
-                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_9606"/>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>A planned environmental usage process during which an environment supports welfare activities organised by the state or a local authority and carried out by trained personnel.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0002-4366-3088"/>
         <rdfs:comment>Services include those provided by health care facilities, places of religious worship, educational facilities, police stations, fire stations, coastguard facilities, public sanitation, non-human animal welfare services, detention services, and other public services.</rdfs:comment>
@@ -26097,12 +25602,6 @@ https://en.wikipedia.org/wiki/  Ecozones correspond to the floristic kingdoms of
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01001450">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001436"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_02500027"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_00003861"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002234"/>
@@ -26158,17 +25657,6 @@ https://en.wikipedia.org/wiki/  Ecozones correspond to the floristic kingdoms of
     <!-- http://purl.obolibrary.org/obo/ENVO_01001477 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01001477">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_01001479"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002473"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000815"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001479"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001784"/>
         <rdfs:subClassOf>
@@ -26193,17 +25681,6 @@ https://en.wikipedia.org/wiki/  Ecozones correspond to the floristic kingdoms of
     <!-- http://purl.obolibrary.org/obo/ENVO_01001478 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01001478">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_01001479"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002473"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000797"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001479"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001784"/>
         <rdfs:subClassOf>
@@ -26229,6 +25706,19 @@ https://en.wikipedia.org/wiki/  Ecozones correspond to the floristic kingdoms of
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01001479">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000813"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002473"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_01000797"/>
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_01000815"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000115>A part of an astronomical body which is primarily composed of a continuous volume of liquid or gaseous material, shaped by one or more environmental processes.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0002-4366-3088"/>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-04T13:59:22Z</oboInOwl:creation_date>
@@ -26930,18 +26420,6 @@ Sea surface layer is also used to refer to the surfaces of oceans.</rdfs:comment
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_03000009"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_00010504"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000406"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002297"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_03000111"/>
             </owl:Restriction>
@@ -26971,27 +26449,6 @@ Some definitions include additional discussion of the the physics involved which
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01001618">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_02500031"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_03000009"/>
-        <rdfs:subClassOf>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
-                        <owl:someValuesFrom>
-                            <owl:Class>
-                                <owl:unionOf rdf:parseType="Collection">
-                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_01001548"/>
-                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_03000010"/>
-                                </owl:unionOf>
-                            </owl:Class>
-                        </owl:someValuesFrom>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000277"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>A material accumulation process during which ice forms in an environmental material or an existing accumulation of ice increases in mass.</obo:IAO_0000115>
         <dc:creator rdf:resource="http://orcid.org/0000-0002-4366-3088"/>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-04-24T18:48:53Z</oboInOwl:creation_date>
@@ -27155,56 +26612,6 @@ Some definitions include additional discussion of the the physics involved which
         <owl:annotatedTarget>A process during which microscopic solid particulates are formed from liquid materials in an atmosphere.</owl:annotatedTarget>
         <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Particulates</oboInOwl:hasDbXref>
     </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/ENVO_01001644 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01001644">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_00010483"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002473"/>
-                        <owl:someValuesFrom>
-                            <owl:Class>
-                                <owl:intersectionOf rdf:parseType="Collection">
-                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_23016"/>
-                                    <owl:Restriction>
-                                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002354"/>
-                                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0008150"/>
-                                    </owl:Restriction>
-                                </owl:intersectionOf>
-                            </owl:Class>
-                        </owl:someValuesFrom>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00010483"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002473"/>
-                <owl:someValuesFrom>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_23016"/>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002354"/>
-                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0008150"/>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <dc:creator rdf:resource="http://orcid.org/0000-0002-4366-3088"/>
-        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-06-02T07:35:09Z</oboInOwl:creation_date>
-        <oboInOwl:hasDbXref rdf:resource="http://vocab.nerc.ac.uk/collection/S23/current/S23C021/"/>
-        <oboInOwl:hasDbXref>Carbonate which is formed as the result of some biological process.</oboInOwl:hasDbXref>
-        <rdfs:label xml:lang="en">material primarily composed of biogenic carbonates</rdfs:label>
-    </owl:Class>
     
 
 
@@ -27887,6 +27294,25 @@ Some definitions include additional discussion of the the physics involved which
     
 
 
+    <!-- http://purl.obolibrary.org/obo/ENVO_01001759 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01001759">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_03000010"/>
+        <obo:IAO_0000115>A material transport process during which parts of an elastic material oscillate around their positions of equilibrium.</obo:IAO_0000115>
+        <dc:creator rdf:resource="http://orcid.org/0000-0002-4366-3088"/>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-10-07T08:36:54Z</dc:date>
+        <oboInOwl:hasExactSynonym>vibration</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">vibration process</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001759"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A material transport process during which parts of an elastic material oscillate around their positions of equilibrium.</owl:annotatedTarget>
+        <rdfs:comment rdf:resource="https://www.merriam-webster.com/dictionary/vibration"/>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/ENVO_01001767 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01001767">
@@ -28216,45 +27642,6 @@ Some definitions include additional discussion of the the physics involved which
     
 
 
-    <!-- http://purl.obolibrary.org/obo/ENVO_01001814 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01001814">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000030"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002354"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0008150"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002473"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000155"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001686"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002354"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0008150"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002473"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000155"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <obo:IAO_0000115>An object which is formed as a result of one or more biological processes and is composed primarily of organic material.</obo:IAO_0000115>
-        <dc:creator rdf:resource="http://orcid.org/0000-0002-4366-3088"/>
-        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-10-29T15:02:58Z</dc:date>
-        <rdfs:label xml:lang="en">organic object</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/ENVO_01001835 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01001835">
@@ -28357,24 +27744,7 @@ Some definitions include additional discussion of the the physics involved which
     <!-- http://purl.obolibrary.org/obo/ENVO_01001856 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01001856">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_03000009"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000815"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_03000009"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000815"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>A material accumulation process during which the volume of liquid entity increases.</obo:IAO_0000115>
         <dc:creator rdf:resource="http://orcid.org/0000-0002-4366-3088"/>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-05-18T14:39:20Z</dc:date>
@@ -29364,44 +28734,7 @@ Some definitions include additional discussion of the the physics involved which
     <!-- http://purl.obolibrary.org/obo/ENVO_02500000 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_02500000">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000015"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
-                        <owl:someValuesFrom>
-                            <owl:Class>
-                                <owl:unionOf rdf:parseType="Collection">
-                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_00010483"/>
-                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_01000254"/>
-                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_01000799"/>
-                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_01000804"/>
-                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_01000813"/>
-                                </owl:unionOf>
-                            </owl:Class>
-                        </owl:someValuesFrom>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
-                <owl:someValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_00010483"/>
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_01000254"/>
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_01000799"/>
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_01000804"/>
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_01000813"/>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>A process in which includes the components of an environmental system as participants.</obo:IAO_0000115>
         <rdfs:comment>This is a convenience class for organisation and should not be used for annotation.</rdfs:comment>
         <rdfs:label xml:lang="en">environmental system process</rdfs:label>
@@ -29463,50 +28796,6 @@ Some definitions include additional discussion of the the physics involved which
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_02500002">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_03000010"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
-                <owl:someValuesFrom>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_03000009"/>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
-                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_00002006"/>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
-                <owl:someValuesFrom>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_03000010"/>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
-                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_00002006"/>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000063"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000635"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>A general and temporary condition of partial or complete inundation of normally dry land areas from the overflow of inland and/or tidal waters, and/or the unusual and rapid accumulation or runoff of surface waters from any source. A great flow along a watercourse or a flow causing inundation of lands not normally covered by water.</obo:IAO_0000115>
         <oboInOwl:inSubset>environmental_hazards</oboInOwl:inSubset>
         <rdfs:label xml:lang="en">flooding</rdfs:label>
@@ -29575,18 +28864,6 @@ Some definitions include additional discussion of the the physics involved which
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000743"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000446"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000635"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>A process which diminishes the functioning of an ecosystem located on land.</obo:IAO_0000115>
         <obo:IAO_0000116>An SDGIO request. Likely to be refined and revised.</obo:IAO_0000116>
         <rdfs:comment>This could include, for example, reducing soil health, pollinator activity, or an ecosystem&apos;s ability  to sequester carbon.</rdfs:comment>
@@ -29653,24 +28930,7 @@ Some definitions include additional discussion of the the physics involved which
     <!-- http://purl.obolibrary.org/obo/ENVO_02500014 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_02500014">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_01001795"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000111"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001795"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000111"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:comment>To be populated through inference. Do not use for annotation.</rdfs:comment>
         <rdfs:label>forest process</rdfs:label>
     </owl:Class>
@@ -29691,12 +28951,6 @@ Some definitions include additional discussion of the the physics involved which
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ENVO_02500020"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_02500019"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_2000004"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>A process during which the populations in a community of algae in a marine or freshwater ecosystem undergo rapid growth, resulting in high concentrations of algal cells that occur only periodically and briefly in that ecosystem, relative to their concentrations through the majority of the planetary orbital period.</obo:IAO_0000115>
@@ -29848,54 +29102,7 @@ Some definitions include additional discussion of the the physics involved which
     <!-- http://purl.obolibrary.org/obo/ENVO_02500031 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_02500031">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_02500000"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
-                        <owl:someValuesFrom>
-                            <owl:Class>
-                                <owl:unionOf rdf:parseType="Collection">
-                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_00002006"/>
-                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_01000266"/>
-                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_01000277"/>
-                                </owl:unionOf>
-                            </owl:Class>
-                        </owl:someValuesFrom>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_02500000"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
-                <owl:someValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_15377"/>
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_01000266"/>
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_01000277"/>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
-                <owl:someValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_00002006"/>
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_01000266"/>
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_01000277"/>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>An environmental process which has water - in any of its states - as a participant.</obo:IAO_0000115>
         <rdfs:comment>This classes asserted subclasses will be moved away as it should be an inferred class.</rdfs:comment>
         <rdfs:label>hydrological process</rdfs:label>
@@ -30527,12 +29734,6 @@ Some definitions include additional discussion of the the physics involved which
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000060"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002229"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_03000010"/>
             </owl:Restriction>
@@ -30694,12 +29895,6 @@ Some definitions include additional discussion of the the physics involved which
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_03000092"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000554"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002411"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_02500004"/>
             </owl:Restriction>
@@ -30724,12 +29919,6 @@ Some definitions include additional discussion of the the physics involved which
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_03000094">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_03000093"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_16183"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>A hydrocarbon gas emission process during which a portion of methane gas is transported into the atmosphere.</obo:IAO_0000115>
         <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0002-4366-3088"/>
         <obo:IAO_0000117>http://orcid.org/0000-0002-3410-4655</obo:IAO_0000117>
@@ -30858,12 +30047,6 @@ Some definitions include additional discussion of the the physics involved which
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_03000127">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000830"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_02500031"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000358"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>A water-based rainfall process during which water droplets with increased acidity fall towards a planetary surface.</obo:IAO_0000115>
         <obo:IAO_0000117 rdf:resource="https://orcid.org/0000-0002-4366-3088"/>
         <obo:IAO_0000117>http://orcid.org/0000-0002-3410-4655</obo:IAO_0000117>
@@ -32925,24 +32108,7 @@ Uses undesirability standard, compared to polluted river&apos;s ecological impac
     <!-- http://purl.obolibrary.org/obo/ENVO_04000015 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_04000015">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_03000009"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000451"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_03000009"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000451"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>A material accumulation process during which atmospheric carbon dioxide is captured and stored.</obo:IAO_0000115>
         <dc:creator rdf:resource="http://orcid.org/0000-0003-1264-1166"/>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-06-07T23:28:29Z</dc:date>
@@ -33007,7 +32173,7 @@ Uses undesirability standard, compared to polluted river&apos;s ecological impac
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_08000002"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>An environment that is determined by a mouth.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>GOC:TermGenie</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:TermGenie</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -33806,7 +32972,7 @@ Uses undesirability standard, compared to polluted river&apos;s ecological impac
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_2000000"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A manufactured product that is some mixture of chemicals created through some chemical engineering process</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ENVO:cjm</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ENVO:cjm</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -35467,7 +34633,7 @@ Uses undesirability standard, compared to polluted river&apos;s ecological impac
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001006"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A food product made of meat, the skeletal muscle and associated fat, and other edible tissues such as organs, livers, skin, brains, bone marrow, kidneys, or lungs, of mammals.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>http://en.wikipedia.org/wiki/Meat</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://en.wikipedia.org/wiki/Meat</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -36200,29 +35366,6 @@ Namely, how to characterize the threshold of ingredients that make for multi-com
         <oboInOwl:hasDbXref>http://www.langual.org/langual_thesaurus.asp?termid=H0177</oboInOwl:hasDbXref>
         <rdfs:comment xml:lang="en">LanguaL curation note: With the exception of peanut (see *PEANUT OR PEANUT BUTTER ADDED*), used when a nut or seed ingredient is the second ingredient in order of predominance.</rdfs:comment>
         <rdfs:label xml:lang="en">plant seed or nut food product</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/GO_0007610 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0007610">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0008150"/>
-        <rdfs:label>behavior</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/GO_0008150 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0008150">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
-        <obo:IAO_0000115>A biological process represents a specific objective that the organism is genetically programmed to achieve. Biological processes are often described by their outcome or ending state, e.g., the biological process of cell division results in the creation of two daughter cells (a divided cell) from a single parent cell. A biological process is accomplished by a particular set of molecular functions carried out by specific gene products (or macromolecular complexes), often in a highly regulated manner and in a particular temporal sequence.</obo:IAO_0000115>
-        <oboInOwl:hasExactSynonym>biological process</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>physiological process</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasRelatedSynonym>single organism process</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym>single-organism process</oboInOwl:hasRelatedSynonym>
-        <rdfs:label>biological_process</rdfs:label>
     </owl:Class>
     
 
@@ -50365,5 +49508,5 @@ Classes for population already  exist in IDO (&apos;organism population&apos;, I
 
 
 
-<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.5.6) https://github.com/owlcs/owlapi -->
 

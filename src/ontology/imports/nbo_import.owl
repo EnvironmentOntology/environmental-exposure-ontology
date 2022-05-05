@@ -16,14 +16,15 @@
      xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
      xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
      xmlns:terms="http://purl.org/dc/terms/"
-     xmlns:chebi1="http://purl.obolibrary.org/obo/chebi#3"
-     xmlns:chebi2="http://purl.obolibrary.org/obo/chebi#1"
+     xmlns:chebi1="http://purl.obolibrary.org/obo/chebi#"
+     xmlns:chebi2="http://purl.obolibrary.org/obo/chebi#3"
+     xmlns:chebi3="http://purl.obolibrary.org/obo/chebi#1"
      xmlns:subsets="http://purl.obolibrary.org/obo/ro/subsets#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/ecto/imports/nbo_import.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/ecto/releases/2022-04-07/imports/nbo_import.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/ecto/releases/2022-05-04/imports/nbo_import.owl"/>
         <dc:source rdf:resource="http://purl.obolibrary.org/obo/nbo/releases/2021-02-15/nbo.owl"/>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2022-04-07</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2022-05-04</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -132,12 +133,6 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/RO_0002161 -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002161"/>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/RO_0002259 -->
 
     <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002259">
@@ -228,6 +223,22 @@
 
     <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/valid_for_gocam">
         <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#SubsetProperty"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/chebi#BRAND_NAME -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/chebi#BRAND_NAME">
+        <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#SynonymTypeProperty"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/chebi#IUPAC_NAME -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/chebi#IUPAC_NAME">
+        <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#SynonymTypeProperty"/>
     </owl:AnnotationProperty>
     
 
@@ -499,6 +510,12 @@
     <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#SubsetProperty">
         <rdfs:label>subset_property</rdfs:label>
     </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#SynonymTypeProperty -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#SynonymTypeProperty"/>
     
 
 
@@ -4526,7 +4543,7 @@ For example, A and B may be gene products and binding of B by A positively regul
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_16236"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
         <owl:annotatedTarget>UM-BBD_compID:c0038</owl:annotatedTarget>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UM-BBD</rdfs:label>
+        <rdfs:label>UM-BBD</rdfs:label>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_16236"/>
@@ -6190,7 +6207,7 @@ For example, A and B may be gene products and binding of B by A positively regul
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_17790"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
         <owl:annotatedTarget>UM-BBD_compID:c0132</owl:annotatedTarget>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UM-BBD</rdfs:label>
+        <rdfs:label>UM-BBD</rdfs:label>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_17790"/>
@@ -6937,7 +6954,7 @@ For example, A and B may be gene products and binding of B by A positively regul
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_18723"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
         <owl:annotatedTarget>UM-BBD_compID:c0468</owl:annotatedTarget>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UM-BBD</rdfs:label>
+        <rdfs:label>UM-BBD</rdfs:label>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_18723"/>
@@ -6968,7 +6985,7 @@ For example, A and B may be gene products and binding of B by A positively regul
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_18723"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>(RS)-nicotine</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UM-BBD</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>UM-BBD</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_18723"/>
@@ -18133,49 +18150,6 @@ For example, A and B may be gene products and binding of B by A positively regul
     
 
 
-    <!-- http://purl.obolibrary.org/obo/GO_0040011 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0040011">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0008150"/>
-        <obo:IAO_0000115>Self-propelled movement of a cell or organism from one location to another.</obo:IAO_0000115>
-        <obo:RO_0002161 rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_451864"/>
-        <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>GO:0040011</oboInOwl:id>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_chembl"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_generic"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_pir"/>
-        <rdfs:label>locomotion</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0040011"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>Self-propelled movement of a cell or organism from one location to another.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>GOC:dgh</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/GO_0042755 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0042755">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0007631"/>
-        <obo:IAO_0000115>The specific behavior of an organism relating to the intake of food, any substance (usually solid) that can be metabolized by an organism to give energy and build tissue.</obo:IAO_0000115>
-        <oboInOwl:hasExactSynonym>eating behaviour</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasOBONamespace>biological_process</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>GO:0042755</oboInOwl:id>
-        <rdfs:label>eating behavior</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0042755"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>The specific behavior of an organism relating to the intake of food, any substance (usually solid) that can be metabolized by an organism to give energy and build tissue.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:jl</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:pr</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>PMID:19361967</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/GO_0042756 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0042756">
@@ -18223,18 +18197,6 @@ For example, A and B may be gene products and binding of B by A positively regul
     
 
 
-    <!-- http://purl.obolibrary.org/obo/NBO_0000002 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NBO_0000002">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NBO_0000338"/>
-        <dc:date>2011-04-14T01:03:39Z</dc:date>
-        <oboInOwl:created_by>George Gkoutos</oboInOwl:created_by>
-        <oboInOwl:hasOBONamespace>behavior_ontology</oboInOwl:hasOBONamespace>
-        <rdfs:label>whole body movement</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/NBO_0000003 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/NBO_0000003">
@@ -18246,23 +18208,6 @@ For example, A and B may be gene products and binding of B by A positively regul
         <oboInOwl:hasExactSynonym>mood</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>behavior_ontology</oboInOwl:hasOBONamespace>
         <rdfs:label>emotional behavior</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/NBO_0000013 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NBO_0000013">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0040011"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NBO_0000002"/>
-        <obo:IAO_0000115>Movement from place to place of an organism.&quot; [GO:0007626]</obo:IAO_0000115>
-        <dc:date>2011-04-14T01:03:39Z</dc:date>
-        <oboInOwl:created_by>George Gkoutos</oboInOwl:created_by>
-        <oboInOwl:hasExactSynonym xml:lang="en">locomotion</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasOBONamespace>behavior_ontology</oboInOwl:hasOBONamespace>
-        <oboInOwl:xref>GO:0007626</oboInOwl:xref>
-        <oboInOwl:xref>GO:0008344</oboInOwl:xref>
-        <rdfs:label>locomotory behavior</rdfs:label>
     </owl:Class>
     
 
@@ -18280,21 +18225,6 @@ For example, A and B may be gene products and binding of B by A positively regul
         <oboInOwl:hasOBONamespace>behavior_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:xref>GO:0002118</oboInOwl:xref>
         <rdfs:label>aggressive behavior</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/NBO_0000056 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NBO_0000056">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NBO_0000359"/>
-        <obo:IAO_0000115 xml:lang="en">The act of locomoting on limbs with body off the ground such that at least one limb is always touching the ground [NBO:AC]</obo:IAO_0000115>
-        <dc:date>2011-04-14T01:03:39Z</dc:date>
-        <oboInOwl:created_by>George Gkoutos</oboInOwl:created_by>
-        <oboInOwl:hasExactSynonym xml:lang="en">walking</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasOBONamespace>behavior_ontology</oboInOwl:hasOBONamespace>
-        <oboInOwl:xref>GO:0007628</oboInOwl:xref>
-        <rdfs:label>walking behavior</rdfs:label>
     </owl:Class>
     
 
@@ -18590,20 +18520,6 @@ For example, A and B may be gene products and binding of B by A positively regul
     
 
 
-    <!-- http://purl.obolibrary.org/obo/NBO_0000237 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NBO_0000237">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NBO_0000235"/>
-        <obo:IAO_0000115>&quot;Any process which modulates the physical craving for food.&quot; [NBO:GVG]</obo:IAO_0000115>
-        <dc:date>2011-04-04T08:33:16Z</dc:date>
-        <oboInOwl:created_by>George Gkoutos</oboInOwl:created_by>
-        <oboInOwl:hasOBONamespace>behavior_ontology</oboInOwl:hasOBONamespace>
-        <oboInOwl:xref>GO:0032098</oboInOwl:xref>
-        <rdfs:label>hunger regulation</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/NBO_0000313 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/NBO_0000313">
@@ -18617,32 +18533,6 @@ For example, A and B may be gene products and binding of B by A positively regul
         <oboInOwl:hasOBONamespace>behavior_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:xref>GO:0007610</oboInOwl:xref>
         <rdfs:label>behavior process</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/NBO_0000338 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NBO_0000338">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NBO_0000313"/>
-        <obo:IAO_0000115>&quot;Movement behavior of the body or its parts.&quot;</obo:IAO_0000115>
-        <dc:date>2011-04-05T02:08:47Z</dc:date>
-        <oboInOwl:created_by>George Gkoutos</oboInOwl:created_by>
-        <oboInOwl:hasOBONamespace>behavior_ontology</oboInOwl:hasOBONamespace>
-        <rdfs:label>kinesthetic behavior</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/NBO_0000359 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NBO_0000359">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NBO_0000013"/>
-        <obo:IAO_0000115>&quot;Behavior associated with surface locomotion.&quot; [NBO:GVG]</obo:IAO_0000115>
-        <dc:date>2011-04-06T09:44:37Z</dc:date>
-        <oboInOwl:created_by>George Gkoutos</oboInOwl:created_by>
-        <oboInOwl:hasOBONamespace>behavior_ontology</oboInOwl:hasOBONamespace>
-        <rdfs:label>terrestrial locomotory behavior</rdfs:label>
     </owl:Class>
     
 
@@ -19051,6 +18941,19 @@ For example, A and B may be gene products and binding of B by A positively regul
     
 
 
+    <!-- http://purl.obolibrary.org/obo/NBO_0015006 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NBO_0015006">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NBO_0015005"/>
+        <obo:IAO_0000115>Smoking behavior that involves burning a substance such as tobacco and tasting or inhaling the smoke through a pipe.</obo:IAO_0000115>
+        <dc:contributor>http://orcid.org/0000-0002-2908-3327</dc:contributor>
+        <dc:date>2019-09-06T10:51:02Z</dc:date>
+        <oboInOwl:created_by>https://orcid.org/0000-0002-7356-1779</oboInOwl:created_by>
+        <rdfs:label xml:lang="en">pipe smoking behavior</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/NBO_0015007 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/NBO_0015007">
@@ -19073,72 +18976,6 @@ For example, A and B may be gene products and binding of B by A positively regul
         <dc:date>2019-09-06T10:51:02Z</dc:date>
         <oboInOwl:created_by>https://orcid.org/0000-0002-7356-1779</oboInOwl:created_by>
         <rdfs:label xml:lang="en">cigar smoking behavior</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/NBO_0020088 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NBO_0020088">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NBO_0000235"/>
-        <obo:IAO_0000115 xml:lang="en">Postures or signals performed to other animals to indicate the presence, and in some cases, the location, quantity, and quality, of a resource.</obo:IAO_0000115>
-        <oboInOwl:created_by>Luke Slater</oboInOwl:created_by>
-        <rdfs:label xml:lang="en">resource advertisement</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/NBO_0020177 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NBO_0020177">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NBO_0000235"/>
-        <obo:IAO_0000115 xml:lang="en">Obtaining food that has been procured by other conspecifics or heterospecifics.</obo:IAO_0000115>
-        <oboInOwl:created_by>Luke Slater</oboInOwl:created_by>
-        <rdfs:label xml:lang="en">social acquisition of food</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/NBO_0020188 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NBO_0020188">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NBO_0000235"/>
-        <obo:IAO_0000115 xml:lang="en">Movement directed to the detection of new resources.</obo:IAO_0000115>
-        <oboInOwl:created_by>Luke Slater</oboInOwl:created_by>
-        <rdfs:label xml:lang="en">nutrient locating</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/NBO_0020282 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NBO_0020282">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NBO_0000235"/>
-        <obo:IAO_0000115 xml:lang="en">Behaviors related to acquisition and utilization of external resources.</obo:IAO_0000115>
-        <oboInOwl:created_by>Luke Slater</oboInOwl:created_by>
-        <rdfs:label xml:lang="en">nutrient acquisition</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/NBO_0020291 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NBO_0020291">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NBO_0000235"/>
-        <obo:IAO_0000115 xml:lang="en">Behavior that precedes and facilitates attaining food.</obo:IAO_0000115>
-        <oboInOwl:created_by>Luke Slater</oboInOwl:created_by>
-        <rdfs:label xml:lang="en">nutrient preparation</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/NBO_0020295 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NBO_0020295">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NBO_0020291"/>
-        <obo:IAO_0000115 xml:lang="en">Behaviors that prepare food for consumption, such as nut-cracking or peeling.</obo:IAO_0000115>
-        <oboInOwl:created_by>Luke Slater</oboInOwl:created_by>
-        <rdfs:label xml:lang="en">food processing</rdfs:label>
     </owl:Class>
     
 
@@ -19843,18 +19680,6 @@ For example, A and B may be gene products and binding of B by A positively regul
             </owl:Class>
         </rdfs:subClassOf>
     </owl:Restriction>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NBO_0000089"/>
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NBO_0000237"/>
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NBO_0020088"/>
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NBO_0020177"/>
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NBO_0020188"/>
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NBO_0020282"/>
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NBO_0020291"/>
-        </owl:members>
-    </rdf:Description>
     
 
 

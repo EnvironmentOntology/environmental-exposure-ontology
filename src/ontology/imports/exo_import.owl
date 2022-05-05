@@ -1,16 +1,19 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="http://purl.obolibrary.org/obo/ecto/imports/exo_import.owl#"
      xml:base="http://purl.obolibrary.org/obo/ecto/imports/exo_import.owl"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:obo="http://purl.obolibrary.org/obo/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:terms="http://purl.org/dc/terms/"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/ecto/imports/exo_import.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/ecto/releases/2021-05-04/imports/exo_import.owl"/>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2021-05-04</owl:versionInfo>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/ecto/releases/2022-05-04/imports/exo_import.owl"/>
+        <dc:source rdf:resource="http://purl.obolibrary.org/obo/exo/2.1/exo.owl"/>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2022-05-04</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -37,6 +40,30 @@
     <!-- http://purl.obolibrary.org/obo/IAO_0100001 -->
 
     <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0100001"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/date -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/date"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
     
 
 
@@ -188,6 +215,7 @@
     <!-- http://purl.obolibrary.org/obo/ExO_0000000 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ExO_0000000">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ExO_0000022"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/exo#interacts_with"/>
@@ -200,7 +228,7 @@
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ExO_0000002"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:IAO_0000115>An agent, stimulus, activity, or event that causes stress or tension on an organism and interacts with an exposure_receptor during an exposure event.</obo:IAO_0000115>
+        <obo:IAO_0000115>An agent, stimulus, activity, or event that causes stress or tension on an organism and interacts with an exposure receptor during an exposure event.</obo:IAO_0000115>
         <oboInOwl:creation_date>2010-09-21T02:43:50Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>exposure_stressor</oboInOwl:hasOBONamespace>
         <oboInOwl:id>ExO:0000000</oboInOwl:id>
@@ -209,7 +237,7 @@
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ExO_0000000"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>An agent, stimulus, activity, or event that causes stress or tension on an organism and interacts with an exposure_receptor during an exposure event.</owl:annotatedTarget>
+        <owl:annotatedTarget>An agent, stimulus, activity, or event that causes stress or tension on an organism and interacts with an exposure receptor during an exposure event.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CTD:curators</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -227,6 +255,8 @@
         <obo:IAO_0000115>An entity (e.g., a human, human population, or a human organ) that interacts with an exposure stressor during an exposure event.</obo:IAO_0000115>
         <oboInOwl:created_by>cmattin</oboInOwl:created_by>
         <oboInOwl:creation_date>2010-09-21T02:45:36Z</oboInOwl:creation_date>
+        <oboInOwl:hasExactSynonym>exposure recipient</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>exposure target</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>exposure_receptor</oboInOwl:hasOBONamespace>
         <oboInOwl:id>ExO:0000001</oboInOwl:id>
         <rdfs:label>exposure_receptor</rdfs:label>
@@ -281,6 +311,17 @@
         <owl:annotatedTarget>An interaction between an exposure stressor and an exposure_receptor.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CTD:curators</oboInOwl:hasDbXref>
     </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ExO_0000022 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ExO_0000022">
+        <obo:IAO_0000115>Any agent, entity, activity, or event that causally effects an organism and interacts with an exposure receptor during an exposure event.</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-10-20T17:44:37Z</dc:date>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0002-7463-6306"/>
+        <rdfs:label>exposure stimulus</rdfs:label>
+    </owl:Class>
     
 
 
