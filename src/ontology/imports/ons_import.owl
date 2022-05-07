@@ -16,8 +16,8 @@
      xmlns:resource="http://semanticscience.org/resource/"
      xmlns:ncbitaxon="http://purl.obolibrary.org/obo/ncbitaxon#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/ecto/imports/ons_import.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/ecto/releases/2022-05-04/imports/ons_import.owl"/>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2022-05-04</owl:versionInfo>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/ecto/releases/2022-05-07/imports/ons_import.owl"/>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2022-05-07</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -48,12 +48,6 @@
     <!-- http://purl.obolibrary.org/obo/GENEPIO_0000006 -->
 
     <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/GENEPIO_0000006"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/GENEPIO_0001763 -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/GENEPIO_0001763"/>
     
 
 
@@ -1965,15 +1959,6 @@ Werner suggests a solution based on &quot;Magnitudes&quot; a proposal for which 
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00000000">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ONS_0000078"/>
-        <obo:IAO_0000111 xml:lang="en">foodon ontology data specification</obo:IAO_0000111>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000428"/>
-        <obo:IAO_0000115 xml:lang="en">The FoodOn food ontology is a controlled vocabulary that currently covers human food raw ingredients, food products and product types. It will develop semantics for food safety, food security, the agricultural and animal husbandry practices linked to food production, culinary, nutritional and chemical ingredients and processes. FoodOn will also grow to encompass food-chains and natural ecosystems involving other animals and plants. It is built to interoperate with the OBO Library family of ontologies.
-
-FoodOn owes a large debt to LanguaL, the food indexing system developed since the mid 1970&apos;s (see LanguaL.org).  LanguaL&apos;s facets have all been imported here, with some adaptation.</obo:IAO_0000115>
-        <obo:IAO_0000117 xml:lang="en">Damion Dooley</obo:IAO_0000117>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/foodon.owl"/>
-        <rdfs:label xml:lang="en">foodon ontology</rdfs:label>
-        <rdfs:label xml:lang="en">foodon ontology data specification</rdfs:label>
     </owl:Class>
     
 
@@ -1982,13 +1967,6 @@ FoodOn owes a large debt to LanguaL, the food indexing system developed since th
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00001002">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00002403"/>
-        <obo:IAO_0000115 xml:lang="en">Food material for humans and animals which is processed with the intention that it be consumable as a whole or added to other food products.</obo:IAO_0000115>
-        <obo:IAO_0000117 xml:lang="en">Damion Dooley</obo:IAO_0000117>
-        <obo:IAO_0000118 xml:lang="en">Foodon product type</obo:IAO_0000118>
-        <obo:IAO_0000119 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Food</obo:IAO_0000119>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/foodon.owl"/>
-        <rdfs:comment xml:lang="en">The FoodOn &quot;food product&quot; class is provided as a branch under which new food product categories and food products themselves can be placed. Here classes are provided to differentiate a food product by its food composition, processing and/or consumption characteristics. This avoids brand name products but it may include generic food dish categories. It has a much greater depth and polyhierarchy than other agency product type schemes have in an effort to group related products together.  The upper level basis of this tree originated in the environment ontology (ENVO) and from the US Code of Federal Regulations.</rdfs:comment>
-        <rdfs:label xml:lang="en">food product</rdfs:label>
     </owl:Class>
     
 
@@ -2008,11 +1986,6 @@ FoodOn owes a large debt to LanguaL, the food indexing system developed since th
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00002381"/>
-        <obo:IAO_0000111 xml:lang="en">plant food product</obo:IAO_0000111>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000428"/>
-        <obo:IAO_0000115 xml:lang="en">This class includes food products which are derived from or produced by a plant.</obo:IAO_0000115>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/foodon.owl"/>
-        <rdfs:label xml:lang="en">plant food product</rdfs:label>
     </owl:Class>
     
 
@@ -2027,13 +2000,6 @@ FoodOn owes a large debt to LanguaL, the food indexing system developed since th
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FOODON_03400267"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:IAO_0000111 xml:lang="en">seafood product</obo:IAO_0000111>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000428"/>
-        <obo:IAO_0000115 xml:lang="en">A seafood product is a vertebrate or invertibrate organism from an aquatic environment.</obo:IAO_0000115>
-        <obo:IAO_0000116 xml:lang="en">Some of the subclasses are currently freshwater organisms.</obo:IAO_0000116>
-        <obo:IAO_0000117 xml:lang="en">Damion Dooley</obo:IAO_0000117>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/foodon.owl"/>
-        <rdfs:label xml:lang="en">seafood product</rdfs:label>
     </owl:Class>
     
 
@@ -2053,12 +2019,6 @@ FoodOn owes a large debt to LanguaL, the food indexing system developed since th
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00002381"/>
-        <obo:IAO_0000111 xml:lang="en">vertebrate animal food product</obo:IAO_0000111>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
-        <obo:IAO_0000115 xml:lang="en">A food product which is derived from or produced by an animal that has a vertibrae.</obo:IAO_0000115>
-        <obo:IAO_0000117>Damion Dooley</obo:IAO_0000117>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/foodon.owl"/>
-        <rdfs:label xml:lang="en">vertebrate animal food product</rdfs:label>
     </owl:Class>
     
 
@@ -2078,9 +2038,6 @@ FoodOn owes a large debt to LanguaL, the food indexing system developed since th
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00002381"/>
-        <obo:IAO_0000111 xml:lang="en">invertebrate animal food product</obo:IAO_0000111>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/foodon.owl"/>
-        <rdfs:label xml:lang="en">invertebrate animal food product</rdfs:label>
     </owl:Class>
     
 
@@ -2106,13 +2063,6 @@ FoodOn owes a large debt to LanguaL, the food indexing system developed since th
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FOODON_03400267"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:IAO_0000111 xml:lang="en">fish food product</obo:IAO_0000111>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
-        <obo:IAO_0000115 xml:lang="en">A fish food product includes products made from any fish species (aquatic vertebrate with gills and fins).</obo:IAO_0000115>
-        <obo:IAO_0000117 xml:lang="en">Damion Dooley</obo:IAO_0000117>
-        <obo:IAO_0000119 rdf:resource="https://en.wikipedia.org/wiki/Fish"/>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/foodon.owl"/>
-        <rdfs:label xml:lang="en">fish food product</rdfs:label>
     </owl:Class>
     
 
@@ -2121,15 +2071,6 @@ FoodOn owes a large debt to LanguaL, the food indexing system developed since th
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00001256">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001092"/>
-        <obo:IAO_0000111 xml:lang="en">dairy food product</obo:IAO_0000111>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
-        <obo:IAO_0000115 xml:lang="en">A dairy food product has mammilian milk or a milk component as an ingredient.</obo:IAO_0000115>
-        <obo:IAO_0000117 xml:lang="en">Damion Dooley</obo:IAO_0000117>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/foodon.owl"/>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.langual.org/langual_thesaurus.asp?termid=H0242</oboInOwl:hasDbXref>
-        <oboInOwl:hasExactSynonym xml:lang="en">dairy product</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym xml:lang="en">milk product</oboInOwl:hasExactSynonym>
-        <rdfs:label xml:lang="en">dairy food product</rdfs:label>
     </owl:Class>
     
 
@@ -2138,10 +2079,6 @@ FoodOn owes a large debt to LanguaL, the food indexing system developed since th
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00001257">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001256"/>
-        <obo:IAO_0000111 xml:lang="en">milk or milk based food product</obo:IAO_0000111>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/foodon.owl"/>
-        <rdfs:label xml:lang="en">milk or milk based food product</rdfs:label>
-        <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Fat_content_of_milk#/media/File:Milkproducts.svg"/>
     </owl:Class>
     
 
@@ -2162,8 +2099,6 @@ FoodOn owes a large debt to LanguaL, the food indexing system developed since th
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001046"/>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/foodon.owl"/>
-        <rdfs:label xml:lang="en">shellfish food product</rdfs:label>
     </owl:Class>
     
 
@@ -2183,8 +2118,6 @@ FoodOn owes a large debt to LanguaL, the food indexing system developed since th
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001293"/>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/foodon.owl"/>
-        <rdfs:label xml:lang="en">crustacean food product</rdfs:label>
     </owl:Class>
     
 
@@ -2204,9 +2137,6 @@ FoodOn owes a large debt to LanguaL, the food indexing system developed since th
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001293"/>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/foodon.owl"/>
-        <oboInOwl:hasExactSynonym xml:lang="en-us">mollusk food product</oboInOwl:hasExactSynonym>
-        <rdfs:label xml:lang="en">mollusc food product</rdfs:label>
     </owl:Class>
     
 
@@ -2221,10 +2151,6 @@ FoodOn owes a large debt to LanguaL, the food indexing system developed since th
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FOODON_03411564"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:IAO_0000115 xml:lang="en">A food product consisting of food material derived primarily from a single organism.</obo:IAO_0000115>
-        <obo:IAO_0000117 xml:lang="en">Damion Dooley</obo:IAO_0000117>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/foodon.owl"/>
-        <rdfs:label xml:lang="en">food product by organism</rdfs:label>
     </owl:Class>
     
 
@@ -2243,15 +2169,6 @@ FoodOn owes a large debt to LanguaL, the food indexing system developed since th
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <obo:IAO_0000115 xml:lang="en">Any substance that can be consumed by an organism to satisfy nutritional or other health needs, or to provide a social or organoleptic food experience</obo:IAO_0000115>
-        <obo:IAO_0000119 rdf:resource="https://en.wikipedia.org/wiki/Food"/>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/envo.owl"/>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/foodon.owl"/>
-        <oboInOwl:hasExactSynonym xml:lang="en">food</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym xml:lang="en">foodstuff</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym xml:lang="en">nourishment</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym xml:lang="en">sustenance</oboInOwl:hasExactSynonym>
-        <rdfs:label xml:lang="en">food material</rdfs:label>
     </owl:Class>
     
 
@@ -2260,14 +2177,6 @@ FoodOn owes a large debt to LanguaL, the food indexing system developed since th
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00002452">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00003004"/>
-        <obo:IAO_0000112 xml:lang="en">Familiar examples of invertebrates include arthropods (insects, arachnids, crustaceans, and myriapods), mollusks (chitons, snails, bivalves, squids, and octopuses), annelids (earthworms and leeches), and cnidarians (hydras, jellyfishes, sea anemones, and corals).[wikipedia]</obo:IAO_0000112>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
-        <obo:IAO_0000115 xml:lang="en">Invertebrates are animals that neither possess nor develop a vertebral column (commonly known as a backbone or spine), derived from the notochord. This includes all animals apart from the subphylum Vertebrata.</obo:IAO_0000115>
-        <obo:IAO_0000117 xml:lang="en">Damion Dooley</obo:IAO_0000117>
-        <obo:IAO_0000119 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Invertebrate</obo:IAO_0000119>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/foodon.owl"/>
-        <oboInOwl:hasBroadSynonym xml:lang="en">animal</oboInOwl:hasBroadSynonym>
-        <rdfs:label xml:lang="en">invertebrate animal</rdfs:label>
     </owl:Class>
     
 
@@ -2276,14 +2185,6 @@ FoodOn owes a large debt to LanguaL, the food indexing system developed since th
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00002581">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00002452"/>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000428"/>
-        <obo:IAO_0000115 xml:lang="en">An aquatic invertebrate may live entirely beneath the water, or may live upon its surface or on the plants surrounding it. Some breathe air, others breathe water. To move, they may walk, swim, float, skate, fly or glide on their bellies—or they may not move much at all.</obo:IAO_0000115>
-        <obo:IAO_0000116 xml:lang="en">Because snails are members of gastropod, a subclass of molluscs, ... leading to aquatic invertebrates, we can&apos;t make aquatic invertebrates disjoint with terrestrial invertebrates.</obo:IAO_0000116>
-        <obo:IAO_0000117>Damion Dooley</obo:IAO_0000117>
-        <obo:IAO_0000119 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://nature.mdc.mo.gov/discover-nature/general-species-information/aquatic-invertebrate-facts</obo:IAO_0000119>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/foodon.owl"/>
-        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-04-29T19:23:38Z</dc:date>
-        <rdfs:label xml:lang="en">aquatic invertebrate</rdfs:label>
     </owl:Class>
     
 
@@ -2292,14 +2193,6 @@ FoodOn owes a large debt to LanguaL, the food indexing system developed since th
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00003004">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03411564"/>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
-        <obo:IAO_0000115 xml:lang="en">A multicellular eukaryotic heterotrophic organism within the kingdom Animalia.</obo:IAO_0000115>
-        <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0002-8844-9165"/>
-        <obo:IAO_0000119 rdf:resource="https://en.wikipedia.org/wiki/Animal"/>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/foodon.owl"/>
-        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-08-14T18:02:36Z</dc:date>
-        <oboInOwl:hasDbXref rdf:resource="http://www.langual.org/langual_thesaurus.asp?termid=B1297"/>
-        <rdfs:label xml:lang="en">animal</rdfs:label>
     </owl:Class>
     
 
@@ -2308,12 +2201,6 @@ FoodOn owes a large debt to LanguaL, the food indexing system developed since th
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03400217">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03401270"/>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000428"/>
-        <obo:IAO_0000115 xml:lang="en">Products of the flesh of animals. [FDA CFSAN 1995]</obo:IAO_0000115>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/foodon.owl"/>
-        <obo:IAO_0000412>http://langual.org</obo:IAO_0000412>
-        <oboInOwl:hasDbXref>http://www.langual.org/langual_thesaurus.asp?termid=A0217</oboInOwl:hasDbXref>
-        <rdfs:label xml:lang="en">meat, poultry, seafood or related product (us cfr)</rdfs:label>
     </owl:Class>
     
 
@@ -2322,12 +2209,6 @@ FoodOn owes a large debt to LanguaL, the food indexing system developed since th
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03400267">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03400217"/>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000428"/>
-        <obo:IAO_0000115 xml:lang="en">Flesh from fish or shellfish. Includes seafood product analogs and seafood-based sausage or luncheon meat as well as such products as squid ink and clam juice.</obo:IAO_0000115>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/foodon.owl"/>
-        <obo:IAO_0000412>http://langual.org</obo:IAO_0000412>
-        <oboInOwl:hasDbXref>http://www.langual.org/langual_thesaurus.asp?termid=A0267</oboInOwl:hasDbXref>
-        <rdfs:label xml:lang="en">seafood or seafood product (us cfr)</rdfs:label>
     </owl:Class>
     
 
@@ -2336,14 +2217,6 @@ FoodOn owes a large debt to LanguaL, the food indexing system developed since th
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03401270">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00002403"/>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000428"/>
-        <obo:IAO_0000115 xml:lang="en">Food and Drugs, title 21, Code of Federal Regulations. Original food classification in LanguaL.</obo:IAO_0000115>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/foodon.owl"/>
-        <obo:IAO_0000412>http://langual.org</obo:IAO_0000412>
-        <oboInOwl:hasDbXref>http://www.langual.org/langual_thesaurus.asp?termid=A1270</oboInOwl:hasDbXref>
-        <rdfs:comment xml:lang="en">LanguaL curation note: This term is for CLASSIFICATION ONLY; DO NOT USE term in indexing. Use a more precise narrower term.</rdfs:comment>
-        <rdfs:label xml:lang="en">U.S. code of federal regulations, title 21 food product type</rdfs:label>
-        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.ecfr.gov/cgi-bin/text-idx?SID=87f720ce0d0b6c4548f4bbfd1f8e4c3d&amp;mc=true&amp;tpl=/ecfrbrowse/Title21/21chapterI.tpl</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -2353,13 +2226,6 @@ FoodOn owes a large debt to LanguaL, the food indexing system developed since th
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03411013">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03411347"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0000003"/>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000428"/>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/foodon.owl"/>
-        <obo:IAO_0000412>http://langual.org</obo:IAO_0000412>
-        <oboInOwl:hasDbXref>LANGUAL:B1013</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>http://www.langual.org/langual_thesaurus.asp?termid=B1013</oboInOwl:hasDbXref>
-        <rdfs:label xml:lang="en">plant used for producing extract or concentrate</rdfs:label>
-        <rdfs:label xml:lang="en">plant used for producing extract or concentrate as food source</rdfs:label>
     </owl:Class>
     
 
@@ -2368,13 +2234,6 @@ FoodOn owes a large debt to LanguaL, the food indexing system developed since th
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03411017">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03411013"/>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000428"/>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/foodon.owl"/>
-        <obo:IAO_0000412>http://langual.org</obo:IAO_0000412>
-        <oboInOwl:hasDbXref>LANGUAL:B1017</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>http://www.langual.org/langual_thesaurus.asp?termid=B1017</oboInOwl:hasDbXref>
-        <rdfs:label xml:lang="en">oil-producing plant</rdfs:label>
-        <rdfs:label xml:lang="en">oil-producing plant as food source</rdfs:label>
     </owl:Class>
     
 
@@ -2393,20 +2252,6 @@ FoodOn owes a large debt to LanguaL, the food indexing system developed since th
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00003004"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03411297"/>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000428"/>
-        <obo:IAO_0000115 xml:lang="en">An aquatic animal is an animal, either vertebrate or invertebrate, which lives in the water for most or all of its lifetime.</obo:IAO_0000115>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/foodon.owl"/>
-        <obo:IAO_0000412>http://langual.org</obo:IAO_0000412>
-        <oboInOwl:hasDbXref>LANGUAL:B1021</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>http://www.langual.org/langual_thesaurus.asp?termid=B1021</oboInOwl:hasDbXref>
-        <oboInOwl:hasSynonym xml:lang="en">invertebrate, water</oboInOwl:hasSynonym>
-        <rdfs:comment xml:lang="en">This is equivalent to:
-
-&apos;fish (food source)&apos; or &apos;shellfish (food source)&apos; or &apos;crustacean (food source)&apos; or &apos;echinoderm (food source)&apos; or &apos;coelenterate (food source)&apos;
-
-However, this disjunction appears to be a burden on reasoners, and so this is currently not implemented.</rdfs:comment>
-        <rdfs:label xml:lang="en">fish or lower water animal</rdfs:label>
-        <rdfs:label xml:lang="en">fish or lower water animal as food source</rdfs:label>
     </owl:Class>
     
 
@@ -2415,21 +2260,6 @@ However, this disjunction appears to be a burden on reasoners, and so this is cu
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03411023">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03411365"/>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000428"/>
-        <obo:IAO_0000115 xml:lang="en">A flatfish is a member of the order Pleuronectiformes of ray-finned demersal fishes, also called the Heterosomata, sometimes classified as a suborder of Perciformes. In many species, both eyes lie on one side of the head, one or the other migrating through or around the head during development. Some species face their left sides upward, some face their right sides upward, and others face either side upward. [https://en.wikipedia.org/wiki/Flatfish]</obo:IAO_0000115>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/foodon.owl"/>
-        <obo:IAO_0000412>http://langual.org</obo:IAO_0000412>
-        <oboInOwl:hasDbXref>LANGUAL:B1023</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>http://eol.org/pages/5168</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>http://www.langual.org/langual_thesaurus.asp?termid=B1023</oboInOwl:hasDbXref>
-        <oboInOwl:hasSynonym xml:lang="en">flat-fish</oboInOwl:hasSynonym>
-        <oboInOwl:hasSynonym xml:lang="en">flat-fishes</oboInOwl:hasSynonym>
-        <oboInOwl:hasSynonym xml:lang="en">flatfish</oboInOwl:hasSynonym>
-        <oboInOwl:hasSynonym xml:lang="en">flatfish, flounder</oboInOwl:hasSynonym>
-        <oboInOwl:hasSynonym xml:lang="en">flounders</oboInOwl:hasSynonym>
-        <oboInOwl:hasSynonym xml:lang="en">pleuronectiformes</oboInOwl:hasSynonym>
-        <rdfs:label xml:lang="en">fish, pleuronectiform</rdfs:label>
-        <rdfs:label xml:lang="en">fish, pleuronectiform as food source</rdfs:label>
     </owl:Class>
     
 
@@ -2438,15 +2268,6 @@ However, this disjunction appears to be a burden on reasoners, and so this is cu
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03411043">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03411426"/>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000428"/>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/foodon.owl"/>
-        <obo:IAO_0000412>http://langual.org</obo:IAO_0000412>
-        <oboInOwl:hasDbXref>LANGUAL:B1043</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>http://eol.org/pages/24776</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>http://www.langual.org/langual_thesaurus.asp?termid=B1043</oboInOwl:hasDbXref>
-        <oboInOwl:hasSynonym xml:lang="en">scomber spp.</oboInOwl:hasSynonym>
-        <rdfs:label xml:lang="en">mackerel</rdfs:label>
-        <rdfs:label xml:lang="en">mackerel as food source</rdfs:label>
     </owl:Class>
     
 
@@ -2464,19 +2285,6 @@ However, this disjunction appears to be a burden on reasoners, and so this is cu
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00002581"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03411021"/>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000428"/>
-        <obo:IAO_0000115 xml:lang="en">Shellfish is a food source and fisheries term for exoskeleton-bearing aquatic invertebrates used as food, including various species of molluscs, crustaceans, and echinoderms. Although most kinds of shellfish are harvested from saltwater environments, some kinds are found in freshwater. In addition, a few species of land crabs are eaten, for example *Cardisoma guanhumi* in the Caribbean. [https://en.wikipedia.org/wiki/Shellfish]</obo:IAO_0000115>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/foodon.owl"/>
-        <obo:IAO_0000412>http://langual.org</obo:IAO_0000412>
-        <oboInOwl:hasDbXref>LANGUAL:B1059</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>http://www.langual.org/langual_thesaurus.asp?termid=B1059</oboInOwl:hasDbXref>
-        <rdfs:comment xml:lang="en">This is equivalent to:
-
-&apos;crustacean (food source)&apos; or &apos;shellfish (food source)&apos;
-
-However, this has not been implemented due to reasoner performance on FoodOn.</rdfs:comment>
-        <rdfs:label xml:lang="en">shellfish or crustacean</rdfs:label>
-        <rdfs:label xml:lang="en">shellfish or crustacean as food source</rdfs:label>
     </owl:Class>
     
 
@@ -2485,15 +2293,6 @@ However, this has not been implemented due to reasoner performance on FoodOn.</r
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03411124">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03411601"/>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000428"/>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/foodon.owl"/>
-        <obo:IAO_0000412>http://langual.org</obo:IAO_0000412>
-        <oboInOwl:hasDbXref>LANGUAL:B1124</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>http://eol.org/pages/6893</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>http://www.langual.org/langual_thesaurus.asp?termid=B1124</oboInOwl:hasDbXref>
-        <oboInOwl:hasSynonym xml:lang="en">clupeidae</oboInOwl:hasSynonym>
-        <rdfs:label xml:lang="en">herring family</rdfs:label>
-        <rdfs:label xml:lang="en">herring family as food source</rdfs:label>
     </owl:Class>
     
 
@@ -2512,14 +2311,6 @@ However, this has not been implemented due to reasoner performance on FoodOn.</r
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00002581"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03411021"/>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000428"/>
-        <obo:IAO_0000115 xml:lang="en">Aquatic animals other than fish and shellfish</obo:IAO_0000115>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/foodon.owl"/>
-        <obo:IAO_0000412>http://langual.org</obo:IAO_0000412>
-        <oboInOwl:hasDbXref>LANGUAL:B1142</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>http://www.langual.org/langual_thesaurus.asp?termid=B1142</oboInOwl:hasDbXref>
-        <rdfs:label xml:lang="en">aquatic animal as food source</rdfs:label>
-        <rdfs:label xml:lang="en">aquatic invertebrate animal (excluding shellfish)</rdfs:label>
     </owl:Class>
     
 
@@ -2528,16 +2319,6 @@ However, this has not been implemented due to reasoner performance on FoodOn.</r
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03411157">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03411365"/>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000428"/>
-        <obo:IAO_0000115 xml:lang="en">Gadiformes are an order of ray-finned fish, also called the Anacanthini, that includes the cod and its allies. Many major food fish are in this order. They are found in marine waters throughout the world and the vast majority of the species are found in temperate or colder regions (tropical species are typically deep-water). A few species may enter estuaries but only one, the burbot (*Lota lota*), is a freshwater fish. [https://en.wikipedia.org/wiki/Gadiformes]</obo:IAO_0000115>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/foodon.owl"/>
-        <obo:IAO_0000412>http://langual.org</obo:IAO_0000412>
-        <oboInOwl:hasDbXref>LANGUAL:B1157</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>http://eol.org/pages/5496</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>http://www.langual.org/langual_thesaurus.asp?termid=B1157</oboInOwl:hasDbXref>
-        <oboInOwl:hasSynonym xml:lang="en">gadiformes</oboInOwl:hasSynonym>
-        <rdfs:label xml:lang="en">fish, gadiform</rdfs:label>
-        <rdfs:label xml:lang="en">fish, gadiform as food source</rdfs:label>
     </owl:Class>
     
 
@@ -2548,17 +2329,6 @@ However, this has not been implemented due to reasoner performance on FoodOn.</r
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001248"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03411021"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03411297"/>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000428"/>
-        <obo:IAO_0000115 xml:lang="en">Fish are the gill-bearing aquatic craniate animals that lack limbs with digits. Most fish are ectothermic (&quot;cold-blooded&quot;), allowing their body temperatures to vary as ambient temperatures change, though some of the large active swimmers like white shark and tuna can hold a higher core temperature.</obo:IAO_0000115>
-        <obo:IAO_0000117 xml:lang="en">Damion Dooley</obo:IAO_0000117>
-        <obo:IAO_0000119 rdf:resource="https://en.wikipedia.org/wiki/Fish"/>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/foodon.owl"/>
-        <obo:IAO_0000412>http://langual.org</obo:IAO_0000412>
-        <oboInOwl:hasDbXref>LANGUAL:B1222</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>http://www.langual.org/langual_thesaurus.asp?termid=B1222</oboInOwl:hasDbXref>
-        <rdfs:label xml:lang="en">fish</rdfs:label>
-        <rdfs:label xml:lang="en">fish as food source</rdfs:label>
     </owl:Class>
     
 
@@ -2567,19 +2337,6 @@ However, this has not been implemented due to reasoner performance on FoodOn.</r
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03411237">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03411998"/>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000428"/>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/foodon.owl"/>
-        <obo:IAO_0000412>http://langual.org</obo:IAO_0000412>
-        <oboInOwl:hasDbXref>LANGUAL:B1237</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>http://eol.org/pages/2602479</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>http://www.langual.org/langual_thesaurus.asp?termid=B1237</oboInOwl:hasDbXref>
-        <oboInOwl:hasSynonym xml:lang="en">caridea</oboInOwl:hasSynonym>
-        <oboInOwl:hasSynonym xml:lang="en">crangonidae</oboInOwl:hasSynonym>
-        <oboInOwl:hasSynonym xml:lang="en">palaemondidae</oboInOwl:hasSynonym>
-        <oboInOwl:hasSynonym xml:lang="en">penaeidae</oboInOwl:hasSynonym>
-        <oboInOwl:hasSynonym xml:lang="en">prawn</oboInOwl:hasSynonym>
-        <rdfs:label xml:lang="en">shrimp</rdfs:label>
-        <rdfs:label xml:lang="en">shrimp as food source</rdfs:label>
     </owl:Class>
     
 
@@ -2588,21 +2345,6 @@ However, this has not been implemented due to reasoner performance on FoodOn.</r
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03411297">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00000000"/>
-        <obo:IAO_0000111 xml:lang="en">vertebrate animal</obo:IAO_0000111>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000428"/>
-        <obo:IAO_0000115 xml:lang="en">A vertebrate animal is any species of organism within the subphylum Vertebrata (chordates with backbones). Vertebrates represent the overwhelming majority of the phylum Chordata, with currently about 69,276 species described.</obo:IAO_0000115>
-        <obo:IAO_0000115 xml:lang="en">Multicellular animal, e.g., fish, meat animal or poultry.</obo:IAO_0000115>
-        <obo:IAO_0000117>Damion Dooley</obo:IAO_0000117>
-        <obo:IAO_0000119 rdf:resource="https://en.wikipedia.org/wiki/Vertebrate"/>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/foodon.owl"/>
-        <obo:IAO_0000412>http://langual.org</obo:IAO_0000412>
-        <oboInOwl:hasBroadSynonym xml:lang="en">animal</oboInOwl:hasBroadSynonym>
-        <oboInOwl:hasDbXref>LANGUAL:B1297</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>http://www.langual.org/langual_thesaurus.asp?termid=B1297</oboInOwl:hasDbXref>
-        <rdfs:comment xml:lang="en">LanguaL curation note: For a unicellular animal, use *ALGAE OR FUNGUS USED AS FOOD SOURCE*.</rdfs:comment>
-        <rdfs:label xml:lang="en">animal used as food source</rdfs:label>
-        <rdfs:label xml:lang="en">vertebrate animal</rdfs:label>
     </owl:Class>
     
 
@@ -2611,13 +2353,6 @@ However, this has not been implemented due to reasoner performance on FoodOn.</r
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03411347">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00000000"/>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000428"/>
-        <obo:IAO_0000115 xml:lang="en">Multicellular plants.</obo:IAO_0000115>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/foodon.owl"/>
-        <obo:IAO_0000412>http://langual.org</obo:IAO_0000412>
-        <oboInOwl:hasDbXref>LANGUAL:B1347</oboInOwl:hasDbXref>
-        <rdfs:comment xml:lang="en">LanguaL curation note: For unicellular plants as well as for algae, mushrooms and yeast, use the appropriate narrower term under *ALGAE OR FUNGUS USED AS FOOD SOURCE*.</rdfs:comment>
-        <rdfs:label xml:lang="en">plant used as food source</rdfs:label>
     </owl:Class>
     
 
@@ -2626,14 +2361,6 @@ However, this has not been implemented due to reasoner performance on FoodOn.</r
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03411365">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03411222"/>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000428"/>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/foodon.owl"/>
-        <obo:IAO_0000412>http://langual.org</obo:IAO_0000412>
-        <oboInOwl:hasDbXref>LANGUAL:B1365</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>http://www.langual.org/langual_thesaurus.asp?termid=B1365</oboInOwl:hasDbXref>
-        <oboInOwl:hasSynonym xml:lang="en">osteichthyes</oboInOwl:hasSynonym>
-        <rdfs:label xml:lang="en">fish, bony</rdfs:label>
-        <rdfs:label xml:lang="en">fish, bony as food source</rdfs:label>
     </owl:Class>
     
 
@@ -2643,16 +2370,6 @@ However, this has not been implemented due to reasoner performance on FoodOn.</r
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03411374">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03411059"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03411433"/>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000428"/>
-        <obo:IAO_0000115 xml:lang="en">Crustaceans form a large, diverse arthropod taxon which includes such familiar animals as crabs, lobsters, crayfish, shrimp, krill, woodlice, and barnacles. [https://en.wikipedia.org/wiki/Crustacean]</obo:IAO_0000115>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/foodon.owl"/>
-        <obo:IAO_0000412>http://langual.org</obo:IAO_0000412>
-        <oboInOwl:hasDbXref>LANGUAL:B1374</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>http://eol.org/pages/2598871</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>http://www.langual.org/langual_thesaurus.asp?termid=B1374</oboInOwl:hasDbXref>
-        <oboInOwl:hasSynonym xml:lang="en">crustacea</oboInOwl:hasSynonym>
-        <rdfs:label xml:lang="en">crustacean</rdfs:label>
-        <rdfs:label xml:lang="en">crustacean as food source</rdfs:label>
     </owl:Class>
     
 
@@ -2662,15 +2379,6 @@ However, this has not been implemented due to reasoner performance on FoodOn.</r
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03411423">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001248"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03411835"/>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000428"/>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/foodon.owl"/>
-        <obo:IAO_0000412>http://langual.org</obo:IAO_0000412>
-        <oboInOwl:hasDbXref>LANGUAL:B1423</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>http://eol.org/pages/13122</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>http://www.langual.org/langual_thesaurus.asp?termid=B1423</oboInOwl:hasDbXref>
-        <oboInOwl:hasSynonym xml:lang="en">gadus spp.</oboInOwl:hasSynonym>
-        <rdfs:label xml:lang="en">cod</rdfs:label>
-        <rdfs:label xml:lang="en">cod as food source</rdfs:label>
     </owl:Class>
     
 
@@ -2679,16 +2387,6 @@ However, this has not been implemented due to reasoner performance on FoodOn.</r
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03411426">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03411581"/>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000428"/>
-        <obo:IAO_0000115 xml:lang="en">The *Scombridae* family of the mackerels, tunas, and bonitos includes many of the most important and familiar food fishes. The family consists of 51 species in 15 genera and two subfamilies. All species are in the subfamily *Scombrinae*, except the butterfly kingfish, which is the sole member of subfamily *Gasterochismatinae*. [https://en.wikipedia.org/wiki/Scombridae]</obo:IAO_0000115>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/foodon.owl"/>
-        <obo:IAO_0000412>http://langual.org</obo:IAO_0000412>
-        <oboInOwl:hasDbXref>LANGUAL:B1426</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>http://eol.org/pages/5210</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>http://www.langual.org/langual_thesaurus.asp?termid=B1426</oboInOwl:hasDbXref>
-        <oboInOwl:hasSynonym xml:lang="en">scombridae</oboInOwl:hasSynonym>
-        <rdfs:label xml:lang="en">mackerel family</rdfs:label>
-        <rdfs:label xml:lang="en">mackerel family as food source</rdfs:label>
     </owl:Class>
     
 
@@ -2699,16 +2397,6 @@ However, this has not been implemented due to reasoner performance on FoodOn.</r
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001293"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00002581"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03411059"/>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000428"/>
-        <obo:IAO_0000115 xml:lang="en">The term shellfish is used both broadly and specifically. For regulatory purposes it is often narrowly defined as filter-feeding molluscs such as clams, mussels, and oyster to the exclusion of crustaceans and all else. Although their shells may differ, all shellfish are invertebrates.</obo:IAO_0000115>
-        <obo:IAO_0000119 rdf:resource="https://en.wikipedia.org/wiki/Shellfish"/>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/foodon.owl"/>
-        <obo:IAO_0000412>http://langual.org</obo:IAO_0000412>
-        <oboInOwl:hasDbXref>LANGUAL:B1433</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>http://www.langual.org/langual_thesaurus.asp?termid=B1433</oboInOwl:hasDbXref>
-        <rdfs:comment xml:lang="en">Covers both freshwater and saltwater organisms</rdfs:comment>
-        <rdfs:label xml:lang="en">shellfish</rdfs:label>
-        <rdfs:label xml:lang="en">shellfish as food source</rdfs:label>
     </owl:Class>
     
 
@@ -2718,24 +2406,6 @@ However, this has not been implemented due to reasoner performance on FoodOn.</r
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03411489">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00002044"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03412113"/>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000428"/>
-        <obo:IAO_0000115 xml:lang="en">Scallop is a common name that is primarily applied to any one of numerous species of saltwater clams or marine bivalve mollusks in the taxonomic family Pectinidae, the scallops. However, the common name &quot;scallop&quot; is also sometimes applied to species in other closely related families within the superfamily Pectinoidea, which also includes the thorny oysters.</obo:IAO_0000115>
-        <obo:IAO_0000117 xml:lang="en">Damion Dooley</obo:IAO_0000117>
-        <obo:IAO_0000119 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Scallop</obo:IAO_0000119>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/foodon.owl"/>
-        <obo:IAO_0000412>http://langual.org</obo:IAO_0000412>
-        <oboInOwl:hasDbXref>LANGUAL:B1489</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>http://eol.org/pages/2249</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>http://www.langual.org/langual_thesaurus.asp?termid=B1489</oboInOwl:hasDbXref>
-        <oboInOwl:hasExactSynonym xml:lang="en">pectinidae</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasNarrowSynonym xml:lang="en">Argopecten irradians</oboInOwl:hasNarrowSynonym>
-        <oboInOwl:hasNarrowSynonym xml:lang="en">Pecten laquaetus</oboInOwl:hasNarrowSynonym>
-        <oboInOwl:hasNarrowSynonym xml:lang="en">pecten aequiscleatus</oboInOwl:hasNarrowSynonym>
-        <oboInOwl:hasSynonym xml:lang="en">pecten aequiscleatus</oboInOwl:hasSynonym>
-        <oboInOwl:hasSynonym xml:lang="en">pectinidae</oboInOwl:hasSynonym>
-        <rdfs:label xml:lang="en">scallop</rdfs:label>
-        <rdfs:label xml:lang="en">scallop as food source</rdfs:label>
     </owl:Class>
     
 
@@ -2744,19 +2414,6 @@ However, this has not been implemented due to reasoner performance on FoodOn.</r
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03411532">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03411856"/>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000428"/>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/foodon.owl"/>
-        <obo:IAO_0000412>http://langual.org</obo:IAO_0000412>
-        <oboInOwl:hasBroadSynonym xml:lang="en">Hippoglossus</oboInOwl:hasBroadSynonym>
-        <oboInOwl:hasDbXref>LANGUAL:B1532</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>http://eol.org/pages/23978</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>http://www.langual.org/langual_thesaurus.asp?termid=B1532</oboInOwl:hasDbXref>
-        <oboInOwl:hasExactSynonym xml:lang="en">hippoglossus spp.</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym xml:lang="en">reinhardtius spp.</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasSynonym xml:lang="en">hippoglossus spp.</oboInOwl:hasSynonym>
-        <oboInOwl:hasSynonym xml:lang="en">reinhardtius spp.</oboInOwl:hasSynonym>
-        <rdfs:label xml:lang="en">halibut</rdfs:label>
-        <rdfs:label xml:lang="en">halibut as food source</rdfs:label>
     </owl:Class>
     
 
@@ -2765,16 +2422,6 @@ However, this has not been implemented due to reasoner performance on FoodOn.</r
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03411558">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03411124"/>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000428"/>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/foodon.owl"/>
-        <obo:IAO_0000412>http://langual.org</obo:IAO_0000412>
-        <oboInOwl:hasDbXref>LANGUAL:B1558</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>http://www.langual.org/langual_thesaurus.asp?termid=B1558</oboInOwl:hasDbXref>
-        <oboInOwl:hasSynonym xml:lang="en">pilchard</oboInOwl:hasSynonym>
-        <oboInOwl:hasSynonym xml:lang="en">sardina</oboInOwl:hasSynonym>
-        <oboInOwl:hasSynonym xml:lang="en">sardinops</oboInOwl:hasSynonym>
-        <rdfs:label xml:lang="en">sardine</rdfs:label>
-        <rdfs:label xml:lang="en">sardine as food source</rdfs:label>
     </owl:Class>
     
 
@@ -2783,20 +2430,6 @@ However, this has not been implemented due to reasoner performance on FoodOn.</r
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03411564">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0100026"/>
-        <obo:GENEPIO_0001763>order=
-obolibrary:FOODON_03411297 # vertebrate 
-obolibrary:FOODON_00002452 # invertebrate
-obolibrary:PO_0000003 # whole plant
-obolibrary:FOODON_03411301 # algae
-obolibrary:FOODON_03411261 # fungae
-obolibrary:FOODON_03412345 # lichen</obo:GENEPIO_0001763>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000428"/>
-        <obo:IAO_0000115 xml:lang="en">This is a hierarchy of organisms, grouped minimally in a combination of taxonomy and consumer-oriented food groups.</obo:IAO_0000115>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/foodon.owl"/>
-        <obo:IAO_0000412>http://langual.org</obo:IAO_0000412>
-        <oboInOwl:hasDbXref>http://www.langual.org/langual_thesaurus.asp?termid=B1564</oboInOwl:hasDbXref>
-        <rdfs:comment xml:lang="en">This was LanguaL definition: Individual plant or animal from which the food product or its major ingredient is derived; also a chemical food source [FDA CFSAN 1995].</rdfs:comment>
-        <rdfs:label xml:lang="en">food product organismal source</rdfs:label>
     </owl:Class>
     
 
@@ -2805,16 +2438,6 @@ obolibrary:FOODON_03412345 # lichen</obo:GENEPIO_0001763>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03411581">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03411365"/>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000428"/>
-        <obo:IAO_0000115 xml:lang="en">Perciformes, also called the Percomorpha or Acanthopteri, are the most numerous order of vertebrates, containing about 41% of all bony fish. Perciformes means &quot;perch-like&quot;. They belong to the class of ray-finned fish, and comprise over 10,000 species found in almost all aquatic ecosystems. The order contains about 160 families, which is the most of any order within the vertebrates. [https://en.wikipedia.org/wiki/Perciformes]</obo:IAO_0000115>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/foodon.owl"/>
-        <obo:IAO_0000412>http://langual.org</obo:IAO_0000412>
-        <oboInOwl:hasDbXref>LANGUAL:B1581</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>http://eol.org/pages/5184</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>http://www.langual.org/langual_thesaurus.asp?termid=B1581</oboInOwl:hasDbXref>
-        <oboInOwl:hasSynonym xml:lang="en">perciformes</oboInOwl:hasSynonym>
-        <rdfs:label xml:lang="en">fish, perciform</rdfs:label>
-        <rdfs:label xml:lang="en">fish, perciform as food source</rdfs:label>
     </owl:Class>
     
 
@@ -2823,16 +2446,6 @@ obolibrary:FOODON_03412345 # lichen</obo:GENEPIO_0001763>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03411601">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03411365"/>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000428"/>
-        <obo:IAO_0000115 xml:lang="en">Clupeiformes is the order of ray-finned fish that includes the herring family, *Clupeidae*, and the anchovy family, *Engraulidae*. The group includes many of the most important forage and food fish. [https://en.wikipedia.org/wiki/Clupeiformes]</obo:IAO_0000115>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/foodon.owl"/>
-        <obo:IAO_0000412>http://langual.org</obo:IAO_0000412>
-        <oboInOwl:hasDbXref>LANGUAL:B1601</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>http://eol.org/pages/3190</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>http://www.langual.org/langual_thesaurus.asp?termid=B1601</oboInOwl:hasDbXref>
-        <oboInOwl:hasSynonym xml:lang="en">clupeiformes</oboInOwl:hasSynonym>
-        <rdfs:label xml:lang="en">fish, clupeiform</rdfs:label>
-        <rdfs:label xml:lang="en">fish, clupeiform as food source</rdfs:label>
     </owl:Class>
     
 
@@ -2841,15 +2454,6 @@ obolibrary:FOODON_03412345 # lichen</obo:GENEPIO_0001763>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03411835">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03411157"/>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000428"/>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/foodon.owl"/>
-        <obo:IAO_0000412>http://langual.org</obo:IAO_0000412>
-        <oboInOwl:hasDbXref>LANGUAL:B1835</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>http://eol.org/pages/5503</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>http://www.langual.org/langual_thesaurus.asp?termid=B1835</oboInOwl:hasDbXref>
-        <oboInOwl:hasSynonym xml:lang="en">gadidae</oboInOwl:hasSynonym>
-        <rdfs:label xml:lang="en">cod family</rdfs:label>
-        <rdfs:label xml:lang="en">cod family as food source</rdfs:label>
     </owl:Class>
     
 
@@ -2858,15 +2462,6 @@ obolibrary:FOODON_03412345 # lichen</obo:GENEPIO_0001763>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03411856">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03411023"/>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000428"/>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/foodon.owl"/>
-        <obo:IAO_0000412>http://langual.org</obo:IAO_0000412>
-        <oboInOwl:hasDbXref>LANGUAL:B1856</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>http://eol.org/pages/5173</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>http://www.langual.org/langual_thesaurus.asp?termid=B1856</oboInOwl:hasDbXref>
-        <oboInOwl:hasSynonym xml:lang="en">pleuronectidae</oboInOwl:hasSynonym>
-        <rdfs:label xml:lang="en">righteye flounder family</rdfs:label>
-        <rdfs:label xml:lang="en">righteye flounder family as food source</rdfs:label>
     </owl:Class>
     
 
@@ -2875,15 +2470,6 @@ obolibrary:FOODON_03412345 # lichen</obo:GENEPIO_0001763>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03411998">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03411374"/>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000428"/>
-        <obo:IAO_0000115 xml:lang="en">The Decapoda or decapods (literally &quot;ten-footed&quot;) are an order of crustaceans within the class Malacostraca, including many familiar groups, such as crayfish, crabs, lobsters, prawns, and shrimp. Most decapods are scavengers. [https://en.wikipedia.org/wiki/Decapoda]</obo:IAO_0000115>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/foodon.owl"/>
-        <obo:IAO_0000412>http://langual.org</obo:IAO_0000412>
-        <oboInOwl:hasDbXref>LANGUAL:B1998</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>http://www.langual.org/langual_thesaurus.asp?termid=B1998</oboInOwl:hasDbXref>
-        <oboInOwl:hasSynonym xml:lang="en">decapoda</oboInOwl:hasSynonym>
-        <rdfs:label xml:lang="en">decapod</rdfs:label>
-        <rdfs:label xml:lang="en">decapod as food source</rdfs:label>
     </owl:Class>
     
 
@@ -2892,20 +2478,6 @@ obolibrary:FOODON_03412345 # lichen</obo:GENEPIO_0001763>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03412112">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03411433"/>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000428"/>
-        <obo:IAO_0000115 xml:lang="en">*Mollusca* is a large phylum of invertebrate animals whose members are known as molluscs or mollusks. Molluscs are the largest marine phylum, comprising about 23% of all the named marine organisms. Numerous molluscs also live in freshwater and terrestrial habitats. [https://en.wikipedia.org/wiki/Mollusca]</obo:IAO_0000115>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/foodon.owl"/>
-        <obo:IAO_0000412>http://langual.org</obo:IAO_0000412>
-        <oboInOwl:hasDbXref>EC:No 216/2009 MOL</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>FAO ASFIS:MOL</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>LANGUAL:B2112</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>http://eol.org/pages/2195</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>http://www.langual.org/langual_thesaurus.asp?termid=B2112</oboInOwl:hasDbXref>
-        <oboInOwl:hasExactSynonym>Mollusca</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym xml:lang="en">mollusk</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasSynonym xml:lang="en">mollusca</oboInOwl:hasSynonym>
-        <rdfs:label xml:lang="en">mollusc</rdfs:label>
-        <rdfs:label xml:lang="en">molluscs as food source</rdfs:label>
     </owl:Class>
     
 
@@ -2914,19 +2486,6 @@ obolibrary:FOODON_03412345 # lichen</obo:GENEPIO_0001763>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03412113">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03412112"/>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000428"/>
-        <obo:IAO_0000115 xml:lang="en">*Bivalvia*, in previous centuries referred to as the *Lamellibranchiata* and *Pelecypoda*, is a class of marine and freshwater molluscs that have laterally compressed bodies enclosed by a shell consisting of two hinged parts. Bivalves as a group have no head and they lack some usual molluscan organs like the radula and the odontophore. They include the clams, oysters, cockles, mussels, scallops, and numerous other families that live in saltwater, as well as a number of families that live in freshwater.[https://en.wikipedia.org/wiki/Bivalvia]</obo:IAO_0000115>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/foodon.owl"/>
-        <obo:IAO_0000412>http://langual.org</obo:IAO_0000412>
-        <oboInOwl:hasDbXref>LANGUAL:B2113</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>http://eol.org/pages/2215</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>http://www.langual.org/langual_thesaurus.asp?termid=B2113</oboInOwl:hasDbXref>
-        <oboInOwl:hasSynonym xml:lang="en">bivalvia</oboInOwl:hasSynonym>
-        <oboInOwl:hasSynonym xml:lang="en">lamellibranchiata</oboInOwl:hasSynonym>
-        <oboInOwl:hasSynonym xml:lang="en">pelecypod</oboInOwl:hasSynonym>
-        <oboInOwl:hasSynonym xml:lang="en">pelecypoda</oboInOwl:hasSynonym>
-        <rdfs:label xml:lang="en">bivalve</rdfs:label>
-        <rdfs:label xml:lang="en">bivalve as food source</rdfs:label>
     </owl:Class>
     
 
@@ -2936,19 +2495,6 @@ obolibrary:FOODON_03412345 # lichen</obo:GENEPIO_0001763>
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03412115">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03411142"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03411433"/>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000428"/>
-        <obo:IAO_0000115 xml:lang="en">Echinoderm is the common name given to any member of the phylum *Echinodermata* of marine animals. The adults are recognizable by their (usually five-point) radial symmetry, and include such well-known animals as sea stars, sea urchins, sand dollars, and sea cucumbers, as well as the sea lilies or &quot;stone lilies&quot;. [https://en.wikipedia.org/wiki/Echinoderm]</obo:IAO_0000115>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/foodon.owl"/>
-        <obo:IAO_0000412>http://langual.org</obo:IAO_0000412>
-        <oboInOwl:hasDbXref>EC:No 1637/2001 ECH</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>FAO ASFIS:ECH</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>LANGUAL:B2115</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>http://www.langual.org/langual_thesaurus.asp?termid=B2115</oboInOwl:hasDbXref>
-        <oboInOwl:hasNarrowSynonym>Echinodermata</oboInOwl:hasNarrowSynonym>
-        <oboInOwl:hasNarrowSynonym>Echinodermata Klein, 1734</oboInOwl:hasNarrowSynonym>
-        <oboInOwl:hasSynonym xml:lang="en">echinodermata</oboInOwl:hasSynonym>
-        <rdfs:label xml:lang="en">echinoderm</rdfs:label>
-        <rdfs:label xml:lang="en">echinoderm as food source</rdfs:label>
     </owl:Class>
     
 
@@ -2958,15 +2504,6 @@ obolibrary:FOODON_03412345 # lichen</obo:GENEPIO_0001763>
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03412409">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00002581"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03411142"/>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000428"/>
-        <obo:IAO_0000115 xml:lang="en">*Coelenterata* is an obsolete term encompassing the animal phyla *Cnidaria* (coral animals, true jellies, sea anemones, sea pens, and their allies) and *Ctenophora* (comb jellies).  [https://en.wikipedia.org/wiki/Coelenterata]</obo:IAO_0000115>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/foodon.owl"/>
-        <obo:IAO_0000412>http://langual.org</obo:IAO_0000412>
-        <oboInOwl:hasDbXref>LANGUAL:B2409</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>http://www.langual.org/langual_thesaurus.asp?termid=B2409</oboInOwl:hasDbXref>
-        <oboInOwl:hasSynonym xml:lang="en">coelenterata</oboInOwl:hasSynonym>
-        <rdfs:label xml:lang="en">coelenterate</rdfs:label>
-        <rdfs:label xml:lang="en">coelenterate as food source</rdfs:label>
     </owl:Class>
     
 
@@ -2975,15 +2512,6 @@ obolibrary:FOODON_03412345 # lichen</obo:GENEPIO_0001763>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03414465">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03411142"/>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000428"/>
-        <obo:IAO_0000115 xml:lang="en">Chordates, members of the phylum *Chordata*, are deuterostome animals possessing a notochord, a hollow dorsal nerve cord, pharyngeal slits, an endostyle, and a post-anal tail for at least some period of their life cycles. Taxonomically, the phylum includes the subphyla *Vertebrata*, including mammals, fish, amphibians, reptiles, birds; *Tunicata*, including salps and sea squirts; and *Cephalochordata*, comprising the lancelets.</obo:IAO_0000115>
-        <obo:IAO_0000119>WIKIPEDIA:Chordate</obo:IAO_0000119>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/foodon.owl"/>
-        <obo:IAO_0000412>http://langual.org</obo:IAO_0000412>
-        <oboInOwl:hasDbXref>LANGUAL:B4465</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>http://eol.org/pages/694</oboInOwl:hasDbXref>
-        <oboInOwl:hasSynonym xml:lang="en">chordata</oboInOwl:hasSynonym>
-        <rdfs:label xml:lang="en">chordate as food source</rdfs:label>
     </owl:Class>
     
 
@@ -2993,18 +2521,6 @@ obolibrary:FOODON_03412345 # lichen</obo:GENEPIO_0001763>
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03414466">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00002581"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03414465"/>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000428"/>
-        <obo:IAO_0000115 xml:lang="en">Tunicates, previously known as *Urochordata* or urochordates, are members of the *Tunicata*, a subphylum of the phylum *Chordata*. They are marine filter feeders with a saclike morphology. In their respiration and feeding they take in water through an incurrent (or inhalant) siphon and expel the filtered water through an excurrent (or exhalant) siphon. Most adult tunicates are sessile and attached to rocks or similarly suitable surfaces on the ocean floor; others such as salps, doliolids and pyrosomes swim in the pelagic zone as adults. Various species are commonly known as sea squirts or sea pork.</obo:IAO_0000115>
-        <obo:IAO_0000119>WIKIPEDIA:Tunicate</obo:IAO_0000119>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/foodon.owl"/>
-        <obo:IAO_0000412>http://langual.org</obo:IAO_0000412>
-        <oboInOwl:hasDbXref>LANGUAL:B4466</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>http://www.langual.org/langual_thesaurus.asp?termid=B4466</oboInOwl:hasDbXref>
-        <oboInOwl:hasSynonym xml:lang="en">oopah</oboInOwl:hasSynonym>
-        <oboInOwl:hasSynonym xml:lang="en">sea squirt</oboInOwl:hasSynonym>
-        <oboInOwl:hasSynonym xml:lang="en">tunicata</oboInOwl:hasSynonym>
-        <rdfs:label xml:lang="en">tunicate</rdfs:label>
-        <rdfs:label xml:lang="en">tunicate as food source</rdfs:label>
     </owl:Class>
     
 
@@ -3013,13 +2529,6 @@ obolibrary:FOODON_03412345 # lichen</obo:GENEPIO_0001763>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03470107">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00000000"/>
-        <obo:IAO_0000111 xml:lang="en">food preservation process</obo:IAO_0000111>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000428"/>
-        <obo:IAO_0000115 xml:lang="en">The methods contributing to the prevention or retardation of microbial, enzymatic or oxidative spoilage and thus to the extension of shelf life. Index all methods for which information is available, even if a corresponding descriptor has already been used in *H. TREATMENT APPLIED*. Preservation descriptors refer to the finished food as a whole with these exceptions: (1) if the components of a multi-component food, such as cream pie, are preservation by different methods, index all methods; (2)  if chemical preservatives are declared on the label, always index them even if it is known that the preservative was introduced through or is only present in a component or ingredient of the food; and (3) if the preservation method for an ingredient is declared on the label (such as brie cheese made from pasteurized milk) index it. Also use *INGREDIENT preservation by THERMAL PROCESSING* or *INGREDIENT preservation by IRRADIATION* when ingredients have been pasteurized, ultrapasteurized, sterilized or irradiated.</obo:IAO_0000115>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/foodon.owl"/>
-        <obo:IAO_0000412>http://langual.org</obo:IAO_0000412>
-        <oboInOwl:hasDbXref>LANGUAL:J0107</oboInOwl:hasDbXref>
-        <rdfs:label xml:lang="en">food preservation process</rdfs:label>
     </owl:Class>
     
 
@@ -4524,6 +4033,8 @@ Request that IAO either clarify these or change definitions not to use them</rdf
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_3483">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03411017"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3744"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ONS_0000078"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0000003"/>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000428"/>
         <obo:IAO_0000118 xml:lang="en">hemp plant</obo:IAO_0000118>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/foodon.owl"/>
@@ -7217,6 +6728,7 @@ This issue is outside the scope of OBI.</obo:IAO_0000116>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0000003">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03411564"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0100026"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0009011"/>
         <obo:IAO_0000115>A plant structure (PO:0005679) which is a whole organism.</obo:IAO_0000115>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/foodon.owl"/>
@@ -9209,15 +8721,6 @@ This issue is outside the scope of OBI.</obo:IAO_0000116>
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/FOODON_03420245">
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000428"/>
-        <obo:IAO_0000412>http://langual.org</obo:IAO_0000412>
-        <oboInOwl:hasExactSynonym xml:lang="en">curd</oboInOwl:hasExactSynonym>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/foodon.owl"/>
-        <rdfs:label xml:lang="en">mammalian milk curd</rdfs:label>
-        <oboInOwl:hasDbXref>http://www.langual.org/langual_thesaurus.asp?termid=C0245</oboInOwl:hasDbXref>
-        <obo:IAO_0000115 xml:lang="en">The thicker or more coagulable part of milk that is separated from the serum or watery part (whey), especially in the process of making cheese.</obo:IAO_0000115>
-    </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0000003">
         <rdfs:label>reproduction</rdfs:label>
     </rdf:Description>
@@ -9228,8 +8731,8 @@ This issue is outside the scope of OBI.</obo:IAO_0000116>
         <obo:IAO_0000111 xml:lang="en">term replaced by</obo:IAO_0000111>
         <obo:IAO_0000119 xml:lang="en">Person:Alan Ruttenberg</obo:IAO_0000119>
         <obo:IAO_0000115 xml:lang="en">Add as annotation triples in the granting ontology</obo:IAO_0000115>
-        <obo:IAO_0000117 xml:lang="en">Person:Alan Ruttenberg</obo:IAO_0000117>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000125"/>
+        <obo:IAO_0000117 xml:lang="en">Person:Alan Ruttenberg</obo:IAO_0000117>
         <rdfs:label xml:lang="en">term replaced by</rdfs:label>
         <obo:IAO_0000115 xml:lang="en">Use on obsolete terms, relating the term to another term that can be used as a substitute</obo:IAO_0000115>
     </rdf:Description>
