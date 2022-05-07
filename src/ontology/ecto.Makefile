@@ -77,6 +77,7 @@ $(IMPORTDIR)/ons_import.owl: $(MIRRORDIR)/ons.owl $(IMPORTDIR)/ons_terms_combine
 	if [ $(IMP) = true ]; then $(ROBOT) query -i $< --update ../sparql/preprocess-module.ru \
 		extract -T $(IMPORTDIR)/ons_terms_combined.txt --force true --copy-ontology-annotations true --individuals include --method BOT \
 		remove --axioms Declaration \
+		remove --select "<http://purl.obolibrary.org/obo/FOODON_*>" --axioms annotation \
 		remove --term RO:0002434 --term RO:0000052 --term RO:0002018 --term RO:0002233 --term RO:0002248 --term RO:0002434 --term RO:0002437 --term RO:0002501 --term RO:0002506 --term RO:0002507 --term RO:0002509 --term RO:0002574 --term RO:0002595 --trim true \
 		query --update ../sparql/inject-subset-declaration.ru --update ../sparql/inject-synonymtype-declaration.ru --update ../sparql/postprocess-module.ru \
 		annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) --output $@.tmp.owl && mv $@.tmp.owl $@; fi
