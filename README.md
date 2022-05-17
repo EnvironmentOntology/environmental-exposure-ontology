@@ -1,11 +1,7 @@
 [![Build Status](https://travis-ci.org/EnvironmentOntology/environmental-exposure-ontology.svg?branch=master)](https://travis-ci.org/EnvironmentOntology/environmental-exposure-ontology)
 [![DOI](https://zenodo.org/badge/13996/EnvironmentOntology/environmental-exposure-ontology.svg)](https://zenodo.org/badge/latestdoi/13996/EnvironmentOntology/environmental-exposure-ontology)
 
-[![ecto_logo](https://github.com/jmcmurry/closed-illustrations/blob/master/logos/ecto-logos/ecto-logo_black-stacked.png)
-
-## Edit this ontology!
-
-TBD
+[![logo](https://github.com/jmcmurry/closed-illustrations/blob/master/logos/ecto-logos/ecto-logo_black-stacked.png)](https://github.com/jmcmurry/closed-illustrations/blob/master/logos/ecto-logos/ecto-logo_black-stacked.png)
 
 
 ## Environmental conditions, treatments and exposures ontology (ECTO)
@@ -38,7 +34,7 @@ There is no public browser yet. Use one of the following files:
  * [subsets/ecto-basic.obo](subsets/ecto-basic.obo) - for OBO-Edit users
  * [ecto.owl](ecto.owl) - open in Protege5
 
-Note to open the OWL in Protege you will need to check out the repo so
+Note: to open the OWL in Protege you will need to check out the repo so
 that the catalog can be used.
 
 ### Relationships to other ontologies
@@ -90,7 +86,7 @@ The proposed ID space is very tentative
 ### Modeling
 
 The model we are using is aligned with the environmental conditions
-model in PhenoPackets. We attempt to follow ExO where possible.
+model in Phenopackets. We attempt to follow ExO where possible.
 
 We treat exposures as events; in ontological terms, they are types of
 `occurrents`. Specifically, they are interactions between a `receptor`
@@ -115,8 +111,8 @@ datamodel.
 
 ### Annotation Guide
 
-Broadly speaking, this ontology is designed to support both pre and
-post composed use cases.
+Broadly speaking, this ontology is designed to support both pre- and
+post-composed use cases.
 
 With the pre-composed approach, the curator uses a "ready-made" ECTO
 class expressing the combination of values required for different
@@ -147,6 +143,8 @@ instructions on how to edit, maintain or release the ontology.
 
 See [src/mappings](src/mappings) for an exploration of merging multiple exposure ontologies using kboom
 
-The intent is not to use this ontology: rather to help gap fill and understand what is out there.
+The intent is not to make a usable ontology, but rather to help gap fill and understand what is out there.
 
+## Edit this ontology!
 
+We welcome suggestions from the community for new terms or changes to existing terms! Please create an issue using our [issue tracker](https://github.com/EnvironmentOntology/environmental-exposure-ontology/issues).
