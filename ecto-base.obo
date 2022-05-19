@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: ecto/releases/2022-05-04/ecto-base.owl
+data-version: ecto/releases/2022-05-12/ecto-base.owl
 subsetdef: mrex "medically relevant exposure"
 ontology: ecto/ecto-base
 property_value: http://purl.org/dc/elements/1.1/description "ECTO describes exposures to experimental treatments of plants and model organisms (e.g. exposures to modification of diet, lighting levels, temperature); exposures of humans or any other organisms to stressors through a variety of routes, for purposes of public health, environmental monitoring etc, stimuli, natural and experimental, any kind of environmental condition or change in condition that can be experienced by an organism or population of organisms on earth. The scope is very general and can include for example plant treatment regimens, as well as human clinical exposures (although these may better be handled by a more specialized ontology)." xsd:string
@@ -7,7 +7,7 @@ property_value: http://purl.org/dc/elements/1.1/title "Environment Exposure Onto
 property_value: http://purl.org/dc/elements/1.1/type IAO:8000001
 property_value: http://purl.org/dc/terms/license https://creativecommons.org/publicdomain/zero/1.0/
 property_value: IAO:0000700 http://purl.obolibrary.org/obo/ExO_0000002 xsd:string
-property_value: owl:versionInfo "2022-05-04" xsd:string
+property_value: owl:versionInfo "2022-05-12" xsd:string
 
 [Term]
 id: ECTO:0000001
@@ -538,24 +538,24 @@ intersection_of: RO:0002309 NCIT:C103933
 [Term]
 id: ECTO:0030000
 name: exposure to a diet
-def: "An exposure event involving Dietary Pattern" []
-synonym: "Dietary Pattern exposure" EXACT []
+def: "An exposure event involving dietary pattern" []
+synonym: "dietary pattern exposure" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002309 ONS:0000094
 
 [Term]
 id: ECTO:0030001
 name: exposure to high vegetable diet
-def: "An exposure event involving http://purl.obolibrary.org/obo/ONS_1000025" []
-synonym: "http://purl.obolibrary.org/obo/ONS_1000025 exposure" EXACT []
+def: "An exposure event involving semi-vegetarian diet" []
+synonym: "semi-vegetarian diet exposure" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002309 ONS:1000025
 
 [Term]
 id: ECTO:0070000
 name: exposure to probiotic or bacteria supplement via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_03401308 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_03401308 exposure via ingestion" EXACT []
+def: "An exposure to probiotic or bacteria supplement via ingestion." []
+synonym: "probiotic or bacteria supplement exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:03401308
@@ -563,8 +563,8 @@ intersection_of: RO:0002309 FOODON:03401308
 [Term]
 id: ECTO:0070001
 name: exposure to skim milk via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_03311235 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_03311235 exposure via ingestion" EXACT []
+def: "An exposure to skim milk (pasteurized, vitamin A and D fortified) via ingestion." []
+synonym: "skim milk (pasteurized, vitamin A and D fortified) exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:03311235
@@ -572,8 +572,8 @@ intersection_of: RO:0002309 FOODON:03311235
 [Term]
 id: ECTO:0070002
 name: exposure to lowfat milk via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_00002815 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_00002815 exposure via ingestion" EXACT []
+def: "An exposure to lowfat cow milk (1% fat) via ingestion." []
+synonym: "lowfat cow milk (1% fat) exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:00002815
@@ -581,8 +581,8 @@ intersection_of: RO:0002309 FOODON:00002815
 [Term]
 id: ECTO:0070003
 name: exposure to whole milk via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_03310780 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_03310780 exposure via ingestion" EXACT []
+def: "An exposure to cow whole milk 3.5% fat via ingestion." []
+synonym: "cow whole milk 3.5% fat exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:03310780
@@ -590,8 +590,8 @@ intersection_of: RO:0002309 FOODON:03310780
 [Term]
 id: ECTO:0070004
 name: exposure to almond milk via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_00003157 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_00003157 exposure via ingestion" EXACT []
+def: "An exposure to almond milk via ingestion." []
+synonym: "almond milk exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:00003157
@@ -599,8 +599,8 @@ intersection_of: RO:0002309 FOODON:00003157
 [Term]
 id: ECTO:0070005
 name: exposure to soybean milk via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_03305289 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_03305289 exposure via ingestion" EXACT []
+def: "An exposure to soybean milk via ingestion." []
+synonym: "soybean milk exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:03305289
@@ -608,8 +608,8 @@ intersection_of: RO:0002309 FOODON:03305289
 [Term]
 id: ECTO:0070006
 name: exposure to milk beverage analog via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_00002034 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_00002034 exposure via ingestion" EXACT []
+def: "An exposure to milk beverage analog via ingestion." []
+synonym: "milk beverage analog exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:00002034
@@ -617,17 +617,17 @@ intersection_of: RO:0002309 FOODON:00002034
 [Term]
 id: ECTO:0070007
 name: exposure to heavy cream via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_03420161 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_03420161 exposure via ingestion" EXACT []
+def: "An exposure to heavy cream via ingestion." []
+synonym: "heavy cream exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
-intersection_of: RO:0002309 FOODON:03420161
+intersection_of: RO:0002309 FOODON:03310795
 
 [Term]
 id: ECTO:0070008
 name: exposure to imitation half and half via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_03304468 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_03304468 exposure via ingestion" EXACT []
+def: "An exposure to imitation half and half via ingestion." []
+synonym: "imitation half and half exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:03304468
@@ -635,8 +635,8 @@ intersection_of: RO:0002309 FOODON:03304468
 [Term]
 id: ECTO:0070009
 name: exposure to frozen yogurt via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_03307445 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_03307445 exposure via ingestion" EXACT []
+def: "An exposure to frozen yogurt via ingestion." []
+synonym: "frozen yogurt exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:03307445
@@ -653,8 +653,8 @@ intersection_of: RO:0002309 FOODON:00001045
 [Term]
 id: ECTO:0070011
 name: exposure to butter via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_03310351 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_03310351 exposure via ingestion" EXACT []
+def: "An exposure to butter via ingestion." []
+synonym: "butter exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:03310351
@@ -662,8 +662,8 @@ intersection_of: RO:0002309 FOODON:03310351
 [Term]
 id: ECTO:0070012
 name: exposure to margarine via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_03301672 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_03301672 exposure via ingestion" EXACT []
+def: "An exposure to margarine via ingestion." []
+synonym: "margarine exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:03301672
@@ -671,8 +671,8 @@ intersection_of: RO:0002309 FOODON:03301672
 [Term]
 id: ECTO:0070013
 name: exposure to butter spread via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_03303711 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_03303711 exposure via ingestion" EXACT []
+def: "An exposure to butter blend spread via ingestion." []
+synonym: "butter blend spread exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:03303711
@@ -680,8 +680,8 @@ intersection_of: RO:0002309 FOODON:03303711
 [Term]
 id: ECTO:0070014
 name: exposure to non fat yogurt via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_03305085 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_03305085 exposure via ingestion" EXACT []
+def: "An exposure to yogurt (nonfat) via ingestion." []
+synonym: "yogurt (nonfat) exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:03305085
@@ -689,8 +689,8 @@ intersection_of: RO:0002309 FOODON:03305085
 [Term]
 id: ECTO:0070015
 name: exposure to lowfat yogurt via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_03307444 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_03307444 exposure via ingestion" EXACT []
+def: "An exposure to yogurt (lowfat) via ingestion." []
+synonym: "yogurt (lowfat) exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:03307444
@@ -698,8 +698,8 @@ intersection_of: RO:0002309 FOODON:03307444
 [Term]
 id: ECTO:0070016
 name: exposure to regular yogurt via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_03301502 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_03301502 exposure via ingestion" EXACT []
+def: "An exposure to yogurt (plain) via ingestion." []
+synonym: "yogurt (plain) exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:03301502
@@ -707,8 +707,8 @@ intersection_of: RO:0002309 FOODON:03301502
 [Term]
 id: ECTO:0070017
 name: exposure to cottage cheese via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_03303720 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_03303720 exposure via ingestion" EXACT []
+def: "An exposure to cottage cheese (lowfat) via ingestion." []
+synonym: "cottage cheese (lowfat) exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:03303720
@@ -716,8 +716,8 @@ intersection_of: RO:0002309 FOODON:03303720
 [Term]
 id: ECTO:0070018
 name: exposure to cream cheese via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_03301889 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_03301889 exposure via ingestion" EXACT []
+def: "An exposure to cream cheese via ingestion." []
+synonym: "cream cheese exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:03301889
@@ -725,8 +725,8 @@ intersection_of: RO:0002309 FOODON:03301889
 [Term]
 id: ECTO:0070020
 name: exposure to lowfat cheese via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_03303902 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_03303902 exposure via ingestion" EXACT []
+def: "An exposure to cheese (lowfat) via ingestion." []
+synonym: "cheese (lowfat) exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:03303902
@@ -734,8 +734,8 @@ intersection_of: RO:0002309 FOODON:03303902
 [Term]
 id: ECTO:0070021
 name: exposure to cheese (natural) via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_03303504 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_03303504 exposure via ingestion" EXACT []
+def: "An exposure to cheese (natural) via ingestion." []
+synonym: "cheese (natural) exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:03303504
@@ -743,8 +743,8 @@ intersection_of: RO:0002309 FOODON:03303504
 [Term]
 id: ECTO:0070022
 name: exposure to apple via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_00002473 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_00002473 exposure via ingestion" EXACT []
+def: "An exposure to apple (whole) via ingestion." []
+synonym: "apple (whole) exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:00002473
@@ -752,8 +752,8 @@ intersection_of: RO:0002309 FOODON:00002473
 [Term]
 id: ECTO:0070023
 name: exposure to avocado via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_03305236 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_03305236 exposure via ingestion" EXACT []
+def: "An exposure to avocado (whole, raw) via ingestion." []
+synonym: "avocado (whole, raw) exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:03305236
@@ -761,8 +761,8 @@ intersection_of: RO:0002309 FOODON:03305236
 [Term]
 id: ECTO:0070024
 name: exposure to banana via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_03311513 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_03311513 exposure via ingestion" EXACT []
+def: "An exposure to Cavendish banana (whole, ripe) via ingestion." []
+synonym: "Cavendish banana (whole, ripe) exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:03311513
@@ -770,8 +770,8 @@ intersection_of: RO:0002309 FOODON:03311513
 [Term]
 id: ECTO:0070025
 name: exposure to blueberries via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_03302045 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_03302045 exposure via ingestion" EXACT []
+def: "An exposure to blueberry (whole, raw) via ingestion." []
+synonym: "blueberry (whole, raw) exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:03302045
@@ -779,8 +779,8 @@ intersection_of: RO:0002309 FOODON:03302045
 [Term]
 id: ECTO:0070026
 name: exposure to cantaloupe via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_03302805 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_03302805 exposure via ingestion" EXACT []
+def: "An exposure to cantaloupe (whole, raw) via ingestion." []
+synonym: "cantaloupe (whole, raw) exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:03302805
@@ -788,8 +788,8 @@ intersection_of: RO:0002309 FOODON:03302805
 [Term]
 id: ECTO:0070027
 name: exposure to grapes via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_03301123 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_03301123 exposure via ingestion" EXACT []
+def: "An exposure to grape (whole, raw) via ingestion." []
+synonym: "grape (whole, raw) exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:03301123
@@ -797,8 +797,8 @@ intersection_of: RO:0002309 FOODON:03301123
 [Term]
 id: ECTO:0070028
 name: exposure to grapefruit via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_03301702 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_03301702 exposure via ingestion" EXACT []
+def: "An exposure to grapefruit (whole, raw) via ingestion." []
+synonym: "grapefruit (whole, raw) exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:03301702
@@ -806,8 +806,8 @@ intersection_of: RO:0002309 FOODON:03301702
 [Term]
 id: ECTO:0070029
 name: exposure to navel orange via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_00002511 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_00002511 exposure via ingestion" EXACT []
+def: "An exposure to navel orange (whole, raw) via ingestion." []
+synonym: "navel orange (whole, raw) exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:00002511
@@ -815,8 +815,8 @@ intersection_of: RO:0002309 FOODON:00002511
 [Term]
 id: ECTO:0070030
 name: exposure to peach via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_03301719 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_03301719 exposure via ingestion" EXACT []
+def: "An exposure to peach (whole, raw) via ingestion." []
+synonym: "peach (whole, raw) exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:03301719
@@ -824,8 +824,8 @@ intersection_of: RO:0002309 FOODON:03301719
 [Term]
 id: ECTO:0070031
 name: exposure to plum via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_03301580 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_03301580 exposure via ingestion" EXACT []
+def: "An exposure to plum (whole, raw) via ingestion." []
+synonym: "plum (whole, raw) exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:03301580
@@ -833,8 +833,8 @@ intersection_of: RO:0002309 FOODON:03301580
 [Term]
 id: ECTO:0070032
 name: exposure to apricot via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_03301701 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_03301701 exposure via ingestion" EXACT []
+def: "An exposure to apricot (whole, raw) via ingestion." []
+synonym: "apricot (whole, raw) exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:03301701
@@ -842,8 +842,8 @@ intersection_of: RO:0002309 FOODON:03301701
 [Term]
 id: ECTO:0070033
 name: exposure to pear via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_03301724 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_03301724 exposure via ingestion" EXACT []
+def: "An exposure to pear (whole, raw) via ingestion." []
+synonym: "pear (whole, raw) exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:03301724
@@ -851,8 +851,8 @@ intersection_of: RO:0002309 FOODON:03301724
 [Term]
 id: ECTO:0070034
 name: exposure to raspberry via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_03307119 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_03307119 exposure via ingestion" EXACT []
+def: "An exposure to raspberry (whole, raw) via ingestion." []
+synonym: "raspberry (whole, raw) exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:03307119
@@ -860,8 +860,8 @@ intersection_of: RO:0002309 FOODON:03307119
 [Term]
 id: ECTO:0070035
 name: exposure to strawberry via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_03301722 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_03301722 exposure via ingestion" EXACT []
+def: "An exposure to strawberry (whole, raw) via ingestion." []
+synonym: "strawberry (whole, raw) exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:03301722
@@ -869,8 +869,8 @@ intersection_of: RO:0002309 FOODON:03301722
 [Term]
 id: ECTO:0070036
 name: exposure to tomato via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_03301453 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_03301453 exposure via ingestion" EXACT []
+def: "An exposure to tomato (whole) via ingestion." []
+synonym: "tomato (whole) exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:03301453
@@ -878,8 +878,8 @@ intersection_of: RO:0002309 FOODON:03301453
 [Term]
 id: ECTO:0070037
 name: exposure to tomato juice via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_03301454 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_03301454 exposure via ingestion" EXACT []
+def: "An exposure to tomato juice via ingestion." []
+synonym: "tomato juice exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:03301454
@@ -887,8 +887,8 @@ intersection_of: RO:0002309 FOODON:03301454
 [Term]
 id: ECTO:0070038
 name: exposure to tomato sauce via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_03301217 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_03301217 exposure via ingestion" EXACT []
+def: "An exposure to tomato sauce via ingestion." []
+synonym: "tomato sauce exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:03301217
@@ -896,8 +896,8 @@ intersection_of: RO:0002309 FOODON:03301217
 [Term]
 id: ECTO:0070039
 name: exposure to watermelon via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_03301040 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_03301040 exposure via ingestion" EXACT []
+def: "An exposure to watermelon (whole, raw) via ingestion." []
+synonym: "watermelon (whole, raw) exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:03301040
@@ -914,8 +914,8 @@ intersection_of: RO:0002309 FOODON:00002753
 [Term]
 id: ECTO:0070041
 name: exposure to lentil via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_03310641 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_03310641 exposure via ingestion" EXACT []
+def: "An exposure to lentil (whole) via ingestion." []
+synonym: "lentil (whole) exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:03310641
@@ -923,8 +923,8 @@ intersection_of: RO:0002309 FOODON:03310641
 [Term]
 id: ECTO:0070042
 name: exposure to bell pepper via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_00003546 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_00003546 exposure via ingestion" EXACT []
+def: "An exposure to bell pepper (whole) via ingestion." []
+synonym: "bell pepper (whole) exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:00003546
@@ -932,8 +932,8 @@ intersection_of: RO:0002309 FOODON:00003546
 [Term]
 id: ECTO:0070043
 name: exposure to broccoli via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_03301713 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_03301713 exposure via ingestion" EXACT []
+def: "An exposure to broccoli floret (whole, raw) via ingestion." []
+synonym: "broccoli floret (whole, raw) exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:03301713
@@ -941,8 +941,8 @@ intersection_of: RO:0002309 FOODON:03301713
 [Term]
 id: ECTO:0070044
 name: exposure to brussels sprout via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_03311885 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_03311885 exposure via ingestion" EXACT []
+def: "An exposure to brussels sprout (whole) via ingestion." []
+synonym: "brussels sprout (whole) exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:03311885
@@ -950,8 +950,8 @@ intersection_of: RO:0002309 FOODON:03311885
 [Term]
 id: ECTO:0070045
 name: exposure to cabbage via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_00003406 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_00003406 exposure via ingestion" EXACT []
+def: "An exposure to cabbage head via ingestion." []
+synonym: "cabbage head exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:00003406
@@ -959,8 +959,8 @@ intersection_of: RO:0002309 FOODON:00003406
 [Term]
 id: ECTO:0070046
 name: exposure to carrot via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_00003408 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_00003408 exposure via ingestion" EXACT []
+def: "An exposure to carrot root (whole) via ingestion." []
+synonym: "carrot root (whole) exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:00003408
@@ -968,8 +968,8 @@ intersection_of: RO:0002309 FOODON:00003408
 [Term]
 id: ECTO:0070047
 name: exposure to cauliflower via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_00003410 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_00003410 exposure via ingestion" EXACT []
+def: "An exposure to cauliflower (whole) via ingestion." []
+synonym: "cauliflower (whole) exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:00003410
@@ -977,8 +977,8 @@ intersection_of: RO:0002309 FOODON:00003410
 [Term]
 id: ECTO:0070048
 name: exposure to corn via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_03317387 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_03317387 exposure via ingestion" EXACT []
+def: "An exposure to corn (whole) via ingestion." []
+synonym: "corn (whole) exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:03317387
@@ -986,8 +986,8 @@ intersection_of: RO:0002309 FOODON:03317387
 [Term]
 id: ECTO:0070049
 name: exposure to eggplant via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_00003618 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_00003618 exposure via ingestion" EXACT []
+def: "An exposure to eggplant (whole) via ingestion." []
+synonym: "eggplant (whole) exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:00003618
@@ -995,8 +995,8 @@ intersection_of: RO:0002309 FOODON:00003618
 [Term]
 id: ECTO:0070050
 name: exposure to zucchini via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_03310943 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_03310943 exposure via ingestion" EXACT []
+def: "An exposure to zucchini squash (whole) via ingestion." []
+synonym: "zucchini squash (whole) exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:03310943
@@ -1004,8 +1004,8 @@ intersection_of: RO:0002309 FOODON:03310943
 [Term]
 id: ECTO:0070051
 name: exposure to squash via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_00003539 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_00003539 exposure via ingestion" EXACT []
+def: "An exposure to squash (whole) via ingestion." []
+synonym: "squash (whole) exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:00003539
@@ -1013,8 +1013,8 @@ intersection_of: RO:0002309 FOODON:00003539
 [Term]
 id: ECTO:0070052
 name: exposure to kale via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_03304859 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_03304859 exposure via ingestion" EXACT []
+def: "An exposure to kale leaf (whole, raw) via ingestion." []
+synonym: "kale leaf (whole, raw) exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:03304859
@@ -1022,8 +1022,8 @@ intersection_of: RO:0002309 FOODON:03304859
 [Term]
 id: ECTO:0070053
 name: exposure to collard greens via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_03304860 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_03304860 exposure via ingestion" EXACT []
+def: "An exposure to collard leaf (whole, raw) via ingestion." []
+synonym: "collard leaf (whole, raw) exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:03304860
@@ -1031,8 +1031,8 @@ intersection_of: RO:0002309 FOODON:03304860
 [Term]
 id: ECTO:0070054
 name: exposure to mustard greens via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_00002684 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_00002684 exposure via ingestion" EXACT []
+def: "An exposure to mustard greens via ingestion." []
+synonym: "mustard greens exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:00002684
@@ -1040,8 +1040,8 @@ intersection_of: RO:0002309 FOODON:00002684
 [Term]
 id: ECTO:0070055
 name: exposure to swiss chard via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_00003631 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_00003631 exposure via ingestion" EXACT []
+def: "An exposure to swiss chard leaf (whole) via ingestion." []
+synonym: "swiss chard leaf (whole) exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:00003631
@@ -1049,8 +1049,8 @@ intersection_of: RO:0002309 FOODON:00003631
 [Term]
 id: ECTO:0070056
 name: exposure to onion via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_03301704 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_03301704 exposure via ingestion" EXACT []
+def: "An exposure to onion (whole, raw) via ingestion." []
+synonym: "onion (whole, raw) exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:03301704
@@ -1058,8 +1058,8 @@ intersection_of: RO:0002309 FOODON:03301704
 [Term]
 id: ECTO:0070057
 name: exposure to peas via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_03301300 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_03301300 exposure via ingestion" EXACT []
+def: "An exposure to pea (whole) via ingestion." []
+synonym: "pea (whole) exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:03301300
@@ -1067,8 +1067,8 @@ intersection_of: RO:0002309 FOODON:03301300
 [Term]
 id: ECTO:0070058
 name: exposure to lima bean via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_03302061 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_03302061 exposure via ingestion" EXACT []
+def: "An exposure to baby lima bean (whole) via ingestion." []
+synonym: "baby lima bean (whole) exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:03302061
@@ -1076,8 +1076,8 @@ intersection_of: RO:0002309 FOODON:03302061
 [Term]
 id: ECTO:0070059
 name: exposure to spinach leaf (whole) via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_00003495 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_00003495 exposure via ingestion" EXACT []
+def: "An exposure to spinach leaf (whole) via ingestion." []
+synonym: "spinach leaf (whole) exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:00003495
@@ -1085,8 +1085,8 @@ intersection_of: RO:0002309 FOODON:00003495
 [Term]
 id: ECTO:0070060
 name: exposure to spinach leaf (whole, raw) via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_03301716 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_03301716 exposure via ingestion" EXACT []
+def: "An exposure to spinach leaf (whole, raw) via ingestion." []
+synonym: "spinach leaf (whole, raw) exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:03301716
@@ -1103,8 +1103,8 @@ intersection_of: RO:0002309 CHEBI:32111
 [Term]
 id: ECTO:0070062
 name: exposure to green bean via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_03305806 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_03305806 exposure via ingestion" EXACT []
+def: "An exposure to green bean pod via ingestion." []
+synonym: "green bean pod exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:03305806
@@ -1112,17 +1112,17 @@ intersection_of: RO:0002309 FOODON:03305806
 [Term]
 id: ECTO:0070063
 name: exposure to tofu via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_03309664 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_03309664 exposure via ingestion" EXACT []
+def: "An exposure to tofu food product via ingestion." []
+synonym: "tofu food product exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:03309664
 
 [Term]
 id: ECTO:0070064
-name: exposure to soy burger via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_00003177 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_00003177 exposure via ingestion" EXACT []
+name: exposure to vegetarian burger via ingestion
+def: "An exposure to vegetarian burger via ingestion." []
+synonym: "vegetarian burger exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:00003177
@@ -1130,8 +1130,8 @@ intersection_of: RO:0002309 FOODON:00003177
 [Term]
 id: ECTO:0070065
 name: exposure to miso via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_00003208 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_00003208 exposure via ingestion" EXACT []
+def: "An exposure to miso via ingestion." []
+synonym: "miso exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:00003208
@@ -1139,8 +1139,8 @@ intersection_of: RO:0002309 FOODON:00003208
 [Term]
 id: ECTO:0070066
 name: exposure to soybean via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_03301415 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_03301415 exposure via ingestion" EXACT []
+def: "An exposure to soybean (whole) via ingestion." []
+synonym: "soybean (whole) exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:03301415
@@ -1148,8 +1148,8 @@ intersection_of: RO:0002309 FOODON:03301415
 [Term]
 id: ECTO:0070067
 name: exposure to winter squash via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_03301577 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_03301577 exposure via ingestion" EXACT []
+def: "An exposure to squash (whole, raw) via ingestion." []
+synonym: "squash (whole, raw) exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:03301577
@@ -1157,8 +1157,8 @@ intersection_of: RO:0002309 FOODON:03301577
 [Term]
 id: ECTO:0070068
 name: exposure to yam via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_00003448 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_00003448 exposure via ingestion" EXACT []
+def: "An exposure to yam (whole) via ingestion." []
+synonym: "yam (whole) exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:00003448
@@ -1166,8 +1166,8 @@ intersection_of: RO:0002309 FOODON:00003448
 [Term]
 id: ECTO:0070069
 name: exposure to sweet potato via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_00003445 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_00003445 exposure via ingestion" EXACT []
+def: "An exposure to sweet potato (whole) via ingestion." []
+synonym: "sweet potato (whole) exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:00003445
@@ -1175,8 +1175,8 @@ intersection_of: RO:0002309 FOODON:00003445
 [Term]
 id: ECTO:0070070
 name: exposure to egg via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_03316061 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_03316061 exposure via ingestion" EXACT []
+def: "An exposure to hen egg (whole) via ingestion." []
+synonym: "hen egg (whole) exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:03316061
@@ -1193,8 +1193,8 @@ intersection_of: RO:0002309 FOODON:00001009
 [Term]
 id: ECTO:0070072
 name: exposure to pork sausage via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_03311131 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_03311131 exposure via ingestion" EXACT []
+def: "An exposure to pork sausage (oven-cooked) via ingestion." []
+synonym: "pork sausage (oven-cooked) exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:03311131
@@ -1202,8 +1202,8 @@ intersection_of: RO:0002309 FOODON:03311131
 [Term]
 id: ECTO:0070073
 name: exposure to chicken frankfurter via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_03310576 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_03310576 exposure via ingestion" EXACT []
+def: "An exposure to chicken frankfurter via ingestion." []
+synonym: "chicken frankfurter exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:03310576
@@ -1211,8 +1211,8 @@ intersection_of: RO:0002309 FOODON:03310576
 [Term]
 id: ECTO:0070074
 name: exposure to turkey sausage via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_00003297 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_00003297 exposure via ingestion" EXACT []
+def: "An exposure to turkey sausage via ingestion." []
+synonym: "turkey sausage exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:00003297
@@ -1220,8 +1220,8 @@ intersection_of: RO:0002309 FOODON:00003297
 [Term]
 id: ECTO:0070075
 name: exposure to poultry via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_03317344 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_03317344 exposure via ingestion" EXACT []
+def: "An exposure to poultry (cooked) via ingestion." []
+synonym: "poultry (cooked) exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:03317344
@@ -1229,8 +1229,8 @@ intersection_of: RO:0002309 FOODON:03317344
 [Term]
 id: ECTO:0070076
 name: exposure to bacon (fried) via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_03310564 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_03310564 exposure via ingestion" EXACT []
+def: "An exposure to bacon (fried) via ingestion." []
+synonym: "bacon (fried) exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:03310564
@@ -1238,8 +1238,8 @@ intersection_of: RO:0002309 FOODON:03310564
 [Term]
 id: ECTO:0070077
 name: exposure to bacon (baked) via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_03311588 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_03311588 exposure via ingestion" EXACT []
+def: "An exposure to bacon (baked) via ingestion." []
+synonym: "bacon (baked) exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:03311588
@@ -1247,8 +1247,8 @@ intersection_of: RO:0002309 FOODON:03311588
 [Term]
 id: ECTO:0070078
 name: exposure to luncheon meat via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_03310675 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_03310675 exposure via ingestion" EXACT []
+def: "An exposure to luncheon meat via ingestion." []
+synonym: "luncheon meat exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:03310675
@@ -1256,8 +1256,8 @@ intersection_of: RO:0002309 FOODON:03310675
 [Term]
 id: ECTO:0070079
 name: exposure to salami via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_03312067 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_03312067 exposure via ingestion" EXACT []
+def: "An exposure to salami via ingestion." []
+synonym: "salami exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:03312067
@@ -1265,8 +1265,8 @@ intersection_of: RO:0002309 FOODON:03312067
 [Term]
 id: ECTO:0070080
 name: exposure to bologna via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_03306503 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_03306503 exposure via ingestion" EXACT []
+def: "An exposure to bologna via ingestion." []
+synonym: "bologna exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:03306503
@@ -1274,8 +1274,8 @@ intersection_of: RO:0002309 FOODON:03306503
 [Term]
 id: ECTO:0070081
 name: exposure to beef sausage via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_00002958 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_00002958 exposure via ingestion" EXACT []
+def: "An exposure to beef sausage via ingestion." []
+synonym: "beef sausage exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:00002958
@@ -1283,8 +1283,8 @@ intersection_of: RO:0002309 FOODON:00002958
 [Term]
 id: ECTO:0070082
 name: exposure to kielbasa via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_00002728 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_00002728 exposure via ingestion" EXACT []
+def: "An exposure to Kielbasa via ingestion." []
+synonym: "Kielbasa exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:00002728
@@ -1292,8 +1292,8 @@ intersection_of: RO:0002309 FOODON:00002728
 [Term]
 id: ECTO:0070083
 name: exposure to meat (processed) via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_03310826 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_03310826 exposure via ingestion" EXACT []
+def: "An exposure to meat (processed) via ingestion." []
+synonym: "meat (processed) exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:03310826
@@ -1310,8 +1310,8 @@ intersection_of: RO:0002309 FOODON:00001010
 [Term]
 id: ECTO:0070085
 name: exposure to ground beef via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_03310753 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_03310753 exposure via ingestion" EXACT []
+def: "An exposure to ground beef (cooked) via ingestion." []
+synonym: "ground beef (cooked) exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:03310753
@@ -1319,8 +1319,8 @@ intersection_of: RO:0002309 FOODON:03310753
 [Term]
 id: ECTO:0070086
 name: exposure to beef hamburger (dish) via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_00002737 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_00002737 exposure via ingestion" EXACT []
+def: "An exposure to beef hamburger (dish) via ingestion." []
+synonym: "beef hamburger (dish) exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:00002737
@@ -1328,8 +1328,8 @@ intersection_of: RO:0002309 FOODON:00002737
 [Term]
 id: ECTO:0070087
 name: exposure to beef (cooked) via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_03309738 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_03309738 exposure via ingestion" EXACT []
+def: "An exposure to beef (cooked) via ingestion." []
+synonym: "beef (cooked) exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:03309738
@@ -1337,8 +1337,8 @@ intersection_of: RO:0002309 FOODON:03309738
 [Term]
 id: ECTO:0070088
 name: exposure to pork via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_03311610 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_03311610 exposure via ingestion" EXACT []
+def: "An exposure to pork (cooked) via ingestion." []
+synonym: "pork (cooked) exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:03311610
@@ -1346,8 +1346,8 @@ intersection_of: RO:0002309 FOODON:03311610
 [Term]
 id: ECTO:0070089
 name: exposure to lamb via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_03311664 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_03311664 exposure via ingestion" EXACT []
+def: "An exposure to lamb (roasted) via ingestion." []
+synonym: "lamb (roasted) exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:03311664
@@ -1355,8 +1355,8 @@ intersection_of: RO:0002309 FOODON:03311664
 [Term]
 id: ECTO:0070090
 name: exposure to ham (sliced, cooked) via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_03311694 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_03311694 exposure via ingestion" EXACT []
+def: "An exposure to ham (sliced, cooked) via ingestion." []
+synonym: "ham (sliced, cooked) exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:03311694
@@ -1364,8 +1364,8 @@ intersection_of: RO:0002309 FOODON:03311694
 [Term]
 id: ECTO:0070091
 name: exposure to canned tuna via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_03309003 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_03309003 exposure via ingestion" EXACT []
+def: "An exposure to tuna (white, solid pack, canned in water) via ingestion." []
+synonym: "tuna (white, solid pack, canned in water) exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:03309003
@@ -1373,8 +1373,8 @@ intersection_of: RO:0002309 FOODON:03309003
 [Term]
 id: ECTO:0070092
 name: exposure to shrimp via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_03411237 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_03411237 exposure via ingestion" EXACT []
+def: "An exposure to shrimp via ingestion." []
+synonym: "shrimp exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:03411237
@@ -1382,8 +1382,8 @@ intersection_of: RO:0002309 FOODON:03411237
 [Term]
 id: ECTO:0070093
 name: exposure to lobster via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_00002468 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_00002468 exposure via ingestion" EXACT []
+def: "An exposure to lobster (whole) via ingestion." []
+synonym: "lobster (whole) exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:00002468
@@ -1391,8 +1391,8 @@ intersection_of: RO:0002309 FOODON:00002468
 [Term]
 id: ECTO:0070094
 name: exposure to scallops via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_03411489 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_03411489 exposure via ingestion" EXACT []
+def: "An exposure to scallop via ingestion." []
+synonym: "scallop exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:03411489
@@ -1400,8 +1400,8 @@ intersection_of: RO:0002309 FOODON:03411489
 [Term]
 id: ECTO:0070095
 name: exposure to tuna steak via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_00002987 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_00002987 exposure via ingestion" EXACT []
+def: "An exposure to tuna steak via ingestion." []
+synonym: "tuna steak exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:00002987
@@ -1409,8 +1409,8 @@ intersection_of: RO:0002309 FOODON:00002987
 [Term]
 id: ECTO:0070096
 name: exposure to mackerel via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_03411043 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_03411043 exposure via ingestion" EXACT []
+def: "An exposure to mackerel via ingestion." []
+synonym: "mackerel exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:03411043
@@ -1418,8 +1418,8 @@ intersection_of: RO:0002309 FOODON:03411043
 [Term]
 id: ECTO:0070097
 name: exposure to salmon via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_00003473 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_00003473 exposure via ingestion" EXACT []
+def: "An exposure to salmon via ingestion." []
+synonym: "salmon exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:00003473
@@ -1427,8 +1427,8 @@ intersection_of: RO:0002309 FOODON:00003473
 [Term]
 id: ECTO:0070098
 name: exposure to sardine via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_03411558 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_03411558 exposure via ingestion" EXACT []
+def: "An exposure to sardine via ingestion." []
+synonym: "sardine exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:03411558
@@ -1436,8 +1436,8 @@ intersection_of: RO:0002309 FOODON:03411558
 [Term]
 id: ECTO:0070099
 name: exposure to bluefish via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_00001659 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_00001659 exposure via ingestion" EXACT []
+def: "An exposure to bluefish food product via ingestion." []
+synonym: "bluefish food product exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:00001659
@@ -1445,8 +1445,8 @@ intersection_of: RO:0002309 FOODON:00001659
 [Term]
 id: ECTO:0070100
 name: exposure to swordfish via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_00002307 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_00002307 exposure via ingestion" EXACT []
+def: "An exposure to swordfish food product via ingestion." []
+synonym: "swordfish food product exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:00002307
@@ -1454,8 +1454,8 @@ intersection_of: RO:0002309 FOODON:00002307
 [Term]
 id: ECTO:0070101
 name: exposure to cod via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_03411423 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_03411423 exposure via ingestion" EXACT []
+def: "An exposure to cod via ingestion." []
+synonym: "cod exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:03411423
@@ -1463,8 +1463,8 @@ intersection_of: RO:0002309 FOODON:03411423
 [Term]
 id: ECTO:0070102
 name: exposure to haddock (raw) via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_03308024 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_03308024 exposure via ingestion" EXACT []
+def: "An exposure to haddock (raw) via ingestion." []
+synonym: "haddock (raw) exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:03308024
@@ -1472,8 +1472,8 @@ intersection_of: RO:0002309 FOODON:03308024
 [Term]
 id: ECTO:0070103
 name: exposure to halibut via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_03411532 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_03411532 exposure via ingestion" EXACT []
+def: "An exposure to halibut via ingestion." []
+synonym: "halibut exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:03411532
@@ -1481,8 +1481,8 @@ intersection_of: RO:0002309 FOODON:03411532
 [Term]
 id: ECTO:0070104
 name: exposure to cold cereal via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_03316213 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_03316213 exposure via ingestion" EXACT []
+def: "An exposure to cereal (dry) via ingestion." []
+synonym: "cereal (dry) exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:03316213
@@ -1490,8 +1490,8 @@ intersection_of: RO:0002309 FOODON:03316213
 [Term]
 id: ECTO:0070105
 name: exposure to cooked oatmeal via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_03310806 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_03310806 exposure via ingestion" EXACT []
+def: "An exposure to oatmeal (cooked) via ingestion." []
+synonym: "oatmeal (cooked) exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:03310806
@@ -1499,8 +1499,8 @@ intersection_of: RO:0002309 FOODON:03310806
 [Term]
 id: ECTO:0070106
 name: exposure to cooked oat bran via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_00003774 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_00003774 exposure via ingestion" EXACT []
+def: "An exposure to oat bran via ingestion." []
+synonym: "oat bran exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:00003774
@@ -1508,8 +1508,8 @@ intersection_of: RO:0002309 FOODON:00003774
 [Term]
 id: ECTO:0070107
 name: exposure to cooked breakfast cereal via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_03311540 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_03311540 exposure via ingestion" EXACT []
+def: "An exposure to breakfast cereal (cooked) via ingestion." []
+synonym: "breakfast cereal (cooked) exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:03311540
@@ -1517,8 +1517,8 @@ intersection_of: RO:0002309 FOODON:03311540
 [Term]
 id: ECTO:0070108
 name: exposure to whole wheat crackers via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_03302651 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_03302651 exposure via ingestion" EXACT []
+def: "An exposure to whole wheat cracker via ingestion." []
+synonym: "whole wheat cracker exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:03302651
@@ -1526,8 +1526,8 @@ intersection_of: RO:0002309 FOODON:03302651
 [Term]
 id: ECTO:0070109
 name: exposure to crackers via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_00002711 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_00002711 exposure via ingestion" EXACT []
+def: "An exposure to cracker via ingestion." []
+synonym: "cracker exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:00002711
@@ -1535,8 +1535,8 @@ intersection_of: RO:0002309 FOODON:00002711
 [Term]
 id: ECTO:0070110
 name: exposure to white bread via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_03301055 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_03301055 exposure via ingestion" EXACT []
+def: "An exposure to white bread via ingestion." []
+synonym: "white bread exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:03301055
@@ -1544,8 +1544,8 @@ intersection_of: RO:0002309 FOODON:03301055
 [Term]
 id: ECTO:0070111
 name: exposure to pita bread via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_00003060 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_00003060 exposure via ingestion" EXACT []
+def: "An exposure to pita bread via ingestion." []
+synonym: "pita bread exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:00003060
@@ -1553,8 +1553,8 @@ intersection_of: RO:0002309 FOODON:00003060
 [Term]
 id: ECTO:0070112
 name: exposure to rye bread via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_03305210 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_03305210 exposure via ingestion" EXACT []
+def: "An exposure to rye bread (enriched) via ingestion." []
+synonym: "rye bread (enriched) exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:03305210
@@ -1562,8 +1562,8 @@ intersection_of: RO:0002309 FOODON:03305210
 [Term]
 id: ECTO:0070113
 name: exposure to pumpernickel bread via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_03302357 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_03302357 exposure via ingestion" EXACT []
+def: "An exposure to pumpernickel bread via ingestion." []
+synonym: "pumpernickel bread exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:03302357
@@ -1571,8 +1571,8 @@ intersection_of: RO:0002309 FOODON:03302357
 [Term]
 id: ECTO:0070114
 name: exposure to whole wheat bread via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_03301119 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_03301119 exposure via ingestion" EXACT []
+def: "An exposure to whole wheat bread via ingestion." []
+synonym: "whole wheat bread exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:03301119
@@ -1580,8 +1580,8 @@ intersection_of: RO:0002309 FOODON:03301119
 [Term]
 id: ECTO:0070115
 name: exposure to multigrain bread via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_03302478 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_03302478 exposure via ingestion" EXACT []
+def: "An exposure to multigrain bread via ingestion." []
+synonym: "multigrain bread exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:03302478
@@ -1589,8 +1589,8 @@ intersection_of: RO:0002309 FOODON:03302478
 [Term]
 id: ECTO:0070116
 name: exposure to bagel via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_03309554 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_03309554 exposure via ingestion" EXACT []
+def: "An exposure to bagel via ingestion." []
+synonym: "bagel exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:03309554
@@ -1598,8 +1598,8 @@ intersection_of: RO:0002309 FOODON:03309554
 [Term]
 id: ECTO:0070117
 name: exposure to english muffin via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_03305833 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_03305833 exposure via ingestion" EXACT []
+def: "An exposure to english muffin via ingestion." []
+synonym: "english muffin exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:03305833
@@ -1607,8 +1607,8 @@ intersection_of: RO:0002309 FOODON:03305833
 [Term]
 id: ECTO:0070118
 name: exposure to bread roll via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_03301931 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_03301931 exposure via ingestion" EXACT []
+def: "An exposure to wheat roll or bun via ingestion." []
+synonym: "wheat roll or bun exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:03301931
@@ -1616,8 +1616,8 @@ intersection_of: RO:0002309 FOODON:03301931
 [Term]
 id: ECTO:0070119
 name: exposure to muffin via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_03309530 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_03309530 exposure via ingestion" EXACT []
+def: "An exposure to muffin via ingestion." []
+synonym: "muffin exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:03309530
@@ -1625,8 +1625,8 @@ intersection_of: RO:0002309 FOODON:03309530
 [Term]
 id: ECTO:0070120
 name: exposure to biscuit via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_03301884 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_03301884 exposure via ingestion" EXACT []
+def: "An exposure to biscuit (quick bread) via ingestion." []
+synonym: "biscuit (quick bread) exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:03301884
@@ -1634,8 +1634,8 @@ intersection_of: RO:0002309 FOODON:03301884
 [Term]
 id: ECTO:0070121
 name: exposure to pancake via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_03315258 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_03315258 exposure via ingestion" EXACT []
+def: "An exposure to pancake via ingestion." []
+synonym: "pancake exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:03315258
@@ -1643,8 +1643,8 @@ intersection_of: RO:0002309 FOODON:03315258
 [Term]
 id: ECTO:0070122
 name: exposure to waffle via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_03315259 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_03315259 exposure via ingestion" EXACT []
+def: "An exposure to waffle via ingestion." []
+synonym: "waffle exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:03315259
@@ -1652,8 +1652,8 @@ intersection_of: RO:0002309 FOODON:03315259
 [Term]
 id: ECTO:0070123
 name: exposure to brown rice via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_00003436 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_00003436 exposure via ingestion" EXACT []
+def: "An exposure to brown rice via ingestion." []
+synonym: "brown rice exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:00003436
@@ -1661,8 +1661,8 @@ intersection_of: RO:0002309 FOODON:00003436
 [Term]
 id: ECTO:0070124
 name: exposure to white rice via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_00003787 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_00003787 exposure via ingestion" EXACT []
+def: "An exposure to white rice (whole) via ingestion." []
+synonym: "white rice (whole) exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:00003787
@@ -1670,8 +1670,8 @@ intersection_of: RO:0002309 FOODON:00003787
 [Term]
 id: ECTO:0070125
 name: exposure to pasta via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_03306347 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_03306347 exposure via ingestion" EXACT []
+def: "An exposure to pasta via ingestion." []
+synonym: "pasta exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:03306347
@@ -1679,8 +1679,8 @@ intersection_of: RO:0002309 FOODON:03306347
 [Term]
 id: ECTO:0070126
 name: exposure to spaghetti noodle via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_03304262 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_03304262 exposure via ingestion" EXACT []
+def: "An exposure to spaghetti macaroni (enriched) via ingestion." []
+synonym: "spaghetti macaroni (enriched) exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:03304262
@@ -1688,8 +1688,8 @@ intersection_of: RO:0002309 FOODON:03304262
 [Term]
 id: ECTO:0070127
 name: exposure to couscous via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_03303207 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_03303207 exposure via ingestion" EXACT []
+def: "An exposure to couscous via ingestion." []
+synonym: "couscous exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:03303207
@@ -1697,8 +1697,8 @@ intersection_of: RO:0002309 FOODON:03303207
 [Term]
 id: ECTO:0070128
 name: exposure to tortilla via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_03307668 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_03307668 exposure via ingestion" EXACT []
+def: "An exposure to tortilla via ingestion." []
+synonym: "tortilla exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:03307668
@@ -1706,8 +1706,8 @@ intersection_of: RO:0002309 FOODON:03307668
 [Term]
 id: ECTO:0070129
 name: exposure to french fries via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_03301959 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_03301959 exposure via ingestion" EXACT []
+def: "An exposure to potato (french-fried) via ingestion." []
+synonym: "potato (french-fried) exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:03301959
@@ -1715,8 +1715,8 @@ intersection_of: RO:0002309 FOODON:03301959
 [Term]
 id: ECTO:0070130
 name: exposure to potato via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_03315354 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_03315354 exposure via ingestion" EXACT []
+def: "An exposure to potato (whole) via ingestion." []
+synonym: "potato (whole) exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:03315354
@@ -1724,8 +1724,8 @@ intersection_of: RO:0002309 FOODON:03315354
 [Term]
 id: ECTO:0070131
 name: exposure to pizza via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_03310775 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_03310775 exposure via ingestion" EXACT []
+def: "An exposure to pizza food product via ingestion." []
+synonym: "pizza food product exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:03310775
@@ -1733,8 +1733,8 @@ intersection_of: RO:0002309 FOODON:03310775
 [Term]
 id: ECTO:0070132
 name: exposure to tea (decaffeinated) via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_03312068 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_03312068 exposure via ingestion" EXACT []
+def: "An exposure to tea (decaffeinated) via ingestion." []
+synonym: "tea (decaffeinated) exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:03312068
@@ -1742,8 +1742,8 @@ intersection_of: RO:0002309 FOODON:03312068
 [Term]
 id: ECTO:0070133
 name: exposure to tea (steeped) via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_03310546 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_03310546 exposure via ingestion" EXACT []
+def: "An exposure to tea (steeped) via ingestion." []
+synonym: "tea (steeped) exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:03310546
@@ -1751,8 +1751,8 @@ intersection_of: RO:0002309 FOODON:03310546
 [Term]
 id: ECTO:0070134
 name: exposure to coffee (liquid beverage) via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_03301036 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_03301036 exposure via ingestion" EXACT []
+def: "An exposure to coffee (liquid drink) via ingestion." []
+synonym: "coffee (liquid drink) exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:03301036
@@ -1760,8 +1760,8 @@ intersection_of: RO:0002309 FOODON:03301036
 [Term]
 id: ECTO:0070135
 name: exposure to water via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_03307813 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_03307813 exposure via ingestion" EXACT []
+def: "An exposure to spring water via ingestion." []
+synonym: "spring water exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:03307813
@@ -1769,8 +1769,8 @@ intersection_of: RO:0002309 FOODON:03307813
 [Term]
 id: ECTO:0070136
 name: exposure to sparkling water via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_03302269 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_03302269 exposure via ingestion" EXACT []
+def: "An exposure to soda water via ingestion." []
+synonym: "soda water exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:03302269
@@ -1778,8 +1778,8 @@ intersection_of: RO:0002309 FOODON:03302269
 [Term]
 id: ECTO:0070137
 name: exposure to milk chocolate via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_03302806 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_03302806 exposure via ingestion" EXACT []
+def: "An exposure to milk chocolate via ingestion." []
+synonym: "milk chocolate exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:03302806
@@ -1787,8 +1787,8 @@ intersection_of: RO:0002309 FOODON:03302806
 [Term]
 id: ECTO:0070138
 name: exposure to dark chocolate via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_03303588 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_03303588 exposure via ingestion" EXACT []
+def: "An exposure to dark chocolate via ingestion." []
+synonym: "dark chocolate exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:03303588
@@ -1796,8 +1796,8 @@ intersection_of: RO:0002309 FOODON:03303588
 [Term]
 id: ECTO:0070139
 name: exposure to candy via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_03301051 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_03301051 exposure via ingestion" EXACT []
+def: "An exposure to candy via ingestion." []
+synonym: "candy exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:03301051
@@ -1805,8 +1805,8 @@ intersection_of: RO:0002309 FOODON:03301051
 [Term]
 id: ECTO:0070140
 name: exposure to cookie via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_03301585 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_03301585 exposure via ingestion" EXACT []
+def: "An exposure to cookie via ingestion." []
+synonym: "cookie exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:03301585
@@ -1814,8 +1814,8 @@ intersection_of: RO:0002309 FOODON:03301585
 [Term]
 id: ECTO:0070141
 name: exposure to brownie via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_00002562 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_00002562 exposure via ingestion" EXACT []
+def: "An exposure to chocolate brownie via ingestion." []
+synonym: "chocolate brownie exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:00002562
@@ -1823,8 +1823,8 @@ intersection_of: RO:0002309 FOODON:00002562
 [Term]
 id: ECTO:0070142
 name: exposure to doughnut via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_03301938 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_03301938 exposure via ingestion" EXACT []
+def: "An exposure to doughnut via ingestion." []
+synonym: "doughnut exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:03301938
@@ -1832,8 +1832,8 @@ intersection_of: RO:0002309 FOODON:03301938
 [Term]
 id: ECTO:0070143
 name: exposure to pastry via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_03315272 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_03315272 exposure via ingestion" EXACT []
+def: "An exposure to pastry via ingestion." []
+synonym: "pastry exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:03315272
@@ -1850,8 +1850,8 @@ intersection_of: RO:0002309 FOODON:00001278
 [Term]
 id: ECTO:0070145
 name: exposure to pie via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_03317288 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_03317288 exposure via ingestion" EXACT []
+def: "An exposure to pie (baked) via ingestion." []
+synonym: "pie (baked) exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:03317288
@@ -1859,8 +1859,8 @@ intersection_of: RO:0002309 FOODON:03317288
 [Term]
 id: ECTO:0070146
 name: exposure to jam via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_03309973 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_03309973 exposure via ingestion" EXACT []
+def: "An exposure to jam via ingestion." []
+synonym: "jam exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:03309973
@@ -1868,8 +1868,8 @@ intersection_of: RO:0002309 FOODON:03309973
 [Term]
 id: ECTO:0070147
 name: exposure to jelly via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_00001888 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_00001888 exposure via ingestion" EXACT []
+def: "An exposure to fruit jelly food product via ingestion." []
+synonym: "fruit jelly food product exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:00001888
@@ -1877,8 +1877,8 @@ intersection_of: RO:0002309 FOODON:00001888
 [Term]
 id: ECTO:0070148
 name: exposure to preserve via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_03305304 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_03305304 exposure via ingestion" EXACT []
+def: "An exposure to fruit preserves via ingestion." []
+synonym: "fruit preserves exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:03305304
@@ -1895,8 +1895,8 @@ intersection_of: RO:0002309 FOODON:00001178
 [Term]
 id: ECTO:0070150
 name: exposure to syrup via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_03303225 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_03303225 exposure via ingestion" EXACT []
+def: "An exposure to syrup via ingestion." []
+synonym: "syrup exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:03303225
@@ -1904,8 +1904,8 @@ intersection_of: RO:0002309 FOODON:03303225
 [Term]
 id: ECTO:0070151
 name: exposure to peanut butter via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_03306867 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_03306867 exposure via ingestion" EXACT []
+def: "An exposure to peanut butter via ingestion." []
+synonym: "peanut butter exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:03306867
@@ -1913,8 +1913,8 @@ intersection_of: RO:0002309 FOODON:03306867
 [Term]
 id: ECTO:0070152
 name: exposure to potato chips via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_03301833 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_03301833 exposure via ingestion" EXACT []
+def: "An exposure to potato chip via ingestion." []
+synonym: "potato chip exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:03301833
@@ -1922,8 +1922,8 @@ intersection_of: RO:0002309 FOODON:03301833
 [Term]
 id: ECTO:0070153
 name: exposure to pretzels via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_03303929 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_03303929 exposure via ingestion" EXACT []
+def: "An exposure to pretzel via ingestion." []
+synonym: "pretzel exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:03303929
@@ -1931,8 +1931,8 @@ intersection_of: RO:0002309 FOODON:03303929
 [Term]
 id: ECTO:0070154
 name: exposure to peanut via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_00003206 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_00003206 exposure via ingestion" EXACT []
+def: "An exposure to peanut (whole) via ingestion." []
+synonym: "peanut (whole) exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:00003206
@@ -1940,8 +1940,8 @@ intersection_of: RO:0002309 FOODON:00003206
 [Term]
 id: ECTO:0070155
 name: exposure to walnuts via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_03315233 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_03315233 exposure via ingestion" EXACT []
+def: "An exposure to walnut (whole, raw) via ingestion." []
+synonym: "walnut (whole, raw) exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:03315233
@@ -1949,8 +1949,8 @@ intersection_of: RO:0002309 FOODON:03315233
 [Term]
 id: ECTO:0070156
 name: exposure to nuts via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_03306632 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_03306632 exposure via ingestion" EXACT []
+def: "An exposure to nut (whole or part) via ingestion." []
+synonym: "nut (whole or part) exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:03306632
@@ -1958,8 +1958,8 @@ intersection_of: RO:0002309 FOODON:03306632
 [Term]
 id: ECTO:0070157
 name: exposure to olive oil (extra virgin) via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_00002808 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_00002808 exposure via ingestion" EXACT []
+def: "An exposure to olive oil (extra-virgin) via ingestion." []
+synonym: "olive oil (extra-virgin) exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:00002808
@@ -1967,8 +1967,8 @@ intersection_of: RO:0002309 FOODON:00002808
 [Term]
 id: ECTO:0070158
 name: exposure to mayonnaise via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_03301440 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_03301440 exposure via ingestion" EXACT []
+def: "An exposure to mayonnaise via ingestion." []
+synonym: "mayonnaise exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:03301440
@@ -2003,119 +2003,119 @@ intersection_of: RO:0002309 FOODON:03301073
 [Term]
 id: ECTO:0070162
 name: exposure to black cohosh supplement via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_03600000 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_03600000 exposure via ingestion" EXACT []
+def: "An exposure to black cohosh supplement via ingestion." []
+synonym: "black cohosh supplement exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
-intersection_of: RO:0002309 FOODON:03600000
+intersection_of: RO:0002309 FOODON:3500000
 
 [Term]
 id: ECTO:0070163
 name: exposure to coenzyme Q10 supplement via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_03600001 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_03600001 exposure via ingestion" EXACT []
+def: "An exposure to coenzyme Q10 supplement via ingestion." []
+synonym: "coenzyme Q10 supplement exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
-intersection_of: RO:0002309 FOODON:03600001
+intersection_of: RO:0002309 FOODON:3500001
 
 [Term]
 id: ECTO:0070164
 name: exposure to fish oil supplement via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_03600002 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_03600002 exposure via ingestion" EXACT []
+def: "An exposure to fish oil supplement via ingestion." []
+synonym: "fish oil supplement exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
-intersection_of: RO:0002309 FOODON:03600002
+intersection_of: RO:0002309 FOODON:3500002
 
 [Term]
 id: ECTO:0070165
 name: exposure to flaxseed oil supplement via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_03600003 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_03600003 exposure via ingestion" EXACT []
+def: "An exposure to flaxseed oil supplement via ingestion." []
+synonym: "flaxseed oil supplement exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
-intersection_of: RO:0002309 FOODON:03600003
+intersection_of: RO:0002309 FOODON:3500003
 
 [Term]
 id: ECTO:0070166
 name: exposure to ginkgo biloba supplement via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_03600004 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_03600004 exposure via ingestion" EXACT []
+def: "An exposure to ginkgo biloba supplement via ingestion." []
+synonym: "ginkgo biloba supplement exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
-intersection_of: RO:0002309 FOODON:03600004
+intersection_of: RO:0002309 FOODON:3500004
 
 [Term]
 id: ECTO:0070167
 name: exposure to ginseng supplement via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_03600005 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_03600005 exposure via ingestion" EXACT []
+def: "An exposure to ginseng supplement via ingestion." []
+synonym: "ginseng supplement exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
-intersection_of: RO:0002309 FOODON:03600005
+intersection_of: RO:0002309 FOODON:3500005
 
 [Term]
 id: ECTO:0070168
 name: exposure to glucosamine supplement via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_03600006 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_03600006 exposure via ingestion" EXACT []
+def: "An exposure to glucosamine supplement via ingestion." []
+synonym: "glucosamine supplement exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
-intersection_of: RO:0002309 FOODON:03600006
+intersection_of: RO:0002309 FOODON:3500006
 
 [Term]
 id: ECTO:0070169
 name: exposure to melatonin supplement via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_03600007 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_03600007 exposure via ingestion" EXACT []
+def: "An exposure to melatonin supplement via ingestion." []
+synonym: "melatonin supplement exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
-intersection_of: RO:0002309 FOODON:03600007
+intersection_of: RO:0002309 FOODON:3500007
 
 [Term]
 id: ECTO:0070170
 name: exposure to milk thistle supplement via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_03600008 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_03600008 exposure via ingestion" EXACT []
+def: "An exposure to milk thistle supplement via ingestion." []
+synonym: "milk thistle supplement exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
-intersection_of: RO:0002309 FOODON:03600008
+intersection_of: RO:0002309 FOODON:3500008
 
 [Term]
 id: ECTO:0070171
 name: exposure to omega-3- fatty acid supplement via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_03600009 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_03600009 exposure via ingestion" EXACT []
+def: "An exposure to omega-3- fatty acid supplement via ingestion." []
+synonym: "omega-3- fatty acid supplement exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
-intersection_of: RO:0002309 FOODON:03600009
+intersection_of: RO:0002309 FOODON:3500009
 
 [Term]
 id: ECTO:0070172
 name: exposure to red yeast rice supplement via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_03600010 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_03600010 exposure via ingestion" EXACT []
+def: "An exposure to red yeast rice supplement via ingestion." []
+synonym: "red yeast rice supplement exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
-intersection_of: RO:0002309 FOODON:03600010
+intersection_of: RO:0002309 FOODON:3500010
 
 [Term]
 id: ECTO:0070173
 name: exposure to resveratrol supplement via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_03600011 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_03600011 exposure via ingestion" EXACT []
+def: "An exposure to resveratrol supplement via ingestion." []
+synonym: "resveratrol supplement exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
-intersection_of: RO:0002309 FOODON:03600011
+intersection_of: RO:0002309 FOODON:3500011
 
 [Term]
 id: ECTO:0070174
 name: exposure to St. John's wort supplement via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_03600012 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_03600012 exposure via ingestion" EXACT []
+def: "An exposure to St. John's wort supplement via ingestion." []
+synonym: "St. John's wort supplement exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
-intersection_of: RO:0002309 FOODON:03600012
+intersection_of: RO:0002309 FOODON:3500012
 
 [Term]
 id: ECTO:0070175
@@ -2129,8 +2129,8 @@ intersection_of: RO:0002309 FOODON:00001257
 [Term]
 id: ECTO:0070176
 name: exposure to butter (salted) via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_03302643 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_03302643 exposure via ingestion" EXACT []
+def: "An exposure to butter (salted) via ingestion." []
+synonym: "butter (salted) exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:03302643
@@ -2138,8 +2138,8 @@ intersection_of: RO:0002309 FOODON:03302643
 [Term]
 id: ECTO:0070177
 name: exposure to peanut butter (smooth) via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_03306903 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_03306903 exposure via ingestion" EXACT []
+def: "An exposure to peanut butter (creamy) via ingestion." []
+synonym: "peanut butter (creamy) exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:03306903
@@ -2147,8 +2147,8 @@ intersection_of: RO:0002309 FOODON:03306903
 [Term]
 id: ECTO:0070178
 name: exposure to Williams pear via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_00003575 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_00003575 exposure via ingestion" EXACT []
+def: "An exposure to Williams pear (whole) via ingestion." []
+synonym: "Williams pear (whole) exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:00003575
@@ -2156,8 +2156,8 @@ intersection_of: RO:0002309 FOODON:00003575
 [Term]
 id: ECTO:0070179
 name: exposure to red onion via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_00003515 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_00003515 exposure via ingestion" EXACT []
+def: "An exposure to red onion (whole, raw) via ingestion." []
+synonym: "red onion (whole, raw) exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:00003515
@@ -2165,8 +2165,8 @@ intersection_of: RO:0002309 FOODON:00003515
 [Term]
 id: ECTO:0070180
 name: exposure to white onion via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_00003349 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_00003349 exposure via ingestion" EXACT []
+def: "An exposure to white onion (whole, raw) via ingestion." []
+synonym: "white onion (whole, raw) exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:00003349
@@ -2174,8 +2174,8 @@ intersection_of: RO:0002309 FOODON:00003349
 [Term]
 id: ECTO:0070181
 name: exposure to yellow onion via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_03311276 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_03311276 exposure via ingestion" EXACT []
+def: "An exposure to yellow onion (whole, raw) via ingestion." []
+synonym: "yellow onion (whole, raw) exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:03311276
@@ -2183,8 +2183,8 @@ intersection_of: RO:0002309 FOODON:03311276
 [Term]
 id: ECTO:0070182
 name: exposure to stone fruit via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_00002277 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_00002277 exposure via ingestion" EXACT []
+def: "An exposure to stone fruit food product via ingestion." []
+synonym: "stone fruit food product exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:00002277
@@ -2201,8 +2201,8 @@ intersection_of: RO:0002309 FOODON:00001264
 [Term]
 id: ECTO:0070184
 name: exposure to plant leaf vegetable food product via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_00002143 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_00002143 exposure via ingestion" EXACT []
+def: "An exposure to plant leaf vegetable food product via ingestion." []
+synonym: "plant leaf vegetable food product exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:00002143
@@ -2219,8 +2219,8 @@ intersection_of: RO:0002309 FOODON:3317331
 [Term]
 id: ECTO:0070186
 name: exposure to poultry (processed) via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_03310828 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_03310828 exposure via ingestion" EXACT []
+def: "An exposure to poultry (processed) via ingestion." []
+synonym: "poultry (processed) exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:03310828
@@ -2228,8 +2228,8 @@ intersection_of: RO:0002309 FOODON:03310828
 [Term]
 id: ECTO:0070187
 name: exposure to red meat (raw) via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_03301297 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_03301297 exposure via ingestion" EXACT []
+def: "An exposure to red meat (raw) via ingestion." []
+synonym: "red meat (raw) exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:03301297
@@ -2237,8 +2237,8 @@ intersection_of: RO:0002309 FOODON:03301297
 [Term]
 id: ECTO:0070188
 name: exposure to shellfish via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_03411433 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_03411433 exposure via ingestion" EXACT []
+def: "An exposure to shellfish via ingestion." []
+synonym: "shellfish exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:03411433
@@ -2246,8 +2246,8 @@ intersection_of: RO:0002309 FOODON:03411433
 [Term]
 id: ECTO:0070189
 name: exposure to whitefish via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_00003281 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_00003281 exposure via ingestion" EXACT []
+def: "An exposure to whitefish (fisheries term) via ingestion." []
+synonym: "whitefish (fisheries term) exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:00003281
@@ -2255,8 +2255,8 @@ intersection_of: RO:0002309 FOODON:00003281
 [Term]
 id: ECTO:0070190
 name: exposure to spinach (cooked) via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_00003908 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_00003908 exposure via ingestion" EXACT []
+def: "An exposure to spinach (cooked) via ingestion." []
+synonym: "spinach (cooked) exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:00003908
@@ -2264,8 +2264,8 @@ intersection_of: RO:0002309 FOODON:00003908
 [Term]
 id: ECTO:0070191
 name: exposure to whole grain bread via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_00003923 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_00003923 exposure via ingestion" EXACT []
+def: "An exposure to whole grain bread via ingestion." []
+synonym: "whole grain bread exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:00003923
@@ -2273,8 +2273,8 @@ intersection_of: RO:0002309 FOODON:00003923
 [Term]
 id: ECTO:0070192
 name: exposure to whole oat bread via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_00003938 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_00003938 exposure via ingestion" EXACT []
+def: "An exposure to whole oat bread via ingestion." []
+synonym: "whole oat bread exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:00003938
@@ -2282,8 +2282,8 @@ intersection_of: RO:0002309 FOODON:00003938
 [Term]
 id: ECTO:0070193
 name: exposure to soft drink (diet, caffeinated) via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_00003939 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_00003939 exposure via ingestion" EXACT []
+def: "An exposure to diet soft drink (caffeinated) via ingestion." []
+synonym: "diet soft drink (caffeinated) exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:00003939
@@ -2291,8 +2291,8 @@ intersection_of: RO:0002309 FOODON:00003939
 [Term]
 id: ECTO:0070194
 name: exposure to soft drink (caffeinated) via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_00003940 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_00003940 exposure via ingestion" EXACT []
+def: "An exposure to soft drink (caffeinated) via ingestion." []
+synonym: "soft drink (caffeinated) exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:00003940
@@ -2300,8 +2300,8 @@ intersection_of: RO:0002309 FOODON:00003940
 [Term]
 id: ECTO:0070195
 name: exposure to tea (liquid, decaffeinated) via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_00003941 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_00003941 exposure via ingestion" EXACT []
+def: "An exposure to tea (liquid, decafeinated) via ingestion." []
+synonym: "tea (liquid, decafeinated) exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:00003941
@@ -2309,8 +2309,8 @@ intersection_of: RO:0002309 FOODON:00003941
 [Term]
 id: ECTO:0070196
 name: exposure to tea (liquid, caffeinated) via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_00003942 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_00003942 exposure via ingestion" EXACT []
+def: "An exposure to tea (liquid, caffeinated) via ingestion." []
+synonym: "tea (liquid, caffeinated) exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:00003942
@@ -2318,8 +2318,8 @@ intersection_of: RO:0002309 FOODON:00003942
 [Term]
 id: ECTO:0070197
 name: exposure to coffee (liquid, decaffeinated) via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_00003943 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_00003943 exposure via ingestion" EXACT []
+def: "An exposure to coffee (liquid, decafeinated) via ingestion." []
+synonym: "coffee (liquid, decafeinated) exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:00003943
@@ -2327,8 +2327,8 @@ intersection_of: RO:0002309 FOODON:00003943
 [Term]
 id: ECTO:0070198
 name: exposure to dairy-based coffee drink via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_00003944 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_00003944 exposure via ingestion" EXACT []
+def: "An exposure to dairy-based coffee drink via ingestion." []
+synonym: "dairy-based coffee drink exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:00003944
@@ -2336,8 +2336,8 @@ intersection_of: RO:0002309 FOODON:00003944
 [Term]
 id: ECTO:0070199
 name: exposure to cow milk cheese (nonfat) via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_00003945 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_00003945 exposure via ingestion" EXACT []
+def: "An exposure to cow milk cheese (nonfat) via ingestion." []
+synonym: "cow milk cheese (nonfat) exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:00003945
@@ -2345,8 +2345,8 @@ intersection_of: RO:0002309 FOODON:00003945
 [Term]
 id: ECTO:0070200
 name: exposure to winter squash (whole) via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_00003946 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_00003946 exposure via ingestion" EXACT []
+def: "An exposure to winter squash (whole) via ingestion." []
+synonym: "winter squash (whole) exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:00003946
@@ -2354,8 +2354,8 @@ intersection_of: RO:0002309 FOODON:00003946
 [Term]
 id: ECTO:0070201
 name: exposure to sucralose-based sweetener via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_00003947 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_00003947 exposure via ingestion" EXACT []
+def: "An exposure to sucralose-based sweetener via ingestion." []
+synonym: "sucralose-based sweetener exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:00003947
@@ -2363,8 +2363,8 @@ intersection_of: RO:0002309 FOODON:00003947
 [Term]
 id: ECTO:0070202
 name: exposure to aspartame-based sweetener via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_00003948 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_00003948 exposure via ingestion" EXACT []
+def: "An exposure to aspartame-based sweetener via ingestion." []
+synonym: "aspartame-based sweetener exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:00003948
@@ -2372,8 +2372,8 @@ intersection_of: RO:0002309 FOODON:00003948
 [Term]
 id: ECTO:0070203
 name: exposure to saccharin-based sweetener via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_00003949 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_00003949 exposure via ingestion" EXACT []
+def: "An exposure to saccharin-based sweetener via ingestion." []
+synonym: "saccharin-based sweetener exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:00003949
@@ -2381,8 +2381,8 @@ intersection_of: RO:0002309 FOODON:00003949
 [Term]
 id: ECTO:0070204
 name: exposure to cow milk (liquid) via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_03302116 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_03302116 exposure via ingestion" EXACT []
+def: "An exposure to cow milk (liquid) via ingestion." []
+synonym: "cow milk (liquid) exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:03302116
@@ -2390,8 +2390,8 @@ intersection_of: RO:0002309 FOODON:03302116
 [Term]
 id: ECTO:0070205
 name: exposure to high mercury food material via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_00004101 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_00004101 exposure via ingestion" EXACT []
+def: "An exposure to high mercury food material via ingestion." []
+synonym: "high mercury food material exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:00004101
@@ -2419,8 +2419,8 @@ intersection_of: RO:0002309 CHEBI:33666
 [Term]
 id: ECTO:0080002
 name: exposure to chlorpyrifos in apple via ingestion
-def: "An exposure to chlorpyrifos mixed in http://purl.obolibrary.org/obo/FOODON_00002473 via ingestion." []
-synonym: "chlorpyrifos exposure in http://purl.obolibrary.org/obo/FOODON_00002473 via ingestion" EXACT []
+def: "An exposure to chlorpyrifos mixed in apple (whole) via ingestion." []
+synonym: "chlorpyrifos exposure in apple (whole) via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002243 FOODON:00002473
@@ -2683,8 +2683,8 @@ synonym: "heroin consumption of an addictive substance exposure" EXACT []
 [Term]
 id: ECTO:0100010
 name: exposure to tobacco pipe smoking
-def: "An exposure event involving nicotine http://purl.obolibrary.org/obo/NBO_0015006" []
-synonym: "nicotine http://purl.obolibrary.org/obo/NBO_0015006 exposure" EXACT []
+def: "An exposure event involving nicotine pipe smoking behavior" []
+synonym: "nicotine pipe smoking behavior exposure" EXACT []
 
 [Term]
 id: ECTO:0200001
@@ -2779,8 +2779,8 @@ synonym: "heroin consumption of an addictive substance exposure via maternal" EX
 [Term]
 id: ECTO:0300010
 name: exposure to cannabinoid via maternal
-def: "An exposure event involving http://purl.obolibrary.org/obo/CHEBI_67194 consumption of an addictive substance via maternal" []
-synonym: "http://purl.obolibrary.org/obo/CHEBI_67194 consumption of an addictive substance exposure via maternal" EXACT []
+def: "An exposure event involving cannabinoid consumption of an addictive substance via maternal" []
+synonym: "cannabinoid consumption of an addictive substance exposure via maternal" EXACT []
 
 [Term]
 id: ECTO:0300011
@@ -3555,8 +3555,8 @@ intersection_of: RO:0002309 CHEBI:25107
 [Term]
 id: ECTO:0900041
 name: exposure to deoxynivalenol via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/CHEBI_10022 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/CHEBI_10022 exposure via ingestion" EXACT []
+def: "An exposure to deoxynivalenol via ingestion." []
+synonym: "deoxynivalenol exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 CHEBI:10022
@@ -4365,8 +4365,8 @@ intersection_of: RO:0002309 MAXO:0000058
 [Term]
 id: ECTO:2000058
 name: exposure to blood transfusion
-def: "An exposure to http://purl.obolibrary.org/obo/MAXO_0000756." []
-synonym: "exposure to http://purl.obolibrary.org/obo/MAXO_0000756" EXACT []
+def: "An exposure to blood transfusion." []
+synonym: "exposure to blood transfusion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002309 MAXO:0000756
 
@@ -4381,8 +4381,8 @@ intersection_of: RO:0002309 MAXO:0000170
 [Term]
 id: ECTO:2000060
 name: exposure to neck radiograph procedure
-def: "An exposure to http://purl.obolibrary.org/obo/MAXO_0010355." []
-synonym: "exposure to http://purl.obolibrary.org/obo/MAXO_0010355" EXACT []
+def: "An exposure to neck radiograph procedure." []
+synonym: "exposure to neck radiograph procedure" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002309 MAXO:0010355
 
@@ -4437,32 +4437,32 @@ intersection_of: RO:0002309 NCBITaxon:9606
 [Term]
 id: ECTO:3000006
 name: exposure to Toxoplasma gondii
-def: "A history of exposure to http://purl.obolibrary.org/obo/NCBITaxon_5811." []
-synonym: "http://purl.obolibrary.org/obo/NCBITaxon_5811 exposure" EXACT []
+def: "A history of exposure to Toxoplasma gondii." []
+synonym: "Toxoplasma gondii exposure" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002309 NCBITaxon:5811
 
 [Term]
 id: ECTO:3000007
 name: exposure to Listeria
-def: "A history of exposure to http://purl.obolibrary.org/obo/NCBITaxon_1637." []
-synonym: "http://purl.obolibrary.org/obo/NCBITaxon_1637 exposure" EXACT []
+def: "A history of exposure to Listeria." []
+synonym: "Listeria exposure" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002309 NCBITaxon:1637
 
 [Term]
 id: ECTO:3000008
 name: exposure to Salmonella
-def: "A history of exposure to http://purl.obolibrary.org/obo/NCBITaxon_590." []
-synonym: "http://purl.obolibrary.org/obo/NCBITaxon_590 exposure" EXACT []
+def: "A history of exposure to Salmonella." []
+synonym: "Salmonella exposure" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002309 NCBITaxon:590
 
 [Term]
 id: ECTO:3000009
 name: exposure to Escherichia coli
-def: "A history of exposure to http://purl.obolibrary.org/obo/NCBITaxon_562." []
-synonym: "http://purl.obolibrary.org/obo/NCBITaxon_562 exposure" EXACT []
+def: "A history of exposure to Escherichia coli." []
+synonym: "Escherichia coli exposure" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002309 NCBITaxon:562
 
@@ -4793,8 +4793,8 @@ intersection_of: RO:0002309 NCIT:C43431
 [Term]
 id: ECTO:6000001
 name: exposure to violence
-def: "An exposure event involving http://purl.obolibrary.org/obo/NCIT_C93214" []
-synonym: "http://purl.obolibrary.org/obo/NCIT_C93214 exposure" EXACT []
+def: "An exposure event involving Violence" []
+synonym: "Violence exposure" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002309 NCIT:C93214
 
@@ -4809,8 +4809,8 @@ intersection_of: RO:0002309 NCIT:C16567
 [Term]
 id: ECTO:6000003
 name: exposure to walking
-def: "An exposure event involving http://purl.obolibrary.org/obo/NCIT_C73554" []
-synonym: "http://purl.obolibrary.org/obo/NCIT_C73554 exposure" EXACT []
+def: "An exposure event involving Walking" []
+synonym: "Walking exposure" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002309 NCIT:C73554
 
@@ -4945,8 +4945,8 @@ replaced_by: ECTO:0030000
 [Term]
 id: ECTO:6000021
 name: exposure to eating behavior
-def: "An exposure event involving http://purl.obolibrary.org/obo/NCIT_C19706" []
-synonym: "http://purl.obolibrary.org/obo/NCIT_C19706 exposure" EXACT []
+def: "An exposure event involving Dietary Practices" []
+synonym: "Dietary Practices exposure" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002309 NCIT:C19706
 
@@ -4961,8 +4961,8 @@ intersection_of: RO:0002309 GO:0042756
 [Term]
 id: ECTO:6000023
 name: exposure to food processing behavior
-def: "An exposure event involving http://purl.obolibrary.org/obo/NCIT_C17604" []
-synonym: "http://purl.obolibrary.org/obo/NCIT_C17604 exposure" EXACT []
+def: "An exposure event involving Food Preparation" []
+synonym: "Food Preparation exposure" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002309 NCIT:C17604
 
@@ -5025,24 +5025,24 @@ intersection_of: RO:0002309 NBO:0009003
 [Term]
 id: ECTO:6000031
 name: exposure to strenuous exercise
-def: "An exposure event involving http://purl.obolibrary.org/obo/NCIT_C39773" []
-synonym: "http://purl.obolibrary.org/obo/NCIT_C39773 exposure" EXACT []
+def: "An exposure event involving Strenuous Exercise" []
+synonym: "Strenuous Exercise exposure" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002309 NCIT:C39773
 
 [Term]
 id: ECTO:6000032
 name: exposure to weight bearing
-def: "An exposure event involving http://purl.obolibrary.org/obo/NCIT_C178214" []
-synonym: "http://purl.obolibrary.org/obo/NCIT_C178214 exposure" EXACT []
+def: "An exposure event involving Weight Bearing" []
+synonym: "Weight Bearing exposure" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002309 NCIT:C178214
 
 [Term]
 id: ECTO:6000033
 name: exposure to travel
-def: "An exposure event involving http://purl.obolibrary.org/obo/NCIT_C53462" []
-synonym: "http://purl.obolibrary.org/obo/NCIT_C53462 exposure" EXACT []
+def: "An exposure event involving Travel" []
+synonym: "Travel exposure" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002309 NCIT:C53462
 
@@ -6659,8 +6659,8 @@ intersection_of: RO:0002309 ENVO:03000128
 [Term]
 id: ECTO:8000060
 name: exposure to vibration
-def: "A exposure event involving the interaction of an exposure receptor to http://purl.obolibrary.org/obo/ENVO_01001759." []
-synonym: "http://purl.obolibrary.org/obo/ENVO_01001759 exposure" EXACT []
+def: "A exposure event involving the interaction of an exposure receptor to vibration process." []
+synonym: "vibration process exposure" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002309 ENVO:01001759
 
@@ -22833,16 +22833,16 @@ intersection_of: RO:0002309 CHEBI:33666
 [Term]
 id: ECTO:9002149
 name: exposure to oral contraceptive
-def: "An exposure to http://purl.obolibrary.org/obo/CHEBI_49325." []
-synonym: "exposure to http://purl.obolibrary.org/obo/CHEBI_49325" EXACT []
+def: "An exposure to oral contraceptive." []
+synonym: "exposure to oral contraceptive" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002309 CHEBI:49325
 
 [Term]
 id: ECTO:9002150
 name: exposure to poly(ethylene-co-vinyl acetate)
-def: "An exposure to http://purl.obolibrary.org/obo/CHEBI_166881." []
-synonym: "exposure to http://purl.obolibrary.org/obo/CHEBI_166881" EXACT []
+def: "An exposure to poly(ethylene-co-vinyl acetate)." []
+synonym: "exposure to poly(ethylene-co-vinyl acetate)" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002309 CHEBI:166881
 
@@ -22857,8 +22857,8 @@ intersection_of: RO:0002309 CHEBI:15940
 [Term]
 id: ECTO:9002152
 name: exposure to pantothenic acid
-def: "An exposure to http://purl.obolibrary.org/obo/CHEBI_7916." []
-synonym: "exposure to http://purl.obolibrary.org/obo/CHEBI_7916" EXACT []
+def: "An exposure to pantothenic acid." []
+synonym: "exposure to pantothenic acid" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002309 CHEBI:7916
 
@@ -22873,8 +22873,8 @@ intersection_of: RO:0002309 CHEBI:53212
 [Term]
 id: ECTO:9002154
 name: exposure to hematite
-def: "An exposure to http://purl.obolibrary.org/obo/CHEBI_50818." []
-synonym: "exposure to http://purl.obolibrary.org/obo/CHEBI_50818" EXACT []
+def: "An exposure to hematite." []
+synonym: "exposure to hematite" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002309 CHEBI:50818
 
@@ -22897,32 +22897,32 @@ intersection_of: RO:0002309 CHEBI:13643
 [Term]
 id: ECTO:9002157
 name: exposure to 1,2,5,6,9,10-hexabromocyclododecane
-def: "An exposure to http://purl.obolibrary.org/obo/CHEBI_134063." []
-synonym: "exposure to http://purl.obolibrary.org/obo/CHEBI_134063" EXACT []
+def: "An exposure to 1,2,5,6,9,10-hexabromocyclododecane." []
+synonym: "exposure to 1,2,5,6,9,10-hexabromocyclododecane" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002309 CHEBI:134063
 
 [Term]
 id: ECTO:9002158
 name: exposure to warfarin
-def: "An exposure to http://purl.obolibrary.org/obo/CHEBI_10033." []
-synonym: "exposure to http://purl.obolibrary.org/obo/CHEBI_10033" EXACT []
+def: "An exposure to warfarin." []
+synonym: "exposure to warfarin" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002309 CHEBI:10033
 
 [Term]
 id: ECTO:9002159
 name: exposure to polyfluoroalkyl substance
-def: "An exposure to http://purl.obolibrary.org/obo/CHEBI_172406." []
-synonym: "exposure to http://purl.obolibrary.org/obo/CHEBI_172406" EXACT []
+def: "An exposure to polyfluoroalkyl substance." []
+synonym: "exposure to polyfluoroalkyl substance" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002309 CHEBI:172406
 
 [Term]
 id: ECTO:9002160
 name: exposure to perfluoroalkyl substance
-def: "An exposure to http://purl.obolibrary.org/obo/CHEBI_172397." []
-synonym: "exposure to http://purl.obolibrary.org/obo/CHEBI_172397" EXACT []
+def: "An exposure to perfluoroalkyl substance." []
+synonym: "exposure to perfluoroalkyl substance" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002309 CHEBI:172397
 
@@ -22945,32 +22945,32 @@ intersection_of: RO:0002309 CHEBI:172368
 [Term]
 id: ECTO:9002163
 name: exposure to heavy metal
-def: "An exposure to http://purl.obolibrary.org/obo/CHEBI_5631." []
-synonym: "exposure to http://purl.obolibrary.org/obo/CHEBI_5631" EXACT []
+def: "An exposure to heavy metal." []
+synonym: "exposure to heavy metal" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002309 CHEBI:5631
 
 [Term]
 id: ECTO:9002164
 name: exposure to desflurane
-def: "An exposure to http://purl.obolibrary.org/obo/CHEBI_4445." []
-synonym: "exposure to http://purl.obolibrary.org/obo/CHEBI_4445" EXACT []
+def: "An exposure to desflurane." []
+synonym: "exposure to desflurane" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002309 CHEBI:4445
 
 [Term]
 id: ECTO:9002165
 name: exposure to sevoflurane
-def: "An exposure to http://purl.obolibrary.org/obo/CHEBI_9130." []
-synonym: "exposure to http://purl.obolibrary.org/obo/CHEBI_9130" EXACT []
+def: "An exposure to sevoflurane." []
+synonym: "exposure to sevoflurane" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002309 CHEBI:9130
 
 [Term]
 id: ECTO:9002166
 name: exposure to isoflurane
-def: "An exposure to http://purl.obolibrary.org/obo/CHEBI_6015." []
-synonym: "exposure to http://purl.obolibrary.org/obo/CHEBI_6015" EXACT []
+def: "An exposure to isoflurane." []
+synonym: "exposure to isoflurane" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002309 CHEBI:6015
 
