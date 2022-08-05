@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: ecto/releases/2022-05-12/ecto-base.owl
+data-version: ecto/releases/2022-08-03/ecto-base.owl
 subsetdef: mrex "medically relevant exposure"
 ontology: ecto/ecto-base
 property_value: http://purl.org/dc/elements/1.1/description "ECTO describes exposures to experimental treatments of plants and model organisms (e.g. exposures to modification of diet, lighting levels, temperature); exposures of humans or any other organisms to stressors through a variety of routes, for purposes of public health, environmental monitoring etc, stimuli, natural and experimental, any kind of environmental condition or change in condition that can be experienced by an organism or population of organisms on earth. The scope is very general and can include for example plant treatment regimens, as well as human clinical exposures (although these may better be handled by a more specialized ontology)." xsd:string
@@ -7,7 +7,7 @@ property_value: http://purl.org/dc/elements/1.1/title "Environment Exposure Onto
 property_value: http://purl.org/dc/elements/1.1/type IAO:8000001
 property_value: http://purl.org/dc/terms/license https://creativecommons.org/publicdomain/zero/1.0/
 property_value: IAO:0000700 http://purl.obolibrary.org/obo/ExO_0000002 xsd:string
-property_value: owl:versionInfo "2022-05-12" xsd:string
+property_value: owl:versionInfo "2022-08-03" xsd:string
 
 [Term]
 id: ECTO:0000001
@@ -538,16 +538,16 @@ intersection_of: RO:0002309 NCIT:C103933
 [Term]
 id: ECTO:0030000
 name: exposure to a diet
-def: "An exposure event involving dietary pattern" []
-synonym: "dietary pattern exposure" EXACT []
+def: "An exposure event involving http://purl.obolibrary.org/obo/ONS_0000094" []
+synonym: "http://purl.obolibrary.org/obo/ONS_0000094 exposure" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002309 ONS:0000094
 
 [Term]
 id: ECTO:0030001
 name: exposure to high vegetable diet
-def: "An exposure event involving semi-vegetarian diet" []
-synonym: "semi-vegetarian diet exposure" EXACT []
+def: "An exposure event involving http://purl.obolibrary.org/obo/ONS_1000025" []
+synonym: "http://purl.obolibrary.org/obo/ONS_1000025 exposure" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002309 ONS:1000025
 
@@ -761,11 +761,11 @@ intersection_of: RO:0002309 FOODON:03305236
 [Term]
 id: ECTO:0070024
 name: exposure to banana via ingestion
-def: "An exposure to Cavendish banana (whole, ripe) via ingestion." []
-synonym: "Cavendish banana (whole, ripe) exposure via ingestion" EXACT []
+def: "An exposure to http://purl.obolibrary.org/obo/FOODON_00004183 via ingestion." []
+synonym: "http://purl.obolibrary.org/obo/FOODON_00004183 exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
-intersection_of: RO:0002309 FOODON:03311513
+intersection_of: RO:0002309 FOODON:00004183
 
 [Term]
 id: ECTO:0070025
@@ -2120,11 +2120,11 @@ intersection_of: RO:0002309 FOODON:3500012
 [Term]
 id: ECTO:0070175
 name: exposure to butter (unsalted) via ingestion
-def: "An exposure to milk or milk based food product via ingestion." []
-synonym: "milk or milk based food product exposure via ingestion" EXACT []
+def: "An exposure to http://purl.obolibrary.org/obo/FOODON_03301777 via ingestion." []
+synonym: "http://purl.obolibrary.org/obo/FOODON_03301777 exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
-intersection_of: RO:0002309 FOODON:00001257
+intersection_of: RO:0002309 FOODON:03301777
 
 [Term]
 id: ECTO:0070176
@@ -2395,6 +2395,51 @@ synonym: "high mercury food material exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:00004101
+
+[Term]
+id: ECTO:0070206
+name: exposure to rice milk via ingestion
+def: "An exposure to http://purl.obolibrary.org/obo/FOODON_03311386 via ingestion." []
+synonym: "http://purl.obolibrary.org/obo/FOODON_03311386 exposure via ingestion" EXACT []
+intersection_of: ExO:0000002
+intersection_of: RO:0002242 ExO:0000056
+intersection_of: RO:0002309 FOODON:03311386
+
+[Term]
+id: ECTO:0070207
+name: exposure to coconut milk via ingestion
+def: "An exposure to http://purl.obolibrary.org/obo/FOODON_03303084 via ingestion." []
+synonym: "http://purl.obolibrary.org/obo/FOODON_03303084 exposure via ingestion" EXACT []
+intersection_of: ExO:0000002
+intersection_of: RO:0002242 ExO:0000056
+intersection_of: RO:0002309 FOODON:03303084
+
+[Term]
+id: ECTO:0070208
+name: exposure to cashew milk via ingestion
+def: "An exposure to http://purl.obolibrary.org/obo/FOODON_00003866 via ingestion." []
+synonym: "http://purl.obolibrary.org/obo/FOODON_00003866 exposure via ingestion" EXACT []
+intersection_of: ExO:0000002
+intersection_of: RO:0002242 ExO:0000056
+intersection_of: RO:0002309 FOODON:00003866
+
+[Term]
+id: ECTO:0070209
+name: exposure to dark fish flesh via ingestion
+def: "An exposure to http://purl.obolibrary.org/obo/FOODON_03530058 via ingestion." []
+synonym: "http://purl.obolibrary.org/obo/FOODON_03530058 exposure via ingestion" EXACT []
+intersection_of: ExO:0000002
+intersection_of: RO:0002242 ExO:0000056
+intersection_of: RO:0002309 FOODON:03530058
+
+[Term]
+id: ECTO:0070210
+name: exposure to multivitamin preparation via ingestion
+def: "An exposure to http://purl.obolibrary.org/obo/FOODON_03315171 via ingestion." []
+synonym: "http://purl.obolibrary.org/obo/FOODON_03315171 exposure via ingestion" EXACT []
+intersection_of: ExO:0000002
+intersection_of: RO:0002242 ExO:0000056
+intersection_of: RO:0002309 FOODON:03315171
 
 [Term]
 id: ECTO:0080000
@@ -4005,8 +4050,8 @@ intersection_of: RO:0002309 MAXO:0000434
 [Term]
 id: ECTO:2000011
 name: exposure to NSAIDs
-def: "An exposure to nonsteroidal anti-inflammatory agent therapyNSAID therapy." []
-synonym: "exposure to nonsteroidal anti-inflammatory agent therapyNSAID therapy" EXACT []
+def: "An exposure to NSAID therapy." []
+synonym: "exposure to NSAID therapy" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002309 MAXO:0000221
 
@@ -7556,8 +7601,8 @@ intersection_of: RO:0002309 CHEBI:12777
 [Term]
 id: ECTO:9000126
 name: exposure to beta-carotene
-def: "An exposure to beta-caroteneβ-carotene." []
-synonym: "exposure to beta-caroteneβ-carotene" EXACT []
+def: "An exposure to beta-carotene." []
+synonym: "exposure to beta-carotene" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002309 CHEBI:17579
 
@@ -16737,8 +16782,8 @@ intersection_of: RO:0002309 CHEBI:21759
 [Term]
 id: ECTO:9001341
 name: exposure to alpha-tocopherol
-def: "An exposure to α-tocopherolalpha-tocopherol." []
-synonym: "exposure to α-tocopherolalpha-tocopherol" EXACT []
+def: "An exposure to alpha-tocopherol." []
+synonym: "exposure to alpha-tocopherol" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002309 CHEBI:22470
 
@@ -22981,4 +23026,12 @@ def: "An exposure to aldehyde." []
 synonym: "exposure to aldehyde" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002309 CHEBI:17478
+
+[Term]
+id: ECTO:9002169
+name: exposure to vitamin B complex
+def: "An exposure to http://purl.obolibrary.org/obo/CHEBI_75782." []
+synonym: "exposure to http://purl.obolibrary.org/obo/CHEBI_75782" EXACT []
+intersection_of: ExO:0000002
+intersection_of: RO:0002309 CHEBI:75782
 
