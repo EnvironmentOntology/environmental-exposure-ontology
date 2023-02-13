@@ -8,9 +8,7 @@
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:doap="http://usefulinc.com/ns/doap#"
      xmlns:envo="http://purl.obolibrary.org/obo/envo#"
-     xmlns:foaf="http://xmlns.com/foaf/0.1/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:swrl="http://www.w3.org/2003/11/swrl#"
@@ -24,7 +22,7 @@
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/ecto/imports/envo_import.owl">
         <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/ecto/releases/2023-02-13/imports/envo_import.owl"/>
         <dc:source rdf:resource="http://purl.obolibrary.org/obo/envo/releases/2023-02-13/envo.owl"/>
-        <owl:versionInfo>2023-02-13</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2023-02-13</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -396,18 +394,6 @@
     
 
 
-    <!-- http://usefulinc.com/ns/doap#GitRepository -->
-
-    <owl:AnnotationProperty rdf:about="http://usefulinc.com/ns/doap#GitRepository"/>
-    
-
-
-    <!-- http://usefulinc.com/ns/doap#bug-database -->
-
-    <owl:AnnotationProperty rdf:about="http://usefulinc.com/ns/doap#bug-database"/>
-    
-
-
     <!-- http://www.geneontology.org/formats/oboInOwl#SubsetProperty -->
 
     <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#SubsetProperty">
@@ -437,12 +423,6 @@
     <!-- http://www.geneontology.org/formats/oboInOwl#creation_date -->
 
     <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#creation_date"/>
-    
-
-
-    <!-- http://www.geneontology.org/formats/oboInOwl#default-namespace -->
-
-    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#default-namespace"/>
     
 
 
@@ -537,12 +517,6 @@
     <!-- http://www.w3.org/2004/02/skos/core#closeMatch -->
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#closeMatch"/>
-    
-
-
-    <!-- http://xmlns.com/foaf/0.1/homepage -->
-
-    <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/homepage"/>
     
 
 
@@ -1003,12 +977,12 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000050"/>
         </owl:propertyChainAxiom>
         <obo:IAO_0000111 xml:lang="en">contained in</obo:IAO_0000111>
+        <obo:IAO_0000116>Containment is location not involving parthood, and arises only where some immaterial continuant is involved.</obo:IAO_0000116>
         <obo:IAO_0000116 xml:lang="en">Containment obtains in each case between material and immaterial continuants, for instance: lung contained_in thoracic cavity; bladder contained_in pelvic cavity. Hence containment is not a transitive relation.    If c part_of c1 at t then we have also, by our definition and by the axioms of mereology applied to spatial regions, c located_in c1 at t. Thus, many examples of instance-level location relations for continuants are in fact cases of instance-level parthood. For material continuants location and parthood coincide. Containment is location not involving parthood, and arises only where some immaterial continuant is involved. To understand this relation, we first define overlap for continuants as follows:    c1 overlap c2 at t =def for some c, c part_of c1 at t and c part_of c2 at t. The containment relation on the instance level can then be defined (see definition):</obo:IAO_0000116>
         <obo:IAO_0000116 xml:lang="en">Intended meaning:
 domain: material entity
 range: spatial region or site (immaterial continuant)
         </obo:IAO_0000116>
-        <obo:IAO_0000116>Containment is location not involving parthood, and arises only where some immaterial continuant is involved.</obo:IAO_0000116>
         <obo:IAO_0000118 xml:lang="en">contained_in</obo:IAO_0000118>
         <obo:RO_0001900 rdf:resource="http://purl.obolibrary.org/obo/RO_0001901"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/ro/subsets#ro-eco"/>
@@ -1495,8 +1469,8 @@ boundary_of: http://purl.obolibrary.org/obo/RO_0002000</obo:IAO_0000115>
         <obo:IAO_0000112>a &apos;toe distal phalanx bone&apos; that is connected to a &apos;toe medial phalanx bone&apos; (an interphalangeal joint *connects* these two bones).</obo:IAO_0000112>
         <obo:IAO_0000115>c connects a if and only if there exist some b such that a and b are similar parts of the same system, and c connects b, specifically, c connects a with b. When one structure connects two others it unites some aspect of the function or role they play within the system.</obo:IAO_0000115>
         <obo:IAO_0000119 rdf:resource="http://www.ncbi.nlm.nih.gov/pubmed/22293552"/>
-        <rdfs:label xml:lang="en">connects</rdfs:label>
         <rdfs:label>connects</rdfs:label>
+        <rdfs:label xml:lang="en">connects</rdfs:label>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/obophenotype/uberon/wiki/Connectivity-Design-Pattern</rdfs:seeAlso>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/obophenotype/uberon/wiki/Modeling-articulations-Design-Pattern</rdfs:seeAlso>
     </owl:ObjectProperty>
@@ -1531,8 +1505,8 @@ boundary_of: http://purl.obolibrary.org/obo/RO_0002000</obo:IAO_0000115>
         <obo:IAO_0000115>x develops from y if and only if either (a) x directly develops from y or (b) there exists some z such that x directly develops from z and z develops from y</obo:IAO_0000115>
         <obo:IAO_0000117 xml:lang="en">Chris Mungall</obo:IAO_0000117>
         <obo:IAO_0000117 xml:lang="en">David Osumi-Sutherland</obo:IAO_0000117>
-        <obo:IAO_0000117 xml:lang="en">Terry Meehan</obo:IAO_0000117>
         <obo:IAO_0000117>Melissa Haendel</obo:IAO_0000117>
+        <obo:IAO_0000117 xml:lang="en">Terry Meehan</obo:IAO_0000117>
         <rdfs:comment>This is the transitive form of the develops from relation</rdfs:comment>
         <rdfs:label xml:lang="en">develops from</rdfs:label>
     </owl:ObjectProperty>
@@ -1749,8 +1723,8 @@ boundary_of: http://purl.obolibrary.org/obo/RO_0002000</obo:IAO_0000115>
         <obo:IAO_0000115>x surrounded_by y if and only if (1) x is adjacent to y and for every region r that is adjacent to x, r overlaps y (2) the shared boundary between x and y occupies the majority of the outermost boundary of x</obo:IAO_0000115>
         <obo:IAO_0000117>Chris Mungall</obo:IAO_0000117>
         <obo:RO_0001900 rdf:resource="http://purl.obolibrary.org/obo/RO_0001901"/>
-        <rdfs:label xml:lang="en">surrounded by</rdfs:label>
         <rdfs:label>surrounded by</rdfs:label>
+        <rdfs:label xml:lang="en">surrounded by</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -2081,8 +2055,8 @@ boundary_of: http://purl.obolibrary.org/obo/RO_0002000</obo:IAO_0000115>
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002234"/>
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002295"/>
         <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002354"/>
-        <obo:IAO_0000112 xml:lang="en">every &quot;endocardial cushion formation&quot; (GO:0003272) results_in_formation_of some &quot;endocardial cushion&quot; (UBERON:0002062)</obo:IAO_0000112>
         <obo:IAO_0000112>an annotation of gene X to anatomical structure formation with results_in_formation_of UBERON:0000007 (pituitary gland) means that at the beginning of the process a pituitary gland does not exist and at the end of the process a pituitary gland exists.</obo:IAO_0000112>
+        <obo:IAO_0000112 xml:lang="en">every &quot;endocardial cushion formation&quot; (GO:0003272) results_in_formation_of some &quot;endocardial cushion&quot; (UBERON:0002062)</obo:IAO_0000112>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000125"/>
         <obo:IAO_0000117>Chris Mungall</obo:IAO_0000117>
         <obo:IAO_0000119>GOC:mtg_berkeley_2013</obo:IAO_0000119>
@@ -2109,8 +2083,8 @@ where
         <obo:IAO_0000118>adapted for living in</obo:IAO_0000118>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/ro/subsets#ro-eco"/>
         <rdfs:comment>A population of xs will possess adaptations (either evolved naturally or via artifical selection) which permit it to exist and grow in y.</rdfs:comment>
-        <rdfs:label xml:lang="en">has habitat</rdfs:label>
         <rdfs:label>has habitat</rdfs:label>
+        <rdfs:label xml:lang="en">has habitat</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -3884,8 +3858,8 @@ For example, A and B may be gene products and binding of B by A positively regul
             </owl:Restriction>
         </owl:disjointWith>
         <obo:IAO_0000115 xml:lang="en">An independent continuant that is spatially extended whose identity is independent of that of other entities and can be maintained through time.</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">material entity</rdfs:label>
         <rdfs:label>material entity</rdfs:label>
+        <rdfs:label xml:lang="en">material entity</rdfs:label>
     </owl:Class>
     
 
@@ -5200,6 +5174,16 @@ For example, A and B may be gene products and binding of B by A positively regul
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_24913">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_18059"/>
         <rdfs:label>isoprenoid</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_25016 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_25016">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33306"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33521"/>
+        <rdfs:label>lead atom</rdfs:label>
     </owl:Class>
     
 
@@ -10287,12 +10271,12 @@ For example, A and B may be gene products and binding of B by A positively regul
         <oboInOwl:hasDbXref>TGN:21109</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Stream</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>streams</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasNarrowSynonym xml:lang="en">streamlet</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasNarrowSynonym>braided stream</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasNarrowSynonym>fork (hydrographic</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasNarrowSynonym>lode</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasNarrowSynonym>millstream</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasNarrowSynonym>stream bend</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym xml:lang="en">streamlet</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasRelatedSynonym>Creek</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym>beck</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym>brook</oboInOwl:hasRelatedSynonym>
@@ -22255,10 +22239,10 @@ https://en.wikipedia.org/wiki/  Ecozones correspond to the floristic kingdoms of
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0003-4808-4736"/>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-04-14T18:57:18.275Z</oboInOwl:creation_date>
         <oboInOwl:hasDbXref rdf:resource="http://sweetontology.net/phenAtmoPrecipitation/IceStorm"/>
+        <oboInOwl:hasExactSynonym>glaze event</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym xml:lang="en">glaze storm</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym xml:lang="en">ice storm</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym xml:lang="en">silver storm</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>glaze event</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>silver thaw</oboInOwl:hasExactSynonym>
         <oboInOwl:hasRelatedSynonym xml:lang="en">glaze event</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym xml:lang="en">silver thaw</oboInOwl:hasRelatedSynonym>
@@ -22554,8 +22538,8 @@ Consider adding axioms like PATO:&quot;decreased temperature&quot; to this and o
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001222"/>
         <obo:IAO_0000115>A building which is used to care for a human child during the working day by a person, outside the child&apos;s immediate family, other than that child&apos;s legal guardians.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1107-9135"/>
-        <oboInOwl:hasExactSynonym xml:lang="en">daycare building</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>child care building</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym xml:lang="en">daycare building</oboInOwl:hasExactSynonym>
         <rdfs:comment>This is a kind of day care facility. A facility need not be a building.</rdfs:comment>
         <rdfs:label xml:lang="en">day care building</rdfs:label>
     </owl:Class>
@@ -24775,26 +24759,39 @@ Consider adding axioms like PATO:&quot;decreased temperature&quot; to this and o
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01001125">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00010483"/>
-        <rdfs:subClassOf rdf:nodeID="genid2381"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000086"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001546"/>
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001985"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000115>An ice is an environmental material which is either frozen or which is maintained in a solid state by gravitational forces or pressure.</obo:IAO_0000115>
         <rdfs:comment>Note that ice may be formed at very high temperatures, due to gravitational effects and/or pressure.</rdfs:comment>
         <rdfs:label xml:lang="en">ice</rdfs:label>
     </owl:Class>
-    <owl:Restriction rdf:nodeID="genid2381">
-        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000086"/>
-        <owl:someValuesFrom>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001546"/>
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001985"/>
-                </owl:unionOf>
-            </owl:Class>
-        </owl:someValuesFrom>
-    </owl:Restriction>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001125"/>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
-        <owl:annotatedTarget rdf:nodeID="genid2381"/>
+        <owl:annotatedTarget>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000086"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001546"/>
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001985"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:annotatedTarget>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/EnvironmentOntology/envo/issues/900</rdfs:seeAlso>
     </owl:Axiom>
     
@@ -27873,8 +27870,8 @@ Consider adding axioms like PATO:&quot;decreased temperature&quot; to this and o
         <oboInOwl:hasAlternativeId>Cb</oboInOwl:hasAlternativeId>
         <oboInOwl:hasExactSynonym xml:lang="de">Cumulonibus-Wolke</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym xml:lang="de">Gewitterwolke</oboInOwl:hasExactSynonym>
-        <oboInOwl:inSubset xml:lang="en">envoCloudAtlas</oboInOwl:inSubset>
         <oboInOwl:inSubset>envoAtmo</oboInOwl:inSubset>
+        <oboInOwl:inSubset xml:lang="en">envoCloudAtlas</oboInOwl:inSubset>
         <rdfs:comment xml:lang="en">Cumulonimbus clouds have a very dark base which may be merged with low ragged clouds which frequently form underneath this cloud. The upper portion  may be smooth, fibrous, or striated. Cumulonimbus also contains large raindrops and, often, snowflakes, snow pellets or hailstones. The water droplets and raindrops may be substantially supercooled. Cumulonimbus is frequently associated with precipitation, sometimes in the form of virga. Cumulonimbus is often accompanied by lightning, thunder or hail. Cumulonimbus usually have their bases in the low level, but their vertical extent is often so great that their tops may reach into the middle and high levels.</rdfs:comment>
         <rdfs:label xml:lang="en">cumulonimbus cloud</rdfs:label>
     </owl:Class>
@@ -28904,8 +28901,8 @@ Consider adding axioms like PATO:&quot;decreased temperature&quot; to this and o
         <dc:contributor rdf:resource="https://orcid.org/0000-0003-1072-8081"/>
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-4366-3088"/>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-03-06T01:22:01Z</oboInOwl:creation_date>
-        <oboInOwl:inSubset xml:lang="en">envoPlastics</oboInOwl:inSubset>
         <oboInOwl:inSubset>envoMarine</oboInOwl:inSubset>
+        <oboInOwl:inSubset xml:lang="en">envoPlastics</oboInOwl:inSubset>
         <rdfs:comment xml:lang="en">At this level, the depth of this layer is ambiguous. Some methods (telemetry) measure only the first few centimeters of the sea or ocean surface. In situ methods often sample the first few meters. Subclasses can be created for such cases.
 Sea surface layer is also used to refer to the surfaces of oceans.</rdfs:comment>
         <rdfs:label xml:lang="en">sea surface layer</rdfs:label>
@@ -33293,6 +33290,18 @@ Definitions of Cryosphere come from several glossaries including:
     
 
 
+    <!-- http://purl.obolibrary.org/obo/ENVO_03510003 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_03510003">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_02500000"/>
+        <obo:IAO_0000115>An environmental system process during which populations have reduced access to food, causing increased hunger, malnutrition, and consequent mortality.</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-09-22T14:34:25Z</dc:date>
+        <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-7463-6306"/>
+        <rdfs:label>famine</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/ENVO_03510004 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_03510004">
@@ -35872,9 +35881,9 @@ Uses undesirability standard, compared to polluted river&apos;s ecological impac
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>The concentration of a liquid water when measured in soil.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym>soil liquid water concentration</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym xml:lang="en">soil moisture content</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym xml:lang="en">soil water content</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>soil liquid water concentration</oboInOwl:hasExactSynonym>
         <rdfs:label>concentration of liquid water in soil</rdfs:label>
     </owl:Class>
     
@@ -39216,8 +39225,8 @@ Uses undesirability standard, compared to polluted river&apos;s ecological impac
         <obo:IAO_0000115>A one-celled fruit (pod) usually dehiscing down both sutures, and having the seed attached along a ventral suture. (Roubik 1995)</obo:IAO_0000115>
         <obo:IAO_0000119 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.fao.org/pollination/resources/glossary/en/</obo:IAO_0000119>
         <oboInOwl:hasExactSynonym xml:lang="en">legume</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasNarrowSynonym xml:lang="en">http://purl.obolibrary.org/obo/FOODON_03411338</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasNarrowSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/FOODON_03411254</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym xml:lang="en">http://purl.obolibrary.org/obo/FOODON_03411338</oboInOwl:hasNarrowSynonym>
         <rdfs:label xml:lang="en">legume food product</rdfs:label>
     </owl:Class>
     
@@ -39262,9 +39271,9 @@ Uses undesirability standard, compared to polluted river&apos;s ecological impac
         <obo:IAO_0000116 xml:lang="en">Note, this was previously labelled &quot;Bean (vegetable) food product&quot;. We have been listing both dry and freshly harvested moist beans here, so have broadened the name scope.</obo:IAO_0000116>
         <obo:IAO_0000117 xml:lang="en">Damion Dooley</obo:IAO_0000117>
         <rdfs:label xml:lang="en">bean food product</rdfs:label>
-        <rdfs:seeAlso xml:lang="en">https://oconto.extension.wisc.edu/files/2011/02/The-Importance-of-Dry-Beans-in-Your-Diet.pdf</rdfs:seeAlso>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/FOODON_00002428</rdfs:seeAlso>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.fao.org/es/faodef/fdef04e.htm#4.02</rdfs:seeAlso>
+        <rdfs:seeAlso xml:lang="en">https://oconto.extension.wisc.edu/files/2011/02/The-Importance-of-Dry-Beans-in-Your-Diet.pdf</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -39513,8 +39522,8 @@ Namely, how to characterize the threshold of ingredients that make for multi-com
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
         <obo:IAO_0000115 xml:lang="en">A seed of a bean plant from one of several genera of the flowering plant family (Fabaceae).</obo:IAO_0000115>
         <obo:IAO_0000116 xml:lang="en">Damion Dooley&apos;s note.  This could be enhanced to explicitly state the anatomical parts of a seed - seed coat, cotyledons, embryo etc.  Currently the Plant Ontology is not explicit about this yet.</obo:IAO_0000116>
-        <obo:IAO_0000117 rdf:datatype="http://www.w3.org/2000/01/rdf-schema#anyURI">https://orcid.org/0000-0001-5275-8866</obo:IAO_0000117>
         <obo:IAO_0000117>Damion Dooley</obo:IAO_0000117>
+        <obo:IAO_0000117 rdf:datatype="http://www.w3.org/2000/01/rdf-schema#anyURI">https://orcid.org/0000-0001-5275-8866</obo:IAO_0000117>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-10-14T07:28:59</dc:date>
         <oboInOwl:hasExactSynonym xml:lang="en">bean</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">bean (whole)</rdfs:label>
@@ -41714,7 +41723,12 @@ Classes for population already  exist in IDO (&apos;organism population&apos;, I
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0025131">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
-        <rdfs:subClassOf rdf:nodeID="genid4915"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002160"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_33090"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000115>An anatomical entity that is or was part of a plant.</obo:IAO_0000115>
         <oboInOwl:created_by>rwalls</oboInOwl:created_by>
         <oboInOwl:creation_date>2010-11-15T11:41:38Z</oboInOwl:creation_date>
@@ -41726,14 +41740,15 @@ Classes for population already  exist in IDO (&apos;organism population&apos;, I
         <rdfs:comment>Includes both material entities such as plant structures and immaterial entities such as plant anatomical spaces. CARO:0000000 &apos;anatomical entity&apos; is defined as: A part of a cellular organism that is either an immaterial entity or a material entity with granularity aboove the level of a protein complex.  Or, a substance produced by a cellular organism with granularity above the level of a protein complex.  Refers to BFO:0000004 &apos;independent continuant&apos;.</rdfs:comment>
         <rdfs:label>plant anatomical entity</rdfs:label>
     </owl:Class>
-    <owl:Restriction rdf:nodeID="genid4915">
-        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002160"/>
-        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_33090"/>
-    </owl:Restriction>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PO_0025131"/>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
-        <owl:annotatedTarget rdf:nodeID="genid4915"/>
+        <owl:annotatedTarget>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002160"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_33090"/>
+            </owl:Restriction>
+        </owl:annotatedTarget>
         <oboInOwl:source>cjm</oboInOwl:source>
     </owl:Axiom>
     <owl:Axiom>
@@ -47652,5 +47667,5 @@ e.g.  if GP X enables ATPase coupled transporter activity&apos; and &apos;ATPase
 
 
 
-<!-- Generated by the OWL API (version 4.5.24) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.5.6) https://github.com/owlcs/owlapi -->
 
