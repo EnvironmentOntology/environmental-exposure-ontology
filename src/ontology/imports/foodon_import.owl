@@ -13,9 +13,9 @@
      xmlns:schema="http://schema.org/"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/ecto/imports/foodon_import.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/ecto/releases/2022-12-12/imports/foodon_import.owl"/>
-        <dc:source rdf:resource="http://purl.obolibrary.org/obo/foodon/releases/2022-12-01/foodon.owl"/>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2022-12-12</owl:versionInfo>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/ecto/releases/2023-02-13/imports/foodon_import.owl"/>
+        <dc:source rdf:resource="http://purl.obolibrary.org/obo/foodon/releases/2023-01-10/foodon.owl"/>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2023-02-13</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -334,12 +334,6 @@ We also have the outstanding issue of how to aim different definitions to differ
     <!-- http://www.geneontology.org/formats/oboInOwl#inSubset -->
 
     <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#inSubset"/>
-    
-
-
-    <!-- http://www.w3.org/1999/02/22-rdf-syntax-ns#type -->
-
-    <owl:AnnotationProperty rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
     
 
 
@@ -12466,6 +12460,18 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
     
 
 
+    <!-- http://purl.obolibrary.org/obo/CHEBI_132124 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_132124">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_22729"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_25830"/>
+        <obo:IAO_0000115>Any member of the class of benzoquinones that is 1,4-benzoquinone or its C-substituted derivatives.</obo:IAO_0000115>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/chebi.owl"/>
+        <rdfs:label>1,4-benzoquinones</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/CHEBI_132142 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_132142">
@@ -13406,6 +13412,18 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
         <oboInOwl:inSubset rdf:resource="http://purl.oboInOwllibrary.org/oboInOwl/chebi#3_STAR"/>
         <rdfs:label>menaquinone</rdfs:label>
         <rdfs:label rdf:datatype="http://www.w3.org/XML/1998/namespacestring">menaquinone</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_16389 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_16389">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_132124"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_26255"/>
+        <obo:IAO_0000115>Any benzoquinone derived from 2,3-dimethoxy-5-methylbenzoquinone; one of a group of naturally occurring homologues. The redox-active quinoid moiety usually carries a polyprenoid side chain at position 6, the number of isoprenoid units in which is species-specific. Ubiquinones are involved in the control of mitochondrial electron transport, and are also potent anti-oxidants.</obo:IAO_0000115>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/chebi.owl"/>
+        <rdfs:label>ubiquinones</rdfs:label>
     </owl:Class>
     
 
@@ -15171,7 +15189,6 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
         <oboInOwl:id>CHEBI:18059</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.oboInOwllibrary.org/oboInOwl/chebi#3_STAR"/>
         <rdfs:label>lipid</rdfs:label>
-        <rdfs:label rdf:datatype="http://www.w3.org/XML/1998/namespacestring">lipid</rdfs:label>
     </owl:Class>
     
 
@@ -15810,6 +15827,17 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
     
 
 
+    <!-- http://purl.obolibrary.org/obo/CHEBI_22729 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_22729">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_36141"/>
+        <obo:IAO_0000115>Any quinone resulting from the formal oxidation of catechol, hydroquinone, or their C-substituted derivatives.</obo:IAO_0000115>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/chebi.owl"/>
+        <rdfs:label>benzoquinones</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/CHEBI_22888 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_22888">
@@ -16308,7 +16336,6 @@ A soup may &apos;has ingredient&apos; some bean, but that doesn&apos;t make it a
         <oboInOwl:id>CHEBI:24676</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.oboInOwllibrary.org/oboInOwl/chebi#3_STAR"/>
         <rdfs:label>hydroxybenzoic acid</rdfs:label>
-        <rdfs:label rdf:datatype="http://www.w3.org/XML/1998/namespacestring">hydroxybenzoic acid</rdfs:label>
     </owl:Class>
     
 
@@ -22150,7 +22177,6 @@ Sucralose is an artificial sweetener. The majority of ingested sucralose is not 
         <oboInOwl:inSubset rdf:resource="http://purl.oboInOwllibrary.org/oboInOwl/chebi#3_STAR"/>
         <rdfs:comment xml:lang="en">LanguaL term definition: Food additive.</rdfs:comment>
         <rdfs:label>sodium phosphate</rdfs:label>
-        <rdfs:label rdf:datatype="http://www.w3.org/XML/1998/namespacestring">sodium phosphate</rdfs:label>
     </owl:Class>
     
 
@@ -22755,6 +22781,17 @@ Sucralose is an artificial sweetener. The majority of ingested sucralose is not 
         <oboInOwl:hasDbXref>http://www.langual.org/langual_thesaurus.asp?termid=B3307</oboInOwl:hasDbXref>
         <rdfs:comment xml:lang="en">LanguaL term definition: Food additive; technological purpose(s): preservative.</rdfs:comment>
         <rdfs:label>thiabendazole</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_46245 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_46245">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_16389"/>
+        <obo:IAO_0000115>A ubiquinone having a side chain of 10 isoprenoid units. In the naturally occurring isomer, all isoprenyl double bonds are in the E- configuration.</obo:IAO_0000115>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/chebi.owl"/>
+        <rdfs:label>coenzyme Q10</rdfs:label>
     </owl:Class>
     
 
@@ -25316,6 +25353,41 @@ LanguaL curation note: Water is indexed as a food source if it is the only ingre
     
 
 
+    <!-- http://purl.obolibrary.org/obo/FOODON_00001087 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00001087">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03310387"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03460263"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
+        <obo:IAO_0000115 xml:lang="en">A lipid material derived from plants. Physically, oils are liquid at room temperature.</obo:IAO_0000115>
+        <obo:IAO_0000117 xml:lang="en">Damion Dooley</obo:IAO_0000117>
+        <obo:IAO_0000119 rdf:resource="http://en.wikipedia.org/wiki/Vegetable_fats_and_oils"/>
+        <rdfs:label xml:lang="en">vegetable oil food product</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FOODON_00001088 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00001088">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001859"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03420307"/>
+        <obo:IAO_0000115 xml:lang="en">An oil used as a nutritional supplement and is a traditional European ethnic food, highly regarded for its nutty flavor.</obo:IAO_0000115>
+        <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0002-8844-9165"/>
+        <obo:IAO_0000119 rdf:resource="https://en.wikipedia.org/wiki/Linseed_oil#Nutritional_supplement_and_food"/>
+        <obo:IAO_0000412>http://langual.org</obo:IAO_0000412>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-09-19T21:51:42Z</dc:date>
+        <oboInOwl:hasDbXref>http://www.langual.org/langual_thesaurus.asp?termid=H0852</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym xml:lang="en">flax oil</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym xml:lang="en">flax seed oil</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>linseed oil</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym xml:lang="en">linseed oil</oboInOwl:hasExactSynonym>
+        <rdfs:comment xml:lang="en">Food-grade flaxseed oil is cold-pressed, obtained without solvent extraction, in the absence of oxygen, and marketed as edible flaxseed oil.[wikipedia]</rdfs:comment>
+        <rdfs:label xml:lang="en">flaxseed oil</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/FOODON_00001089 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00001089">
@@ -27259,6 +27331,16 @@ https://www.politico.com/agenda/story/2016/03/crazy-us-chicken-egg-regulation-gr
     
 
 
+    <!-- http://purl.obolibrary.org/obo/FOODON_00001595 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00001595">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00002196"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00004242"/>
+        <rdfs:label xml:lang="en">animal based refined or partially-refined food product</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/FOODON_00001604 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00001604">
@@ -28301,6 +28383,15 @@ https://www.politico.com/agenda/story/2016/03/crazy-us-chicken-egg-regulation-gr
     
 
 
+    <!-- http://purl.obolibrary.org/obo/FOODON_00001855 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00001855">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001595"/>
+        <rdfs:label xml:lang="en">fish refined food product</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/FOODON_00001857 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00001857">
@@ -28312,6 +28403,54 @@ https://www.politico.com/agenda/story/2016/03/crazy-us-chicken-egg-regulation-gr
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">food flavoring or seasoning product</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FOODON_00001859 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00001859">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/FOODON_00001173"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0001000"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_4006"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001173"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0001000"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_4006"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <oboInOwl:hasExactSynonym xml:lang="en">linseed food product</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">flaxseed food product</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FOODON_00001860 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00001860">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/FOODON_00002153"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0001000"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_4006"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001859"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00002153"/>
+        <rdfs:label xml:lang="en">flax vegetable food product</rdfs:label>
     </owl:Class>
     
 
@@ -28668,6 +28807,16 @@ https://www.politico.com/agenda/story/2016/03/crazy-us-chicken-egg-regulation-gr
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">hemp food product</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FOODON_00001955 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00001955">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001242"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001956"/>
+        <rdfs:label xml:lang="en">hot pepper spice food product</rdfs:label>
     </owl:Class>
     
 
@@ -29735,30 +29884,6 @@ https://www.politico.com/agenda/story/2016/03/crazy-us-chicken-egg-regulation-gr
     
 
 
-    <!-- http://purl.obolibrary.org/obo/FOODON_00002205 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00002205">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/FOODON_00001709"/>
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/FOODON_03301641"/>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001709"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03301641"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002350"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FOODON_03400258"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:label xml:lang="en">rice cereal food product</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/FOODON_00002220 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00002220">
@@ -30543,7 +30668,7 @@ https://www.politico.com/agenda/story/2016/03/crazy-us-chicken-egg-regulation-gr
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_00010483"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000040"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000087"/>
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33290"/>
@@ -30551,7 +30676,7 @@ https://www.politico.com/agenda/story/2016/03/crazy-us-chicken-egg-regulation-gr
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00010483"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000087"/>
@@ -30565,6 +30690,7 @@ https://www.politico.com/agenda/story/2016/03/crazy-us-chicken-egg-regulation-gr
         <oboInOwl:hasExactSynonym xml:lang="en">foodstuff</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym xml:lang="en">nourishment</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym xml:lang="en">sustenance</oboInOwl:hasExactSynonym>
+        <rdfs:comment xml:lang="en">This class is the top of FOODON&apos;s main food product hierarchy which is described in the https://www.foodon.org website, and can be searched in lookup services like https://www.ebi.ac.uk/ols/</rdfs:comment>
         <rdfs:label xml:lang="en">food material</rdfs:label>
     </owl:Class>
     
@@ -32627,6 +32753,48 @@ Namely, how to characterize the threshold of ingredients that make for multi-com
     
 
 
+    <!-- http://purl.obolibrary.org/obo/FOODON_00003397 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00003397">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PO_0009010"/>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002162"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3311"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002162"/>
+                                <owl:allValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3311"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001172"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0009010"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002162"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3311"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
+        <obo:IAO_0000115 xml:lang="en">A seed of a ginkgo plant (Ginkgo biloba)</obo:IAO_0000115>
+        <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0002-8844-9165"/>
+        <obo:IAO_0000119>https://en.wikipedia.org/wiki/Ginkgo_biloba</obo:IAO_0000119>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-09-06T20:07:44</dc:date>
+        <oboInOwl:hasExactSynonym xml:lang="en">gingko nut</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym xml:lang="en">ginkgo nut</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">ginkgo nut (whole)</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/FOODON_00003403 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00003403">
@@ -34651,6 +34819,47 @@ Namely, how to characterize the threshold of ingredients that make for multi-com
     
 
 
+    <!-- http://purl.obolibrary.org/obo/FOODON_00003683 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00003683">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PO_0009010"/>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002162"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_4006"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002162"/>
+                                <owl:allValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_4006"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001859"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0009010"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002162"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_4006"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115 xml:lang="en">A seed of a flax plant (Linum usitatissimum).</obo:IAO_0000115>
+        <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0002-8844-9165"/>
+        <obo:IAO_0000119>https://en.wikipedia.org/wiki/Flax</obo:IAO_0000119>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-11T03:35:50</dc:date>
+        <oboInOwl:hasExactSynonym xml:lang="en">flaxseed</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym xml:lang="en">linseed</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">flaxseed (whole)</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/FOODON_00003717 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00003717">
@@ -34787,7 +34996,6 @@ Namely, how to characterize the threshold of ingredients that make for multi-com
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03307147"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03311818"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03420208"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -34877,6 +35085,90 @@ Namely, how to characterize the threshold of ingredients that make for multi-com
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-05-21T10:30:10Z</dc:date>
         <oboInOwl:hasExactSynonym xml:lang="en">cashew mylk</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">cashew milk</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FOODON_00003903 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00003903">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PO_0009005"/>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002162"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_64040"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002162"/>
+                                <owl:allValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_64040"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0009005"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002162"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_64040"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115 xml:lang="en">A root of a black cohosh plant</obo:IAO_0000115>
+        <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0002-8844-9165"/>
+        <obo:IAO_0000117 rdf:datatype="http://www.w3.org/2000/01/rdf-schema#anyURI">https://orcid.org/0000-0002-7463-6306</obo:IAO_0000117>
+        <obo:IAO_0000119>https://en.wikipedia.org/wiki/Actaea_racemosa</obo:IAO_0000119>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-07-22T17:39:12</dc:date>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-08-18T20:11:32Z</dc:date>
+        <oboInOwl:hasExactSynonym xml:lang="en">Actaea racemosa root</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym xml:lang="en">black cohost root</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">Actaea racemosa root (whole)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FOODON_00003904 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00003904">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PO_0025034"/>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002162"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3311"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002162"/>
+                                <owl:allValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3311"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0025034"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002162"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3311"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115 xml:lang="en">A leaf of a ginkgo plant (Ginkgo biloba)</obo:IAO_0000115>
+        <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0002-8844-9165"/>
+        <obo:IAO_0000117 rdf:datatype="http://www.w3.org/2000/01/rdf-schema#anyURI">https://orcid.org/0000-0002-7463-6306</obo:IAO_0000117>
+        <obo:IAO_0000119>https://en.wikipedia.org/wiki/Ginkgo_biloba</obo:IAO_0000119>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-07-22T17:39:12</dc:date>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-08-18T20:12:43Z</dc:date>
+        <oboInOwl:hasExactSynonym xml:lang="en">ginkgo biloba leaf</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym xml:lang="en">ginkgo leaf</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">Ginkgo biloba leaf (whole)</rdfs:label>
     </owl:Class>
     
 
@@ -37014,7 +37306,7 @@ DEPRECATED DUE TO DUPLICATION: * has quality &apos;whole, natural shape&apos; (h
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03301641">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001185"/>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000428"/>
-        <obo:IAO_0000115 xml:lang="en">A rice food product consisting of rice grains.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">A rice food product consisting of hulled rice kernels.</obo:IAO_0000115>
         <obo:IAO_0000412>http://langual.org</obo:IAO_0000412>
         <oboInOwl:hasDbXref>SUBSET_SIREN:F1641</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym xml:lang="en">rice</oboInOwl:hasExactSynonym>
@@ -37025,7 +37317,7 @@ DEPRECATED DUE TO DUPLICATION: * has quality &apos;whole, natural shape&apos; (h
 * formed as a result of &apos;water removal process&apos; (http://purl.obolibrary.org/obo/FOODON_03460138)
 * formed as a result of &apos;preservation by dehydration or drying&apos; (http://purl.obolibrary.org/obo/FOODON_03470116)
         </rdfs:comment>
-        <rdfs:label xml:lang="en">rice grain food product</rdfs:label>
+        <rdfs:label xml:lang="en">rice kernel food product</rdfs:label>
     </owl:Class>
     
 
@@ -38117,6 +38409,42 @@ DEPRECATED DUE TO DUPLICATION: * has quality &apos;whole, natural shape&apos; (h
     
 
 
+    <!-- http://purl.obolibrary.org/obo/FOODON_03302726 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03302726">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/FOODON_03420307"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0001000"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FOODON_03411643"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001955"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03420307"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002350"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FOODON_03400215"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000428"/>
+        <obo:IAO_0000412>http://langual.org</obo:IAO_0000412>
+        <oboInOwl:hasDbXref>SUBSET_SIREN:F2726</oboInOwl:hasDbXref>
+        <oboInOwl:inSubset>subset_siren</oboInOwl:inSubset>
+        <rdfs:comment xml:lang="en">SIREN DB annotation:
+* has quality &apos;liquid, high viscosity&apos; (http://purl.obolibrary.org/obo/FOODON_03430102)
+* has quality &apos;not heat-treated&apos; (http://purl.obolibrary.org/obo/FOODON_03440003)
+* derives from &apos;fat or oil&apos; (http://purl.obolibrary.org/obo/FOODON_03420190)
+        </rdfs:comment>
+        <rdfs:label xml:lang="en">chili seed oil</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/FOODON_03302732 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03302732">
@@ -39170,6 +39498,25 @@ SIREN DB annotation:
     
 
 
+    <!-- http://purl.obolibrary.org/obo/FOODON_03306123 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03306123">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001248"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001855"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03310387"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000428"/>
+        <obo:IAO_0000412>http://langual.org</obo:IAO_0000412>
+        <oboInOwl:hasDbXref>SUBSET_SIREN:F6123</oboInOwl:hasDbXref>
+        <oboInOwl:inSubset>subset_siren</oboInOwl:inSubset>
+        <rdfs:comment xml:lang="en">SIREN DB annotation:
+* has quality &apos;liquid, high viscosity, with no visible particles&apos; (http://purl.obolibrary.org/obo/FOODON_03430139)
+* derives from &apos;fat or oil&apos; (http://purl.obolibrary.org/obo/FOODON_03420190)
+        </rdfs:comment>
+        <rdfs:label xml:lang="en">fish oil</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/FOODON_03306272 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03306272">
@@ -39648,7 +39995,7 @@ SIREN DB annotation:
     <!-- http://purl.obolibrary.org/obo/FOODON_03307147 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03307147">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03301641"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03311818"/>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000428"/>
         <obo:IAO_0000412>http://langual.org</obo:IAO_0000412>
         <oboInOwl:hasDbXref>SUBSET_SIREN:F7147</oboInOwl:hasDbXref>
@@ -40358,6 +40705,29 @@ SIREN DB annotation:
         </rdfs:comment>
         <rdfs:label xml:lang="en">butter</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://www.uoguelph.ca/foodscience/book/export/html/1687"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FOODON_03310387 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03310387">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00002664"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002350"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FOODON_03400129"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000428"/>
+        <obo:IAO_0000412>http://langual.org</obo:IAO_0000412>
+        <oboInOwl:hasDbXref>SUBSET_SIREN:F10387</oboInOwl:hasDbXref>
+        <oboInOwl:inSubset>subset_siren</oboInOwl:inSubset>
+        <rdfs:comment xml:lang="en">SIREN DB annotation:
+* has quality &apos;liquid, high viscosity, with no visible particles&apos; (http://purl.obolibrary.org/obo/FOODON_03430139)
+* derives from &apos;fat or oil&apos; (http://purl.obolibrary.org/obo/FOODON_03420190)
+                </rdfs:comment>
+        <rdfs:label xml:lang="en">oil</rdfs:label>
     </owl:Class>
     
 
@@ -41730,6 +42100,35 @@ This is a duplicate quality and so is being deprecated:
     
 
 
+    <!-- http://purl.obolibrary.org/obo/FOODON_03315252 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03315252">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/FOODON_03306123"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0001000"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FOODON_03411423"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001750"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03306123"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000428"/>
+        <obo:IAO_0000412>http://langual.org</obo:IAO_0000412>
+        <oboInOwl:hasDbXref>SUBSET_SIREN:F15252</oboInOwl:hasDbXref>
+        <oboInOwl:inSubset>subset_siren</oboInOwl:inSubset>
+        <rdfs:comment xml:lang="en">SIREN DB annotation:
+* derives from &apos;fat or oil&apos; (http://purl.obolibrary.org/obo/FOODON_03420190)
+* formed as a result of &apos;food homogenization or emulsification process&apos; (http://purl.obolibrary.org/obo/FOODON_03460306)
+        </rdfs:comment>
+        <rdfs:label xml:lang="en">cod liver oil emulsion</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/FOODON_03315258 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03315258">
@@ -42334,6 +42733,23 @@ SIREN DB annotation:
 * derives from &apos;part of plant&apos; (http://purl.obolibrary.org/obo/FOODON_03420174)
         </rdfs:comment>
         <rdfs:label xml:lang="en">multi-component plant food product</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FOODON_03316694 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03316694">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00002139"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03460263"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000428"/>
+        <obo:IAO_0000412>http://langual.org</obo:IAO_0000412>
+        <oboInOwl:hasDbXref>SUBSET_SIREN:F16694</oboInOwl:hasDbXref>
+        <oboInOwl:inSubset>subset_siren</oboInOwl:inSubset>
+        <rdfs:comment xml:lang="en">SIREN DB annotation:
+* derives from &apos;fat or oil&apos; (http://purl.obolibrary.org/obo/FOODON_03420190)
+        </rdfs:comment>
+        <rdfs:label xml:lang="en">vegetable fat food product</rdfs:label>
     </owl:Class>
     
 
@@ -43370,6 +43786,20 @@ SIREN DB annotation:
     
 
 
+    <!-- http://purl.obolibrary.org/obo/FOODON_03400215 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03400215">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03400300"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000428"/>
+        <obo:IAO_0000115 xml:lang="en">Natural or synthetic product, dissolved in a suitable solvent or carried on an appropriate dry base and added to a food product to enhance or impart taste and aroma.</obo:IAO_0000115>
+        <obo:IAO_0000412>http://langual.org</obo:IAO_0000412>
+        <oboInOwl:hasDbXref>http://www.langual.org/langual_thesaurus.asp?termid=A0215</oboInOwl:hasDbXref>
+        <oboInOwl:hasSynonym xml:lang="en">aroma</oboInOwl:hasSynonym>
+        <rdfs:label xml:lang="en">flavoring (us cfr)</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/FOODON_03400217 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03400217">
@@ -43825,6 +44255,19 @@ SIREN DB annotation:
         <oboInOwl:hasSynonym xml:lang="en">butter, imitation</oboInOwl:hasSynonym>
         <oboInOwl:hasSynonym xml:lang="en">imitation butter</oboInOwl:hasSynonym>
         <rdfs:label xml:lang="en">butter product analog (us cfr)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FOODON_03400300 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03400300">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03400133"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000428"/>
+        <obo:IAO_0000412>http://langual.org</obo:IAO_0000412>
+        <oboInOwl:hasDbXref>http://www.langual.org/langual_thesaurus.asp?termid=A0300</oboInOwl:hasDbXref>
+        <oboInOwl:hasSynonym xml:lang="en">flavor enhancer or flavoring</oboInOwl:hasSynonym>
+        <rdfs:label xml:lang="en">flavoring or flavor enhancer (us cfr)</rdfs:label>
     </owl:Class>
     
 
@@ -45194,22 +45637,18 @@ Citrus is a common term and genus (*Citrus*) of flowering plants in the rue fami
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_4530"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000428"/>
-        <obo:IAO_0000115 xml:lang="en">*Oryza sativa*, commonly known as Asian rice, is the plant species most commonly referred to in English as rice.  *Oryza sativa* contains two major subspecies: the sticky, short-grained *japonica* or *sinica* variety, and the nonsticky, long-grained *indica* variety. 
- Rice occurs in a variety of colors, including white, brown, black, purple, and red rices. Black rice (also known as purple rice) is a range of rice types, some of which are glutinous rice. Varieties include Indonesian black rice and Thai jasmine black rice. [https://en.wikipedia.org/wiki/Oryza_sativa]</obo:IAO_0000115>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
+        <obo:IAO_0000115 xml:lang="en">*Oryza sativa*, commonly known as Asian rice, is the plant species most commonly referred to in English as rice.  *Oryza sativa* contains two major subspecies: the sticky, short-grained *japonica* or *sinica* variety, and the nonsticky, long-grained *indica* variety.</obo:IAO_0000115>
         <obo:IAO_0000412>http://langual.org</obo:IAO_0000412>
-        <oboInOwl:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_4530"/>
         <oboInOwl:hasDbXref>GRIN:26077</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ITIS:41976</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>MANSFELD:20986</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>PLANTS:ORSA</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>http://eol.org/pages/1115098</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>http://www.langual.org/langual_thesaurus.asp?termid=B1322</oboInOwl:hasDbXref>
-        <oboInOwl:hasNarrowSynonym>Oryza sativa L.</oboInOwl:hasNarrowSynonym>
-        <oboInOwl:hasSynonym xml:lang="en">asian rice</oboInOwl:hasSynonym>
-        <oboInOwl:hasSynonym xml:lang="en">lowland rice</oboInOwl:hasSynonym>
-        <oboInOwl:hasSynonym xml:lang="en">oryza sativa</oboInOwl:hasSynonym>
-        <oboInOwl:hasSynonym xml:lang="en">upland rice</oboInOwl:hasSynonym>
+        <oboInOwl:hasNarrowSynonym xml:lang="en">lowland rice</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym xml:lang="en">upland rice</oboInOwl:hasNarrowSynonym>
+        <rdfs:comment xml:lang="en">Rice occurs in a variety of colors, including white, brown, black, purple, and red rices. Black rice (also known as purple rice) is a range of rice types, some of which are glutinous rice. Varieties include Indonesian black rice and Thai jasmine black rice.</rdfs:comment>
         <rdfs:label xml:lang="en">rice plant</rdfs:label>
     </owl:Class>
     
@@ -47124,6 +47563,19 @@ Renamed from *FRUIT OR BERRY* in LanguaL 2008.</rdfs:comment>
     
 
 
+    <!-- http://purl.obolibrary.org/obo/FOODON_03420307 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03420307">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001087"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000428"/>
+        <obo:IAO_0000115 xml:lang="en">The oil produced by pressing or extracting lipids from plant seeds (e.g. grapeseed oil, rapeseed oil, linseed oil) /AM</obo:IAO_0000115>
+        <obo:IAO_0000412>http://langual.org</obo:IAO_0000412>
+        <oboInOwl:hasDbXref>http://www.langual.org/langual_thesaurus.asp?termid=C0307</oboInOwl:hasDbXref>
+        <rdfs:label xml:lang="en">seed oil</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/FOODON_03430113 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03430113">
@@ -47449,6 +47901,30 @@ Renamed from *FRUIT OR BERRY* in LanguaL 2008.</rdfs:comment>
     
 
 
+    <!-- http://purl.obolibrary.org/obo/FOODON_03460263 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03460263">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/FOODON_00001087"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/FOODON_03316694"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001174"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
+        <obo:IAO_0000115 xml:lang="en">A fat or oil derived from vegetable material</obo:IAO_0000115>
+        <obo:IAO_0000117 xml:lang="en">Damion Dooley</obo:IAO_0000117>
+        <obo:IAO_0000118 xml:lang="en">vegetable fat or oil added</obo:IAO_0000118>
+        <obo:IAO_0000412>http://langual.org</obo:IAO_0000412>
+        <oboInOwl:hasDbXref>http://www.langual.org/langual_thesaurus.asp?termid=H0263</oboInOwl:hasDbXref>
+        <rdfs:comment xml:lang="en">This is a convenience class inherited from LanguaL</rdfs:comment>
+        <rdfs:label xml:lang="en">vegetable fat or oil</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/FOODON_03470107 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03470107">
@@ -47669,6 +48145,228 @@ Renamed from *FRUIT OR BERRY* in LanguaL 2008.</rdfs:comment>
         <obo:IAO_0000412>http://langual.org</obo:IAO_0000412>
         <oboInOwl:hasDbXref>http://www.langual.org/langual_thesaurus.asp?termid=A03KY</oboInOwl:hasDbXref>
         <rdfs:label xml:lang="en">37220 - cocoa beverages (efsa foodex2)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FOODON_03600000 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03600000">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/FOODON_03401306"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0001000"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PO_0009005"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_64040"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03401306"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0001000"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PO_0009005"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_64040"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
+        <obo:IAO_0000115 xml:lang="en">A botanical dietary supplement composed primarily of the root or root extract of the Actaea racemosa plant.</obo:IAO_0000115>
+        <obo:IAO_0000117 rdf:datatype="http://www.w3.org/2000/01/rdf-schema#anyURI">https://orcid.org/0000-0002-7463-6306</obo:IAO_0000117>
+        <obo:IAO_0000119>https://en.wikipedia.org/wiki/Actaea_racemosa</obo:IAO_0000119>
+        <obo:IAO_0000119>https://www.nccih.nih.gov/health/black-cohosh</obo:IAO_0000119>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-06-08T13:32:28</dc:date>
+        <oboInOwl:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/DRON_00020995"/>
+        <oboInOwl:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/DRON_00024242"/>
+        <oboInOwl:hasExactSynonym xml:lang="en">Cimicifuga racemosa supplement</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym xml:lang="en">black bugbane supplement</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym xml:lang="en">black snakeroot supplement</oboInOwl:hasExactSynonym>
+        <rdfs:comment xml:lang="en">Black cohosh supplementation has been used in functional medicine for management of menopausal symptoms.</rdfs:comment>
+        <rdfs:label xml:lang="en">black cohosh supplement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FOODON_03600001 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03600001">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/FOODON_03401309"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_46245"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03401309"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_46245"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
+        <obo:IAO_0000115 xml:lang="en">A dietary supplement composed primarily of the ubiquinone coenzyme Q10.</obo:IAO_0000115>
+        <obo:IAO_0000117 rdf:datatype="http://www.w3.org/2000/01/rdf-schema#anyURI">https://orcid.org/0000-0002-7463-6306</obo:IAO_0000117>
+        <obo:IAO_0000119>https://en.wikipedia.org/wiki/Coenzyme_Q10</obo:IAO_0000119>
+        <obo:IAO_0000119>https://www.nccih.nih.gov/health/coenzyme-q10</obo:IAO_0000119>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-06-08T13:32:29</dc:date>
+        <oboInOwl:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/DRON_00021427"/>
+        <oboInOwl:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/DRON_00021428"/>
+        <oboInOwl:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/DRON_00024309"/>
+        <oboInOwl:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/DRON_00024311"/>
+        <oboInOwl:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/DRON_00032484"/>
+        <oboInOwl:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/DRON_00751502"/>
+        <oboInOwl:hasExactSynonym xml:lang="en">CoQ10 supplement</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym xml:lang="en">ubiquinone-10 supplement</oboInOwl:hasExactSynonym>
+        <rdfs:comment xml:lang="en">Coenzyme Q10 supplementation has been used in functional medicine for a wide range of ailments including heart disease and cancer.</rdfs:comment>
+        <rdfs:label xml:lang="en">coenzyme Q10 supplement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FOODON_03600002 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03600002">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/FOODON_03401310"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FOODON_03306123"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03401310"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FOODON_03306123"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
+        <obo:IAO_0000115 xml:lang="en">A dietary fat supplement composed primarily of fish oil.</obo:IAO_0000115>
+        <obo:IAO_0000117 rdf:datatype="http://www.w3.org/2000/01/rdf-schema#anyURI">https://orcid.org/0000-0002-7463-6306</obo:IAO_0000117>
+        <obo:IAO_0000119>https://www.health.harvard.edu/blog/fish-oil-friend-or-foe-201307126467</obo:IAO_0000119>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-06-08T13:32:30</dc:date>
+        <rdfs:comment xml:lang="en">Fish oil supplementation has been used in function medicine to reduce cardiovascular disease risk and reduce inflammation.</rdfs:comment>
+        <rdfs:label xml:lang="en">fish oil supplement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FOODON_03600003 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03600003">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/FOODON_03401310"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001088"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03401310"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001088"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
+        <obo:IAO_0000115 xml:lang="en">A dietary fat supplement composed primarily of flaxseed oil.</obo:IAO_0000115>
+        <obo:IAO_0000117 rdf:datatype="http://www.w3.org/2000/01/rdf-schema#anyURI">https://orcid.org/0000-0002-7463-6306</obo:IAO_0000117>
+        <obo:IAO_0000119>https://www.nccih.nih.gov/health/flaxseed-and-flaxseed-oil</obo:IAO_0000119>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-06-08T13:32:31</dc:date>
+        <rdfs:comment xml:lang="en">Flaxseed oil supplementation has been used in function medicine for a variety of ailments including gastrointestinal complaints and cardiovascular disease.</rdfs:comment>
+        <rdfs:label xml:lang="en">flaxseed oil supplement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FOODON_03600004 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03600004">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/FOODON_03401306"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0001000"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PO_0025034"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3311"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03401306"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0001000"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PO_0025034"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3311"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
+        <obo:IAO_0000115 xml:lang="en">A botanical dietary supplement composed primarily of a Ginkgo biloba plant leaf extract.</obo:IAO_0000115>
+        <obo:IAO_0000117 rdf:datatype="http://www.w3.org/2000/01/rdf-schema#anyURI">https://orcid.org/0000-0002-7463-6306</obo:IAO_0000117>
+        <obo:IAO_0000119>https://en.wikipedia.org/wiki/Ginkgo_biloba</obo:IAO_0000119>
+        <obo:IAO_0000119>https://www.nccih.nih.gov/health/ginkgo</obo:IAO_0000119>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-06-08T13:32:32</dc:date>
+        <oboInOwl:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/DRON_00022022"/>
+        <oboInOwl:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/DRON_00022023"/>
+        <oboInOwl:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/DRON_00024375"/>
+        <oboInOwl:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/DRON_00025240"/>
+        <oboInOwl:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/DRON_00030691"/>
+        <oboInOwl:hasExactSynonym xml:lang="en">ginkgo leaf supplement</oboInOwl:hasExactSynonym>
+        <rdfs:comment xml:lang="en">Ginkgo biloba supplementation has been used in functional medicine for a variety of ailments including peripheral artery disease and dementia.</rdfs:comment>
+        <rdfs:label xml:lang="en">ginkgo biloba supplement</rdfs:label>
     </owl:Class>
     
 
@@ -48332,6 +49030,16 @@ Renamed from *FRUIT OR BERRY* in LanguaL 2008.</rdfs:comment>
     
 
 
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_1437180 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_1437180">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_58024"/>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon.owl"/>
+        <rdfs:label>Acrogymnospermae</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/NCBITaxon_1437183 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_1437183">
@@ -48358,6 +49066,16 @@ Renamed from *FRUIT OR BERRY* in LanguaL 2008.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_1437183"/>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon.owl"/>
         <rdfs:label>Pentapetalae</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_1463138 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_1463138">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3440"/>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon.owl"/>
+        <rdfs:label>Ranunculoideae</rdfs:label>
     </owl:Class>
     
 
@@ -49074,6 +49792,16 @@ The fruit of the cashew tree is an accessory fruit (sometimes called a pseudocar
     
 
 
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_3309 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_3309">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_1437180"/>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon.owl"/>
+        <rdfs:label>Ginkgoaceae</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/NCBITaxon_33090 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_33090">
@@ -49083,6 +49811,30 @@ The fruit of the cashew tree is an accessory fruit (sometimes called a pseudocar
         <oboInOwl:hasExactSynonym>chlorophyte/embryophyte group</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>green plants</oboInOwl:hasExactSynonym>
         <rdfs:label>Viridiplantae</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_3311 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_3311">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03411062"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03414168"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3309"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000428"/>
+        <obo:IAO_0000118 xml:lang="en">ginkgo tree</obo:IAO_0000118>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon.owl"/>
+        <oboInOwl:hasDbXref>GRIN:17540</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ITIS:183269</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PLANTS:GIBI2</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>http://eol.org/pages/1156278</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>http://www.langual.org/langual_thesaurus.asp?termid=B1260</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>ginkgo</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym xml:lang="en">ginkgo biloba</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>maidenhair tree</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasNarrowSynonym>Ginkgo biloba L.</oboInOwl:hasNarrowSynonym>
+        <rdfs:comment xml:lang="en">LanguaL curation note: When indexing the ginkgo fruit (nut) index both *GINGKO [B1260]* and *FRUIT [C0167]* (or its more precise narrower terms).</rdfs:comment>
+        <rdfs:label>Ginkgo biloba</rdfs:label>
     </owl:Class>
     
 
@@ -49158,6 +49910,17 @@ The fruit of the cashew tree is an accessory fruit (sometimes called a pseudocar
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon.owl"/>
         <oboInOwl:hasExactSynonym>avocado</oboInOwl:hasExactSynonym>
         <rdfs:label>Persea americana</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_3440 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_3440">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_41768"/>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon.owl"/>
+        <oboInOwl:hasExactSynonym>buttercup family</oboInOwl:hasExactSynonym>
+        <rdfs:label>Ranunculaceae</rdfs:label>
     </owl:Class>
     
 
@@ -49919,6 +50682,44 @@ The fruit of the cashew tree is an accessory fruit (sometimes called a pseudocar
     
 
 
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_4004 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_4004">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_3646"/>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon.owl"/>
+        <oboInOwl:hasExactSynonym>flax family</oboInOwl:hasExactSynonym>
+        <rdfs:label>Linaceae</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_4006 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_4006">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03411017"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_4004"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000428"/>
+        <obo:IAO_0000118 xml:lang="en">flax plant</obo:IAO_0000118>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon.owl"/>
+        <obo:IAO_0000412>http://langual.org</obo:IAO_0000412>
+        <oboInOwl:hasDbXref>GRIN:22361</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ITIS:29226</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PLANTS:LIUS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>http://eol.org/pages/581568</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>http://www.langual.org/langual_thesaurus.asp?termid=B1700</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>flax</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasNarrowSynonym>Linum usitatissimum L.</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasSynonym xml:lang="en">common flax</oboInOwl:hasSynonym>
+        <oboInOwl:hasSynonym xml:lang="en">cultivated flax</oboInOwl:hasSynonym>
+        <oboInOwl:hasSynonym xml:lang="en">flax, common</oboInOwl:hasSynonym>
+        <oboInOwl:hasSynonym xml:lang="en">flax, cultivated</oboInOwl:hasSynonym>
+        <oboInOwl:hasSynonym xml:lang="en">lin</oboInOwl:hasSynonym>
+        <oboInOwl:hasSynonym xml:lang="en">linum usitatissimum</oboInOwl:hasSynonym>
+        <rdfs:label>Linum usitatissimum</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/NCBITaxon_4011 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_4011">
@@ -50210,6 +51011,16 @@ The fruit of the cashew tree is an accessory fruit (sometimes called a pseudocar
     
 
 
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_41768 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_41768">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_1437183"/>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon.owl"/>
+        <rdfs:label>Ranunculales</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/NCBITaxon_41937 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_41937">
@@ -50364,9 +51175,11 @@ The fruit of the cashew tree is an accessory fruit (sometimes called a pseudocar
     <!-- http://purl.obolibrary.org/obo/NCBITaxon_4530 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_4530">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03411322"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_4527"/>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon.owl"/>
         <oboInOwl:hasExactSynonym>Asian cultivated rice</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym xml:lang="en">asian rice</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>red rice</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>rice</oboInOwl:hasExactSynonym>
         <rdfs:label>Oryza sativa</rdfs:label>
@@ -50379,11 +51192,10 @@ The fruit of the cashew tree is an accessory fruit (sometimes called a pseudocar
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_4538">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03411322"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_4527"/>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000428"/>
-        <obo:IAO_0000115 xml:lang="en">*Oryza glaberrima*, commonly known as African rice, is one of the two domesticated rice species. It was first domesticated and grown in West Africa, and was brought to the Americas by enslaved West African rice farmers. It is now largely a subsistence crop, rarely sold in markets even in West Africa. While it has been partly replaced by higher-yielding Asian rice, and the number of varieties grown is declining, it persists, making up an estimated 20% of rice grown in West Africa. 
- By comparison to Asian rice, it is hardy, pest-resistant, low-labour, suited to a variety of African conditions, filling, and has a distinct nutty flavour. 
-Crossbreeding between African and Asian rice is difficult, but there exist some crosses [https://en.wikipedia.org/wiki/Oryza_glaberrima]</obo:IAO_0000115>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
+        <obo:IAO_0000115 xml:lang="en">A domesticated rice species commonly known as African rice.</obo:IAO_0000115>
         <obo:IAO_0000118 xml:lang="en">african rice plant</obo:IAO_0000118>
+        <obo:IAO_0000119 rdf:resource="https://en.wikipedia.org/wiki/Oryza_glaberrima"/>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon.owl"/>
         <obo:IAO_0000412>http://langual.org</obo:IAO_0000412>
         <oboInOwl:hasDbXref>GRIN:26062</oboInOwl:hasDbXref>
@@ -50394,9 +51206,11 @@ Crossbreeding between African and Asian rice is difficult, but there exist some 
         <oboInOwl:hasExactSynonym>African rice</oboInOwl:hasExactSynonym>
         <oboInOwl:hasNarrowSynonym>Oryza glaberrima Steud.</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasNarrowSynonym>Oryza glaberrima Steudel</oboInOwl:hasNarrowSynonym>
-        <oboInOwl:hasSynonym xml:lang="en">oryza glaberrima</oboInOwl:hasSynonym>
-        <oboInOwl:hasSynonym xml:lang="en">red rice</oboInOwl:hasSynonym>
-        <oboInOwl:hasSynonym xml:lang="en">rice, red</oboInOwl:hasSynonym>
+        <oboInOwl:hasRelatedSynonym xml:lang="en">red rice</oboInOwl:hasRelatedSynonym>
+        <rdfs:comment xml:lang="en">It was first domesticated and grown in West Africa, and was brought to the Americas by enslaved West African rice farmers. It is now largely a subsistence crop, rarely sold in markets even in West Africa. While it has been partly replaced by higher-yielding Asian rice, and the number of varieties grown is declining, it persists, making up an estimated 20% of rice grown in West Africa.
+
+In comparison to Asian rice, it is hardy, pest-resistant, low-labour, suited to a variety of African conditions, filling, and has a distinct nutty flavour. 
+Crossbreeding between African and Asian rice is difficult, but there exist some crosses.</rdfs:comment>
         <rdfs:label>Oryza glaberrima</rdfs:label>
     </owl:Class>
     
@@ -50711,6 +51525,16 @@ Crossbreeding between African and Asian rice is difficult, but there exist some 
     
 
 
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_64040 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_64040">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_1463138"/>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/ncbitaxon.owl"/>
+        <rdfs:label>Actaea racemosa</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/NCBITaxon_65561 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_65561">
@@ -50959,13 +51783,13 @@ Crossbreeding between African and Asian rice is difficult, but there exist some 
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_8056"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym"/>
         <owl:annotatedTarget xml:lang="en">haddock</owl:annotatedTarget>
-        <obo:IAO_0000412 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FDA SFL Acceptable Market Name</obo:IAO_0000412>
+        <obo:IAO_0000412>FDA SFL Acceptable Market Name</obo:IAO_0000412>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_8056"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget xml:lang="en">haddock</owl:annotatedTarget>
-        <obo:IAO_0000412 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FDA SFL Common Name</obo:IAO_0000412>
+        <obo:IAO_0000412>FDA SFL Common Name</obo:IAO_0000412>
     </owl:Axiom>
     
 
@@ -51023,13 +51847,13 @@ Crossbreeding between African and Asian rice is difficult, but there exist some 
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_8235"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym"/>
         <owl:annotatedTarget xml:lang="en">tuna</owl:annotatedTarget>
-        <obo:IAO_0000412 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FDA SFL Acceptable Market Name</obo:IAO_0000412>
+        <obo:IAO_0000412>FDA SFL Acceptable Market Name</obo:IAO_0000412>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_8235"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget xml:lang="en">albacore</owl:annotatedTarget>
-        <obo:IAO_0000412 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FDA SFL Common Name</obo:IAO_0000412>
+        <obo:IAO_0000412>FDA SFL Common Name</obo:IAO_0000412>
     </owl:Axiom>
     
 
