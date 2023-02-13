@@ -144,4 +144,5 @@ $(TEMPLATESDIR)/%.owl: $(TEMPLATESDIR)/%.tsv $(SRC)
 templates: $(TEMPLATES)
 	
 $(COMPONENTSDIR)/obsoletes.owl:
-	$(ROBOT) merge -i $(TEMPLATESDIR)/obsolete.owl -o $@
+	$(ROBOT) merge -i $(TEMPLATESDIR)/obsolete.owl annotate --ontology-iri $(ONTBASE)/$@ -o $@
+
