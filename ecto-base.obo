@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: ecto/releases/2022-12-12/ecto-base.owl
+data-version: ecto/releases/2023-02-14/ecto-base.owl
 subsetdef: mrex "medically relevant exposure"
 ontology: ecto/ecto-base
 property_value: http://purl.org/dc/elements/1.1/description "ECTO describes exposures to experimental treatments of plants and model organisms (e.g. exposures to modification of diet, lighting levels, temperature); exposures of humans or any other organisms to stressors through a variety of routes, for purposes of public health, environmental monitoring etc, stimuli, natural and experimental, any kind of environmental condition or change in condition that can be experienced by an organism or population of organisms on earth. The scope is very general and can include for example plant treatment regimens, as well as human clinical exposures (although these may better be handled by a more specialized ontology)." xsd:string
@@ -7,7 +7,7 @@ property_value: http://purl.org/dc/elements/1.1/title "Environment Exposure Onto
 property_value: http://purl.org/dc/elements/1.1/type IAO:8000001
 property_value: http://purl.org/dc/terms/license https://creativecommons.org/publicdomain/zero/1.0/
 property_value: IAO:0000700 http://purl.obolibrary.org/obo/ExO_0000002 xsd:string
-property_value: owl:versionInfo "2022-12-12" xsd:string
+property_value: owl:versionInfo "2023-02-14" xsd:string
 
 [Term]
 id: ECTO:0000001
@@ -962,8 +962,8 @@ intersection_of: RO:0002309 FOODON:00003408
 [Term]
 id: ECTO:0070047
 name: exposure to cauliflower via ingestion
-def: "An exposure to cauliflower (whole) via ingestion." []
-synonym: "cauliflower (whole) exposure via ingestion" EXACT []
+def: "An exposure to cauliflower floret (whole) via ingestion." []
+synonym: "cauliflower floret (whole) exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:00003410
@@ -971,8 +971,8 @@ intersection_of: RO:0002309 FOODON:00003410
 [Term]
 id: ECTO:0070048
 name: exposure to corn via ingestion
-def: "An exposure to corn (whole) via ingestion." []
-synonym: "corn (whole) exposure via ingestion" EXACT []
+def: "An exposure to corn kernel (whole) via ingestion." []
+synonym: "corn kernel (whole) exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:03317387
@@ -1097,8 +1097,8 @@ intersection_of: RO:0002309 CHEBI:32111
 [Term]
 id: ECTO:0070062
 name: exposure to green bean via ingestion
-def: "An exposure to green bean pod via ingestion." []
-synonym: "green bean pod exposure via ingestion" EXACT []
+def: "An exposure to green bean pod (whole) via ingestion." []
+synonym: "green bean pod (whole) exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:03305806
@@ -1682,8 +1682,8 @@ intersection_of: RO:0002309 FOODON:03304262
 [Term]
 id: ECTO:0070127
 name: exposure to couscous via ingestion
-def: "An exposure to couscous via ingestion." []
-synonym: "couscous exposure via ingestion" EXACT []
+def: "An exposure to couscous (whole, dried) via ingestion." []
+synonym: "couscous (whole, dried) exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:03303207
@@ -1943,8 +1943,8 @@ intersection_of: RO:0002309 FOODON:03315233
 [Term]
 id: ECTO:0070156
 name: exposure to nuts via ingestion
-def: "An exposure to nut (whole or part) via ingestion." []
-synonym: "nut (whole or part) exposure via ingestion" EXACT []
+def: "An exposure to nut (whole or parts) via ingestion." []
+synonym: "nut (whole or parts) exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 FOODON:03306632
@@ -2001,7 +2001,7 @@ def: "An exposure to black cohosh supplement via ingestion." []
 synonym: "black cohosh supplement exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
-intersection_of: RO:0002309 FOODON:3500000
+intersection_of: RO:0002309 FOODON:03600000
 
 [Term]
 id: ECTO:0070163
@@ -2010,7 +2010,7 @@ def: "An exposure to coenzyme Q10 supplement via ingestion." []
 synonym: "coenzyme Q10 supplement exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
-intersection_of: RO:0002309 FOODON:3500001
+intersection_of: RO:0002309 FOODON:03600001
 
 [Term]
 id: ECTO:0070164
@@ -2019,7 +2019,7 @@ def: "An exposure to fish oil supplement via ingestion." []
 synonym: "fish oil supplement exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
-intersection_of: RO:0002309 FOODON:3500002
+intersection_of: RO:0002309 FOODON:03600002
 
 [Term]
 id: ECTO:0070165
@@ -2028,7 +2028,7 @@ def: "An exposure to flaxseed oil supplement via ingestion." []
 synonym: "flaxseed oil supplement exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
-intersection_of: RO:0002309 FOODON:3500003
+intersection_of: RO:0002309 FOODON:03600003
 
 [Term]
 id: ECTO:0070166
@@ -2037,7 +2037,7 @@ def: "An exposure to ginkgo biloba supplement via ingestion." []
 synonym: "ginkgo biloba supplement exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
-intersection_of: RO:0002309 FOODON:3500004
+intersection_of: RO:0002309 FOODON:03600004
 
 [Term]
 id: ECTO:0070167
@@ -2046,7 +2046,7 @@ def: "An exposure to ginseng supplement via ingestion." []
 synonym: "ginseng supplement exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
-intersection_of: RO:0002309 FOODON:3500005
+intersection_of: RO:0002309 FOODON:03600005
 
 [Term]
 id: ECTO:0070168
@@ -2055,7 +2055,7 @@ def: "An exposure to glucosamine supplement via ingestion." []
 synonym: "glucosamine supplement exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
-intersection_of: RO:0002309 FOODON:3500006
+intersection_of: RO:0002309 FOODON:03600006
 
 [Term]
 id: ECTO:0070169
@@ -2064,7 +2064,7 @@ def: "An exposure to melatonin supplement via ingestion." []
 synonym: "melatonin supplement exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
-intersection_of: RO:0002309 FOODON:3500007
+intersection_of: RO:0002309 FOODON:03600007
 
 [Term]
 id: ECTO:0070170
@@ -2073,7 +2073,7 @@ def: "An exposure to milk thistle supplement via ingestion." []
 synonym: "milk thistle supplement exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
-intersection_of: RO:0002309 FOODON:3500008
+intersection_of: RO:0002309 FOODON:03600008
 
 [Term]
 id: ECTO:0070171
@@ -2082,7 +2082,7 @@ def: "An exposure to omega-3- fatty acid supplement via ingestion." []
 synonym: "omega-3- fatty acid supplement exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
-intersection_of: RO:0002309 FOODON:3500009
+intersection_of: RO:0002309 FOODON:03600009
 
 [Term]
 id: ECTO:0070172
@@ -2091,7 +2091,7 @@ def: "An exposure to red yeast rice supplement via ingestion." []
 synonym: "red yeast rice supplement exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
-intersection_of: RO:0002309 FOODON:3500010
+intersection_of: RO:0002309 FOODON:03600010
 
 [Term]
 id: ECTO:0070173
@@ -2100,7 +2100,7 @@ def: "An exposure to resveratrol supplement via ingestion." []
 synonym: "resveratrol supplement exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
-intersection_of: RO:0002309 FOODON:3500011
+intersection_of: RO:0002309 FOODON:03600011
 
 [Term]
 id: ECTO:0070174
@@ -2109,7 +2109,7 @@ def: "An exposure to St. John's wort supplement via ingestion." []
 synonym: "St. John's wort supplement exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
-intersection_of: RO:0002309 FOODON:3500012
+intersection_of: RO:0002309 FOODON:03600012
 
 [Term]
 id: ECTO:0070175
@@ -2204,11 +2204,11 @@ intersection_of: RO:0002309 FOODON:00002143
 [Term]
 id: ECTO:0070185
 name: exposure to bacon (whole cut or parts) via ingestion
-def: "An exposure to http://purl.obolibrary.org/obo/FOODON_3317331 via ingestion." []
-synonym: "http://purl.obolibrary.org/obo/FOODON_3317331 exposure via ingestion" EXACT []
+def: "An exposure to bacon (whole cut or parts) via ingestion." []
+synonym: "bacon (whole cut or parts) exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
-intersection_of: RO:0002309 FOODON:3317331
+intersection_of: RO:0002309 FOODON:03317331
 
 [Term]
 id: ECTO:0070186
@@ -2442,8 +2442,8 @@ def: "An exposure to arsenic atom mixed in liquid water via ingestion." []
 synonym: "arsenic atom exposure in liquid water via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
-intersection_of: RO:0002243 ENVO:00002006
 intersection_of: RO:0002309 CHEBI:27563
+intersection_of: RO:0016004 ENVO:00002006
 
 [Term]
 id: ECTO:0080001
@@ -2452,8 +2452,8 @@ def: "An exposure to polycyclic hydrocarbon mixed in air via inhalation." []
 synonym: "polycyclic hydrocarbon exposure in air via inhalation" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000057
-intersection_of: RO:0002243 ENVO:00002005
 intersection_of: RO:0002309 CHEBI:33666
+intersection_of: RO:0016004 ENVO:00002005
 
 [Term]
 id: ECTO:0080002
@@ -2462,8 +2462,8 @@ def: "An exposure to chlorpyrifos mixed in apple (whole) via ingestion." []
 synonym: "chlorpyrifos exposure in apple (whole) via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
-intersection_of: RO:0002243 FOODON:00002473
 intersection_of: RO:0002309 CHEBI:34631
+intersection_of: RO:0016004 FOODON:00002473
 
 [Term]
 id: ECTO:0080003
@@ -2472,8 +2472,8 @@ def: "An exposure to lead molecular entity mixed in liquid water via ingestion."
 synonym: "lead molecular entity exposure in liquid water via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
-intersection_of: RO:0002243 ENVO:00002006
 intersection_of: RO:0002309 CHEBI:33585
+intersection_of: RO:0016004 ENVO:00002006
 
 [Term]
 id: ECTO:0080004
@@ -2482,8 +2482,8 @@ def: "An exposure to hydrogen chloride mixed in air via inhalation." []
 synonym: "hydrogen chloride exposure in air via inhalation" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000057
-intersection_of: RO:0002243 ENVO:00002005
 intersection_of: RO:0002309 CHEBI:17883
+intersection_of: RO:0016004 ENVO:00002005
 
 [Term]
 id: ECTO:0080005
@@ -2492,8 +2492,8 @@ def: "An exposure to radon molecular entity mixed in air via inhalation." []
 synonym: "radon molecular entity exposure in air via inhalation" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000057
-intersection_of: RO:0002243 ENVO:00002005
 intersection_of: RO:0002309 CHEBI:36911
+intersection_of: RO:0016004 ENVO:00002005
 
 [Term]
 id: ECTO:0080006
@@ -2502,8 +2502,8 @@ def: "An exposure to calcium molecular entity mixed in liquid water via ingestio
 synonym: "calcium molecular entity exposure in liquid water via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
-intersection_of: RO:0002243 ENVO:00002006
 intersection_of: RO:0002309 CHEBI:22985
+intersection_of: RO:0016004 ENVO:00002006
 
 [Term]
 id: ECTO:0080007
@@ -2512,8 +2512,8 @@ def: "An exposure to magnesium molecular entity mixed in liquid water via ingest
 synonym: "magnesium molecular entity exposure in liquid water via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
-intersection_of: RO:0002243 ENVO:00002006
 intersection_of: RO:0002309 CHEBI:25108
+intersection_of: RO:0016004 ENVO:00002006
 
 [Term]
 id: ECTO:0090001
@@ -2724,6 +2724,24 @@ id: ECTO:0100010
 name: exposure to tobacco pipe smoking
 def: "An exposure event involving nicotine pipe smoking behavior" []
 synonym: "nicotine pipe smoking behavior exposure" EXACT []
+
+[Term]
+id: ECTO:0100011
+name: exposure to tobacco chewing
+def: "An exposure event involving nicotine tobacco chewing behavior" []
+synonym: "nicotine tobacco chewing behavior exposure" EXACT []
+
+[Term]
+id: ECTO:0100012
+name: exposure to snuffing
+def: "An exposure event involving nicotine snuffing behavior" []
+synonym: "nicotine snuffing behavior exposure" EXACT []
+
+[Term]
+id: ECTO:0100013
+name: exposure to tobacco
+def: "An exposure event involving nicotine tobacco consumption" []
+synonym: "nicotine tobacco consumption exposure" EXACT []
 
 [Term]
 id: ECTO:0200001
@@ -3241,6 +3259,15 @@ intersection_of: RO:0002242 ExO:0000159
 intersection_of: RO:0002309 ENVO:02500037
 
 [Term]
+id: ECTO:0800003
+name: exposure to famine via maternal
+def: "A exposure event involving the interaction of an exposure receptor to famine happening in maternal of the receptor." []
+synonym: "famine exposure in maternal" EXACT []
+intersection_of: ExO:0000002
+intersection_of: RO:0002242 ExO:0000159
+intersection_of: RO:0002309 ENVO:03510003
+
+[Term]
 id: ECTO:0900001
 name: exposure to oral steroids
 def: "An exposure to steroid via ingestion." []
@@ -3608,6 +3635,33 @@ synonym: "chemical entity exposure via ingestion" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002242 ExO:0000056
 intersection_of: RO:0002309 CHEBI:24431
+
+[Term]
+id: ECTO:0900043
+name: exposure to drug via maternal
+def: "An exposure to drug via maternal." []
+synonym: "drug exposure via maternal" EXACT []
+intersection_of: ExO:0000002
+intersection_of: RO:0002242 ExO:0000159
+intersection_of: RO:0002309 CHEBI:23888
+
+[Term]
+id: ECTO:0900044
+name: exposure to serotonin uptake inhibitor via maternal
+def: "An exposure to serotonin uptake inhibitor via maternal." []
+synonym: "serotonin uptake inhibitor exposure via maternal" EXACT []
+intersection_of: ExO:0000002
+intersection_of: RO:0002242 ExO:0000159
+intersection_of: RO:0002309 CHEBI:50949
+
+[Term]
+id: ECTO:0900045
+name: exposure to lead via maternal
+def: "An exposure to lead atom via maternal." []
+synonym: "lead atom exposure via maternal" EXACT []
+intersection_of: ExO:0000002
+intersection_of: RO:0002242 ExO:0000159
+intersection_of: RO:0002309 CHEBI:25016
 
 [Term]
 id: ECTO:1000000
@@ -5532,8 +5586,8 @@ intersection_of: RO:0002309 ENVO:00002985
 [Term]
 id: ECTO:7000068
 name: exposure to particulate matter
-def: "A exposure event involving the interaction of an exposure receptor to particulate matter." []
-synonym: "particulate matter exposure" EXACT []
+def: "A exposure event involving the interaction of an exposure receptor to particulate environmental material." []
+synonym: "particulate environmental material exposure" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002309 ENVO:01000060
 
@@ -6091,7 +6145,7 @@ intersection_of: RO:0002309 ENVO:03510008
 
 [Term]
 id: ECTO:7000139
-name: exposure to gasolilne exhaust
+name: exposure to gasoline exhaust
 def: "A exposure event involving the interaction of an exposure receptor to gasoline exhaust." []
 synonym: "gasoline exhaust exposure" EXACT []
 intersection_of: ExO:0000002
@@ -6156,8 +6210,8 @@ intersection_of: RO:0002309 ENVO:03510038
 [Term]
 id: ECTO:7000147
 name: exposure to plastic production compound
-def: "A exposure event involving the interaction of an exposure receptor to plastic production compound." []
-synonym: "plastic production compound exposure" EXACT []
+def: "A exposure event involving the interaction of an exposure receptor to obsolete plastic production compound." []
+synonym: "obsolete plastic production compound exposure" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002309 ENVO:03510039
 
@@ -23026,4 +23080,76 @@ def: "An exposure to vitamin B complex." []
 synonym: "exposure to vitamin B complex" EXACT []
 intersection_of: ExO:0000002
 intersection_of: RO:0002309 CHEBI:75782
+
+[Term]
+id: ECTO:9002170
+name: exposure to phosmet
+def: "An exposure to phosmet." []
+synonym: "exposure to phosmet" EXACT []
+intersection_of: ExO:0000002
+intersection_of: RO:0002309 CHEBI:38786
+
+[Term]
+id: ECTO:9002171
+name: exposure to carbon black
+def: "An exposure to carbon black." []
+synonym: "exposure to carbon black" EXACT []
+intersection_of: ExO:0000002
+intersection_of: RO:0002309 CHEBI:82297
+
+[Term]
+id: ECTO:9002172
+name: exposure to 2-nitrofluorene
+def: "An exposure to 2-nitrofluorene." []
+synonym: "exposure to 2-nitrofluorene" EXACT []
+intersection_of: ExO:0000002
+intersection_of: RO:0002309 CHEBI:1224
+
+[Term]
+id: ECTO:9002173
+name: exposure to caesium atom
+def: "An exposure to caesium atom." []
+synonym: "exposure to caesium atom" EXACT []
+intersection_of: ExO:0000002
+intersection_of: RO:0002309 CHEBI:30514
+
+[Term]
+id: ECTO:9002174
+name: exposure to urea herbicide
+def: "An exposure to urea herbicide." []
+synonym: "exposure to urea herbicide" EXACT []
+intersection_of: ExO:0000002
+intersection_of: RO:0002309 CHEBI:188147
+
+[Term]
+id: ECTO:9002175
+name: exposure to organophosphorus herbicide
+def: "An exposure to organophosphorus herbicide." []
+synonym: "exposure to organophosphorus herbicide" EXACT []
+intersection_of: ExO:0000002
+intersection_of: RO:0002309 CHEBI:188148
+
+[Term]
+id: ECTO:9002176
+name: exposure to nitrile herbicide
+def: "An exposure to nitrile herbicide." []
+synonym: "exposure to nitrile herbicide" EXACT []
+intersection_of: ExO:0000002
+intersection_of: RO:0002309 CHEBI:188149
+
+[Term]
+id: ECTO:9002177
+name: exposure to anticoagulant rodenticide
+def: "An exposure to anticoagulant rodenticide." []
+synonym: "exposure to anticoagulant rodenticide" EXACT []
+intersection_of: ExO:0000002
+intersection_of: RO:0002309 CHEBI:188151
+
+[Term]
+id: ECTO:9002178
+name: exposure to butylparaben
+def: "An exposure to Butylparaben." []
+synonym: "exposure to Butylparaben" EXACT []
+intersection_of: ExO:0000002
+intersection_of: RO:0002309 CHEBI:88542
 

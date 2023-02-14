@@ -146,3 +146,8 @@ templates: $(TEMPLATES)
 $(COMPONENTSDIR)/obsoletes.owl:
 	$(ROBOT) merge -i $(TEMPLATESDIR)/obsolete.owl annotate --ontology-iri $(ONTBASE)/$@ -o $@
 
+tmp/mre_seed.txt:
+	
+
+mre: tmp/mre_seed.txt
+	$(ROBOT) filter -i $(SRC) -T tmp/mre_seed.txt -o $@
