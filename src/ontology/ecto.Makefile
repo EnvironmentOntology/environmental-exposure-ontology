@@ -146,8 +146,20 @@ templates: $(TEMPLATES)
 $(COMPONENTSDIR)/obsoletes.owl:
 	$(ROBOT) merge -i $(TEMPLATESDIR)/obsolete.owl annotate --ontology-iri $(ONTBASE)/$@ -o $@
 
-tmp/mre_seed.txt:
-	
+SUBSETS_TEMPLATE="https://docs.google.com/spreadsheets/d/e/2PACX-1vRf4X14SGELPGXqfTxW9z78hsPO0Ku6CqyPS2YdDZrrOXY9rMeP3epvEw46aDhYNar8qn2S1xhk0aDn/pub?gid=1724511447&single=true&output=tsv"
 
-mre: tmp/mre_seed.txt
-	$(ROBOT) filter -i $(SRC) -T tmp/mre_seed.txt -o $@
+$(TEMPLATESDIR)/subsets.tsv: 
+	wget $(SUBSETS_TEMPLATE) -O $@
+
+MRESEED=tmp/mre_seed.txt
+
+$(MRESEED): $(SRC)
+	$(ROBOT) reason -i $(SRC) query -f csv --use-graphs true --query ../sparql/mre_seed.sparql $@
+
+$(ONT)-mre.owl: $(ONT)-full.owl $(MRESEED)
+	$(ROBOT) extract --method subset --input $< --term-file $(MRESEED) \
+		query --update ../sparql/inject-subset-declaration.ru --update ../sparql/inject-synonymtype-declaration.ru \
+		$(SHARED_ROBOT_COMMANDS) annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) --output $@.tmp.owl && mv $@.tmp.owl $@
+
+mre:
+	make IMP=false PAT=false MIR=false COMP=false $(ONT)-mre.owl
