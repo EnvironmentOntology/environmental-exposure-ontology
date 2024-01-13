@@ -7,9 +7,9 @@ Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 
 
 Ontology(<http://purl.obolibrary.org/obo/ecto/imports/maxo_import.owl>
-<http://purl.obolibrary.org/obo/ecto/releases/2023-02-14/imports/maxo_import.owl>
-Annotation(<http://purl.org/dc/elements/1.1/source> <http://purl.obolibrary.org/obo/maxo/releases/2022-12-19/maxo.owl>)
-Annotation(owl:versionInfo "2023-02-14")
+<http://purl.obolibrary.org/obo/ecto/releases/2024-01-13/imports/maxo_import.owl>
+Annotation(<http://purl.org/dc/elements/1.1/source> <http://purl.obolibrary.org/obo/maxo/releases/2023-12-01/maxo.owl>)
+Annotation(owl:versionInfo "2024-01-13")
 
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0000001>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0000002>))
@@ -56,6 +56,7 @@ Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0001023>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0010043>))
 Declaration(Class(<http://purl.obolibrary.org/obo/MAXO_0010355>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000115>))
+Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000700>))
 Declaration(AnnotationProperty(<http://purl.org/dc/elements/1.1/creator>))
 Declaration(AnnotationProperty(<http://purl.org/dc/elements/1.1/description>))
 Declaration(AnnotationProperty(<http://purl.org/dc/elements/1.1/source>))
@@ -77,16 +78,18 @@ AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000001> "me
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0000002> (therapeutic procedure)
 
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "ISBN-10:0124105165") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000002> "All manners of treatment, be they pharmaceuticals, invasive procedures, etc. to relieve illness and injury in attempts to bring the body back to its normal state.")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/MAXO_0000002> "NCIT:C25218")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/MAXO_0000002> "NCIT:C49236")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/MAXO_0000002> "OAE:0000094")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/MAXO_0000002> "OGMS:0000112")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/MAXO_0000002> "SIO:001024")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "NCIT:C49236") rdfs:comment <http://purl.obolibrary.org/obo/MAXO_0000002> "An action or administration of therapeutic agents to produce an effect that is intended to alter or stop a pathologic process.")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000002> "therapeutic procedure"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000002> <http://purl.obolibrary.org/obo/MAXO_0000001>)
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0000004> (surgical procedure)
 
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "NCIT:C15329") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000004> "A diagnostic or treatment procedure performed by manual and/or instrumental means, often involving an incision and the removal or replacement of a diseased organ or tissue; of or relating to or involving or used in surgery or requiring or amenable to treatment by surgery.")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/MAXO_0000004> "ERO:0000378")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/MAXO_0000004> "NCIT:C15329")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/MAXO_0000004> "NCIT:C17173")
@@ -109,11 +112,13 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynony
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000058> "pharmaceutical drug")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000058> "pharmaceutical treatment")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000058> "pharmacological treatment")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <https://orcid.org/0000-0001-7941-2961>) rdfs:comment <http://purl.obolibrary.org/obo/MAXO_0000058> "Medical treatment by means of drugs.")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000058> "pharmacotherapy")
 SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000058> <http://purl.obolibrary.org/obo/MAXO_0000002>)
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0000068> (transplantation procedure)
 
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "NCIT:C15342") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000068> "Transference of a tissue or organ within an individual, between individuals of the same species, or between individuals of different species.")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/MAXO_0000068> "NCIT:C15342")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/MAXO_0000068> "NCIT:C15431")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/MAXO_0000068> "OBI:0000105")
@@ -131,7 +136,6 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <ht
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/MAXO_0000157> "NCIT:C38149")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000157> "anti-Parkinson agent therapy")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000157> "antiparkinson agent treatment")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000157> "antiparkinson drug therapy")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000157> "antiparkinson drug treatment")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000157> "antiparkinsonian agent therapy")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000157> "antiparkisonian agent treatment")
@@ -146,7 +150,6 @@ SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000157> <http://purl.obolibrary
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000160> "Treatment with a mood-stimulating drug used primarily in the treatment of affective disorders and related conditions.")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/MAXO_0000160> "CHEBI:35469")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000160> "antidepressant drug therapy")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000160> "antidepressant therapy")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000160> "antidepressants treatment")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000160> "thymoanaleptics treatment")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000160> "thymoleptic agent therapy")
@@ -158,6 +161,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000160> <http://purl.obolibrary
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0000164> (uricosuric agent therapy)
 
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "NCIT:C29733") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000164> "Pharmaceutical Anti-gout Preparations such as colchicine, allopurinol, probenecid, and sulfinpyrazone contain natural or synthetic agents against gout, a condition characterized by increased uric acid accumulation. Anti-gout agents may reduce inflammation, stimulate elimination of uric acid, or increase production of uric acid. (NCI04)")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/MAXO_0000164> "CHEBI:35841")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/MAXO_0000164> "CHEBI:35845")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/MAXO_0000164> "NCIT:C29733")
@@ -181,7 +185,6 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynony
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000164> "treatment with gout suppressant drug")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000164> "treatment with gout suppressant medication")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000164> "treatment with uricosuric drug")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000164> "uricosuric drug therapy")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000164> "uricosuric agent therapy")
 SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000164> <http://purl.obolibrary.org/obo/MAXO_0000058>)
 
@@ -192,7 +195,6 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <ht
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/MAXO_0000165> "NCIT:C448")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000165> "diuretic agent drug treatment therapy")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000165> "diuretic drug therapy")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000165> "diuretic therapy")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000165> "treatment with diuretic")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000165> "treatment with diuretic agent")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000165> "treatment with diuretic drug")
@@ -204,7 +206,6 @@ SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000165> <http://purl.obolibrary
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000166> "Treatment with an agent that control agitated psychotic behavior, alleviate acute psychotic states, reduce psychotic symptoms, and exert a quieting effect.")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/MAXO_0000166> "CHEBI:35476")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000166> "antipsychotic agent therapy")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000166> "antipsychotic drug treatment")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000166> "antipsychotic therapy")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000166> "major tranquilizer drug treatment")
@@ -214,7 +215,7 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynony
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000166> "treatment with antipsychotic drug")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000166> "treatment with antipsychotic medication")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000166> "antipsychotic agent therapy")
-SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000166> <http://purl.obolibrary.org/obo/MAXO_0001023>)
+SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000166> <http://purl.obolibrary.org/obo/MAXO_0000058>)
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0000170> (anesthetic agent therapy)
 
@@ -223,7 +224,6 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <ht
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/MAXO_0000170> "NCIT:C245")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000170> "anaesthesia therapy")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000170> "anaesthetic medication therapy")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000170> "anaesthetic therapy")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000170> "anesthesia therapy")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000170> "anesthetic drug therapy")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000170> "anesthetic medication therapy")
@@ -244,7 +244,6 @@ AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.ob
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/MAXO_0000178> "CHEBI:50249")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000178> "anticoagulant agent treatment")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000178> "anticoagulant drug treatment")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000178> "anticoagulant therapy")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000178> "treatment with anticoagulant")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000178> "anticoagulant agent therapy")
 SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000178> <http://purl.obolibrary.org/obo/MAXO_0000058>)
@@ -254,7 +253,6 @@ SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000178> <http://purl.obolibrary
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000180> "Use of a drug which antagonizes or impairs any mechanism leading to blood platelet aggregation, whether during the phases of activation and shape change or following the dense-granule release reaction and stimulation of the prostaglandin-thromboxane system.")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/MAXO_0000180> "CHEBI:50427")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000180> "platelet aggregation inhibitor agent treatment")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000180> "platelet aggregation inhibitor therapy")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000180> "treatment with platelet aggregation antagonist")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000180> "treatment with platelet aggregation blocker")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000180> "treatment with platelet aggregation inhibitor")
@@ -274,7 +272,6 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynony
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000184> "alpha-adrenergic antagonist drug therapy")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000184> "alpha-adrenergic antagonist drug treatment")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000184> "alpha-adrenergic antagonist medication therapy")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000184> "alpha-adrenergic antagonist therapy")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000184> "alpha-adrenergic blockader therapy")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000184> "alpha-adrenergic blocker therapy")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000184> "alpha-adrenergic blocking agent therapy")
@@ -295,7 +292,6 @@ AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.ob
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/MAXO_0000185> "CHEBI:38070")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/MAXO_0000185> "NCIT:C47793")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000185> "anti-arrhythmia agent therapy")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000185> "anti-arrhythmia drug therapy")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000185> "anti-arrhythmic agent therapy")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000185> "anti-arrhythmic drug treatment therapy")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000185> "anti-arrythmic agent therapy")
@@ -317,17 +313,14 @@ SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000185> <http://purl.obolibrary
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0000187> (beta-adrenergic antagonist therapy)
 
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000187> "Treatment with an agent that binds to but does not activate beta-adrenergic receptors thereby blocking the actions of endogenous or exogenous beta-adrenergic agonists.")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/MAXO_0000187> "CHEBI:35530")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000187> "Beta blocker therapy")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000187> "Beta-adrenergic blocking agent therapy")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000187> "b-adrenergic antagonist therapy")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000187> "b-adrenergic receptor antagonist therapy")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000187> "beta adrenergic antagonist agent treatment")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000187> "beta adrenergic antagonist drug treatment")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000187> "beta adrenergic receptor antagonist therapy")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000187> "beta-adrenergic antagonist agent treatment")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000187> "beta-adrenergic antagonist therapy")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000187> "beta-adrenergic receptor antagonist agents")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000187> "beta-adrenergic receptor antagonist drug treatment")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000187> "beta-adrenergic receptor antagonist therapy")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000187> "beta-adrenergic receptor blockader therapy")
@@ -352,7 +345,6 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynony
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000189> "antihyperlipidaemic agent therapy")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000189> "antihyperlipidemic agent therapy")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000189> "antihyperlipidemic drug therapy")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000189> "antilipemic drug therapy")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000189> "antilipemic therapy")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000189> "antilipidemic agent therapy")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000189> "antilipidemic drug treatment therapy")
@@ -386,6 +378,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000190> <http://purl.obolibrary
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0000191> (vasodilator agent therapy)
 
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "CHEBI:35620") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000191> "A therapy using a drug to cause dilation of the blood vessels.")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/MAXO_0000191> "CHEBI:35620")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/MAXO_0000191> "NCIT:C29707")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000191> "vasodilating agent therapy")
@@ -400,11 +393,12 @@ SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000191> <http://purl.obolibrary
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0000210> (cholinesteriase inhibitor therapy)
 
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PMID:31335056") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000210> "They are a group of drugs that block the normal breakdown of acetylcholine (ACh) into acetate and choline and thereby increase both the levels and duration of actions of acetylcholine found in the central and peripheral nervous system.")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/MAXO_0000210> "CHEBI:37733")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000210> "EC 3.1.1.8 (cholinesterase) inhibitor therapy")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000210> "cholinesterase inhibitor drug treatment")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000210> "cholinesterase inhibitor medication therapy")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000210> "treatment with EC 3.1.1.8 (cholinesterase) inhibitor")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PMID:31335056") rdfs:comment <http://purl.obolibrary.org/obo/MAXO_0000210> "Neurogenerative diseases such as Alzheimer disease, Parkinson disease, and Lewy body dementia are indications for cholinesterase inhibitor therapy.")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000210> "cholinesteriase inhibitor therapy")
 SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000210> <http://purl.obolibrary.org/obo/MAXO_0000058>)
 
@@ -413,12 +407,12 @@ SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000210> <http://purl.obolibrary
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000213> "A drug that acts as an inhibitor that interferes with the action of monoamine oxidase (EC 1.4.3.4).")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/MAXO_0000213> "CHEBI:38623")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/MAXO_0000213> "NCIT:C667")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000213> "EC 1.4.3.4 (monoamine oxidase) inhibitor therapy")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000213> "MAO drug therapy")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000213> "MAO drug treatment")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000213> "inhibitors of MAO therapy")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000213> "inhibitors of monoamine oxidase therapy")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000213> "treatment with EC 1.4.3.4 (monoamine oxidase) inhibitor")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "NCIT:C667") rdfs:comment <http://purl.obolibrary.org/obo/MAXO_0000213> "Any substance that inhibits monoamine oxidase (MAO), an enzyme that catalyzes the oxidative deamination of monoamines and plays a role in the inactivation of neurotransmitters.")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000213> "monoamine oxidase inhibitor therapy")
 SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000213> <http://purl.obolibrary.org/obo/MAXO_0000058>)
 SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000213> <http://purl.obolibrary.org/obo/MAXO_0000160>)
@@ -436,14 +430,12 @@ SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000215> <http://purl.obolibrary
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000221> "Treatment with an anti-inflammatory drug that is not a steroid. In addition to anti-inflammatory actions, non-steroidal anti-inflammatory drugs have analgesic, antipyretic, and platelet-inhibitory actions. They act by blocking the synthesis of prostaglandins by inhibiting cyclooxygenase, which converts arachidonic acid to cyclic endoperoxides, precursors of prostaglandins.")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/MAXO_0000221> "CHEBI:35475")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000221> "non-steroidal anti-inflammatory drug therapy")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000221> "non-steroidal anti-inflammatory medication treatment")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000221> "treatment with NSAID drug")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000221> "treatment with NSAID medication")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000221> "treatment with NSAID therapy")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000221> "treatment with non-steroidal anti-inflammatory drug")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000221> "treatment with non-steroidal anti-inflammatory medication")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000221> "nonsteroidal anti-inflammatory agent therapy"@en)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000221> "NSAID therapy")
 SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000221> <http://purl.obolibrary.org/obo/MAXO_0000058>)
 
@@ -457,18 +449,21 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynony
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000258> "glycemic agent therapy"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000258> <http://purl.obolibrary.org/obo/MAXO_0000175>)
 
-# Class: <http://purl.obolibrary.org/obo/MAXO_0000259> (therapeutic insulin treatment)
+# Class: <http://purl.obolibrary.org/obo/MAXO_0000259> (insulin treatment)
 
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "NCIT:C581") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000259> "A synthetic or animal-derived form of insulin used in the treatment of diabetes mellitus. Therapeutic insulin is formulated to be short-, intermediate- and long-acting in order to individualize an insulin regimen according to individual differences in glucose and insulin metabolism. Therapeutic insulin may be derived from porcine, bovine or recombinant sources. Endogenous human insulin, a pancreatic hormone composed of two polypeptide chains, is important for the normal metabolism of carbohydrates, proteins and fats and has anabolic effects on many types of tissues.")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/MAXO_0000259> "NCIT:C581")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000259> "insulin drug treatment")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000259> "insulin therapy")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000259> "therapeutic insulin preparations treatment")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000259> "therapeutic insulin treatment"@en)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000259> "therapeutic insulin therapy")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000259> "insulin treatment")
 SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000259> <http://purl.obolibrary.org/obo/MAXO_0000058>)
 SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000259> <http://purl.obolibrary.org/obo/MAXO_0000258>)
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0000269> (H2-receptor antagonist agent therapy)
 
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "CHEBI:37961") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000269> "H2-receptor antagonists are the drugs that selectively bind to but do not activate histamine H2 receptors, thereby blocking the actions of endogenous histamine.")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/MAXO_0000269> "CHEBI:37961")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000269> "H2 blocker treatment therapy")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000269> "H2 blocking agent treatment therapy")
@@ -484,6 +479,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000269> <http://purl.obolibrary
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0000272> (proton pump inhibitor agent therapy)
 
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "NCIT:C29723") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000272> "Any one of the substituted benzimidazole compounds with anti-ulcer activity. A proton pump inhibitor is orally administered in the neutrally charged, inactive form and, upon entering the acidic environment of the parietal cell, gets protonated and converted into its active form. The active form will covalently and irreversibly bind to the proton pump, the H+/K+-ATPase, located on the surface of parietal cells. This leads to an inhibition of the transport of hydrogen ions, in exchange for potassium ions, into the gastric lumen and results in an inhibition of gastric acid secretion.")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/MAXO_0000272> "NCIT:C29723")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000272> "proton pump inhibitor drug treatment")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000272> "proton pump inhibitor treatment therapy")
@@ -513,7 +509,6 @@ AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.ob
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/MAXO_0000287> "CHEBI:50739")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000287> "estrogen modifying drug therapy")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000287> "estrogen modifying medication therapy")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000287> "estrogen receptor modulator therapy")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000287> "oestrogen modifying agent therapy")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000287> "oestrogen modifying drug therapy")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000287> "treatment with estrogen receptor modulator")
@@ -545,7 +540,6 @@ SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000314> <http://purl.obolibrary
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000315> "Use of a drug designed to prevent leukotriene synthesis or activity by blocking binding at the receptor level.")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/MAXO_0000315> "CHEBI:49159")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000315> "antileukotriene drug treatment")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000315> "leukotriene antagonist therapy")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000315> "treatment with antileukotriene agent")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000315> "treatment with antileukotriene medication")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000315> "treatment with leukotriene antagonist")
@@ -593,12 +587,12 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <ht
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000434> "calcium channel antagonist drug therapy")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000434> "calcium channel antagonist therapy")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000434> "calcium channel blocker drug therapy")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000434> "calcium channel blocker therapy")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000434> "treatment with calcium channel blocker")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000434> "treatment with calcium channel blocker drug")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000434> "treatment with calcium channel blocker medication")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000434> "treatment with calcium channel blocking drug")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000434> "treatment with calcium channel blocking medication")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "CHEBI:38215") rdfs:comment <http://purl.obolibrary.org/obo/MAXO_0000434> "One of a class of drugs that acts by selective inhibition of calcium influx through cell membranes or on the release and binding of calcium in intracellular pools.")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000434> "calcium channel blocking agent therapy")
 SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000434> <http://purl.obolibrary.org/obo/MAXO_0000058>)
 
@@ -616,6 +610,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000640> <http://purl.obolibrary
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0000756> (blood transfusion)
 
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "NCIT:C15192") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0000756> "The injection of whole blood or a blood component directly into the bloodstream.")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/MAXO_0000756> "NCIT:C15192")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/MAXO_0000756> "OGMS:0000145")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0000756> "transfusion of blood products")
@@ -623,23 +618,18 @@ AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0000756> "bl
 SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000756> <http://purl.obolibrary.org/obo/MAXO_0000002>)
 SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0000756> <http://purl.obolibrary.org/obo/MAXO_0000068>)
 
-# Class: <http://purl.obolibrary.org/obo/MAXO_0001023> (tranquilizing agent therapy)
+# Class: <http://purl.obolibrary.org/obo/MAXO_0001023> (obsolete tranquilizing agent therapy)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0001023> "Treatment with a traditional grouping of drugs said to have a soothing or calming effect on mood, thought or behavior.")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/MAXO_0001023> "CHEBI:35473")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0001023> "tranquilizing drug therapy")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0001023> "treatment with tranquilizing drug")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0001023> "tranquilizing agent therapy")
-SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0001023> <http://purl.obolibrary.org/obo/MAXO_0000058>)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0001023> "obsolete tranquilizing agent therapy")
 
-# Class: <http://purl.obolibrary.org/obo/MAXO_0010043> (kidney transplantation)
+# Class: <http://purl.obolibrary.org/obo/MAXO_0010043> (whole kidney transplantation)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0010043> "The surgical transfer of a(n) kidney from a donor to a patient.")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/MAXO_0010043> "The surgical transfer of a whole kidney from a donor to a patient.")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/MAXO_0010043> "NCIT:C15265")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0010043> "kidney grafting")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0010043> "renal transplantation")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0010043> "transplantation of kidney")
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0010043> "kidney transplantation")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0010043> "transplantation of whole kidney")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0010043> "whole kidney transplantation")
+SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0010043> <http://purl.obolibrary.org/obo/MAXO_0000002>)
+SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0010043> <http://purl.obolibrary.org/obo/MAXO_0000004>)
 SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0010043> <http://purl.obolibrary.org/obo/MAXO_0000068>)
 
 # Class: <http://purl.obolibrary.org/obo/MAXO_0010355> (neck radiograph procedure)
@@ -651,7 +641,6 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynony
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/MAXO_0010355> "radiography of neck")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/MAXO_0010355> "neck radiograph procedure")
 SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0010355> <http://purl.obolibrary.org/obo/MAXO_0000001>)
-SubClassOf(<http://purl.obolibrary.org/obo/MAXO_0010355> <http://purl.obolibrary.org/obo/MAXO_0000002>)
 
 
 )
