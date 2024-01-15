@@ -7,6 +7,11 @@ export_formats:
   - owl
   - obo
   - json
+release_artefacts:
+  - base
+  - full
+  - simple
+  - custom-ecto-mre
 import_group:
   products:
     - id: chebi
@@ -36,6 +41,8 @@ components:
     - filename: ecto-xrefs.owl
     - filename: bridge.owl
     - filename: obsoletes.owl
+    - filename: subsets.owl
+      use_template: TRUE
 allow_equivalents: asserted-only
 robot_report:
   fail_on : ERROR

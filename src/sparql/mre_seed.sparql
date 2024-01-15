@@ -1,0 +1,11 @@
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT DISTINCT ?term
+WHERE {
+  { ?term <http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/ecto#mre> . }
+  UNION { 
+    ?x <http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/ecto#mre> . 
+    ?x rdfs:subClassOf* ?term .
+    }
+  FILTER(isIRI(?term) && ((STRSTARTS(str(?term), "http://purl.obolibrary.org/obo/ECTO_")) || (STRSTARTS(str(?term), "http://purl.obolibrary.org/obo/ExO_"))))
+}
