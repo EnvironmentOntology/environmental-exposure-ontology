@@ -8,7 +8,9 @@
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:doap="http://usefulinc.com/ns/doap#"
      xmlns:envo="http://purl.obolibrary.org/obo/envo#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:swrl="http://www.w3.org/2003/11/swrl#"
@@ -20,9 +22,9 @@
      xmlns:taxslim="http://purl.obolibrary.org/obo/ncbitaxon/subsets/taxslim#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/ecto/imports/envo_import.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/ecto/releases/2023-02-13/imports/envo_import.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/ecto/releases/2024-01-15/imports/envo_import.owl"/>
         <dc:source rdf:resource="http://purl.obolibrary.org/obo/envo/releases/2023-02-13/envo.owl"/>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2023-02-13</owl:versionInfo>
+        <owl:versionInfo>2024-01-15</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -394,6 +396,18 @@
     
 
 
+    <!-- http://usefulinc.com/ns/doap#GitRepository -->
+
+    <owl:AnnotationProperty rdf:about="http://usefulinc.com/ns/doap#GitRepository"/>
+    
+
+
+    <!-- http://usefulinc.com/ns/doap#bug-database -->
+
+    <owl:AnnotationProperty rdf:about="http://usefulinc.com/ns/doap#bug-database"/>
+    
+
+
     <!-- http://www.geneontology.org/formats/oboInOwl#SubsetProperty -->
 
     <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#SubsetProperty">
@@ -423,6 +437,12 @@
     <!-- http://www.geneontology.org/formats/oboInOwl#creation_date -->
 
     <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#creation_date"/>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#default-namespace -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#default-namespace"/>
     
 
 
@@ -520,6 +540,12 @@
     
 
 
+    <!-- http://xmlns.com/foaf/0.1/homepage -->
+
+    <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/homepage"/>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -527,14 +553,6 @@
     //
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
-
-    
-
-
-    <!-- http://www.w3.org/2000/01/rdf-schema#anyURI -->
-
-    <rdfs:Datatype rdf:about="http://www.w3.org/2000/01/rdf-schema#anyURI"/>
-    
 
 
     <!-- 
@@ -977,12 +995,12 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000050"/>
         </owl:propertyChainAxiom>
         <obo:IAO_0000111 xml:lang="en">contained in</obo:IAO_0000111>
-        <obo:IAO_0000116>Containment is location not involving parthood, and arises only where some immaterial continuant is involved.</obo:IAO_0000116>
         <obo:IAO_0000116 xml:lang="en">Containment obtains in each case between material and immaterial continuants, for instance: lung contained_in thoracic cavity; bladder contained_in pelvic cavity. Hence containment is not a transitive relation.    If c part_of c1 at t then we have also, by our definition and by the axioms of mereology applied to spatial regions, c located_in c1 at t. Thus, many examples of instance-level location relations for continuants are in fact cases of instance-level parthood. For material continuants location and parthood coincide. Containment is location not involving parthood, and arises only where some immaterial continuant is involved. To understand this relation, we first define overlap for continuants as follows:    c1 overlap c2 at t =def for some c, c part_of c1 at t and c part_of c2 at t. The containment relation on the instance level can then be defined (see definition):</obo:IAO_0000116>
         <obo:IAO_0000116 xml:lang="en">Intended meaning:
 domain: material entity
 range: spatial region or site (immaterial continuant)
         </obo:IAO_0000116>
+        <obo:IAO_0000116>Containment is location not involving parthood, and arises only where some immaterial continuant is involved.</obo:IAO_0000116>
         <obo:IAO_0000118 xml:lang="en">contained_in</obo:IAO_0000118>
         <obo:RO_0001900 rdf:resource="http://purl.obolibrary.org/obo/RO_0001901"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/ro/subsets#ro-eco"/>
@@ -1469,8 +1487,8 @@ boundary_of: http://purl.obolibrary.org/obo/RO_0002000</obo:IAO_0000115>
         <obo:IAO_0000112>a &apos;toe distal phalanx bone&apos; that is connected to a &apos;toe medial phalanx bone&apos; (an interphalangeal joint *connects* these two bones).</obo:IAO_0000112>
         <obo:IAO_0000115>c connects a if and only if there exist some b such that a and b are similar parts of the same system, and c connects b, specifically, c connects a with b. When one structure connects two others it unites some aspect of the function or role they play within the system.</obo:IAO_0000115>
         <obo:IAO_0000119 rdf:resource="http://www.ncbi.nlm.nih.gov/pubmed/22293552"/>
-        <rdfs:label>connects</rdfs:label>
         <rdfs:label xml:lang="en">connects</rdfs:label>
+        <rdfs:label>connects</rdfs:label>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/obophenotype/uberon/wiki/Connectivity-Design-Pattern</rdfs:seeAlso>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/obophenotype/uberon/wiki/Modeling-articulations-Design-Pattern</rdfs:seeAlso>
     </owl:ObjectProperty>
@@ -1505,8 +1523,8 @@ boundary_of: http://purl.obolibrary.org/obo/RO_0002000</obo:IAO_0000115>
         <obo:IAO_0000115>x develops from y if and only if either (a) x directly develops from y or (b) there exists some z such that x directly develops from z and z develops from y</obo:IAO_0000115>
         <obo:IAO_0000117 xml:lang="en">Chris Mungall</obo:IAO_0000117>
         <obo:IAO_0000117 xml:lang="en">David Osumi-Sutherland</obo:IAO_0000117>
-        <obo:IAO_0000117>Melissa Haendel</obo:IAO_0000117>
         <obo:IAO_0000117 xml:lang="en">Terry Meehan</obo:IAO_0000117>
+        <obo:IAO_0000117>Melissa Haendel</obo:IAO_0000117>
         <rdfs:comment>This is the transitive form of the develops from relation</rdfs:comment>
         <rdfs:label xml:lang="en">develops from</rdfs:label>
     </owl:ObjectProperty>
@@ -1723,8 +1741,8 @@ boundary_of: http://purl.obolibrary.org/obo/RO_0002000</obo:IAO_0000115>
         <obo:IAO_0000115>x surrounded_by y if and only if (1) x is adjacent to y and for every region r that is adjacent to x, r overlaps y (2) the shared boundary between x and y occupies the majority of the outermost boundary of x</obo:IAO_0000115>
         <obo:IAO_0000117>Chris Mungall</obo:IAO_0000117>
         <obo:RO_0001900 rdf:resource="http://purl.obolibrary.org/obo/RO_0001901"/>
-        <rdfs:label>surrounded by</rdfs:label>
         <rdfs:label xml:lang="en">surrounded by</rdfs:label>
+        <rdfs:label>surrounded by</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -2055,8 +2073,8 @@ boundary_of: http://purl.obolibrary.org/obo/RO_0002000</obo:IAO_0000115>
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002234"/>
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002295"/>
         <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002354"/>
-        <obo:IAO_0000112>an annotation of gene X to anatomical structure formation with results_in_formation_of UBERON:0000007 (pituitary gland) means that at the beginning of the process a pituitary gland does not exist and at the end of the process a pituitary gland exists.</obo:IAO_0000112>
         <obo:IAO_0000112 xml:lang="en">every &quot;endocardial cushion formation&quot; (GO:0003272) results_in_formation_of some &quot;endocardial cushion&quot; (UBERON:0002062)</obo:IAO_0000112>
+        <obo:IAO_0000112>an annotation of gene X to anatomical structure formation with results_in_formation_of UBERON:0000007 (pituitary gland) means that at the beginning of the process a pituitary gland does not exist and at the end of the process a pituitary gland exists.</obo:IAO_0000112>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000125"/>
         <obo:IAO_0000117>Chris Mungall</obo:IAO_0000117>
         <obo:IAO_0000119>GOC:mtg_berkeley_2013</obo:IAO_0000119>
@@ -2083,8 +2101,8 @@ where
         <obo:IAO_0000118>adapted for living in</obo:IAO_0000118>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/ro/subsets#ro-eco"/>
         <rdfs:comment>A population of xs will possess adaptations (either evolved naturally or via artifical selection) which permit it to exist and grow in y.</rdfs:comment>
-        <rdfs:label>has habitat</rdfs:label>
         <rdfs:label xml:lang="en">has habitat</rdfs:label>
+        <rdfs:label>has habitat</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -3858,8 +3876,8 @@ For example, A and B may be gene products and binding of B by A positively regul
             </owl:Restriction>
         </owl:disjointWith>
         <obo:IAO_0000115 xml:lang="en">An independent continuant that is spatially extended whose identity is independent of that of other entities and can be maintained through time.</obo:IAO_0000115>
-        <rdfs:label>material entity</rdfs:label>
         <rdfs:label xml:lang="en">material entity</rdfs:label>
+        <rdfs:label>material entity</rdfs:label>
     </owl:Class>
     
 
@@ -9681,7 +9699,7 @@ For example, A and B may be gene products and binding of B by A positively regul
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000002"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>An anthropogenic geographic feature is a geographic feature resulting from the influence of human beings on nature.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ORCID:0000-0002-4366-3088</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ORCID:0000-0002-4366-3088</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -9706,7 +9724,7 @@ For example, A and B may be gene products and binding of B by A positively regul
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000003"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym"/>
         <owl:annotatedTarget>tailing</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADL:FTT</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ADL:FTT</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -9729,7 +9747,7 @@ For example, A and B may be gene products and binding of B by A positively regul
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000010"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A construction which enables the movement of humans, their animals or their vehicles.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MA:ma</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>MA:ma</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -9755,25 +9773,25 @@ For example, A and B may be gene products and binding of B by A positively regul
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000011"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>An enclosure for displaying selected plant or animal life.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Geonames:feature</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Geonames:feature</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000011"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>PARK</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>USGS:SDTS</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000011"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>cropland</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>USGS:SDTS</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000011"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>park</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADL:FTT</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ADL:FTT</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -9821,13 +9839,13 @@ For example, A and B may be gene products and binding of B by A positively regul
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000012"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A geographical feature associated with water.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MA:ma</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>MA:ma</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000012"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>fluvial feature</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADL:FTT</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ADL:FTT</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -9867,7 +9885,7 @@ For example, A and B may be gene products and binding of B by A positively regul
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000015"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>ocean region</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADL:FTT</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ADL:FTT</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -9910,31 +9928,31 @@ For example, A and B may be gene products and binding of B by A positively regul
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000016"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
         <owl:annotatedTarget>closed sea</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>USGS:SDTS</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000016"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
         <owl:annotatedTarget>marginal sea</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>USGS:SDTS</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000016"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
         <owl:annotatedTarget>open sea</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>USGS:SDTS</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000016"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
         <owl:annotatedTarget>open sound</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>USGS:SDTS</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000016"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
         <owl:annotatedTarget>open water</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>USGS:SDTS</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -10018,19 +10036,19 @@ For example, A and B may be gene products and binding of B by A positively regul
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000019"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A lake whose water contains a considerable concentration of dissolved salts.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MA:ma</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>MA:ma</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000019"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>salt lake</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>USGS:SDTS</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000019"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>salina</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>USGS:SDTS</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -10128,37 +10146,37 @@ For example, A and B may be gene products and binding of B by A positively regul
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000020"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
         <owl:annotatedTarget>catch basin</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>USGS:SDTS</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000020"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
         <owl:annotatedTarget>open water</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>USGS:SDTS</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000020"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
         <owl:annotatedTarget>tarn</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADL:FTT</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ADL:FTT</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000020"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>lochan</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADL:FTT</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ADL:FTT</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000020"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>mortlake</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>USGS:SDTS</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000020"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>pasteuer lake</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>USGS:SDTS</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -10197,7 +10215,7 @@ For example, A and B may be gene products and binding of B by A positively regul
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A stream which, through permanent or seasonal flow processes, moves from elevated land towards lower elevations through a definite channel and empties either into a sea, lake, or another river or ends on land as bed seepage and evapotranspiration exceed water supply.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0002-4366-3088"/>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADL:FTT</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ADL:FTT</oboInOwl:hasDbXref>
         <rdfs:comment>https://en.wikipedia.org/wiki/River</rdfs:comment>
     </owl:Axiom>
     <owl:Axiom>
@@ -10210,19 +10228,19 @@ For example, A and B may be gene products and binding of B by A positively regul
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000022"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>rio</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADL:FTT</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ADL:FTT</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000022"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>rio</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>USGS:SDTS</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000022"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
         <owl:annotatedTarget>braided river</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>USGS:SDTS</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000022"/>
@@ -10271,12 +10289,12 @@ For example, A and B may be gene products and binding of B by A positively regul
         <oboInOwl:hasDbXref>TGN:21109</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Stream</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>streams</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasNarrowSynonym xml:lang="en">streamlet</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasNarrowSynonym>braided stream</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasNarrowSynonym>fork (hydrographic</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasNarrowSynonym>lode</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasNarrowSynonym>millstream</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasNarrowSynonym>stream bend</oboInOwl:hasNarrowSynonym>
-        <oboInOwl:hasNarrowSynonym xml:lang="en">streamlet</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasRelatedSynonym>Creek</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym>beck</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym>brook</oboInOwl:hasRelatedSynonym>
@@ -10301,97 +10319,97 @@ For example, A and B may be gene products and binding of B by A positively regul
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000023"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym"/>
         <owl:annotatedTarget>watercourse</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADL:FTT</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ADL:FTT</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000023"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym"/>
         <owl:annotatedTarget>watercourse</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>USGS:SDTS</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000023"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>streams</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Geonames:feature</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Geonames:feature</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000023"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
         <owl:annotatedTarget>braided stream</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>USGS:SDTS</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000023"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
         <owl:annotatedTarget>fork (hydrographic</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADL:FTT</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ADL:FTT</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000023"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
         <owl:annotatedTarget>lode</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>USGS:SDTS</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000023"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
         <owl:annotatedTarget>stream bend</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADL:FTT</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ADL:FTT</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000023"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>Creek</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NASA:earthrealm</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>NASA:earthrealm</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000023"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>beck</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>USGS:SDTS</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000023"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>brook</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADL:FTT</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ADL:FTT</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000023"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>brook</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Getty:TGN</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Getty:TGN</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000023"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>burn (hydrographic)</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADL:FTT</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ADL:FTT</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000023"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>creek</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADL:FTT</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ADL:FTT</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000023"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>creek</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Getty:TGN</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Getty:TGN</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000023"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>creek</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>USGS:SDTS</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000023"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>rivulet</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>USGS:SDTS</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -10475,265 +10493,265 @@ For example, A and B may be gene products and binding of B by A positively regul
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000029"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
         <owl:annotatedTarget>culvert</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>USGS:SDTS</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000029"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
         <owl:annotatedTarget>dredged channel</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>USGS:SDTS</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000029"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
         <owl:annotatedTarget>fork</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>USGS:SDTS</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000029"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
         <owl:annotatedTarget>gulch</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>USGS:SDTS</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000029"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
         <owl:annotatedTarget>gully</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>USGS:SDTS</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000029"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
         <owl:annotatedTarget>gut</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Getty:TGN</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Getty:TGN</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000029"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
         <owl:annotatedTarget>gut</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>USGS:SDTS</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000029"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
         <owl:annotatedTarget>gutter</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>USGS:SDTS</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000029"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
         <owl:annotatedTarget>kill</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>USGS:SDTS</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000029"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
         <owl:annotatedTarget>lode</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>USGS:SDTS</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000029"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
         <owl:annotatedTarget>narrows</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Geonames:feature</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Geonames:feature</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000029"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
         <owl:annotatedTarget>narrows</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>USGS:SDTS</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000029"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
         <owl:annotatedTarget>overflow channel</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>USGS:SDTS</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000029"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
         <owl:annotatedTarget>passage</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Getty:TGN</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Getty:TGN</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000029"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
         <owl:annotatedTarget>passage</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>USGS:SDTS</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000029"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
         <owl:annotatedTarget>pup</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>USGS:SDTS</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000029"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
         <owl:annotatedTarget>race</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>USGS:SDTS</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000029"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
         <owl:annotatedTarget>ravine</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>USGS:SDTS</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000029"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
         <owl:annotatedTarget>reach</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Geonames:feature</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Geonames:feature</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000029"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
         <owl:annotatedTarget>reach</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Getty:TGN</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Getty:TGN</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000029"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
         <owl:annotatedTarget>reach</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>USGS:SDTS</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000029"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
         <owl:annotatedTarget>rill</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>USGS:SDTS</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000029"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
         <owl:annotatedTarget>rivulet</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>USGS:SDTS</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000029"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
         <owl:annotatedTarget>run</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Getty:TGN</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Getty:TGN</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000029"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
         <owl:annotatedTarget>run</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>USGS:SDTS</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000029"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
         <owl:annotatedTarget>runnel</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>USGS:SDTS</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000029"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
         <owl:annotatedTarget>seachannel</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>USGS:SDTS</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000029"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
         <owl:annotatedTarget>seaway</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>USGS:SDTS</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000029"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
         <owl:annotatedTarget>spillway</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Geonames:feature</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Geonames:feature</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000029"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
         <owl:annotatedTarget>spillway</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>USGS:SDTS</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000029"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
         <owl:annotatedTarget>stream</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADL:FTT</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ADL:FTT</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000029"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
         <owl:annotatedTarget>tideway</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>USGS:SDTS</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000029"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
         <owl:annotatedTarget>wash</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>USGS:SDTS</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000029"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
         <owl:annotatedTarget>water gap</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>USGS:SDTS</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000029"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>awawa</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>USGS:SDTS</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000029"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>barranca</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>USGS:SDTS</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000029"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>beck</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>USGS:SDTS</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000029"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>branch</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>USGS:SDTS</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000029"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>brook</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>USGS:SDTS</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000029"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>course</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>USGS:SDTS</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000029"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>draw</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>USGS:SDTS</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000029"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>moat</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>USGS:SDTS</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000029"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>narrows</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Getty:TGN</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Getty:TGN</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000029"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>narrows (hydrographic)</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADL:FTT</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ADL:FTT</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -10772,7 +10790,7 @@ For example, A and B may be gene products and binding of B by A positively regul
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000033"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A body of water, usually of smaller size than a lake.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MA:ma</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>MA:ma</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000033"/>
@@ -10784,79 +10802,79 @@ For example, A and B may be gene products and binding of B by A positively regul
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000033"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym"/>
         <owl:annotatedTarget>lake</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADL:FTT</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ADL:FTT</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000033"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym"/>
         <owl:annotatedTarget>lake</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>USGS:SDTS</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000033"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>Pond</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NASA:earthrealm</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>NASA:earthrealm</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000033"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
         <owl:annotatedTarget>pool (water body)</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADL:FTT</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ADL:FTT</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000033"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>POOL</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Getty:TGN</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Getty:TGN</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000033"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>millpond</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADL:FTT</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ADL:FTT</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000033"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>millpond</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>USGS:SDTS</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000033"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>pond</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADL:FTT</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ADL:FTT</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000033"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>pond</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Geonames:feature</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Geonames:feature</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000033"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>ponds</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Geonames:feature</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Geonames:feature</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000033"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>pool</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Geonames:feature</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Geonames:feature</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000033"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>pool</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>USGS:SDTS</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000033"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>pool (water body)</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>USGS:SDTS</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -10892,19 +10910,19 @@ For example, A and B may be gene products and binding of B by A positively regul
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000062"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym"/>
         <owl:annotatedTarget>place</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>USGS:SDTS</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000062"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>populated places</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Geonames:feature</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Geonames:feature</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000062"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>settlement</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>USGS:SDTS</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -10952,25 +10970,25 @@ For example, A and B may be gene products and binding of B by A positively regul
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000063"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym"/>
         <owl:annotatedTarget>hydrographic feature</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADL:FTT</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ADL:FTT</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000063"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>bodies of water</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Getty:TGN</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Getty:TGN</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000063"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>body of water</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADL:FTT</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ADL:FTT</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000063"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>body of water</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Getty:TGN</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Getty:TGN</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -11011,7 +11029,7 @@ For example, A and B may be gene products and binding of B by A positively regul
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000070"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A construction that has been assembled by deliberate human effort.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MA:ma</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>MA:ma</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -11038,7 +11056,7 @@ For example, A and B may be gene products and binding of B by A positively regul
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000073"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A permanent walled and roofed construction.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>USGS:SDTS</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -11067,7 +11085,7 @@ For example, A and B may be gene products and binding of B by A positively regul
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000076"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>An excavation in the Earth for the purpose of extracting earth materials.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>USGS:SDTS</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Mine</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -11141,121 +11159,121 @@ For example, A and B may be gene products and binding of B by A positively regul
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000077"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
         <owl:annotatedTarget>barn</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADL:FTT</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ADL:FTT</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000077"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
         <owl:annotatedTarget>cattle dipping tank</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADL:FTT</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ADL:FTT</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000077"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
         <owl:annotatedTarget>corral</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADL:FTT</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ADL:FTT</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000077"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
         <owl:annotatedTarget>dairy</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADL:FTT</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ADL:FTT</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000077"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
         <owl:annotatedTarget>feedlot</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADL:FTT</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ADL:FTT</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000077"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
         <owl:annotatedTarget>grange</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADL:FTT</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ADL:FTT</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000077"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
         <owl:annotatedTarget>grazing allotment</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADL:FTT</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ADL:FTT</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000077"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
         <owl:annotatedTarget>irrigated field</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADL:FTT</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ADL:FTT</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000077"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
         <owl:annotatedTarget>nursery</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADL:FTT</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ADL:FTT</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000077"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
         <owl:annotatedTarget>nursery</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Geonames:feature</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Geonames:feature</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000077"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
         <owl:annotatedTarget>pastoral site</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADL:FTT</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ADL:FTT</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000077"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
         <owl:annotatedTarget>sheepfold</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADL:FTT</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ADL:FTT</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000077"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
         <owl:annotatedTarget>stockyard</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADL:FTT</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ADL:FTT</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000077"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>AgriculturalLands</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NASA:earthrealm</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>NASA:earthrealm</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000077"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>agricultural colony</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Geonames:feature</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Geonames:feature</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000077"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>agricultural facility</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADL:FTT</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ADL:FTT</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000077"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>agricultural land</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Getty:TGN</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Getty:TGN</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000077"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>agricultural reserve</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADL:FTT</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ADL:FTT</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000077"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>agricultural reserve</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Geonames:feature</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Geonames:feature</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000077"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>agricultural site</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADL:FTT</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ADL:FTT</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -11299,55 +11317,55 @@ For example, A and B may be gene products and binding of B by A positively regul
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000078"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>An area of land which is used for the cultivation of crops or grazing of livestock, including any agricultural constructions therein.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>USGS:SDTS</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000078"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym"/>
         <owl:annotatedTarget>agricultural site</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADL:FTT</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ADL:FTT</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000078"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>FARM</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>USGS:SDTS</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000078"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>farm</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Geonames:feature</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Geonames:feature</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000078"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>farms</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Geonames:feature</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Geonames:feature</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000078"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>farmstead</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADL:FTT</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ADL:FTT</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000078"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>ranch</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Geonames:feature</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Geonames:feature</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000078"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>ranch</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Getty:TGN</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Getty:TGN</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000078"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>ranch</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>USGS:SDTS</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -11380,25 +11398,25 @@ For example, A and B may be gene products and binding of B by A positively regul
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000086"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A region of general uniform slope, comparatively level, and of considerable extent.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>USGS:SDTS</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000086"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>interfluve</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADL:FTT</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ADL:FTT</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000086"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>llanos</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADL:FTT</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ADL:FTT</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000086"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>outwash plain</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>USGS:SDTS</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -11440,7 +11458,7 @@ For example, A and B may be gene products and binding of B by A positively regul
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000094"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>volcanic landform</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Getty:TGN</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Getty:TGN</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -11483,13 +11501,13 @@ For example, A and B may be gene products and binding of B by A positively regul
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000097"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A region rendered barren or partially barren by environmental extremes, especially by low rainfall.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>USGS:SDTS</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000097"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>arid region</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADL:FTT</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ADL:FTT</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -11556,170 +11574,170 @@ For example, A and B may be gene products and binding of B by A positively regul
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000100"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A depression which has been formed as a result of erosion by water or ice and which is low-lying, bordered by higher ground, and especially elongate.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADL:FTT</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ADL:FTT</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Valley</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000100"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
         <owl:annotatedTarget>chasm</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>USGS:SDTS</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000100"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
         <owl:annotatedTarget>coulee</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>USGS:SDTS</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000100"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
         <owl:annotatedTarget>dale</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>USGS:SDTS</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000100"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
         <owl:annotatedTarget>glacial gorge</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>USGS:SDTS</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000100"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
         <owl:annotatedTarget>glacial trough</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>USGS:SDTS</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000100"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
         <owl:annotatedTarget>gulch</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>USGS:SDTS</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000100"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
         <owl:annotatedTarget>gully</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Getty:TGN</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Getty:TGN</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000100"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
         <owl:annotatedTarget>gully</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>USGS:SDTS</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000100"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
         <owl:annotatedTarget>median valley</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADL:FTT</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ADL:FTT</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000100"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
         <owl:annotatedTarget>median valley</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Geonames:feature</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Geonames:feature</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000100"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
         <owl:annotatedTarget>shelf valley</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Geonames:feature</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Geonames:feature</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000100"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>glen</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADL:FTT</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ADL:FTT</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000100"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>glen</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>USGS:SDTS</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000100"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>goe</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>USGS:SDTS</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000100"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>gorge</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Geonames:feature</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Geonames:feature</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000100"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>gorge</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>USGS:SDTS</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000100"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>graben</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>USGS:SDTS</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000100"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>hollow</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADL:FTT</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ADL:FTT</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000100"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>hollow</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Getty:TGN</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Getty:TGN</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000100"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>hollow</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>USGS:SDTS</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000100"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>moat</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>USGS:SDTS</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000100"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>ravine</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>USGS:SDTS</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000100"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>re-entrant</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>USGS:SDTS</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000100"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>seachannel</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>USGS:SDTS</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000100"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>strath</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>USGS:SDTS</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000100"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>trench</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>USGS:SDTS</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000100"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>water gap</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>USGS:SDTS</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -11749,13 +11767,13 @@ For example, A and B may be gene products and binding of B by A positively regul
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000106"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>grazing area</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Getty:TGN</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Getty:TGN</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000106"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>herbaceous area</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>USGS:SDTS</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -11816,223 +11834,223 @@ For example, A and B may be gene products and binding of B by A positively regul
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000109"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Land having a cover of trees, shrubs, or both.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>USGS:SDTS</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000109"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
         <owl:annotatedTarget>brigalow</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>USGS:SDTS</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000109"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
         <owl:annotatedTarget>pine grove</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Geonames:feature</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Geonames:feature</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000109"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>caatinga</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>USGS:SDTS</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000109"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>chanaral</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>USGS:SDTS</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000109"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>coniferous forest</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>USGS:SDTS</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000109"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>copse</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>USGS:SDTS</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000109"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>deciduous forest</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>USGS:SDTS</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000109"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>equatorial forest</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>USGS:SDTS</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000109"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>equatorial rain forest</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>USGS:SDTS</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000109"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>garique</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>USGS:SDTS</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000109"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>grove</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADL:FTT</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ADL:FTT</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000109"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>grove</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>USGS:SDTS</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000109"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>jungle</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Getty:TGN</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Getty:TGN</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000109"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>jungle</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>USGS:SDTS</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000109"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>mallee scrub</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>USGS:SDTS</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000109"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>monsoon forest</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>USGS:SDTS</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000109"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>moor</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>USGS:SDTS</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000109"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>motte</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>USGS:SDTS</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000109"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>mulga</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>USGS:SDTS</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000109"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>mulga scrub</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>USGS:SDTS</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000109"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>rain forest</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADL:FTT</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ADL:FTT</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000109"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>rain forest</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Getty:TGN</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Getty:TGN</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000109"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>reforested area</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>USGS:SDTS</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000109"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>sagebrush</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>USGS:SDTS</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000109"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>scrub</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>USGS:SDTS</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000109"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>shrub</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>USGS:SDTS</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000109"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>silva</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>USGS:SDTS</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000109"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>stand</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>USGS:SDTS</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000109"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>taiga</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>USGS:SDTS</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000109"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>thicket</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>USGS:SDTS</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000109"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>thorn forest</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>USGS:SDTS</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000109"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>tropical rain forest</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>USGS:SDTS</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000109"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>wood</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADL:FTT</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ADL:FTT</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000109"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>wood</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Getty:TGN</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Getty:TGN</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000109"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>wood</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>USGS:SDTS</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000109"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>wooded area</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>USGS:SDTS</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -12086,13 +12104,13 @@ For example, A and B may be gene products and binding of B by A positively regul
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000111"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>forest</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Geonames:feature</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Geonames:feature</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000111"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>wood</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Getty:TGN</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Getty:TGN</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -12123,19 +12141,19 @@ For example, A and B may be gene products and binding of B by A positively regul
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000114"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym"/>
         <owl:annotatedTarget>agricultural site</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADL:FTT</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ADL:FTT</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000114"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>cropland</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>USGS:SDTS</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000114"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>grassland</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>USGS:SDTS</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -12213,19 +12231,19 @@ For example, A and B may be gene products and binding of B by A positively regul
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000129"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A valley that contains, and has been formed by, a stream.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MA:ma</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>MA:ma</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000129"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>ravine</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Geonames:feature</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Geonames:feature</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000129"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>ravine</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>USGS:SDTS</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -12297,19 +12315,19 @@ For example, A and B may be gene products and binding of B by A positively regul
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000141"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>The sloping margin of a watercourse, serving to confine it to its natural channel.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MA:ma</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>MA:ma</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000141"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym"/>
         <owl:annotatedTarget>mount</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>USGS:SDTS</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000141"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>shore</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>USGS:SDTS</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -12332,13 +12350,13 @@ For example, A and B may be gene products and binding of B by A positively regul
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000142"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>The sloping margin of a stream, serving to confine it to its natural channel.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MA:ma</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>MA:ma</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000142"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>bank (hydrographic)</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADL:FTT</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ADL:FTT</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -12359,13 +12377,13 @@ For example, A and B may be gene products and binding of B by A positively regul
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000143"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>The sloping margin of a river, serving to confine it to its natural channel.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MA:ma</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>MA:ma</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000143"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>riverbank</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Getty:TGN</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Getty:TGN</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -12408,7 +12426,7 @@ For example, A and B may be gene products and binding of B by A positively regul
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000176"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A landform elevated above the surrounding area.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MA:ma</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>MA:ma</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -12457,7 +12475,7 @@ For example, A and B may be gene products and binding of B by A positively regul
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000191"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>geological feature</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADL:FTT</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ADL:FTT</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -12517,19 +12535,19 @@ For example, A and B may be gene products and binding of B by A positively regul
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000194"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>TALUS</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>USGS:SDTS</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000194"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>talus slope</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Geonames:feature</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Geonames:feature</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000194"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>talus slope</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Getty:TGN</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Getty:TGN</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -12563,7 +12581,7 @@ For example, A and B may be gene products and binding of B by A positively regul
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000247"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym"/>
         <owl:annotatedTarget>mount</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>USGS:SDTS</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -12584,13 +12602,13 @@ For example, A and B may be gene products and binding of B by A positively regul
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000248"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A valley that contains, or contained, a glacier and was formed by glacial activity. Typically U-shaped in cross-section.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MA:ma</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>MA:ma</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000248"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>valley</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>USGS:SDTS</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -12623,55 +12641,55 @@ For example, A and B may be gene products and binding of B by A positively regul
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000300"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Area covered with low-growing or stunted perennial vegetation and usually not mixed with trees.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADL:FTT</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ADL:FTT</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000300"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>scrubland</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Geonames:feature</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Geonames:feature</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000300"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>bush</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADL:FTT</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ADL:FTT</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000300"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>bush</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Getty:TGN</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Getty:TGN</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000300"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>chaparal area</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADL:FTT</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ADL:FTT</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000300"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>heath</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADL:FTT</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ADL:FTT</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000300"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>scrub</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>USGS:SDTS</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000300"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>shrubland</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADL:FTT</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ADL:FTT</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000300"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>shrubland</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>USGS:SDTS</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -12742,49 +12760,49 @@ For example, A and B may be gene products and binding of B by A positively regul
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000309"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>barrier basin</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>USGS:SDTS</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000309"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>depression</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Geonames:feature</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Geonames:feature</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000309"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>non tidal basin</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>USGS:SDTS</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000309"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>pan</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Geonames:feature</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Geonames:feature</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000309"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>pan</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Getty:TGN</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Getty:TGN</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000309"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>pan (geologic)</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADL:FTT</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ADL:FTT</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000309"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>pans</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Geonames:feature</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Geonames:feature</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000309"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>tidal basin</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>USGS:SDTS</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -12802,7 +12820,7 @@ For example, A and B may be gene products and binding of B by A positively regul
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000328"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A zone beneath the land surface and above the level of permanent groundwater or phreatic zone in which water has a hydraulic head less than atmospheric pressure and is retained by a combination of adhesion and capillary action.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://wasg.iinet.net.au/terminol.html</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>http://wasg.iinet.net.au/terminol.html</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Vadose_zone</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
@@ -12849,7 +12867,7 @@ For example, A and B may be gene products and binding of B by A positively regul
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000329"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A compound astronomical body part which is located beneath the land surface and in which all interstices are filled with water that has a hydraulic head greater than atmospheric pressure due to the weight of overlying groundwater.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://wasg.iinet.net.au/terminol.html</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>http://wasg.iinet.net.au/terminol.html</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Phreatic_zone</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
@@ -13124,7 +13142,7 @@ For example, A and B may be gene products and binding of B by A positively regul
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000428"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A biome is an ecosystem to which resident ecological communities have evolved adaptations.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOI:10.1186/2041-1480-4-43</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>DOI:10.1186/2041-1480-4-43</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Biome</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
@@ -13143,7 +13161,7 @@ For example, A and B may be gene products and binding of B by A positively regul
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000428"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>EcosytemType</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NASA:earthrealm</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>NASA:earthrealm</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -13232,9 +13250,9 @@ For example, A and B may be gene products and binding of B by A positively regul
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>An aquatic biome which is determined by a marine water body.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0002-4366-3088"/>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN:978-0-618-45504-1</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MA:ma</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://en.wikipedia.org/wiki/Ocean</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ISBN:978-0-618-45504-1</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>MA:ma</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Ocean</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -13250,7 +13268,7 @@ For example, A and B may be gene products and binding of B by A positively regul
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000469"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A facility, permanent or temporary, on land, in air, space or water, where scientific research or measurements can be undertaken.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MA:ma</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>MA:ma</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -13284,13 +13302,13 @@ For example, A and B may be gene products and binding of B by A positively regul
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000501"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>The portion of the ground surface which lies below water.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>USGS:SDTS</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000501"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym"/>
         <owl:annotatedTarget>BOTTOM</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>USGS:SDTS</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -13319,13 +13337,13 @@ For example, A and B may be gene products and binding of B by A positively regul
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000856"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Incorporated populated place.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADL:FTT</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ADL:FTT</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000856"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym"/>
         <owl:annotatedTarget>urban area</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADL:FTT</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ADL:FTT</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -13367,7 +13385,7 @@ For example, A and B may be gene products and binding of B by A positively regul
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>An aquatic biome which is determined by a body of freshwater.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:resource="https://orcid.org/0000-0002-4366-3088"/>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MA:ma</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>MA:ma</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -13399,7 +13417,7 @@ For example, A and B may be gene products and binding of B by A positively regul
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00001995"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A rock is a naturally occurring solid aggregate of one or more minerals or mineraloids.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MA:ma</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>MA:ma</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Rock_(geology)</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -13427,7 +13445,7 @@ For example, A and B may be gene products and binding of B by A positively regul
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00001996"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>The outflow of water from a mine.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MA:ma</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>MA:ma</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00001996"/>
@@ -13474,7 +13492,7 @@ For example, A and B may be gene products and binding of B by A positively regul
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00001997"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A mine drainage with an acidic pH.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MA:ma</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>MA:ma</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00001997"/>
@@ -13632,7 +13650,7 @@ The lower boundary that separates soil from the nonsoil underneath is most diffi
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00002000"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A solid astronomical body part which is part of the planetary surface between the peak of an elevation or the bottom of a depression and relatively flat surrounding land.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MA:ma</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>MA:ma</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -13780,7 +13798,7 @@ The lower boundary that separates soil from the nonsoil underneath is most diffi
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00002006"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>An environmental material primarily composed of dihydrogen oxide in its liquid form.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MA:ma</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>MA:ma</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -14119,7 +14137,7 @@ The lower boundary that separates soil from the nonsoil underneath is most diffi
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00002045"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Sediment characterised by the absence of oxygen.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ORCID:0000-0002-4366-3088</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ORCID:0000-0002-4366-3088</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -16334,9 +16352,9 @@ The lower boundary that separates soil from the nonsoil underneath is most diffi
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00010483"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A portion of environmental material is a fiat object part which forms the medium or part of the medium of an environmental system.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOI:10.1186/2041-1480-4-43</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MA:ma</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ORCID:0000-0002-4366-3088</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>DOI:10.1186/2041-1480-4-43</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>MA:ma</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ORCID:0000-0002-4366-3088</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>URL:http://ontology.buffalo.edu/smith/articles/niches.html</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -16405,7 +16423,7 @@ The lower boundary that separates soil from the nonsoil underneath is most diffi
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00010505"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Airborne solid particles (also called dust or particulate matter (PM)) or liquid droplets.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://en.wikipedia.org/wiki/Aerosol</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Aerosol</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -16531,7 +16549,7 @@ The lower boundary that separates soil from the nonsoil underneath is most diffi
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_0010001"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Anthropogenic material in or on which organisms may live.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MA:ma</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>MA:ma</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -16757,7 +16775,7 @@ The lower boundary that separates soil from the nonsoil underneath is most diffi
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>A marine biome which is determined by an ocean.</obo:IAO_0000115>
-        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ORCID:0000-0002-4366-3088</oboInOwl:created_by>
+        <oboInOwl:created_by>ORCID:0000-0002-4366-3088</oboInOwl:created_by>
         <oboInOwl:creation_date>2010-03-15T11:23:23Z</oboInOwl:creation_date>
         <oboInOwl:inSubset>envoPolar</oboInOwl:inSubset>
         <rdfs:comment>Ocean biomes are determined by major bodies of saline water, principal components of the hydrosphere. Approximately 71% of the Earth&apos;s surface is covered by ocean, a continuous body of water that is customarily divided into several principal oceans and smaller seas. More than half of this area is over 3,000 metres (9,800 ft) deep. Average oceanic salinity is around 35 parts per thousand (ppt) (3.5%), and nearly all seawater has a salinity in the range of 30 to 38 ppt.</rdfs:comment>
@@ -16767,8 +16785,8 @@ The lower boundary that separates soil from the nonsoil underneath is most diffi
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000048"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A marine biome which is determined by an ocean.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ORCID:0000-0002-4366-3088</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://en.wikipedia.org/wiki/Ocean</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ORCID:0000-0002-4366-3088</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Ocean</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -16795,7 +16813,7 @@ The lower boundary that separates soil from the nonsoil underneath is most diffi
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>A marine algal bloom is a rapid increase or accumulation in the population of algae in a marine system. Typically, only one or a small number of phytoplankton  species are involved. Although there is no officially recognized threshold level, algae can be considered to be blooming at concentrations of hundreds to thousands of cells per milliliter, depending on the severity.</obo:IAO_0000115>
-        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ORCID:0000-0002-4366-3088</oboInOwl:created_by>
+        <oboInOwl:created_by>ORCID:0000-0002-4366-3088</oboInOwl:created_by>
         <oboInOwl:creation_date>2010-03-16T12:12:30Z</oboInOwl:creation_date>
         <oboInOwl:hasDbXref>EcoLexicon:red_tide</oboInOwl:hasDbXref>
         <oboInOwl:hasNarrowSynonym>red tide</oboInOwl:hasNarrowSynonym>
@@ -16808,8 +16826,8 @@ The lower boundary that separates soil from the nonsoil underneath is most diffi
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000057"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A marine algal bloom is a rapid increase or accumulation in the population of algae in a marine system. Typically, only one or a small number of phytoplankton  species are involved. Although there is no officially recognized threshold level, algae can be considered to be blooming at concentrations of hundreds to thousands of cells per milliliter, depending on the severity.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ORCID:0000-0002-4366-3088</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://en.wikipedia.org/wiki/Algal_bloom</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ORCID:0000-0002-4366-3088</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Algal_bloom</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000057"/>
@@ -16868,7 +16886,7 @@ The lower boundary that separates soil from the nonsoil underneath is most diffi
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>Environmental material derived from living organisms and composed primarily of one or more biomacromolecules.</obo:IAO_0000115>
-        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ORCID:0000-0002-4366-3088</oboInOwl:created_by>
+        <oboInOwl:created_by>ORCID:0000-0002-4366-3088</oboInOwl:created_by>
         <oboInOwl:creation_date>2010-03-20T08:40:04Z</oboInOwl:creation_date>
         <oboInOwl:hasDbXref>EcoLexicon:organic_material</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>biomass</oboInOwl:hasExactSynonym>
@@ -16878,8 +16896,8 @@ The lower boundary that separates soil from the nonsoil underneath is most diffi
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000155"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Environmental material derived from living organisms and composed primarily of one or more biomacromolecules.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN:978-0-618-45504-1</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ORCID:0000-0002-4366-3088</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ISBN:978-0-618-45504-1</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ORCID:0000-0002-4366-3088</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -16966,7 +16984,7 @@ The lower boundary that separates soil from the nonsoil underneath is most diffi
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000203"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>An environmental condition is a range of a determinate quality or combination of qualities that are present in an environmental system.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOI:10.1186/2041-1480-4-43</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>DOI:10.1186/2041-1480-4-43</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -17211,7 +17229,7 @@ The lower boundary that separates soil from the nonsoil underneath is most diffi
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000254"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A system which has the disposition to environ one or more material entities.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOI:10.1186/2041-1480-4-43</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>DOI:10.1186/2041-1480-4-43</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -17709,7 +17727,7 @@ https://en.wikipedia.org/wiki/  Ecozones correspond to the floristic kingdoms of
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>A layer that is part of a marine water body.</obo:IAO_0000115>
-        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ORCID:0000-0002-4366-3088</oboInOwl:created_by>
+        <oboInOwl:created_by>ORCID:0000-0002-4366-3088</oboInOwl:created_by>
         <oboInOwl:inSubset>envoMarine</oboInOwl:inSubset>
         <oboInOwl:inSubset>envoPolar</oboInOwl:inSubset>
         <rdfs:label>marine layer</rdfs:label>
@@ -17718,7 +17736,7 @@ https://en.wikipedia.org/wiki/  Ecozones correspond to the floristic kingdoms of
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000295"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A layer that is part of a marine water body.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ORCID:0000-0002-4366-3088</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ORCID:0000-0002-4366-3088</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -17745,7 +17763,7 @@ https://en.wikipedia.org/wiki/  Ecozones correspond to the floristic kingdoms of
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>A river where fresh water flows.</obo:IAO_0000115>
-        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ORCID:0000-0002-4366-3088</oboInOwl:created_by>
+        <oboInOwl:created_by>ORCID:0000-0002-4366-3088</oboInOwl:created_by>
         <oboInOwl:creation_date>2013-10-16T12:56:48Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>ENVO</oboInOwl:hasOBONamespace>
         <oboInOwl:id>ENVO:01000297</oboInOwl:id>
@@ -17756,7 +17774,7 @@ https://en.wikipedia.org/wiki/  Ecozones correspond to the floristic kingdoms of
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000297"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A river where fresh water flows.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ORCID:0000-0002-4366-3088</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ORCID:0000-0002-4366-3088</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -22239,10 +22257,10 @@ https://en.wikipedia.org/wiki/  Ecozones correspond to the floristic kingdoms of
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0003-4808-4736"/>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-04-14T18:57:18.275Z</oboInOwl:creation_date>
         <oboInOwl:hasDbXref rdf:resource="http://sweetontology.net/phenAtmoPrecipitation/IceStorm"/>
-        <oboInOwl:hasExactSynonym>glaze event</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym xml:lang="en">glaze storm</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym xml:lang="en">ice storm</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym xml:lang="en">silver storm</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>glaze event</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>silver thaw</oboInOwl:hasExactSynonym>
         <oboInOwl:hasRelatedSynonym xml:lang="en">glaze event</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym xml:lang="en">silver thaw</oboInOwl:hasRelatedSynonym>
@@ -22538,8 +22556,8 @@ Consider adding axioms like PATO:&quot;decreased temperature&quot; to this and o
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001222"/>
         <obo:IAO_0000115>A building which is used to care for a human child during the working day by a person, outside the child&apos;s immediate family, other than that child&apos;s legal guardians.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-1107-9135"/>
-        <oboInOwl:hasExactSynonym>child care building</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym xml:lang="en">daycare building</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>child care building</oboInOwl:hasExactSynonym>
         <rdfs:comment>This is a kind of day care facility. A facility need not be a building.</rdfs:comment>
         <rdfs:label xml:lang="en">day care building</rdfs:label>
     </owl:Class>
@@ -24343,7 +24361,7 @@ Consider adding axioms like PATO:&quot;decreased temperature&quot; to this and o
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001088"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>An aerosol which has non-gaseous parts that are primarily composed of liquid droplets.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://en.wikipedia.org/wiki/Aerosol</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Aerosol</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -24418,7 +24436,7 @@ Consider adding axioms like PATO:&quot;decreased temperature&quot; to this and o
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001089"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>An aerosol which has non-gaseous parts that are primarily composed of solid particles.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://en.wikipedia.org/wiki/Aerosol</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Aerosol</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -24759,39 +24777,26 @@ Consider adding axioms like PATO:&quot;decreased temperature&quot; to this and o
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01001125">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00010483"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000086"/>
-                <owl:someValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001546"/>
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001985"/>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
+        <rdfs:subClassOf rdf:nodeID="genid2381"/>
         <obo:IAO_0000115>An ice is an environmental material which is either frozen or which is maintained in a solid state by gravitational forces or pressure.</obo:IAO_0000115>
         <rdfs:comment>Note that ice may be formed at very high temperatures, due to gravitational effects and/or pressure.</rdfs:comment>
         <rdfs:label xml:lang="en">ice</rdfs:label>
     </owl:Class>
+    <owl:Restriction rdf:nodeID="genid2381">
+        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000086"/>
+        <owl:someValuesFrom>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001546"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001985"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:someValuesFrom>
+    </owl:Restriction>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001125"/>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
-        <owl:annotatedTarget>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000086"/>
-                <owl:someValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001546"/>
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001985"/>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:someValuesFrom>
-            </owl:Restriction>
-        </owl:annotatedTarget>
+        <owl:annotatedTarget rdf:nodeID="genid2381"/>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/EnvironmentOntology/envo/issues/900</rdfs:seeAlso>
     </owl:Axiom>
     
@@ -25780,67 +25785,67 @@ Consider adding axioms like PATO:&quot;decreased temperature&quot; to this and o
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001206"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>GRASSLAND</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>USGS:SDTS</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001206"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>grassland</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Geonames:feature</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Geonames:feature</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001206"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>Grassland</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NASA:earthrealm</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>NASA:earthrealm</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001206"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>down</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>USGS:SDTS</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001206"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>downland</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>USGS:SDTS</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001206"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>downs</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>USGS:SDTS</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001206"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>glade</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADL:FTT</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ADL:FTT</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001206"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>glade</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>USGS:SDTS</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001206"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>grazing area</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADL:FTT</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ADL:FTT</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001206"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>grazing area</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Getty:TGN</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Getty:TGN</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001206"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>herbaceous area</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>USGS:SDTS</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -27432,7 +27437,7 @@ Consider adding axioms like PATO:&quot;decreased temperature&quot; to this and o
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001366"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A process during which particles suspended in a gaseous medium are formed.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://en.wikipedia.org/wiki/Aerosol</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Aerosol</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Particulates</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -27503,7 +27508,7 @@ Consider adding axioms like PATO:&quot;decreased temperature&quot; to this and o
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001367"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A material transport process during which solid or liquid particles are directly introduced into a volume of gas.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://en.wikipedia.org/wiki/Aerosol</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Aerosol</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Particulates</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -27870,8 +27875,8 @@ Consider adding axioms like PATO:&quot;decreased temperature&quot; to this and o
         <oboInOwl:hasAlternativeId>Cb</oboInOwl:hasAlternativeId>
         <oboInOwl:hasExactSynonym xml:lang="de">Cumulonibus-Wolke</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym xml:lang="de">Gewitterwolke</oboInOwl:hasExactSynonym>
-        <oboInOwl:inSubset>envoAtmo</oboInOwl:inSubset>
         <oboInOwl:inSubset xml:lang="en">envoCloudAtlas</oboInOwl:inSubset>
+        <oboInOwl:inSubset>envoAtmo</oboInOwl:inSubset>
         <rdfs:comment xml:lang="en">Cumulonimbus clouds have a very dark base which may be merged with low ragged clouds which frequently form underneath this cloud. The upper portion  may be smooth, fibrous, or striated. Cumulonimbus also contains large raindrops and, often, snowflakes, snow pellets or hailstones. The water droplets and raindrops may be substantially supercooled. Cumulonimbus is frequently associated with precipitation, sometimes in the form of virga. Cumulonimbus is often accompanied by lightning, thunder or hail. Cumulonimbus usually have their bases in the low level, but their vertical extent is often so great that their tops may reach into the middle and high levels.</rdfs:comment>
         <rdfs:label xml:lang="en">cumulonimbus cloud</rdfs:label>
     </owl:Class>
@@ -28901,8 +28906,8 @@ Consider adding axioms like PATO:&quot;decreased temperature&quot; to this and o
         <dc:contributor rdf:resource="https://orcid.org/0000-0003-1072-8081"/>
         <oboInOwl:created_by rdf:resource="https://orcid.org/0000-0002-4366-3088"/>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-03-06T01:22:01Z</oboInOwl:creation_date>
-        <oboInOwl:inSubset>envoMarine</oboInOwl:inSubset>
         <oboInOwl:inSubset xml:lang="en">envoPlastics</oboInOwl:inSubset>
+        <oboInOwl:inSubset>envoMarine</oboInOwl:inSubset>
         <rdfs:comment xml:lang="en">At this level, the depth of this layer is ambiguous. Some methods (telemetry) measure only the first few centimeters of the sea or ocean surface. In situ methods often sample the first few meters. Subclasses can be created for such cases.
 Sea surface layer is also used to refer to the surfaces of oceans.</rdfs:comment>
         <rdfs:label xml:lang="en">sea surface layer</rdfs:label>
@@ -31881,13 +31886,13 @@ Some definitions include additional discussion of the the physics involved which
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_02500018"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A process during which the populations in a community of algae in a marine or freshwater ecosystem undergo rapid growth, resulting in high concentrations of algal cells that occur only periodically and briefly in that ecosystem, relative to their concentrations through the majority of the planetary orbital period.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://en.wikipedia.org/wiki/Algal_bloom</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Algal_bloom</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_02500018"/>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
         <owl:annotatedTarget>This class is under development. Note that cyanobacterial blooms are often confused with algal blooms. There is no globally recognised threshold beyond which community density enters a bloom state.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://en.wikipedia.org/wiki/Algal_bloom</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Algal_bloom</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -35881,9 +35886,9 @@ Uses undesirability standard, compared to polluted river&apos;s ecological impac
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>The concentration of a liquid water when measured in soil.</obo:IAO_0000115>
-        <oboInOwl:hasExactSynonym>soil liquid water concentration</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym xml:lang="en">soil moisture content</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym xml:lang="en">soil water content</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>soil liquid water concentration</oboInOwl:hasExactSynonym>
         <rdfs:label>concentration of liquid water in soil</rdfs:label>
     </owl:Class>
     
@@ -36630,7 +36635,7 @@ Uses undesirability standard, compared to polluted river&apos;s ecological impac
         <oboInOwl:creation_date>2013-04-27T04:26:24Z</oboInOwl:creation_date>
         <oboInOwl:hasDbXref>EcoLexicon:algal_bloom</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>SWEETRealm:AlgalBloom</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://en.wikipedia.org/wiki/Algal_bloom</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Algal_bloom</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace>ENVO</oboInOwl:hasOBONamespace>
         <oboInOwl:id>ENVO:2000004</oboInOwl:id>
         <rdfs:label>algal bloom</rdfs:label>
@@ -36639,7 +36644,7 @@ Uses undesirability standard, compared to polluted river&apos;s ecological impac
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_2000004"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A feature that arises from a rapid increase or accumulation in the population of algae (typically microscopic) in an aquatic system.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://en.wikipedia.org/wiki/Algal_bloom</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Algal_bloom</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -39225,8 +39230,8 @@ Uses undesirability standard, compared to polluted river&apos;s ecological impac
         <obo:IAO_0000115>A one-celled fruit (pod) usually dehiscing down both sutures, and having the seed attached along a ventral suture. (Roubik 1995)</obo:IAO_0000115>
         <obo:IAO_0000119 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.fao.org/pollination/resources/glossary/en/</obo:IAO_0000119>
         <oboInOwl:hasExactSynonym xml:lang="en">legume</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasNarrowSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/FOODON_03411254</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasNarrowSynonym xml:lang="en">http://purl.obolibrary.org/obo/FOODON_03411338</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/FOODON_03411254</oboInOwl:hasNarrowSynonym>
         <rdfs:label xml:lang="en">legume food product</rdfs:label>
     </owl:Class>
     
@@ -39271,9 +39276,9 @@ Uses undesirability standard, compared to polluted river&apos;s ecological impac
         <obo:IAO_0000116 xml:lang="en">Note, this was previously labelled &quot;Bean (vegetable) food product&quot;. We have been listing both dry and freshly harvested moist beans here, so have broadened the name scope.</obo:IAO_0000116>
         <obo:IAO_0000117 xml:lang="en">Damion Dooley</obo:IAO_0000117>
         <rdfs:label xml:lang="en">bean food product</rdfs:label>
+        <rdfs:seeAlso xml:lang="en">https://oconto.extension.wisc.edu/files/2011/02/The-Importance-of-Dry-Beans-in-Your-Diet.pdf</rdfs:seeAlso>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/FOODON_00002428</rdfs:seeAlso>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.fao.org/es/faodef/fdef04e.htm#4.02</rdfs:seeAlso>
-        <rdfs:seeAlso xml:lang="en">https://oconto.extension.wisc.edu/files/2011/02/The-Importance-of-Dry-Beans-in-Your-Diet.pdf</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -39523,7 +39528,6 @@ Namely, how to characterize the threshold of ingredients that make for multi-com
         <obo:IAO_0000115 xml:lang="en">A seed of a bean plant from one of several genera of the flowering plant family (Fabaceae).</obo:IAO_0000115>
         <obo:IAO_0000116 xml:lang="en">Damion Dooley&apos;s note.  This could be enhanced to explicitly state the anatomical parts of a seed - seed coat, cotyledons, embryo etc.  Currently the Plant Ontology is not explicit about this yet.</obo:IAO_0000116>
         <obo:IAO_0000117>Damion Dooley</obo:IAO_0000117>
-        <obo:IAO_0000117 rdf:datatype="http://www.w3.org/2000/01/rdf-schema#anyURI">https://orcid.org/0000-0001-5275-8866</obo:IAO_0000117>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-10-14T07:28:59</dc:date>
         <oboInOwl:hasExactSynonym xml:lang="en">bean</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">bean (whole)</rdfs:label>
@@ -41723,12 +41727,7 @@ Classes for population already  exist in IDO (&apos;organism population&apos;, I
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PO_0025131">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002160"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_33090"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
+        <rdfs:subClassOf rdf:nodeID="genid4915"/>
         <obo:IAO_0000115>An anatomical entity that is or was part of a plant.</obo:IAO_0000115>
         <oboInOwl:created_by>rwalls</oboInOwl:created_by>
         <oboInOwl:creation_date>2010-11-15T11:41:38Z</oboInOwl:creation_date>
@@ -41740,15 +41739,14 @@ Classes for population already  exist in IDO (&apos;organism population&apos;, I
         <rdfs:comment>Includes both material entities such as plant structures and immaterial entities such as plant anatomical spaces. CARO:0000000 &apos;anatomical entity&apos; is defined as: A part of a cellular organism that is either an immaterial entity or a material entity with granularity aboove the level of a protein complex.  Or, a substance produced by a cellular organism with granularity above the level of a protein complex.  Refers to BFO:0000004 &apos;independent continuant&apos;.</rdfs:comment>
         <rdfs:label>plant anatomical entity</rdfs:label>
     </owl:Class>
+    <owl:Restriction rdf:nodeID="genid4915">
+        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002160"/>
+        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_33090"/>
+    </owl:Restriction>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PO_0025131"/>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
-        <owl:annotatedTarget>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002160"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_33090"/>
-            </owl:Restriction>
-        </owl:annotatedTarget>
+        <owl:annotatedTarget rdf:nodeID="genid4915"/>
         <oboInOwl:source>cjm</oboInOwl:source>
     </owl:Axiom>
     <owl:Axiom>
@@ -47667,5 +47665,5 @@ e.g.  if GP X enables ATPase coupled transporter activity&apos; and &apos;ATPase
 
 
 
-<!-- Generated by the OWL API (version 4.5.6) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.5.26) https://github.com/owlcs/owlapi -->
 

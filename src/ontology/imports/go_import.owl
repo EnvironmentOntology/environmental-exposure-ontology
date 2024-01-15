@@ -7,9 +7,9 @@ Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 
 
 Ontology(<http://purl.obolibrary.org/obo/ecto/imports/go_import.owl>
-<http://purl.obolibrary.org/obo/ecto/releases/2023-02-13/imports/go_import.owl>
-Annotation(<http://purl.org/dc/elements/1.1/source> <http://purl.obolibrary.org/obo/go/releases/2023-01-01/go.owl>)
-Annotation(owl:versionInfo "2023-02-13"^^xsd:string)
+<http://purl.obolibrary.org/obo/ecto/releases/2024-01-13/imports/go_import.owl>
+Annotation(<http://purl.org/dc/elements/1.1/source> <http://purl.obolibrary.org/obo/go/releases/2023-11-15/go.owl>)
+Annotation(owl:versionInfo "2024-01-13")
 
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0007610>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0007631>))
@@ -18,6 +18,7 @@ Declaration(Class(<http://purl.obolibrary.org/obo/GO_0032501>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0042756>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000115>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000233>))
+Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000700>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0100001>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/RO_0002161>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/go#gocheck_do_not_annotate>))
@@ -31,18 +32,26 @@ Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/go#goslim_pir>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/go#goslim_plant>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/go#goslim_pombe>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/go#goslim_yeast>))
+Declaration(AnnotationProperty(<http://purl.org/dc/elements/1.1/description>))
 Declaration(AnnotationProperty(<http://purl.org/dc/elements/1.1/source>))
+Declaration(AnnotationProperty(<http://purl.org/dc/elements/1.1/title>))
+Declaration(AnnotationProperty(<http://purl.org/dc/terms/license>))
 Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#SubsetProperty>))
 Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#created_by>))
 Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#creation_date>))
+Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#default-namespace>))
 Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#hasAlternativeId>))
 Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#hasDbXref>))
 Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym>))
 Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym>))
+Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#hasOBOFormatVersion>))
 Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace>))
 Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym>))
 Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#id>))
 Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#inSubset>))
+Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#is_class_level>))
+Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#is_metadata_tag>))
+Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#shorthand>))
 Declaration(AnnotationProperty(rdfs:comment))
 Declaration(AnnotationProperty(rdfs:label))
 ############################
@@ -52,6 +61,16 @@ Declaration(AnnotationProperty(rdfs:label))
 # Annotation Property: <http://purl.obolibrary.org/obo/IAO_0000115> (definition)
 
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0000115> "definition")
+
+# Annotation Property: <http://purl.obolibrary.org/obo/IAO_0000700> (has ontology root term)
+
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/IAO_0000700> "IAO:0000700")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/IAO_0000700> "external")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/IAO_0000700> "has_ontology_root_term")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#is_class_level> <http://purl.obolibrary.org/obo/IAO_0000700> "true"^^xsd:boolean)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#is_metadata_tag> <http://purl.obolibrary.org/obo/IAO_0000700> "true"^^xsd:boolean)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#shorthand> <http://purl.obolibrary.org/obo/IAO_0000700> "has_ontology_root_term")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0000700> "has ontology root term")
 
 # Annotation Property: <http://purl.obolibrary.org/obo/IAO_0100001> (term replaced by)
 
@@ -121,7 +140,7 @@ AnnotationAssertion(rdfs:label <http://www.geneontology.org/formats/oboInOwl#has
 
 # Class: <http://purl.obolibrary.org/obo/GO_0007610> (behavior)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:ems"^^xsd:string) Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:jl"^^xsd:string) Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "ISBN:0395448956") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PMID:20160973") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/GO_0007610> "The internally coordinated responses (actions or inactions) of animals (individuals or groups) to internal or external stimuli, via a mechanism that involves nervous system activity.")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:ems") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:jl") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "ISBN:0395448956") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PMID:20160973") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/GO_0007610> "The internally coordinated responses (actions or inactions) of animals (individuals or groups) to internal or external stimuli, via a mechanism that involves nervous system activity.")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/GO_0007610> "jl")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <http://purl.obolibrary.org/obo/GO_0007610> "2012-09-20T14:06:08Z")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasAlternativeId> <http://purl.obolibrary.org/obo/GO_0007610> "GO:0023032")
@@ -144,7 +163,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/GO_0007610> <http://purl.obolibrary.o
 
 # Class: <http://purl.obolibrary.org/obo/GO_0007631> (feeding behavior)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:mah"^^xsd:string) <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/GO_0007631> "Behavior associated with the intake of food.")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:mah") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/GO_0007631> "Behavior associated with the intake of food.")
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000233> <http://purl.obolibrary.org/obo/GO_0007631> "https://github.com/geneontology/go-ontology/issues/18547"^^xsd:anyURI)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/GO_0007631> "jl")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <http://purl.obolibrary.org/obo/GO_0007631> "2011-10-27T03:53:33Z")
@@ -179,7 +198,8 @@ SubClassOf(<http://purl.obolibrary.org/obo/GO_0007631> <http://purl.obolibrary.o
 
 # Class: <http://purl.obolibrary.org/obo/GO_0008150> (biological_process)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:pdt") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/GO_0008150> "A biological process represents a specific objective that the organism is genetically programmed to achieve. Biological processes are often described by their outcome or ending state, e.g., the biological process of cell division results in the creation of two daughter cells (a divided cell) from a single parent cell. A biological process is accomplished by a particular set of molecular functions carried out by specific gene products (or macromolecular complexes), often in a highly regulated manner and in a particular temporal sequence.")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:pdt") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/GO_0008150> "A biological process is the execution of a genetically-encoded biological module or program. It consists of all the steps required to achieve the specific biological objective of the module. A biological process is accomplished by a particular set of molecular functions carried out by specific gene products (or macromolecular complexes), often in a highly regulated manner and in a particular temporal sequence.")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000233> <http://purl.obolibrary.org/obo/GO_0008150> "https://github.com/geneontology/go-ontology/issues/24968"^^xsd:anyURI)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/GO_0008150> "jl")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <http://purl.obolibrary.org/obo/GO_0008150> "2012-09-19T15:05:24Z")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasAlternativeId> <http://purl.obolibrary.org/obo/GO_0008150> "GO:0000004")
@@ -199,12 +219,12 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <htt
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/GO_0008150> <http://purl.obolibrary.org/obo/go#goslim_plant>)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/GO_0008150> <http://purl.obolibrary.org/obo/go#goslim_pombe>)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/GO_0008150> <http://purl.obolibrary.org/obo/go#goslim_yeast>)
-AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/GO_0008150> "Note that, in addition to forming the root of the biological process ontology, this term is recommended for use for the annotation of gene products whose biological process is unknown. When this term is used for annotation, it indicates that no information was available about the biological process of the gene product annotated as of the date the annotation was made; the evidence code 'no data' (ND), is used to indicate this.")
+AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/GO_0008150> "Note that, in addition to forming the root of the biological process ontology, this term is recommended for the annotation of gene products whose biological process is unknown. When this term is used for annotation, it indicates that no information was available about the biological process of the gene product annotated as of the date the annotation was made; the evidence code 'no data' (ND), is used to indicate this.")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/GO_0008150> "biological_process")
 
 # Class: <http://purl.obolibrary.org/obo/GO_0032501> (multicellular organismal process)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:curators"^^xsd:string) Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:dph"^^xsd:string) Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:isa_complete"^^xsd:string) Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:tb"^^xsd:string) <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/GO_0032501> "Any biological process, occurring at the level of a multicellular organism, pertinent to its function.")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:curators") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:dph") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:isa_complete") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:tb") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/GO_0032501> "Any biological process, occurring at the level of a multicellular organism, pertinent to its function.")
 AnnotationAssertion(<http://purl.obolibrary.org/obo/RO_0002161> <http://purl.obolibrary.org/obo/GO_0032501> <http://purl.obolibrary.org/obo/NCBITaxon_2>)
 AnnotationAssertion(<http://purl.obolibrary.org/obo/RO_0002161> <http://purl.obolibrary.org/obo/GO_0032501> <http://purl.obolibrary.org/obo/NCBITaxon_2157>)
 AnnotationAssertion(<http://purl.obolibrary.org/obo/RO_0002161> <http://purl.obolibrary.org/obo/GO_0032501> <http://purl.obolibrary.org/obo/NCBITaxon_4896>)
@@ -224,7 +244,7 @@ SubClassOf(<http://purl.obolibrary.org/obo/GO_0032501> <http://purl.obolibrary.o
 
 # Class: <http://purl.obolibrary.org/obo/GO_0042756> (drinking behavior)
 
-AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:curators"^^xsd:string) Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:pr"^^xsd:string) <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/GO_0042756> "The specific behavior of an organism relating to the intake of liquids, especially water.")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:curators") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "GOC:pr") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/GO_0042756> "The specific behavior of an organism relating to the intake of liquids, especially water.")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/GO_0042756> "drinking behaviour")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/GO_0042756> "biological_process")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/GO_0042756> "GO:0042756")
