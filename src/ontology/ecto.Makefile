@@ -169,4 +169,4 @@ NANOBOT := ./nanobot
 
 .PHONY: clean
 clean:
-	rm -rf .nanobot.db
+	rm -rf .nanobot.db nanobot
