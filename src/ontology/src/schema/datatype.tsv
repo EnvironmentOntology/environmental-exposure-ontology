@@ -1,0 +1,13 @@
+datatype	parent	condition	description	SQLite type	PostgreSQL type	HTML type
+text			any text	TEXT	TEXT	textarea
+empty	text	equals('')	the empty string	NULL	NULL	
+line	text	exclude(/\\\\\\\n/)	one line of text			text
+label	line	match(/[^\s]+.+[^\s]/)	text that does not begin or end with whitespace			
+word	label	exclude(/\W/)	a single word: letters, numbers, underscore			
+table_type	word	in('table', 'column', 'datatype')	a VALVE table type			search
+sql_type	word	in('NULL', 'TEXT', 'INT')	a SQL type			search
+html_type	word	in('text', 'textarea', 'search', 'radio', 'number', 'select')	an HTML form type			search
+ontology_id	nonspace	match(/\w+:\w+/)	CURIE that does not begin or end with whitespace	TEXT	TEXT	
+ontology_label	trimmed_text	match(/[^\s]+.+[^\s]/)	label that does not begin or end with whitespace			text
+trimmed_text	text	exclude(/^\s+|\s+$/)	text that does not begin or end with whitespace			
+nonspace	trimmed_text	exclude(/\s/)	text without whitespace			

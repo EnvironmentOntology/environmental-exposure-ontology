@@ -1,0 +1,11 @@
+#!/bin/sh
+NANOBOT_URL="https://github.com/ontodev/nanobot.rs/releases/download/v2023-12-08/nanobot-x86_64-unknown-linux-musl"
+if [ ! -f nanobot ]; then
+  curl -L -o nanobot $NANOBOT_URL
+  chmod +x nanobot
+fi
+if [ ! -f .nanobot.db ] || [ ! -s .nanobot.db ]; then
+  GATEWAY_INTERFACE=NONE ./nanobot init > /tmp/null 2>&1
+fi
+
+./nanobot $@
