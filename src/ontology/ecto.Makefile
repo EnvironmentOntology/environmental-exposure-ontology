@@ -168,5 +168,5 @@ NANOBOT := ./nanobot
 ### Databases
 
 .PHONY: clean
-clean:
-	rm -rf .nanobot.db nanobot
+clean_nanobot:
+	rm -f .nanobot.db nanobot
