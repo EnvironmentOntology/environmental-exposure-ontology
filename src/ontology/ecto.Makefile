@@ -160,6 +160,7 @@ mre: tmp/mre_seed.txt
 # NANOBOT
 # ----------------------------------------
 
+.PHONY: _nanobot
 _nanobot:
 	chmod +x $@
 
