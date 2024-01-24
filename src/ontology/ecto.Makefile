@@ -160,9 +160,9 @@ mre: tmp/mre_seed.txt
 # NANOBOT
 # ----------------------------------------
 
-.PHONY: _nanobot
-_nanobot:
-	chmod +x $@
+.PHONY: executable_nanobot
+executable_nanobot:
+	chmod +x _nanobot
 
 NANOBOT := ./nanobot
 
@@ -171,4 +171,4 @@ NANOBOT := ./nanobot
 .PHONY: clean
 clean_nanobot:
 	rm -f .nanobot.db nanobot
-	make _nanobot
+	make executable_nanobot
