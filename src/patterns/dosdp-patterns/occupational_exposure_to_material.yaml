@@ -1,0 +1,74 @@
+---
+pattern_name: occupational_exposure_to_material
+pattern_iri: http://purl.obolibrary.org/obo/ecto/patterns/occupational_exposure_to_material.yaml
+
+description: 'Use this pattern to create compound term that categorise
+    exposures to various materials from the environment related to some
+    occupations.'
+
+# examples
+# occupational fume exposure
+# occupational grain dust exposure
+# occupational exposure to urea-based herbicide
+
+contributors:
+  - https://orcid.org/0000-0001-8314-2140  # Ray Stefancsik
+
+classes:
+  occupation: NCIT:C25193
+  exposure_event: ExO:0000002
+  material: BFO:0000040  # material entity
+
+relations:
+  has_exposure_stimulus: RO:0002309
+
+annotationProperties:
+  exact_synonym: oio:hasExactSynonym
+  related_synonym: oio:hasRelatedSynonym
+  xref: oio:hasDbXref
+  contributor: dct:contributor
+
+vars:
+  material: "'material'"
+
+data_list_vars:
+  orcid: xsd:anyURI  # ORCID of contributor
+  exact_synonyms: xsd:string  # add a list of exact synonyms
+  xrefs: xsd:anyURI  # add a list of external references
+
+name:
+  text: "occupational %s exposure"
+  vars:
+    - material
+
+def:
+  text: "Exposure to %s which is related to some occupation(s)."
+  vars:
+    - material
+  annotations:
+    - annotationProperty: xref
+      text: "AUTO:patterns/patterns/occupational_exposure_to_material"
+
+annotations:
+  - annotationProperty: exact_synonym
+    text: "occupational exposure to %s"
+    vars:
+      - material
+    annotations:
+      - annotationProperty: xref
+        text: "AUTO:patterns/patterns/proportion_of_attributes"
+
+  - annotationProperty: contributor
+    value: orcid
+
+exact_synonym:
+  value: exact_synonyms
+
+xref:
+  value: xrefs
+
+equivalentTo:
+  text: "'exposure_event'
+        and ('has_exposure_stimulus' some ('occupation' and %s))"
+  vars:
+    - material

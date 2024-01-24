@@ -7,8 +7,8 @@ Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 
 
 Ontology(<http://purl.obolibrary.org/obo/ecto/patterns/definitions.owl>
-<http://purl.obolibrary.org/obo/ecto/releases/2024-01-13/patterns/definitions.owl>
-Annotation(owl:versionInfo "2024-01-13")
+<http://purl.obolibrary.org/obo/ecto/releases/2024-01-24/patterns/definitions.owl>
+Annotation(owl:versionInfo "2024-01-24")
 
 Declaration(Class(<http://purl.obolibrary.org/obo/CHEBI_10022>))
 Declaration(Class(<http://purl.obolibrary.org/obo/CHEBI_100241>))
@@ -2570,6 +2570,9 @@ Declaration(Class(<http://purl.obolibrary.org/obo/ECTO_1000041>))
 Declaration(Class(<http://purl.obolibrary.org/obo/ECTO_1000042>))
 Declaration(Class(<http://purl.obolibrary.org/obo/ECTO_1000056>))
 Declaration(Class(<http://purl.obolibrary.org/obo/ECTO_1000121>))
+Declaration(Class(<http://purl.obolibrary.org/obo/ECTO_1999997>))
+Declaration(Class(<http://purl.obolibrary.org/obo/ECTO_1999998>))
+Declaration(Class(<http://purl.obolibrary.org/obo/ECTO_1999999>))
 Declaration(Class(<http://purl.obolibrary.org/obo/ECTO_2000000>))
 Declaration(Class(<http://purl.obolibrary.org/obo/ECTO_2000001>))
 Declaration(Class(<http://purl.obolibrary.org/obo/ECTO_2000002>))
@@ -5581,6 +5584,8 @@ Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002243>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002309>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0016004>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000115>))
+Declaration(AnnotationProperty(<http://purl.org/dc/terms/contributor>))
+Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#hasDbXref>))
 Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym>))
 
 
@@ -6018,8 +6023,8 @@ EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_0002002> ObjectIntersecti
 
 # Class: <http://purl.obolibrary.org/obo/ECTO_0010000> (exposure to environmental quality)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0010000> "A exposure event involving the interaction of an exposure receptor to quality.")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0010000> "quality exposure")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0010000> "A exposure event involving the interaction of an exposure receptor to characteristic.")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0010000> "characteristic exposure")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_0010000> "exposure to environmental quality")
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_0010000> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/PATO_0000001>)))
 
@@ -6200,106 +6205,106 @@ EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_0070021> ObjectIntersecti
 
 # Class: <http://purl.obolibrary.org/obo/ECTO_0070022> (exposure to apple via ingestion)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0070022> "An exposure to apple (whole) via ingestion.")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0070022> "apple (whole) exposure via ingestion")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0070022> "An exposure to apple via ingestion.")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0070022> "apple exposure via ingestion")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_0070022> "exposure to apple via ingestion")
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_0070022> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002242> <http://purl.obolibrary.org/obo/ExO_0000056>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/FOODON_00002473>)))
 
 # Class: <http://purl.obolibrary.org/obo/ECTO_0070023> (exposure to avocado via ingestion)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0070023> "An exposure to avocado (whole, raw) via ingestion.")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0070023> "avocado (whole, raw) exposure via ingestion")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0070023> "An exposure to avocado (raw) via ingestion.")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0070023> "avocado (raw) exposure via ingestion")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_0070023> "exposure to avocado via ingestion")
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_0070023> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002242> <http://purl.obolibrary.org/obo/ExO_0000056>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/FOODON_03305236>)))
 
 # Class: <http://purl.obolibrary.org/obo/ECTO_0070024> (exposure to banana via ingestion)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0070024> "An exposure to banana (whole) via ingestion.")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0070024> "banana (whole) exposure via ingestion")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0070024> "An exposure to banana via ingestion.")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0070024> "banana exposure via ingestion")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_0070024> "exposure to banana via ingestion")
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_0070024> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002242> <http://purl.obolibrary.org/obo/ExO_0000056>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/FOODON_00004183>)))
 
 # Class: <http://purl.obolibrary.org/obo/ECTO_0070025> (exposure to blueberries via ingestion)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0070025> "An exposure to blueberry (whole, raw) via ingestion.")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0070025> "blueberry (whole, raw) exposure via ingestion")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0070025> "An exposure to blueberry (raw) via ingestion.")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0070025> "blueberry (raw) exposure via ingestion")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_0070025> "exposure to blueberries via ingestion")
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_0070025> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002242> <http://purl.obolibrary.org/obo/ExO_0000056>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/FOODON_03302045>)))
 
 # Class: <http://purl.obolibrary.org/obo/ECTO_0070026> (exposure to cantaloupe via ingestion)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0070026> "An exposure to cantaloupe (whole, raw) via ingestion.")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0070026> "cantaloupe (whole, raw) exposure via ingestion")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0070026> "An exposure to cantaloupe (raw) via ingestion.")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0070026> "cantaloupe (raw) exposure via ingestion")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_0070026> "exposure to cantaloupe via ingestion")
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_0070026> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002242> <http://purl.obolibrary.org/obo/ExO_0000056>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/FOODON_03302805>)))
 
 # Class: <http://purl.obolibrary.org/obo/ECTO_0070027> (exposure to grapes via ingestion)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0070027> "An exposure to grape (whole, raw) via ingestion.")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0070027> "grape (whole, raw) exposure via ingestion")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0070027> "An exposure to grape (raw) via ingestion.")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0070027> "grape (raw) exposure via ingestion")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_0070027> "exposure to grapes via ingestion")
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_0070027> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002242> <http://purl.obolibrary.org/obo/ExO_0000056>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/FOODON_03301123>)))
 
 # Class: <http://purl.obolibrary.org/obo/ECTO_0070028> (exposure to grapefruit via ingestion)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0070028> "An exposure to grapefruit (whole, raw) via ingestion.")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0070028> "grapefruit (whole, raw) exposure via ingestion")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0070028> "An exposure to grapefruit (raw) via ingestion.")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0070028> "grapefruit (raw) exposure via ingestion")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_0070028> "exposure to grapefruit via ingestion")
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_0070028> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002242> <http://purl.obolibrary.org/obo/ExO_0000056>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/FOODON_03301702>)))
 
 # Class: <http://purl.obolibrary.org/obo/ECTO_0070029> (exposure to navel orange via ingestion)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0070029> "An exposure to navel orange (whole, raw) via ingestion.")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0070029> "navel orange (whole, raw) exposure via ingestion")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0070029> "An exposure to navel orange (raw) via ingestion.")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0070029> "navel orange (raw) exposure via ingestion")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_0070029> "exposure to navel orange via ingestion")
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_0070029> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002242> <http://purl.obolibrary.org/obo/ExO_0000056>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/FOODON_00002511>)))
 
 # Class: <http://purl.obolibrary.org/obo/ECTO_0070030> (exposure to peach via ingestion)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0070030> "An exposure to peach (whole, raw) via ingestion.")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0070030> "peach (whole, raw) exposure via ingestion")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0070030> "An exposure to peach (raw) via ingestion.")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0070030> "peach (raw) exposure via ingestion")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_0070030> "exposure to peach via ingestion")
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_0070030> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002242> <http://purl.obolibrary.org/obo/ExO_0000056>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/FOODON_03301719>)))
 
 # Class: <http://purl.obolibrary.org/obo/ECTO_0070031> (exposure to plum via ingestion)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0070031> "An exposure to plum (whole, raw) via ingestion.")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0070031> "plum (whole, raw) exposure via ingestion")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0070031> "An exposure to plum (raw) via ingestion.")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0070031> "plum (raw) exposure via ingestion")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_0070031> "exposure to plum via ingestion")
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_0070031> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002242> <http://purl.obolibrary.org/obo/ExO_0000056>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/FOODON_03301580>)))
 
 # Class: <http://purl.obolibrary.org/obo/ECTO_0070032> (exposure to apricot via ingestion)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0070032> "An exposure to apricot (whole, raw) via ingestion.")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0070032> "apricot (whole, raw) exposure via ingestion")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0070032> "An exposure to apricot (raw) via ingestion.")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0070032> "apricot (raw) exposure via ingestion")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_0070032> "exposure to apricot via ingestion")
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_0070032> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002242> <http://purl.obolibrary.org/obo/ExO_0000056>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/FOODON_03301701>)))
 
 # Class: <http://purl.obolibrary.org/obo/ECTO_0070033> (exposure to pear via ingestion)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0070033> "An exposure to pear (whole, raw) via ingestion.")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0070033> "pear (whole, raw) exposure via ingestion")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0070033> "An exposure to pear (raw) via ingestion.")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0070033> "pear (raw) exposure via ingestion")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_0070033> "exposure to pear via ingestion")
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_0070033> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002242> <http://purl.obolibrary.org/obo/ExO_0000056>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/FOODON_03301724>)))
 
 # Class: <http://purl.obolibrary.org/obo/ECTO_0070034> (exposure to raspberry via ingestion)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0070034> "An exposure to raspberry (whole, raw) via ingestion.")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0070034> "raspberry (whole, raw) exposure via ingestion")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0070034> "An exposure to raspberry (raw) via ingestion.")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0070034> "raspberry (raw) exposure via ingestion")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_0070034> "exposure to raspberry via ingestion")
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_0070034> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002242> <http://purl.obolibrary.org/obo/ExO_0000056>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/FOODON_03307119>)))
 
 # Class: <http://purl.obolibrary.org/obo/ECTO_0070035> (exposure to strawberry via ingestion)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0070035> "An exposure to strawberry (whole, raw) via ingestion.")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0070035> "strawberry (whole, raw) exposure via ingestion")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0070035> "An exposure to strawberry (raw) via ingestion.")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0070035> "strawberry (raw) exposure via ingestion")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_0070035> "exposure to strawberry via ingestion")
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_0070035> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002242> <http://purl.obolibrary.org/obo/ExO_0000056>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/FOODON_03301722>)))
 
 # Class: <http://purl.obolibrary.org/obo/ECTO_0070036> (exposure to tomato via ingestion)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0070036> "An exposure to tomato (whole) via ingestion.")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0070036> "tomato (whole) exposure via ingestion")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0070036> "An exposure to tomato via ingestion.")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0070036> "tomato exposure via ingestion")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_0070036> "exposure to tomato via ingestion")
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_0070036> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002242> <http://purl.obolibrary.org/obo/ExO_0000056>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/FOODON_03301453>)))
 
@@ -6319,43 +6324,43 @@ EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_0070038> ObjectIntersecti
 
 # Class: <http://purl.obolibrary.org/obo/ECTO_0070039> (exposure to watermelon via ingestion)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0070039> "An exposure to watermelon (whole, raw) via ingestion.")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0070039> "watermelon (whole, raw) exposure via ingestion")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0070039> "An exposure to watermelon (raw) via ingestion.")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0070039> "watermelon (raw) exposure via ingestion")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_0070039> "exposure to watermelon via ingestion")
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_0070039> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002242> <http://purl.obolibrary.org/obo/ExO_0000056>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/FOODON_03301040>)))
 
 # Class: <http://purl.obolibrary.org/obo/ECTO_0070040> (exposure to bean via ingestion)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0070040> "An exposure to bean (whole) via ingestion.")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0070040> "bean (whole) exposure via ingestion")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0070040> "An exposure to bean via ingestion.")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0070040> "bean exposure via ingestion")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_0070040> "exposure to bean via ingestion")
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_0070040> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002242> <http://purl.obolibrary.org/obo/ExO_0000056>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/FOODON_00002753>)))
 
 # Class: <http://purl.obolibrary.org/obo/ECTO_0070041> (exposure to lentil via ingestion)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0070041> "An exposure to lentil (whole) via ingestion.")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0070041> "lentil (whole) exposure via ingestion")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0070041> "An exposure to lentil via ingestion.")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0070041> "lentil exposure via ingestion")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_0070041> "exposure to lentil via ingestion")
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_0070041> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002242> <http://purl.obolibrary.org/obo/ExO_0000056>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/FOODON_03310641>)))
 
 # Class: <http://purl.obolibrary.org/obo/ECTO_0070042> (exposure to bell pepper via ingestion)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0070042> "An exposure to bell pepper (whole) via ingestion.")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0070042> "bell pepper (whole) exposure via ingestion")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0070042> "An exposure to bell pepper via ingestion.")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0070042> "bell pepper exposure via ingestion")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_0070042> "exposure to bell pepper via ingestion")
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_0070042> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002242> <http://purl.obolibrary.org/obo/ExO_0000056>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/FOODON_00003546>)))
 
 # Class: <http://purl.obolibrary.org/obo/ECTO_0070043> (exposure to broccoli via ingestion)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0070043> "An exposure to broccoli floret (whole, raw) via ingestion.")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0070043> "broccoli floret (whole, raw) exposure via ingestion")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0070043> "An exposure to broccoli floret (raw) via ingestion.")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0070043> "broccoli floret (raw) exposure via ingestion")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_0070043> "exposure to broccoli via ingestion")
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_0070043> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002242> <http://purl.obolibrary.org/obo/ExO_0000056>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/FOODON_03301713>)))
 
 # Class: <http://purl.obolibrary.org/obo/ECTO_0070044> (exposure to brussels sprout via ingestion)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0070044> "An exposure to brussels sprout (whole) via ingestion.")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0070044> "brussels sprout (whole) exposure via ingestion")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0070044> "An exposure to brussels sprout via ingestion.")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0070044> "brussels sprout exposure via ingestion")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_0070044> "exposure to brussels sprout via ingestion")
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_0070044> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002242> <http://purl.obolibrary.org/obo/ExO_0000056>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/FOODON_03311885>)))
 
@@ -6368,57 +6373,57 @@ EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_0070045> ObjectIntersecti
 
 # Class: <http://purl.obolibrary.org/obo/ECTO_0070046> (exposure to carrot via ingestion)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0070046> "An exposure to carrot root (whole) via ingestion.")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0070046> "carrot root (whole) exposure via ingestion")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0070046> "An exposure to carrot root via ingestion.")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0070046> "carrot root exposure via ingestion")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_0070046> "exposure to carrot via ingestion")
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_0070046> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002242> <http://purl.obolibrary.org/obo/ExO_0000056>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/FOODON_00003408>)))
 
 # Class: <http://purl.obolibrary.org/obo/ECTO_0070047> (exposure to cauliflower via ingestion)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0070047> "An exposure to cauliflower floret (whole) via ingestion.")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0070047> "cauliflower floret (whole) exposure via ingestion")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0070047> "An exposure to cauliflower floret via ingestion.")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0070047> "cauliflower floret exposure via ingestion")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_0070047> "exposure to cauliflower via ingestion")
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_0070047> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002242> <http://purl.obolibrary.org/obo/ExO_0000056>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/FOODON_00003410>)))
 
 # Class: <http://purl.obolibrary.org/obo/ECTO_0070048> (exposure to corn via ingestion)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0070048> "An exposure to corn kernel (whole) via ingestion.")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0070048> "corn kernel (whole) exposure via ingestion")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0070048> "An exposure to corn kernel via ingestion.")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0070048> "corn kernel exposure via ingestion")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_0070048> "exposure to corn via ingestion")
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_0070048> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002242> <http://purl.obolibrary.org/obo/ExO_0000056>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/FOODON_03317387>)))
 
 # Class: <http://purl.obolibrary.org/obo/ECTO_0070049> (exposure to eggplant via ingestion)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0070049> "An exposure to eggplant (whole) via ingestion.")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0070049> "eggplant (whole) exposure via ingestion")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0070049> "An exposure to eggplant via ingestion.")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0070049> "eggplant exposure via ingestion")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_0070049> "exposure to eggplant via ingestion")
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_0070049> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002242> <http://purl.obolibrary.org/obo/ExO_0000056>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/FOODON_00003618>)))
 
 # Class: <http://purl.obolibrary.org/obo/ECTO_0070050> (exposure to zucchini via ingestion)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0070050> "An exposure to zucchini squash (whole) via ingestion.")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0070050> "zucchini squash (whole) exposure via ingestion")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0070050> "An exposure to zucchini squash via ingestion.")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0070050> "zucchini squash exposure via ingestion")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_0070050> "exposure to zucchini via ingestion")
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_0070050> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002242> <http://purl.obolibrary.org/obo/ExO_0000056>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/FOODON_03310943>)))
 
 # Class: <http://purl.obolibrary.org/obo/ECTO_0070051> (exposure to squash via ingestion)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0070051> "An exposure to squash (whole) via ingestion.")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0070051> "squash (whole) exposure via ingestion")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0070051> "An exposure to squash via ingestion.")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0070051> "squash exposure via ingestion")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_0070051> "exposure to squash via ingestion")
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_0070051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002242> <http://purl.obolibrary.org/obo/ExO_0000056>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/FOODON_00003539>)))
 
 # Class: <http://purl.obolibrary.org/obo/ECTO_0070052> (exposure to kale via ingestion)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0070052> "An exposure to kale leaf (whole, raw) via ingestion.")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0070052> "kale leaf (whole, raw) exposure via ingestion")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0070052> "An exposure to kale leaf (raw) via ingestion.")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0070052> "kale leaf (raw) exposure via ingestion")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_0070052> "exposure to kale via ingestion")
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_0070052> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002242> <http://purl.obolibrary.org/obo/ExO_0000056>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/FOODON_03304859>)))
 
 # Class: <http://purl.obolibrary.org/obo/ECTO_0070053> (exposure to collard greens via ingestion)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0070053> "An exposure to collard leaf (whole, raw) via ingestion.")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0070053> "collard leaf (whole, raw) exposure via ingestion")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0070053> "An exposure to collard leaf (raw) via ingestion.")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0070053> "collard leaf (raw) exposure via ingestion")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_0070053> "exposure to collard greens via ingestion")
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_0070053> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002242> <http://purl.obolibrary.org/obo/ExO_0000056>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/FOODON_03304860>)))
 
@@ -6431,43 +6436,43 @@ EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_0070054> ObjectIntersecti
 
 # Class: <http://purl.obolibrary.org/obo/ECTO_0070055> (exposure to swiss chard via ingestion)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0070055> "An exposure to swiss chard leaf (whole) via ingestion.")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0070055> "swiss chard leaf (whole) exposure via ingestion")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0070055> "An exposure to swiss chard leaf via ingestion.")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0070055> "swiss chard leaf exposure via ingestion")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_0070055> "exposure to swiss chard via ingestion")
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_0070055> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002242> <http://purl.obolibrary.org/obo/ExO_0000056>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/FOODON_00003631>)))
 
 # Class: <http://purl.obolibrary.org/obo/ECTO_0070056> (exposure to onion via ingestion)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0070056> "An exposure to onion (whole, raw) via ingestion.")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0070056> "onion (whole, raw) exposure via ingestion")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0070056> "An exposure to onion (raw) via ingestion.")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0070056> "onion (raw) exposure via ingestion")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_0070056> "exposure to onion via ingestion")
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_0070056> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002242> <http://purl.obolibrary.org/obo/ExO_0000056>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/FOODON_03301704>)))
 
 # Class: <http://purl.obolibrary.org/obo/ECTO_0070057> (exposure to peas via ingestion)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0070057> "An exposure to pea (whole) via ingestion.")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0070057> "pea (whole) exposure via ingestion")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0070057> "An exposure to pea via ingestion.")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0070057> "pea exposure via ingestion")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_0070057> "exposure to peas via ingestion")
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_0070057> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002242> <http://purl.obolibrary.org/obo/ExO_0000056>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/FOODON_03301300>)))
 
 # Class: <http://purl.obolibrary.org/obo/ECTO_0070058> (exposure to lima bean via ingestion)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0070058> "An exposure to baby lima bean (whole) via ingestion.")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0070058> "baby lima bean (whole) exposure via ingestion")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0070058> "An exposure to baby lima bean via ingestion.")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0070058> "baby lima bean exposure via ingestion")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_0070058> "exposure to lima bean via ingestion")
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_0070058> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002242> <http://purl.obolibrary.org/obo/ExO_0000056>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/FOODON_03302061>)))
 
 # Class: <http://purl.obolibrary.org/obo/ECTO_0070059> (exposure to spinach leaf (whole) via ingestion)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0070059> "An exposure to spinach leaf (whole) via ingestion.")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0070059> "spinach leaf (whole) exposure via ingestion")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0070059> "An exposure to spinach leaf via ingestion.")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0070059> "spinach leaf exposure via ingestion")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_0070059> "exposure to spinach leaf (whole) via ingestion")
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_0070059> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002242> <http://purl.obolibrary.org/obo/ExO_0000056>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/FOODON_00003495>)))
 
 # Class: <http://purl.obolibrary.org/obo/ECTO_0070060> (exposure to spinach leaf (whole, raw) via ingestion)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0070060> "An exposure to spinach leaf (whole, raw) via ingestion.")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0070060> "spinach leaf (whole, raw) exposure via ingestion")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0070060> "An exposure to spinach leaf (raw) via ingestion.")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0070060> "spinach leaf (raw) exposure via ingestion")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_0070060> "exposure to spinach leaf (whole, raw) via ingestion")
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_0070060> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002242> <http://purl.obolibrary.org/obo/ExO_0000056>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/FOODON_03301716>)))
 
@@ -6480,8 +6485,8 @@ EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_0070061> ObjectIntersecti
 
 # Class: <http://purl.obolibrary.org/obo/ECTO_0070062> (exposure to green bean via ingestion)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0070062> "An exposure to green bean pod (whole) via ingestion.")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0070062> "green bean pod (whole) exposure via ingestion")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0070062> "An exposure to green bean pod via ingestion.")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0070062> "green bean pod exposure via ingestion")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_0070062> "exposure to green bean via ingestion")
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_0070062> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002242> <http://purl.obolibrary.org/obo/ExO_0000056>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/FOODON_03305806>)))
 
@@ -6508,36 +6513,36 @@ EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_0070065> ObjectIntersecti
 
 # Class: <http://purl.obolibrary.org/obo/ECTO_0070066> (exposure to soybean via ingestion)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0070066> "An exposure to soybean (whole) via ingestion.")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0070066> "soybean (whole) exposure via ingestion")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0070066> "An exposure to soybean via ingestion.")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0070066> "soybean exposure via ingestion")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_0070066> "exposure to soybean via ingestion")
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_0070066> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002242> <http://purl.obolibrary.org/obo/ExO_0000056>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/FOODON_03301415>)))
 
 # Class: <http://purl.obolibrary.org/obo/ECTO_0070067> (exposure to winter squash via ingestion)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0070067> "An exposure to squash (whole, raw) via ingestion.")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0070067> "squash (whole, raw) exposure via ingestion")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0070067> "An exposure to squash (raw) via ingestion.")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0070067> "squash (raw) exposure via ingestion")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_0070067> "exposure to winter squash via ingestion")
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_0070067> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002242> <http://purl.obolibrary.org/obo/ExO_0000056>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/FOODON_03301577>)))
 
 # Class: <http://purl.obolibrary.org/obo/ECTO_0070068> (exposure to yam via ingestion)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0070068> "An exposure to yam (whole) via ingestion.")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0070068> "yam (whole) exposure via ingestion")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0070068> "An exposure to yam via ingestion.")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0070068> "yam exposure via ingestion")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_0070068> "exposure to yam via ingestion")
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_0070068> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002242> <http://purl.obolibrary.org/obo/ExO_0000056>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/FOODON_00003448>)))
 
 # Class: <http://purl.obolibrary.org/obo/ECTO_0070069> (exposure to sweet potato via ingestion)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0070069> "An exposure to sweet potato (whole) via ingestion.")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0070069> "sweet potato (whole) exposure via ingestion")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0070069> "An exposure to sweet potato via ingestion.")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0070069> "sweet potato exposure via ingestion")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_0070069> "exposure to sweet potato via ingestion")
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_0070069> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002242> <http://purl.obolibrary.org/obo/ExO_0000056>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/FOODON_00003445>)))
 
 # Class: <http://purl.obolibrary.org/obo/ECTO_0070070> (exposure to egg via ingestion)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0070070> "An exposure to hen egg (whole) via ingestion.")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0070070> "hen egg (whole) exposure via ingestion")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0070070> "An exposure to hen egg via ingestion.")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0070070> "hen egg exposure via ingestion")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_0070070> "exposure to egg via ingestion")
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_0070070> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002242> <http://purl.obolibrary.org/obo/ExO_0000056>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/FOODON_03316061>)))
 
@@ -6914,8 +6919,8 @@ EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_0070123> ObjectIntersecti
 
 # Class: <http://purl.obolibrary.org/obo/ECTO_0070124> (exposure to white rice via ingestion)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0070124> "An exposure to white rice (whole) via ingestion.")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0070124> "white rice (whole) exposure via ingestion")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0070124> "An exposure to white rice via ingestion.")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0070124> "white rice exposure via ingestion")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_0070124> "exposure to white rice via ingestion")
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_0070124> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002242> <http://purl.obolibrary.org/obo/ExO_0000056>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/FOODON_00003787>)))
 
@@ -6935,8 +6940,8 @@ EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_0070126> ObjectIntersecti
 
 # Class: <http://purl.obolibrary.org/obo/ECTO_0070127> (exposure to couscous via ingestion)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0070127> "An exposure to couscous (whole, dried) via ingestion.")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0070127> "couscous (whole, dried) exposure via ingestion")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0070127> "An exposure to couscous (dried) via ingestion.")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0070127> "couscous (dried) exposure via ingestion")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_0070127> "exposure to couscous via ingestion")
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_0070127> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002242> <http://purl.obolibrary.org/obo/ExO_0000056>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/FOODON_03303207>)))
 
@@ -6956,8 +6961,8 @@ EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_0070129> ObjectIntersecti
 
 # Class: <http://purl.obolibrary.org/obo/ECTO_0070130> (exposure to potato via ingestion)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0070130> "An exposure to potato (whole) via ingestion.")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0070130> "potato (whole) exposure via ingestion")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0070130> "An exposure to potato via ingestion.")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0070130> "potato exposure via ingestion")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_0070130> "exposure to potato via ingestion")
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_0070130> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002242> <http://purl.obolibrary.org/obo/ExO_0000056>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/FOODON_03315354>)))
 
@@ -7124,22 +7129,22 @@ EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_0070153> ObjectIntersecti
 
 # Class: <http://purl.obolibrary.org/obo/ECTO_0070154> (exposure to peanut via ingestion)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0070154> "An exposure to peanut (whole) via ingestion.")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0070154> "peanut (whole) exposure via ingestion")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0070154> "An exposure to peanut via ingestion.")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0070154> "peanut exposure via ingestion")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_0070154> "exposure to peanut via ingestion")
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_0070154> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002242> <http://purl.obolibrary.org/obo/ExO_0000056>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/FOODON_00003206>)))
 
 # Class: <http://purl.obolibrary.org/obo/ECTO_0070155> (exposure to walnuts via ingestion)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0070155> "An exposure to walnut (whole, raw) via ingestion.")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0070155> "walnut (whole, raw) exposure via ingestion")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0070155> "An exposure to walnut (raw) via ingestion.")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0070155> "walnut (raw) exposure via ingestion")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_0070155> "exposure to walnuts via ingestion")
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_0070155> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002242> <http://purl.obolibrary.org/obo/ExO_0000056>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/FOODON_03315233>)))
 
 # Class: <http://purl.obolibrary.org/obo/ECTO_0070156> (exposure to nuts via ingestion)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0070156> "An exposure to nut (whole or parts) via ingestion.")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0070156> "nut (whole or parts) exposure via ingestion")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0070156> "An exposure to nut (whole or pieces) via ingestion.")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0070156> "nut (whole or pieces) exposure via ingestion")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_0070156> "exposure to nuts via ingestion")
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_0070156> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002242> <http://purl.obolibrary.org/obo/ExO_0000056>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/FOODON_03306632>)))
 
@@ -7292,29 +7297,29 @@ EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_0070177> ObjectIntersecti
 
 # Class: <http://purl.obolibrary.org/obo/ECTO_0070178> (exposure to Williams pear via ingestion)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0070178> "An exposure to Williams pear (whole) via ingestion.")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0070178> "Williams pear (whole) exposure via ingestion")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0070178> "An exposure to Williams pear via ingestion.")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0070178> "Williams pear exposure via ingestion")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_0070178> "exposure to Williams pear via ingestion")
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_0070178> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002242> <http://purl.obolibrary.org/obo/ExO_0000056>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/FOODON_00003575>)))
 
 # Class: <http://purl.obolibrary.org/obo/ECTO_0070179> (exposure to red onion via ingestion)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0070179> "An exposure to red onion (whole, raw) via ingestion.")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0070179> "red onion (whole, raw) exposure via ingestion")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0070179> "An exposure to red onion (raw) via ingestion.")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0070179> "red onion (raw) exposure via ingestion")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_0070179> "exposure to red onion via ingestion")
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_0070179> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002242> <http://purl.obolibrary.org/obo/ExO_0000056>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/FOODON_00003515>)))
 
 # Class: <http://purl.obolibrary.org/obo/ECTO_0070180> (exposure to white onion via ingestion)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0070180> "An exposure to white onion (whole, raw) via ingestion.")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0070180> "white onion (whole, raw) exposure via ingestion")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0070180> "An exposure to white onion (raw) via ingestion.")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0070180> "white onion (raw) exposure via ingestion")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_0070180> "exposure to white onion via ingestion")
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_0070180> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002242> <http://purl.obolibrary.org/obo/ExO_0000056>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/FOODON_00003349>)))
 
 # Class: <http://purl.obolibrary.org/obo/ECTO_0070181> (exposure to yellow onion via ingestion)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0070181> "An exposure to yellow onion (whole, raw) via ingestion.")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0070181> "yellow onion (whole, raw) exposure via ingestion")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0070181> "An exposure to yellow onion (raw) via ingestion.")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0070181> "yellow onion (raw) exposure via ingestion")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_0070181> "exposure to yellow onion via ingestion")
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_0070181> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002242> <http://purl.obolibrary.org/obo/ExO_0000056>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/FOODON_03311276>)))
 
@@ -7334,15 +7339,15 @@ EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_0070183> ObjectIntersecti
 
 # Class: <http://purl.obolibrary.org/obo/ECTO_0070184> (exposure to plant leaf vegetable food product via ingestion)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0070184> "An exposure to plant leaf vegetable food product via ingestion.")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0070184> "plant leaf vegetable food product exposure via ingestion")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0070184> "An exposure to plant leaf food product via ingestion.")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0070184> "plant leaf food product exposure via ingestion")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_0070184> "exposure to plant leaf vegetable food product via ingestion")
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_0070184> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002242> <http://purl.obolibrary.org/obo/ExO_0000056>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/FOODON_00002143>)))
 
 # Class: <http://purl.obolibrary.org/obo/ECTO_0070185> (exposure to bacon (whole cut or parts) via ingestion)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0070185> "An exposure to bacon (whole cut or parts) via ingestion.")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0070185> "bacon (whole cut or parts) exposure via ingestion")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0070185> "An exposure to bacon (whole cut or pieces) via ingestion.")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0070185> "bacon (whole cut or pieces) exposure via ingestion")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_0070185> "exposure to bacon (whole cut or parts) via ingestion")
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_0070185> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002242> <http://purl.obolibrary.org/obo/ExO_0000056>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/FOODON_03317331>)))
 
@@ -7446,8 +7451,8 @@ EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_0070199> ObjectIntersecti
 
 # Class: <http://purl.obolibrary.org/obo/ECTO_0070200> (exposure to winter squash (whole) via ingestion)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0070200> "An exposure to winter squash (whole) via ingestion.")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0070200> "winter squash (whole) exposure via ingestion")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0070200> "An exposure to winter squash via ingestion.")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0070200> "winter squash exposure via ingestion")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_0070200> "exposure to winter squash (whole) via ingestion")
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_0070200> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002242> <http://purl.obolibrary.org/obo/ExO_0000056>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/FOODON_00003946>)))
 
@@ -7537,8 +7542,8 @@ EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_0080001> ObjectIntersecti
 
 # Class: <http://purl.obolibrary.org/obo/ECTO_0080002> (exposure to chlorpyrifos in apple via ingestion)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0080002> "An exposure to chlorpyrifos mixed in apple (whole) via ingestion.")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0080002> "chlorpyrifos exposure in apple (whole) via ingestion")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0080002> "An exposure to chlorpyrifos mixed in apple via ingestion.")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0080002> "chlorpyrifos exposure in apple via ingestion")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_0080002> "exposure to chlorpyrifos in apple via ingestion")
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_0080002> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002242> <http://purl.obolibrary.org/obo/ExO_0000056>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/CHEBI_34631>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0016004> <http://purl.obolibrary.org/obo/FOODON_00002473>)))
 
@@ -8907,6 +8912,30 @@ AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynony
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_1000121> "exposure to landspout")
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_1000121> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/ENVO_01001486>)))
 
+# Class: <http://purl.obolibrary.org/obo/ECTO_1999997> (occupational exposure to urea-based herbicide)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "AUTO:patterns/patterns/occupational_exposure_to_material") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_1999997> "Exposure to urea herbicide which is related to some occupation(s).")
+AnnotationAssertion(<http://purl.org/dc/terms/contributor> <http://purl.obolibrary.org/obo/ECTO_1999997> "https://orcid.org/0000-0001-8314-2140")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "AUTO:patterns/patterns/proportion_of_attributes") <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_1999997> "occupational exposure to urea herbicide")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_1999997> "occupational exposure to urea-based herbicide")
+EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_1999997> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/CHEBI_188147> <http://purl.obolibrary.org/obo/NCIT_C25193>))))
+
+# Class: <http://purl.obolibrary.org/obo/ECTO_1999998> (occupational grain dust exposure)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "AUTO:patterns/patterns/occupational_exposure_to_material") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_1999998> "Exposure to grain dust which is related to some occupation(s).")
+AnnotationAssertion(<http://purl.org/dc/terms/contributor> <http://purl.obolibrary.org/obo/ECTO_1999998> "https://orcid.org/0000-0001-8314-2140")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "AUTO:patterns/patterns/proportion_of_attributes") <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_1999998> "occupational exposure to grain dust")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_1999998> "occupational grain dust exposure")
+EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_1999998> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ENVO_02000107> <http://purl.obolibrary.org/obo/NCIT_C25193>))))
+
+# Class: <http://purl.obolibrary.org/obo/ECTO_1999999> (occupational fume exposure)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "AUTO:patterns/patterns/occupational_exposure_to_material") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_1999999> "Exposure to fume which is related to some occupation(s).")
+AnnotationAssertion(<http://purl.org/dc/terms/contributor> <http://purl.obolibrary.org/obo/ECTO_1999999> "https://orcid.org/0000-0001-8314-2140")
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "AUTO:patterns/patterns/proportion_of_attributes") <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_1999999> "occupational exposure to fume")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_1999999> "occupational fume exposure")
+EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_1999999> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ENVO_02000112> <http://purl.obolibrary.org/obo/NCIT_C25193>))))
+
 # Class: <http://purl.obolibrary.org/obo/ECTO_2000000> (exposure to medical action)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_2000000> "An exposure to medical action.")
@@ -8937,8 +8966,8 @@ EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_2000003> ObjectIntersecti
 
 # Class: <http://purl.obolibrary.org/obo/ECTO_2000004> (exposure to theraputic insulin treatment)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_2000004> "An exposure to therapeutic insulin treatment.")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_2000004> "exposure to therapeutic insulin treatment")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_2000004> "An exposure to insulin treatment.")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_2000004> "exposure to insulin treatment")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_2000004> "exposure to theraputic insulin treatment")
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_2000004> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/MAXO_0000259>)))
 
@@ -9119,8 +9148,8 @@ EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_2000030> ObjectIntersecti
 
 # Class: <http://purl.obolibrary.org/obo/ECTO_2000031> (exposure to theraputic tranquilizers)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_2000031> "An exposure to tranquilizing agent therapy.")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_2000031> "exposure to tranquilizing agent therapy")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_2000031> "An exposure to obsolete tranquilizing agent therapy.")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_2000031> "exposure to obsolete tranquilizing agent therapy")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_2000031> "exposure to theraputic tranquilizers")
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_2000031> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/MAXO_0001023>)))
 
@@ -9252,8 +9281,8 @@ EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_2000050> ObjectIntersecti
 
 # Class: <http://purl.obolibrary.org/obo/ECTO_2000051> (exposure to angiography)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_2000051> "An exposure to Angiography.")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_2000051> "exposure to Angiography")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_2000051> "An exposure to X-ray Angiography.")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_2000051> "exposure to X-ray Angiography")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_2000051> "exposure to angiography")
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_2000051> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/NCIT_C20080>)))
 
@@ -9280,8 +9309,8 @@ EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_2000054> ObjectIntersecti
 
 # Class: <http://purl.obolibrary.org/obo/ECTO_2000055> (exposure to kidney implantation)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_2000055> "An exposure to kidney transplantation.")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_2000055> "exposure to kidney transplantation")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_2000055> "An exposure to whole kidney transplantation.")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_2000055> "exposure to whole kidney transplantation")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_2000055> "exposure to kidney implantation")
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_2000055> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/MAXO_0010043>)))
 
@@ -9399,8 +9428,8 @@ EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_3000010> ObjectIntersecti
 
 # Class: <http://purl.obolibrary.org/obo/ECTO_4000000> (exposure to change)
 
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_4000000> "A exposure event involving the interaction of an exposure receptor to deviation (from_normal) of quality.")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_4000000> "exposure to deviation (from_normal) in quality")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_4000000> "A exposure event involving the interaction of an exposure receptor to deviation (from_normal) of characteristic.")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_4000000> "exposure to deviation (from_normal) in characteristic")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_4000000> "exposure to change")
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_4000000> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000069> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/PATO_0000001>)))))
 
