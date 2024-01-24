@@ -170,3 +170,4 @@ NANOBOT := ./nanobot
 .PHONY: clean
 clean_nanobot:
 	rm -f .nanobot.db nanobot
+	make _nanobot
