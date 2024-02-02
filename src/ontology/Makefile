@@ -13,7 +13,7 @@
 #
 # 1. View and edit templates in `./_nanobot` and save in the tab Actions
 # 2. Check the `git diff`
-# 3. Rebuild `make ecto.owl`
+# 3. [Rebuild ecto.owl](prepare_release_fast)
 # 4. Check the `git diff` again
 # 5. `git commit` then `git push` your changes
 # 
