@@ -19,7 +19,7 @@
 # 
 ##### Maintenance
 #
-# `make clean_nanobot` when necessary
+# [Clean nanobot](clean_nanobot) when necessary
 
 
 # ----------------------------------------
