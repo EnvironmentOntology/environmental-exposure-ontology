@@ -1,0 +1,56 @@
+{% extends "form.html" %}
+
+{% block head_end %}
+<link rel="stylesheet" href="{{ page.root }}assets/styles.css" />
+<link rel="stylesheet" href="{{ page.root }}assets/ols-autocomplete.css" />
+{% endblock %}
+
+{% block body_end %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+<script src="{{ page.root }}assets/ols-autocomplete.js"></script>
+<script>
+  $("*[name='stressor']").first().attr("readonly", true);
+  $("*[name='stressor_label']").first().attr({
+    "data-selectpath": "https://www.ebi.ac.uk/ols4/",
+    "data-olsontology": "chebi",
+    "data-olswidget": "select",
+    "olstype": "",
+    "placeholder": "Search for ontology entity",
+  });
+
+  $("*[name='behavior']").first().attr("readonly", true);
+  $("*[name='behavior_label']").first().attr({
+    "data-selectpath": "https://www.ebi.ac.uk/ols4/",
+    "data-olsontology": "nbo",
+    "data-olswidget": "select",
+    "olstype": "",
+    "placeholder": "Search for ontology entity",
+  });
+
+  $("*[name='route']").first().attr("readonly", true);
+  $("*[name='route_label']").first().attr({
+    "data-selectpath": "https://www.ebi.ac.uk/ols4/",
+    "data-olsontology": "exo",
+    "data-olswidget": "select",
+    "olstype": "",
+    "placeholder": "Search for ontology entity",
+  });
+
+  var app = require("ols-autocomplete");
+  var instance = new app();
+  options = {
+    action: function (relativePath, suggestion_ontology, type, iri, data) {
+      console.log("In overwritten function")
+      console.log("Relative Path: " + relativePath)
+      console.log("Suggested Ontology: " + suggestion_ontology)
+      console.log("Type (optional): " + type)
+      console.log("iri (optional): " + iri)
+      console.log("Whole data element (optional+new): ")
+      console.log(data)
+      console.log(document.activeElement)
+      console.log("Field-id: " + $('.ebi-autocomplete:focus'))
+    }
+  }
+  instance.start(options);
+</script>
+{% endblock %}
