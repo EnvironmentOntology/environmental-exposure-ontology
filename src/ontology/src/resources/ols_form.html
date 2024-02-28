@@ -10,9 +10,12 @@
 <script src="{{ page.root }}assets/ols-autocomplete.js"></script>
 <script>
   $("*[name='stressor']").first().attr("readonly", true);
+  //$("*[name='labelset']").first().attr("readonly", true);
+
+  // ONTOLOGY AUTOCOMPLETE
   $("*[name='stressor_label']").first().attr({
     "data-selectpath": "https://www.ebi.ac.uk/ols4/",
-    "data-olsontology": "chebi",
+    "data-olsontology": "pato",
     "data-olswidget": "select",
     "olstype": "",
     "placeholder": "Search for ontology entity",
@@ -52,5 +55,97 @@
     }
   }
   instance.start(options);
+
+  // custom tokenizer that tokenizes with underscore char as well
+  function getObjTokenizer() {
+    return function setKey(keys) {
+      keys = Array.isArray(keys) ? keys : [].slice.call(arguments, 0);
+
+      return function tokenize(o) {
+        var tokens = [];
+
+        keys.forEach(function(k) {
+          tokens = tokens.concat(custom_nonword_tokenizer(String(o[k])));
+        });
+
+        return tokens;
+      };
+    };
+  }
+
+  function custom_nonword_tokenizer(str) {
+    str = String(str);
+    return str ? str.split(/[^a-zA-Z0-9]+/) : [];
+  }
+
+  $("*[name='stressor_label']").first().on('change', function(evt, item) {
+    if (!this.value) {
+      // clear id when term cleaned
+      $("*[name='stressor']").first()[0].value = "";
+    }
+  });
+
+  // PARENT AUTOCOMPLETE
+  $("*[name='parent_cell_set_accession']").first().attr("readonly", true);
+
+  function configure_autocomplete(divName, records) {
+    my_obj_tokenizer = getObjTokenizer();
+    // constructs the suggestion engine
+    var typeaheadBH = new Bloodhound({
+      // datumTokenizer: Bloodhound.tokenizers.obj.nonword(['cell_label', 'cell_set_accession']),
+      datumTokenizer: my_obj_tokenizer(['cell_label', 'cell_set_accession']),
+      queryTokenizer: Bloodhound.tokenizers.nonword,
+      local: records
+    });
+    typeaheadBH.initialize();
+
+    $("*[name='" + divName + "']").first().typeahead({
+      hint: false,
+      highlight: true,
+      minLength: 1
+    },
+    {
+      name: 'autocomplete',
+      source: typeaheadBH,
+      limit: 10,
+      display: function(selection){
+          return selection['cell_label'];
+      },
+      templates: {
+        suggestion: function(data) {
+            return '<p>' + data.cell_label + ' [' + data.cell_set_accession + '] </p>';
+        }
+      }
+    });
+
+    $("*[name='" + divName + "']").first().on('typeahead:selected', function(evt, item) {
+      $("*[name='parent_cell_set_accession']").first()[0].value = item['cell_set_accession'];
+    });
+  }// end configure_autocomplete
+
+  var table_json_url = String(window.location.href).split("/row")[0] + ".json?limit=100000&shape=value_rows";
+  var row_number =  String(window.location.href).split("?")[0].split("/row/")[1]
+
+  $.getJSON(table_json_url, function (table_data) {
+    var form_data = table_data[parseInt(row_number) - 1]
+
+    console.log("Form data ", form_data);
+    console.log("All data ", table_data);
+    // sort highest rank first but ordered by accession_id if same rank. Then filter higher ranks only
+    // table_data.sort((a, b) => (a.rank > b.rank) ? -1 : (a.rank === b.rank) ? ((a.cell_set_accession > b.cell_set_accession) ? 1 : -1) : 1 );
+    // var parents = table_data.filter(function (el) {
+    //   return parseInt(el.rank) > parseInt(form_data.rank);
+    // });
+    // console.log("Table data ", parents);
+
+    configure_autocomplete("parent_cell_set_name", table_data);
+  });
+
+  $("*[name='parent_cell_set_name']").first().on('change', function(evt, item) {
+    if (!this.value) {
+      // clear id when term cleaned
+      $("*[name='parent_cell_set_accession']").first()[0].value = "";
+    }
+  });
 </script>
 {% endblock %}
