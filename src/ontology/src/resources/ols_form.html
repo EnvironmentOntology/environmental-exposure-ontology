@@ -10,8 +10,6 @@
 <script src="{{ page.root }}assets/ols-autocomplete.js"></script>
 <script>
   $("*[name='stressor']").first().attr("readonly", true);
-  //$("*[name='labelset']").first().attr("readonly", true);
-
   // ONTOLOGY AUTOCOMPLETE
   $("*[name='stressor_label']").first().attr({
     "data-selectpath": "https://www.ebi.ac.uk/ols4/",
@@ -39,8 +37,9 @@
     "placeholder": "Search for ontology entity",
   });
 
-  var app = require("ols-autocomplete");
+  var app = require("../assets/ols-autocomplete.js");
   var instance = new app();
+  console.log(instance)
   options = {
     action: function (relativePath, suggestion_ontology, type, iri, data) {
       console.log("In overwritten function")
