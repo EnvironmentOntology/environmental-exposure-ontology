@@ -44,8 +44,8 @@ require = function t(e, o, i) {
                         // now automatically fill ID field based on the selection
                         autocomplete_input_name = e.currentTarget.name;
                         // get the matching 'id' input field's name
-                        // classifying_ontology_term_name -> classifying_ontology_term_id
-                        target_input_name = autocomplete_input_name.replace("_name", "_id");
+                        // classifying_ontology_term_label -> classifying_ontology_term
+                        target_input_name = autocomplete_input_name.replace("_label", "");
                         if ($('input[name="' + target_input_name + '"]').length > 0) {
                             $('input[name="' + target_input_name + '"]')[0].value = i.data.shortForm;
                         }
