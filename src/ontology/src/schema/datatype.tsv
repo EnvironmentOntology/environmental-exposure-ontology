@@ -1,0 +1,18 @@
+datatype	parent	condition	description	SQL type	HTML type
+text			any text	TEXT	textarea
+empty	text	equals('')	the empty string	NULL	
+line	text	exclude(/\\\\\\\n/)	one line of text		input
+label	line	match(/[^\s]+.+[^\s]/)	text that does not begin or end with whitespace		
+non-space	label	exclude(/\s/)	non-space characters		
+word	label	exclude(/\W/)	a single word: letters, numbers, underscore		
+natural_number	non-space	match(/\d+/)	An integer greater than zero	INTEGER	
+positive_decimal	non-space	match(/\d+.\d+/)	A number with decimal places, greater than zero	NUMERIC	
+negative_decimal	non-space	match(/-\d+.\d+/)	A number with decimal places, less than than zero	NUMERIC	
+date	non-space	match(/\d\d\d\d-\d\d-\d\d/)	A date in YYY-MM-DD format		
+table_type	word	in('table', 'column', 'datatype')	a VALVE table type		search
+sql_type	word	in('NULL', 'TEXT', 'INTEGER', 'REAL')	a SQL type		search
+html_type	word	in('input', 'textarea', 'search', 'radio', 'number', 'select')	an HTML form type		search
+ontology_id	non-space	match(/\w+:\w+/)	CURIE that does not begin or end with whitespace	TEXT	
+ontology_label	trimmed_text	match(/[^\s]+.+[^\s]/)	label that does not begin or end with whitespace		search
+trimmed_text	text	exclude(/^\s+|\s+$/)	text that does not begin or end with whitespace		
+autocomplete_ont	line	exclude(/^\s+|\s+$/)	a ontology id		

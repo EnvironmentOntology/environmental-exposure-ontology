@@ -154,3 +154,21 @@ tmp/mre_seed.txt:
 
 mre: tmp/mre_seed.txt
 	$(ROBOT) filter -i $(SRC) -T tmp/mre_seed.txt -o $@
+
+
+# ----------------------------------------
+# NANOBOT
+# ----------------------------------------
+
+.PHONY: executable_nanobot
+executable_nanobot:
+	chmod +x _nanobot
+
+NANOBOT := ./nanobot
+
+### Databases
+
+.PHONY: clean
+clean_nanobot:
+	rm -f .nanobot.db nanobot
+	make executable_nanobot
