@@ -62,19 +62,6 @@ imports/npo_import.owl:
 mirror/npo.owl:
 	echo "!!!!!NPO currently skipped!"
 
-#https://github.com/EnvironmentOntology/envo/issues/1069
-#https://github.com/EnvironmentOntology/envo/issues/1314
-#ENVO IMPORT BLOCKED BY https://github.com/FoodOntology/foodon/pull/293 (plus release)
-
-FORCE_BROKEN_IMPORT = false
-$(IMPORTDIR)/envo_import.owl: $(MIRRORDIR)/envo.owl $(IMPORTDIR)/envo_terms_combined.txt
-	if [ $(IMP) = true ] && [ $(FORCE_BROKEN_IMPORT) = true ]; then $(ROBOT) query -i $< --update ../sparql/preprocess-module.ru \
-		extract -T $(IMPORTDIR)/envo_terms_combined.txt --force true --copy-ontology-annotations true --individuals include --method BOT \
-		remove --term ENVO:01001479 --axioms equivalent  --preserve-structure false \
-		remove  --term RO:0000057 --term RO:0000057 --term RO:0000057 --term RO:0001015 --term RO:0000057 --term BFO:0000067 --trim true \
-		query --update ../sparql/inject-subset-declaration.ru --update ../sparql/inject-synonymtype-declaration.ru --update ../sparql/postprocess-module.ru \
-		annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) --output $@.tmp.owl && mv $@.tmp.owl $@; fi
-
 # https://github.com/enpadasi/Ontology-for-Nutritional-Studies/issues/33
 #$(IMPORTDIR)/ons_import.owl: $(MIRRORDIR)/ons.owl $(IMPORTDIR)/ons_terms_combined.txt
 #	if [ $(IMP) = true ]; then $(ROBOT) query -i $< --update ../sparql/preprocess-module.ru \
