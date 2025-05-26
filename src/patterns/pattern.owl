@@ -65,10 +65,12 @@ Declaration(Class(<http://purl.obolibrary.org/obo/ecto/patterns/exposure_to_orga
 Declaration(Class(<http://purl.obolibrary.org/obo/ecto/patterns/food_ingestion.yaml>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000050>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0000052>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0000087>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002233>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002242>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002243>))
 Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002309>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0016004>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000115>))
 Declaration(AnnotationProperty(<http://purl.org/dc/terms/title>))
 Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym>))
@@ -100,6 +102,7 @@ AnnotationAssertion(<http://purl.org/dc/terms/title> <http://purl.obolibrary.org
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ecto/patterns/consumption_of_addictive_substance_route.yaml> "'substance' 'behavior' exposure via 'route'"^^xsd:string)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ecto/patterns/consumption_of_addictive_substance_route.yaml> "exposure to 'substance' via 'behavior' via 'route'"^^xsd:string)
 EquivalentClasses(<http://purl.obolibrary.org/obo/ecto/patterns/consumption_of_addictive_substance_route.yaml> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002242> <http://purl.obolibrary.org/obo/ExO_0000055>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/GO_0007610> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002233> <http://purl.obolibrary.org/obo/CHEBI_24431>)))))
+EquivalentClasses(<http://purl.obolibrary.org/obo/ecto/patterns/consumption_of_addictive_substance_route.yaml> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002242> <http://purl.obolibrary.org/obo/ExO_0000055>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/GO_0007610> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002233> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000087> <http://purl.obolibrary.org/obo/CHEBI_24431>))))))
 
 # Class: <http://purl.obolibrary.org/obo/ecto/patterns/exposure_to_astronomical_body_part.yaml> (exposure to 'astronomical body part')
 
@@ -163,7 +166,7 @@ AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.ob
 AnnotationAssertion(<http://purl.org/dc/terms/title> <http://purl.obolibrary.org/obo/ecto/patterns/exposure_to_chemical_medium_route.yaml> "exposure_to_chemical_medium_route"^^xsd:string)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ecto/patterns/exposure_to_chemical_medium_route.yaml> "'chemical entity' exposure in 'medium' via 'route'"^^xsd:string)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ecto/patterns/exposure_to_chemical_medium_route.yaml> "exposure to 'chemical entity' in 'medium' via 'route'"^^xsd:string)
-EquivalentClasses(<http://purl.obolibrary.org/obo/ecto/patterns/exposure_to_chemical_medium_route.yaml> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002242> <http://purl.obolibrary.org/obo/ExO_0000055>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002243> <http://purl.obolibrary.org/obo/ENVO_00010483>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/CHEBI_24431>)))
+EquivalentClasses(<http://purl.obolibrary.org/obo/ecto/patterns/exposure_to_chemical_medium_route.yaml> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002242> <http://purl.obolibrary.org/obo/ExO_0000055>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/CHEBI_24431>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0016004> <http://purl.obolibrary.org/obo/ENVO_00010483>)))
 
 # Class: <http://purl.obolibrary.org/obo/ecto/patterns/exposure_to_chemical_route.yaml> (exposure to 'chemical entity' via 'route')
 
