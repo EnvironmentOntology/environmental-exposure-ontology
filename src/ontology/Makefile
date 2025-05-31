@@ -399,8 +399,8 @@ ifeq ($(IMP),true)
 ## Default module type (slme)
 $(IMPORTDIR)/%_import.owl: $(MIRRORDIR)/%.owl $(IMPORTDIR)/%_terms.txt \
 			   $(IMPORTSEED) | all_robot_plugins
-	$(ROBOT) annotate --input $< --remove-annotations --interpolate true \
-		          --link-annotation dc:source "%{version_iri}" \
+	$(ROBOT) annotate --input $< --remove-annotations \
+		 odk:normalize --add-source true \
 		 extract --term-file $(IMPORTDIR)/$*_terms.txt $(T_IMPORTSEED) \
 		         --force true --copy-ontology-annotations true \
 		         --individuals include \
@@ -417,8 +417,8 @@ $(IMPORTDIR)/%_import.owl: $(MIRRORDIR)/%.owl $(IMPORTDIR)/%_terms.txt \
 
 ## Module for ontology: maxo (filter)
 $(IMPORTDIR)/maxo_import.owl: $(MIRRORDIR)/maxo.owl $(IMPORTDIR)/maxo_terms.txt $(IMPORTSEED) | all_robot_plugins
-	$(ROBOT) annotate --input $< --remove-annotations --interpolate true \
-		          --link-annotation dc:source "%{version_iri}" \
+	$(ROBOT) annotate --input $< --remove-annotations \
+		 odk:normalize --add-source true \
 		 extract --term-file $(IMPORTDIR)/maxo_terms.txt $(T_IMPORTSEED) \
 		         --copy-ontology-annotations true --force true --method BOT \
 		 remove --axioms external --preserve-structure false --trim false \
@@ -437,8 +437,8 @@ $(IMPORTDIR)/maxo_import.owl: $(MIRRORDIR)/maxo.owl $(IMPORTDIR)/maxo_terms.txt 
 ## Module for ontology: ncit (slme)
 ifeq ($(IMP_LARGE),true)
 $(IMPORTDIR)/ncit_import.owl: $(MIRRORDIR)/ncit.owl $(IMPORTDIR)/ncit_terms.txt $(IMPORTSEED) | all_robot_plugins
-	$(ROBOT) annotate --input $< --remove-annotations --interpolate true \
-		          --link-annotation dc:source "%{version_iri}" \
+	$(ROBOT) annotate --input $< --remove-annotations \
+		 odk:normalize --add-source true \
 		 extract --term-file $(IMPORTDIR)/ncit_terms.txt $(T_IMPORTSEED) \
 		         --copy-ontology-annotations true --force true \
 		         --individuals include \
@@ -458,8 +458,8 @@ endif # IMP_LARGE=true
 ## Module for ontology: ncbitaxon (slme)
 ifeq ($(IMP_LARGE),true)
 $(IMPORTDIR)/ncbitaxon_import.owl: $(MIRRORDIR)/ncbitaxon.owl $(IMPORTDIR)/ncbitaxon_terms.txt $(IMPORTSEED) | all_robot_plugins
-	$(ROBOT) annotate --input $< --remove-annotations --interpolate true \
-		          --link-annotation dc:source "%{version_iri}" \
+	$(ROBOT) annotate --input $< --remove-annotations \
+		 odk:normalize --add-source true \
 		 extract --term-file $(IMPORTDIR)/ncbitaxon_terms.txt $(T_IMPORTSEED) \
 		         --copy-ontology-annotations true --force true \
 		         --individuals include \
@@ -932,7 +932,9 @@ normalize_src: $(SRC)
 
 .PHONY: validate_idranges
 validate_idranges:
-	if [ -f ecto-idranges.owl ]; then dicer-cli policy ecto-idranges.owl ; fi
+	if [ -f ecto-idranges.owl ]; then \
+		dicer-cli policy --assume-manchester --show-owlapi-error ecto-idranges.owl ; \
+	fi
 
 # Deprecated: Use 'sh run.sh odk.py update' without using the Makefile.
 .PHONY: update_repo
