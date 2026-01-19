@@ -10,7 +10,7 @@
 # More information: https://github.com/INCATools/ontology-development-kit/
 
 # Fingerprint of the configuration file when this Makefile was last generated
-CONFIG_HASH=                516cd45c3a1eceea30bf46b316cab26ce33bbb7a2dd450a951ed3288d80661b2
+CONFIG_HASH=                4e9d60b493c0e132981d6cf259e8dcbfce3eb6aee714b66313dbcf2c522a1c0c
 
 
 # ----------------------------------------
@@ -555,7 +555,7 @@ ifeq ($(MIR),true)
 .PHONY: mirror-chebi
 .PRECIOUS: $(MIRRORDIR)/chebi.owl
 mirror-chebi: | $(TMPDIR)
-	$(ROBOT) remove -I https://raw.githubusercontent.com/obophenotype/chebi_obo_slim/main/chebi_slim.owl --base-iri http://purl.obolibrary.org/obo/CHEBI  --axioms external --preserve-structure false --trim false -o $(TMPDIR)/$@.owl
+	$(ROBOT) remove -I http://purl.obolibrary.org/obo/upheno/chebi_slim.owl --base-iri http://purl.obolibrary.org/obo/CHEBI  --axioms external --preserve-structure false --trim false -o $(TMPDIR)/$@.owl
 
 
 ## ONTOLOGY: envo
