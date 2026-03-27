@@ -1,0 +1,55 @@
+OPENAI_HOST: https://api.cborg.lbl.gov
+OPENAI_BASE_PATH: v1/chat/completions
+GOOSE_MODEL: anthropic/claude-sonnet
+GOOSE_PROVIDER: openai
+extensions:
+  developer:
+    bundled: true
+    display_name: Developer
+    enabled: true
+    name: developer
+    timeout: 300
+    type: builtin
+  memory:
+    bundled: true
+    display_name: Memory
+    enabled: true
+    name: memory
+    timeout: 300
+    type: builtin
+  git:
+    args:
+    - mcp-server-git
+    bundled: null
+    cmd: uvx
+    description: Git version control system integration
+    enabled: false
+    env_keys: []
+    envs: {}
+    name: git
+    timeout: 300
+    type: stdio
+  fetch:
+    args:
+    - mcp-server-fetch
+    bundled: null
+    cmd: uvx
+    description: Web content fetching and processing capabilities
+    enabled: false
+    env_keys: []
+    envs: {}
+    name: fetch
+    timeout: 300
+    type: stdio
+  pdfreader:
+    args:
+    - artl-mcp
+    bundled: null
+    cmd: uvx
+    description: Search and download scientific publications (deep research)
+    enabled: false
+    env_keys: []
+    envs: {}
+    name: pdfreader
+    timeout: 300
+    type: stdio
