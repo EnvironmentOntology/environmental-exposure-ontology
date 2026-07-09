@@ -9,35 +9,65 @@ export_formats:
   - obo
   - json
 import_group:
+  use_base_merging: TRUE
+  # Foreign IRIs stripped from the merged import.
+  # COB_* carries the atom/subatomic-particle disjointness that makes the
+  # merged ontology inconsistent (issue #79); removing it lets ECTO build
+  # without the disjoint-stripping workaround in ecto.Makefile.
+  exclude_iri_patterns:
+    - <http://purl.obolibrary.org/obo/COB_*>
+    - <http://purl.obolibrary.org/obo/GOCHE_*>
+    - <http://purl.obolibrary.org/obo/NCBITaxon_Union_*>
   products:
     - id: chebi
       make_base: TRUE
       mirror_from: http://purl.obolibrary.org/obo/upheno/chebi_slim.owl
     - id: envo
+      use_base: TRUE
     - id: exo
+      make_base: TRUE
+      base_iris:
+        - http://purl.obolibrary.org/obo/ExO_
     - id: go
-    - id: npo
+      # make_base (not use_base): the PURL for go-base.owl.gz redirects to GO's
+      # server which returns 403 for the absent gzip, which odk-helper treats as
+      # a hard error. go.owl.gz returns a clean 404, so make_base falls back fine.
+      make_base: TRUE
     - id: maxo
-      module_type: filter
+      use_base: TRUE
     - id: foodon
+      make_base: TRUE
     - id: nbo
+      use_base: TRUE
     - id: ncit
       is_large: TRUE
+      make_base: TRUE
     - id: ncbitaxon
       use_gzipped: TRUE
       is_large: TRUE
+      make_base: TRUE
+      base_iris:
+        - http://purl.obolibrary.org/obo/NCBITaxon_
       mirror_from: http://purl.obolibrary.org/obo/ncbitaxon/subsets/taxslim.owl
     - id: pato
+      use_base: TRUE
     - id: ro
-    - id: uberon 
+      use_base: TRUE
+    - id: uberon
+      use_base: TRUE
     - id: xco
+      make_base: TRUE
 robot_java_args: '-Xmx8G'
 components:
   products:
     - filename: ecto-xrefs.owl
     - filename: bridge.owl
     - filename: obsoletes.owl
-allow_equivalents: asserted-only
+# 'all' tolerates an inferred equivalence between two imported classes
+# (FOODON:02010014 'animal blood' == UBERON:0000178 'blood') that base merging
+# surfaces; no ECTO term is involved. See the merged_import override in
+# ecto.Makefile, which strips imported disjointness axioms for the same reason.
+allow_equivalents: all
 robot_report:
   fail_on : ERROR
   use_labels : False

@@ -55,12 +55,6 @@ $(MODDIR)/%.owl: $(MODDIR)/%.rdf
 
 touch:
 	echo $(all_modules_omn)
-	
-imports/npo_import.owl:
-	echo "!!!!!NPO currently skipped!"
-	
-mirror/npo.owl:
-	echo "!!!!!NPO currently skipped!"
 
 # https://github.com/enpadasi/Ontology-for-Nutritional-Studies/issues/33
 #$(IMPORTDIR)/ons_import.owl: $(MIRRORDIR)/ons.owl $(IMPORTDIR)/ons_terms_combined.txt
@@ -73,14 +67,37 @@ mirror/npo.owl:
 #		annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) --output $@.tmp.owl && mv $@.tmp.owl $@; fi
 
 
-$(ONT)-full.owl: $(SRC) $(OTHER_SRC)
-	echo "!!!!!! FULL RELEASE IS OVERWRITTEN, REMOVING DISJOINTS - ecto.Makefile. See https://github.com/EnvironmentOntology/environmental-exposure-ontology/issues/79 !!!!!!"
+# merged_import overridden to strip imported disjointness axioms (issue #79). Base merging pulls
+# in the full FoodOn/UBERON/CHEBI logical content that the old SLME modules never extracted, and
+# upstream disjointness then breaks ECTO: the CHEBI/COB atom-vs-subatomic-particle clash makes the
+# ontology inconsistent, and UBERON's 'gross anatomical part' DisjointWith 'multicellular organism'
+# makes several ECTO milk-exposure terms unsatisfiable. ECTO is not the authority on upstream
+# disjointness, so we drop it here once - in the shared import - instead of stripping disjoints in
+# every release/test target. This replaces the previous base/full/test/reason_test overrides.
+#
+# The recipe below mirrors the ODK-generated merged_import.owl rule (see Makefile) with one extra
+# `remove --axioms disjoint` step. The `remove --select` excludes mirror import_group.exclude_iri_patterns
+# in ecto-odk.yaml - keep both in sync if the ODK import recipe or the exclude list changes.
+# The residual inferred equivalence FOODON:02010014 == UBERON:0000178 is tolerated via
+# `allow_equivalents: all` in ecto-odk.yaml.
+$(IMPORTDIR)/merged_import.owl: $(MIRRORDIR)/merged.owl $(ALL_TERMS) \
+				$(IMPORTSEED) | all_robot_plugins
 	$(ROBOT) merge --input $< \
-		remove --axioms disjoint --preserve-structure false \
-		reason --reasoner ELK --equivalent-classes-allowed asserted-only --exclude-tautologies structural \
-		relax \
-		reduce -r ELK \
-		annotate --ontology-iri $(ONTBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY)/$@ --output $@.tmp.owl && mv $@.tmp.owl $@
+		 remove --select "<http://purl.obolibrary.org/obo/COB_*>" \
+		 remove --select "<http://purl.obolibrary.org/obo/GOCHE_*>" \
+		 remove --select "<http://purl.obolibrary.org/obo/NCBITaxon_Union_*>" \
+		 remove --axioms disjoint --preserve-structure false \
+		 extract $(foreach f, $(ALL_TERMS), --term-file $(f)) $(T_IMPORTSEED) \
+		         --force true --copy-ontology-annotations false \
+		         --individuals include \
+		         --method BOT \
+		 remove $(foreach p, $(ANNOTATION_PROPERTIES), --term $(p)) \
+		        $(foreach f, $(ALL_TERMS), --term-file $(f)) $(T_IMPORTSEED) \
+		        --select complement --select annotation-properties \
+		 odk:normalize --base-iri http://purl.obolibrary.org/obo \
+		               --subset-decls true --synonym-decls true \
+		 repair --merge-axiom-annotations true \
+		 $(ANNOTATE_CONVERT_FILE)
 
 $(ONT)-incl-mappings.owl: ../../$(ONT).owl ../mapping/axioms.owl ../mapping/axioms-boomer.owl
 	$(ROBOT) merge -i ../../$(ONT).owl -i ../mapping/axioms.owl -i ../mapping/axioms-boomer.owl \
@@ -89,12 +106,9 @@ $(ONT)-incl-mappings.owl: ../../$(ONT).owl ../mapping/axioms.owl ../mapping/axio
 $(ONT)-incl-mappings.obo: $(ONT)-incl-mappings.owl
 	$(ROBOT) convert --input $< --check false -f obo $(OBO_FORMAT_OPTIONS) -o $@.tmp.obo && grep -v ^owl-axioms $@.tmp.obo > $@ && rm $@.tmp.obo
 
-
-test: odkversion sparql_test all_reports
-	echo "!!!!!! FULL TEST RUN IS OVERWRITTEN, REMOVING DISJOINTS - ecto.Makefile. See https://github.com/EnvironmentOntology/environmental-exposure-ontology/issues/79 !!!!!!"
-	$(ROBOT) merge --input $(SRC) \
-		remove --axioms disjoint --preserve-structure false \
-		reason --reasoner ELK  --equivalent-classes-allowed asserted-only --exclude-tautologies structural --output test.owl && rm test.owl && echo "Success"
+# NB: the base/full/test/reason_test targets are deliberately NOT overridden here anymore.
+# Imported disjointness is stripped once in the merged_import override above, so the stock ODK
+# release/test rules reason cleanly (see issue #79).
 
 $(TMPDIR)/$(ONT)-quick.obo: | $(TMPDIR)
 	$(ROBOT) merge -i $(SRC) reason -o $@.owl && mv $@.owl $@
