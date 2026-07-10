@@ -80,6 +80,13 @@ touch:
 # in ecto-odk.yaml - keep both in sync if the ODK import recipe or the exclude list changes.
 # The residual inferred equivalence FOODON:02010014 == UBERON:0000178 is tolerated via
 # `allow_equivalents: all` in ecto-odk.yaml.
+#
+# Guarded by IMP=true to mirror the stock ODK rule (Makefile: ifeq ($(IMP),true)).
+# Without the guard this override is always defined and pulls in $(MIRRORDIR)/merged.owl
+# as a prerequisite, which has no rule when MIR=false - so `make test IMP=false MIR=false`
+# dies with "No rule to make target 'mirror/merged.owl'". With the guard, IMP=false uses
+# the committed imports/merged_import.owl as-is, exactly like unmodified ODK.
+ifeq ($(IMP),true)
 $(IMPORTDIR)/merged_import.owl: $(MIRRORDIR)/merged.owl $(ALL_TERMS) \
 				$(IMPORTSEED) | all_robot_plugins
 	$(ROBOT) merge --input $< \
@@ -98,6 +105,7 @@ $(IMPORTDIR)/merged_import.owl: $(MIRRORDIR)/merged.owl $(ALL_TERMS) \
 		               --subset-decls true --synonym-decls true \
 		 repair --merge-axiom-annotations true \
 		 $(ANNOTATE_CONVERT_FILE)
+endif # IMP=true
 
 $(ONT)-incl-mappings.owl: ../../$(ONT).owl ../mapping/axioms.owl ../mapping/axioms-boomer.owl
 	$(ROBOT) merge -i ../../$(ONT).owl -i ../mapping/axioms.owl -i ../mapping/axioms-boomer.owl \
