@@ -55,32 +55,6 @@ $(MODDIR)/%.owl: $(MODDIR)/%.rdf
 
 touch:
 	echo $(all_modules_omn)
-	
-imports/npo_import.owl:
-	echo "!!!!!NPO currently skipped!"
-	
-mirror/npo.owl:
-	echo "!!!!!NPO currently skipped!"
-
-# https://github.com/enpadasi/Ontology-for-Nutritional-Studies/issues/33
-#$(IMPORTDIR)/ons_import.owl: $(MIRRORDIR)/ons.owl $(IMPORTDIR)/ons_terms_combined.txt
-#	if [ $(IMP) = true ]; then $(ROBOT) query -i $< --update ../sparql/preprocess-module.ru \
-#		extract -T $(IMPORTDIR)/ons_terms_combined.txt --force true --copy-ontology-annotations true --individuals include --method BOT \
-#		remove --axioms Declaration \
-#		remove --select "<http://purl.obolibrary.org/obo/FOODON_*>" --axioms annotation \
-#		remove --term RO:0002434 --term RO:0000052 --term RO:0002018 --term RO:0002233 --term RO:0002248 --term RO:0002434 --term RO:0002437 --term RO:0002501 --term RO:0002506 --term RO:0002507 --term RO:0002509 --term RO:0002574 --term RO:0002595 --trim true \
-#		query --update ../sparql/inject-subset-declaration.ru --update ../sparql/inject-synonymtype-declaration.ru --update ../sparql/postprocess-module.ru \
-#		annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) --output $@.tmp.owl && mv $@.tmp.owl $@; fi
-
-
-$(ONT)-full.owl: $(SRC) $(OTHER_SRC)
-	echo "!!!!!! FULL RELEASE IS OVERWRITTEN, REMOVING DISJOINTS - ecto.Makefile. See https://github.com/EnvironmentOntology/environmental-exposure-ontology/issues/79 !!!!!!"
-	$(ROBOT) merge --input $< \
-		remove --axioms disjoint --preserve-structure false \
-		reason --reasoner ELK --equivalent-classes-allowed asserted-only --exclude-tautologies structural \
-		relax \
-		reduce -r ELK \
-		annotate --ontology-iri $(ONTBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY)/$@ --output $@.tmp.owl && mv $@.tmp.owl $@
 
 $(ONT)-incl-mappings.owl: ../../$(ONT).owl ../mapping/axioms.owl ../mapping/axioms-boomer.owl
 	$(ROBOT) merge -i ../../$(ONT).owl -i ../mapping/axioms.owl -i ../mapping/axioms-boomer.owl \
@@ -89,12 +63,37 @@ $(ONT)-incl-mappings.owl: ../../$(ONT).owl ../mapping/axioms.owl ../mapping/axio
 $(ONT)-incl-mappings.obo: $(ONT)-incl-mappings.owl
 	$(ROBOT) convert --input $< --check false -f obo $(OBO_FORMAT_OPTIONS) -o $@.tmp.obo && grep -v ^owl-axioms $@.tmp.obo > $@ && rm $@.tmp.obo
 
+# NB: the base/full/test/reason_test targets are deliberately NOT overridden here anymore.
+# Imported disjointness is stripped once in the merged_import override above, so the stock ODK
+# release/test rules reason cleanly (see issue #79).
 
-test: odkversion sparql_test all_reports
-	echo "!!!!!! FULL TEST RUN IS OVERWRITTEN, REMOVING DISJOINTS - ecto.Makefile. See https://github.com/EnvironmentOntology/environmental-exposure-ontology/issues/79 !!!!!!"
-	$(ROBOT) merge --input $(SRC) \
-		remove --axioms disjoint --preserve-structure false \
-		reason --reasoner ELK  --equivalent-classes-allowed asserted-only --exclude-tautologies structural --output test.owl && rm test.owl && echo "Success"
+# FOODON mirror is custom (mirror_type: custom) so we can strip FoodOn's `animal egg`
+# (FOODON:02010002) disjunctive equivalence, which otherwise makes `embryo` and the whole
+# UBERON developmental subtree unsatisfiable. 
+# Track: https://github.com/FoodOntology/foodon/issues/369
+
+# Self-contained (no dependency on ODK-generated download targets, whose names vary by
+# template version): download full FoodOn, make the FOODON base, then strip the axiom.
+# The phony prerequisite forces a re-download whenever the mirrors are refreshed (MIR=true).
+ifeq ($(MIR),true)
+
+## ONTOLOGY: uberon
+.PHONY: mirror-foodon
+
+# Also added the "false" --base-iri $(OBOBASE)/PO  in there to get the bridge to uberon
+.PRECIOUS: $(MIRRORDIR)/foodon.owl
+mirror-foodon: | $(TMPDIR)
+	curl -L $(OBOBASE)/foodon.owl --create-dirs -o $(TMPDIR)/foodon-download.owl --retry 4 --max-time 600 && \
+	$(ROBOT) remove -i $(TMPDIR)/foodon-download.owl \
+	                --base-iri $(OBOBASE)/FOODON --base-iri $(OBOBASE)/PO --axioms external --preserve-structure false --trim false \
+	         remove --term http://purl.obolibrary.org/obo/FOODON_02010002 --axioms equivalent \
+	         convert --format ofn -o $(TMPDIR)/$@.owl
+
+$(MIRRORDIR)/foodon.owl: mirror-foodon | $(MIRRORDIR)
+	if [ -f $(TMPDIR)/mirror-foodon.owl ]; then if cmp -s $(TMPDIR)/mirror-foodon.owl $@ ; then echo "Mirror identical, ignoring."; else echo "Mirrors different, updating." &&\
+		cp $(TMPDIR)/mirror-foodon.owl $@; fi; fi
+
+endif # MIR=true
 
 $(TMPDIR)/$(ONT)-quick.obo: | $(TMPDIR)
 	$(ROBOT) merge -i $(SRC) reason -o $@.owl && mv $@.owl $@
