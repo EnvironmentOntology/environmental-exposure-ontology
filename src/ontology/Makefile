@@ -10,7 +10,7 @@
 # More information: https://github.com/INCATools/ontology-development-kit/
 
 # Fingerprint of the configuration file when this Makefile was last generated
-CONFIG_HASH=                7bb2381f42f12316c7bb081194da6b5e2205bf8fda11888473925ba56635017d
+CONFIG_HASH=                169dc30e298cefd713450eab004470e9a71ca52685d0c1d98d84b73d16e6133e
 
 
 # ----------------------------------------
@@ -192,7 +192,7 @@ all_main: $(MAIN_FILES)
 # ----------------------------------------
 
 
-IMPORTS =  chebi envo exo go maxo foodon nbo ncit ncbitaxon pato ro uberon xco
+IMPORTS =  chebi envo cob bfo exo go maxo foodon nbo opmi omo ncit ncbitaxon pato ro uberon xco ons
 
 IMPORT_ROOTS =  $(IMPORTDIR)/merged_import
 IMPORT_OWL_FILES = $(foreach n,$(IMPORT_ROOTS), $(n).owl)
@@ -404,9 +404,28 @@ $(IMPORTDIR)/merged_import.owl: $(MIRRORDIR)/merged.owl $(ALL_TERMS) \
 		 remove --select "<http://purl.obolibrary.org/obo/COB_*>" \
 		 remove --select "<http://purl.obolibrary.org/obo/GOCHE_*>" \
 		 remove --select "<http://purl.obolibrary.org/obo/NCBITaxon_Union_*>" \
+		 remove --select "<http://purl.obolibrary.org/obo/CL_*>" \
+		 remove --select "<http://purl.obolibrary.org/obo/DRON_*>" \
+		 remove --select "<http://purl.obolibrary.org/obo/PO_*>" \
+		 remove --select "<http://purl.obolibrary.org/obo/BSPO_*>" \
+		 remove --select "<http://purl.obolibrary.org/obo/OBI_*>" \
+		 remove --select "<http://purl.obolibrary.org/obo/PR_*>" \
+		 remove --select "<http://purl.obolibrary.org/obo/PCO_*>" \
+		 remove --select "<http://purl.obolibrary.org/obo/UO_*>" \
+		 remove --select "<http://purl.obolibrary.org/obo/OMP_*>" \
+		 remove --select "<http://purl.obolibrary.org/obo/CDNO_*>" \
+		 remove --select "<http://purl.obolibrary.org/obo/GAZ_*>" \
+		 remove --select "<http://purl.obolibrary.org/obo/HANCESTRO_*>" \
+		 remove --select "<http://purl.obolibrary.org/obo/FAO_*>" \
+		 remove --select "<http://purl.obolibrary.org/obo/HP_*>" \
+		 remove --select "<http://purl.obolibrary.org/obo/OMRSE_*>" \
+		 remove --select "<http://purl.obolibrary.org/obo/IAO_0000027*>" \
+		 remove --select "<http://purl.obolibrary.org/obo/RO_0002310*>" \
+		 remove --select "<http://purl.obolibrary.org/obo/ENVO_00002002*>" \
+		 remove --select "<http://purl.obolibrary.org/obo/IAO_0000578*>" \
 		 extract $(foreach f, $(ALL_TERMS), --term-file $(f)) $(T_IMPORTSEED) \
 		         --force true --copy-ontology-annotations false \
-		         --individuals include \
+		         --individuals exclude \
 		         --method BOT \
 		 remove $(foreach p, $(ANNOTATION_PROPERTIES), --term $(p)) \
 		        $(foreach f, $(ALL_TERMS), --term-file $(f)) $(T_IMPORTSEED) \
@@ -506,6 +525,22 @@ mirror-envo: | $(TMPDIR)
 	$(ROBOT) convert -i $(TMPDIR)/envo-download.owl -o $(TMPDIR)/$@.owl
 
 
+## ONTOLOGY: cob
+.PHONY: mirror-cob
+.PRECIOUS: $(MIRRORDIR)/cob.owl
+mirror-cob: | $(TMPDIR)
+	curl -L $(OBOBASE)/cob/cob-base.owl --create-dirs -o $(TMPDIR)/cob-download.owl --retry 4 --max-time 200 && \
+	$(ROBOT) convert -i $(TMPDIR)/cob-download.owl -o $(TMPDIR)/$@.owl
+
+
+## ONTOLOGY: bfo
+.PHONY: mirror-bfo
+.PRECIOUS: $(MIRRORDIR)/bfo.owl
+mirror-bfo: | $(TMPDIR)
+	curl -L $(OBOBASE)/bfo.owl --create-dirs -o $(TMPDIR)/bfo-download.owl --retry 4 --max-time 200 && \
+	$(ROBOT) remove -i $(TMPDIR)/bfo-download.owl --base-iri http://purl.obolibrary.org/obo/BFO --axioms external --preserve-structure false --trim false -o $(TMPDIR)/$@.owl
+
+
 ## ONTOLOGY: exo
 .PHONY: mirror-exo
 .PRECIOUS: $(MIRRORDIR)/exo.owl
@@ -533,9 +568,8 @@ mirror-maxo: | $(TMPDIR)
 ## ONTOLOGY: foodon
 .PHONY: mirror-foodon
 .PRECIOUS: $(MIRRORDIR)/foodon.owl
-mirror-foodon: | $(TMPDIR)
-	curl -L $(OBOBASE)/foodon.owl --create-dirs -o $(TMPDIR)/foodon-download.owl --retry 4 --max-time 200 && \
-	$(ROBOT) remove -i $(TMPDIR)/foodon-download.owl --base-iri http://purl.obolibrary.org/obo/FOODON --axioms external --preserve-structure false --trim false -o $(TMPDIR)/$@.owl
+$(MIRRORDIR)/foodon.owl: 
+	echo "ERROR: You have configured your default mirror type to be custom; this behavior needs to be overwritten in ecto.Makefile!" && false
 
 
 ## ONTOLOGY: nbo
@@ -546,14 +580,27 @@ mirror-nbo: | $(TMPDIR)
 	$(ROBOT) convert -i $(TMPDIR)/nbo-download.owl -o $(TMPDIR)/$@.owl
 
 
+## ONTOLOGY: opmi
+.PHONY: mirror-opmi
+.PRECIOUS: $(MIRRORDIR)/opmi.owl
+mirror-opmi: | $(TMPDIR)
+	curl -L $(OBOBASE)/opmi.owl --create-dirs -o $(TMPDIR)/opmi-download.owl --retry 4 --max-time 200 && \
+	$(ROBOT) remove -i $(TMPDIR)/opmi-download.owl --base-iri http://purl.obolibrary.org/obo/OPMI --axioms external --preserve-structure false --trim false -o $(TMPDIR)/$@.owl
+
+
+## ONTOLOGY: omo
+.PHONY: mirror-omo
+.PRECIOUS: $(MIRRORDIR)/omo.owl
+mirror-omo: | $(TMPDIR)
+	curl -L $(OBOBASE)/omo.owl --create-dirs -o $(TMPDIR)/omo-download.owl --retry 4 --max-time 200 && \
+	$(ROBOT) convert -i $(TMPDIR)/omo-download.owl -o $(TMPDIR)/$@.owl
+
+
 ## ONTOLOGY: ncit
 .PHONY: mirror-ncit
 .PRECIOUS: $(MIRRORDIR)/ncit.owl
-ifeq ($(IMP_LARGE),true)
 mirror-ncit: | $(TMPDIR)
-	curl -L $(OBOBASE)/ncit.owl --create-dirs -o $(TMPDIR)/ncit-download.owl --retry 4 --max-time 200 && \
-	$(ROBOT) remove -i $(TMPDIR)/ncit-download.owl --base-iri http://purl.obolibrary.org/obo/NCIT --axioms external --preserve-structure false --trim false -o $(TMPDIR)/$@.owl
-endif
+	$(ROBOT) remove -I https://raw.githubusercontent.com/ncit-obo-org/ncit-obo-edition/refs/heads/main/src/ontology/ncit-obo-slim.owl --base-iri http://purl.obolibrary.org/obo/NCIT  --axioms external --preserve-structure false --trim false -o $(TMPDIR)/$@.owl
 
 
 ## ONTOLOGY: ncbitaxon
@@ -595,6 +642,14 @@ mirror-uberon: | $(TMPDIR)
 mirror-xco: | $(TMPDIR)
 	curl -L $(OBOBASE)/xco.owl --create-dirs -o $(TMPDIR)/xco-download.owl --retry 4 --max-time 200 && \
 	$(ROBOT) remove -i $(TMPDIR)/xco-download.owl --base-iri http://purl.obolibrary.org/obo/XCO --axioms external --preserve-structure false --trim false -o $(TMPDIR)/$@.owl
+
+
+## ONTOLOGY: ons
+.PHONY: mirror-ons
+.PRECIOUS: $(MIRRORDIR)/ons.owl
+mirror-ons: | $(TMPDIR)
+	curl -L $(OBOBASE)/ons.owl --create-dirs -o $(TMPDIR)/ons-download.owl --retry 4 --max-time 200 && \
+	$(ROBOT) remove -i $(TMPDIR)/ons-download.owl --base-iri http://purl.obolibrary.org/obo/ONS --axioms external --preserve-structure false --trim false -o $(TMPDIR)/$@.owl
 
 ALL_MIRRORS = $(patsubst %, $(MIRRORDIR)/%.owl, $(IMPORTS))
 MERGE_MIRRORS = true
