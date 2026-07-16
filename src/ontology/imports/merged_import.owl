@@ -7,8 +7,8 @@ Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 
 
 Ontology(<http://purl.obolibrary.org/obo/ecto/imports/merged_import.owl>
-<http://purl.obolibrary.org/obo/ecto/releases/2026-07-12/imports/merged_import.owl>
-Annotation(owl:versionInfo "2026-07-12")
+<http://purl.obolibrary.org/obo/ecto/releases/2026-07-16/imports/merged_import.owl>
+Annotation(owl:versionInfo "2026-07-16")
 
 Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000001>))
 Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000002>))
@@ -12682,10 +12682,8 @@ Declaration(Class(<http://purl.obolibrary.org/obo/NCIT_C75563>))
 Declaration(Class(<http://purl.obolibrary.org/obo/NCIT_C86589>))
 Declaration(Class(<http://purl.obolibrary.org/obo/NCIT_C93214>))
 Declaration(Class(<http://purl.obolibrary.org/obo/NCIT_C96640>))
-Declaration(Class(<http://purl.obolibrary.org/obo/ONS_0000094>))
 Declaration(Class(<http://purl.obolibrary.org/obo/ONS_1000001>))
 Declaration(Class(<http://purl.obolibrary.org/obo/ONS_1000005>))
-Declaration(Class(<http://purl.obolibrary.org/obo/ONS_1000008>))
 Declaration(Class(<http://purl.obolibrary.org/obo/ONS_1000038>))
 Declaration(Class(<http://purl.obolibrary.org/obo/ONS_1000039>))
 Declaration(Class(<http://purl.obolibrary.org/obo/OPMI_0000093>))
@@ -15379,7 +15377,6 @@ Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0100001>))
 Declaration(AnnotationProperty(<http://purl.org/dc/elements/1.1/description>))
 Declaration(AnnotationProperty(<http://purl.org/dc/elements/1.1/title>))
 Declaration(AnnotationProperty(<http://purl.org/dc/terms/license>))
-Declaration(AnnotationProperty(<http://purl.org/dc/terms/title>))
 Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#SubsetProperty>))
 Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#hasDbXref>))
 Declaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym>))
@@ -15412,7 +15409,7 @@ AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0100001> "ter
 
 AnnotationAssertion(rdfs:label <http://www.geneontology.org/formats/oboInOwl#SubsetProperty> "subset_property")
 
-# Annotation Property: <http://www.geneontology.org/formats/oboInOwl#hasDbXref> (database_cross_reference)
+# Annotation Property: <http://www.geneontology.org/formats/oboInOwl#hasDbXref> (has cross-reference)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "An annotation property that links an ontology entity or a statement to a prefixed identifier or URI.")
 AnnotationAssertion(rdfs:label <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "database_cross_reference")
@@ -132692,14 +132689,6 @@ SubClassOf(<http://purl.obolibrary.org/obo/NCIT_C93214> <http://purl.obolibrary.
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/NCIT_C96640> "Total Body Radiography")
 SubClassOf(<http://purl.obolibrary.org/obo/NCIT_C96640> <http://purl.obolibrary.org/obo/NCIT_C38101>)
 
-# Class: <http://purl.obolibrary.org/obo/ONS_0000094> (obsolete: individual dietary pattern)
-
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ONS_0000094> "A descriptive diet pertaining to an individual organism."@en)
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0100001> <http://purl.obolibrary.org/obo/ONS_0000094> <http://purl.obolibrary.org/obo/ONS_0000080>)
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ONS_0000094> "eating pattern"@en)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ONS_0000094> "obsolete: individual dietary pattern"@en)
-SubClassOf(<http://purl.obolibrary.org/obo/ONS_0000094> <http://purl.obolibrary.org/obo/ONS_1000008>)
-
 # Class: <http://purl.obolibrary.org/obo/ONS_1000001> (diet)
 
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ONS_1000001> "A collection of food types or items which have organoleptic, nutritional, availability, safety, meal time, or socially relevant characteristics with respect to a consuming individual or population."@en)
@@ -132713,13 +132702,6 @@ SubClassOf(<http://purl.obolibrary.org/obo/ONS_1000001> <http://purl.obolibrary.
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ONS_1000005> "A diet defined by the nutritional presence or absence of types of food bioactive compounds."@en)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ONS_1000005> "diet by nutritional composition"@en)
 SubClassOf(<http://purl.obolibrary.org/obo/ONS_1000005> <http://purl.obolibrary.org/obo/ONS_1000001>)
-
-# Class: <http://purl.obolibrary.org/obo/ONS_1000008> (descriptive diet)
-
-AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ONS_1000008> "A diet which represents food types or items consumed in the regular course of eating and drinking by an individual or population over some duration of time."@en)
-AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/ONS_1000008> "The food entities in a descriptive diet may be characterized by kind of diet as well as other (food survey or log) parameters such as quantity, time, frequency or duration of aggregate consumption, meal type and/or setting."@en)
-AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ONS_1000008> "descriptive diet"@en)
-SubClassOf(<http://purl.obolibrary.org/obo/ONS_1000008> <http://purl.obolibrary.org/obo/ONS_1000001>)
 
 # Class: <http://purl.obolibrary.org/obo/ONS_1000038> (mediterranean diet)
 
