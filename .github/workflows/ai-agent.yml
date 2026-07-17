@@ -35,16 +35,22 @@ on:
       prompt:
         description: "The request/prompt for the agent"
         required: true
-  # `assigned` lets authorized controllers dispatch work by assigning
-  # `dragon-ai-agent` directly.
-  issues:
-    types: [opened, edited, assigned]
-  issue_comment:
-    types: [created, edited]
-  pull_request:
-    types: [opened, edited, assigned, synchronize]
-  pull_request_review_comment:
-    types: [created, edited]
+  # DISABLED: automatic triggers are turned off because the required secrets
+  # (AI4C_AGENT_APP_ID, AI4C_AGENT_PRIVATE_KEY, CLAUDE_CODE_OAUTH_TOKEN) are not
+  # configured in this repo, so every run failed at the token-minting step and put
+  # a spurious red check on every issue/PR/comment. Re-enable by uncommenting the
+  # triggers below once the secrets are set. Manual workflow_dispatch is kept.
+  #
+  # # `assigned` lets authorized controllers dispatch work by assigning
+  # # `dragon-ai-agent` directly.
+  # issues:
+  #   types: [opened, edited, assigned]
+  # issue_comment:
+  #   types: [created, edited]
+  # pull_request:
+  #   types: [opened, edited, assigned, synchronize]
+  # pull_request_review_comment:
+  #   types: [created, edited]
 
 jobs:
   check-mention:
