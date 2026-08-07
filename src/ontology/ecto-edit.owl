@@ -12,14 +12,31 @@ Import(<http://purl.obolibrary.org/obo/ecto/components/ecto-xrefs.owl>)
 Import(<http://purl.obolibrary.org/obo/ecto/components/obsoletes.owl>)
 Import(<http://purl.obolibrary.org/obo/ecto/imports/merged_import.owl>)
 Import(<http://purl.obolibrary.org/obo/ecto/patterns/definitions.owl>)
-Annotation(<http://purl.obolibrary.org/obo/IAO_0000700> "http://purl.obolibrary.org/obo/ExO_0000002")
+Annotation(<http://purl.obolibrary.org/obo/IAO_0000700> <http://purl.obolibrary.org/obo/ExO_0000002>)
 Annotation(<http://purl.org/dc/elements/1.1/description> "ECTO describes exposures to experimental treatments of plants and model organisms (e.g. exposures to modification of diet, lighting levels, temperature); exposures of humans or any other organisms to stressors through a variety of routes, for purposes of public health, environmental monitoring etc, stimuli, natural and experimental, any kind of environmental condition or change in condition that can be experienced by an organism or population of organisms on earth. The scope is very general and can include for example plant treatment regimens, as well as human clinical exposures (although these may better be handled by a more specialized ontology).")
 Annotation(<http://purl.org/dc/elements/1.1/title> "Environment Exposure Ontology")
 Annotation(<http://purl.org/dc/terms/license> <https://creativecommons.org/publicdomain/zero/1.0/>)
 
+Declaration(Class(<http://purl.obolibrary.org/obo/ECTO_0000981>))
+Declaration(Class(<http://purl.obolibrary.org/obo/ECTO_0000982>))
+Declaration(Class(<http://purl.obolibrary.org/obo/ECTO_0000983>))
+Declaration(Class(<http://purl.obolibrary.org/obo/ECTO_0000984>))
+Declaration(Class(<http://purl.obolibrary.org/obo/ECTO_0000985>))
+Declaration(Class(<http://purl.obolibrary.org/obo/ECTO_0000986>))
+Declaration(Class(<http://purl.obolibrary.org/obo/ECTO_0000987>))
+Declaration(Class(<http://purl.obolibrary.org/obo/ECTO_0000989>))
+Declaration(Class(<http://purl.obolibrary.org/obo/ECTO_2000052>))
+Declaration(Class(<http://purl.obolibrary.org/obo/ECTO_6000000>))
+Declaration(Class(<http://purl.obolibrary.org/obo/ECTO_9000157>))
+Declaration(Class(<http://purl.obolibrary.org/obo/ExO_0000002>))
+Declaration(Class(<http://purl.obolibrary.org/obo/GO_0007610>))
+Declaration(Class(<http://purl.obolibrary.org/obo/NBO_0001845>))
+Declaration(Class(<http://purl.obolibrary.org/obo/RO_0002310>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002309>))
 Declaration(Class(<http://purl.obolibrary.org/obo/ECTO_7000147>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000700>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/ecto#mrex>))
+Declaration(AnnotationProperty(<http://purl.org/dc/elements/1.1/creator>))
 Declaration(AnnotationProperty(<http://purl.org/dc/elements/1.1/description>))
 Declaration(AnnotationProperty(<http://purl.org/dc/elements/1.1/title>))
 Declaration(AnnotationProperty(<http://purl.org/dc/terms/license>))
@@ -32,6 +49,10 @@ Declaration(Datatype(xml:string))
 ############################
 #   Annotation Properties
 ############################
+
+# Annotation Property: <http://purl.obolibrary.org/obo/IAO_0000115> (textual definition)
+
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/IAO_0000115> "definition")
 
 # Annotation Property: <http://purl.obolibrary.org/obo/ecto#mrex> (<http://purl.obolibrary.org/obo/ecto#mrex>)
 
@@ -57,6 +78,82 @@ AnnotationAssertion(rdfs:label <http://www.geneontology.org/formats/oboInOwl#has
 AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_7000147> "A exposure event involving the interaction of an exposure receptor to a plastic production compound.")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_7000147> "exposure to plastic production compound")
 SubClassOf(<http://purl.obolibrary.org/obo/ECTO_7000147> <http://purl.obolibrary.org/obo/ExO_0000002>)
+
+
+############################
+#   Classes
+############################
+
+# Class: <http://purl.obolibrary.org/obo/ECTO_0000981> (occupational exposure)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0000981> "An exposure event that occurs as a result of, or in the course of, an individual's occupation or work activities.")
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> <http://purl.obolibrary.org/obo/ECTO_0000981> <https://ai4curation.github.io/aidocs/reference/clients/claude-code/>)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_0000981> "occupational exposure")
+SubClassOf(<http://purl.obolibrary.org/obo/ECTO_0000981> <http://purl.obolibrary.org/obo/ExO_0000002>)
+
+# Class: <http://purl.obolibrary.org/obo/ECTO_0000982> (passive exposure)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0000982> "An exposure event in which the exposure receptor comes into contact with the exposure stressor without actively or intentionally seeking, selecting, or self-administering it.")
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> <http://purl.obolibrary.org/obo/ECTO_0000982> <https://ai4curation.github.io/aidocs/reference/clients/claude-code/>)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_0000982> "passive exposure")
+SubClassOf(<http://purl.obolibrary.org/obo/ECTO_0000982> <http://purl.obolibrary.org/obo/ExO_0000002>)
+
+# Class: <http://purl.obolibrary.org/obo/ECTO_0000983> (active exposure)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0000983> "An exposure event in which the exposure receptor intentionally seeks out, selects, or self-administers the exposure stressor.")
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> <http://purl.obolibrary.org/obo/ECTO_0000983> <https://ai4curation.github.io/aidocs/reference/clients/claude-code/>)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_0000983> "active exposure")
+SubClassOf(<http://purl.obolibrary.org/obo/ECTO_0000983> <http://purl.obolibrary.org/obo/ExO_0000002>)
+
+# Class: <http://purl.obolibrary.org/obo/ECTO_0000984> (prenatal exposure)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0000984> "An exposure event in which the exposure receptor is an embryo or fetus and contact with the exposure stressor occurs before birth.")
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> <http://purl.obolibrary.org/obo/ECTO_0000984> <https://ai4curation.github.io/aidocs/reference/clients/claude-code/>)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_0000984> "prenatal exposure")
+SubClassOf(<http://purl.obolibrary.org/obo/ECTO_0000984> <http://purl.obolibrary.org/obo/ExO_0000002>)
+
+# Class: <http://purl.obolibrary.org/obo/ECTO_0000985> (dietary exposure)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0000985> "An exposure event in which the exposure receptor comes into contact with the exposure stressor through the consumption of food or drink as part of the diet.")
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> <http://purl.obolibrary.org/obo/ECTO_0000985> <https://ai4curation.github.io/aidocs/reference/clients/claude-code/>)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_0000985> "dietary exposure")
+EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_0000985> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002242> <http://purl.obolibrary.org/obo/ExO_0000056>)))
+SubClassOf(<http://purl.obolibrary.org/obo/ECTO_0000985> <http://purl.obolibrary.org/obo/ExO_0000002>)
+
+# Class: <http://purl.obolibrary.org/obo/ECTO_0000986> (experimental exposure)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0000986> "An exposure event that is deliberately administered to the exposure receptor as part of a scientific experiment or study.")
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> <http://purl.obolibrary.org/obo/ECTO_0000986> <https://ai4curation.github.io/aidocs/reference/clients/claude-code/>)
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_0000986> "experimental exposure")
+SubClassOf(<http://purl.obolibrary.org/obo/ECTO_0000986> <http://purl.obolibrary.org/obo/ExO_0000002>)
+
+# Class: <http://purl.obolibrary.org/obo/ECTO_0000987> (exposure via consumption behavior)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0000987> "An exposure event in which the exposure stimulus is a consumption behaviour, i.e. the intake of a substance into the body, such as smoking, drinking, or other ingestion of an addictive or non-addictive substance.")
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> <http://purl.obolibrary.org/obo/ECTO_0000987> <https://ai4curation.github.io/aidocs/reference/clients/claude-code/>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0000987> "exposure via consumption behaviour")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_0000987> "exposure via consumption behavior")
+EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_0000987> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/NBO_0001845>)))
+
+# Class: <http://purl.obolibrary.org/obo/ECTO_0000989> (exposure to behavioral process)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0000989> "An exposure event in which the exposure stimulus is a behavioral process.")
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> <http://purl.obolibrary.org/obo/ECTO_0000989> <https://ai4curation.github.io/aidocs/reference/clients/claude-code/>)
+AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/ECTO_0000989> "Broad grouping for behaviour-based exposures, defined on GO 'behavior' (GO:0007610). 'exposure to behavior' (ECTO:6000000, defined on the NCIT behaviour class) is asserted as a subclass of this class on the ECTO side, so NCIT-, GO- and NBO-based behaviour exposures share a common ancestor without ECTO asserting any relationship between the external behaviour classes themselves.")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_0000989> "exposure to behavioral process")
+EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_0000989> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/GO_0007610>)))
+
+# Class: <http://purl.obolibrary.org/obo/ECTO_2000052> (exposure to radioactivity)
+
+SubClassOf(<http://purl.obolibrary.org/obo/ECTO_2000052> <http://purl.obolibrary.org/obo/ECTO_0000001>)
+
+# Class: <http://purl.obolibrary.org/obo/ECTO_6000000> (exposure to behavior)
+
+SubClassOf(<http://purl.obolibrary.org/obo/ECTO_6000000> <http://purl.obolibrary.org/obo/ECTO_0000989>)
+
+# Class: <http://purl.obolibrary.org/obo/ECTO_9000157> (exposure to photon)
+
+SubClassOf(<http://purl.obolibrary.org/obo/ECTO_9000157> <http://purl.obolibrary.org/obo/ECTO_0000001>)
 
 
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_9000048> "exposure to carbon tetrachloride")

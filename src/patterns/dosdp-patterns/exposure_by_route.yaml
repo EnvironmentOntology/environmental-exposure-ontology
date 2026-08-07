@@ -1,0 +1,41 @@
+pattern_name: exposure_by_route
+pattern_iri: http://purl.obolibrary.org/obo/ecto/patterns/exposure_by_route.yaml
+
+description: "A high-level exposure event grouping class defined solely by the route of exposure, independent of the stressor involved. These classes group together all stressor-specific exposures that share a given route (e.g. 'exposure via inhalation' subsumes every 'exposure to X via inhalation')."
+
+contributors:
+  - https://orcid.org/0000-0002-2908-3327
+
+classes:
+  exposure event: ExO:0000002
+  route: ExO:0000055
+
+relations:
+  has exposure route: RO:0002242
+
+annotationProperties:
+  exact_synonym: oio:hasExactSynonym
+
+vars:
+  route: "'route'"
+
+name:
+  text: "exposure via %s"
+  vars:
+    - route
+
+annotations:
+  - annotationProperty: exact_synonym
+    text: "%s exposure"
+    vars:
+      - route
+
+def:
+  text: "An exposure event in which the exposure stressor comes into contact with the exposure receptor via %s."
+  vars:
+    - route
+
+equivalentTo:
+  text: "'exposure event' and ('has exposure route' some %s)"
+  vars:
+    - route
