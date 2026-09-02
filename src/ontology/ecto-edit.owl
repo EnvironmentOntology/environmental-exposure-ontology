@@ -25,9 +25,14 @@ Declaration(Class(<http://purl.obolibrary.org/obo/ECTO_0000985>))
 Declaration(Class(<http://purl.obolibrary.org/obo/ECTO_0000986>))
 Declaration(Class(<http://purl.obolibrary.org/obo/ECTO_0000987>))
 Declaration(Class(<http://purl.obolibrary.org/obo/ECTO_0000989>))
+Declaration(Class(<http://purl.obolibrary.org/obo/ECTO_0000990>))
 Declaration(Class(<http://purl.obolibrary.org/obo/ECTO_2000052>))
 Declaration(Class(<http://purl.obolibrary.org/obo/ECTO_6000000>))
+Declaration(Class(<http://purl.obolibrary.org/obo/ECTO_9000042>))
 Declaration(Class(<http://purl.obolibrary.org/obo/ECTO_9000157>))
+Declaration(Class(<http://purl.obolibrary.org/obo/ECTO_9000631>))
+Declaration(Class(<http://purl.obolibrary.org/obo/ECTO_9001000>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CHEBI_39279>))
 Declaration(Class(<http://purl.obolibrary.org/obo/ExO_0000002>))
 Declaration(Class(<http://purl.obolibrary.org/obo/GO_0007610>))
 Declaration(Class(<http://purl.obolibrary.org/obo/NBO_0001845>))
@@ -143,6 +148,18 @@ AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/ECTO_0000989> "
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_0000989> "exposure to behavioral process")
 EquivalentClasses(<http://purl.obolibrary.org/obo/ECTO_0000989> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/ExO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/GO_0007610>)))
 
+# Class: <http://purl.obolibrary.org/obo/ECTO_0000990> (exposure to trihalomethane)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "MESH:D022882") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PMID:41544563") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/ECTO_0000990> "An exposure event in which the exposure stimulus is a trihalomethane, a halomethane in which three of the four hydrogen atoms of methane are replaced by halogen atoms. Trihalomethanes such as chloroform, bromoform, bromodichloromethane and chlorodibromomethane commonly occur as by-products of drinking-water disinfection.")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000233> <http://purl.obolibrary.org/obo/ECTO_0000990> "https://github.com/EBISPOT/efo/issues/2779"^^xsd:anyURI)
+AnnotationAssertion(<http://purl.org/dc/elements/1.1/creator> <http://purl.obolibrary.org/obo/ECTO_0000990> <https://ai4curation.github.io/aidocs/reference/clients/claude-code/>)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_0000990> "trihalomethane exposure")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/ECTO_0000990> "THM exposure")
+AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/ECTO_0000990> "Manually maintained grouping class: CHEBI has no class for trihalomethane (checked 2026-09-02), so this term cannot yet be expressed with the exposure_to_chemical design pattern. The stimulus is constrained to the nearest CHEBI superclass, 'halomethane' (CHEBI:39279), and the trihalomethane exposures already in ECTO (exposure to chloroform, bromoform, bromodichloromethane) are asserted as subclasses on the ECTO side. If CHEBI adds a trihalomethane class, this term should be re-expressed with the pattern and the asserted subclass axioms removed. Requested for GWAS Catalog / EFO import via https://github.com/EBISPOT/efo/issues/2779.")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ECTO_0000990> "exposure to trihalomethane")
+SubClassOf(<http://purl.obolibrary.org/obo/ECTO_0000990> <http://purl.obolibrary.org/obo/ECTO_0000231>)
+SubClassOf(<http://purl.obolibrary.org/obo/ECTO_0000990> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002309> <http://purl.obolibrary.org/obo/CHEBI_39279>))
+
 # Class: <http://purl.obolibrary.org/obo/ECTO_2000052> (exposure to radioactivity)
 
 SubClassOf(<http://purl.obolibrary.org/obo/ECTO_2000052> <http://purl.obolibrary.org/obo/ECTO_0000001>)
@@ -151,9 +168,21 @@ SubClassOf(<http://purl.obolibrary.org/obo/ECTO_2000052> <http://purl.obolibrary
 
 SubClassOf(<http://purl.obolibrary.org/obo/ECTO_6000000> <http://purl.obolibrary.org/obo/ECTO_0000989>)
 
+# Class: <http://purl.obolibrary.org/obo/ECTO_9000042> (exposure to chloroform)
+
+SubClassOf(<http://purl.obolibrary.org/obo/ECTO_9000042> <http://purl.obolibrary.org/obo/ECTO_0000990>)
+
 # Class: <http://purl.obolibrary.org/obo/ECTO_9000157> (exposure to photon)
 
 SubClassOf(<http://purl.obolibrary.org/obo/ECTO_9000157> <http://purl.obolibrary.org/obo/ECTO_0000001>)
+
+# Class: <http://purl.obolibrary.org/obo/ECTO_9000631> (exposure to bromodichloromethane)
+
+SubClassOf(<http://purl.obolibrary.org/obo/ECTO_9000631> <http://purl.obolibrary.org/obo/ECTO_0000990>)
+
+# Class: <http://purl.obolibrary.org/obo/ECTO_9001000> (exposure to bromoform)
+
+SubClassOf(<http://purl.obolibrary.org/obo/ECTO_9001000> <http://purl.obolibrary.org/obo/ECTO_0000990>)
 
 
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/ECTO_9000048> "exposure to carbon tetrachloride")
